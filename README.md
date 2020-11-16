@@ -54,7 +54,7 @@ Here is a normal example (train X and test Y have similar distribution and being
 
  ## How to use (detailed version):
  
- ####1. Set/change the configuration in ```configuration.py```:
+ #### 1. Set/change the configuration in ```configuration.py```:
     - In ```configuration.py```, there are 2 parameters to be set:
         - ```'experiment_history_folder'``` where to put the experiment result folder (path specified by user)
         - ```'train_test_path'``` specific the training set path and the testing set path here. 
@@ -65,7 +65,7 @@ Here is a normal example (train X and test Y have similar distribution and being
         dataset now is randomly split into training and testing set for each experiment (each time we run the script).
         If you have different training and testing path, set ```'trainp' = NONE```
 
- ####2. Run the ```run.py```. 
+ #### 2. Run the ```run.py```. 
  This step is to load and run the LISP version of IDyOM.
 
 
@@ -82,7 +82,7 @@ including the following:
  In this way, we can have a better control over what dataset we want the model to train on and test on, 
  and we can have a record of the information we can check if we have any doubts of the output of the model.*
  
- ####3. Play around with the model output in ```analyze_output_data.py```. 
+ #### 3. Play around with the model output in ```analyze_output_data.py```. 
  You can look up the functions in `data_extractor.py` (probably will add more). 
  This script contains the helper functions that extract the data from the IDyOM model output (`.dat` file)
  An example of how to use this script is provided in later section and in the `DataExtractionTutorial.ipynb`
