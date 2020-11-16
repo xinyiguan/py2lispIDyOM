@@ -20,7 +20,7 @@ my_pitch_range = (47,91)
 
 folder_name = 'train_shanx_test_shanx'
 
-"""""
+
 ### demonstration on using data_extractor to extract data from .dat file path--------------------------
 
 # all_song_dict is python readable .dat file (model output) for all testing dataset.
@@ -45,7 +45,9 @@ print('my_surprise_sequence: ',my_surprise_sequence)
 
 
 ### ---------------------------------
-"""""
+
+
+
 
 
 # data encoding helpers
@@ -91,6 +93,7 @@ def plot_surprise_across_time(ax,surprise_across_time,title=None):
 
 
 ## the following is plot specfic song (ground truth and prediction accoriding to surprise)
+
 def make_figure_from_index(index):
     S = list(lisp.getSurprise(dat_file_path).values())[index]
     S = np.array(S)
