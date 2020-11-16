@@ -55,15 +55,15 @@ Here is a normal example (train X and test Y have similar distribution and being
  ## How to use (detailed version):
  
  #### 1. Set/change the configuration in ```configuration.py```:
-    - In ```configuration.py```, there are 2 parameters to be set:
-        - ```'experiment_history_folder'``` where to put the experiment result folder (path specified by user)
-        - ```'train_test_path'``` specific the training set path and the testing set path here. 
-            - e.g. ```'train_test_path':['./dataset/bach_dataset/','./dataset/shanx_dataset/',],```
-            - If you want to train and test on the same dataset, then just leave the second argument blank.
-              It will automatically split the files into train and test set according to percentage ```'trainp'```.
-        - ```'trainp'``` If you only input one path in ```'train_test_path'```, you need to set the percentage of training dataset.
-        dataset now is randomly split into training and testing set for each experiment (each time we run the script).
-        If you have different training and testing path, set ```'trainp' = NONE```
+-  In ```configuration.py```, there are 2 parameters to be set:
+    - ```'experiment_history_folder'``` where to put the experiment result folder (path specified by user)
+    - ```'train_test_path'``` specific the training set path and the testing set path here. 
+        - e.g. ```'train_test_path':['./dataset/bach_dataset/','./dataset/shanx_dataset/',],```
+        - If you want to train and test on the same dataset, then just leave the second argument blank.
+          It will automatically split the files into train and test set according to percentage ```'trainp'```.
+    - ```'trainp'``` If you only input one path in ```'train_test_path'```, you need to set the percentage of training dataset.
+    dataset now is randomly split into training and testing set for each experiment (each time we run the script).
+    If you have different training and testing path, set ```'trainp' = NONE```
 
  #### 2. Run the ```run.py```. 
  This step is to load and run the LISP version of IDyOM.
