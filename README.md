@@ -111,6 +111,8 @@ including the following:
 
 
 ## Example on how to use data_extractor.py to extract data of interest from .dat file
+Please look up the Jupyter Notebook `DataExtractionTutorial.ipynb` for detailed tutorial. 
+The following codes are just a simple example. 
     
  
     import data_extractor

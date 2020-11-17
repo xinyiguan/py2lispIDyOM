@@ -66,4 +66,4 @@ testing_config = {
 }
 
 
-configurations = testing_config
+configurations = train_shanx_test_bach

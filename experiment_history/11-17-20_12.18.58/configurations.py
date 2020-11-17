@@ -1,0 +1,1 @@
+{'experiment_history_folder': 'experiment_history/', 'train_test_path': ['./dataset/shanx_dataset/', './dataset/bach_dataset/'], 'trainp': None}

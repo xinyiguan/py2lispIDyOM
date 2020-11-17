@@ -49,6 +49,12 @@ def get_aligned_surprise_with_onset_from_song_dict(song_dict):
 
     return aligned_surprise_with_onset
 
+def get_melody_name_from_song_dict(song_dict):
+    melody_name = song_dict['melody.name'][0]
+    melody_name = np.array(melody_name, dtype=str)
+    return melody_name
+
+
 # extract {data of interest} from {midi}
 
 def get_pitch_sequence_from_midi(midi_file_path):
