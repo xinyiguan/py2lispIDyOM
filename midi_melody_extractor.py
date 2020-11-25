@@ -2,20 +2,6 @@ import mido
 import copy
 
 
-def PrintElements(mylist):
-    for element in mylist:
-        print(element)
-
-
-b_path = 'beethoven_op2no3_1.mid'
-h_path = 'haydn_no34_1.mid'
-mo_path = 'mozart_k576_1.mid'
-sc_path = 'schumann_op16_4_miniatures.mid'
-
-# b_midi_file = mido.MidiFile(b_path, clip=True)
-# print(b_midi_file.filename)
-
-
 def get_note(msg):
     dict = msg.dict()
     if 'note' not in dict.keys():
@@ -90,9 +76,3 @@ def midi_file_melody_only(midi_file_path):
     midi_file.tracks[0] = resulted_track
 
     return midi_file
-
-
-
-# PrintElements(result.tracks[0])
-#result.save('temp_midi.mid')
-
