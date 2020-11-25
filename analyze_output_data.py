@@ -19,18 +19,16 @@ my_pitch_range = (47,91)
 
 # do whatever you want ===================================================================
 
-folder_name = 'train_shanx_test_shanx'
+folder_name = 'multi_voice_dataset'
 
 
 ### demonstration on using data_extractor to extract data from .dat file path--------------------------
 
 # all_song_dict is python readable .dat file (model output) for all testing dataset.
 all_song_dict = data_extractor.get_all_song_dict_from_dat(dat_file_path)
-song_dict_of_interest= list(all_song_dict.values())[8] # one of the testing song result info.
-print(song_dict_of_interest['melody.name'][0])
+song_dict_of_interest= list(all_song_dict.values())[0] # one of the testing song result info.
 #print('song_dict_of_interest.keys: ', song_dict_of_interest.keys())
-#melody_name = data_extractor.get_melody_name_from_song_dict(song_dict_of_interest)
-#print(melody_name)
+print('voice: ', song_dict_of_interest['voice'])
 
 
 

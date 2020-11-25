@@ -56,14 +56,14 @@ train_intentional_overfit_on_bach = {
 	'trainp': None,
 }
 
-testing_config = {
+multi_voice_dataset = {
 	'experiment_history_folder': 'experiment_history/',
 	'train_test_path': [
-		'./dataset/bach_dataset/',
-		'./dataset/shanx_dataset/',
+		'./dataset/multivoice_midi/',
+		'./dataset/multivoice_midi/',
 		],
 	'trainp': None,
 }
 
 
-configurations = train_shanx_test_bach
+configurations = multi_voice_dataset
