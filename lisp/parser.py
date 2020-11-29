@@ -91,14 +91,6 @@ def getSurprise(file):
 		melody_name = melody_name[1:melody_name.rfind(".mid")]
 		likelihoods[melody_name] = -np.log(tmp)/np.log(2)
 
-	#sio.savemat(folder+'surpriseSignal_lisp.mat', likelihoods)
-	#pickle.dump(likelihoods, open(folder+'surpriseSignal_lisp.pickle', "wb" ) )
-
-
 	return likelihoods
 
-# S = getSurprise("../stimuli/giovanni/surprises/13-cpitch_onset-cpitch_onset-12-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat")
-# D = getDico("../stimuli/giovanni/surprises/13-cpitch_onset-cpitch_onset-12-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat")
-# L = getLikelihood(D)
-# plt.plot(D['1']["probability"])
-# plt.show()
+
