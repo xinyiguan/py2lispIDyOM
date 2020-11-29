@@ -3,18 +3,20 @@
 This is a still work in progress...
 
 
-## Code Architecture
+## Directory Structure
 
 - README
 - `configuration.py`: *set you configurations here*
 - `run.py`: *load and run the LISP IDyOM*
 - `data_extractor.py`: *extract the data we are interested in from .dat file*
-- `analyze_output_data.py`
-- `DataExtractionTutorial.ipynb`: * a tutorial to show how to use functions in `data_extractor.py` *
+- `DataExtractionTutorial.ipynb`: *a Jupyter Notebook tutorial to show how to use functions in `data_extractor.py`*
+- `midi_melody_extractor.py` : *extract the melodic line from midi*
+- `MIDI_MelodyExtractionTutorial.ipynb` : *a Jupyter Notebook tutorial to show how to use extract melody from MIDI files*
+- `analyze_output_data.py`: *a playground for any other tasks (plotting, analyzing output data ...)*
 - dataset/:
     -  a bunch of folders containing midi files 
 - lisp/:
-    - compute.lisp: 
+    - compute.lisp *the lisp code to set the parameters of IDyOM*
     - parser.py
 - experiment_history/:*a bunch of folders (naming format: MM-DD-YY_HH.MM.SS) containing information for each experiment run.*
     - `configurations.py`
@@ -54,6 +56,12 @@ Here is a normal example (train X and test Y have similar distribution and being
 
  ## How to use (detailed version):
  
+ #### 0. (*Optional*) Data preprocessing: 
+ - As IDyOM is limited to the monodic melodic music, we first need to extract the melodic line from the MIDI
+ files, if the MIDI has multiple parts. Refer to the `MIDI_MelodyExtractionTutorial.ipynb` for how to extract
+ the melodic line from MIDI. 
+ 
+ 
  #### 1. Set/change the configuration in ```configuration.py```:
 -  In ```configuration.py```, there are 2 parameters to be set:
     - ```'experiment_history_folder'``` where to put the experiment result folder (path specified by user)
@@ -89,9 +97,10 @@ including the following:
  
 
 
-## IDyOM command to separate train and test (Already implemented, this section just for record)
+## IDyOM command to separate train and test (Already implemented)
+#####Refer to the `README` in the lisp directory for more details on the model parameters. 
 
-- IDyOM Lisp codes: (no need to change anything in here.)
+IDyOM Lisp codes: (no need to change anything in here.)
  ```` 
     (start-idyom)
     (idyom-db:initialise-database)    
@@ -101,13 +110,6 @@ including the following:
     
     (quit)
 ````
-- The most important part is the keyword arguments:
-
-````    
-:pretraining-ids '(TRAINID) :k 1
-````
-
-  - notes: Setting k=1 makes the whole dataset of id TESTID being our test set. (k-fold sampling implies 1/k of our dataset to be test set)
 
 
 ## Example on how to use data_extractor.py to extract data of interest from .dat file

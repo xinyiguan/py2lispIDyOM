@@ -64,12 +64,11 @@ Here is an example of what you will see in `compute_temp.lisp` for one experimen
      
      - In our project and in this example, the viewpoints we are interested in are `'(cpitch onset)`
  
-     - The model that I use, `:ltm` , is the long-term model only, which trained on the pretraining training data.
-       This parameter 
+     - The model that I use, `:ltm` , is the long-term model only, which trained on the pretraining and resampling training data.
         - We can also use and experiment with other models. 
              
      - The `pretraining-ids` is the dataset ids used to pretrain the long-term models. 
-       I set it to `(TRAINID)`, so now it is just the dataset we set as our training data in the `configuration.py`. 
+       I set it to `(TRAINID)`, so now the dataset for *training* the model is the entire dataset we set as our training data in the `configuration.py`. 
        
      - `:k 1` means no resampling. This is an important keyword argument. 
        Setting k=1 makes the whole dataset of id `TESTID` be our test set.
