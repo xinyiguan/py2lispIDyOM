@@ -18,15 +18,16 @@ This is a still work in progress...
 - lisp/:
     - compute.lisp *the lisp code to set the parameters of IDyOM*
     - parser.py
-- experiment_history/:*a bunch of folders (naming format: MM-DD-YY_HH.MM.SS) containing information for each experiment run.*
-    - `configurations.py`
-    - experiment_input_data_folder/
-        - train/
-            - ~.mid
-        - test/
-            - ~.mid
-    - experiment_output_data_folder/
-        - ~.dat: *LISP IDyOM model output*
+- experiment_history/:
+    - folders(naming format: MM-DD-YY_HH.MM.SS) *containing information for each experiment run*
+        - `configurations.py`
+        - experiment_input_data_folder/
+            - train/
+                - ~.mid
+            - test/
+                - ~.mid
+        - experiment_output_data_folder/
+            - ~.dat: *LISP IDyOM model output*
 
 ## Usage (brief version)
 
