@@ -6,7 +6,7 @@ Library dependency:
    - numpy
    - matplotlib
    - scipy
-   - tqdm
+   - tqdm 
     
 
 ## Directory Structure
