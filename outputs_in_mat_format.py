@@ -8,7 +8,6 @@ import numpy as np
 import data_extractor
 from glob import glob
 
-
 def song_wise_extraction(song_dict,extraction_methods):
     single_song_data = []
     for extraction in extraction_methods:
@@ -25,13 +24,13 @@ def dataset_wise_extraction(all_song_dict,extraction_methods):
     all_song_data = np.array(all_song_data,dtype=object)
     return all_song_data
 
-## For more methods, see available ones in the data_extractor.py script.
+## For more methods, see available ones in the data_extractor.py file
 
 features_method_name_dict = {
     'melody_name': data_extractor.get_melody_name_from_song_dict,
     'surprise': data_extractor.get_surprise_from_song_dict,
     'aligned_surprise_with_pitch': data_extractor.get_aligned_surprise_with_pitch_from_song_dict,
-    'aligned_surprise_with_onset': data_extractor.get_aligned_surprise_with_onset_from_song_dict
+    'aligned_surprise_with_onset': data_extractor.get_aligned_surprise_with_onset_from_song_dict,
 }
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
@@ -68,5 +67,5 @@ def export_mat_from_history_folder(selected_experiment_history_folder):
 
 # Pass your desired 'selected_experiment_history_folder' below:
 if __name__ == '__main__':
-    selected_experiment_history_folder = 'experiment_history/03-06-21_13.29.27/'
+    selected_experiment_history_folder = 'experiment_history/midi5_03-06-21_22.42.36/'
     export_mat_from_history_folder(selected_experiment_history_folder)

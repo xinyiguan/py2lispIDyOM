@@ -109,7 +109,6 @@ def make_pianoroll_surprise_figure_from_history_folder(selected_experiment_histo
     dat_file_path = sorted(glob(selected_experiment_history_folder + 'experiment_output_data_folder/*'))[0]
     all_song_dict = data_extractor.get_all_song_dict_from_dat(dat_file_path)
     num_of_songs_in_dict = len(all_song_dict.keys())
-    print('num_of_songs_in_dict: ', num_of_songs_in_dict)
     pitch_range = (47, 91)
 
     # current_iteration_range = range(5600, 7021)

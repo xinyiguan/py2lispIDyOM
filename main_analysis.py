@@ -10,7 +10,7 @@ from outputs_in_mat_format import export_mat_from_history_folder
 
 
 if __name__ == '__main__':
-    selected_experiment_history_folder = 'experiment_history/03-06-21_12.14.35/' # change your desired 'selected_experiment_history_folder' here!
+    selected_experiment_history_folder = 'experiment_history/03-08-21_13.40.14/' # change your desired 'selected_experiment_history_folder' here!
 
     print('Making comparison figures:')
     make_comparison_figure_from_history_folder(selected_experiment_history_folder)

@@ -161,24 +161,50 @@ if __name__ == '__main__':
 ``` 
 
 
+## Model Output visualization examples:
 
 
+##### 1. Here is an intentional underfiting example (train on distribution X test on distribution Y, with X supposed to be very different from Y):
+
+IDyOM pitch prediction vs. ground truth:
+
+![alt text][logo5]
+
+[logo5]: Demo_Figs/prediction-shanx033.png
+
+IDyOM surprise values aligned with piano roll:
+
+![alt text][logo6]
+
+[logo6]: Demo_Figs/surprise-shanx033.png
 
 
-Here is an intentional underfiting example (train on distribution X test on distribution Y with X being very different from Y) (notice the surprise):
-![alt text][logo1]
+#### 2. Here is an intentional overfitting example (train X is exactly test Y):
 
-[logo1]: Demo_figures/train_bach_test_shanx/shanx019.mid.png
+IDyOM pitch prediction vs. ground truth:
 
-Here is an intentional overfiting example (train X is exactly test Y) (notice the surprise):
-![alt text][logo2]
-
-[logo2]: Demo_figures/train_intentional_overfit_on_bach/chor-003.mid.png
-
-Here is a normal example (train X and test Y have similar distribution and being mutually exclusive) (notice the surprise):
 ![alt text][logo3]
 
-[logo3]: Demo_figures/train_bach_test_bach/chor-004.mid.png
+[logo3]: Demo_Figs/prediction-chor-015.png
 
-- Do whatever you want to do in ```analyze_output_data.py```. 
-- Done!
+IDyOM surprise values aligned with piano roll:
+
+![alt text][logo4]
+
+[logo4]: Demo_Figs/surprise-chor-015.png
+
+
+#### 3. Here is a normal example (train X and test Y have similar distribution and being mutually exclusive) (notice the surprise):
+
+IDyOM pitch prediction vs. ground truth:
+
+![alt text][logo1]
+
+[logo1]: Demo_Figs/prediction-chor-030.png
+
+IDyOM surprise values aligned with piano roll:
+
+![alt text][logo2]
+
+[logo2]: Demo_Figs/surprise-chor-030.png
+
