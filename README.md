@@ -2,6 +2,13 @@
 
 Last version update: Mar 5, 2021
 
+Library dependency:
+   - numpy
+   - matplotlib
+   - scipy
+   - tqdm
+    
+
 ## Directory Structure
 
 - README
