@@ -2,7 +2,6 @@ import os
 import numpy as np
 import shutil
 import datetime
-import matplotlib.pyplot as plt
 from glob import glob
 from configuration import configurations
 
@@ -133,14 +132,7 @@ runLisp(lispfile_to_run)
 
 
 def RunJupyterExperiment(configurations):
-    this_experiment_folder = initialize_experiment_folder(configurations)
-    lispfile_to_read = 'lisp/compute.lisp'
-    lispfile_to_run = modify_temp_lisp_file_to_run(orginal_lisp_file=lispfile_to_read,experiment_folder_path=this_experiment_folder)
-    runLisp(lispfile_to_run)
-
-
-
-
-
-
-
+	this_experiment_folder = initialize_experiment_folder(configurations)
+	lispfile_to_read = 'lisp/compute.lisp'
+	lispfile_to_run = modify_temp_lisp_file_to_run(orginal_lisp_file=lispfile_to_read,experiment_folder_path=this_experiment_folder)
+	runLisp(lispfile_to_run)

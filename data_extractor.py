@@ -17,7 +17,7 @@ def get_all_song_dict_from_dat(dat_file_path):
 
 
 # extract {data of interest} from {song_dict}
-def get_note_distribution_from_song_dict(song_dict):
+def get_pitch_distribution_from_song_dict(song_dict):
     pitch_distribution = []
     song_length = len(song_dict['cpitch.probability'])
     for i in range(*my_pitch_range):
@@ -42,12 +42,39 @@ def get_surprise_from_song_dict(song_dict):
     surprise = -np.log(probability_seq)/np.log(2)
     return surprise
 
+def get_pitch_from_song_dict(song_dict):
+    pitch_list = song_dict['cpitch']
+    pitch_list = np.array(pitch_list)
+    return pitch_list
+
+def get_duration_from_song_dict(song_dict):
+    duration_list = song_dict['dur']
+    duration_list = np.array(duration_list)
+    return duration_list
+
 def get_aligned_surprise_with_onset_from_song_dict(song_dict):
     surprise = get_surprise_from_song_dict(song_dict)
     onset = get_onset_from_song_dict(song_dict)
     aligned_surprise_with_onset = np.column_stack((onset, surprise))
-
     return aligned_surprise_with_onset
+
+def get_aligned_pitch_with_duration_from_song_dict(song_dict):
+    pitch = get_pitch_from_song_dict(song_dict)
+    duration = get_duration_from_song_dict(song_dict)
+    aligned_pitch_with_duration = np.column_stack((duration, pitch))
+    return aligned_pitch_with_duration
+
+def get_aligned_pitch_with_onset_from_song_dict(song_dict):
+    pitch = get_pitch_from_song_dict(song_dict)
+    onset = get_onset_from_song_dict(song_dict)
+    aligned_pitch_with_onset = np.column_stack((onset, pitch))
+    return aligned_pitch_with_onset
+
+def get_aligned_surprise_with_pitch_from_song_dict(song_dict):
+    surprise = get_surprise_from_song_dict(song_dict)
+    pitch = get_pitch_from_song_dict(song_dict)
+    aligned_surprise_with_pitch = np.column_stack((pitch, surprise))
+    return aligned_surprise_with_pitch
 
 def get_melody_name_from_song_dict(song_dict):
     melody_name = song_dict['melody.name'][0]
