@@ -164,7 +164,7 @@ if __name__ == '__main__':
 ## Model Output visualization examples:
 
 
-##### 1. Here is an intentional underfiting example (train on distribution X test on distribution Y, with X supposed to be very different from Y):
+### 1. Here is an intentional underfiting example (train on distribution X test on distribution Y, with X supposed to be very different from Y):
 
 IDyOM pitch prediction vs. ground truth:
 
@@ -179,7 +179,7 @@ IDyOM surprise values aligned with piano roll:
 [logo6]: Demo_Figs/surprise-shanx033.png
 
 
-#### 2. Here is an intentional overfitting example (train X is exactly test Y):
+### 2. Here is an intentional overfitting example (train X is exactly test Y):
 
 IDyOM pitch prediction vs. ground truth:
 
@@ -194,7 +194,7 @@ IDyOM surprise values aligned with piano roll:
 [logo4]: Demo_Figs/surprise-chor-015.png
 
 
-#### 3. Here is a normal example (train X and test Y have similar distribution and being mutually exclusive) (notice the surprise):
+### 3. Here is a normal example (train X and test Y have similar distribution and being mutually exclusive) (notice the surprise):
 
 IDyOM pitch prediction vs. ground truth:
 
