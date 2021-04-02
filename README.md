@@ -131,9 +131,9 @@ including the following:
  ### 4. Get the model outputs in different file formats. 
  
  To get the model outputs in different formats, you can either 
-   - 3.1: run the ```main_analysis.py```, or 
+   - 4.1: run the ```main_analysis.py```, or 
    
-   - 3.2: run `plot_pitch_prediction_comparison.py`, `plot_surprise_with_pianoroll.py`, and `outputs_in_mat_format.py` individually. 
+   - 4.2: run `plot_pitch_prediction_comparison.py`, `plot_surprise_with_pianoroll.py`, and `outputs_in_mat_format.py` individually. 
 
 
  #### 4.1 Run the all-in-one script (```main_analysis.py```)
