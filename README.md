@@ -46,11 +46,13 @@ after running the run.py.*
 ## Usage Overview (brief version)
 
 1. Change the ```configuration.py``` script to specify the training-set folder and test-set folder for our experiment.
-2. Run ```run.py``` to run LISP version of IDyOM
-3. Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.
+2. Change the ```compute.lisp``` script within the lisp folder to specify the model parameters for IDyOM model. 
+3. Run ```run.py``` to run LISP version of IDyOM.
+4. Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.
 **OR** You can run the three scripts (`plot_pitch_prediction_comparison.py`, 
 `plot_surprise_with_pianoroll.py`, and
 `outputs_in_mat_format.py`) to get the outputs separately.
+
 
 
  ## How to use (detailed version):
@@ -62,6 +64,7 @@ after running the run.py.*
  
  
  ### 1. Set/change the configurations in ```configuration.py```:
+ This step is to set the input/output dataset and experiment history folder location.
 
 In ```configuration.py```, there are 4 parameters to be set:
 
@@ -91,8 +94,23 @@ train_bach_test_shanx = {
 }
 ```
 
+ ### 2. Set/change the IDyOM model parameters in ```compute.lisp``` in the lisp folder:
+ This step is to set the model parameters for IDyOM. More description of the script, see the README.md within the lisp folder.
+ 
+ Change the following line for model parameters:
+ 
+ ```
+(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :both :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)
+```
+ 
+see (https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters) for available parameters and syntax.
 
- ### 2. Run the ```run.py```. 
+The capitalized words (such as `TRAINFOLDER`, `TESTID`...) are the parts to be replaced in the python script `run.py` for the input datasets. 
+NOTE: do not change these capitalized words. 
+
+
+
+ ### 3. Run the ```run.py```. 
  This step is to load and run the LISP version of IDyOM.
 
 
@@ -110,7 +128,7 @@ including the following:
  and we can have a record of the information we can check if we have any doubts of the output of the model.*
  
  
- ### 3. Get the model outputs in different file formats. 
+ ### 4. Get the model outputs in different file formats. 
  
  To get the model outputs in different formats, you can either 
    - 3.1: run the ```main_analysis.py```, or 
@@ -118,7 +136,7 @@ including the following:
    - 3.2: run `plot_pitch_prediction_comparison.py`, `plot_surprise_with_pianoroll.py`, and `outputs_in_mat_format.py` individually. 
 
 
- #### 3.1 Run the all-in-one script (```main_analysis.py```)
+ #### 4.1 Run the all-in-one script (```main_analysis.py```)
 
 *You only need to manually change the path of ```selected_experiment_history_folder``` to your desired one in this script.*
  
@@ -147,7 +165,7 @@ You can extract different model outputs by changing/adding different "extraction
 ```features_method_name_dict```, and modifying the following ```my_choice_of_extraction``` accordingly in the `outputs_in_mat_format.py` script. 
 
 
-#### 3.2 Run the modules and get the different outputs individually:
+#### 4.2 Run the modules and get the different outputs individually:
 
 *You need to change the ```selected_experiment_history_folder``` at the bottom of the script to your desired one in each script.*
 
