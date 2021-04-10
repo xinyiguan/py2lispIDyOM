@@ -6,52 +6,25 @@ Library dependency:
    - numpy
    - matplotlib
    - scipy
-   - tqdm 
+   - tqdm
+   - mido
     
 
-## Directory Structure
-
-- README
-- `configuration.py`: *set you configurations here*
-- `run.py`: *load and run the LISP IDyOM*
-- `main_analysis.py`: *an integrated script to output different visualization figures and output data in .mat format,
-after running the run.py.*
-- `plot_pitch_prediction_comparison.py`: *make the comparison figure(s) of the predicted pitch distributions and ground truth pitches*
-- `plot_surprise_with_pianoroll.py`: *make the figure(s) of surprise values aligned with piano roll reference.*
-- `outputs_in_mat_format.py`: *output the data in .mat format.*
-- `data_extractor.py`: *helper script to extract the data we are interested in from .dat file*
-
-- dataset/:
-    -  a bunch of folders containing midi files.
-- lisp/:
-    - ```compute.lisp``` *the lisp code to set and run the parameters of IDyOM*
-    - ```parser.py```
-- experiment_history/:
-    - folders(naming format: MM-DD-YY_HH.MM.SS) *containing information for each experiment run*
-        - `configurations.py`
-        - experiment_input_data_folder/
-            - train/
-                - ~.mid
-            - test/
-                - ~.mid
-        - experiment_output_data_folder/
-            - ~.dat: *LISP IDyOM model output*
-        - plot_pitch_prediction_comparison/
-            - ~.esp: *comparison figures of predicted pitch distributions and ground truth pitches*
-        - plot_surprise_with_pianoroll/
-            - ~.esp: *figures of surprise values aligned with piano roll reference*
-        - mat_data_outputs/
-            - ~.mat: *data output files in .mat format*
                         
 ## Usage Overview (brief version)
 
-1. Change the ```configuration.py``` script to specify the training-set folder and test-set folder for our experiment.
+1. Change the ```configuration.py``` script to specify the training-set folder and test-set folder for the experiment.
 2. Change the ```compute.lisp``` script within the lisp folder to specify the model parameters for IDyOM model. 
 3. Run ```run.py``` to run LISP version of IDyOM.
 4. Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.
-**OR** You can run the three scripts (`plot_pitch_prediction_comparison.py`, 
-`plot_surprise_with_pianoroll.py`, and
-`outputs_in_mat_format.py`) to get the outputs separately.
+
+    **OR** You can run the three scripts
+
+    - `plot_pitch_prediction_comparison.py`, 
+    - `plot_surprise_with_pianoroll.py`, and
+    - `outputs_in_mat_format.py` 
+    
+    to get the outputs separately.
 
 
 
@@ -226,3 +199,38 @@ IDyOM surprise values aligned with piano roll:
 
 [logo2]: Demo_Figs/surprise-chor-030.png
 
+
+
+## Directory Structure
+
+- README
+- `configuration.py`: *set you configurations here*
+- `run.py`: *load and run the LISP IDyOM*
+- `main_analysis.py`: *an integrated script to output different visualization figures and output data in .mat format,
+after running the run.py.*
+- `plot_pitch_prediction_comparison.py`: *make the comparison figure(s) of the predicted pitch distributions and ground truth pitches*
+- `plot_surprise_with_pianoroll.py`: *make the figure(s) of surprise values aligned with piano roll reference.*
+- `outputs_in_mat_format.py`: *output the data in .mat format.*
+- `data_extractor.py`: *helper script to extract the data we are interested in from .dat file*
+
+- dataset/:
+    -  a bunch of folders containing midi files.
+- lisp/:
+    - ```compute.lisp``` *the lisp code to set and run the parameters of IDyOM*
+    - ```parser.py```
+- experiment_history/:
+    - folders(naming format: MM-DD-YY_HH.MM.SS) *containing information for each experiment run*
+        - `configurations.py`
+        - experiment_input_data_folder/
+            - train/
+                - ~.mid
+            - test/
+                - ~.mid
+        - experiment_output_data_folder/
+            - ~.dat: *LISP IDyOM model output*
+        - plot_pitch_prediction_comparison/
+            - ~.esp: *comparison figures of predicted pitch distributions and ground truth pitches*
+        - plot_surprise_with_pianoroll/
+            - ~.esp: *figures of surprise values aligned with piano roll reference*
+        - mat_data_outputs/
+            - ~.mat: *data output files in .mat format*
