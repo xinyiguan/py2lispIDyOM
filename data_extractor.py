@@ -52,6 +52,46 @@ def get_duration_from_song_dict(song_dict):
     duration_list = np.array(duration_list)
     return duration_list
 
+def get_melody_name_from_song_dict(song_dict):
+    melody_name = song_dict['melody.name'][0]
+    melody_name = np.array(melody_name, dtype=str)
+    return melody_name
+
+
+## 4 melodic expectation features:================================================================
+
+def get_cpitch_information_content_from_song_dict(song_dict):
+    # returns 2 columns: "pitch MIDI number" and the correspondent "cpitch.information.content"
+    cpitch_ic = song_dict['cpitch.information.content']
+    cpitch_ic = np.array(cpitch_ic)
+    pitch = get_pitch_from_song_dict(song_dict)
+    cpitch_information_content = np.column_stack((pitch, cpitch_ic))
+    return cpitch_information_content
+
+def get_cpitch_entropy_from_song_dict(song_dict):
+    cpitch_entro = song_dict['cpitch.entropy']
+    cpitch_entro = np.array(cpitch_entro)
+    pitch = get_pitch_from_song_dict(song_dict)
+    cpitch_entropy = np.column_stack((pitch, cpitch_entro))
+    return cpitch_entropy
+
+def get_onset_information_content_from_song_dict(song_dict):
+    onset_ic = song_dict['onset.information.content']
+    onset_ic = np.array(onset_ic)
+    onset = get_onset_from_song_dict(song_dict)
+    onset_information_content = np.column_stack((onset, onset_ic))
+    return onset_information_content
+
+def get_onset_entropy_from_song_dict(song_dict):
+    onset_entro = song_dict['onset.entropy']
+    onset_entro = np.array(onset_entro)
+    onset = get_onset_from_song_dict(song_dict)
+    onset_entropy = np.column_stack((onset, onset_entro))
+    return onset_entropy
+
+
+#=========================================================================
+
 def get_aligned_surprise_with_onset_from_song_dict(song_dict):
     surprise = get_surprise_from_song_dict(song_dict)
     onset = get_onset_from_song_dict(song_dict)
@@ -76,10 +116,7 @@ def get_aligned_surprise_with_pitch_from_song_dict(song_dict):
     aligned_surprise_with_pitch = np.column_stack((pitch, surprise))
     return aligned_surprise_with_pitch
 
-def get_melody_name_from_song_dict(song_dict):
-    melody_name = song_dict['melody.name'][0]
-    melody_name = np.array(melody_name, dtype=str)
-    return melody_name
+
 
 
 # extract {data of interest} from {midi}

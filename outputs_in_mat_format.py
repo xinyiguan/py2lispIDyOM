@@ -28,18 +28,21 @@ def dataset_wise_extraction(all_song_dict,extraction_methods):
 
 features_method_name_dict = {
     'melody_name': data_extractor.get_melody_name_from_song_dict,
-    'surprise': data_extractor.get_surprise_from_song_dict,
-    'aligned_surprise_with_pitch': data_extractor.get_aligned_surprise_with_pitch_from_song_dict,
-    'aligned_surprise_with_onset': data_extractor.get_aligned_surprise_with_onset_from_song_dict,
+    'cpitch_information_content': data_extractor.get_cpitch_information_content_from_song_dict,
+    'cpitch_entropy': data_extractor.get_cpitch_entropy_from_song_dict,
+    'onset_information_content': data_extractor.get_onset_information_content_from_song_dict,
+    'onset_entropy': data_extractor.get_onset_entropy_from_song_dict,
 }
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
 
 my_choice_of_extraction = [
     'melody_name',
-    'surprise',
-    'aligned_surprise_with_pitch',
-    'aligned_surprise_with_onset',
+    'cpitch_information_content',
+    'cpitch_entropy',
+    'onset_information_content',
+    'onset_entropy',
+
 ]
 
 def export(data_to_export,output_path):
