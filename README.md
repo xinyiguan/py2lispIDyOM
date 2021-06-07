@@ -1,6 +1,6 @@
 # A python interface for LISP IDyOM 
 
-Last version update: Mar 5, 2021
+Last version update: Jun 4, 2021
 
 Library dependency:
    - numpy
@@ -127,12 +127,13 @@ Outputs of ```main_analysis.py```: (3 folders)
 
 ##### - Notes on `outputs_in_mat_format.py`: 
 
-The current setting for the model outputs in ```.mat ``` file format are: 
+The current setting for the model outputs in ```.mat ``` file format are the 4 melodic expectation features : 
 
-- 'melody_name'
-- 'surprise'
-- 'aligned_surprise_with_pitch'
-- 'aligned_surprise_with_onset'
+- 'melody_name',
+- 'cpitch_information_content',
+- 'cpitch_entropy',
+- 'onset_information_content',
+- 'onset_entropy',
 
 You can extract different model outputs by changing/adding different "extraction methods" in the dictionary called 
 ```features_method_name_dict```, and modifying the following ```my_choice_of_extraction``` accordingly in the `outputs_in_mat_format.py` script. 
