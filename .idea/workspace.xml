@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/configurations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_input_data_folder/test/shanx040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/06-29-21_15.44.56/experiment_output_data_folder/99062921154456-cpitch-cpitch-nil-nil-melody-nil-1-stm-nil-t-nil-c-nil-t-t-x-3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lisp/compute_temp.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/lisp/compute_temp.lisp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+    </list>
+    <disabled>
+      <disabled_changelists>
+        <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="" />
+      </disabled_changelists>
+      <disabled_trackers />
+    </disabled>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ucnY7iq0eIRyjm43mZaOV3tp6X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="" />
+      <created>1624973793693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624973793693</updated>
+      <workItem from="1624973799159" duration="590000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

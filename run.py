@@ -95,16 +95,16 @@ def initialize_experiment_folder(configurations):
 
 	if train_path is None:
 		pass
-		print("No training set detected. Possibly using STM.")
+		print("** No training set detected. Possibly using STM.**")
 	else:
 		train = get_files_from_paths(train_path)
-		print("Loaded training set")
+		print(" ** Loaded training set **")
 		put_midis_in_folder(train, train_folder)
-		print("Put training midi files in folder")
+		print("** Put training midi files in experiment history folder **")
 	test = get_files_from_paths(test_path)
-	print("Loaded test set")
+	print("** Loaded test set **")
 	put_midis_in_folder(test, test_folder)
-	print("Put test midi files in folder")
+	print("** Put test midi files in experiment history folder **")
 
 	### end of new version =================================================================
 
