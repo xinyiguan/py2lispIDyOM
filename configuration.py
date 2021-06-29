@@ -1,64 +1,42 @@
 """
 configurations_template = {
-	'experiment_history_folder':'path to save the experiment history',
-	'train_test_path':[
-		'your train folder',
-		'your test folder',
-		], # if same, leave the second empty
-	'trainp': ... # if train & test from same folder, specify split rate (#train/#total)
-	'experiment_name': ... # Name your experiment for later reference
+	'train_path': ,  # absolute path to training set
+	'test_path': , # absolute path to test set
+	'model_type': 'both', # avaialble type: stm, ltm, ltm+, both, both+
+	'target_viewpoints': 'cpitch onset',
+	'source_viewpoints': 'cpitch onset',
+	'k_number_of_resampling': '1',
+	'experiment_history_folder': 'experiment_history/',
+	'experiment_name': 'specify your experiment name here',
 }
 """
 
 
-bach_dataset = './dataset/bach_dataset/'
-shanx_dataset = './dataset/shanx_dataset/'
+bach = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/bach_dataset/'
+shanx = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/shanx_dataset/'
 
-train_bach_test_bach = {
+
+both_train_bach_test_shanxi = {
+	'train_path': bach,
+	'test_path': shanx,
+	'model_type': 'both',
+	'target_viewpoints': 'cpitch onset',
+	'source_viewpoints': 'cpitch onset',
+	'k_number_of_resampling': '1',
 	'experiment_history_folder': 'experiment_history/',
-	'train_test_path': [
-		bach_dataset,
-		],
-	'trainp': 0.8,
-	'experiment_name': 'train_bach_test_bach'
+	'experiment_name': 'both_train_bach_test_shanx',
 }
 
-train_bach_test_shanx = {
-	'experiment_history_folder':'experiment_history/',
-	'train_test_path': [
-		bach_dataset,
-		shanx_dataset,
-		],
-	'trainp': None,
-	'experiment_name' : 'train_bach_test_shanx'
-}
-
-train_shanx_test_bach = {
-	'experiment_history_folder':'experiment_history/',
-	'train_test_path': [
-		shanx_dataset,
-		bach_dataset,
-		],
-	'trainp': None,
-}
-
-train_shanx_test_shanx = {
+stm_test_shanxi = {
+	'train_path': None,
+	'test_path': shanx,
+	'model_type': 'stm',
+	'target_viewpoints': 'cpitch',
+	'source_viewpoints': 'cpitch',
+	'k_number_of_resampling': '1',
 	'experiment_history_folder': 'experiment_history/',
-	'train_test_path': [
-		shanx_dataset,
-		],
-	'trainp': 0.8,
-}
-
-train_intentional_overfit_on_bach = {
-	'experiment_history_folder':'experiment_history/',
-	'train_test_path': [
-		bach_dataset,
-		bach_dataset,
-		],
-	'trainp': None,
-	'experiment_name': 'train_intentional_overfit_on_bach'
+	'experiment_name': 'stm_test_shanx',
 }
 
 
-configurations = train_bach_test_shanx
+configurations = both_train_bach_test_shanxi

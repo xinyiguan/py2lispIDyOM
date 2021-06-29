@@ -57,6 +57,25 @@ def get_melody_name_from_song_dict(song_dict):
     melody_name = np.array(melody_name, dtype=str)
     return melody_name
 
+## overall probability, information.content and entropy:===========================================
+
+def get_overall_prob_from_song_dict(song_dict):
+    overall_prob = song_dict['probability']
+    overall_prob = np.array(overall_prob)
+    return overall_prob
+
+def get_overall_information_content_from_song_dict(song_dict):
+    overall_ic = song_dict['information.content']
+    overall_ic = np.array(overall_ic)
+    return overall_ic
+
+def get_overall_entropy_from_song_dict(song_dict):
+    overall_entropy = song_dict['entropy']
+    overall_entropy = np.array(overall_entropy)
+    return overall_entropy
+
+#=========================================================================
+
 
 ## 4 melodic expectation features:================================================================
 

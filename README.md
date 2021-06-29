@@ -1,90 +1,74 @@
-# A python interface for LISP IDyOM 
+# A python interface for IDyOM 
 
-Last version update: Mar 5, 2021
+Last version update: Jun 28, 2021
 
-Library dependency:
+This project provides a python interface for IDyOM model by Marcus Pearce. 
+
+Need to install IDyOM first. Follow instructions here: https://github.com/mtpearce/idyom/wiki/Installation 
+
+Python library dependency:
    - numpy
    - matplotlib
    - scipy
    - tqdm
    - mido
-    
-
+ 
                         
-## Usage Overview (brief version)
+## Usage Steps Overview (brief version):
 
-1. Change the ```configuration.py``` script to specify the training-set folder and test-set folder for the experiment.
-2. Change the ```compute.lisp``` script within the lisp folder to specify the model parameters for IDyOM model. 
-3. Run ```run.py``` to run LISP version of IDyOM.
-4. Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.
+1. Define inputs and set the model configurations for your experiment in the ```configuration.py``` script.
+2. Execute ```run.py``` to run LISP version of IDyOM.
+3. (optional) Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.
 
-    **OR** You can run the three scripts
+    **OR** run the following three scripts to get the outputs separately: 
 
     - `plot_pitch_prediction_comparison.py`, 
-    - `plot_surprise_with_pianoroll.py`, and
+    - `plot_surprise_with_pianoroll.py`, 
     - `outputs_in_mat_format.py` 
-    
-    to get the outputs separately.
+   
 
 
-
- ## How to use (detailed version):
+ ## Usage Steps (detailed version):
  
  ### 0. (*Optional*) Data preprocessing: 
- - As IDyOM is limited to the monodic melodic music, we first need to extract the melodic line from the MIDI
+ 
+Notes: 
+
+ 1. As IDyOM is limited to the monodic melodic music, you may want to extract the melodic line from the MIDI
  files, if the MIDI has multiple parts. Refer to the `MIDI_MelodyExtractionTutorial.ipynb` for how to extract
  the melodic line from MIDI. 
  
+ 2. The file names for each input MIDI files should **NOT** contain space.
  
- ### 1. Set/change the configurations in ```configuration.py```:
- This step is to set the input/output dataset and experiment history folder location.
-
-In ```configuration.py```, there are 4 parameters to be set:
-
-1.  ```'experiment_history_folder'``` where to put the experiment result folder (path specified by user)
-2.  ```'train_test_path'``` specific the training set path and the testing set path here.
-    - e.g. ```'train_test_path':['./dataset/bach_dataset/','./dataset/shanx_dataset/',],```
-    - If you want to train and test on the same dataset, then just leave the second argument blank.
-      It will automatically split the files into train and test set according to percentage ```'trainp'```.
-3.  ```'trainp'``` If you only input one path in ```'train_test_path'```, you need to set the percentage of training dataset.
-dataset now is randomly split into training and testing set for each experiment (each time we run the script).
-If you have different training and testing path, set ```'trainp' = NONE```
-4.  ```'experiment_name'``` You can name this specific experiment. The experiment_name will show up in the figures that are generated in later steps. 
-
-Follow the template in ```configuration.py```. 
+ 
+ ### 1. Define Inputs and Set Parameters
+ 
+In the ```configuration.py``` script, define your input datasets and set the model configurations for your experiment by following the template.
 
 **Example:** 
 
 ```
-train_bach_test_shanx = {
-	'experiment_history_folder':'experiment_history/',
-	'train_test_path': [
-		'./dataset/bach_dataset/',
-		'./dataset/shanx_dataset/',
-		],
-	'trainp': None,
-	'experiment_name' : 'train_bach_test_shanx'
+both_train_bach_test_shanxi = {
+	'train_path': '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/bach_dataset/',
+	'test_path': '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/shanx_dataset/',
+	'model_type': 'both',
+	'target_viewpoints': 'cpitch onset',
+	'source_viewpoints': 'cpitch onset',
+	'k_number_of_resampling': '1',
+	'experiment_history_folder': 'experiment_history/',
+	'experiment_name': 'both_train_bach_test_shanx',
 }
 ```
 
- ### 2. Set/change the IDyOM model parameters in ```compute.lisp``` in the lisp folder:
- This step is to set the model parameters for IDyOM. More description of the script, see the README.md within the lisp folder.
- 
- Change the following line for model parameters:
- 
- ```
-(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :both :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)
-```
- 
-see (https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters) for available parameters and syntax.
-
-The capitalized words (such as `TRAINFOLDER`, `TESTID`...) are the parts to be replaced in the python script `run.py` for the input datasets. 
-NOTE: do not change these capitalized words. 
 
 
-
- ### 3. Run the ```run.py```. 
+ ### 2. Execute the ```run.py```. 
  This step is to load and run the LISP version of IDyOM.
+
+In your terminal, type the following code:
+
+
+    python run.py
 
 
 ##### What happens when you run ```run.py```?
@@ -96,64 +80,50 @@ including the following:
     - the output from IDyOM named 'experiment_output_data_folder' (containing the ```.dat``` file)
     
                   
- [Comments:] *By creating an 'experiment_history' folder, we can have a record of all data and information used and the output for this experiment.
- In this way, we can have a better control over what dataset we want the model to train on and test on, 
- and we can have a record of the information we can check if we have any doubts of the output of the model.*
+ [Comments:] *The 'experiment_history' folder contains all data and information used and the outputs for each of the current experiment. 
+ It should have all the necessary details to replicate the same experiments if needed.*
  
  
- ### 4. Get the model outputs in different file formats. 
+ ### 3. Get the model outputs in mat file format and different visualizations. 
  
- To get the model outputs in different formats, you can either 
-   - 4.1: run the ```main_analysis.py```, or 
-   
-   - 4.2: run `plot_pitch_prediction_comparison.py`, `plot_surprise_with_pianoroll.py`, and `outputs_in_mat_format.py` individually. 
-
-
- #### 4.1 Run the all-in-one script (```main_analysis.py```)
-
-*You only need to manually change the path of ```selected_experiment_history_folder``` to your desired one in this script.*
+ All data outputs here are extracted from the .dat file. 
  
-Outputs of ```main_analysis.py```: (3 folders)
+ ##### 1. Get the model outputs in mat file format
+ 
+  - To get the model outputs in mat file format, jump to the **helper_scripts/outputs_in_mat_format.py** script.
+  
+  - Pass the absolute path of the your desired experiment_history folder for the `selected_experiment_history_folder`
+  
+  - The current implementation for the model outputs in `.mat` file format are the melodic names, 3 overall metrics and 4 melodic expectation features :
+    - melody_name,
+    - overall_probability,
+    - overall_information_content,
+    - overall_entropy,
+    - cpitch_information_content,
+    - cpitch_entropy,
+    - onset_information_content,
+    - onset_entropy,
+  
+  You can extract different model outputs by changing/adding different "extraction methods" in the dictionary called `features_method_name_dict`, 
+  and modifying the following `my_choice_of_extraction` accordingly in the `outputs_in_mat_format.py` script.
+  
+ 
+ ##### 2. Get outputs visualizations
+ 
+   - To get the model outputs visualizations, jump to the **helper_scripts/plot_pitch_prediction_comparison.py** and **helper_scripts/plot_surprise_with_pianoroll.py** scripts.
+  
+ #### You can also get 1 &2 with the all-in-one script (```main_analysis.py```)
 
-- "mat_data_outputs" folder, containing the model output data in .mat file format (with current setting, there are 4 mat files within the folder)
-- "plot_pitch_prediction_comparison" folder, containing all pitch prediction vs. ground truth figures.
-- "plot_surprise_with_pianoroll" folder, containing all surprise value aligned with piano roll figures. 
-
+   - You only need to manually change the path of ```selected_experiment_history_folder``` to your desired one in this script.
+ 
 ```main_analysis.py``` is an integrated script that runs the 3 other scripts/modules simultaneously:
 `plot_pitch_prediction_comparison.py`, 
 `plot_surprise_with_pianoroll.py`, and 
 `outputs_in_mat_format.py`. 
 
-
-##### - Notes on `outputs_in_mat_format.py`: 
-
-The current setting for the model outputs in ```.mat ``` file format are: 
-
-- 'melody_name'
-- 'surprise'
-- 'aligned_surprise_with_pitch'
-- 'aligned_surprise_with_onset'
-
-You can extract different model outputs by changing/adding different "extraction methods" in the dictionary called 
-```features_method_name_dict```, and modifying the following ```my_choice_of_extraction``` accordingly in the `outputs_in_mat_format.py` script. 
-
-
-#### 4.2 Run the modules and get the different outputs individually:
-
-*You need to change the ```selected_experiment_history_folder``` at the bottom of the script to your desired one in each script.*
-
-Example for the `outputs_in_mat_format.py`: (same for the other two)
-
-```
-# Pass your desired 'selected_experiment_history_folder' below:
-if __name__ == '__main__':
-    selected_experiment_history_folder = 'experiment_history/03-06-21_13.29.27/'
-    export_mat_from_history_folder(selected_experiment_history_folder)
-``` 
-
+You will find all output files within the corresponding experiment history folder.
 
 ## Model Output visualization examples:
-
 
 ### 1. Here is an intentional underfiting example (train on distribution X test on distribution Y, with X supposed to be very different from Y):
 
@@ -198,39 +168,3 @@ IDyOM surprise values aligned with piano roll:
 ![alt text][logo2]
 
 [logo2]: Demo_Figs/surprise-chor-030.png
-
-
-
-## Directory Structure
-
-- README
-- `configuration.py`: *set you configurations here*
-- `run.py`: *load and run the LISP IDyOM*
-- `main_analysis.py`: *an integrated script to output different visualization figures and output data in .mat format,
-after running the run.py.*
-- `plot_pitch_prediction_comparison.py`: *make the comparison figure(s) of the predicted pitch distributions and ground truth pitches*
-- `plot_surprise_with_pianoroll.py`: *make the figure(s) of surprise values aligned with piano roll reference.*
-- `outputs_in_mat_format.py`: *output the data in .mat format.*
-- `data_extractor.py`: *helper script to extract the data we are interested in from .dat file*
-
-- dataset/:
-    -  a bunch of folders containing midi files.
-- lisp/:
-    - ```compute.lisp``` *the lisp code to set and run the parameters of IDyOM*
-    - ```parser.py```
-- experiment_history/:
-    - folders(naming format: MM-DD-YY_HH.MM.SS) *containing information for each experiment run*
-        - `configurations.py`
-        - experiment_input_data_folder/
-            - train/
-                - ~.mid
-            - test/
-                - ~.mid
-        - experiment_output_data_folder/
-            - ~.dat: *LISP IDyOM model output*
-        - plot_pitch_prediction_comparison/
-            - ~.esp: *comparison figures of predicted pitch distributions and ground truth pitches*
-        - plot_surprise_with_pianoroll/
-            - ~.esp: *figures of surprise values aligned with piano roll reference*
-        - mat_data_outputs/
-            - ~.mat: *data output files in .mat format*
