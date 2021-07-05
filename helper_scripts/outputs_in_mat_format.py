@@ -76,5 +76,5 @@ def export_mat_from_history_folder(selected_experiment_history_folder):
 
 # Pass your desired 'selected_experiment_history_folder' below:
 if __name__ == '__main__':
-    selected_experiment_history_folder = 'experiment_history/midi5_03-06-21_22.42.36/'
+    selected_experiment_history_folder = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/06-29-21_15.44.12/'
     export_mat_from_history_folder(selected_experiment_history_folder)

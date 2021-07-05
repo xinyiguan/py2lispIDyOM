@@ -12,8 +12,8 @@ configurations_template = {
 """
 
 
-bach = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/bach_dataset/'
-shanx = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/shanx_dataset/'
+bach = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/dataset/bach_dataset/'
+shanx = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/dataset/shanx_dataset/'
 
 
 both_train_bach_test_shanxi = {
@@ -39,4 +39,4 @@ stm_test_shanxi = {
 }
 
 
-configurations = both_train_bach_test_shanxi
+configurations = stm_test_shanxi
