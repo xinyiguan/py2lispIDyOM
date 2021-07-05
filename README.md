@@ -90,9 +90,10 @@ including the following:
  
  ##### 1. Get the model outputs in mat file format
  
-  - To get the model outputs in mat file format, jump to the **helper_scripts/outputs_in_mat_format.py** script.
+  - To get the model outputs in mat file format, jump to the **export_data.py** script.
   
-  - Pass the absolute path of the your desired experiment_history folder for the `selected_experiment_history_folder`
+  1. Pass the absolute path of the your desired experiment_history folder for the `selected_experiment_history_folder`
+  2. Modify the data_type_to_export list if needed to get your desired data output types:
   
   - The current implementation for the model outputs in `.mat` file format are the melodic names, 3 overall metrics and 4 melodic expectation features :
     - melody_name,
@@ -103,9 +104,9 @@ including the following:
     - cpitch_entropy,
     - onset_information_content,
     - onset_entropy,
-  
-  You can extract different model outputs by changing/adding different "extraction methods" in the dictionary called `features_method_name_dict`, 
-  and modifying the following `my_choice_of_extraction` accordingly in the `outputs_in_mat_format.py` script.
+   
+  You can extract other model outputs by changing/adding different "extraction methods" in the dictionary called `features_method_name_dict`, 
+  and modifying the following `data_type_to_export` accordingly in the `outputs_in_mat_format.py` script.
   
  
  ##### 2. Get outputs visualizations
@@ -121,7 +122,7 @@ including the following:
 `plot_surprise_with_pianoroll.py`, and 
 `outputs_in_mat_format.py`. 
 
-You will find all output files within the corresponding experiment history folder.
+You will find all output files within the corresponding experiment history folder. 
 
 ## Model Output visualization examples:
 

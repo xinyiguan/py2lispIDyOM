@@ -39,17 +39,17 @@ features_method_name_dict = {
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
 
-my_choice_of_extraction = [
-    'melody_name',
-    'overall_probability',
-    'overall_information_content',
-    'overall_entropy',
-    'cpitch_information_content',
-    'cpitch_entropy',
-    'onset_information_content',
-    'onset_entropy',
-
-]
+# my_choice_of_extraction = [
+#     'melody_name',
+#     'overall_probability',
+#     'overall_information_content',
+#     'overall_entropy',
+#     'cpitch_information_content',
+#     'cpitch_entropy',
+#     'onset_information_content',
+#     'onset_entropy',
+#
+# ]
 
 def export(data_to_export,output_path):
     for i,feature in enumerate(data_to_export):
@@ -61,13 +61,13 @@ def export(data_to_export,output_path):
 
 ## If run this module only:
 
-def export_mat_from_history_folder(selected_experiment_history_folder):
+def export_mat_from_history_folder(selected_experiment_history_folder, data_type_to_export):
     dat_file_path = sorted(glob(selected_experiment_history_folder + 'experiment_output_data_folder/*'))[0]
     all_song_dict = data_extractor.get_all_song_dict_from_dat(dat_file_path)
 
     # export data:
     data_to_export = dataset_wise_extraction(all_song_dict,
-                                             dict_access_keys(features_method_name_dict, my_choice_of_extraction)).T
+                                             dict_access_keys(features_method_name_dict, data_type_to_export)).T
     mat_data_output_folder = selected_experiment_history_folder + 'mat_data_outputs/'
     if not os.path.exists(mat_data_output_folder):
         os.makedirs(mat_data_output_folder)
@@ -76,5 +76,15 @@ def export_mat_from_history_folder(selected_experiment_history_folder):
 
 # Pass your desired 'selected_experiment_history_folder' below:
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/06-29-21_15.44.12/'
-    export_mat_from_history_folder(selected_experiment_history_folder)
+    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/'
+    data_type_to_export = [
+        'melody_name',
+        'overall_probability',
+        'overall_information_content',
+        'overall_entropy',
+        'cpitch_information_content',
+        'cpitch_entropy',
+        'onset_information_content',
+        'onset_entropy',
+    ]
+    export_mat_from_history_folder(selected_experiment_history_folder, data_type_to_export)
