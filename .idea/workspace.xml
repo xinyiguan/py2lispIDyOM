@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dee97417-7425-464e-be59-f738d8280ae6" name="Default Changelist" comment="Jun 28 2021 version update" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1f6d5d36901a12321413194f09c3260ab95b1c05" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
+  </component>
+  <component name="JupyterTrust" id="cfe35641-7d6a-469e-b0a4-f6c430b1c346" />
+  <component name="ProjectId" id="1pUexqFdOFybZOKY0bIPax9NCac" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/helper_scripts" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main_analysis">
+    <configuration name="main_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/main_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="outputs_in_mat_format" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_pitch_prediction_comparison" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot_surprise_with_pianoroll" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/plot_surprise_with_pianoroll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.plot_surprise_with_pianoroll" />
+        <item itemvalue="Python.plot_pitch_prediction_comparison" />
+        <item itemvalue="Python.outputs_in_mat_format" />
+        <item itemvalue="Python.main_analysis" />
+        <item itemvalue="Python.plot_surprise_with_pianoroll" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dee97417-7425-464e-be59-f738d8280ae6" name="Default Changelist" comment="example experiments" />
+      <created>1615242345961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615242345961</updated>
+      <workItem from="1615242347123" duration="1363000" />
+      <workItem from="1615251013997" duration="926000" />
+      <workItem from="1615829626251" duration="347000" />
+      <workItem from="1617379561763" duration="2473000" />
+      <workItem from="1617382423376" duration="998000" />
+      <workItem from="1617383428688" duration="554000" />
+      <workItem from="1621374635249" duration="84000" />
+      <workItem from="1622856945944" duration="273000" />
+      <workItem from="1622859377566" duration="4085000" />
+      <workItem from="1624968203204" duration="5344000" />
+      <workItem from="1625467878175" duration="174000" />
+    </task>
+    <task id="LOCAL-00001" summary="README update">
+      <created>1615251333585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615251333585</updated>
+    </task>
+    <task id="LOCAL-00002" summary="README update">
+      <created>1617383806805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617383806805</updated>
+    </task>
+    <task id="LOCAL-00003" summary="README update">
+      <created>1617383919144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617383919145</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cleaning">
+      <created>1621374656737</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621374656737</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added computing 4 melodic expectation features">
+      <created>1623018597020</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623018597021</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Jun 28 2021 version update">
+      <created>1624972977841</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624972977841</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Jun 28 2021 version update">
+      <created>1624973124770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624973124771</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git saving trial" />
+    <MESSAGE value="README update" />
+    <MESSAGE value="cleaning" />
+    <MESSAGE value="added computing 4 melodic expectation features" />
+    <MESSAGE value="Jun 28 2021 version update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Jun 28 2021 version update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="406" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624968438785">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="406" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1624968438785" />
+    <state x="358" y="215" key="MultipleFileMergeDialog" timestamp="1624973029526">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="358" y="215" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1624973029526" />
+    <state x="74" y="25" key="SettingsEditor" timestamp="1617383615320">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1617382321060" />
+    <state x="74" y="25" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1617383615320" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1624973238777">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1624973238777" />
+    <state x="320" y="207" key="Vcs.Push.Dialog.v2/0.25.1440.875@0.25.1440.875" timestamp="1617382723864" />
+    <state x="100" y="125" width="1240" height="675" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617383400463">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="100" y="125" width="1240" height="675" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.25.1440.875@0.25.1440.875" timestamp="1617383400463" />
+    <state x="466" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1624968221732">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="466" y="188" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1440.900@0.0.1440.900" timestamp="1624968221732" />
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625467967536">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1625467967536" />
+    <state x="521" y="383" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1617382890726" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1624970675769">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1624970675769" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1615088909438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1615055128128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

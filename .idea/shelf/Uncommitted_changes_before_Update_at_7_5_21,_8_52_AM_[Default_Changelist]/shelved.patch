@@ -1,0 +1,119 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># A python interface for IDyOM \n\nLast version update: Jun 28, 2021\n\nThis project provides a python interface for IDyOM model by Marcus Pearce. \n\nNeed to install IDyOM first. Follow instructions here: https://github.com/mtpearce/idyom/wiki/Installation \n\nPython library dependency:\n   - numpy\n   - matplotlib\n   - scipy\n   - tqdm\n   - mido\n \n                        \n## Usage Steps Overview (brief version):\n\n1. Define inputs and set the model configurations for your experiment in the ```configuration.py``` script.\n2. Execute ```run.py``` to run LISP version of IDyOM.\n3. (optional) Run the all-in-one ```main_analysis.py``` script to get the model outputs in ```.mat``` format and different visualizations.\n\n    **OR** run the following three scripts to get the outputs separately: \n\n    - `plot_pitch_prediction_comparison.py`, \n    - `plot_surprise_with_pianoroll.py`, \n    - `outputs_in_mat_format.py` \n   \n\n\n ## Usage Steps (detailed version):\n \n ### 0. (*Optional*) Data preprocessing: \n \nNotes: \n\n 1. As IDyOM is limited to the monodic melodic music, you may want to extract the melodic line from the MIDI\n files, if the MIDI has multiple parts. Refer to the `MIDI_MelodyExtractionTutorial.ipynb` for how to extract\n the melodic line from MIDI. \n \n 2. The file names for each input MIDI files should **NOT** contain space.\n \n \n ### 1. Define Inputs and Set Parameters\n \nIn the ```configuration.py``` script, define your input datasets and set the model configurations for your experiment by following the template.\n\n**Example:** \n\n```\nboth_train_bach_test_shanxi = {\n\t'train_path': '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/bach_dataset/',\n\t'test_path': '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/dataset/shanx_dataset/',\n\t'model_type': 'both',\n\t'target_viewpoints': 'cpitch onset',\n\t'source_viewpoints': 'cpitch onset',\n\t'k_number_of_resampling': '1',\n\t'experiment_history_folder': 'experiment_history/',\n\t'experiment_name': 'both_train_bach_test_shanx',\n}\n```\n\n\n\n ### 2. Execute the ```run.py```. \n This step is to load and run the LISP version of IDyOM.\n\nIn your terminal, type the following code:\n\n\n    python run.py\n\n\n##### What happens when you run ```run.py```?\n\n- A folder (timestamp naming format: MM/DD/YY_HH.MM.SS) will be created to record information of the current experiment,\nincluding the following:\n    - the configuration file ((a script containing info of the configurations we set for this experiment))\n    - the dataset input named 'experiment_input_data_folder' (duplicated from original path, which is specifiable in the ```configuration.py```)\n    - the output from IDyOM named 'experiment_output_data_folder' (containing the ```.dat``` file)\n    \n                  \n [Comments:] *The 'experiment_history' folder contains all data and information used and the outputs for each of the current experiment. \n It should have all the necessary details to replicate the same experiments if needed.*\n \n \n ### 3. Get the model outputs in mat file format and different visualizations. \n \n All data outputs here are extracted from the .dat file. \n \n ##### 1. Get the model outputs in mat file format\n \n  - To get the model outputs in mat file format, jump to the **helper_scripts/outputs_in_mat_format.py** script.\n  \n  - Pass the absolute path of the your desired experiment_history folder for the `selected_experiment_history_folder`\n  \n  - The current implementation for the model outputs in `.mat` file format are the melodic names, 3 overall metrics and 4 melodic expectation features :\n    - melody_name,\n    - overall_probability,\n    - overall_information_content,\n    - overall_entropy,\n    - cpitch_information_content,\n    - cpitch_entropy,\n    - onset_information_content,\n    - onset_entropy,\n  \n  You can extract different model outputs by changing/adding different \"extraction methods\" in the dictionary called `features_method_name_dict`, \n  and modifying the following `my_choice_of_extraction` accordingly in the `outputs_in_mat_format.py` script.\n  \n \n ##### 2. Get outputs visualizations\n \n   - To get the model outputs visualizations, jump to the **helper_scripts/plot_pitch_prediction_comparison.py** and **helper_scripts/plot_surprise_with_pianoroll.py** scripts.\n  \n #### You can also get 1 &2 with the all-in-one script (```main_analysis.py```)\n\n   - You only need to manually change the path of ```selected_experiment_history_folder``` to your desired one in this script.\n \n```main_analysis.py``` is an integrated script that runs the 3 other scripts/modules simultaneously:\n`plot_pitch_prediction_comparison.py`, \n`plot_surprise_with_pianoroll.py`, and \n`outputs_in_mat_format.py`. \n\nYou will find all output files within the corresponding experiment history folder.\n\n## Model Output visualization examples:\n\n### 1. Here is an intentional underfiting example (train on distribution X test on distribution Y, with X supposed to be very different from Y):\n\nIDyOM pitch prediction vs. ground truth:\n\n![alt text][logo5]\n\n[logo5]: Demo_Figs/prediction-shanx033.png\n\nIDyOM surprise values aligned with piano roll:\n\n![alt text][logo6]\n\n[logo6]: Demo_Figs/surprise-shanx033.png\n\n\n### 2. Here is an intentional overfitting example (train X is exactly test Y):\n\nIDyOM pitch prediction vs. ground truth:\n\n![alt text][logo3]\n\n[logo3]: Demo_Figs/prediction-chor-015.png\n\nIDyOM surprise values aligned with piano roll:\n\n![alt text][logo4]\n\n[logo4]: Demo_Figs/surprise-chor-015.png\n\n\n### 3. Here is a normal example (train X and test Y have similar distribution and being mutually exclusive) (notice the surprise):\n\nIDyOM pitch prediction vs. ground truth:\n\n![alt text][logo1]\n\n[logo1]: Demo_Figs/prediction-chor-030.png\n\nIDyOM surprise values aligned with piano roll:\n\n![alt text][logo2]\n\n[logo2]: Demo_Figs/surprise-chor-030.png
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision 3245678580d87b4929d63d3787e81d91558ac779)
++++ README.md	(date 1624973289152)
+@@ -88,7 +88,7 @@
+  
+  All data outputs here are extracted from the .dat file. 
+  
+- ##### 1. Get the model outputs in mat file format
++ #### 1. Get the model outputs in mat file format
+  
+   - To get the model outputs in mat file format, jump to the **helper_scripts/outputs_in_mat_format.py** script.
+   
+@@ -108,7 +108,7 @@
+   and modifying the following `my_choice_of_extraction` accordingly in the `outputs_in_mat_format.py` script.
+   
+  
+- ##### 2. Get outputs visualizations
++ #### 2. Get outputs visualizations
+  
+    - To get the model outputs visualizations, jump to the **helper_scripts/plot_pitch_prediction_comparison.py** and **helper_scripts/plot_surprise_with_pianoroll.py** scripts.
+   
+Index: lisp/README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># The IDyOM Lisp script explained\n\nThis section is to explained the IDyOM lisp command. \n(No need to change anything here. Already implemented and good to use, this section just for record and explanation)\nIf you want to change the model parameters, check with Pearce instructions. \n\n### IDyOM Lisp codes overview :\n ```` \n(start-idyom)\n\n(idyom-db:initialise-database)    \n(idyom-db:import-data :mid \"TRAINFOLDER\" \"Train\" TRAINID)    \n(idyom-db:import-data :mid \"TESTFOLDER\" \"Test\" TESTID)\n(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)\n\n(quit)\n````\n\nThe python script that loads and reads the this lisp script basically \ntreats the codes as texts and pastes the it in the terminal to run. \n\n\nThe capitalized words (such as `TRAINFOLDER`, `TESTID`...) are the parts to be replaced in the python script `run.py`. \nNOTE: do not change these capitalized words. \n\nIf you want to inspect the parameters of the IDyOM model for the current experiment, \nplease open the `compute_temp.lisp` file which is generated after you run the `run.py`. \nHere is an example of what you will see in `compute_temp.lisp` for one experiment:\n\n ```` \n(start-idyom)\n\n(idyom-db:initialise-database)    \n(idyom-db:import-data :mid \"experiment_history/11-13-20_18.37.59/experiment_input_data_folder/train/\" \"Train\" 66111320183759)    \n(idyom-db:import-data :mid \"experiment_history/11-13-20_18.37.59/experiment_input_data_folder/test/\" \"Test\" 99111320183759)\n(idyom:idyom 99111320183759 '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(66111320183759) :k 1 :detail 3 :output-path \"experiment_history/11-13-20_18.37.59/experiment_output_data_folder/\" :overwrite t)\n\n(quit)\n````\n\n   The capitalized words are replaced with the actual paths/arguments that are executed.\n   With my current setting, the training dataset id begins with '66' and then followed by time stamp in the format of 'MMDDYYHHMMSS'.\n   Likewise for the testing dataset with prefix id '99'. \n\n\n### Line by line explanation:\n\n 1. `(idyom-db:initialise-database)`\n   \n     - To initialize the database everytime we run our experiment. This allows us to better control and not to confuse\n     ourselves with what dataset is inside our database. \n \n 2. `(idyom-db:import-data :mid \"TRAINFOLDER\" \"Train\" TRAINID)`\n    `(idyom-db:import-data :mid \"TESTFOLDER\" \"Test\" TESTID)`\n    \n     - These two lines load the train and test dataset separately. So the model can train on the dataset we want it to train on, \n     and test on the dataset we specify.\n\n3. `(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)`\n     \n     - This is the main line of lisp command to configure the IDyOM for our experiment. \n     \n     - The model predicts the pitch and onset values in dataset `TESTID`, which is the dataset we input as our test dataset.  \n     \n     - In our project and in this example, the viewpoints we are interested in are `'(cpitch onset)`\n \n     - The model that I use, `:ltm` , is the long-term model only, which trained on the pretraining and resampling training data.\n        - We can also use and experiment with other models. \n             \n     - The `pretraining-ids` is the dataset ids used to pretrain the long-term models. \n       I set it to `(TRAINID)`, so now the dataset for *training* the model is the entire dataset we set as our training data in the `configuration.py`. \n       \n     - `:k 1` means no resampling. This is an important keyword argument. \n       Setting k=1 makes the whole dataset of id `TESTID` be our test set.\n       (k-fold sampling implies 1/k of our dataset to be test set)\n    \n     - `:detail 3` specifies the model outputs, containing: information content averaged over the entire dataset, and over each composition, \n        and also the raw IC values for each event in each composition. \n     \n     - `:output-path DATAOUTPUT` the model output is stored in the `DATAOUTPUT`, which is the .dat file in \n        experiment_history/experiment_output_data_folder/
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lisp/README.md	(revision 3245678580d87b4929d63d3787e81d91558ac779)
++++ lisp/README.md	(date 1625467946548)
+@@ -1,81 +1,0 @@
+-# The IDyOM Lisp script explained
+-
+-This section is to explained the IDyOM lisp command. 
+-(No need to change anything here. Already implemented and good to use, this section just for record and explanation)
+-If you want to change the model parameters, check with Pearce instructions. 
+-
+-### IDyOM Lisp codes overview :
+- ```` 
+-(start-idyom)
+-
+-(idyom-db:initialise-database)    
+-(idyom-db:import-data :mid "TRAINFOLDER" "Train" TRAINID)    
+-(idyom-db:import-data :mid "TESTFOLDER" "Test" TESTID)
+-(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)
+-
+-(quit)
+-````
+-
+-The python script that loads and reads the this lisp script basically 
+-treats the codes as texts and pastes the it in the terminal to run. 
+-
+-
+-The capitalized words (such as `TRAINFOLDER`, `TESTID`...) are the parts to be replaced in the python script `run.py`. 
+-NOTE: do not change these capitalized words. 
+-
+-If you want to inspect the parameters of the IDyOM model for the current experiment, 
+-please open the `compute_temp.lisp` file which is generated after you run the `run.py`. 
+-Here is an example of what you will see in `compute_temp.lisp` for one experiment:
+-
+- ```` 
+-(start-idyom)
+-
+-(idyom-db:initialise-database)    
+-(idyom-db:import-data :mid "experiment_history/11-13-20_18.37.59/experiment_input_data_folder/train/" "Train" 66111320183759)    
+-(idyom-db:import-data :mid "experiment_history/11-13-20_18.37.59/experiment_input_data_folder/test/" "Test" 99111320183759)
+-(idyom:idyom 99111320183759 '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(66111320183759) :k 1 :detail 3 :output-path "experiment_history/11-13-20_18.37.59/experiment_output_data_folder/" :overwrite t)
+-
+-(quit)
+-````
+-
+-   The capitalized words are replaced with the actual paths/arguments that are executed.
+-   With my current setting, the training dataset id begins with '66' and then followed by time stamp in the format of 'MMDDYYHHMMSS'.
+-   Likewise for the testing dataset with prefix id '99'. 
+-
+-
+-### Line by line explanation:
+-
+- 1. `(idyom-db:initialise-database)`
+-   
+-     - To initialize the database everytime we run our experiment. This allows us to better control and not to confuse
+-     ourselves with what dataset is inside our database. 
+- 
+- 2. `(idyom-db:import-data :mid "TRAINFOLDER" "Train" TRAINID)`
+-    `(idyom-db:import-data :mid "TESTFOLDER" "Test" TESTID)`
+-    
+-     - These two lines load the train and test dataset separately. So the model can train on the dataset we want it to train on, 
+-     and test on the dataset we specify.
+-
+-3. `(idyom:idyom TESTID '(cpitch onset) '(cpitch onset) :models :ltm :pretraining-ids '(TRAINID) :k 1 :detail 3 :output-path DATAOUTPUT :overwrite t)`
+-     
+-     - This is the main line of lisp command to configure the IDyOM for our experiment. 
+-     
+-     - The model predicts the pitch and onset values in dataset `TESTID`, which is the dataset we input as our test dataset.  
+-     
+-     - In our project and in this example, the viewpoints we are interested in are `'(cpitch onset)`
+- 
+-     - The model that I use, `:ltm` , is the long-term model only, which trained on the pretraining and resampling training data.
+-        - We can also use and experiment with other models. 
+-             
+-     - The `pretraining-ids` is the dataset ids used to pretrain the long-term models. 
+-       I set it to `(TRAINID)`, so now the dataset for *training* the model is the entire dataset we set as our training data in the `configuration.py`. 
+-       
+-     - `:k 1` means no resampling. This is an important keyword argument. 
+-       Setting k=1 makes the whole dataset of id `TESTID` be our test set.
+-       (k-fold sampling implies 1/k of our dataset to be test set)
+-    
+-     - `:detail 3` specifies the model outputs, containing: information content averaged over the entire dataset, and over each composition, 
+-        and also the raw IC values for each event in each composition. 
+-     
+-     - `:output-path DATAOUTPUT` the model output is stored in the `DATAOUTPUT`, which is the .dat file in 
+-        experiment_history/experiment_output_data_folder/
+\ No newline at end of file
