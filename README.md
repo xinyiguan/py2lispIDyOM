@@ -93,20 +93,15 @@ including the following:
  
  ### 4. Get the model outputs in different file formats. 
  
-To get the model outputs in mat format, run `outputs_in_mat_format.py`. 
+To get the model outputs in mat format, run `export_data.py`. 
 
 
 Follow the 2 steps to extract the outputs: 
 
 1. You  need to manually change the path of ```selected_experiment_history_folder``` to your desired one in this script (preferably in absolute path).
 
-    *Example for the `outputs_in_mat_format.py`: (same for the other two plotting scripts)*
-
     ```
-    # Pass your desired 'selected_experiment_history_folder' below:
-    if __name__ == '__main__':
-        selected_experiment_history_folder = 'experiment_history/03-06-21_13.29.27/'
-        export_mat_from_history_folder(selected_experiment_history_folder)
+    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/' 
     ``` 
 
 2. Specify the **data_type_to_export**. 
@@ -116,6 +111,9 @@ Change the template ```data_type_to_export``` to output your features:
 Available features for output in ```.mat ``` file format:  
 
 - 'melody_name',
+- 'cpitch',
+- 'onset',
+- 'duration',
 - 'overall_probability',
 - 'overall_information_content',
 - 'overall_entropy',
