@@ -20,8 +20,8 @@ both_train_bach_test_shanxi = {
 	'train_path': bach,
 	'test_path': shanx,
 	'model_type': 'both',
-	'target_viewpoints': 'cpitch onset',
-	'source_viewpoints': 'cpitch onset',
+	'target_viewpoints': 'cpitch onset dur',
+	'source_viewpoints': 'cpitch onset dur',
 	'k_number_of_resampling': '1',
 	'experiment_history_folder': 'experiment_history/',
 	'experiment_name': 'both_train_bach_test_shanx',
@@ -39,4 +39,4 @@ stm_test_shanxi = {
 }
 
 
-configurations = stm_test_shanxi
+configurations = both_train_bach_test_shanxi

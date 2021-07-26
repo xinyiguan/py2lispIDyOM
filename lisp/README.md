@@ -79,3 +79,8 @@ Here is an example of what you will see in `compute_temp.lisp` for one experimen
      
      - `:output-path DATAOUTPUT` the model output is stored in the `DATAOUTPUT`, which is the .dat file in 
         experiment_history/experiment_output_data_folder/
+        
+        
+#### Available keys in output dictionary: 
+
+dict_keys(['dataset.id', 'melody.id', 'note.id', 'melody.name', 'vertint12', 'articulation', 'comma', 'voice', 'ornament', 'dyn', 'phrase', 'bioi', 'deltast', 'accidental', 'mpitch', 'cpitch', 'barlength', 'pulses', 'tempo', 'mode', 'keysig', 'dur', 'onset', 'cpitch.order.ltm.cpitch', 'cpitch.order.stm.cpitch', 'cpitch.weight.ltm', 'cpitch.weight.stm', 'cpitch.weight.ltm.cpitch', 'cpitch.weight.stm.cpitch', 'cpitch.probability', 'cpitch.information.content', 'cpitch.entropy', 'cpitch.31', 'cpitch.34', 'cpitch.40', 'cpitch.41', 'cpitch.43', 'cpitch.44', 'cpitch.45', 'cpitch.46', 'cpitch.47', 'cpitch.48', 'cpitch.49', 'cpitch.50', 'cpitch.51', 'cpitch.52', 'cpitch.53', 'cpitch.54', 'cpitch.55', 'cpitch.56', 'cpitch.57', 'cpitch.58', 'cpitch.59', 'cpitch.60', 'cpitch.61', 'cpitch.62', 'cpitch.63', 'cpitch.64', 'cpitch.65', 'cpitch.66', 'cpitch.67', 'cpitch.68', 'cpitch.69', 'cpitch.70', 'cpitch.71', 'cpitch.72', 'cpitch.73', 'cpitch.74', 'cpitch.75', 'cpitch.76', 'cpitch.77', 'cpitch.78', 'cpitch.79', 'cpitch.80', 'cpitch.81', 'cpitch.82', 'cpitch.83', 'cpitch.84', 'cpitch.85', 'cpitch.86', 'cpitch.87', 'cpitch.88', 'cpitch.89', 'cpitch.90', 'cpitch.91', 'cpitch.92', 'cpitch.94', 'cpitch.95', 'cpitch.96', 'cpitch.97', 'cpitch.100', 'cpitch.101', 'probability', 'information.content', 'entropy', 'information.gain'])

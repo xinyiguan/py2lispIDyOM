@@ -25,89 +25,1016 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/configurations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx002.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx003.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx004.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx006.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx007.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx008.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx009.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx010.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx011.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx012.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx013.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx014.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx015.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx016.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx017.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx018.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx019.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx020.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx021.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx022.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx023.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx025.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx026.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx027.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx028.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx029.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx030.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx031.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx032.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx033.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx034.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx035.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx036.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx037.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/test/shanx040.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-001.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-002.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-003.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-004.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-005.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-006.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-007.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-008.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-009.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-010.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-011.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-012.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-013.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-014.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-015.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-016.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-017.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-018.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-019.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-020.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-021.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-022.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-023.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-024.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-025.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-026.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-027.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-028.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-029.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-030.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-031.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-032.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-033.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-034.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_input_data_folder/train/chor-035.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/experiment_output_data_folder/99030821134014-cpitch_onset-cpitch_onset-66030821134014-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/mat_data_outputs/melody_name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/mat_data_outputs/overall_entropy.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/mat_data_outputs/overall_information_content.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/mat_data_outputs/overall_probability.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="merge scripts and files">
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/configurations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_Beethoven_op57_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_beethoven_op10no1_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_beethoven_op10no2_2.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_beethoven_op2no3_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_beethoven_op7_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_chopin_op18_valse.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_chopin_op28_19_prelude.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_chopin_op33_2_mazurka.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_chopin_op53_polonaise.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_chopin_op7_1_mazurka.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_clementi_op36no2_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_clementi_op36no3_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_clementi_op36no5_2.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_clementi_op36no6_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_clementi_op7no1_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_haydn_no13_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_haydn_no16_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_haydn_no33_3.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_haydn_no34_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_haydn_no42_3.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mandelssohn_19_2_songs.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mandelssohn_19_4_songs.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mandelssohn_30_3_songs.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mandelssohn_62_3_songs.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mandelssohn_62_4_songs.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mozart_k279_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mozart_k283_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mozart_k330_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mozart_k331_3.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_mozart_k576_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schubert_D850_1.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schubert_d899_2_impromtus.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schubert_d935_2_impromtus.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schubert_d935_4_impromtus.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schubert_d960_4.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schumann_op15_10_miniatures.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schumann_op15_1_miniatures.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schumann_op15_8_miniatures.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schumann_op16_4_miniatures.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/test/monophonic_schumann_op16_8_miniatures.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-044.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-105.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-106.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-107.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-108.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-109.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-110.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-111.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-112.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-113.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-114.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-115.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-116.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-117.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-118.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-119.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-120.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-121.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-122.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-123.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-124.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-125.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-126.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-127.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-128.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-129.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-130.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-131.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-132.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-133.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-134.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-135.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-136.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-137.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-138.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-139.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-140.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-141.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-142.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-143.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-144.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-145.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-146.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-147.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-148.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-149.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-150.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-151.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-152.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-153.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-154.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-155.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-156.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-157.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-158.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-159.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-160.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-161.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-162.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-163.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-164.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-165.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-166.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-167.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-168.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-169.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-170.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-171.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-172.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-173.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-174.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-175.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-176.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-177.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-178.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-179.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-180.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-181.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-182.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-183.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-184.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/chor-185.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass01.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass02.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass03.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass04.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass05.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass06.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass07.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass08.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass09.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass10.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass11.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass12.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass13.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass14.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass15.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass16.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass17.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass18.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass19.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass20.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass21.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass22.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass23.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass24.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass25.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass26.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass27.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass28.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass29.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass30.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass31.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass32.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass33.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass34.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass35.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass36.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass37.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass38.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass39.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass40.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass41.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass42.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass43.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass44.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass45.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass46.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass47.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass48.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass49.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass50.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass51.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass52.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass53.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass54.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass55.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass56.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass57.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass58.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass59.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass60.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass61.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass62.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass63.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass64.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass65.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass66.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass67.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass68.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass69.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass70.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass71.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass72.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass73.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass74.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass75.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass76.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass77.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass78.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass79.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass80.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass81.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass82.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass83.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass84.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass85.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass86.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass87.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass88.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass89.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass90.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/elsass91.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos038.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos044.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos096.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos101.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos105.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos106.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos107.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos108.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos109.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos110.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos111.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos112.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos113.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos114.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos115.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos116.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos117.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos118.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/jugos119.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr038.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr044.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr096.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr101.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr105.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr106.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr107.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr108.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr109.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr110.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr111.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr112.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr113.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr114.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr115.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr116.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr117.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr118.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr119.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr120.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr121.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr122.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr123.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr124.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr125.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr126.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr127.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr128.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr129.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr130.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr131.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr132.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr133.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr134.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr135.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr136.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr137.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr138.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr139.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr140.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr141.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr142.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr143.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr144.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr145.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr146.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr147.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr148.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr149.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr150.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr151.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr152.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr153.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr154.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr155.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr156.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr157.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr158.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr159.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr160.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr161.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr162.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr163.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr164.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr165.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr166.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr167.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr168.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr169.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr170.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr171.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr172.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr173.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr174.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr175.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr176.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr177.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr178.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr179.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr180.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr181.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr182.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr183.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr184.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr185.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr186.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr187.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr188.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr189.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr190.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr191.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr192.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr193.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr194.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr195.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr196.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr197.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr198.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr199.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr200.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr201.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr202.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr203.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr204.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr205.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr206.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr207.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr208.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr209.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr210.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr211.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr212.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/kindr213.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova038.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova044a.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova044b.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova096.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova101.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova105.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova106.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova107.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova108.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova109.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova110.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova111.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova112.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova113.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova114.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova115.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova116.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova117.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova118.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova119.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova120.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova121a.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova121b.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova122.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova123.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova124.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova125.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova126.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova127.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova128.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova129.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova130.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova131.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova132.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova133.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova134.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova135.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova136.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova137.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova138.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova139.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova140.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova141.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova142.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova143.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova144.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova145.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova146.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova147.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova148.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova149.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/nova150.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr038.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr044.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr096.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr101.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/oestr104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse01.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse02.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse03.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse04.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse05.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse06.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse07.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse08.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse09.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse10.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse11.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse12.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse13.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse14.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse15.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse16.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse17.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse18.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse19.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse20.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse21.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse22.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse23.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse24.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse25.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse26.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse27.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse28.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse29.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse30.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse31.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse32.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse33.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse34.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse35.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse36.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse37.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse38.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse39.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse40.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse41.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse42.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse43.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse44.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse45.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse46.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse47.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse48.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse49.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse50.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse51.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse52.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse53.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse54.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse55.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse56.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse57.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse58.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse59.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse60.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse61.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse62.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse63.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse64.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse65.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse66.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse67.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse68.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse69.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse70.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse71.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse72.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse73.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse74.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse75.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse76.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse77.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse78.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse79.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse80.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse81.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse82.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse83.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse84.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse85.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse86.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse87.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse88.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse89.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse90.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse91.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse92.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_input_data_folder/train/suisse93.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/experiment_output_data_folder/99072621114212-cpitch-cpitch-66072621114212-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/cpitch_entropy.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/cpitch_information_content.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/melody_name.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/overall_entropy.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/overall_information_content.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/cpitch_both_train_mixed2_test_classical_stim/mat_data_outputs/overall_probability.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_29_21,_3_23_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_6_29_21__3_23_PM__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_extractor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lisp/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/lisp/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +1067,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.export_data">
+  <component name="RunManager" selected="Python.outputs_in_mat_format">
     <configuration name="export_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,8 +1114,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.export_data" />
         <item itemvalue="Python.outputs_in_mat_format" />
+        <item itemvalue="Python.export_data" />
       </list>
     </recent_temporary>
   </component>
@@ -201,6 +1128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1624973793693</updated>
       <workItem from="1624973799159" duration="790000" />
+      <workItem from="1627311985837" duration="1347000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -209,7 +1137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624974449749</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="merge scripts and files">
+      <created>1625470202909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625470202909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +1155,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -229,33 +1176,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="merge scripts and files" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge scripts and files" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1625469631796">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1627312196612">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1625469631796" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1625469631795">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1627312196612" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1627312196611">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1625469631795" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1625469631793">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1627312196611" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1627312196610">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1625469631793" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1625469631795">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1627312196610" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1627312196612">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1625469631795" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1627312196612" />
     <state x="229" y="86" key="SettingsEditor" timestamp="1625468240783">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1625468240783" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1625470207433">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1625470207432" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1625469512461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1615055128128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

@@ -76,7 +76,7 @@ def export_mat_from_history_folder(selected_experiment_history_folder, data_type
 
 # Pass your desired 'selected_experiment_history_folder' below:
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/'
+    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/cpitch_both_train_mixed2_test_classical_stim/'
     data_type_to_export = [
         'melody_name',
         'overall_probability',

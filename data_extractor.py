@@ -77,7 +77,7 @@ def get_overall_entropy_from_song_dict(song_dict):
 #=========================================================================
 
 
-## 4 melodic expectation features:================================================================
+## melodic expectation features:================================================================
 
 def get_cpitch_information_content_from_song_dict(song_dict):
     # returns 2 columns: "pitch MIDI number" and the correspondent "cpitch.information.content"
@@ -108,8 +108,23 @@ def get_onset_entropy_from_song_dict(song_dict):
     onset_entropy = np.column_stack((onset, onset_entro))
     return onset_entropy
 
+def get_duration_information_content_from_song_dict(song_dict):
+    duration_ic = song_dict['dur.information.content']
+    duration_ic = np.array(duration_ic)
+    duration = get_onset_from_song_dict(song_dict)
+    duration_information_content = np.column_stack((duration, duration_ic))
+    return duration_information_content
 
+def get_duration_entropy_from_song_dict(song_dict):
+    duration_entro = song_dict['dur.entropy']
+    duration_entro = np.array(duration_entro)
+    duration = get_onset_from_song_dict(song_dict)
+    duration_entropy = np.column_stack((duration, duration_entro))
+    return duration_entropy
 #=========================================================================
+
+
+
 
 def get_aligned_surprise_with_onset_from_song_dict(song_dict):
     surprise = get_surprise_from_song_dict(song_dict)
