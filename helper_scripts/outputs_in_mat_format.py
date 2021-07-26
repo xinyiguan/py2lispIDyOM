@@ -35,6 +35,8 @@ features_method_name_dict = {
     'cpitch_entropy': data_extractor.get_cpitch_entropy_from_song_dict,
     'onset_information_content': data_extractor.get_onset_information_content_from_song_dict,
     'onset_entropy': data_extractor.get_onset_entropy_from_song_dict,
+    'duration_information_content': data_extractor.get_duration_information_content_from_song_dict,
+    'duration_entropy': data_extractor.get_duration_entropy_from_song_dict,
 }
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
@@ -76,7 +78,7 @@ def export_mat_from_history_folder(selected_experiment_history_folder, data_type
 
 # Pass your desired 'selected_experiment_history_folder' below:
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/cpitch_both_train_mixed2_test_classical_stim/'
+    selected_experiment_history_folder = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/07-26-21_17.32.52/'
     data_type_to_export = [
         'melody_name',
         'overall_probability',
@@ -86,5 +88,7 @@ if __name__ == '__main__':
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
+        'duration_information_content',
+        'duration_entropy',
     ]
     export_mat_from_history_folder(selected_experiment_history_folder, data_type_to_export)

@@ -111,14 +111,14 @@ def get_onset_entropy_from_song_dict(song_dict):
 def get_duration_information_content_from_song_dict(song_dict):
     duration_ic = song_dict['dur.information.content']
     duration_ic = np.array(duration_ic)
-    duration = get_onset_from_song_dict(song_dict)
+    duration = get_duration_from_song_dict(song_dict)
     duration_information_content = np.column_stack((duration, duration_ic))
     return duration_information_content
 
 def get_duration_entropy_from_song_dict(song_dict):
     duration_entro = song_dict['dur.entropy']
     duration_entro = np.array(duration_entro)
-    duration = get_onset_from_song_dict(song_dict)
+    duration = get_duration_from_song_dict(song_dict)
     duration_entropy = np.column_stack((duration, duration_entro))
     return duration_entropy
 #=========================================================================
