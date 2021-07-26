@@ -28,6 +28,9 @@ def dataset_wise_extraction(all_song_dict,extraction_methods):
 
 features_method_name_dict = {
     'melody_name': data_extractor.get_melody_name_from_song_dict,
+    'cpitch': data_extractor.get_pitch_from_song_dict,
+    'onset': data_extractor.get_onset_from_song_dict,
+    'duration': data_extractor.get_duration_from_song_dict,
     'overall_probability': data_extractor.get_overall_prob_from_song_dict,
     'overall_information_content': data_extractor.get_overall_information_content_from_song_dict,
     'overall_entropy': data_extractor.get_overall_entropy_from_song_dict,

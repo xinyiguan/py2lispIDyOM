@@ -3,6 +3,9 @@ This script exports the data in mat files for analysis in MATLAB.
 Current available data types for export in mat format:
 
         'melody_name',
+        'cpitch',
+        'onset',
+        'duration',
         'overall_probability',
         'overall_information_content',
         'overall_entropy',
@@ -10,6 +13,8 @@ Current available data types for export in mat format:
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
+        'duration_information_content',
+        'duration_entropy',
 
 """
 
@@ -28,6 +33,8 @@ if __name__ == '__main__':
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
+        'duration_information_content',
+        'duration_entropy',
     ]
 
 
