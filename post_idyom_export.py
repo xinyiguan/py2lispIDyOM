@@ -37,6 +37,5 @@ if __name__ == '__main__':
         'duration_entropy',
     ]
 
-
     print('Exporting mat files:')
     export_mat_from_history_folder(selected_experiment_history_folder, data_type_to_export)

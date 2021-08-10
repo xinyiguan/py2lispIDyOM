@@ -4,7 +4,7 @@ This script is to make the figure(s) of surprise values aligned with piano roll 
 
 import numpy as np
 import matplotlib.pyplot as plt
-import data_extractor
+from helper_scripts import data_extractor
 import os
 from glob import glob
 

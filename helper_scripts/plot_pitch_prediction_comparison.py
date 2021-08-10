@@ -5,7 +5,7 @@ The plots does not show the actual duration of the notes. The horizontal axis re
 
 import numpy as np
 import matplotlib.pyplot as plt
-import data_extractor
+from helper_scripts import data_extractor
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 from configuration import configurations
 from glob import glob

@@ -5,7 +5,7 @@ This script is to output the data in .mat format.
 import os
 import scipy.io
 import numpy as np
-import data_extractor
+from helper_scripts import data_extractor
 from glob import glob
 
 def song_wise_extraction(song_dict,extraction_methods):

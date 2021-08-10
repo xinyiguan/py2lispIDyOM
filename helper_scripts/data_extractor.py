@@ -36,12 +36,6 @@ def get_onset_from_song_dict(song_dict):
     onset_list = np.array(onset_list)
     return onset_list
 
-def get_surprise_from_song_dict(song_dict):
-    probability_seq = song_dict['probability']
-    probability_seq = np.array(probability_seq)
-    surprise = -np.log(probability_seq)/np.log(2)
-    return surprise
-
 def get_pitch_from_song_dict(song_dict):
     pitch_list = song_dict['cpitch']
     pitch_list = np.array(pitch_list)
@@ -52,10 +46,32 @@ def get_duration_from_song_dict(song_dict):
     duration_list = np.array(duration_list)
     return duration_list
 
+def get_tempo_from_song_dict(song_dict):
+    tempo_list = song_dict['tempo']
+    tempo_list = np.array(tempo_list)
+    return tempo_list
+
+def get_pulses_from_song_dict(song_dict):
+    pulses_list = song_dict['pulses']
+    pulses_list = np.array(pulses_list)
+    return pulses_list
+
+def get_barlength_from_song_dict(song_dict):
+    barlength_list = song_dict['barlength']
+    barlength_list = np.array(barlength_list)
+    return barlength_list
+
 def get_melody_name_from_song_dict(song_dict):
     melody_name = song_dict['melody.name'][0]
     melody_name = np.array(melody_name, dtype=str)
     return melody_name
+
+def get_surprise_from_song_dict(song_dict):
+    probability_seq = song_dict['probability']
+    probability_seq = np.array(probability_seq)
+    surprise = -np.log(probability_seq)/np.log(2)
+    return surprise
+
 
 ## overall probability, information.content and entropy:===========================================
 
@@ -108,47 +124,15 @@ def get_onset_entropy_from_song_dict(song_dict):
     onset_entropy = np.column_stack((onset, onset_entro))
     return onset_entropy
 
-def get_duration_information_content_from_song_dict(song_dict):
-    duration_ic = song_dict['dur.information.content']
-    duration_ic = np.array(duration_ic)
-    duration = get_duration_from_song_dict(song_dict)
-    duration_information_content = np.column_stack((duration, duration_ic))
-    return duration_information_content
-
-def get_duration_entropy_from_song_dict(song_dict):
-    duration_entro = song_dict['dur.entropy']
-    duration_entro = np.array(duration_entro)
-    duration = get_duration_from_song_dict(song_dict)
-    duration_entropy = np.column_stack((duration, duration_entro))
-    return duration_entropy
 #=========================================================================
 
 
 
 
-def get_aligned_surprise_with_onset_from_song_dict(song_dict):
-    surprise = get_surprise_from_song_dict(song_dict)
-    onset = get_onset_from_song_dict(song_dict)
-    aligned_surprise_with_onset = np.column_stack((onset, surprise))
-    return aligned_surprise_with_onset
+# General function generator:
 
-def get_aligned_pitch_with_duration_from_song_dict(song_dict):
-    pitch = get_pitch_from_song_dict(song_dict)
-    duration = get_duration_from_song_dict(song_dict)
-    aligned_pitch_with_duration = np.column_stack((duration, pitch))
-    return aligned_pitch_with_duration
 
-def get_aligned_pitch_with_onset_from_song_dict(song_dict):
-    pitch = get_pitch_from_song_dict(song_dict)
-    onset = get_onset_from_song_dict(song_dict)
-    aligned_pitch_with_onset = np.column_stack((onset, pitch))
-    return aligned_pitch_with_onset
 
-def get_aligned_surprise_with_pitch_from_song_dict(song_dict):
-    surprise = get_surprise_from_song_dict(song_dict)
-    pitch = get_pitch_from_song_dict(song_dict)
-    aligned_surprise_with_pitch = np.column_stack((pitch, surprise))
-    return aligned_surprise_with_pitch
 
 
 

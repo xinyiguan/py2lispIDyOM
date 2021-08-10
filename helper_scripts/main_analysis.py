@@ -1,6 +1,6 @@
 """
 This is an integrated script to output different visualization figures and output data in .mat format,
-after running the run.py.
+after running the run_idyom.py.
 Different modules can also run separately.
 """
 
