@@ -45,7 +45,6 @@ def save_midi(midi_file, file_name, output_path):
 
 def compose_single_midi_from_song_dict(song_dict):
     melody_name = str(data_extractor.get_melody_name_from_song_dict(song_dict)).replace('"', '')
-    # melody_name = melody_name.replace('"', '')
     pitch_seq = data_extractor.get_pitch_from_song_dict(song_dict)
     onset_seq = data_extractor.get_onset_from_song_dict(song_dict)
     dur_seq = data_extractor.get_duration_from_song_dict(song_dict)
@@ -63,7 +62,7 @@ def compose_batch_midi_from_all_song_dict(selected_experiment_history_folder):
         os.makedirs(output_folder)
 
     for i in range(num_of_songs_in_dict):
-        song_dict = list(all_song_dict.values())[i]
+        song_dict = data_extractor.get_song_dict_of_interest(all_song_dict,i)
         reconstructed_midi_file = compose_single_midi_from_song_dict(song_dict)[0]
         reconstruct_midi_name = 'reconstruct_' + compose_single_midi_from_song_dict(song_dict)[1]+'.mid'
         save_midi(midi_file=reconstructed_midi_file, file_name=reconstruct_midi_name, output_path=output_folder)
