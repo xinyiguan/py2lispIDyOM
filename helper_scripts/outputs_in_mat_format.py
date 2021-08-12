@@ -44,17 +44,7 @@ features_method_name_dict = {
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
 
-# my_choice_of_extraction = [
-#     'melody_name',
-#     'overall_probability',
-#     'overall_information_content',
-#     'overall_entropy',
-#     'cpitch_information_content',
-#     'cpitch_entropy',
-#     'onset_information_content',
-#     'onset_entropy',
-#
-# ]
+
 
 def export(data_to_export,output_path):
     for i,feature in enumerate(data_to_export):
@@ -84,6 +74,9 @@ if __name__ == '__main__':
     selected_experiment_history_folder = '/Users/guan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/07-26-21_17.32.52/'
     data_type_to_export = [
         'melody_name',
+        'cpitch',
+        'onset',
+        'duration',
         'overall_probability',
         'overall_information_content',
         'overall_entropy',
@@ -91,7 +84,5 @@ if __name__ == '__main__':
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
-        'duration_information_content',
-        'duration_entropy',
     ]
     export_mat_from_history_folder(selected_experiment_history_folder, data_type_to_export)

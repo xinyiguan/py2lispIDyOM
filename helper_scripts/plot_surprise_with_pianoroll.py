@@ -67,7 +67,7 @@ def plot_surprise_across_time(ax, song_index, all_song_dict):
     ax.set_xlabel('Time (in 16th note)')
     ax.set_ylabel('Surprise -log(P)')
     onset_sequence = data_extractor.get_onset_from_song_dict(song_dict_of_interest)
-    surprise_sequence = data_extractor.get_surprise_from_song_dict(song_dict_of_interest)
+    surprise_sequence = data_extractor.get_overall_information_content_from_song_dict(song_dict_of_interest)
     x = onset_sequence/6
     y = surprise_sequence
     # ax.stem(x,y, linefmt ='grey', bottom=-1, markerfmt='C7o')

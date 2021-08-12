@@ -25,54 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="added duration viewpoint">
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx002.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx003.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx004.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx006.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx007.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx008.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx009.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx010.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx011.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx012.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx013.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx014.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx015.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx016.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx017.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx018.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx019.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx020.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx021.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx022.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx023.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx025.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx026.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx027.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx028.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx029.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx030.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx031.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx032.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx033.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx034.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx035.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx036.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx037.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/reconstructed_midi_files/reconstruct_shanx040.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_idyom_export.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post_idyom_reconstructMIDI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="added and tested reconstruct midi script">
+      <change afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/data_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_scripts/main_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/main_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_scripts/data_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/data_extractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_scripts/main_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_and_matoutput.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_scripts/plot_surprise_with_pianoroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_surprise_with_pianoroll.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_idyom.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +63,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/helper_scripts" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.post_idyom_reconstructmidi">
     <configuration name="export_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -237,7 +202,8 @@
       <workItem from="1624973799159" duration="790000" />
       <workItem from="1627311985837" duration="1347000" />
       <workItem from="1628504743256" duration="5757000" />
-      <workItem from="1628588638500" duration="6013000" />
+      <workItem from="1628588638500" duration="6102000" />
+      <workItem from="1628763559605" duration="5769000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -260,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627316517411</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added and tested reconstruct midi script">
+      <created>1628594718703</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628594718703</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,33 +267,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="merge scripts and files" />
     <MESSAGE value="added duration viewpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added duration viewpoint" />
+    <MESSAGE value="added and tested reconstruct midi script" />
+    <option name="LAST_COMMIT_MESSAGE" value="added and tested reconstruct midi script" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="239" key="GridCell.Tab.0.bottom" timestamp="1628594395321">
+    <state width="1398" height="239" key="GridCell.Tab.0.bottom" timestamp="1628594756095">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628594395321" />
-    <state width="1398" height="239" key="GridCell.Tab.0.center" timestamp="1628594395320">
+    <state width="1398" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628594756095" />
+    <state width="1398" height="239" key="GridCell.Tab.0.center" timestamp="1628594756094">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1628594395320" />
-    <state width="1398" height="239" key="GridCell.Tab.0.left" timestamp="1628594395319">
+    <state width="1398" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1628594756094" />
+    <state width="1398" height="239" key="GridCell.Tab.0.left" timestamp="1628594756093">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1628594395319" />
-    <state width="1398" height="239" key="GridCell.Tab.0.right" timestamp="1628594395321">
+    <state width="1398" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1628594756093" />
+    <state width="1398" height="239" key="GridCell.Tab.0.right" timestamp="1628594756095">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1628594395321" />
+    <state width="1398" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1628594756095" />
     <state x="229" y="86" key="SettingsEditor" timestamp="1628589730248">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="86" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1628589730248" />
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1627316551539">
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1628594725245">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1627316551539" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1628594725245" />
     <state x="521" y="368" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628504752561">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
