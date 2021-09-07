@@ -1,7 +1,7 @@
 """
 This script is to reconstruct midi files from the viewpoints extracted in IDyOM, using midiutil.
 
-pitch, duration, onset, tempo
+viewpoints used for reconstruction: pitch, duration, onset, tempo
 """
 
 import midiutil

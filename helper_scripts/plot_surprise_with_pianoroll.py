@@ -119,5 +119,5 @@ def make_pianoroll_surprise_figure_from_history_folder(selected_experiment_histo
     print('Plots are saved in plot_surprise_with_pianoroll folder!')
 
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/xinyiguan/NewMac_LocalProjectFolders/experiment_history/midi5_03-06-21_22.42.36/'
+    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/'
     make_pianoroll_surprise_figure_from_history_folder(selected_experiment_history_folder)

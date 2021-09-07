@@ -30,7 +30,6 @@ features_method_name_dict = {
     'melody_name': data_extractor.get_melody_name_from_song_dict,
     'cpitch': data_extractor.get_pitch_from_song_dict,
     'onset': data_extractor.get_onset_from_song_dict,
-    'duration': data_extractor.get_duration_from_song_dict,
     'overall_probability': data_extractor.get_overall_prob_from_song_dict,
     'overall_information_content': data_extractor.get_overall_information_content_from_song_dict,
     'overall_entropy': data_extractor.get_overall_entropy_from_song_dict,
@@ -38,8 +37,6 @@ features_method_name_dict = {
     'cpitch_entropy': data_extractor.get_cpitch_entropy_from_song_dict,
     'onset_information_content': data_extractor.get_onset_information_content_from_song_dict,
     'onset_entropy': data_extractor.get_onset_entropy_from_song_dict,
-    'duration_information_content': data_extractor.get_duration_information_content_from_song_dict,
-    'duration_entropy': data_extractor.get_duration_entropy_from_song_dict,
 }
 
 dict_access_keys = lambda dic,l:[dic[x] for x in l]
@@ -76,7 +73,6 @@ if __name__ == '__main__':
         'melody_name',
         'cpitch',
         'onset',
-        'duration',
         'overall_probability',
         'overall_information_content',
         'overall_entropy',

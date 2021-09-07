@@ -44,7 +44,7 @@ def plot_surprise_across_time(ax,surprise_across_time,title=None):
 
 def make_comparison_figure_from_index(song_index,all_song_dict, pitch_range,output_path):
     song_dict_of_interest = list(all_song_dict.values())[song_index]
-    surprise = data_extractor.get_surprise_from_song_dict(song_dict_of_interest)
+    surprise = data_extractor.get_overall_information_content_from_song_dict(song_dict_of_interest)
     ground_truth_pitch_sequence_from_song_dict = data_extractor.get_pitch_from_song_dict(song_dict_of_interest)
     ground_truth_pitch_distribution_from_song_dict = get_pitch_distribution_from_sequence(ground_truth_pitch_sequence_from_song_dict, pitch_range)
     predicted_pitch_distribution = data_extractor.get_pitch_distribution_from_song_dict(song_dict_of_interest)
@@ -58,7 +58,7 @@ def make_comparison_figure_from_index(song_index,all_song_dict, pitch_range,outp
     ax_surprise = divider.append_axes("bottom", 1., pad=0.1, sharex=ax_prediction)
 
     ax_prediction = plot_pitch_distribution(ax_prediction, predicted_pitch_distribution, title='Pitch Prediction', pitch_range=pitch_range)
-    ax_surprise = plot_surprise_across_time(ax_surprise, surprise ,title='Surprise across time (darker = more surprise)')
+    ax_surprise = plot_surprise_across_time(ax_surprise, surprise ,title='Surprisal across time (darker = more surprise)')
     ax_surprise.yaxis.set_tick_params(labelleft=False)
 
     ax_ground_truth = figure_comparison.add_subplot(122)
@@ -89,9 +89,9 @@ def make_comparison_figure_from_history_folder(selected_experiment_history_folde
     # for i in current_iteration_range:
     for i in range(num_of_songs_in_dict):
         print('processing song ' + str(i+1) + '/' +str(num_of_songs_in_dict))
-        make_comparison_figure_from_index(i,all_song_dict, pitch_range,output_path=selected_experiment_history_folder + 'plot_pitch_prediction_comparison/')
+        make_comparison_figure_from_index(i,all_song_dict, pitch_range,output_path=selected_experiment_history_folder + 'viz_pitch_prediction_comparison/')
     print('Plots are saved in plot_pitch_prediction_comparison folder!')
 
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/xinyiguan/NewMac_LocalProjectFolders/experiment_history/midi5_03-06-21_22.42.36/'
+    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/'
     make_comparison_figure_from_history_folder(selected_experiment_history_folder)

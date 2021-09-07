@@ -26,12 +26,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="added and tested reconstruct midi script">
-      <change afterPath="$PROJECT_DIR$/scratch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx002.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx003.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx004.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx006.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx007.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx008.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx009.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx010.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx011.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx012.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx013.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx014.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx015.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx016.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx017.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx018.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx019.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx020.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx021.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx022.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx023.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx025.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx026.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx027.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx028.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx029.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx030.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx031.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx032.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx033.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx034.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx035.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx036.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx037.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_pitch_prediction_comparison/shanx040.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx002.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx003.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx004.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx006.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx007.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx008.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx009.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx010.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx011.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx012.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx013.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx014.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx015.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx016.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx017.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx018.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx019.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx020.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx021.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx022.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx023.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx025.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx026.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx027.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx028.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx029.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx030.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx031.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx032.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx033.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx034.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx035.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx036.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx037.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-08-21_13.40.14/viz_surprisal_with_pianoroll/shanx040.eps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post_idyom_viz.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_scripts/data_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/data_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_scripts/main_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_and_matoutput.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_scripts/plot_surprise_with_pianoroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/plot_surprise_with_pianoroll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post_idyom_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/post_idyom_export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post_idyom_reconstructMIDI.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_scripts/post_idyom_reconstructMIDI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,34 +138,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/helper_scripts" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.post_idyom_reconstructmidi">
-    <configuration name="export_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="IDyOM_Python_Interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/export_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="outputs_in_mat_format" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.post_idyom_viz">
+    <configuration name="plot_pitch_prediction_comparison" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,7 +156,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/outputs_in_mat_format.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/plot_pitch_prediction_comparison.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,7 +200,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/post_idyom_reconstructMIDI.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper_scripts/post_idyom_reconstructMIDI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,13 +231,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="post_idyom_viz" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/post_idyom_viz.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.post_idyom_reconstructmidi" />
+        <item itemvalue="Python.post_idyom_viz" />
         <item itemvalue="Python.plot_surprise_with_pianoroll" />
+        <item itemvalue="Python.plot_pitch_prediction_comparison" />
+        <item itemvalue="Python.post_idyom_reconstructmidi" />
         <item itemvalue="Python.post_idyom_reconstructMIDI" />
-        <item itemvalue="Python.outputs_in_mat_format" />
-        <item itemvalue="Python.export_data" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +276,7 @@
       <workItem from="1628504743256" duration="5757000" />
       <workItem from="1628588638500" duration="6102000" />
       <workItem from="1628763559605" duration="5769000" />
+      <workItem from="1631005497483" duration="2880000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -271,21 +344,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="added and tested reconstruct midi script" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="239" key="GridCell.Tab.0.bottom" timestamp="1628594756095">
+    <state width="1396" height="198" key="GridCell.Tab.0.bottom" timestamp="1631008049705">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="198" key="GridCell.Tab.0.bottom/0.0.1440.900/-1180.-36.1180.820@0.0.1440.900" timestamp="1631008049705" />
     <state width="1398" height="239" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1628594756095" />
-    <state width="1398" height="239" key="GridCell.Tab.0.center" timestamp="1628594756094">
+    <state width="1396" height="198" key="GridCell.Tab.0.center" timestamp="1631008049703">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="198" key="GridCell.Tab.0.center/0.0.1440.900/-1180.-36.1180.820@0.0.1440.900" timestamp="1631008049703" />
     <state width="1398" height="239" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1628594756094" />
-    <state width="1398" height="239" key="GridCell.Tab.0.left" timestamp="1628594756093">
+    <state width="1396" height="198" key="GridCell.Tab.0.left" timestamp="1631008049701">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="198" key="GridCell.Tab.0.left/0.0.1440.900/-1180.-36.1180.820@0.0.1440.900" timestamp="1631008049701" />
     <state width="1398" height="239" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1628594756093" />
-    <state width="1398" height="239" key="GridCell.Tab.0.right" timestamp="1628594756095">
+    <state width="1396" height="198" key="GridCell.Tab.0.right" timestamp="1631008049704">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="1396" height="198" key="GridCell.Tab.0.right/0.0.1440.900/-1180.-36.1180.820@0.0.1440.900" timestamp="1631008049704" />
     <state width="1398" height="239" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1628594756095" />
     <state x="229" y="86" key="SettingsEditor" timestamp="1628589730248">
       <screen x="0" y="0" width="1440" height="900" />
@@ -302,11 +379,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructMIDI.coverage" NAME="post_idyom_reconstructMIDI Coverage Results" MODIFIED="1628594050663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1628594378187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
   </component>
 </project>

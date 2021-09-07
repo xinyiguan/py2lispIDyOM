@@ -64,60 +64,35 @@ Follow the 2 steps to extract the outputs:
 
     Change the template ```data_type_to_export``` to output your features:
 
-    Available features for output in ```.mat ``` file format:  
+    Default features for output in ```.mat ``` file format:  
 
-    - 'melody_name',
-    - 'cpitch',
-    - 'onset',
-    - 'duration',
-    - 'tempo',
-    - 'pulses',
-    - 'barlength',
-    - 'overall_probability',
-    - 'overall_information_content',
-    - 'overall_entropy',
-    - 'cpitch_information_content',
-    - 'cpitch_entropy',
-    - 'onset_information_content',
-    - 'onset_entropy',
-    - 'duration_information_content',
-    - 'duration_entropy',
-
-e.g.
-
-    data_type_to_export = [
         'melody_name',
+        'cpitch',
+        'onset',
+        'overall_probability',
         'overall_information_content',
         'overall_entropy',
-        'duration_information_content',
-        'duration_entropy',
-    ]
+        'cpitch_information_content',
+        'cpitch_entropy',
+        'onset_information_content',
+        'onset_entropy',
 
 
 You can further extract different model outputs by changing/adding different "extraction methods" in the dictionary called 
 ```features_method_name_dict``` accordingly in the `outputs_in_mat_format.py` script. 
 
-#### 4 (optional). Reconstruct midi files from IDyOM outputs
 
-This step concerns the script called ```post_idyom_reconstructMIDI.py```. You can reconstruct the midi file from scratch only using the data from the IDyOM outputs, and see what messages have IDyOM extracted from your input midi files and what data is processed and anlayzed in IDyOM. 
+Change the ```selected_experiment_history_folder``` at the bottom of the script.
 
+#### 4(optional). Get output visualizations:
 
-You need to change the ```selected_experiment_history_folder``` at the bottom of the script to your desired one in each script.
+To get the model outputs visualization, run `post_idyom_viz.py`.  
 
-#### 5(optional). Get output visualizations:
+*You need to change the ```selected_experiment_history_folder``` at the bottom of the script.*
 
-*You need to change the ```selected_experiment_history_folder``` at the bottom of the script to your desired one in each script.*
-
-- "plot_pitch_prediction_comparison" folder, containing all pitch prediction vs. ground truth figures.
-- "plot_surprise_with_pianoroll" folder, containing all surprise value aligned with piano roll figures. 
-
-
-
-
-```main_analysis.py``` is an integrated script that runs the 3 other scripts/modules simultaneously:
-`plot_pitch_prediction_comparison.py`, 
-`plot_surprise_with_pianoroll.py`, and 
-`outputs_in_mat_format.py`. 
+You can find the output figures within your experiment history folder called:
+    - "viz_pitch_prediction_comparison" folder, containing all pitch prediction vs. ground truth figures.
+    - "viz_surprise_with_pianoroll" folder, containing all surprisal values aligned with piano roll figures. 
 
 
 ## Model Output visualization examples:
@@ -168,37 +143,3 @@ IDyOM surprise values aligned with piano roll:
 [logo2]: Demo_Figs/surprise-chor-030.png
 
 
-
-## Directory Structure
-
-- README
-- `configuration.py`: *set you configurations here*
-- `run.py`: *load and run the LISP IDyOM*
-- `main_analysis.py`: *an integrated script to output different visualization figures and output data in .mat format,
-after running the run.py.*
-- `plot_pitch_prediction_comparison.py`: *make the comparison figure(s) of the predicted pitch distributions and ground truth pitches*
-- `plot_surprise_with_pianoroll.py`: *make the figure(s) of surprise values aligned with piano roll reference.*
-- `outputs_in_mat_format.py`: *output the data in .mat format.*
-- `data_extractor.py`: *helper script to extract the data we are interested in from .dat file*
-
-- dataset/:
-    -  a bunch of folders containing midi files.
-- lisp/:
-    - ```compute.lisp``` *the lisp code to set and run the parameters of IDyOM*
-    - ```parser.py```
-- experiment_history/:
-    - folders(naming format: MM-DD-YY_HH.MM.SS) *containing information for each experiment run*
-        - `configurations.py`
-        - experiment_input_data_folder/
-            - train/
-                - ~.mid
-            - test/
-                - ~.mid
-        - experiment_output_data_folder/
-            - ~.dat: *LISP IDyOM model output*
-        - plot_pitch_prediction_comparison/
-            - ~.esp: *comparison figures of predicted pitch distributions and ground truth pitches*
-        - plot_surprise_with_pianoroll/
-            - ~.esp: *figures of surprise values aligned with piano roll reference*
-        - mat_data_outputs/
-            - ~.mat: *data output files in .mat format*

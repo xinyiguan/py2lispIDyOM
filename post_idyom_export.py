@@ -5,7 +5,6 @@ Current available data types for export in mat format:
         'melody_name',
         'cpitch',
         'onset',
-        'duration',
         'overall_probability',
         'overall_information_content',
         'overall_entropy',
@@ -13,8 +12,6 @@ Current available data types for export in mat format:
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
-        'duration_information_content',
-        'duration_entropy',
 
 """
 
@@ -26,6 +23,8 @@ if __name__ == '__main__':
     selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/' # change your desired 'selected_experiment_history_folder' here!
     data_type_to_export = [
         'melody_name',
+        'cpitch',
+        'onset',
         'overall_probability',
         'overall_information_content',
         'overall_entropy',
@@ -33,8 +32,6 @@ if __name__ == '__main__':
         'cpitch_entropy',
         'onset_information_content',
         'onset_entropy',
-        'duration_information_content',
-        'duration_entropy',
     ]
 
     print('Exporting mat files:')
