@@ -1,14 +1,11 @@
 """
 Created by xinyiguan on 17.03.22.
 """
-import json
-import typing
 import os
+import typing
 
-import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import scipy.io
 
 
 def toFloat(f):

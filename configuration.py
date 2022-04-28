@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 import datetime
 import json
-from dataclasses import dataclass
-from typing import Literal, List, Union, Tuple, Iterable, Optional
+from dataclasses import dataclass, field
+from typing import Literal, List, Union, Tuple, Iterable
 
 
 def get_timestamp():
@@ -14,8 +16,11 @@ def get_timestamp():
 @dataclass
 class Parameters:
 
+    def __repr__(self):
+        return json.dumps(self, default=lambda x: x.__dict__, indent=2)
+
     def show(self):
-        print(json.dumps(self, default=lambda x: x.__dict__, indent=2))  # formatting
+        print(self.__repr__())  # formatting
 
     def to_lisp_command(self) -> str:
         convert_dict = {True: 't', False: 'nil'}
@@ -49,12 +54,19 @@ class RequiredParameters(Parameters):
     The py2lispIDyOM will automatically assign a unique number to the training set internaly
     """
     # dataset_id: int
-    dataset_path: str
-    target_viewpoints: List[SingleViewpoint]
+    dataset_path: str = None
+    target_viewpoints: List[SingleViewpoint] = None
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
-                                        Tuple[SingleViewpoint]]]]
+                                        Tuple[SingleViewpoint]]]] = None
 
+    def _is_available(self)->bool:
+        condition = all([
+            type(self.dataset_path) is str,
+            type(self.target_viewpoints) is List[SingleViewpoint],
+            type(self.source_viewpoints) is Union[Literal[':select'], List[Union[SingleViewpoint,Tuple[SingleViewpoint]]]]
+        ])
+        return condition
     def viewpoint_to_string(self, viewpoint: Union[SingleViewpoint, Tuple[SingleViewpoint]]) -> str:
         if type(viewpoint) is str:
             string = str(viewpoint)
@@ -199,24 +211,22 @@ class CachingParameters(Parameters):
     use_ltms_cache: bool = None
 
 
-@dataclass
 class Configuration(Parameters):
-    # required_parameters: RequiredParameters
-    # statistical_modelling_parameters: StatisticalModellingParameters = None
-    # training_parameters: TrainingParameters = None
-    # viewpoint_selection_parameters: ViewpointSelectionParameters = None
-    # output_parameters: OutputParameters = None
-    # caching_parameters: CachingParameters = None
+    pass
 
-    def __init__(self, required_parameters: RequiredParameters):
-        self.required_parameters = required_parameters
-        self.statistical_modelling_parameters = StatisticalModellingParameters()
-        self.training_parameters = TrainingParameters()
-        self.viewpoint_selection_parameters = ViewpointSelectionParameters()
-        self.output_parameters = OutputParameters()
-        self.caching_parameters = CachingParameters()
+
+@dataclass(repr=False)
+class RunModelConfiguration(Configuration):
+    required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
+    statistical_modelling_parameters: StatisticalModellingParameters = field(
+        default_factory=StatisticalModellingParameters)
+    training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
+    viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
+    output_parameters: OutputParameters = field(default_factory=OutputParameters)
+    caching_parameters: CachingParameters = field(default_factory=CachingParameters)
 
     def to_lisp_command(self) -> str:
+        assert self.required_parameters._is_available(), self.required_parameters
         all_parameters = [
             self.required_parameters,
             self.statistical_modelling_parameters,
@@ -232,11 +242,12 @@ class Configuration(Parameters):
         return command
 
 
+@dataclass(repr=False)
+class DatabaseConfiguration(Configuration):
+    pass
 
 
-
-def func():
-
+def test():
     statistical_modeling_parameters = StatisticalModellingParameters(models=':stm',
                                                                      stmo=ModelOptions(order_bound=4, mixtures=True))
     viewpoint_selection_parameters = ViewpointSelectionParameters(basis=BasisOption(['cpitch', 'cpint', 'contour']),
@@ -249,12 +260,11 @@ def func():
                                              k=1)
 
     output = OutputParameters(output_path="experiment_history/", detail=3, overwrite=True, separator=",")
-
-    configuration = Configuration(required_parameters=required_parameters)
+    configuration = RunModelConfiguration(required_parameters=required_parameters,training_parameters=training_parameters)
 
     print(configuration.to_lisp_command())
     print('dataset_path: ', required_parameters.dataset_path)
 
 
 if __name__ == '__main__':
-    func()
+    test()

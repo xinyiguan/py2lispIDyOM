@@ -3,26 +3,31 @@ This script is to output the data in .mat format.
 """
 
 import os
-import scipy.io
-import numpy as np
-from helper_scripts import data_extractor
 from glob import glob
 
-def song_wise_extraction(song_dict,extraction_methods):
+import numpy as np
+import scipy.io
+
+from helper_scripts import data_extractor
+
+
+def song_wise_extraction(song_dict, extraction_methods):
     single_song_data = []
     for extraction in extraction_methods:
         feature = extraction(song_dict).tolist()
         single_song_data.append(feature)
-    #single_song_data = np.array(single_song_data,dtype=object)
+    # single_song_data = np.array(single_song_data,dtype=object)
     return single_song_data
 
-def dataset_wise_extraction(all_song_dict,extraction_methods):
+
+def dataset_wise_extraction(all_song_dict, extraction_methods):
     all_song_data = []
-    for index,song_dict in all_song_dict.items():
-        single_song_data = song_wise_extraction(song_dict,extraction_methods)
+    for index, song_dict in all_song_dict.items():
+        single_song_data = song_wise_extraction(song_dict, extraction_methods)
         all_song_data.append(single_song_data)
-    all_song_data = np.array(all_song_data,dtype=object)
+    all_song_data = np.array(all_song_data, dtype=object)
     return all_song_data
+
 
 ## For more methods, see available ones in the data_extractor.py file
 
@@ -39,16 +44,14 @@ features_method_name_dict = {
     'onset_entropy': data_extractor.get_onset_entropy_from_song_dict,
 }
 
-dict_access_keys = lambda dic,l:[dic[x] for x in l]
+dict_access_keys = lambda dic, l: [dic[x] for x in l]
 
 
-
-def export(data_to_export,output_path):
-    for i,feature in enumerate(data_to_export):
+def export(data_to_export, output_path):
+    for i, feature in enumerate(data_to_export):
         feature_name = list(features_method_name_dict.keys())[i]
-        scipy.io.savemat(output_path+feature_name+'.mat', mdict={feature_name: np.array(feature)})
-    print('Exported data to '+output_path + '!')
-
+        scipy.io.savemat(output_path + feature_name + '.mat', mdict={feature_name: np.array(feature)})
+    print('Exported data to ' + output_path + '!')
 
 
 ## If run this module only:
@@ -63,7 +66,7 @@ def export_mat_from_history_folder(selected_experiment_history_folder, data_type
     mat_data_output_folder = selected_experiment_history_folder + 'mat_data_outputs/'
     if not os.path.exists(mat_data_output_folder):
         os.makedirs(mat_data_output_folder)
-    export(data_to_export,output_path=mat_data_output_folder)
+    export(data_to_export, output_path=mat_data_output_folder)
 
 
 # Pass your desired 'selected_experiment_history_folder' below:

@@ -1,11 +1,13 @@
 """
 viz module v2 - March 2022
 """
-from extraction import MelodyInfo, ExperimentInfo
-import matplotlib.pyplot as plt
-import matplotlib
 import os
+
+import matplotlib
+import matplotlib.pyplot as plt
 import numpy as np
+
+from extraction import MelodyInfo, ExperimentInfo
 
 """
 Plotting pitch prediction compare with ground truth
@@ -27,7 +29,7 @@ class BasicAxsGeneration:
         onsets_mask = onsets_binary * sustain_mask
         background_mask = np.bitwise_not(sustain_mask)
 
-        colored_image = np.zeros(shape=sustain_mask.shape+(3,))
+        colored_image = np.zeros(shape=sustain_mask.shape + (3,))
         colored_image[sustain_mask] = np.array([253, 231, 37])
         colored_image[onsets_mask] = np.array([59, 82, 139])
         colored_image[background_mask] = np.array([68, 1, 84])
@@ -39,7 +41,6 @@ class BasicAxsGeneration:
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel('Pitch (MIDI number)')
         return ax
-
 
     @staticmethod
     def pianoroll_pitch_distribution(ax: matplotlib.axes.Axes, melody_info: MelodyInfo):
@@ -122,8 +123,8 @@ def func():
     melody = dataset_info.access_melodies()[2]
     output_path = './plots/'
     # fig = BasicPlot.single_plot(axes_modifier= BasicAxsGeneration.surprisal,melody_info=melody,output_path=output_path)
-    #fig = BasicPlot.pianoroll_surprisal(melody_info=melody, output_path=output_path)
-    fig = BasicPlot.pianoroll_pitch_distribution_groundtruth(melody_info=melody,output_path=output_path)
+    # fig = BasicPlot.pianoroll_surprisal(melody_info=melody, output_path=output_path)
+    fig = BasicPlot.pianoroll_pitch_distribution_groundtruth(melody_info=melody, output_path=output_path)
     fig.show()
 
 
