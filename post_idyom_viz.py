@@ -1,217 +1,131 @@
-"""Convenience functions for plotting."""
-
-
-import numpy as np
+"""
+viz module v2 - March 2022
+"""
+from extraction import MelodyInfo, ExperimentInfo
 import matplotlib.pyplot as plt
-from helper_scripts import data_extractor
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-from configuration import configurations
+import matplotlib
 import os
-from glob import glob
-
-
+import numpy as np
 
 """
 Plotting pitch prediction compare with ground truth
 """
 
-def get_pitch_distribution_from_sequence(pitch_sequence, pitch_range):
-    """
-    one-hot encode {ground truth pitch sequence} to {pitch distribution sequence}
-    """
-    pitch_sequence = np.array(pitch_sequence).reshape(-1,1)
-    f = lambda x,y:(x,y+1)
-    options = np.arange(*f(*pitch_range))
-    distribution = pitch_sequence == options
-    return distribution
+
+class BasicAxsGeneration:
+
+    @staticmethod
+    def pianoroll(ax: matplotlib.axes.Axes, melody_info: MelodyInfo):
+        sustain_mask = melody_info.get_pianoroll_original()
+        pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
+        duration_in_ticks = sustain_mask.shape[1]
+        onsets = melody_info.access_properties(['onset']).to_numpy(dtype=int).reshape(-1)
+        onsets_binary = np.zeros(duration_in_ticks)
+        np.put(a=onsets_binary, ind=onsets, v=1)
+        onsets_binary = onsets_binary.astype(bool)
+
+        onsets_mask = onsets_binary * sustain_mask
+        background_mask = np.bitwise_not(sustain_mask)
+
+        colored_image = np.zeros(shape=sustain_mask.shape+(3,))
+        colored_image[sustain_mask] = np.array([253, 231, 37])
+        colored_image[onsets_mask] = np.array([59, 82, 139])
+        colored_image[background_mask] = np.array([68, 1, 84])
+        colored_image = colored_image.astype(int)
+
+        ax.imshow(colored_image, origin='lower', aspect='auto',
+                  extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
+        ax.set_xlabel('Time (beat)')
+        # ax.xaxis.set_ticklabels([])  # hide xtick labels
+        ax.set_ylabel('Pitch (MIDI number)')
+        return ax
 
 
-def plot_pitch_distribution(ax, pitch_distribution, title, pitch_range):
-    ax.set_xlabel('Time step')
-    ax.set_ylabel('Pitch (MIDI number)')
-    ax.set_title(title)
-    x_extent = [0, pitch_distribution.shape[0]]
-    y_extent = list(pitch_range)
-    ax.set_xticks(np.arange(*(x_extent+[1])), minor=True)
-    ax.set_yticks(np.arange(*(y_extent+[1])), minor=True)
-    ax.imshow(pitch_distribution.T, origin='lower', extent=[0, pitch_distribution.shape[0]] + list(pitch_range))
-    return ax
+    @staticmethod
+    def pianoroll_pitch_distribution(ax: matplotlib.axes.Axes, melody_info: MelodyInfo):
+        pianoroll_distribution_array = melody_info.get_pianoroll_pitch_distribution()
+        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto')
+        ax.title.set_text('Pitch Prediction')
+        ax.set_xlabel('Time')
+        ax.xaxis.set_ticklabels([])  # hide xtick labels
+        ax.set_ylabel('Pitch (MIDI number)')
+        return ax
 
-def plot_surprisal_bar_across_time(ax,surprise_across_time,title=None):
-    x_extent = [0, surprise_across_time.shape[0]]
-    ax.set_xticks(np.arange(*(x_extent + [1])), minor=True)
-    ax.set_xlabel(title)
-    ax.imshow(surprise_across_time.reshape(1, -1), cmap='Greys', interpolation='gaussian', origin='lower', extent= x_extent+[0, 1])
-    return ax
-
-
-def make_comparison_figure_from_index(song_index,all_song_dict, pitch_range,output_path):
-    song_dict_of_interest = list(all_song_dict.values())[song_index]
-    surprise = data_extractor.get_overall_information_content_from_song_dict(song_dict_of_interest)
-    ground_truth_pitch_sequence_from_song_dict = data_extractor.get_pitch_from_song_dict(song_dict_of_interest)
-    ground_truth_pitch_distribution_from_song_dict = get_pitch_distribution_from_sequence(ground_truth_pitch_sequence_from_song_dict, pitch_range)
-    predicted_pitch_distribution = data_extractor.get_pitch_distribution_from_song_dict(song_dict_of_interest)
-    melody_name = str(data_extractor.get_melody_name_from_song_dict(song_dict_of_interest))
-    experiment_name = configurations['experiment_name']
-
-    figure_comparison = plt.figure(figsize=(10,8))
-    figure_comparison.suptitle('IDyOM Pitch prediction vs ground truth '+'('+experiment_name+')'+ '\n\nMelody: ' + melody_name +'\n\n')
-    ax_prediction = figure_comparison.add_subplot(121)
-    divider = make_axes_locatable(ax_prediction)
-    ax_surprise = divider.append_axes("bottom", 1., pad=0.1, sharex=ax_prediction)
-
-    ax_prediction = plot_pitch_distribution(ax_prediction, predicted_pitch_distribution, title='Pitch Prediction', pitch_range=pitch_range)
-    ax_surprise = plot_surprisal_bar_across_time(ax_surprise, surprise ,title='Surprisal across time (darker = more surprise)')
-    ax_surprise.yaxis.set_tick_params(labelleft=False)
-
-    ax_ground_truth = figure_comparison.add_subplot(122)
-    ax_ground_truth = plot_pitch_distribution(ax_ground_truth, ground_truth_pitch_distribution_from_song_dict ,title='Ground Truth ', pitch_range=pitch_range)
-    divider_truth = make_axes_locatable(ax_ground_truth)
-    ax_blank = divider_truth.append_axes("bottom", 1., pad=0.1, sharex=ax_ground_truth)
-    ax_blank = plot_surprisal_bar_across_time(ax_blank, surprise*0)
-    ax_blank.axis('off')
-    figure_comparison.subplots_adjust(wspace=0)
-    plt.tight_layout()
-
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-
-    figure_comparison.savefig(output_path + str(melody_name).replace('"', '') + '.eps')
+    @staticmethod
+    def surprisal(ax: matplotlib.axes.Axes, melody_info: MelodyInfo, color=None):
+        # spike at onset
+        surprisal_array = melody_info.get_surprisal_array()
+        onset_time_vector = melody_info.get_onset_time_vector() / 24
+        ax.plot(onset_time_vector, surprisal_array, color=color)
+        ax.margins(x=0.01)
+        ax.margins(y=0)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.set_xlabel('Time (beat)')
+        #    ax.xaxis.set_ticklabels([])  # hide xtick labels
+        ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
+        return ax
 
 
+class BasicPlot:
 
-def make_comparison_figure_from_history_folder(selected_experiment_history_folder):
-    dat_file_path = sorted(glob(selected_experiment_history_folder + 'experiment_output_data_folder/*'))[0]
-    all_song_dict = data_extractor.get_all_song_dict_from_dat(dat_file_path)
-    num_of_songs_in_dict = len(all_song_dict.keys())
-    pitch_range = (47, 91)
+    @staticmethod
+    def single_plot(axes_modifier, melody_info, output_path) -> plt.Figure:
+        melody_name = melody_info['melody.name'][0]
+        fig, ax = plt.subplots()
+        axes_modifier(ax=ax, melody_info=melody_info)
 
-    # current_iteration_range = range(5600, 7021)
-    # for i in current_iteration_range:
-    for i in range(num_of_songs_in_dict):
-        print('processing song ' + str(i+1) + '/' +str(num_of_songs_in_dict))
-        make_comparison_figure_from_index(i,all_song_dict, pitch_range,output_path=selected_experiment_history_folder + 'viz_pitch_prediction_comparison/')
-    print('Plots are saved in plot_pitch_prediction_comparison folder!')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
 
+        return fig
 
+    @staticmethod
+    def pianoroll_pitch_distribution_groundtruth(melody_info, output_path) -> plt.Figure:
+        melody_name = melody_info['melody.name'][0]
+        fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
+        fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name)
 
+        BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
+        BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
+        ax_groundtruth.title.set_text('Ground Truth')
 
+        plt.tight_layout()
 
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
+        return fig
 
+    @staticmethod
+    def pianoroll_surprisal(melody_info, output_path) -> plt.Figure:
+        melody_name = melody_info['melody.name'][0]
+        fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')
 
-"""
-Make the figure(s) of surprise values aligned with piano roll reference.
-"""
+        fig.suptitle('Melody: ' + melody_name, fontsize=15)
+        BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
+        BasicAxsGeneration.surprisal(ax_surprisal, melody_info=melody_info)
 
-def get_pianoroll_with_duration_from_sequence(song_index,all_song_dict,pitch_range):
-    """
-    This function takes a pitch sequence and duration sequence (np.arrays) from the song of choice,
-    and outputs a pianoroll matrix with duration encoded
+        plt.tight_layout()
 
-    one-hot encode {ground truth pitch sequence} to {pitch distribution sequence}
-    """
-    song_dict_of_interest = list(all_song_dict.values())[song_index]
-    pitch_sequence = data_extractor.get_pitch_from_song_dict(song_dict_of_interest)
-    pitch_sequence = np.array(pitch_sequence).reshape(-1,1)
-    f = lambda x,y:(x,y+1)
-    options = np.arange(*f(*pitch_range))
-    distribution = pitch_sequence == options
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
 
-    duration_sequence = data_extractor.get_duration_from_song_dict(song_dict_of_interest)
-    def duplicate_pitch_distr_column(column, n):
-        column = np.expand_dims(column,0)
-        columns = np.repeat(column, n, axis=0)
-        return columns
-    bundles = []
-    for i,column in enumerate(distribution):
-        n = duration_sequence[i]/6
-        bundle = duplicate_pitch_distr_column(column, n)
-        bundles.append(bundle)
-    piano_roll_with_duration = np.concatenate(tuple(bundles))
-    return piano_roll_with_duration
-
-def plot_ground_truth_pianoroll_with_duration(ax,all_song_dict, song_index,pitch_range):
-    """
-    Plot the ground truth pianoroll with duration.
-    This function creates axes of the ground truth pianoroll plot.
-    """
-
-    song_dict_of_interest = list(all_song_dict.values())[song_index]
-    melody_name = data_extractor.get_melody_name_from_song_dict(song_dict_of_interest)
-    ax.set_title('Song: ' + str(melody_name))
-    #ax.set_xlabel('Time')
-    ax.set_ylabel('Pitch (MIDI number)')
-    pitch_distribution = get_pianoroll_with_duration_from_sequence(song_index,all_song_dict, pitch_range)
-    pitch_distribution = np.pad(pitch_distribution,(1,0),'constant')
-    x_extent = [-1, pitch_distribution.shape[0]-1]
-    y_extent = list(pitch_range)
-    # ax.set_xticks(np.arange(*(x_extent+[1])),minor = True)
-    # ax.set_yticks(np.arange(*(y_extent+[1])),minor = True)
-    ax.imshow(pitch_distribution.T, origin ='lower', extent= x_extent + y_extent, aspect='auto')
-    return ax
+        return fig
 
 
-def plot_surprisal_across_time(ax, song_index, all_song_dict):
-    """
-    Plot the surprise values across time (stem plot).
-    This function creates the axes for the surprise plot.
-    """
-    song_dict_of_interest = list(all_song_dict.values())[song_index]
-    ax.set_xlabel('Time (in 16th note)')
-    ax.set_ylabel('Surprise -log(P)')
-    onset_sequence = data_extractor.get_onset_from_song_dict(song_dict_of_interest)
-    surprise_sequence = data_extractor.get_overall_information_content_from_song_dict(song_dict_of_interest)
-    x = onset_sequence/6
-    y = surprise_sequence
-    # ax.stem(x,y, linefmt ='grey', bottom=-1, markerfmt='C7o')
-
-    markerline, stemline, baseline, = ax.stem(x, y, linefmt='grey', markerfmt='C7o', basefmt='k.')
-    plt.setp(stemline, linewidth=1.25)
-    plt.setp(markerline, markersize=3)
-
-    ax.set_ylim(ymin=0)
-    ax.set_xlim(xmin=-1)
-    return ax
-
-
-def make_pianoroll_surprise_figure_from_index(song_index, all_song_dict,pitch_range,output_path):
-    """
-    This function makes a figure that contains two subplots: ground truth pianoroll and the corresponding surprises.
-    """
-
-    song_dict_of_interest = list(all_song_dict.values())[song_index]
-    melody_name = data_extractor.get_melody_name_from_song_dict(song_dict_of_interest)
-
-    single_song_fig, (ax_ground_truth, ax_surprise) = plt.subplots(2, 1, sharex=True)
-    single_song_fig.set_size_inches(12, 7)
-    single_song_fig.suptitle('IDyOM - Surprise values aligned with piano roll', fontsize=16)
-    ax_ground_truth = plot_ground_truth_pianoroll_with_duration(ax_ground_truth, song_index=song_index,all_song_dict=all_song_dict,pitch_range=pitch_range)
-    ax_surprise = plot_surprisal_across_time(ax_surprise, song_index,all_song_dict)
-    single_song_fig.subplots_adjust(hspace=0)
-    plt.tight_layout()
-
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-
-    single_song_fig.savefig(output_path + str(melody_name).replace('"', '')+ '.eps')
-
-
-def make_pianoroll_surprise_figure_from_history_folder(selected_experiment_history_folder):
-    dat_file_path = sorted(glob(selected_experiment_history_folder + 'experiment_output_data_folder/*'))[0]
-    all_song_dict = data_extractor.get_all_song_dict_from_dat(dat_file_path)
-    num_of_songs_in_dict = len(all_song_dict.keys())
-    pitch_range = (47, 91)
-
-    # current_iteration_range = range(5600, 7021)
-    # for i in current_iteration_range:
-    for i in range(num_of_songs_in_dict):
-        print('processing song ' + str(i+1) + '/' +str(num_of_songs_in_dict))
-        make_pianoroll_surprise_figure_from_index(i,all_song_dict,pitch_range,output_path=selected_experiment_history_folder + 'viz_surprisal_with_pianoroll/')
-    print('Plots are saved in viz_surprisal_with_pianoroll folder!')
-
+def func():
+    dat_path = '/Users/xinyiguan/Codes/IDyOM_Interface_paper/99030821134014-cpitch_onset-cpitch_onset-66030821134014-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat'
+    dataset_info = ExperimentInfo(dat_file_path=dat_path)
+    melody = dataset_info.access_melodies()[2]
+    output_path = './plots/'
+    # fig = BasicPlot.single_plot(axes_modifier= BasicAxsGeneration.surprisal,melody_info=melody,output_path=output_path)
+    #fig = BasicPlot.pianoroll_surprisal(melody_info=melody, output_path=output_path)
+    fig = BasicPlot.pianoroll_pitch_distribution_groundtruth(melody_info=melody,output_path=output_path)
+    fig.show()
 
 
 if __name__ == '__main__':
-    selected_experiment_history_folder = '/Users/xinyiguan/Desktop/Codes/IDyOM_Python_Interface/experiment_history/03-08-21_13.40.14/'
-    make_comparison_figure_from_history_folder(selected_experiment_history_folder)
-    make_pianoroll_surprise_figure_from_history_folder(selected_experiment_history_folder)
+    func()
