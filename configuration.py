@@ -1,6 +1,14 @@
+import datetime
 import json
 from dataclasses import dataclass
-from typing import Literal, List, Union, Tuple, Iterable
+from typing import Literal, List, Union, Tuple, Iterable, Optional
+
+
+def get_timestamp():
+    today_date = datetime.date.today()
+    now_time = datetime.datetime.now()
+    moment = today_date.strftime('%m%d%y') + now_time.strftime('%H%M%S')
+    return moment
 
 
 @dataclass
@@ -36,7 +44,12 @@ SingleViewpoint = Literal[
 
 @dataclass
 class RequiredParameters(Parameters):
-    dataset_id: int
+    """
+    for the dataset to input test dataset, we ask to provide the **PATH** to the dataset instead of an ID number.
+    The py2lispIDyOM will automatically assign a unique number to the training set internaly
+    """
+    # dataset_id: int
+    dataset_path: str
     target_viewpoints: List[SingleViewpoint]
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
@@ -64,8 +77,13 @@ class RequiredParameters(Parameters):
         command = f'({long_string})'
         return command
 
+    def dataset_path_to_dataset_id(self):
+        moment = get_timestamp()
+        dataset_id = '66' + moment
+        return dataset_id
+
     def dataset_id_to_command(self):
-        command_dataset_id = self.dataset_id
+        command_dataset_id = self.dataset_path_to_dataset_id()
         return command_dataset_id
 
     def target_viewpoints_to_command(self):
@@ -110,9 +128,35 @@ class StatisticalModellingParameters(Parameters):
 
 @dataclass
 class TrainingParameters(Parameters):
-    pretraining_ids: int = None
-    k: Union[int, Literal['full']] = None
+    """
+    for the dataset to pretrain the long-term models, we ask to provide the **PATH** to the dataset instead of an ID number.
+    The py2lispIDyOM will automatically assign a unique number to the training set internaly
+    """
+    # pretraining_ids: int = None
+    pretraining_dataset: str = None
+    k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
+
+    def pretrain_path_to_pretrain_id(self):
+        moment = get_timestamp()
+        pretraining_id = '99' + moment
+        return pretraining_id
+
+    def pretraining_id_to_command(self):
+        command_pretraining_id = self.pretrain_path_to_pretrain_id()
+        return command_pretraining_id
+
+    def k_to_command(self):
+        command_k = f':k {self.k}'
+        print('k value is: ', self.k)
+        return command_k
+
+    def resampling_indices_to_command(self):
+        raise NotImplementedError
+
+    def to_lisp_command(self) -> str:
+        command = f'\'({self.pretraining_id_to_command()}) {self.k_to_command()}'
+        return command
 
 
 @dataclass
@@ -157,6 +201,13 @@ class CachingParameters(Parameters):
 
 @dataclass
 class Configuration(Parameters):
+    # required_parameters: RequiredParameters
+    # statistical_modelling_parameters: StatisticalModellingParameters = None
+    # training_parameters: TrainingParameters = None
+    # viewpoint_selection_parameters: ViewpointSelectionParameters = None
+    # output_parameters: OutputParameters = None
+    # caching_parameters: CachingParameters = None
+
     def __init__(self, required_parameters: RequiredParameters):
         self.required_parameters = required_parameters
         self.statistical_modelling_parameters = StatisticalModellingParameters()
@@ -181,18 +232,28 @@ class Configuration(Parameters):
         return command
 
 
+
+
+
 def func():
-    # config = Configuration(required_parameters=RequiredParameters(1, None, None))
-    # config.show()
+
     statistical_modeling_parameters = StatisticalModellingParameters(models=':stm',
                                                                      stmo=ModelOptions(order_bound=4, mixtures=True))
     viewpoint_selection_parameters = ViewpointSelectionParameters(basis=BasisOption(['cpitch', 'cpint', 'contour']),
                                                                   dp=3, max_links=2)
-    required_parameters = RequiredParameters(dataset_id=0, target_viewpoints=['cpitch', 'onset'],
+    required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset',
+                                             target_viewpoints=['cpitch', 'onset'],
                                              source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
-    # print(required_parameters.to_lisp_command())
+
+    training_parameters = TrainingParameters(pretraining_dataset="dataset/bach_dataset",
+                                             k=1)
+
+    output = OutputParameters(output_path="experiment_history/", detail=3, overwrite=True, separator=",")
+
     configuration = Configuration(required_parameters=required_parameters)
+
     print(configuration.to_lisp_command())
+    print('dataset_path: ', required_parameters.dataset_path)
 
 
 if __name__ == '__main__':
