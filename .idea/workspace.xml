@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="refactored the configuration module">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post_idyom_viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/post_idyom_viz.py" afterDir="false" />
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="refactored the viz module -v2, initial commit">
+      <change afterPath="$PROJECT_DIR$/extraction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +203,7 @@
       <workItem from="1628588638500" duration="6102000" />
       <workItem from="1628763559605" duration="5769000" />
       <workItem from="1631005497483" duration="2880000" />
-      <workItem from="1651090455412" duration="1998000" />
+      <workItem from="1651090455412" duration="2086000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651090682926</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactored the viz module -v2, initial commit">
+      <created>1651142970699</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1651142970699</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +282,8 @@
     <MESSAGE value="added duration viewpoint" />
     <MESSAGE value="added and tested reconstruct midi script" />
     <MESSAGE value="refactored the configuration module" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored the configuration module" />
+    <MESSAGE value="refactored the viz module -v2, initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored the viz module -v2, initial commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
