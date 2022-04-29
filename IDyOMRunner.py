@@ -1,19 +1,18 @@
 from dataclasses import dataclass, field
-from typing import Callable
 
-from configuration import RunModelConfiguration, DatabaseConfiguration
+from configuration import *
 import os
 
 @dataclass
-class IdyomRunner:
+class IDyOMRunner:
     database_configuration: DatabaseConfiguration = field(default_factory=DatabaseConfiguration)
     run_model_configuration: RunModelConfiguration = field(default_factory=RunModelConfiguration)
 
     def run(self):
-        self.open_sbcl()
-        self.start_idyom()
-        self.initialize_database()
-        self.run_model()
+        self.open_sbcl_command()
+        self.start_idyom_command()
+        self.initialize_database_command()
+        self.run_model_command()
 
     def total_command(self)->str:
         commands = [
@@ -42,8 +41,18 @@ class IdyomRunner:
         command = self.run_model_configuration.to_lisp_command()
         return command
 
+
+
 def test():
-    idyom_runner = IdyomRunner()
+    required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset',
+                                             target_viewpoints=['cpitch', 'onset'],
+                                             source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
+
+    statistical_parameters = StatisticalModellingParameters(models=':both')
+
+    database_configuration = DatabaseConfiguration()
+    run_model_configuration = RunModelConfiguration(required_parameters=required_parameters)
+    idyom_runner = IDyOMRunner(database_configuration=database_configuration, run_model_configuration=run_model_configuration)
     idyom_runner.total_command()
 
 

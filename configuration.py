@@ -1,9 +1,13 @@
 from __future__ import annotations
-
 import datetime
 import json
+import os
+import shutil
 from dataclasses import dataclass, field
+from glob import glob
 from typing import Literal, List, Union, Tuple, Iterable
+
+from natsort import natsorted
 
 
 def get_timestamp():
@@ -60,13 +64,15 @@ class RequiredParameters(Parameters):
                              List[Union[SingleViewpoint,
                                         Tuple[SingleViewpoint]]]] = None
 
-    def _is_available(self)->bool:
+    def _is_available(self) -> bool:
         condition = all([
             type(self.dataset_path) is str,
             type(self.target_viewpoints) is List[SingleViewpoint],
-            type(self.source_viewpoints) is Union[Literal[':select'], List[Union[SingleViewpoint,Tuple[SingleViewpoint]]]]
+            type(self.source_viewpoints) is Union[
+                Literal[':select'], List[Union[SingleViewpoint, Tuple[SingleViewpoint]]]]
         ])
         return condition
+
     def viewpoint_to_string(self, viewpoint: Union[SingleViewpoint, Tuple[SingleViewpoint]]) -> str:
         if type(viewpoint) is str:
             string = str(viewpoint)
@@ -145,7 +151,7 @@ class TrainingParameters(Parameters):
     The py2lispIDyOM will automatically assign a unique number to the training set internaly
     """
     # pretraining_ids: int = None
-    pretraining_dataset: str = None
+    pretraining_dataset_path: str = None
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
 
@@ -218,8 +224,7 @@ class Configuration(Parameters):
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
-    statistical_modelling_parameters: StatisticalModellingParameters = field(
-        default_factory=StatisticalModellingParameters)
+    statistical_modelling_parameters: StatisticalModellingParameters = field(default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
     output_parameters: OutputParameters = field(default_factory=OutputParameters)
@@ -244,14 +249,93 @@ class RunModelConfiguration(Configuration):
 
 @dataclass(repr=False)
 class DatabaseConfiguration(Configuration):
-    pass
+    file_type: Literal[':mid', ':krn']
+    test_dataset_Path: RunModelConfiguration.required_parameters.dataset_path
+    test_dataset_ID: RunModelConfiguration.required_parameters.dataset_path_to_dataset_id
+    train_dataset_Path: RunModelConfiguration.training_parameters.pretraining_dataset_path
+    train_dataset_ID: RunModelConfiguration.training_parameters.pretrain_path_to_pretrain_id
+    test_dataset_Name: str = 'TEST_DATASET'
+    train_dataset_Name: str = 'PRETRAIN_DATASET'
+
+    def to_lisp_command(self) -> str:
+        all_parameters = [
+            self.file_type,
+            self.test_dataset_Path,
+            self.test_dataset_Name,
+            self.test_dataset_ID,
+            self.train_dataset_Path,
+            self.train_dataset_Name,
+            self.train_dataset_ID,
+        ]
+        subcommands = [parameters.to_lisp_command() for parameters in all_parameters]
+
+        # non_empty_subcommands = [x for x in subcommands if x != '']
+        # joined_commands = ' '.join(non_empty_subcommands)
+        # command = f'(idyom-db:import-data {joined_commands})'
+        return subcommands
+
+
+def initialize_experiment_folder(RunModelConfiguration):
+
+    def get_files_from_paths(path): # only two types files allowed: midi and kern
+        files=[]
+        for file in glob(path + '*'):
+            if file[file.rfind("."):] == ".mid" or ".krn":
+                files.append(file)
+        return natsorted(files)
+
+    def put_midis_in_folder(files, folder_path):
+        for file in files:
+            shutil.copyfile(file, folder_path + file[file.rfind("/"):])
+
+    experiment_history_folder = 'experiment_history/'
+    if not os.path.exists(experiment_history_folder):
+        os.makedirs(experiment_history_folder)
+
+    # read inputs from user inputs in the Configuration:
+    test_dataset_path = RunModelConfiguration.required_parameters.dataset_path
+    train_dataset_path = RunModelConfiguration.training_parameters.pretraining_dataset_path
+
+    today_date = datetime.date.today()
+    now_time = datetime.datetime.now()
+    this_experiment_folder = experiment_history_folder+ today_date.strftime('%d-%m-%y')+'_'+ now_time.strftime('%H.%M.%S') + '/'
+    os.makedirs(this_experiment_folder)
+
+    # input data folder:
+    input_data_folder = this_experiment_folder + 'experiment_input_data_folder/'
+    train_folder = input_data_folder + 'train/'
+    test_folder = input_data_folder + 'test/'
+
+    os.makedirs(input_data_folder)
+    os.makedirs(train_folder)
+    os.makedirs(test_folder)
+
+    if train_dataset_path is None:
+        pass
+        print('** No pretraining dataset detected. **')
+    else:
+        train = get_files_from_paths(train_dataset_path)
+        put_midis_in_folder(train, train_folder)
+        print("** Putting Pretraining dataset files in experiment history folder. **")
+
+    test = get_files_from_paths(test_dataset_path)
+    put_midis_in_folder(test,test_folder)
+    print("** Putting Test dataset files in experiment history folder. **")
+
+    output_data_folder = this_experiment_folder + 'experiment_output_data_folder/'
+    os.makedirs(output_data_folder)
+
+    print('** Successfully created experiment folder! **')
+    return this_experiment_folder
+
+
+
 
 
 def test():
     statistical_modeling_parameters = StatisticalModellingParameters(models=':stm',
                                                                      stmo=ModelOptions(order_bound=4, mixtures=True))
-    viewpoint_selection_parameters = ViewpointSelectionParameters(basis=BasisOption(['cpitch', 'cpint', 'contour']),
-                                                                  dp=3, max_links=2)
+
     required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset',
                                              target_viewpoints=['cpitch', 'onset'],
                                              source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
@@ -260,11 +344,17 @@ def test():
                                              k=1)
 
     output = OutputParameters(output_path="experiment_history/", detail=3, overwrite=True, separator=",")
-    configuration = RunModelConfiguration(required_parameters=required_parameters,training_parameters=training_parameters)
+    configuration = RunModelConfiguration(required_parameters=required_parameters,
+                                          training_parameters=training_parameters)
 
     print(configuration.to_lisp_command())
     print('dataset_path: ', required_parameters.dataset_path)
 
 
 if __name__ == '__main__':
-    test()
+    required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset/',
+                                             target_viewpoints=['cpitch', 'onset'],
+                                             source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
+
+    runmodel_config = RunModelConfiguration(required_parameters=required_parameters)
+    initialize_experiment_folder(runmodel_config)
