@@ -1,19 +1,20 @@
-"""
-Created by xinyiguan on 28.04.22.
-"""
+from dataclasses import dataclass
 
-import configuration
-import run_idyom
 
-required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset',
-                                                       target_viewpoints=['cpitch', 'onset'],
-                                                       source_viewpoints=['cpitch', 'onset',
-                                                                          ('cpitch', 'articulation')])
-myconfiguration = configuration.Configuration(required_parameters=required_parameters)
+class Apple:
+    def __init__(self,age:int,price = 15):
+        self.age = age
+        self.price = price
+
+@dataclass
+class Apple:
+    age: int
+    price = 15
 
 
 def func():
-    run_idyom.initialize_experiment_folder(experiment_history_folder='new_exp_his')
+    apple = Apple(age=8)
+    print(apple.age)
 
 
 if __name__ == '__main__':

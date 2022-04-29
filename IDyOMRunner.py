@@ -56,7 +56,6 @@ def test():
     statistical_parameters = StatisticalModellingParameters(models=':both')
 
     run_model_configuration = RunModelConfiguration(required_parameters=required_parameters)
-    database_configuration = DatabaseConfiguration(run_model_configuration)
     idyom_runner = IDyOMRunner(database_configuration=database_configuration, run_model_configuration=run_model_configuration)
     idyom_runner.total_command()
 

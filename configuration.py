@@ -251,20 +251,9 @@ class RunModelConfiguration(Configuration):
 
 @dataclass(repr=False)
 class DatabaseConfiguration(Configuration):
-    test_dataset_ID: str = field(default_factory=RequiredParameters.generate_test_dataset_id)
-    train_dataset_ID: str = field(default_factory=TrainingParameters.generate_pretrain_id)
-    test_dataset_Path: str = RequiredParameters.dataset_path
-    train_dataset_Path: str = TrainingParameters.pretraining_dataset_path
+    run_model_configuration: RunModelConfiguration
     test_dataset_Name: str = 'TEST_DATASET'
     train_dataset_Name: str = 'PRETRAIN_DATASET'
-
-    # def __init__(self):
-    #     self.test_dataset_Path = RunModelConfiguration.required_parameters.dataset_path
-    #     self.test_dataset_ID = RunModelConfiguration.required_parameters.generate_test_dataset_id()
-    #     self.test_dataset_Name = 'TEST_DATASET'
-    #     self.train_dataset_Path = RunModelConfiguration.training_parameters.pretraining_dataset_path
-    #     self.train_dataset_ID = RunModelConfiguration.training_parameters.generate_pretrain_id()
-    #     self.train_dataset_Name = 'PRETRAIN_DATASET'
 
     def get_music_files_type(self, path)->str:
         for file in glob(path + '*'):
@@ -283,18 +272,19 @@ class DatabaseConfiguration(Configuration):
         return command
 
     def to_lisp_command(self):
-        print('test_dataset_Path: ', self.test_dataset_Path)
-        test_file_type = self.get_music_files_type(self.test_dataset_Path)
+        config = self.run_model_configuration
+        print('test_dataset_Path: ', config.required_parameters.dataset_path)
+        test_file_type = self.get_music_files_type(config.required_parameters.dataset_path)
         import_test_lisp = self.oneline_import_db_to_lisp_command(file_type=test_file_type,
-                                                                  Path=self.test_dataset_Path,
+                                                                  Path=config.required_parameters.dataset_path,
                                                                   Name=self.test_dataset_Name,
-                                                                  ID=self.train_dataset_ID)
-        print('train_dataset_Path: ', self.train_dataset_Path)
-        train_file_type = self.get_music_files_type(self.train_dataset_Path)
+                                                                  ID=config.required_parameters.generate_test_dataset_id())
+        print('train_dataset_Path: ', config.training_parameters.pretraining_dataset_path)
+        train_file_type = self.get_music_files_type(config.training_parameters.pretraining_dataset_path)
         import_train_lisp = self.oneline_import_db_to_lisp_command(file_type=train_file_type,
-                                                                   Path=self.train_dataset_Path,
+                                                                   Path=config.training_parameters.pretraining_dataset_path,
                                                                    Name=self.train_dataset_Name,
-                                                                   ID=self.train_dataset_ID)
+                                                                   ID=config.training_parameters.generate_pretrain_id())
         return import_test_lisp, import_train_lisp
 
 
@@ -378,11 +368,10 @@ if __name__ == '__main__':
 
     training_parameters = TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
                                              k=2)
-
-    runmodel = RunModelConfiguration(required_parameters=required_parameters,
+    run_model_config = RunModelConfiguration(required_parameters=required_parameters,
                                      training_parameters=training_parameters)
 
     train_set = training_parameters.pretraining_dataset_path
+    db_config = DatabaseConfiguration(run_model_configuration=run_model_config)
 
-    db_config = DatabaseConfiguration(runmodel).to_lisp_command()
     print(db_config)
