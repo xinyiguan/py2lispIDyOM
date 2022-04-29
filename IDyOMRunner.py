@@ -18,7 +18,8 @@ class IDyOMRunner:
         commands = [
             self.open_sbcl_command(),
             self.start_idyom_command(),
-            self.initialize_database_command(),
+            self.initialize_train_database_command(),
+            self.initialize_test_database_command(),
             self.run_model_command(),
         ]
         total_command = '\n'.join(commands)
@@ -33,8 +34,12 @@ class IDyOMRunner:
         command = '(start-idyom)'
         return command
 
-    def initialize_database_command(self)->str:
-        command = self.database_configuration.to_lisp_command()
+    def initialize_train_database_command(self)->str:
+        command = self.database_configuration.to_lisp_command()[1]
+        return command
+
+    def initialize_test_database_command(self)->str:
+        command = self.database_configuration.to_lisp_command()[0]
         return command
 
     def run_model_command(self)->str:
@@ -50,8 +55,8 @@ def test():
 
     statistical_parameters = StatisticalModellingParameters(models=':both')
 
-    database_configuration = DatabaseConfiguration()
     run_model_configuration = RunModelConfiguration(required_parameters=required_parameters)
+    database_configuration = DatabaseConfiguration(run_model_configuration)
     idyom_runner = IDyOMRunner(database_configuration=database_configuration, run_model_configuration=run_model_configuration)
     idyom_runner.total_command()
 

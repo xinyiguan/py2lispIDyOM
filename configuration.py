@@ -95,13 +95,14 @@ class RequiredParameters(Parameters):
         command = f'({long_string})'
         return command
 
-    def dataset_path_to_dataset_id(self):
+    @staticmethod
+    def generate_test_dataset_id():
         moment = get_timestamp()
         dataset_id = '66' + moment
         return dataset_id
 
     def dataset_id_to_command(self):
-        command_dataset_id = self.dataset_path_to_dataset_id()
+        command_dataset_id = self.generate_test_dataset_id()
         return command_dataset_id
 
     def target_viewpoints_to_command(self):
@@ -155,18 +156,18 @@ class TrainingParameters(Parameters):
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
 
-    def pretrain_path_to_pretrain_id(self):
+    @staticmethod
+    def generate_pretrain_id():
         moment = get_timestamp()
         pretraining_id = '99' + moment
         return pretraining_id
 
     def pretraining_id_to_command(self):
-        command_pretraining_id = self.pretrain_path_to_pretrain_id()
+        command_pretraining_id = self.generate_pretrain_id()
         return command_pretraining_id
 
     def k_to_command(self):
         command_k = f':k {self.k}'
-        print('k value is: ', self.k)
         return command_k
 
     def resampling_indices_to_command(self):
@@ -224,14 +225,15 @@ class Configuration(Parameters):
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
-    statistical_modelling_parameters: StatisticalModellingParameters = field(default_factory=StatisticalModellingParameters)
+    statistical_modelling_parameters: StatisticalModellingParameters = field(
+        default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
     output_parameters: OutputParameters = field(default_factory=OutputParameters)
     caching_parameters: CachingParameters = field(default_factory=CachingParameters)
 
     def to_lisp_command(self) -> str:
-        assert self.required_parameters._is_available(), self.required_parameters
+        # assert self.required_parameters._is_available(), self.required_parameters
         all_parameters = [
             self.required_parameters,
             self.statistical_modelling_parameters,
@@ -249,36 +251,56 @@ class RunModelConfiguration(Configuration):
 
 @dataclass(repr=False)
 class DatabaseConfiguration(Configuration):
-    file_type: Literal[':mid', ':krn']
-    test_dataset_Path: RunModelConfiguration.required_parameters.dataset_path
-    test_dataset_ID: RunModelConfiguration.required_parameters.dataset_path_to_dataset_id
-    train_dataset_Path: RunModelConfiguration.training_parameters.pretraining_dataset_path
-    train_dataset_ID: RunModelConfiguration.training_parameters.pretrain_path_to_pretrain_id
+    test_dataset_ID: str = field(default_factory=RequiredParameters.generate_test_dataset_id)
+    train_dataset_ID: str = field(default_factory=TrainingParameters.generate_pretrain_id)
+    test_dataset_Path: str = RequiredParameters.dataset_path
+    train_dataset_Path: str = TrainingParameters.pretraining_dataset_path
     test_dataset_Name: str = 'TEST_DATASET'
     train_dataset_Name: str = 'PRETRAIN_DATASET'
 
-    def to_lisp_command(self) -> str:
-        all_parameters = [
-            self.file_type,
-            self.test_dataset_Path,
-            self.test_dataset_Name,
-            self.test_dataset_ID,
-            self.train_dataset_Path,
-            self.train_dataset_Name,
-            self.train_dataset_ID,
-        ]
-        subcommands = [parameters.to_lisp_command() for parameters in all_parameters]
+    # def __init__(self):
+    #     self.test_dataset_Path = RunModelConfiguration.required_parameters.dataset_path
+    #     self.test_dataset_ID = RunModelConfiguration.required_parameters.generate_test_dataset_id()
+    #     self.test_dataset_Name = 'TEST_DATASET'
+    #     self.train_dataset_Path = RunModelConfiguration.training_parameters.pretraining_dataset_path
+    #     self.train_dataset_ID = RunModelConfiguration.training_parameters.generate_pretrain_id()
+    #     self.train_dataset_Name = 'PRETRAIN_DATASET'
 
-        # non_empty_subcommands = [x for x in subcommands if x != '']
-        # joined_commands = ' '.join(non_empty_subcommands)
-        # command = f'(idyom-db:import-data {joined_commands})'
-        return subcommands
+    def get_music_files_type(self, path)->str:
+        for file in glob(path + '*'):
+            if file[file.rfind("."):] == ".mid":
+                return 'mid'
+            if file[file.rfind("."):] == ".krn":
+                return 'krn'
+            else:
+                raise ValueError
+
+    def oneline_import_db_to_lisp_command(self, file_type, Path, Name, ID) -> str:
+        subcommands = [':' + file_type, Path, Name, ID]
+        non_empty_subcommands = [x for x in subcommands if x != '']
+        joined_commands = ' '.join(non_empty_subcommands)
+        command = f'(idyom-db:import-data {joined_commands})'
+        return command
+
+    def to_lisp_command(self):
+        print('test_dataset_Path: ', self.test_dataset_Path)
+        test_file_type = self.get_music_files_type(self.test_dataset_Path)
+        import_test_lisp = self.oneline_import_db_to_lisp_command(file_type=test_file_type,
+                                                                  Path=self.test_dataset_Path,
+                                                                  Name=self.test_dataset_Name,
+                                                                  ID=self.train_dataset_ID)
+        print('train_dataset_Path: ', self.train_dataset_Path)
+        train_file_type = self.get_music_files_type(self.train_dataset_Path)
+        import_train_lisp = self.oneline_import_db_to_lisp_command(file_type=train_file_type,
+                                                                   Path=self.train_dataset_Path,
+                                                                   Name=self.train_dataset_Name,
+                                                                   ID=self.train_dataset_ID)
+        return import_test_lisp, import_train_lisp
 
 
-def initialize_experiment_folder(RunModelConfiguration):
-
-    def get_files_from_paths(path): # only two types files allowed: midi and kern
-        files=[]
+def initialize_experiment_folder():
+    def get_files_from_paths(path):  # only two types files allowed: midi and kern
+        files = []
         for file in glob(path + '*'):
             if file[file.rfind("."):] == ".mid" or ".krn":
                 files.append(file)
@@ -298,7 +320,8 @@ def initialize_experiment_folder(RunModelConfiguration):
 
     today_date = datetime.date.today()
     now_time = datetime.datetime.now()
-    this_experiment_folder = experiment_history_folder+ today_date.strftime('%d-%m-%y')+'_'+ now_time.strftime('%H.%M.%S') + '/'
+    this_experiment_folder = experiment_history_folder + today_date.strftime('%d-%m-%y') + '_' + now_time.strftime(
+        '%H.%M.%S') + '/'
     os.makedirs(this_experiment_folder)
 
     # input data folder:
@@ -319,7 +342,7 @@ def initialize_experiment_folder(RunModelConfiguration):
         print("** Putting Pretraining dataset files in experiment history folder. **")
 
     test = get_files_from_paths(test_dataset_path)
-    put_midis_in_folder(test,test_folder)
+    put_midis_in_folder(test, test_folder)
     print("** Putting Test dataset files in experiment history folder. **")
 
     output_data_folder = this_experiment_folder + 'experiment_output_data_folder/'
@@ -327,9 +350,6 @@ def initialize_experiment_folder(RunModelConfiguration):
 
     print('** Successfully created experiment folder! **')
     return this_experiment_folder
-
-
-
 
 
 def test():
@@ -354,7 +374,15 @@ def test():
 if __name__ == '__main__':
     required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset/',
                                              target_viewpoints=['cpitch', 'onset'],
-                                             source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
+                                             source_viewpoints=['cpitch', 'onset'])
 
-    runmodel_config = RunModelConfiguration(required_parameters=required_parameters)
-    initialize_experiment_folder(runmodel_config)
+    training_parameters = TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
+                                             k=2)
+
+    runmodel = RunModelConfiguration(required_parameters=required_parameters,
+                                     training_parameters=training_parameters)
+
+    train_set = training_parameters.pretraining_dataset_path
+
+    db_config = DatabaseConfiguration(runmodel).to_lisp_command()
+    print(db_config)
