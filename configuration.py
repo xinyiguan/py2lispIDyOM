@@ -255,12 +255,16 @@ class DatabaseConfiguration(Configuration):
     test_dataset_Name: str = 'TEST_DATASET'
     train_dataset_Name: str = 'PRETRAIN_DATASET'
 
+    def __post_init__(self):
+        self.experiment_folder = ExperimentFolder(run_model_configuration=self.run_model_configuration)
+
+
     def get_music_files_type(self, path) -> str:
         for file in glob(path + '*'):
             if file[file.rfind("."):] == ".mid":
-                return 'mid'
+                return str('mid')
             if file[file.rfind("."):] == ".krn":
-                return 'krn'
+                return str('krn')
             else:
                 print('Music file type unsupported. Please use either midi files or kern files.')
 
@@ -274,24 +278,26 @@ class DatabaseConfiguration(Configuration):
     def _get_command_import_db(self, path, dataset_name, dataset_id):
         file_type = self.get_music_files_type(path)
         command_import_testdb = self._oneline_import_db_to_lisp_command(file_type=file_type,
-                                                                       Path=path,
-                                                                       Name=dataset_name,
-                                                                       ID=dataset_id)
+                                                                        Path=path,
+                                                                        Name=dataset_name,
+                                                                        ID=dataset_id)
         return command_import_testdb
 
     def get_command_import_testdb(self):
         config = self.run_model_configuration
-        path = config.required_parameters.dataset_path
+        # path = config.required_parameters.dataset_path # original dataset path
+        path = self.experiment_folder.test_dataset_exp_folder
         dataset_name = self.test_dataset_Name
         dataset_id = config.required_parameters.generate_test_dataset_id()
-        command = self._get_command_import_db(path=path,dataset_name=dataset_name,dataset_id=dataset_id)
+        command = self._get_command_import_db(path=path, dataset_name=dataset_name, dataset_id=dataset_id)
         return command
 
     def get_command_import_traindb(self):
         config = self.run_model_configuration
-        path = config.training_parameters.pretraining_dataset_path
+        # path = config.training_parameters.pretraining_dataset_path  # original dataset path
+        path = self.experiment_folder.train_dataset_exp_folder
         dataset_name = self.train_dataset_Name
-        dataset_id =config.training_parameters.generate_pretrain_id()
+        dataset_id = config.training_parameters.generate_pretrain_id()
         command = self._get_command_import_db(path=path, dataset_name=dataset_name, dataset_id=dataset_id)
         return command
 
@@ -304,78 +310,94 @@ class DatabaseConfiguration(Configuration):
         return total_command
 
 
+class ExperimentFolder:
 
-def initialize_experiment_folder():
-    def get_files_from_paths(path):  # only two types files allowed: midi and kern
+    def __init__(self, run_model_configuration):
+        self.test_dataset_path = run_model_configuration.required_parameters.dataset_path
+        self.train_dataset_path = run_model_configuration.training_parameters.pretraining_dataset_path
+        self.experiment_history_folder = self.generate_experiment_history_folder()
+        self.this_exp_folder = self.generate_this_exp_folder()
+        self.input_data_exp_folder = self.generate_input_data_exp_folder()
+        self.test_dataset_exp_folder = self.generate_test_dataset_exp_folder()
+        self.train_dataset_exp_folder = self.generate_train_dataset_exp_folder()
+        self.output_data_exp_folder = self.generate_output_data_exp_folder()
+
+    def generate_experiment_history_folder(self):
+        experiment_history_folder = 'experiment_history/'
+        if not os.path.exists(experiment_history_folder):
+            os.makedirs(experiment_history_folder)
+        return experiment_history_folder
+
+    def generate_this_exp_folder(self):
+        today_date = datetime.date.today()
+        now_time = datetime.datetime.now()
+        this_experiment_folder = self.experiment_history_folder + today_date.strftime(
+            '%d-%m-%y') + '_' + now_time.strftime(
+            '%H.%M.%S') + '/'
+        os.makedirs(this_experiment_folder)
+        return this_experiment_folder
+
+    def generate_input_data_exp_folder(self):
+        input_data_folder = self.this_exp_folder + 'experiment_input_data_folder/'
+        if not os.path.exists(input_data_folder):
+            os.makedirs(input_data_folder)
+        return input_data_folder
+
+    def generate_test_dataset_exp_folder(self):
+        input_data_folder = self.generate_input_data_exp_folder()
+        test_folder = input_data_folder + 'test/'
+        os.makedirs(test_folder)
+        print("** Putting Test dataset files in experiment history folder. **")
+        test_dataset_path = self.test_dataset_path
+        test = self._get_files_from_paths(test_dataset_path)
+        self._put_midis_in_folder(test, test_folder)
+        return test_folder
+
+    def generate_train_dataset_exp_folder(self):
+        input_data_folder = self.generate_input_data_exp_folder()
+        train_folder = input_data_folder + 'train/'
+        os.makedirs(train_folder)
+        train_dataset_path = self.train_dataset_path
+        if train_dataset_path is None:
+            pass
+            print('** No pretraining dataset detected. **')
+        else:
+            print("** Putting Pretraining dataset files in experiment history folder. **")
+            train = self._get_files_from_paths(train_dataset_path)
+            self._put_midis_in_folder(train, train_folder)
+        return train_folder
+
+    def _get_files_from_paths(self, path):  # only two types files allowed: midi and kern
         files = []
         for file in glob(path + '*'):
             if file[file.rfind("."):] == ".mid" or ".krn":
                 files.append(file)
         return natsorted(files)
 
-    def put_midis_in_folder(files, folder_path):
+    def _put_midis_in_folder(self, files, folder_path):
         for file in files:
             shutil.copyfile(file, folder_path + file[file.rfind("/"):])
 
-    experiment_history_folder = 'experiment_history/'
-    if not os.path.exists(experiment_history_folder):
-        os.makedirs(experiment_history_folder)
+    def put_test_midi_in_exp_folder(self):
+        print("** Putting Test dataset files in experiment history folder. **")
+        test_dataset_path = run_model_config.required_parameters.dataset_path
+        test = self._get_files_from_paths(test_dataset_path)
+        self._put_midis_in_folder(test, self.test_dataset_exp_folder)
 
-    # read inputs from user inputs in the Configuration:
-    test_dataset_path = RunModelConfiguration.required_parameters.dataset_path
-    train_dataset_path = RunModelConfiguration.training_parameters.pretraining_dataset_path
+    def put_train_midi_in_exp_folder(self):
+        train_dataset_path = run_model_config.training_parameters.pretraining_dataset_path
+        if train_dataset_path is None:
+            pass
+            print('** No pretraining dataset detected. **')
+        else:
+            print("** Putting Pretraining dataset files in experiment history folder. **")
+            train = self._get_files_from_paths(train_dataset_path)
+            self._put_midis_in_folder(train, self.train_dataset_exp_folder)
 
-    today_date = datetime.date.today()
-    now_time = datetime.datetime.now()
-    this_experiment_folder = experiment_history_folder + today_date.strftime('%d-%m-%y') + '_' + now_time.strftime(
-        '%H.%M.%S') + '/'
-    os.makedirs(this_experiment_folder)
-
-    # input data folder:
-    input_data_folder = this_experiment_folder + 'experiment_input_data_folder/'
-    train_folder = input_data_folder + 'train/'
-    test_folder = input_data_folder + 'test/'
-
-    os.makedirs(input_data_folder)
-    os.makedirs(train_folder)
-    os.makedirs(test_folder)
-
-    if train_dataset_path is None:
-        pass
-        print('** No pretraining dataset detected. **')
-    else:
-        train = get_files_from_paths(train_dataset_path)
-        put_midis_in_folder(train, train_folder)
-        print("** Putting Pretraining dataset files in experiment history folder. **")
-
-    test = get_files_from_paths(test_dataset_path)
-    put_midis_in_folder(test, test_folder)
-    print("** Putting Test dataset files in experiment history folder. **")
-
-    output_data_folder = this_experiment_folder + 'experiment_output_data_folder/'
-    os.makedirs(output_data_folder)
-
-    print('** Successfully created experiment folder! **')
-    return this_experiment_folder
-
-
-def test():
-    statistical_modeling_parameters = StatisticalModellingParameters(models=':stm',
-                                                                     stmo=ModelOptions(order_bound=4, mixtures=True))
-
-    required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset',
-                                             target_viewpoints=['cpitch', 'onset'],
-                                             source_viewpoints=['cpitch', 'onset', ('cpitch', 'articulation')])
-
-    training_parameters = TrainingParameters(pretraining_dataset="dataset/bach_dataset",
-                                             k=1)
-
-    output = OutputParameters(output_path="experiment_history/", detail=3, overwrite=True, separator=",")
-    configuration = RunModelConfiguration(required_parameters=required_parameters,
-                                          training_parameters=training_parameters)
-
-    print(configuration.to_lisp_command())
-    print('dataset_path: ', required_parameters.dataset_path)
+    def generate_output_data_exp_folder(self):
+        output_data_folder = self.this_exp_folder + 'experiment_output_data_folder/'
+        os.makedirs(output_data_folder)
+        return output_data_folder
 
 
 if __name__ == '__main__':
@@ -392,5 +414,3 @@ if __name__ == '__main__':
     # print(db_config.get_command_import_testdb())
     # print(db_config.get_command_import_traindb())
     print(db_config.to_lisp_command())
-
-
