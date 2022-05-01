@@ -262,7 +262,7 @@ class DatabaseConfiguration(Configuration):
             if file[file.rfind("."):] == ".krn":
                 return 'krn'
             else:
-                raise ValueError
+                print('Music file type unsupported. Please use either midi files or kern files.')
 
     def _oneline_import_db_to_lisp_command(self, file_type, Path, Name, ID) -> str:
         subcommands = [f':{file_type}', f'\"{Path}\"', f'\"{Name}\"', ID]
@@ -388,7 +388,6 @@ if __name__ == '__main__':
     run_model_config = RunModelConfiguration(required_parameters=required_parameters,
                                              training_parameters=training_parameters)
 
-    train_set = training_parameters.pretraining_dataset_path
     db_config = DatabaseConfiguration(run_model_configuration=run_model_config)
     # print(db_config.get_command_import_testdb())
     # print(db_config.get_command_import_traindb())
