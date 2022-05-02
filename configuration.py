@@ -1,3 +1,9 @@
+"""
+TODO:
+1. Need to fix the dat file output path in lisp script (automatically point to generated exp_folder)
+"""
+
+
 from __future__ import annotations
 import datetime
 import json
@@ -119,8 +125,8 @@ class RequiredParameters(Parameters):
             raise TypeError(self.source_viewpoints)
         return command_source_viewpoints
 
-    def to_lisp_command(self) -> str:
 
+    def to_lisp_command(self) -> str:
         command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
         return command
 
@@ -143,6 +149,10 @@ class StatisticalModellingParameters(Parameters):
     models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
     ltmo: ModelOptions = None
     stmo: ModelOptions = None
+
+    def to_lisp_command(self) -> str:
+        command = super().to_lisp_command()
+        return command
 
 
 @dataclass
@@ -205,12 +215,33 @@ class ViewpointSelectionParameters(Parameters):
 
 @dataclass
 class OutputParameters(Parameters):
-    output_path: str = None
-    detail: Literal[1, 2, 3] = None
-    overwrite: bool = None  # whether to overwrite an existing output file if it exists
+    detail: Literal[1, 2, 3] = 3
+    output_path: str = RequiredParameters().dataset_path
+    overwrite: bool = False  # whether to overwrite an existing output file if it exists
     separator: str = None  # a string defining the character to use for delimiting columns in the output file (default
     # is " ", use "," for CSV)
 
+    def detail_to_command(self) -> str:
+        command_detail = f':detail {self.detail}'
+        return command_detail
+
+    # the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/
+    def output_path_to_command(self) ->str:
+        command_outpath = f'\"{self.output_path}\"'
+        return command_outpath
+
+    def overwrite_to_command(self) -> str:
+        convert_dict = {True: 't', False: 'nil'}
+        if self.overwrite is True:
+            command_overwrite = f':overwrite {convert_dict[True]}'
+        if self.overwrite is False:
+            command_overwrite = f':overwrite {convert_dict[False]}'
+        return command_overwrite
+
+
+    def to_lisp_command(self) -> str:
+        command = f'{self.detail_to_command()} {self.output_path_to_command()} {self.overwrite_to_command()}'
+        return command
 
 @dataclass
 class CachingParameters(Parameters):
@@ -225,8 +256,7 @@ class Configuration(Parameters):
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
-    statistical_modelling_parameters: StatisticalModellingParameters = field(
-        default_factory=StatisticalModellingParameters)
+    statistical_modelling_parameters: StatisticalModellingParameters = field(default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
     output_parameters: OutputParameters = field(default_factory=OutputParameters)
@@ -257,7 +287,6 @@ class DatabaseConfiguration(Configuration):
 
     def __post_init__(self):
         self.experiment_folder = ExperimentFolder(run_model_configuration=self.run_model_configuration)
-
 
     def get_music_files_type(self, path) -> str:
         for file in glob(path + '*'):
@@ -405,12 +434,17 @@ if __name__ == '__main__':
                                              target_viewpoints=['cpitch', 'onset'],
                                              source_viewpoints=['cpitch', 'onset'])
 
+    statistical_modelling_parameters = StatisticalModellingParameters(models=':both')
+
     training_parameters = TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
                                              k=2)
+    output_parameters = OutputParameters(detail=3)
+
     run_model_config = RunModelConfiguration(required_parameters=required_parameters,
+                                             statistical_modelling_parameters=statistical_modelling_parameters,
                                              training_parameters=training_parameters)
 
     db_config = DatabaseConfiguration(run_model_configuration=run_model_config)
-    # print(db_config.get_command_import_testdb())
-    # print(db_config.get_command_import_traindb())
-    print(db_config.to_lisp_command())
+
+    lisp = output_parameters.to_lisp_command()
+    print(lisp)

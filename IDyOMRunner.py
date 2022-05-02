@@ -64,16 +64,17 @@ def test():
 
     training_parameters = configuration.TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
                                                            k=1)
-    statistical_parameters = configuration.StatisticalModellingParameters(models=':both')
+    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
+
 
     run_model_config = configuration.RunModelConfiguration(required_parameters=required_parameters,
-                                                           statistical_parameters=statistical_parameters,
+                                                           statistical_modelling_parameters=statistical_modelling_parameters,
                                                            training_parameters=training_parameters,
                                                            )
     db_config = configuration.DatabaseConfiguration(run_model_configuration=run_model_config)
+
     idyom_runner = IDyOMRunner(run_model_configuration=run_model_config, database_configuration=db_config)
     lisp_path = idyom_runner.generate_lisp_script()
-    idyom_runner.run()
-
+    print(lisp_path)
 if __name__ == '__main__':
     test()
