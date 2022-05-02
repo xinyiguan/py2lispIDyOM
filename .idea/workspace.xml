@@ -209,7 +209,7 @@
       <workItem from="1651157444080" duration="42183000" />
       <workItem from="1651487201048" duration="2066000" />
       <workItem from="1651489361649" duration="5347000" />
-      <workItem from="1651494882277" duration="544000" />
+      <workItem from="1651494882277" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -330,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651488012781</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed pretraining id in lisp script">
+      <created>1651495464878</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651495464878</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +384,8 @@
     <MESSAGE value="DatabaseConfiguration lisp commands all prepared. Next: generate lisp file" />
     <MESSAGE value="lisp script generation completed" />
     <MESSAGE value="quit command added" />
-    <option name="LAST_COMMIT_MESSAGE" value="quit command added" />
+    <MESSAGE value="fixed pretraining id in lisp script" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pretraining id in lisp script" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
