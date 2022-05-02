@@ -66,15 +66,16 @@ def test():
                                                            k=1)
     statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
 
-
+    output_parameters = configuration.OutputParameters(detail=3,output_path='experiment_history/')
     run_model_config = configuration.RunModelConfiguration(required_parameters=required_parameters,
                                                            statistical_modelling_parameters=statistical_modelling_parameters,
                                                            training_parameters=training_parameters,
+                                                           output_parameters=output_parameters
                                                            )
     db_config = configuration.DatabaseConfiguration(run_model_configuration=run_model_config)
 
     idyom_runner = IDyOMRunner(run_model_configuration=run_model_config, database_configuration=db_config)
-    lisp_path = idyom_runner.generate_lisp_script()
-    print(lisp_path)
+    idyom_runner.run()
+
 if __name__ == '__main__':
     test()

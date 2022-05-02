@@ -184,7 +184,7 @@ class TrainingParameters(Parameters):
         raise NotImplementedError
 
     def to_lisp_command(self) -> str:
-        command = f'\'({self.pretraining_id_to_command()}) {self.k_to_command()}'
+        command = f' :pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
         return command
 
 
@@ -227,7 +227,7 @@ class OutputParameters(Parameters):
 
     # the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/
     def output_path_to_command(self) ->str:
-        command_outpath = f'\"{self.output_path}\"'
+        command_outpath = f':output-path \"{self.output_path}\"'
         return command_outpath
 
     def overwrite_to_command(self) -> str:
