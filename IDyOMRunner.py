@@ -11,9 +11,8 @@ class IDyOMRunner:
     database_configuration: configuration.DatabaseConfiguration = field(
         default_factory=configuration.DatabaseConfiguration)
 
-    def total_command(self) -> str:
+    def total_lisp_command(self) -> str:
         commands = [
-            # self.open_sbcl_command(),
             self.start_idyom_command(),
             self.initialize_database_command(),
             self.run_model_command(),
@@ -45,10 +44,10 @@ class IDyOMRunner:
     def generate_lisp_script(self):
         path_to_file = self.database_configuration.experiment_folder.this_exp_folder
         lisp_file_path = path_to_file + 'compute.lisp'
-        lisp_command = self.total_command()
+        lisp_command = self.total_lisp_command()
         with open(lisp_file_path, "w") as f:
             f.write(lisp_command)
-        return lisp_file_path
+        return str(lisp_file_path)
 
     def run(self):
         """use shell to run IDyOM LISP code """
@@ -68,11 +67,13 @@ def test():
     statistical_parameters = configuration.StatisticalModellingParameters(models=':both')
 
     run_model_config = configuration.RunModelConfiguration(required_parameters=required_parameters,
-                                                           training_parameters=training_parameters)
+                                                           statistical_parameters=statistical_parameters,
+                                                           training_parameters=training_parameters,
+                                                           )
     db_config = configuration.DatabaseConfiguration(run_model_configuration=run_model_config)
     idyom_runner = IDyOMRunner(run_model_configuration=run_model_config, database_configuration=db_config)
+    lisp_path = idyom_runner.generate_lisp_script()
     idyom_runner.run()
-
 
 if __name__ == '__main__':
     test()

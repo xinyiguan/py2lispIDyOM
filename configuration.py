@@ -245,7 +245,7 @@ class RunModelConfiguration(Configuration):
         subcommands = [parameters.to_lisp_command() for parameters in all_parameters]
         non_empty_subcommands = [x for x in subcommands if x != '']
         joined_commands = ' '.join(non_empty_subcommands)
-        command = f'(idyom: idyom {joined_commands})'
+        command = f'(idyom:idyom {joined_commands})'
         return command
 
 
