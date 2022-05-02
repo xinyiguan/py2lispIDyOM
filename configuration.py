@@ -3,8 +3,8 @@ TODO:
 1. Need to fix the dat file output path in lisp script (automatically point to generated exp_folder)
 """
 
-
 from __future__ import annotations
+
 import datetime
 import json
 import os
@@ -125,7 +125,6 @@ class RequiredParameters(Parameters):
             raise TypeError(self.source_viewpoints)
         return command_source_viewpoints
 
-
     def to_lisp_command(self) -> str:
         command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
         return command
@@ -184,7 +183,7 @@ class TrainingParameters(Parameters):
         raise NotImplementedError
 
     def to_lisp_command(self) -> str:
-        command = f' :pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
+        command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
         return command
 
 
@@ -219,6 +218,7 @@ class OutputParameters(Parameters):
     output_path: str = RequiredParameters().dataset_path
     overwrite: bool = False  # whether to overwrite an existing output file if it exists
     separator: str = None  # a string defining the character to use for delimiting columns in the output file (default
+
     # is " ", use "," for CSV)
 
     def detail_to_command(self) -> str:
@@ -226,7 +226,7 @@ class OutputParameters(Parameters):
         return command_detail
 
     # the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/
-    def output_path_to_command(self) ->str:
+    def output_path_to_command(self) -> str:
         command_outpath = f':output-path \"{self.output_path}\"'
         return command_outpath
 
@@ -238,10 +238,10 @@ class OutputParameters(Parameters):
             command_overwrite = f':overwrite {convert_dict[False]}'
         return command_overwrite
 
-
     def to_lisp_command(self) -> str:
         command = f'{self.detail_to_command()} {self.output_path_to_command()} {self.overwrite_to_command()}'
         return command
+
 
 @dataclass
 class CachingParameters(Parameters):
@@ -256,7 +256,8 @@ class Configuration(Parameters):
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
-    statistical_modelling_parameters: StatisticalModellingParameters = field(default_factory=StatisticalModellingParameters)
+    statistical_modelling_parameters: StatisticalModellingParameters = field(
+        default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
     output_parameters: OutputParameters = field(default_factory=OutputParameters)
@@ -363,7 +364,8 @@ class ExperimentFolder:
         this_experiment_folder = self.experiment_history_folder + today_date.strftime(
             '%d-%m-%y') + '_' + now_time.strftime(
             '%H.%M.%S') + '/'
-        os.makedirs(this_experiment_folder)
+        if not os.path.exists(this_experiment_folder):
+            os.makedirs(this_experiment_folder)
         return this_experiment_folder
 
     def generate_input_data_exp_folder(self):
@@ -375,7 +377,8 @@ class ExperimentFolder:
     def generate_test_dataset_exp_folder(self):
         input_data_folder = self.generate_input_data_exp_folder()
         test_folder = input_data_folder + 'test/'
-        os.makedirs(test_folder)
+        if not os.path.exists(test_folder):
+            os.makedirs(test_folder)
         print("** Putting Test dataset files in experiment history folder. **")
         test_dataset_path = self.test_dataset_path
         test = self._get_files_from_paths(test_dataset_path)
@@ -385,7 +388,8 @@ class ExperimentFolder:
     def generate_train_dataset_exp_folder(self):
         input_data_folder = self.generate_input_data_exp_folder()
         train_folder = input_data_folder + 'train/'
-        os.makedirs(train_folder)
+        if not os.path.exists(train_folder):
+            os.makedirs(train_folder)
         train_dataset_path = self.train_dataset_path
         if train_dataset_path is None:
             pass
@@ -425,7 +429,8 @@ class ExperimentFolder:
 
     def generate_output_data_exp_folder(self):
         output_data_folder = self.this_exp_folder + 'experiment_output_data_folder/'
-        os.makedirs(output_data_folder)
+        if not os.path.exists(output_data_folder):
+            os.makedirs(output_data_folder)
         return output_data_folder
 
 

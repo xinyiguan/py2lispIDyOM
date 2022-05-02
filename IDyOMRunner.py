@@ -8,8 +8,10 @@ import os
 class IDyOMRunner:
     run_model_configuration: configuration.RunModelConfiguration = field(
         default_factory=configuration.RunModelConfiguration)
-    database_configuration: configuration.DatabaseConfiguration = field(
-        default_factory=configuration.DatabaseConfiguration)
+    # database_configuration: configuration.DatabaseConfiguration = field(
+    #     default_factory=configuration.DatabaseConfiguration)
+    def __post_init__(self):
+        self.database_configuration = configuration.DatabaseConfiguration(run_model_configuration=self.run_model_configuration)
 
     def total_lisp_command(self) -> str:
         commands = [
@@ -72,10 +74,9 @@ def test():
                                                            training_parameters=training_parameters,
                                                            output_parameters=output_parameters
                                                            )
-    db_config = configuration.DatabaseConfiguration(run_model_configuration=run_model_config)
 
-    idyom_runner = IDyOMRunner(run_model_configuration=run_model_config, database_configuration=db_config)
-    idyom_runner.run()
+    idyom_runner = IDyOMRunner(run_model_configuration=run_model_config)
+    idyom_runner.generate_lisp_script()
 
 if __name__ == '__main__':
     test()
