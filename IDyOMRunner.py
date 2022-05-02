@@ -8,8 +8,7 @@ import os
 class IDyOMRunner:
     run_model_configuration: configuration.RunModelConfiguration = field(
         default_factory=configuration.RunModelConfiguration)
-    # database_configuration: configuration.DatabaseConfiguration = field(
-    #     default_factory=configuration.DatabaseConfiguration)
+
     def __post_init__(self):
         self.database_configuration = configuration.DatabaseConfiguration(run_model_configuration=self.run_model_configuration)
 
@@ -22,10 +21,6 @@ class IDyOMRunner:
         ]
         total_command = '\n'.join(commands)
         return total_command
-
-    def open_sbcl_command(self) -> str:
-        command = 'sbcl'
-        return command
 
     def start_idyom_command(self) -> str:
         command = '(start-idyom)'
@@ -58,6 +53,11 @@ class IDyOMRunner:
         print(' ')
         print('** Finished! **')
 
+    def run_start_idyom_command(self):
+        print('** Starting IDyOM in SBCL **')
+        os.system('sbcl')
+        os.system(self.start_idyom_command())
+
 
 def test():
     required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset/',
@@ -68,7 +68,7 @@ def test():
                                                            k=1)
     statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
 
-    output_parameters = configuration.OutputParameters(detail=3,output_path='experiment_history/')
+    output_parameters = configuration.OutputParameters(detail=3, output_path='experiment_history/')
     run_model_config = configuration.RunModelConfiguration(required_parameters=required_parameters,
                                                            statistical_modelling_parameters=statistical_modelling_parameters,
                                                            training_parameters=training_parameters,
@@ -76,7 +76,6 @@ def test():
                                                            )
 
     idyom_runner = IDyOMRunner(run_model_configuration=run_model_config)
-    idyom_runner.generate_lisp_script()
 
 if __name__ == '__main__':
     test()

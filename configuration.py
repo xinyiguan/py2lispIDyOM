@@ -56,7 +56,6 @@ SingleViewpoint = Literal[
     'registral-direction', 'intervallic-difference', 'registral-return', 'proximity', 'closure'
 ]
 
-
 @dataclass
 class RequiredParameters(Parameters):
     """
@@ -215,11 +214,9 @@ class ViewpointSelectionParameters(Parameters):
 @dataclass
 class OutputParameters(Parameters):
     detail: Literal[1, 2, 3] = 3
-    output_path: str = RequiredParameters().dataset_path
+    output_path: str = None
     overwrite: bool = False  # whether to overwrite an existing output file if it exists
-    separator: str = None  # a string defining the character to use for delimiting columns in the output file (default
-
-    # is " ", use "," for CSV)
+    separator: str = None  # a string defining the character to use for delimiting columns in the output file
 
     def detail_to_command(self) -> str:
         command_detail = f':detail {self.detail}'
