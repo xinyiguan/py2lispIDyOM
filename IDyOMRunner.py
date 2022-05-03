@@ -5,59 +5,67 @@ import os
 
 
 @dataclass
-class IDyOMRunner:
-    run_model_configuration: configuration.RunModelConfiguration = field(
-        default_factory=configuration.RunModelConfiguration)
+class IDyOMExperiment:
+    train_dataset_path: str
+    test_dataset_path: str
+    experiment_history_folder_path: str =None
+    # IDyOMConfiguration: configuration.IDyOMConfiguration = field(default_factory=configuration.IDyOMConfiguration)
+
+    required_parameters: configuration.RequiredParameters = field(default_factory=configuration.RequiredParameters)
+    statistical_modelling_parameters: configuration.StatisticalModellingParameters = field(
+        default_factory=configuration.StatisticalModellingParameters)
+    training_parameters: configuration.TrainingParameters = field(default_factory=configuration.TrainingParameters)
+    viewpoint_selection_parameters: configuration.ViewpointSelectionParameters = field(
+        default_factory=configuration.ViewpointSelectionParameters)
+    output_parameters: configuration.OutputParameters = field(default_factory=configuration.OutputParameters)
+    caching_parameters: configuration.CachingParameters = field(default_factory=configuration.CachingParameters)
 
     def __post_init__(self):
-        self.database_configuration = configuration.DatabaseConfiguration(run_model_configuration=self.run_model_configuration)
+        self.this_exp_logger = configuration.ExperimentLogger(train_dataset_path=self.train_dataset_path,
+                                                              test_dataset_path=self.test_dataset_path,
+                                                              experiment_history_folder_path=self.experiment_history_folder_path)
+        self.this_experiment_folder_path = self.this_exp_logger.this_exp_folder
+        self.test_dataset_exp_folder = self.this_exp_logger.test_dataset_exp_folder
+        self.train_dataset_exp_folder = self.this_exp_logger.train_dataset_exp_folder
 
-    def total_lisp_command(self) -> str:
-        commands = [
-            self.start_idyom_command(),
-            self.initialize_database_command(),
-            self.run_model_command(),
-            self.quit_command()
-        ]
-        total_command = '\n'.join(commands)
-        return total_command
-
-    def start_idyom_command(self) -> str:
-        command = '(start-idyom)'
-        return command
-
-    def initialize_database_command(self) -> str:
-        command = self.database_configuration.to_lisp_command()
-        return command
-
-    def run_model_command(self) -> str:
-        command = self.run_model_configuration.to_lisp_command()
-        return command
-
-    def quit_command(self) -> str:
-        command = '(quit)'
-        return command
+        self.idyom_config = configuration.IDyOMConfiguration(required_parameters=self.required_parameters,
+                                                             statistical_modelling_parameters=self.statistical_modelling_parameters,
+                                                             training_parameters=self.training_parameters,
+                                                             viewpoint_selection_parameters=self.viewpoint_selection_parameters,
+                                                             output_parameters=self.output_parameters,
+                                                             caching_parameters=self.caching_parameters,
+                                                             this_exp_log_path=self.this_experiment_folder_path)
 
     def generate_lisp_script(self):
-        path_to_file = self.database_configuration.experiment_folder.this_exp_folder
-        lisp_file_path = path_to_file + 'compute.lisp'
-        lisp_command = self.total_lisp_command()
-        with open(lisp_file_path, "w") as f:
-            f.write(lisp_command)
-        return str(lisp_file_path)
+        self.idyom_config.generate_lisp_script()
 
     def run(self):
-        """use shell to run IDyOM LISP code """
-        print('** running lisp script **')
-        os.system("sbcl --noinform --load " + self.generate_lisp_script())
-        print(' ')
-        print('** Finished! **')
+        self.idyom_config.run()
 
-    def run_start_idyom_command(self):
-        print('** Starting IDyOM in SBCL **')
-        os.system('sbcl')
-        os.system(self.start_idyom_command())
 
+def new_test():
+    train_dataset_path = 'dataset/bach_dataset/'
+    test_dataset_path = 'dataset/shanx_dataset/'
+
+    required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset/',
+                                                           target_viewpoints=['cpitch', 'onset'],
+                                                           source_viewpoints=['cpitch', 'onset'])
+
+    training_parameters = configuration.TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
+                                                           k=1)
+    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
+
+    output_parameters = configuration.OutputParameters(detail=3)
+
+    my_exp = IDyOMExperiment(train_dataset_path=train_dataset_path,
+                             test_dataset_path=test_dataset_path,
+                             required_parameters=required_parameters,
+                             statistical_modelling_parameters=statistical_modelling_parameters,
+                             training_parameters=training_parameters,
+                             output_parameters=output_parameters)
+
+    lisp=my_exp.generate_lisp_script()
+    print(lisp)
 
 def test():
     required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset/',
@@ -75,7 +83,6 @@ def test():
                                                            output_parameters=output_parameters
                                                            )
 
-    idyom_runner = IDyOMRunner(run_model_configuration=run_model_config)
 
 if __name__ == '__main__':
-    test()
+    new_test()
