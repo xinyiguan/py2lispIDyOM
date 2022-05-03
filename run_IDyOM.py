@@ -40,6 +40,7 @@ class IDyOMExperiment:
         self.idyom_config.generate_lisp_script()
 
     def run(self):
+        self.idyom_config.generate_lisp_script()
         self.idyom_config.run()
 
 
@@ -67,21 +68,6 @@ def new_test():
     lisp=my_exp.generate_lisp_script()
     print(lisp)
 
-def test():
-    required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset/',
-                                                           target_viewpoints=['cpitch', 'onset'],
-                                                           source_viewpoints=['cpitch', 'onset'])
-
-    training_parameters = configuration.TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
-                                                           k=1)
-    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
-
-    output_parameters = configuration.OutputParameters(detail=3, output_path='experiment_history/')
-    run_model_config = configuration.RunModelConfiguration(required_parameters=required_parameters,
-                                                           statistical_modelling_parameters=statistical_modelling_parameters,
-                                                           training_parameters=training_parameters,
-                                                           output_parameters=output_parameters
-                                                           )
 
 
 if __name__ == '__main__':

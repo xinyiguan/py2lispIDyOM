@@ -165,7 +165,17 @@ class TrainingParameters(Parameters):
     pretraining_dataset_path: str = None
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
-    training_id = None
+    # training_id: str = None
+
+    @staticmethod
+    def generate_pretrain_dataset_id():
+        moment = get_timestamp()
+        pretrain_dataset_id = '99' + moment
+        return pretrain_dataset_id
+
+    def pretraining_id_to_command(self) ->str:
+        command = self.generate_pretrain_dataset_id()
+        return command
 
     def k_to_command(self):
         command_k = f':k {self.k}'
@@ -175,7 +185,7 @@ class TrainingParameters(Parameters):
         raise NotImplementedError
 
     def to_lisp_command(self) -> str:
-        command = f':pretraining-ids \'({self.training_id}) {self.k_to_command()}'
+        command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
         return command
 
 
@@ -257,7 +267,6 @@ class RunModelConfiguration(Configuration):
 
     def __post_init__(self):
         self.output_parameters = OutputParameters(output_path=self.this_exp_log_path+'experiment_output_data_folder/')
-
 
     def to_lisp_command(self) -> str:
         # assert self.required_parameters._is_available(), self.required_parameters
