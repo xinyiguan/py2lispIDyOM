@@ -1,7 +1,6 @@
-from dataclasses import field, dataclass
-
-import configuration as configuration
 import os
+from dataclasses import field, dataclass
+import configuration as configuration
 
 
 @dataclass
@@ -35,9 +34,24 @@ class IDyOMExperiment:
                                                              output_parameters=self.output_parameters,
                                                              caching_parameters=self.caching_parameters,
                                                              this_exp_log_path=self.this_experiment_folder_path)
+    def run_start_idyom(self):
+        self.idyom_config.run_start_idyom_command()
+
+    def run_import_datasets(self):
+        command = self.idyom_config.import_datasets_command()
+        os.system(command)
+
+    def run_describe_database(self):
+        self.idyom_config.describe_database_command()
+
+    def run_describe_databse_detail(self):
+        self.idyom_config.describe_detailed_database_command()
 
     def generate_lisp_script(self):
         self.idyom_config.generate_lisp_script()
+
+    def run_quit(self):
+        self.idyom_config.quit_command()
 
     def run(self):
         self.idyom_config.generate_lisp_script()

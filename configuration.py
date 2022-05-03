@@ -1,7 +1,6 @@
 """
 TODO:
-1. Need to fix the dat file output path in lisp script (automatically point to generated exp_folder)
-2. don't use glob
+2. don't use glob?
 """
 
 from __future__ import annotations
@@ -234,9 +233,10 @@ class OutputParameters(Parameters):
         convert_dict = {True: 't', False: 'nil'}
         if self.overwrite is True:
             command_overwrite = f':overwrite {convert_dict[True]}'
+            return command_overwrite
         if self.overwrite is False:
             command_overwrite = f':overwrite {convert_dict[False]}'
-        return command_overwrite
+            return command_overwrite
 
     def to_lisp_command(self) -> str:
         command = f'{self.detail_to_command()} {self.output_path_to_command()} {self.overwrite_to_command()}'
@@ -471,7 +471,7 @@ class IDyOMConfiguration:
     def total_lisp_command(self) -> str:
         commands = [
             self.start_idyom_command(),
-            self.initialize_database_command(),
+            self.import_datasets_command(),
             self.run_model_command(),
             self.quit_command()
         ]
@@ -482,8 +482,16 @@ class IDyOMConfiguration:
         command = '(start-idyom)'
         return command
 
-    def initialize_database_command(self) -> str:
+    def import_datasets_command(self) -> str:
         command = self.database_configuration.to_lisp_command()
+        return command
+
+    def describe_database_command(self) -> str:
+        command = '(idyom-db:describe-database)'
+        return command
+
+    def describe_detailed_database_command(self) -> str:
+        command = '(idyom-db:describe-database :verbose t)'
         return command
 
     def run_model_command(self) -> str:

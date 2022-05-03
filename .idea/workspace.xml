@@ -25,10 +25,82 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="interative mode: run_start_idyom_command fini">
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="pretrain_id fixed">
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/compute.lisp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder/test_output.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IDyOMRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_IDyOM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_IDyOM.py" beforeDir="false" afterPath="$PROJECT_DIR$/runIDyOM.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +135,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder" />
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -75,7 +148,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.run_IDyOM">
+  <component name="RunManager" selected="Python.runIDyOM">
     <configuration name="configuration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,7 +215,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="run_IDyOM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="runIDyOM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +228,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run_IDyOM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runIDyOM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,7 +261,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.run_IDyOM" />
+        <item itemvalue="Python.runIDyOM" />
         <item itemvalue="Python.configuration" />
         <item itemvalue="Python.myIDyOMexp" />
         <item itemvalue="Python.run_idyom" />
@@ -216,7 +289,7 @@
       <workItem from="1651494882277" duration="590000" />
       <workItem from="1651501978216" duration="20711000" />
       <workItem from="1651589206275" duration="64000" />
-      <workItem from="1651589417641" duration="1094000" />
+      <workItem from="1651589417641" duration="3082000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -358,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651506975496</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="pretrain_id fixed">
+      <created>1651590530782</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1651590530782</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +488,8 @@
     <MESSAGE value="fixed pretraining id in lisp script" />
     <MESSAGE value="checked:DatabaseConfiguration hidden from user input (auto extracted from RunModelConfiguration)" />
     <MESSAGE value="interative mode: run_start_idyom_command fini" />
-    <option name="LAST_COMMIT_MESSAGE" value="interative mode: run_start_idyom_command fini" />
+    <MESSAGE value="pretrain_id fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="pretrain_id fixed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -421,7 +502,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_IDyOM.coverage" NAME="run_IDyOM Coverage Results" MODIFIED="1651590439091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_IDyOM.coverage" NAME="run_IDyOM Coverage Results" MODIFIED="1651591073066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_idyom.coverage" NAME="run_idyom Coverage Results" MODIFIED="1651159066991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOM_runner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651415543822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
