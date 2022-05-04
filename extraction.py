@@ -3,6 +3,8 @@ Created by xinyiguan on 17.03.22.
 """
 import os
 import typing
+from dataclasses import dataclass
+from glob import glob
 
 import numpy as np
 import pandas as pd
@@ -38,6 +40,15 @@ def getDictionary(file: str) -> dict:
             dict[fields[1]][key].append(toFloat(fields[k]))
             k += 1
     return dict
+
+
+def get_all_song_dict(dat_file_path: str) -> dict:
+    all_song_dict = getDictionary(dat_file_path)
+    return all_song_dict
+
+
+def get_song_dict_of_interest(all_song_dict, melody_id):
+    return list(all_song_dict.values())[melody_id]
 
 
 def getDataFrame(file: str) -> pd.DataFrame:
@@ -108,17 +119,14 @@ class MelodyInfo(pd.DataFrame):
         return extended_ic_seq
 
 
+@dataclass
 class ExperimentInfo:
-    def __init__(self, dat_file_path: str):
-        self.dat_file_path = dat_file_path
-        self.file = os.path.basename(self.dat_file_path)
-        self.file_name = os.path.splitext(self.file)[0]
-        self.file_type = os.path.splitext(self.file)[1]
+    experiment_folder_path: str
 
+    def __post_init__(self):
+        self.dat_file_path = glob(self.experiment_folder_path + 'experiment_output_data_folder/*.dat')[0]
         self.df = pd.read_table(self.dat_file_path, delim_whitespace=True)
         self.melodies_dict = self.initialize_melody_dict()
-
-        self.summary = self.initialize_summary()
         self.pitch_range = self.get_datasetwise_pitch_range()
 
     def initialize_melody_dict(self) -> typing.Dict[str, MelodyInfo]:
@@ -132,20 +140,6 @@ class ExperimentInfo:
             melody_name = melody_info['melody.name'][0]
             return_dict[melody_name] = melody_info
         return return_dict
-
-    def initialize_summary(self, property_list=['information.content']) -> pd.DataFrame:
-        """
-        :param :property_list=['information.content','entropy']
-        :return: a panda dataframe of dataset summary containing the mean values of chosen viewpoints
-        """
-        viewpoints_mean_data = {}
-        for key, value in self.melodies_dict.items():
-            mean_value = value.access_mean_properties(property_list)
-            viewpoints_mean_data[key] = mean_value
-
-        summary_df = pd.DataFrame(viewpoints_mean_data)
-
-        return summary_df
 
     def access_melodies(self, starting_index=None, ending_index=None,
                         melody_names=None):
@@ -168,16 +162,14 @@ class ExperimentInfo:
         pitch_range = (int(pitches.min()), int(pitches.max()))
         return pitch_range
 
-    def show(self):
-        print(self.summary)
-
 
 def func():
-    dat_file_path = '/Users/xinyiguan/Codes/IDyOM_Interface_paper/99030821134014-cpitch_onset-cpitch_onset-66030821134014-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat'
-
-    dataset = ExperimentInfo(dat_file_path=dat_file_path)
+    dataset_pitchrange = ExperimentInfo(
+        experiment_folder_path='experiment_history/04-05-22_14.35.26/').get_datasetwise_pitch_range()
 
     # melody1 = dataset_info.access_melodies(melody_names=['"shanx002"'])[0]
+
+    print(dataset_pitchrange)
 
 
 if __name__ == '__main__':
