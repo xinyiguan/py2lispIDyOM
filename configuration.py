@@ -59,12 +59,7 @@ SingleViewpoint = Literal[
 
 @dataclass
 class RequiredParameters(Parameters):
-    """
-    for the dataset to input test dataset, we ask to provide the **PATH** to the dataset instead of an ID number.
-    The py2lispIDyOM will automatically assign a unique number to the training set internaly
-    """
-    # dataset_id: int
-    # dataset_path: str = None
+
     target_viewpoints: List[SingleViewpoint] = None
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
@@ -156,16 +151,9 @@ class StatisticalModellingParameters(Parameters):
 
 @dataclass
 class TrainingParameters(Parameters):
-    """
-    for the dataset to pretrain the long-term models, we ask to provide the **PATH** to the dataset instead of an ID number.
-    The py2lispIDyOM will automatically assign a unique number to the training set internaly
-    """
-    # pretraining_ids: int = None
-    # pretraining_dataset_path: str = None
+
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
-
-    # training_id: str = None
 
     @staticmethod
     def generate_pretrain_dataset_id():

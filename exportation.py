@@ -1,8 +1,6 @@
 import os
 from dataclasses import dataclass
 
-import pandas as pd
-import scipy.io
 from extraction import getDictionary, ExperimentInfo, MelodyInfo
 
 @dataclass
