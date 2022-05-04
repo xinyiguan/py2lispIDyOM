@@ -80,7 +80,7 @@ def new_test():
                              training_parameters=training_parameters,
                              output_parameters=output_parameters)
 
-    my_exp.generate_lisp_script()
+    my_exp.run()
 
 
 if __name__ == '__main__':
