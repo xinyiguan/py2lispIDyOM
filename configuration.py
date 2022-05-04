@@ -64,7 +64,7 @@ class RequiredParameters(Parameters):
     The py2lispIDyOM will automatically assign a unique number to the training set internaly
     """
     # dataset_id: int
-    dataset_path: str = None
+    # dataset_path: str = None
     target_viewpoints: List[SingleViewpoint] = None
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
@@ -72,7 +72,7 @@ class RequiredParameters(Parameters):
 
     def _is_available(self) -> bool:
         condition = all([
-            type(self.dataset_path) is str,
+            # type(self.dataset_path) is str,
             type(self.target_viewpoints) is List[SingleViewpoint],
             type(self.source_viewpoints) is Union[
                 Literal[':select'], List[Union[SingleViewpoint, Tuple[SingleViewpoint]]]]
@@ -161,9 +161,10 @@ class TrainingParameters(Parameters):
     The py2lispIDyOM will automatically assign a unique number to the training set internaly
     """
     # pretraining_ids: int = None
-    pretraining_dataset_path: str = None
+    # pretraining_dataset_path: str = None
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
+
     # training_id: str = None
 
     @staticmethod
@@ -172,7 +173,7 @@ class TrainingParameters(Parameters):
         pretrain_dataset_id = '99' + moment
         return pretrain_dataset_id
 
-    def pretraining_id_to_command(self) ->str:
+    def pretraining_id_to_command(self) -> str:
         command = self.generate_pretrain_dataset_id()
         return command
 
@@ -266,7 +267,7 @@ class RunModelConfiguration(Configuration):
     caching_parameters: CachingParameters = field(default_factory=CachingParameters)
 
     def __post_init__(self):
-        self.output_parameters = OutputParameters(output_path=self.this_exp_log_path+'experiment_output_data_folder/')
+        self.output_parameters = OutputParameters(output_path=self.this_exp_log_path + 'experiment_output_data_folder/')
 
     def to_lisp_command(self) -> str:
         # assert self.required_parameters._is_available(), self.required_parameters
@@ -294,7 +295,7 @@ class DatabaseConfiguration(Configuration):
     train_dataset_Name: str = 'PRETRAIN_DATASET'
 
     def __post_init__(self):
-        self.test_dataset_log_path = self.this_exp_log_path+'experiment_input_data_folder/test/'
+        self.test_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/test/'
         self.train_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/train/'
 
     def get_music_files_type(self, path) -> str:
@@ -435,7 +436,6 @@ class ExperimentLogger:
 
 @dataclass
 class IDyOMConfiguration:
-
     required_parameters: RunModelConfiguration.required_parameters
     statistical_modelling_parameters: RunModelConfiguration.statistical_modelling_parameters
     training_parameters: RunModelConfiguration.training_parameters
@@ -521,22 +521,3 @@ class IDyOMConfiguration:
         os.system("sbcl --noinform --load " + self.generate_lisp_script())
         print(' ')
         print('** Finished! **')
-
-
-
-def test():
-    required_parameters = RequiredParameters(dataset_path='dataset/bach_dataset/',
-                                             target_viewpoints=['cpitch', 'onset'],
-                                             source_viewpoints=['cpitch', 'onset'])
-
-    statistical_modelling_parameters = StatisticalModellingParameters(models=':both')
-
-    training_parameters = TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
-                                             k=2)
-    output_parameters = OutputParameters(detail=3,overwrite=False)
-
-
-
-
-if __name__ == '__main__':
-    test()

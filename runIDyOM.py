@@ -8,7 +8,6 @@ class IDyOMExperiment:
     train_dataset_path: str
     test_dataset_path: str
     experiment_history_folder_path: str = None
-    # IDyOMConfiguration: configuration.IDyOMConfiguration = field(default_factory=configuration.IDyOMConfiguration)
 
     required_parameters: configuration.RequiredParameters = field(default_factory=configuration.RequiredParameters)
     statistical_modelling_parameters: configuration.StatisticalModellingParameters = field(
@@ -60,20 +59,18 @@ class IDyOMExperiment:
 
 
 def new_test():
-    train_dataset_path = 'dataset/bach_dataset/'
+    pretraining_dataset_path = 'dataset/bach_dataset/'
     test_dataset_path = 'dataset/shanx_dataset/'
 
-    required_parameters = configuration.RequiredParameters(dataset_path='dataset/bach_dataset/',
-                                                           target_viewpoints=['cpitch', 'onset'],
+    required_parameters = configuration.RequiredParameters(target_viewpoints=['cpitch', 'onset'],
                                                            source_viewpoints=['cpitch', 'onset'])
 
-    training_parameters = configuration.TrainingParameters(pretraining_dataset_path='dataset/shanx_dataset/',
-                                                           k=1)
-    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both')
+    training_parameters = configuration.TrainingParameters(k=1)
+    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both+')
 
     output_parameters = configuration.OutputParameters(detail=3)
 
-    my_exp = IDyOMExperiment(train_dataset_path=train_dataset_path,
+    my_exp = IDyOMExperiment(train_dataset_path=pretraining_dataset_path,
                              test_dataset_path=test_dataset_path,
                              required_parameters=required_parameters,
                              statistical_modelling_parameters=statistical_modelling_parameters,
