@@ -502,6 +502,11 @@ class IDyOMConfiguration:
         command = '(quit)'
         return command
 
+    def run_start_idyom_command(self):
+        print('** Starting IDyOM in SBCL **')
+        os.system('sbcl')
+        os.system(self.start_idyom_command())
+
     def generate_lisp_script(self):
         path_to_file = self.this_exp_log_path
         lisp_file_path = path_to_file + 'compute.lisp'
@@ -517,10 +522,6 @@ class IDyOMConfiguration:
         print(' ')
         print('** Finished! **')
 
-    def run_start_idyom_command(self):
-        print('** Starting IDyOM in SBCL **')
-        os.system('sbcl')
-        os.system(self.start_idyom_command())
 
 
 def test():

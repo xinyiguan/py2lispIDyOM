@@ -7,7 +7,7 @@ import configuration as configuration
 class IDyOMExperiment:
     train_dataset_path: str
     test_dataset_path: str
-    experiment_history_folder_path: str =None
+    experiment_history_folder_path: str = None
     # IDyOMConfiguration: configuration.IDyOMConfiguration = field(default_factory=configuration.IDyOMConfiguration)
 
     required_parameters: configuration.RequiredParameters = field(default_factory=configuration.RequiredParameters)
@@ -34,6 +34,7 @@ class IDyOMExperiment:
                                                              output_parameters=self.output_parameters,
                                                              caching_parameters=self.caching_parameters,
                                                              this_exp_log_path=self.this_experiment_folder_path)
+
     def run_start_idyom(self):
         self.idyom_config.run_start_idyom_command()
 
@@ -44,7 +45,7 @@ class IDyOMExperiment:
     def run_describe_database(self):
         self.idyom_config.describe_database_command()
 
-    def run_describe_databse_detail(self):
+    def run_describe_database_detail(self):
         self.idyom_config.describe_detailed_database_command()
 
     def generate_lisp_script(self):
@@ -79,9 +80,7 @@ def new_test():
                              training_parameters=training_parameters,
                              output_parameters=output_parameters)
 
-    lisp=my_exp.generate_lisp_script()
-    print(lisp)
-
+    my_exp.generate_lisp_script()
 
 
 if __name__ == '__main__':

@@ -25,82 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="pretrain_id fixed">
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/compute.lisp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx002.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx003.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx004.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx006.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx007.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx008.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx009.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx010.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx011.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx012.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx013.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx014.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx015.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx016.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx017.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx018.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx019.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx020.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx021.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx022.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx023.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx025.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx026.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx027.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx028.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx029.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx030.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx031.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx032.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx033.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx034.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx035.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx036.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx037.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/test/shanx040.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-001.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-002.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-003.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-004.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-005.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-006.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-007.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-008.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-009.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-010.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-011.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-012.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-013.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-014.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-015.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-016.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-017.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-018.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-019.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-020.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-021.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-022.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-023.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-024.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-025.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-026.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-027.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-028.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-029.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-030.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-031.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-032.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-033.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-034.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_input_data_folder/train/chor-035.mid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder/test_output.dat" afterDir="false" />
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="interactive mode: database related">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_IDyOM.py" beforeDir="false" afterPath="$PROJECT_DIR$/runIDyOM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runIDyOM.py" beforeDir="false" afterPath="$PROJECT_DIR$/runIDyOM.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +217,7 @@
       <workItem from="1651494882277" duration="590000" />
       <workItem from="1651501978216" duration="20711000" />
       <workItem from="1651589206275" duration="64000" />
-      <workItem from="1651589417641" duration="3082000" />
+      <workItem from="1651589417641" duration="3882000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -438,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651590530782</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="interactive mode: database related">
+      <created>1651592548120</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1651592548120</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +424,8 @@
     <MESSAGE value="checked:DatabaseConfiguration hidden from user input (auto extracted from RunModelConfiguration)" />
     <MESSAGE value="interative mode: run_start_idyom_command fini" />
     <MESSAGE value="pretrain_id fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="pretrain_id fixed" />
+    <MESSAGE value="interactive mode: database related" />
+    <option name="LAST_COMMIT_MESSAGE" value="interactive mode: database related" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
