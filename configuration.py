@@ -1,8 +1,3 @@
-"""
-TODO:
-2. don't use glob?
-"""
-
 from __future__ import annotations
 
 import datetime

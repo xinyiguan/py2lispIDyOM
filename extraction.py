@@ -124,7 +124,7 @@ class ExperimentInfo:
     experiment_folder_path: str
 
     def __post_init__(self):
-        self.dat_file_path = glob(self.experiment_folder_path + 'experiment_output_data_folder/*.dat')[0]
+        self.dat_file_path = sorted(glob(self.experiment_folder_path + 'experiment_output_data_folder/*'))[0]
         self.df = pd.read_table(self.dat_file_path, delim_whitespace=True)
         self.melodies_dict = self.initialize_melody_dict()
         self.pitch_range = self.get_datasetwise_pitch_range()

@@ -2,6 +2,7 @@
 viz module v2 - March 2022
 """
 import os
+from typing import List
 
 import matplotlib
 import matplotlib.pyplot as plt
@@ -44,8 +45,10 @@ class BasicAxsGeneration:
 
     @staticmethod
     def pianoroll_pitch_distribution(ax: matplotlib.axes.Axes, melody_info: MelodyInfo):
+        pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
+        duration_in_ticks = melody_info.get_pianoroll_original().shape[1]
         pianoroll_distribution_array = melody_info.get_pianoroll_pitch_distribution()
-        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto')
+        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         ax.title.set_text('Pitch Prediction')
         ax.set_xlabel('Time')
         ax.xaxis.set_ticklabels([])  # hide xtick labels
@@ -83,49 +86,99 @@ class BasicPlot:
         return fig
 
     @staticmethod
-    def pianoroll_pitch_distribution_groundtruth(melody_info, output_path) -> plt.Figure:
-        melody_name = melody_info['melody.name'][0]
-        fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
-        fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name)
+    def plot_pianoroll_pitch_distribution_groundtruth(experiment_folder_path: str,
+                                                      melody_names: List[str] = None,
+                                                      starting_index: int = None,
+                                                      ending_index: int = None):
 
-        BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
-        BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
-        ax_groundtruth.title.set_text('Ground Truth')
+        def pianoroll_pitch_distribution_groundtruth(melody_info: MelodyInfo) -> plt.Figure:
+            melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
+            fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
+            fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name)
 
-        plt.tight_layout()
+            BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
+            BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
+            ax_groundtruth.title.set_text('Ground Truth')
 
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
-        return fig
+            plt.tight_layout()
+
+            output_path = experiment_folder_path + 'plots/pianoroll_pitch_distribution_groundtruth/'
+            if not os.path.exists(output_path):
+                os.makedirs(output_path)
+            fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
+
+            return fig
+
+        experiment_info = ExperimentInfo(experiment_folder_path=experiment_folder_path)
+        all_melody_names = list(experiment_info.melodies_dict.keys())
+
+        if melody_names:
+            for index, melody in enumerate(melody_names):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_pitch_distribution_groundtruth(melody_info)
+            print('Plots saved in' + experiment_folder_path + 'plots/pianoroll_pitch_distribution_groundtruth/')
+
+        elif starting_index or ending_index:
+            for index, melody in enumerate(all_melody_names[starting_index:ending_index]):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_pitch_distribution_groundtruth(melody_info)
+            print('Plots saved in' + experiment_folder_path + 'plots/pianoroll_pitch_distribution_groundtruth/')
+
+        else:
+            for index, melody in enumerate(all_melody_names):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_pitch_distribution_groundtruth(melody_info)
+            print('Plots saved in: ' + experiment_folder_path + 'plots/pianoroll_pitch_distribution_groundtruth/')
 
     @staticmethod
-    def pianoroll_surprisal(melody_info, output_path) -> plt.Figure:
-        melody_name = melody_info['melody.name'][0]
-        fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')
+    def plot_pianoroll_surprisal(experiment_folder_path: str,
+                              melody_names: List[str] = None,
+                              starting_index: int = None,
+                              ending_index: int = None):
 
-        fig.suptitle('Melody: ' + melody_name, fontsize=15)
-        BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
-        BasicAxsGeneration.surprisal(ax_surprisal, melody_info=melody_info)
+        def pianoroll_surprisal(melody_info: MelodyInfo) -> plt.Figure:
+            melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
+            fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')
 
-        plt.tight_layout()
+            fig.suptitle('Melody: ' + melody_name, fontsize=15)
+            BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
+            BasicAxsGeneration.surprisal(ax_surprisal, melody_info=melody_info)
 
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
+            plt.tight_layout()
 
-        return fig
+            output_path = experiment_folder_path + 'plots/pianoroll_surprisal/'
+            if not os.path.exists(output_path):
+                os.makedirs(output_path)
+            fig.savefig(fname=output_path + str(melody_name) + '.eps', format='eps', dpi=400)
+
+            return fig
+
+        experiment_info = ExperimentInfo(experiment_folder_path=experiment_folder_path)
+        all_melody_names = list(experiment_info.melodies_dict.keys())
+
+        if melody_names:
+            for index, melody in enumerate(melody_names):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_surprisal(melody_info)
+            print('Plots saved in' + experiment_folder_path + 'plots/pianoroll_surprisal/')
+
+        elif starting_index or ending_index:
+            for index, melody in enumerate(all_melody_names[starting_index:ending_index]):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_surprisal(melody_info)
+            print('Plots saved in' + experiment_folder_path + 'plots/pianoroll_surprisal/')
+
+        else:
+            for index, melody in enumerate(all_melody_names):
+                melody_info = experiment_info.melodies_dict[melody]
+                pianoroll_surprisal(melody_info)
+            print('Plots saved in: ' + experiment_folder_path + 'plots/pianoroll_surprisal/')
 
 
 def func():
-    dat_path = '/Users/xinyiguan/Codes/IDyOM_Interface_paper/99030821134014-cpitch_onset-cpitch_onset-66030821134014-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat'
-    dataset_info = ExperimentInfo(dat_file_path=dat_path)
-    melody = dataset_info.access_melodies()[2]
-    output_path = './plots/'
-    # fig = BasicPlot.single_plot(axes_modifier= BasicAxsGeneration.surprisal,melody_info=melody,output_path=output_path)
-    # fig = BasicPlot.pianoroll_surprisal(melody_info=melody, output_path=output_path)
-    fig = BasicPlot.pianoroll_pitch_distribution_groundtruth(melody_info=melody, output_path=output_path)
-    fig.show()
+    experiment_folder_path = 'experiment_history/04-05-22_14.35.26/'
+
+    BasicPlot.plot_pianoroll_pitch_distribution_groundtruth(experiment_folder_path, ending_index=4)
 
 
 if __name__ == '__main__':
