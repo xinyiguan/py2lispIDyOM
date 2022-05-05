@@ -51,7 +51,7 @@ class BasicAxsGeneration:
         ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         ax.title.set_text('Pitch Prediction')
         ax.set_xlabel('Time')
-        ax.xaxis.set_ticklabels([])  # hide xtick labels
+        # ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel('Pitch (MIDI number)')
         return ax
 
