@@ -25,7 +25,44 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="export modules completed: 2csv, 2mat">
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="two types of figs completed">
+      <change afterPath="$PROJECT_DIR$/docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/environment.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/index.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/modules.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/usage.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/.buildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/index.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/modules.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/usage.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/alabaster.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/documentation_options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/language_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore-1.13.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/searchindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/usage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/source/modules.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +265,7 @@
       <workItem from="1651650793576" duration="2192000" />
       <workItem from="1651666760586" duration="596000" />
       <workItem from="1651667636463" duration="78000" />
-      <workItem from="1651667921692" duration="33574000" />
+      <workItem from="1651667921692" duration="39784000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -412,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651756690823</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="two types of figs completed">
+      <created>1651756986693</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1651756986693</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="merge scripts and files" />
     <MESSAGE value="added duration viewpoint" />
     <MESSAGE value="added and tested reconstruct midi script" />
     <MESSAGE value="refactored the configuration module" />
@@ -468,7 +511,8 @@
     <MESSAGE value="refactored file names" />
     <MESSAGE value="export mat module: specific features for specific songs" />
     <MESSAGE value="export modules completed: 2csv, 2mat" />
-    <option name="LAST_COMMIT_MESSAGE" value="export modules completed: 2csv, 2mat" />
+    <MESSAGE value="two types of figs completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="two types of figs completed" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

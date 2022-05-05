@@ -90,7 +90,17 @@ class BasicPlot:
                                                       melody_names: List[str] = None,
                                                       starting_index: int = None,
                                                       ending_index: int = None):
+        """
+        This function returns and saves a pair of figures (the predicted pitch distribution and the ground truth) side by side.
+        If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
+        or the starting/ending index in the melody list.
 
+        :param experiment_folder_path: the path to your experiment folder
+        :param melody_names: if not supplied by the users,
+        :param starting_index: the index of the melody in the melody list that you want to start plotting
+        :param ending_index: the index of the melody in the melody list that you want to stop plotting
+        :return:
+        """
         def pianoroll_pitch_distribution_groundtruth(melody_info: MelodyInfo) -> plt.Figure:
             melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
             fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
@@ -135,7 +145,14 @@ class BasicPlot:
                               melody_names: List[str] = None,
                               starting_index: int = None,
                               ending_index: int = None):
-
+        """
+        This function
+        :param experiment_folder_path:
+        :param melody_names:
+        :param starting_index:
+        :param ending_index:
+        :return:
+        """
         def pianoroll_surprisal(melody_info: MelodyInfo) -> plt.Figure:
             melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
             fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')

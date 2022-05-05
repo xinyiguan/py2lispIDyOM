@@ -35,25 +35,46 @@ class IDyOMExperiment:
                                                              this_exp_log_path=self.this_experiment_folder_path)
 
     def run_start_idyom(self):
+        """
+        This function runs the Lisp command to start IDyOM in SBCL.
+        """
         self.idyom_config.run_start_idyom_command()
 
     def run_import_datasets(self):
+        """
+        This function runs the Lisp command to import relevant datasets.
+        """
         command = self.idyom_config.import_datasets_command()
         os.system(command)
 
     def run_describe_database(self):
+        """
+        This function runs the Lisp command to describe the database.
+        """
         self.idyom_config.describe_database_command()
 
     def run_describe_database_detail(self):
+        """
+        This function runs the Lisp command to describe the database in details.
+        """
         self.idyom_config.describe_detailed_database_command()
 
     def generate_lisp_script(self):
+        """
+        This function generate a Lisp script.
+        """
         self.idyom_config.generate_lisp_script()
 
     def run_quit(self):
+        """
+        This function runs the Lisp command to quit.
+        """
         self.idyom_config.quit_command()
 
     def run(self):
+        """
+        This function runs the Lisp command to generate a Lisp script and run it.
+        """
         self.idyom_config.generate_lisp_script()
         self.idyom_config.run()
 
