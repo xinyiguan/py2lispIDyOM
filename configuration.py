@@ -52,9 +52,11 @@ SingleViewpoint = Literal[
 ]
 
 
+
 @dataclass
 class RequiredParameters(Parameters):
-
+    """ user-level interaction class """
+    dataset_id: str
     target_viewpoints: List[SingleViewpoint] = None
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
@@ -91,14 +93,8 @@ class RequiredParameters(Parameters):
         command = f'({long_string})'
         return command
 
-    @staticmethod
-    def generate_test_dataset_id():
-        moment = get_timestamp()
-        dataset_id = '66' + moment
-        return dataset_id
-
     def dataset_id_to_command(self):
-        command_dataset_id = self.generate_test_dataset_id()
+        command_dataset_id = self.dataset_id
         return command_dataset_id
 
     def target_viewpoints_to_command(self):
@@ -118,6 +114,10 @@ class RequiredParameters(Parameters):
     def to_lisp_command(self) -> str:
         command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
         return command
+
+
+class _RequiredParameters(RequiredParameters):
+    """hidden internal used class"""
 
 
 @dataclass
@@ -146,18 +146,12 @@ class StatisticalModellingParameters(Parameters):
 
 @dataclass
 class TrainingParameters(Parameters):
-
+    pretraining_id: str = None
     k: Union[int, Literal[":full"]] = None
     resampling_indices: List[int] = None
 
-    @staticmethod
-    def generate_pretrain_dataset_id():
-        moment = get_timestamp()
-        pretrain_dataset_id = '99' + moment
-        return pretrain_dataset_id
-
     def pretraining_id_to_command(self) -> str:
-        command = self.generate_pretrain_dataset_id()
+        command = self.pretraining_id
         return command
 
     def k_to_command(self):
@@ -168,8 +162,12 @@ class TrainingParameters(Parameters):
         raise NotImplementedError
 
     def to_lisp_command(self) -> str:
-        command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
-        return command
+        if self.pretraining_id:
+            command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
+            return command
+        elif self.pretraining_id is None:
+            command = f'{self.k_to_command()}'
+            return command
 
 
 @dataclass
@@ -240,16 +238,25 @@ class Configuration(Parameters):
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
     this_exp_log_path: str
+    test_dataset_id: str
+    pretrain_dataset_id: str
+
     output_parameters: OutputParameters
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
     statistical_modelling_parameters: StatisticalModellingParameters = field(
         default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
-    # output_parameters: OutputParameters
     caching_parameters: CachingParameters = field(default_factory=CachingParameters)
 
     def __post_init__(self):
+        # after inherit the dataset ids from the IDyOMConfiguration class,
+        # update ids of the required_param and train_param here
+
+        self.required_parameters = RequiredParameters(dataset_id=self.test_dataset_id)
+        self.training_parameters = TrainingParameters(pretraining_id=self.pretrain_dataset_id)
+
+        # post init here because we want to update the out path in lisp script
         self.output_parameters = OutputParameters(output_path=self.this_exp_log_path + 'experiment_output_data_folder/')
 
     def to_lisp_command(self) -> str:
@@ -272,14 +279,14 @@ class RunModelConfiguration(Configuration):
 @dataclass(repr=False)
 class DatabaseConfiguration(Configuration):
     this_exp_log_path: str
-    train_dataset_id: str
     test_dataset_id: str
+    pretrain_dataset_id: str = None
     test_dataset_Name: str = 'TEST_DATASET'
-    train_dataset_Name: str = 'PRETRAIN_DATASET'
+    pretrain_dataset_Name: str = 'PRETRAIN_DATASET'
 
     def __post_init__(self):
-        self.test_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/test/'
-        self.train_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/train/'
+        self.test_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/test_dataset/'
+        self.train_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/pretrain_dataset/'
 
     def get_music_files_type(self, path) -> str:
         for file in glob(path + '*'):
@@ -311,23 +318,29 @@ class DatabaseConfiguration(Configuration):
         return command
 
     def get_command_import_traindb(self):
-        command = self._get_command_import_db(path=self.train_dataset_log_path, dataset_name=self.train_dataset_Name,
-                                              dataset_id=self.train_dataset_id)
+        command = self._get_command_import_db(path=self.train_dataset_log_path, dataset_name=self.pretrain_dataset_Name,
+                                              dataset_id=self.pretrain_dataset_id)
         return command
 
-    def to_lisp_command(self) -> str:
-        commands = [
-            self.get_command_import_testdb(),
-            self.get_command_import_traindb(),
-        ]
-        total_command = '\n'.join(commands)
-        return total_command
+    def to_lisp_command_import_testdb(self) -> str:
+        return self.get_command_import_testdb()
+
+    def to_lisp_command_import_traindb(self) -> str:
+        return self.get_command_import_traindb()
+
+    # def to_lisp_command(self) -> str:
+    #     commands = [
+    #         self.get_command_import_testdb(),
+    #         self.get_command_import_traindb(),
+    #     ]
+    #     total_command = '\n'.join(commands)
+    #     return total_command
 
 
 @dataclass
 class ExperimentLogger:
-    train_dataset_path: str
     test_dataset_path: str
+    pretrain_dataset_path: str
     experiment_history_folder_path: str
 
     def __post_init__(self):
@@ -336,7 +349,7 @@ class ExperimentLogger:
         self.this_exp_folder = self.generate_this_exp_folder()
         self.input_data_exp_folder = self.generate_input_data_exp_folder()
         self.test_dataset_exp_folder = self.generate_test_dataset_exp_folder()
-        self.train_dataset_exp_folder = self.generate_train_dataset_exp_folder()
+        self.train_dataset_exp_folder = self.generate_pretrain_dataset_exp_folder()
         self.output_data_exp_folder = self.generate_output_data_exp_folder()
 
     def generate_experiment_history_folder(self):
@@ -364,7 +377,7 @@ class ExperimentLogger:
 
     def generate_test_dataset_exp_folder(self):
         input_data_folder = self.input_data_exp_folder
-        test_folder = input_data_folder + 'test/'
+        test_folder = input_data_folder + 'test_dataset/'
         os.makedirs(test_folder)
         print("** Putting Test dataset files in experiment history folder. **")
         test_dataset_path = self.test_dataset_path
@@ -372,19 +385,19 @@ class ExperimentLogger:
         self._put_midis_in_folder(test, test_folder)
         return test_folder
 
-    def generate_train_dataset_exp_folder(self):
-        input_data_folder = self.input_data_exp_folder
-        train_folder = input_data_folder + 'train/'
-        os.makedirs(train_folder)
-        train_dataset_path = self.train_dataset_path
-        if train_dataset_path is None:
+    def generate_pretrain_dataset_exp_folder(self):
+        pretrain_dataset_path = self.pretrain_dataset_path
+        if pretrain_dataset_path is None:
             pass
             print('** No pretraining dataset detected. **')
         else:
+            input_data_folder = self.input_data_exp_folder
+            pretrain_folder = input_data_folder + 'pretrain_dataset/'
+            os.makedirs(pretrain_folder)
             print("** Putting Pretraining dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(train_dataset_path)
-            self._put_midis_in_folder(train, train_folder)
-        return train_folder
+            train = self._get_files_from_paths(pretrain_dataset_path)
+            self._put_midis_in_folder(train, pretrain_folder)
+            return pretrain_folder
 
     def _get_files_from_paths(self, path):  # only two types files allowed: midi and kern
         files = []
@@ -403,12 +416,12 @@ class ExperimentLogger:
         self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)
 
     def put_train_midi_in_exp_folder(self):
-        if self.train_dataset_path is None:
+        if self.pretrain_dataset_path is None:
             pass
             print('** No pretraining dataset detected. **')
         else:
-            print("** Putting Pretraining dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(self.train_dataset_path)
+            print("** Putting pretrain dataset files in experiment history folder. **")
+            train = self._get_files_from_paths(self.pretrain_dataset_path)
             self._put_midis_in_folder(train, self.train_dataset_exp_folder)
 
     def generate_output_data_exp_folder(self):
@@ -427,42 +440,60 @@ class IDyOMConfiguration:
     caching_parameters: RunModelConfiguration.caching_parameters
 
     this_exp_log_path: str
+    test_dataset_path: str
+    test_dataset_id: str
+    pretrain_dataset_path: str
+    pretrain_dataset_id: str
 
     def __post_init__(self):
+
         self.database_configuration = DatabaseConfiguration(this_exp_log_path=self.this_exp_log_path,
-                                                            train_dataset_id=self.generate_train_dataset_id(),
-                                                            test_dataset_id=self.generate_test_dataset_id()
+                                                            pretrain_dataset_id=self.pretrain_dataset_id,
+                                                            test_dataset_id=self.test_dataset_id
                                                             )
+
         self.run_model_configuration = RunModelConfiguration(required_parameters=self.required_parameters,
                                                              statistical_modelling_parameters=self.statistical_modelling_parameters,
                                                              training_parameters=self.training_parameters,
                                                              viewpoint_selection_parameters=self.viewpoint_selection_parameters,
                                                              output_parameters=self.output_parameters,
                                                              caching_parameters=self.caching_parameters,
-                                                             this_exp_log_path=self.this_exp_log_path)
-
-    def generate_test_dataset_id(self):
-        moment = get_timestamp()
-        dataset_id = '66' + moment
-        return dataset_id
-
-    def generate_train_dataset_id(self):
-        moment = get_timestamp()
-        dataset_id = '99' + moment
-        return dataset_id
+                                                             this_exp_log_path=self.this_exp_log_path,
+                                                             test_dataset_id=self.test_dataset_id,
+                                                             pretrain_dataset_id=self.pretrain_dataset_id
+                                                             )
 
     def total_lisp_command(self) -> str:
-        commands = [
-            self.start_idyom_command(),
-            self.import_datasets_command(),
-            self.run_model_command(),
-            self.quit_command()
-        ]
-        total_command = '\n'.join(commands)
-        return total_command
+        if os.path.exists(self.this_exp_log_path + 'experiment_input_data_folder/train/'):
+            commands = [
+                self.start_idyom_command(),
+                self.import_test_dataset_command(),
+                self.import_train_dataset_command(),
+                self.run_model_command(),
+                self.quit_command()
+            ]
+            total_command = '\n'.join(commands)
+            return total_command
+        else:
+            commands = [
+                self.start_idyom_command(),
+                self.import_test_dataset_command(),
+                self.run_model_command(),
+                self.quit_command()
+            ]
+            total_command = '\n'.join(commands)
+            return total_command
 
     def start_idyom_command(self) -> str:
         command = '(start-idyom)'
+        return command
+
+    def import_test_dataset_command(self) -> str:
+        command = self.database_configuration.to_lisp_command_import_testdb()
+        return command
+
+    def import_train_dataset_command(self) -> str:
+        command = self.database_configuration.to_lisp_command_import_traindb()
         return command
 
     def import_datasets_command(self) -> str:
@@ -504,3 +535,5 @@ class IDyOMConfiguration:
         os.system("sbcl --noinform --load " + self.generate_lisp_script())
         print(' ')
         print('** Finished! **')
+
+

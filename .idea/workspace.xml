@@ -26,44 +26,93 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="two types of figs completed">
-      <change afterPath="$PROJECT_DIR$/docs/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/environment.pickle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/index.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/modules.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/usage.doctree" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/.buildinfo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/index.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/modules.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/usage.rst.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/alabaster.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/doctools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/documentation_options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery-3.5.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/language_data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/pygments.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/searchtools.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore-1.13.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/genindex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/objects.inv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/searchindex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/build/html/usage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/make.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/conf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/source/modules.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/compute.lisp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx002.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx003.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx004.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx006.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx007.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx008.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx009.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx010.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx011.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx012.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx013.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx014.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx015.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx016.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx017.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx018.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx019.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx020.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx021.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx022.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx023.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx025.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx026.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx027.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx028.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx029.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx030.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx031.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx032.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx033.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx034.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx035.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx036.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx037.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/test/shanx040.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-001.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-002.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-003.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-004.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-005.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-006.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-007.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-008.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-009.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-010.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-011.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-012.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-013.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-014.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-015.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-016.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-017.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-018.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-019.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-020.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-021.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-022.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-023.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-024.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-025.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-026.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-027.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-028.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-029.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-030.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-031.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-032.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-033.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-034.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_input_data_folder/train/chor-035.mid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/experiment_output_data_folder/66050422143526-cpitch_onset-cpitch_onset-99050422143526-nil-melody-nil-1-both+-nil-t-nil-c-nil-t-t-x-3.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_csv/shanx002.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_csv/shanx008.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/cpitch.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/onset.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx002.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx003.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx004.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx006.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx002.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx003.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx004.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx006.eps" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +155,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -120,7 +170,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.viz">
+  <component name="RunManager" selected="Python.run">
     <configuration name="configuration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,10 +283,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
         <item itemvalue="Python.viz" />
         <item itemvalue="Python.exportation" />
         <item itemvalue="Python.extraction" />
-        <item itemvalue="Python.run" />
         <item itemvalue="Python.configuration" />
       </list>
     </recent_temporary>
@@ -266,6 +316,7 @@
       <workItem from="1651666760586" duration="596000" />
       <workItem from="1651667636463" duration="78000" />
       <workItem from="1651667921692" duration="39784000" />
+      <workItem from="1651826881884" duration="10160000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -524,6 +575,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1651756628305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1651834329169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1651669002964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

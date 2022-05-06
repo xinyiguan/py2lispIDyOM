@@ -5,8 +5,8 @@ import configuration as configuration
 
 @dataclass
 class IDyOMExperiment:
-    train_dataset_path: str
     test_dataset_path: str
+    pretrain_dataset_path: str = None
     experiment_history_folder_path: str = None
 
     required_parameters: configuration.RequiredParameters = field(default_factory=configuration.RequiredParameters)
@@ -19,7 +19,10 @@ class IDyOMExperiment:
     caching_parameters: configuration.CachingParameters = field(default_factory=configuration.CachingParameters)
 
     def __post_init__(self):
-        self.this_exp_logger = configuration.ExperimentLogger(train_dataset_path=self.train_dataset_path,
+        self.test_dataset_id = self.generate_test_dataset_id()
+        self.pretrain_dataset_id = self.generate_train_dataset_id()
+
+        self.this_exp_logger = configuration.ExperimentLogger(pretrain_dataset_path=self.pretrain_dataset_path,
                                                               test_dataset_path=self.test_dataset_path,
                                                               experiment_history_folder_path=self.experiment_history_folder_path)
         self.this_experiment_folder_path = self.this_exp_logger.this_exp_folder
@@ -32,7 +35,30 @@ class IDyOMExperiment:
                                                              viewpoint_selection_parameters=self.viewpoint_selection_parameters,
                                                              output_parameters=self.output_parameters,
                                                              caching_parameters=self.caching_parameters,
-                                                             this_exp_log_path=self.this_experiment_folder_path)
+
+                                                             this_exp_log_path=self.this_experiment_folder_path,
+                                                             test_dataset_path=self.test_dataset_path,
+                                                             pretrain_dataset_path=self.pretrain_dataset_path,
+                                                             test_dataset_id=self.test_dataset_id,
+                                                             pretrain_dataset_id=self.pretrain_dataset_id
+                                                             )
+
+    def generate_test_dataset_id(self):
+        if self.test_dataset_path:
+            moment = configuration.get_timestamp()
+            dataset_id = '66' + moment
+            return dataset_id
+        else:
+            raise AssertionError("Missing dataset input!")
+
+    def generate_train_dataset_id(self):
+        # only generate an ID if pretrain_dataset_path is not None
+        if self.pretrain_dataset_path:
+            moment = configuration.get_timestamp()
+            dataset_id = '99' + moment
+            return dataset_id
+        else:
+            pass
 
     def run_start_idyom(self):
         """
@@ -80,25 +106,24 @@ class IDyOMExperiment:
 
 
 def new_test():
-    pretraining_dataset_path = 'dataset/bach_dataset/'
     test_dataset_path = 'dataset/shanx_dataset/'
 
     required_parameters = configuration.RequiredParameters(target_viewpoints=['cpitch', 'onset'],
                                                            source_viewpoints=['cpitch', 'onset'])
 
-    training_parameters = configuration.TrainingParameters(k=1)
-    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':both+')
+    training_parameters = configuration.TrainingParameters(k=':full')
+    statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':ltm')
 
     output_parameters = configuration.OutputParameters(detail=3)
 
-    my_exp = IDyOMExperiment(train_dataset_path=pretraining_dataset_path,
-                             test_dataset_path=test_dataset_path,
-                             required_parameters=required_parameters,
-                             statistical_modelling_parameters=statistical_modelling_parameters,
-                             training_parameters=training_parameters,
-                             output_parameters=output_parameters)
+    my_exp = IDyOMExperiment(
+        test_dataset_path=test_dataset_path,
+        required_parameters=required_parameters,
+        statistical_modelling_parameters=statistical_modelling_parameters,
+        training_parameters=training_parameters,
+        output_parameters=output_parameters)
 
-    my_exp.run()
+    my_exp.generate_lisp_script()
 
 
 if __name__ == '__main__':
