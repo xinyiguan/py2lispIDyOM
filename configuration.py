@@ -52,7 +52,6 @@ SingleViewpoint = Literal[
 ]
 
 
-
 @dataclass
 class RequiredParameters(Parameters):
     """ user-level interaction class """
@@ -61,6 +60,7 @@ class RequiredParameters(Parameters):
     source_viewpoints: Union[Literal[':select'],
                              List[Union[SingleViewpoint,
                                         Tuple[SingleViewpoint]]]] = None
+
 
     def _is_available(self) -> bool:
         condition = all([
@@ -114,10 +114,6 @@ class RequiredParameters(Parameters):
     def to_lisp_command(self) -> str:
         command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
         return command
-
-
-class _RequiredParameters(RequiredParameters):
-    """hidden internal used class"""
 
 
 @dataclass
