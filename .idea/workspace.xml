@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="two types of figs completed">
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
     </list>
@@ -203,7 +201,6 @@
       <list>
         <item itemvalue="Python.run" />
         <item itemvalue="Python.viz" />
-        <item itemvalue="Python.exportation" />
         <item itemvalue="Python.extraction" />
         <item itemvalue="Python.configuration" />
       </list>
@@ -236,6 +233,7 @@
       <workItem from="1651667921692" duration="39784000" />
       <workItem from="1651826881884" duration="10160000" />
       <workItem from="1651840676763" duration="1004000" />
+      <workItem from="1652007506090" duration="1075000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>

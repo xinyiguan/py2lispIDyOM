@@ -1,14 +1,12 @@
 from __future__ import annotations
 
 import datetime
-import json
 import os
 import shutil
 from dataclasses import dataclass, field
 from glob import glob
-from typing import Literal, List, Union, Tuple, Iterable
-
 from natsort import natsorted
+from parameters import *
 
 
 def get_timestamp():
@@ -17,214 +15,97 @@ def get_timestamp():
     moment = today_date.strftime('%m%d%y') + now_time.strftime('%H%M%S')
     return moment
 
-
 @dataclass
-class Parameters:
+class ExperimentLogger:
+    test_dataset_path: str
+    pretrain_dataset_path: str
+    experiment_history_folder_path: str
 
-    def __repr__(self):
-        return json.dumps(self, default=lambda x: x.__dict__, indent=2)
+    def __post_init__(self):
 
-    def show(self):
-        print(self.__repr__())  # formatting
+        self.experiment_history_folder = self.generate_experiment_history_folder()
+        self.this_exp_folder = self.generate_this_exp_folder()
+        self.input_data_exp_folder = self.generate_input_data_exp_folder()
+        self.test_dataset_exp_folder = self.generate_test_dataset_exp_folder()
+        self.train_dataset_exp_folder = self.generate_pretrain_dataset_exp_folder()
+        self.output_data_exp_folder = self.generate_output_data_exp_folder()
 
-    def to_lisp_command(self) -> str:
-        convert_dict = {True: 't', False: 'nil'}
-        commands = []
-        for key, value in self.__dict__.items():
-            if value:
-                if isinstance(value, Parameters):
-                    value = value.to_lisp_command()
-                print_value = value
-                if type(value) is bool:
-                    print_value = convert_dict[value]
-                sub_command = f':{key} {print_value}'
-                commands.append(sub_command)
-        lisp_command = ' '.join(commands)
-        return lisp_command
-
-
-SingleViewpoint = Literal[
-    'onset', 'cpitch', 'dur', 'keysig', 'mode', 'tempo', 'pulses', 'barlength', 'deltast', 'bioi', 'phrase',
-    'mpitch', 'accidental', 'dyn', 'voice', 'ornament', 'comma', 'articulation',
-    'ioi', 'posinbar', 'dur-ratio', 'referent', 'cpint', 'contour', 'cpitch-class', 'cpcint', 'cpintfref', 'cpintfip', 'cpintfiph', 'cpintfb', 'inscale',
-    'ioi-ratio', 'ioi-contour', 'metaccent', 'bioi-contour', 'lphrase', 'cpint-size', 'newcontour', 'cpcint-size', 'cpcint-2', 'cpcint-3', 'cpcint-4', 'cpcint-5', 'cpcint-6', 'octave', 'tessitura', 'mpitch-class',
-    'registral-direction', 'intervallic-difference', 'registral-return', 'proximity', 'closure'
-]
-
-
-@dataclass
-class RequiredParameters(Parameters):
-    """ user-level interaction class """
-    dataset_id: str
-    target_viewpoints: List[SingleViewpoint] = None
-    source_viewpoints: Union[Literal[':select'],
-                             List[Union[SingleViewpoint,
-                                        Tuple[SingleViewpoint]]]] = None
-
-
-    def _is_available(self) -> bool:
-        condition = all([
-            # type(self.dataset_path) is str,
-            type(self.target_viewpoints) is List[SingleViewpoint],
-            type(self.source_viewpoints) is Union[
-                Literal[':select'], List[Union[SingleViewpoint, Tuple[SingleViewpoint]]]]
-        ])
-        return condition
-
-    def viewpoint_to_string(self, viewpoint: Union[SingleViewpoint, Tuple[SingleViewpoint]]) -> str:
-        if type(viewpoint) is str:
-            string = str(viewpoint)
-        elif type(viewpoint) is tuple:
-            string = self.tuple_to_command(viewpoint)
+    def generate_experiment_history_folder(self):
+        if self.experiment_history_folder_path is None:
+            experiment_history_folder = 'experiment_history/'
+            if not os.path.exists(experiment_history_folder):
+                os.makedirs(experiment_history_folder)
         else:
-            print(type(viewpoint))
-            raise TypeError(viewpoint)
-        return string
+            experiment_history_folder = self.experiment_history_folder_path
+        return experiment_history_folder
 
-    def list_to_command(self, l: Iterable) -> str:
-        list_of_string = [self.viewpoint_to_string(viewpoint=viewpoint) for viewpoint in l]
-        long_string = ' '.join(list_of_string)
-        command = f'\'({long_string})'
-        return command
+    def generate_this_exp_folder(self):
+        today_date = datetime.date.today()
+        now_time = datetime.datetime.now()
+        this_experiment_folder = self.experiment_history_folder + today_date.strftime(
+            '%d-%m-%y') + '_' + now_time.strftime(
+            '%H.%M.%S') + '/'
+        os.makedirs(this_experiment_folder)
+        return this_experiment_folder
 
-    def tuple_to_command(self, t: tuple) -> str:
-        list_of_string = [self.viewpoint_to_string(viewpoint=viewpoint) for viewpoint in t]
-        long_string = ' '.join(list_of_string)
-        command = f'({long_string})'
-        return command
+    def generate_input_data_exp_folder(self):
+        input_data_folder = self.this_exp_folder + 'experiment_input_data_folder/'
+        os.makedirs(input_data_folder)
+        return input_data_folder
 
-    def dataset_id_to_command(self):
-        command_dataset_id = self.dataset_id
-        return command_dataset_id
+    def generate_test_dataset_exp_folder(self):
+        input_data_folder = self.input_data_exp_folder
+        test_folder = input_data_folder + 'test_dataset/'
+        os.makedirs(test_folder)
+        print("** Putting Test dataset files in experiment history folder. **")
+        test_dataset_path = self.test_dataset_path
+        test = self._get_files_from_paths(test_dataset_path)
+        self._put_midis_in_folder(test, test_folder)
+        return test_folder
 
-    def target_viewpoints_to_command(self):
-        command_target_viewpoints = self.list_to_command(self.target_viewpoints)
-        return command_target_viewpoints
-
-    def source_viewpoints_to_command(self):
-        if type(self.source_viewpoints) is Literal[':select']:
-            command_source_viewpoints = self.source_viewpoints
-            raise NotImplementedError
-        elif type(self.source_viewpoints) is list:
-            command_source_viewpoints = self.list_to_command(self.source_viewpoints)
+    def generate_pretrain_dataset_exp_folder(self):
+        pretrain_dataset_path = self.pretrain_dataset_path
+        if pretrain_dataset_path is None:
+            pass
+            print('** No pretraining dataset detected. **')
         else:
-            raise TypeError(self.source_viewpoints)
-        return command_source_viewpoints
+            input_data_folder = self.input_data_exp_folder
+            pretrain_folder = input_data_folder + 'pretrain_dataset/'
+            os.makedirs(pretrain_folder)
+            print("** Putting Pretraining dataset files in experiment history folder. **")
+            train = self._get_files_from_paths(pretrain_dataset_path)
+            self._put_midis_in_folder(train, pretrain_folder)
+            return pretrain_folder
 
-    def to_lisp_command(self) -> str:
-        command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
-        return command
+    def _get_files_from_paths(self, path):  # only two types files allowed: midi and kern
+        files = []
+        for file in glob(path + '*'):
+            if file[file.rfind("."):] == ".mid" or ".krn":
+                files.append(file)
+        return natsorted(files)
 
+    def _put_midis_in_folder(self, files, folder_path):
+        for file in files:
+            shutil.copyfile(file, folder_path + file[file.rfind("/"):])
 
-@dataclass
-class ModelOptions(Parameters):
-    order_bound: int = None
-    mixtures: bool = None
-    update_exclusion: str = None
-    escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
+    def put_test_midi_in_exp_folder(self):
+        print("** Putting Test dataset files in experiment history folder. **")
+        test_files = self._get_files_from_paths(self.test_dataset_path)
+        self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)
 
-    def to_lisp_command(self) -> str:
-        generic_command = super().to_lisp_command()
-        command = f'\'({generic_command})'
-        return command
+    def put_train_midi_in_exp_folder(self):
+        if self.pretrain_dataset_path is None:
+            pass
+            print('** No pretraining dataset detected. **')
+        else:
+            print("** Putting pretrain dataset files in experiment history folder. **")
+            train = self._get_files_from_paths(self.pretrain_dataset_path)
+            self._put_midis_in_folder(train, self.train_dataset_exp_folder)
 
-
-@dataclass
-class StatisticalModellingParameters(Parameters):
-    models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
-    ltmo: ModelOptions = None
-    stmo: ModelOptions = None
-
-    def to_lisp_command(self) -> str:
-        command = super().to_lisp_command()
-        return command
-
-
-@dataclass
-class TrainingParameters(Parameters):
-    pretraining_id: str = None
-    k: Union[int, Literal[":full"]] = None
-    resampling_indices: List[int] = None
-
-    def pretraining_id_to_command(self) -> str:
-        command = self.pretraining_id
-        return command
-
-    def k_to_command(self):
-        command_k = f':k {self.k}'
-        return command_k
-
-    def resampling_indices_to_command(self):
-        raise NotImplementedError
-
-    def to_lisp_command(self) -> str:
-        if self.pretraining_id:
-            command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
-            return command
-        elif self.pretraining_id is None:
-            command = f'{self.k_to_command()}'
-            return command
-
-
-@dataclass
-class BasisOption(Parameters):
-    basis: Union[List[SingleViewpoint],
-                 Literal[':pitch-full', ':pitch-short', ':bioi', ':onset', ':auto']] = None
-
-    def to_lisp_command(self) -> str:
-        generic_command = super().to_lisp_command()
-        command = f'\'({generic_command})'
-        return command
-
-
-@dataclass
-class ViewpointSelectionParameters(Parameters):
-    """
-    When the source viewpoint supplied is :select
-    """
-
-    basis: Literal[':pitch-full', ':pitch-short', ':bioi', ':onset', ':auto'] = None
-    dp: int = None
-    max_links: int = None
-    min_links: int = None
-    viewpoint_selection_output: str = None  # a filepath to write output for every viewpoint system considered during viewpoint selection.
-    # The default is nil meaning that no files are written.
-
-
-@dataclass
-class OutputParameters(Parameters):
-    detail: Literal[1, 2, 3] = 3
-    output_path: str = None
-    overwrite: bool = False  # whether to overwrite an existing output file if it exists
-    separator: str = None  # a string defining the character to use for delimiting columns in the output file
-
-    def detail_to_command(self) -> str:
-        command_detail = f':detail {self.detail}'
-        return command_detail
-
-    # the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/
-    def output_path_to_command(self) -> str:
-        command_outpath = f':output-path \"{self.output_path}\"'
-        return command_outpath
-
-    def overwrite_to_command(self) -> str:
-        convert_dict = {True: 't', False: 'nil'}
-        if self.overwrite is True:
-            command_overwrite = f':overwrite {convert_dict[True]}'
-            return command_overwrite
-        if self.overwrite is False:
-            command_overwrite = f':overwrite {convert_dict[False]}'
-            return command_overwrite
-
-    def to_lisp_command(self) -> str:
-        command = f'{self.detail_to_command()} {self.output_path_to_command()} {self.overwrite_to_command()}'
-        return command
-
-
-@dataclass
-class CachingParameters(Parameters):
-    use_resampling_set_cache: bool = None
-    use_ltms_cache: bool = None
+    def generate_output_data_exp_folder(self):
+        output_data_folder = self.this_exp_folder + 'experiment_output_data_folder/'
+        os.makedirs(output_data_folder)
+        return output_data_folder
 
 
 class Configuration(Parameters):
@@ -334,99 +215,6 @@ class DatabaseConfiguration(Configuration):
 
 
 @dataclass
-class ExperimentLogger:
-    test_dataset_path: str
-    pretrain_dataset_path: str
-    experiment_history_folder_path: str
-
-    def __post_init__(self):
-
-        self.experiment_history_folder = self.generate_experiment_history_folder()
-        self.this_exp_folder = self.generate_this_exp_folder()
-        self.input_data_exp_folder = self.generate_input_data_exp_folder()
-        self.test_dataset_exp_folder = self.generate_test_dataset_exp_folder()
-        self.train_dataset_exp_folder = self.generate_pretrain_dataset_exp_folder()
-        self.output_data_exp_folder = self.generate_output_data_exp_folder()
-
-    def generate_experiment_history_folder(self):
-        if self.experiment_history_folder_path is None:
-            experiment_history_folder = 'experiment_history/'
-            if not os.path.exists(experiment_history_folder):
-                os.makedirs(experiment_history_folder)
-        else:
-            experiment_history_folder = self.experiment_history_folder_path
-        return experiment_history_folder
-
-    def generate_this_exp_folder(self):
-        today_date = datetime.date.today()
-        now_time = datetime.datetime.now()
-        this_experiment_folder = self.experiment_history_folder + today_date.strftime(
-            '%d-%m-%y') + '_' + now_time.strftime(
-            '%H.%M.%S') + '/'
-        os.makedirs(this_experiment_folder)
-        return this_experiment_folder
-
-    def generate_input_data_exp_folder(self):
-        input_data_folder = self.this_exp_folder + 'experiment_input_data_folder/'
-        os.makedirs(input_data_folder)
-        return input_data_folder
-
-    def generate_test_dataset_exp_folder(self):
-        input_data_folder = self.input_data_exp_folder
-        test_folder = input_data_folder + 'test_dataset/'
-        os.makedirs(test_folder)
-        print("** Putting Test dataset files in experiment history folder. **")
-        test_dataset_path = self.test_dataset_path
-        test = self._get_files_from_paths(test_dataset_path)
-        self._put_midis_in_folder(test, test_folder)
-        return test_folder
-
-    def generate_pretrain_dataset_exp_folder(self):
-        pretrain_dataset_path = self.pretrain_dataset_path
-        if pretrain_dataset_path is None:
-            pass
-            print('** No pretraining dataset detected. **')
-        else:
-            input_data_folder = self.input_data_exp_folder
-            pretrain_folder = input_data_folder + 'pretrain_dataset/'
-            os.makedirs(pretrain_folder)
-            print("** Putting Pretraining dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(pretrain_dataset_path)
-            self._put_midis_in_folder(train, pretrain_folder)
-            return pretrain_folder
-
-    def _get_files_from_paths(self, path):  # only two types files allowed: midi and kern
-        files = []
-        for file in glob(path + '*'):
-            if file[file.rfind("."):] == ".mid" or ".krn":
-                files.append(file)
-        return natsorted(files)
-
-    def _put_midis_in_folder(self, files, folder_path):
-        for file in files:
-            shutil.copyfile(file, folder_path + file[file.rfind("/"):])
-
-    def put_test_midi_in_exp_folder(self):
-        print("** Putting Test dataset files in experiment history folder. **")
-        test_files = self._get_files_from_paths(self.test_dataset_path)
-        self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)
-
-    def put_train_midi_in_exp_folder(self):
-        if self.pretrain_dataset_path is None:
-            pass
-            print('** No pretraining dataset detected. **')
-        else:
-            print("** Putting pretrain dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(self.pretrain_dataset_path)
-            self._put_midis_in_folder(train, self.train_dataset_exp_folder)
-
-    def generate_output_data_exp_folder(self):
-        output_data_folder = self.this_exp_folder + 'experiment_output_data_folder/'
-        os.makedirs(output_data_folder)
-        return output_data_folder
-
-
-@dataclass
 class IDyOMConfiguration:
     required_parameters: RunModelConfiguration.required_parameters
     statistical_modelling_parameters: RunModelConfiguration.statistical_modelling_parameters
@@ -531,5 +319,3 @@ class IDyOMConfiguration:
         os.system("sbcl --noinform --load " + self.generate_lisp_script())
         print(' ')
         print('** Finished! **')
-
-
