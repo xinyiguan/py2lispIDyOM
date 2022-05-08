@@ -1,7 +1,3 @@
-"""
-Created by xinyiguan on 17.03.22.
-"""
-import os
 import typing
 from dataclasses import dataclass
 from glob import glob

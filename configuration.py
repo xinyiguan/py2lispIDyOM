@@ -1,12 +1,16 @@
 from __future__ import annotations
 
 import datetime
+import json
 import os
 import shutil
-from dataclasses import dataclass, field
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from dataclasses import field
 from glob import glob
+from typing import Literal, List, Union, Tuple, Iterable
+
 from natsort import natsorted
-from parameters import *
 
 
 def get_timestamp():
@@ -14,6 +18,228 @@ def get_timestamp():
     now_time = datetime.datetime.now()
     moment = today_date.strftime('%m%d%y') + now_time.strftime('%H%M%S')
     return moment
+
+
+@dataclass
+class LispConvertable(ABC):
+    @abstractmethod
+    def to_lisp_command(self):
+        pass
+
+    def __repr__(self):
+        return json.dumps(self, default=lambda x: x.__dict__, indent=2)
+
+
+
+
+@dataclass
+class Parameters(LispConvertable):
+
+    def to_lisp_command(self) -> str:
+        convert_dict = {True: 't', False: 'nil'}
+        commands = []
+        for key, value in self.__dict__.items():
+            if value:
+                if isinstance(value, Parameters):
+                    value = value.to_lisp_command()
+                print_value = value
+                if type(value) is bool:
+                    print_value = convert_dict[value]
+                sub_command = f':{key} {print_value}'
+                commands.append(sub_command)
+        lisp_command = ' '.join(commands)
+        return lisp_command
+
+    def show(self):
+        print(self.__repr__())  # formatting
+
+
+SingleViewpoint = Literal[
+    'onset', 'cpitch', 'dur', 'keysig', 'mode', 'tempo', 'pulses', 'barlength', 'deltast', 'bioi', 'phrase',
+    'mpitch', 'accidental', 'dyn', 'voice', 'ornament', 'comma', 'articulation',
+    'ioi', 'posinbar', 'dur-ratio', 'referent', 'cpint', 'contour', 'cpitch-class', 'cpcint', 'cpintfref', 'cpintfip', 'cpintfiph', 'cpintfb', 'inscale',
+    'ioi-ratio', 'ioi-contour', 'metaccent', 'bioi-contour', 'lphrase', 'cpint-size', 'newcontour', 'cpcint-size', 'cpcint-2', 'cpcint-3', 'cpcint-4', 'cpcint-5', 'cpcint-6', 'octave', 'tessitura', 'mpitch-class',
+    'registral-direction', 'intervallic-difference', 'registral-return', 'proximity', 'closure'
+]
+
+
+@dataclass
+class RequiredParameters(Parameters):
+    """ user-level interaction class """
+    dataset_id: str = None
+    target_viewpoints: List[SingleViewpoint] = None
+    source_viewpoints: Union[Literal[':select'],
+                             List[Union[SingleViewpoint,
+                                        Tuple[SingleViewpoint]]]] = None
+
+    def is_complete(self) -> bool:
+        condition = all([
+            # type(self.dataset_path) is str,
+            bool(self.target_viewpoints),
+            bool(self.source_viewpoints)
+        ])
+        return condition
+
+    def viewpoint_to_string(self, viewpoint: Union[SingleViewpoint, Tuple[SingleViewpoint]]) -> str:
+        if type(viewpoint) is str:
+            string = str(viewpoint)
+        elif type(viewpoint) is tuple:
+            string = self.tuple_to_command(viewpoint)
+        else:
+            print(type(viewpoint))
+            raise TypeError(viewpoint)
+        return string
+
+    def list_to_command(self, l: Iterable) -> str:
+        list_of_string = [self.viewpoint_to_string(viewpoint=viewpoint) for viewpoint in l]
+        long_string = ' '.join(list_of_string)
+        command = f'\'({long_string})'
+        return command
+
+    def tuple_to_command(self, t: tuple) -> str:
+        list_of_string = [self.viewpoint_to_string(viewpoint=viewpoint) for viewpoint in t]
+        long_string = ' '.join(list_of_string)
+        command = f'({long_string})'
+        return command
+
+    def dataset_id_to_command(self):
+        command_dataset_id = self.dataset_id
+        return command_dataset_id
+
+    def target_viewpoints_to_command(self):
+        command_target_viewpoints = self.list_to_command(self.target_viewpoints)
+        return command_target_viewpoints
+
+    def source_viewpoints_to_command(self):
+        if type(self.source_viewpoints) is Literal[':select']:
+            command_source_viewpoints = self.source_viewpoints
+            raise NotImplementedError
+        elif type(self.source_viewpoints) is list:
+            command_source_viewpoints = self.list_to_command(self.source_viewpoints)
+        else:
+            raise TypeError(self.source_viewpoints)
+        return command_source_viewpoints
+
+    def to_lisp_command(self) -> str:
+        if not self.is_complete():
+            raise AssertionError(f'{self} Missing required argument')
+        command = f'{self.dataset_id_to_command()} {self.target_viewpoints_to_command()} {self.source_viewpoints_to_command()}'
+        return command
+
+
+@dataclass
+class ModelOptions(Parameters):
+    order_bound: int = None
+    mixtures: bool = None
+    update_exclusion: str = None
+    escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
+
+    def to_lisp_command(self) -> str:
+        generic_command = super().to_lisp_command()
+        command = f'\'({generic_command})'
+        return command
+
+
+@dataclass
+class StatisticalModellingParameters(Parameters):
+    models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
+    ltmo: ModelOptions = None
+    stmo: ModelOptions = None
+
+    def to_lisp_command(self) -> str:
+        command = super().to_lisp_command()
+        return command
+
+
+@dataclass
+class TrainingParameters(Parameters):
+    pretraining_id: str = None
+    k: Union[int, Literal[":full"]] = 10
+    resampling_indices: List[int] = None
+
+    def pretraining_id_to_command(self) -> str:
+        command = self.pretraining_id
+        return command
+
+    def k_to_command(self):
+        command_k = f':k {self.k}'
+        return command_k
+
+    def resampling_indices_to_command(self):
+        raise NotImplementedError
+
+    def to_lisp_command(self) -> str:
+        if self.pretraining_id:
+            command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
+            return command
+        else:
+            command = f'{self.k_to_command()}'
+            return command
+
+
+@dataclass
+class BasisOption(Parameters):
+    basis: Union[List[SingleViewpoint],
+                 Literal[':pitch-full', ':pitch-short', ':bioi', ':onset', ':auto']] = None
+
+    def to_lisp_command(self) -> str:
+        generic_command = super().to_lisp_command()
+        if generic_command:
+            command = f'\'({generic_command})'
+        else:
+            command = ''
+        return command
+
+
+@dataclass
+class ViewpointSelectionParameters(Parameters):
+    """
+    When the source viewpoint supplied is :select
+    """
+
+    basis: BasisOption = None
+    dp: int = None
+    max_links: int = None
+    min_links: int = None
+    viewpoint_selection_output: str = None  # a filepath to write output for every viewpoint system considered during viewpoint selection.
+    # The default is nil meaning that no files are written.
+
+
+@dataclass
+class OutputParameters(Parameters):
+    detail: Literal[1, 2, 3] = 3
+    output_path: str = None
+    overwrite: bool = False  # whether to overwrite an existing output file if it exists
+    separator: str = None  # a string defining the character to use for delimiting columns in the output file
+
+    def detail_to_command(self) -> str:
+        command_detail = f':detail {self.detail}'
+        return command_detail
+
+    # the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/
+    def output_path_to_command(self) -> str:
+        command_outpath = f':output-path \"{self.output_path}\"'
+        return command_outpath
+
+    def overwrite_to_command(self) -> str:
+        convert_dict = {True: 't', False: 'nil'}
+        if self.overwrite is True:
+            command_overwrite = f':overwrite {convert_dict[True]}'
+            return command_overwrite
+        if self.overwrite is False:
+            command_overwrite = f':overwrite {convert_dict[False]}'
+            return command_overwrite
+
+    def to_lisp_command(self) -> str:
+        command = f'{self.detail_to_command()} {self.output_path_to_command()} {self.overwrite_to_command()}'
+        return command
+
+
+@dataclass
+class CachingParameters(Parameters):
+    use_resampling_set_cache: bool = None
+    use_ltms_cache: bool = None
+
 
 @dataclass
 class ExperimentLogger:
@@ -108,33 +334,24 @@ class ExperimentLogger:
         return output_data_folder
 
 
-class Configuration(Parameters):
+@dataclass
+class Configuration(LispConvertable, ABC):
     pass
 
 
 @dataclass(repr=False)
 class RunModelConfiguration(Configuration):
-    this_exp_log_path: str
-    test_dataset_id: str
-    pretrain_dataset_id: str
+    this_exp_log_path: str = None
+    test_dataset_id: str = None
+    pretrain_dataset_id: str = None
 
-    output_parameters: OutputParameters
+    output_parameters: OutputParameters = field(default_factory=OutputParameters)
     required_parameters: RequiredParameters = field(default_factory=RequiredParameters)
     statistical_modelling_parameters: StatisticalModellingParameters = field(
         default_factory=StatisticalModellingParameters)
     training_parameters: TrainingParameters = field(default_factory=TrainingParameters)
     viewpoint_selection_parameters: ViewpointSelectionParameters = field(default_factory=ViewpointSelectionParameters)
     caching_parameters: CachingParameters = field(default_factory=CachingParameters)
-
-    def __post_init__(self):
-        # after inherit the dataset ids from the IDyOMConfiguration class,
-        # update ids of the required_param and train_param here
-
-        self.required_parameters = RequiredParameters(dataset_id=self.test_dataset_id)
-        self.training_parameters = TrainingParameters(pretraining_id=self.pretrain_dataset_id)
-
-        # post init here because we want to update the out path in lisp script
-        self.output_parameters = OutputParameters(output_path=self.this_exp_log_path + 'experiment_output_data_folder/')
 
     def to_lisp_command(self) -> str:
         # assert self.required_parameters._is_available(), self.required_parameters
@@ -153,17 +370,36 @@ class RunModelConfiguration(Configuration):
         return command
 
 
-@dataclass(repr=False)
+@dataclass
 class DatabaseConfiguration(Configuration):
-    this_exp_log_path: str
-    test_dataset_id: str
+    this_exp_log_path: str = None
+    test_dataset_id: str = None
     pretrain_dataset_id: str = None
     test_dataset_Name: str = 'TEST_DATASET'
     pretrain_dataset_Name: str = 'PRETRAIN_DATASET'
 
-    def __post_init__(self):
-        self.test_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/test_dataset/'
-        self.train_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/pretrain_dataset/'
+    def to_lisp_command(self):
+        if self.pretrain_dataset_id:
+            commands = [
+                self.get_command_import_testdb(),
+                self.get_command_import_traindb(),
+            ]
+        else:
+            commands = [
+                self.get_command_import_testdb(),
+            ]
+        total_command = '\n'.join(commands)
+        return total_command
+
+    @property
+    def test_dataset_log_path(self):
+        test_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/test_dataset/'
+        return test_dataset_log_path
+
+    @property
+    def train_dataset_log_path(self):
+        train_dataset_log_path = self.this_exp_log_path + 'experiment_input_data_folder/pretrain_dataset/'
+        return train_dataset_log_path
 
     def get_music_files_type(self, path) -> str:
         for file in glob(path + '*'):
@@ -215,40 +451,12 @@ class DatabaseConfiguration(Configuration):
 
 
 @dataclass
-class IDyOMConfiguration:
-    required_parameters: RunModelConfiguration.required_parameters
-    statistical_modelling_parameters: RunModelConfiguration.statistical_modelling_parameters
-    training_parameters: RunModelConfiguration.training_parameters
-    viewpoint_selection_parameters: RunModelConfiguration.viewpoint_selection_parameters
-    output_parameters: RunModelConfiguration.output_parameters
-    caching_parameters: RunModelConfiguration.caching_parameters
+class IDyOMConfiguration(Configuration):
+    database_configuration: DatabaseConfiguration = field(default_factory=DatabaseConfiguration)
+    run_model_configuration: RunModelConfiguration = field(default_factory=RunModelConfiguration)
 
-    this_exp_log_path: str
-    test_dataset_path: str
-    test_dataset_id: str
-    pretrain_dataset_path: str
-    pretrain_dataset_id: str
-
-    def __post_init__(self):
-
-        self.database_configuration = DatabaseConfiguration(this_exp_log_path=self.this_exp_log_path,
-                                                            pretrain_dataset_id=self.pretrain_dataset_id,
-                                                            test_dataset_id=self.test_dataset_id
-                                                            )
-
-        self.run_model_configuration = RunModelConfiguration(required_parameters=self.required_parameters,
-                                                             statistical_modelling_parameters=self.statistical_modelling_parameters,
-                                                             training_parameters=self.training_parameters,
-                                                             viewpoint_selection_parameters=self.viewpoint_selection_parameters,
-                                                             output_parameters=self.output_parameters,
-                                                             caching_parameters=self.caching_parameters,
-                                                             this_exp_log_path=self.this_exp_log_path,
-                                                             test_dataset_id=self.test_dataset_id,
-                                                             pretrain_dataset_id=self.pretrain_dataset_id
-                                                             )
-
-    def total_lisp_command(self) -> str:
-        if os.path.exists(self.this_exp_log_path + 'experiment_input_data_folder/train/'):
+    def to_lisp_command(self) -> str:
+        if self.run_model_configuration.training_parameters.pretraining_id:
             commands = [
                 self.start_idyom_command(),
                 self.import_test_dataset_command(),
@@ -299,23 +507,3 @@ class IDyOMConfiguration:
     def quit_command(self) -> str:
         command = '(quit)'
         return command
-
-    def run_start_idyom_command(self):
-        print('** Starting IDyOM in SBCL **')
-        os.system('sbcl')
-        os.system(self.start_idyom_command())
-
-    def generate_lisp_script(self):
-        path_to_file = self.this_exp_log_path
-        lisp_file_path = path_to_file + 'compute.lisp'
-        lisp_command = self.total_lisp_command()
-        with open(lisp_file_path, "w") as f:
-            f.write(lisp_command)
-        return str(lisp_file_path)
-
-    def run(self):
-        """use shell to run IDyOM LISP code """
-        print('** running lisp script **')
-        os.system("sbcl --noinform --load " + self.generate_lisp_script())
-        print(' ')
-        print('** Finished! **')

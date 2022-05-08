@@ -48,7 +48,8 @@ class BasicAxsGeneration:
         pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
         duration_in_ticks = melody_info.get_pianoroll_original().shape[1]
         pianoroll_distribution_array = melody_info.get_pianoroll_pitch_distribution()
-        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
+        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
+                  extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         ax.title.set_text('Pitch Prediction')
         ax.set_xlabel('Time')
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
@@ -101,6 +102,7 @@ class BasicPlot:
         :param ending_index: the index of the melody in the melody list that you want to stop plotting
         :return:
         """
+
         def pianoroll_pitch_distribution_groundtruth(melody_info: MelodyInfo) -> plt.Figure:
             melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
             fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
@@ -142,9 +144,9 @@ class BasicPlot:
 
     @staticmethod
     def plot_pianoroll_surprisal(experiment_folder_path: str,
-                              melody_names: List[str] = None,
-                              starting_index: int = None,
-                              ending_index: int = None):
+                                 melody_names: List[str] = None,
+                                 starting_index: int = None,
+                                 ending_index: int = None):
         """
         This function
         :param experiment_folder_path:
@@ -153,6 +155,7 @@ class BasicPlot:
         :param ending_index:
         :return:
         """
+
         def pianoroll_surprisal(melody_info: MelodyInfo) -> plt.Figure:
             melody_name = str(melody_info.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
             fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')
