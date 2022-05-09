@@ -42,6 +42,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -233,7 +234,7 @@
       <workItem from="1651840676763" duration="1004000" />
       <workItem from="1652007506090" duration="2776000" />
       <workItem from="1652010494053" duration="1014000" />
-      <workItem from="1652011511686" duration="12231000" />
+      <workItem from="1652011511686" duration="12364000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -445,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652085573283</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="refactor: user interface not implemented">
+      <created>1652089020337</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652089020337</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
