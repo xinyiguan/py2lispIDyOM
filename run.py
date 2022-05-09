@@ -110,6 +110,7 @@ def new_test():
 
     my_exp.generate_lisp_script()
 
+    my_exp.run()
 
 if __name__ == '__main__':
     new_test()
