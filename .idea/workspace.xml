@@ -25,7 +25,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="refactor: user interface not implemented">
+    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="rebase">
+      <change afterPath="$PROJECT_DIR$/examples/1_run_idyom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/export_docs.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/visualization_docs.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp_dev_codes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/export.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -81,8 +90,8 @@
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/helper_scripts" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/helper_scripts" />
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
@@ -235,7 +244,7 @@
       <workItem from="1652007506090" duration="2776000" />
       <workItem from="1652010494053" duration="1014000" />
       <workItem from="1652011511686" duration="12364000" />
-      <workItem from="1652089724857" duration="212000" />
+      <workItem from="1652101096727" duration="5691000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -454,7 +463,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652089020337</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="refactor: user interface not implemented">
+      <created>1652089459374</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1652089459374</updated>
+    </task>
+    <task id="LOCAL-00033" summary="rebase">
+      <created>1652089557234</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1652089557234</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactored the configuration module" />
     <MESSAGE value="refactored the viz module -v2, initial commit" />
     <MESSAGE value="refactored the extraction module, initial commit" />
     <MESSAGE value="deleted old irrelevant scratch files" />
@@ -510,28 +532,29 @@
     <MESSAGE value="two types of figs completed" />
     <MESSAGE value="refactored parameters.py" />
     <MESSAGE value="refactor: user interface not implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: user interface not implemented" />
+    <MESSAGE value="rebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebase" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOMRunner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651583788615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_IDyOM.coverage" NAME="run_IDyOM Coverage Results" MODIFIED="1651591073066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_idyom.coverage" NAME="run_idyom Coverage Results" MODIFIED="1651159066991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOM_runner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651415543822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$exportation.coverage" NAME="exportation Coverage Results" MODIFIED="1651750582724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructMIDI.coverage" NAME="post_idyom_reconstructMIDI Coverage Results" MODIFIED="1628594050663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1651756628305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652021710393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1651669002964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructmidi.coverage" NAME="post_idyom_reconstructmidi Coverage Results" MODIFIED="1628594395295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652089900099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_reconstructMIDI.coverage" NAME="post_idyom_reconstructMIDI Coverage Results" MODIFIED="1628594050663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_IDyOM.coverage" NAME="run_IDyOM Coverage Results" MODIFIED="1651591073066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run_idyom.coverage" NAME="run_idyom Coverage Results" MODIFIED="1651159066991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOM_runner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651415543822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOMRunner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651583788615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

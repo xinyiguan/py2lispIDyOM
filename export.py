@@ -12,7 +12,7 @@ from extraction import ExperimentInfo
 
 
 @dataclass
-class Exportation:
+class Export:
     experiment_folder_path: str
     features_to_export: List = None  # for available data to export, see SingleViewpoint: ['cpitch', 'onset', 'melody']
     melody_names: List = None
@@ -98,7 +98,9 @@ class Exportation:
                                             output_path=export_folder_path)
 
     def export2csv(self):
-        "By default, this will export all features of the chosen melodies, where each melody is in one csv file."
+        """
+        By default, this will export all features of the chosen melodies, where each melody is in one csv file.
+        """
         export_folder_path = self.generate_idyom_output_export_folder(export_folder_name='outputs_in_csv')
 
         if self.melody_names:
@@ -116,6 +118,6 @@ class Exportation:
 
 
 if __name__ == '__main__':
-    Exportation(experiment_folder_path='experiment_history/04-05-22_14.35.26/',
+    Export(experiment_folder_path='experiment_history/04-05-22_14.35.26/',
                 features_to_export=['onset', 'cpitch', 'melody_name'],
                 melody_names=['"shanx002"', '"shanx008"']).export2csv()
