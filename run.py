@@ -97,3 +97,18 @@ class IDyOMExperiment:
         print('** Finished! **')
 
 
+def new_test():
+    test_dataset_path = 'dataset/shanx_dataset/'
+    target_viewpoints = ['cpitch', 'onset']
+    source_viewpoints = ['cpitch', 'onset']
+
+    my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path)
+    my_exp.idyom_config.run_model_configuration.required_parameters.target_viewpoints = target_viewpoints
+    my_exp.idyom_config.run_model_configuration.required_parameters.source_viewpoints = source_viewpoints
+
+    my_exp.update_idyom_config()
+
+    my_exp.generate_lisp_script()
+
+if __name__ == '__main__':
+    new_test()
