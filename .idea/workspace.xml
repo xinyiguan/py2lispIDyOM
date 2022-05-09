@@ -25,16 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ad67e93-69c4-4299-8409-32322143d8b3" name="Default Changelist" comment="rebase">
-      <change afterPath="$PROJECT_DIR$/examples/1_run_idyom.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/export_docs.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks/visualization_docs.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp_dev_codes.py" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="INCOMING_CHECK_STRATEGY" value="Always" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SAVE_CHANGES_POLICY" value="STASH" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -60,6 +59,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="633ceb7b-f7ba-451b-a525-79249b00b2c4" />
   </component>
   <component name="JupyterTrust" id="cfe35641-7d6a-469e-b0a4-f6c430b1c346" />
   <component name="MarkdownSettingsMigration">
@@ -82,7 +84,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -508,6 +510,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="refactored the viz module -v2, initial commit" />
     <MESSAGE value="refactored the extraction module, initial commit" />
     <MESSAGE value="deleted old irrelevant scratch files" />
@@ -534,6 +537,8 @@
     <MESSAGE value="refactor: user interface not implemented" />
     <MESSAGE value="rebase" />
     <option name="LAST_COMMIT_MESSAGE" value="rebase" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -1,6 +1,3 @@
-"""
-viz module v2 - March 2022
-"""
 import os
 from typing import List
 
@@ -193,6 +190,14 @@ class BasicPlot:
                 melody_info = experiment_info.melodies_dict[melody]
                 pianoroll_surprisal(melody_info)
             print('Plots saved in: ' + experiment_folder_path + 'plots/pianoroll_surprisal/')
+
+    @staticmethod
+    def plot_overall_surprisal_entropy(experiment_folder_path: str,
+                                       melody_names: List[str] = None,
+                                       starting_index: int = None,
+                                       ending_index: int = None):
+
+        """This function plots the overall (combined) surprisal and entropy values for each song"""
 
 
 def func():
