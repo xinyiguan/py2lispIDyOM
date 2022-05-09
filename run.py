@@ -101,24 +101,12 @@ def new_test():
     test_dataset_path = 'dataset/shanx_dataset/'
     target_viewpoints = ['cpitch', 'onset']
     source_viewpoints = ['cpitch', 'onset']
-    # training_parameters = configuration.TrainingParameters(k=':full')
-    # statistical_modelling_parameters = configuration.StatisticalModellingParameters(models=':ltm')
-    # output_parameters = configuration.OutputParameters(detail=3)
 
     my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path)
     my_exp.idyom_config.run_model_configuration.required_parameters.target_viewpoints = target_viewpoints
     my_exp.idyom_config.run_model_configuration.required_parameters.source_viewpoints = source_viewpoints
 
-    # print(my_exp)
     my_exp.update_idyom_config()
-    # print(my_exp.idyom_config.run_model_configuration.to_lisp_command())
-
-    #print(f'{my_exp.idyom_config.database_configuration}')
-    #print(my_exp.idyom_config.database_configuration.to_lisp_command())
-
-    # print(f'*** script start ***\n'
-    #       f'{my_exp.idyom_config.to_lisp_command()}'
-    #       f'\n*** script end ***')
 
     print(my_exp.generate_lisp_script())
 
