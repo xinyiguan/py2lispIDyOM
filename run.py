@@ -16,9 +16,9 @@ class IDyOMExperiment:
                                        test_dataset_path=self.test_dataset_path,
                                        experiment_history_folder_path=self.experiment_history_folder_path)
 
-    def update_idyom_config(self):
-        test_dataset_id = self.generate_test_dataset_id()
-        train_dataset_id = self.generate_train_dataset_id()
+    def _update_idyom_config(self):
+        test_dataset_id = self._generate_test_dataset_id()
+        train_dataset_id = self._generate_train_dataset_id()
         self.idyom_config.run_model_configuration.required_parameters.dataset_id = test_dataset_id
         self.idyom_config.run_model_configuration.training_parameters.pretraining_id = train_dataset_id
 
@@ -28,12 +28,12 @@ class IDyOMExperiment:
         self.idyom_config.run_model_configuration.output_parameters.output_path = self.logger.output_data_exp_folder
 
     @staticmethod
-    def generate_test_dataset_id() -> str:
+    def _generate_test_dataset_id() -> str:
         moment = get_timestamp()
         dataset_id = '66' + moment
         return dataset_id
 
-    def generate_train_dataset_id(self):
+    def _generate_train_dataset_id(self):
         # only generate an ID if pretrain_dataset_path is not None
         if self.pretrain_dataset_path:
             moment = get_timestamp()
@@ -42,44 +42,22 @@ class IDyOMExperiment:
         else:
             pass
 
-    def run_start_idyom(self):
-        """
-        This function runs the Lisp command to start IDyOM in SBCL.
-        """
-        command = self.idyom_config.start_idyom_command()
-        os.system(command)
+    def set_parameters(self, **kwargs):
+        configuration = self.idyom_config.run_model_configuration
+        surface_dict: dict = configuration.get_surface_dict()
+        for key, value in kwargs.items():
+            if key not in surface_dict:
+                raise ValueError(f'parameter \'{key}\' is invalid. Valid parameters are: {list(surface_dict.keys())}')
+            configuration.recursive_set_attr(key=key, value=value)
 
-    def run_import_datasets(self):
-        """
-        This function runs the Lisp command to import relevant datasets.
-        """
-        command = self.idyom_config.import_datasets_command()
-        os.system(command)
-
-    def run_describe_database(self):
-        """
-        This function runs the Lisp command to describe the database.
-        """
-        self.idyom_config.describe_database_command()
-
-    def run_describe_database_detail(self):
-        """
-        This function runs the Lisp command to describe the database in details.
-        """
-        self.idyom_config.describe_detailed_database_command()
-
-    def run_quit(self):
-        """
-        This function runs the Lisp command to quit.
-        """
-        self.idyom_config.quit_command()
-
-    def generate_lisp_script(self):
+    def generate_lisp_script(self, write=True):
+        self._update_idyom_config()
         path_to_file = self.logger.this_exp_folder
         lisp_file_path = path_to_file + 'compute.lisp'
         lisp_command = self.idyom_config.to_lisp_command()
-        with open(lisp_file_path, "w") as f:
-            f.write(lisp_command)
+        if write:
+            with open(lisp_file_path, "w") as f:
+                f.write(lisp_command)
         return str(lisp_file_path)
 
     def run(self):
@@ -103,14 +81,16 @@ def new_test():
     source_viewpoints = ['cpitch', 'onset']
 
     my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path)
+
     my_exp.idyom_config.run_model_configuration.required_parameters.target_viewpoints = target_viewpoints
     my_exp.idyom_config.run_model_configuration.required_parameters.source_viewpoints = source_viewpoints
 
-    my_exp.update_idyom_config()
+    my_exp.set_parameters(max_links=2, detail=2, overwrite='yes')
+    print(my_exp.idyom_config.run_model_configuration.get_surface_dict())
+    # my_exp.generate_lisp_script()
 
-    my_exp.generate_lisp_script()
+    # my_exp.run()
 
-    my_exp.run()
 
 
 if __name__ == '__main__':

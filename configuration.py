@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from dataclasses import field
 from glob import glob
-from typing import Literal, List, Union, Tuple, Iterable
+from typing import Literal, List, Union, Tuple, Iterable, get_type_hints, _LiteralGenericAlias
 
 from natsort import natsorted
 
@@ -29,7 +29,33 @@ class LispConvertable(ABC):
     def __repr__(self):
         return json.dumps(self, default=lambda x: x.__dict__, indent=2)
 
-
+    def recursive_set_attr(self, key, value):
+        children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
+        children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
+        children = list(children_configuration) + list(children_parameter)
+        if children:
+            for child in children:
+                child.recursive_set_attr(key, value)
+        elif hasattr(self, key):
+            print(self)
+            type_hint_dict = get_type_hints(self, globalns=globals())
+            print(type_hint_dict)
+            if key not in type_hint_dict:
+                print(f'type hint for {key} not defined')
+            else:
+                type_expected = type_hint_dict[key]
+                type_got = type(value)
+                if type(type_expected) is _LiteralGenericAlias:
+                    # print('this is a literal')
+                    # print(type_expected.__args__)
+                    type_correct = value in type_expected.__args__
+                else:
+                    type_correct = type_got is type_expected
+                if type_correct:
+                    self.__dict__[key] = value
+                else:
+                    raise TypeError(
+                        f'Expect type for parameter {key} is {type_expected}, but got \'{value}\' which has type {type_got} ')
 
 
 @dataclass
@@ -336,7 +362,15 @@ class ExperimentLogger:
 
 @dataclass
 class Configuration(LispConvertable, ABC):
-    pass
+    def get_surface_dict(self) -> dict:
+        children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
+        children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
+        children_configuration_dicts = [child.get_surface_dict() for child in children_configuration]
+        children_parameter_dicts = [child.__dict__ for child in children_parameter]
+        surface_dict = {}
+        for d in children_configuration_dicts + children_parameter_dicts:
+            surface_dict.update(d)
+        return surface_dict
 
 
 @dataclass(repr=False)
