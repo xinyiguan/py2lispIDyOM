@@ -67,6 +67,14 @@ class MelodyInfo(pd.DataFrame):
         cropped_df = self[properties]
         return cropped_df.mean(axis=0)
 
+    def get_melody_name_pprint(self) -> str:
+        melody_name_pprint = str(self.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
+        return melody_name_pprint
+
+    def get_property_list(self) -> list:
+        property_list = list(self.keys())
+        return property_list
+
     def get_pitch_range(self, padding: typing.Optional[int] = 0):
         pitches = self.access_properties(['cpitch'])
         max_pitch = int(pitches.max())
@@ -160,13 +168,10 @@ class ExperimentInfo:
 
 
 def func():
-    dataset_pitchrange = ExperimentInfo(
-        experiment_folder_path='experiment_history/04-05-22_14.35.26/').get_datasetwise_pitch_range()
+    melInfo = ExperimentInfo(
+        experiment_folder_path='experiment_history/04-05-22_14.35.26/').melodies_dict['"shanx040"'].get_property_list()
 
-    # melody1 = dataset_info.access_melodies(melody_names=['"shanx002"'])[0]
-
-    print(dataset_pitchrange)
-
+    print(melInfo)
 
 if __name__ == '__main__':
     func()
