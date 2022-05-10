@@ -25,26 +25,25 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="viz: plot_overall_surprisal_entropy unfinish">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="set_parameters working -v1">
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/compute.lisp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/10-05-22_11.47.40/experiment_input_data_folder/test_dataset/shanx015.mid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/compute.lisp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx001.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx002.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx003.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx004.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx005.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx006.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx007.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx008.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx009.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx010.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx011.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx012.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx013.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx014.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_input_data_folder/test_dataset/shanx015.mid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/09-05-22_11.52.21/experiment_output_data_folder/66050922115221-cpitch_onset-cpitch_onset-nil-nil-melody-nil-10-both+-nil-t-nil-c-nil-t-t-x-3.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -500,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652108700489</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="set_parameters working -v1">
+      <created>1652169675099</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1652169675099</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +538,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactored the extraction module, initial commit" />
     <MESSAGE value="deleted old irrelevant scratch files" />
     <MESSAGE value="configuration module added to_lisp commands" />
     <MESSAGE value="temporary save - run idyom module call" />
@@ -557,7 +562,8 @@
     <MESSAGE value="refactor: user interface not implemented" />
     <MESSAGE value="rebase" />
     <MESSAGE value="viz: plot_overall_surprisal_entropy unfinish" />
-    <option name="LAST_COMMIT_MESSAGE" value="viz: plot_overall_surprisal_entropy unfinish" />
+    <MESSAGE value="set_parameters working -v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="set_parameters working -v1" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -571,7 +577,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1651756628305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652130774830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652176060613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1651669002964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -30,6 +30,17 @@ class LispConvertable(ABC):
         return json.dumps(self, default=lambda x: x.__dict__, indent=2)
 
     def recursive_set_attr(self, key, value):
+
+        def check_recursive_typings(type_expected):
+            if type(type_expected) == _LiteralGenericAlias:  # type_expected is typing.Literal
+                # print('this is a literal')
+                # print(type_expected.__args__)
+                type_correct = value in type_expected.__args__
+            else:
+                type_correct = type_got is type_expected
+
+            return type_correct
+
         children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
         children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
         children = list(children_configuration) + list(children_parameter)
@@ -37,20 +48,25 @@ class LispConvertable(ABC):
             for child in children:
                 child.recursive_set_attr(key, value)
         elif hasattr(self, key):
-            print(self)
             type_hint_dict = get_type_hints(self, globalns=globals())
-            print(type_hint_dict)
             if key not in type_hint_dict:
                 print(f'type hint for {key} not defined')
             else:
-                type_expected = type_hint_dict[key]
                 type_got = type(value)
-                if type(type_expected) is _LiteralGenericAlias:
-                    # print('this is a literal')
-                    # print(type_expected.__args__)
-                    type_correct = value in type_expected.__args__
-                else:
-                    type_correct = type_got is type_expected
+                type_expected = type_hint_dict[key]
+                # print(type_expected.__args__[0])
+
+                # # Check type_expected by case:
+                # if type(type_expected) == _LiteralGenericAlias:  # type_expected is typing.Literal
+                #     # print('this is a literal')
+                #     # print(type_expected.__args__)
+                #     type_correct = value in type_expected.__args__
+                #
+                # else:
+                #     type_correct = type_got is type_expected
+
+                type_correct = check_recursive_typings(type_expected=type_expected)
+
                 if type_correct:
                     self.__dict__[key] = value
                 else:

@@ -74,8 +74,7 @@ class IDyOMExperiment:
         print(' ')
         print('** Finished! **')
 
-
-def new_test():
+def test():
     test_dataset_path = 'dataset/shanx_dataset/'
     target_viewpoints = ['cpitch', 'onset']
     source_viewpoints = ['cpitch', 'onset']
@@ -85,13 +84,29 @@ def new_test():
     my_exp.idyom_config.run_model_configuration.required_parameters.target_viewpoints = target_viewpoints
     my_exp.idyom_config.run_model_configuration.required_parameters.source_viewpoints = source_viewpoints
 
-    my_exp.set_parameters(max_links=2, detail=2, overwrite='yes')
-    print(my_exp.idyom_config.run_model_configuration.get_surface_dict())
-    # my_exp.generate_lisp_script()
+    my_exp.set_parameters(max_links=2, detail=2, overwrite=False)
+    print(my_exp.generate_lisp_script(write=True))
+    # print(my_exp.idyom_config.run_model_configuration.get_surface_dict())
 
-    # my_exp.run()
+def new_test():
+    test_dataset_path = 'dataset/shanx_dataset/'
+    train_dataset_path = 'dataset/bach_dataset/'
 
+    target_viewpoints = ['cpitch', 'onset']
+    source_viewpoints = ['cpitch', 'onset']
+
+    my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path, pretrain_dataset_path=train_dataset_path)
+
+    my_exp.set_parameters(target_viewpoints=['cpitch', 'onset'],
+                          source_viewpoints=['cpitch', 'onset'],
+                          model=':both',
+                          k=1)
+
+    # my_exp.set_parameters(models=':both',
+    #                       detail=2)
+
+    my_exp.generate_lisp_script()
 
 
 if __name__ == '__main__':
-    new_test()
+    test()
