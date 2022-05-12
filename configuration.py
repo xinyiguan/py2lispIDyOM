@@ -8,9 +8,33 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from dataclasses import field
 from glob import glob
-from typing import Literal, List, Union, Tuple, Iterable, get_type_hints, _LiteralGenericAlias
+from typing import Literal, List, Union, Tuple, Iterable, get_type_hints
 
 from natsort import natsorted
+
+
+def check_recursive_typings(obj, type_expected: type) -> bool:
+    type_got = type(obj)
+
+    if hasattr(type_expected, '__origin__'):
+        type_origin = type_expected.__origin__
+        if type_origin == Literal:  # type_expected is typing.Literal
+            type_correct = obj in type_expected.__args__
+        elif type_origin in [list, tuple]:
+            arg_type = type_expected.__args__[0]
+            type_correct = all([
+                check_recursive_typings(obj=_, type_expected=arg_type) for _ in obj
+            ])
+        elif type_origin == Union:
+            possible_types = type_expected.__args__
+            type_correct = any([
+                check_recursive_typings(obj=obj, type_expected=possible_type) for possible_type in possible_types
+            ])
+        else:
+            raise TypeError()
+    else:
+        type_correct = type_got is type_expected
+    return type_correct
 
 
 def get_timestamp():
@@ -31,16 +55,6 @@ class LispConvertable(ABC):
 
     def recursive_set_attr(self, key, value):
 
-        def check_recursive_typings(type_expected):
-            if type(type_expected) == _LiteralGenericAlias:  # type_expected is typing.Literal
-                # print('this is a literal')
-                # print(type_expected.__args__)
-                type_correct = value in type_expected.__args__
-            else:
-                type_correct = type_got is type_expected
-
-            return type_correct
-
         children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
         children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
         children = list(children_configuration) + list(children_parameter)
@@ -52,26 +66,14 @@ class LispConvertable(ABC):
             if key not in type_hint_dict:
                 print(f'type hint for {key} not defined')
             else:
-                type_got = type(value)
                 type_expected = type_hint_dict[key]
-                # print(type_expected.__args__[0])
-
-                # # Check type_expected by case:
-                # if type(type_expected) == _LiteralGenericAlias:  # type_expected is typing.Literal
-                #     # print('this is a literal')
-                #     # print(type_expected.__args__)
-                #     type_correct = value in type_expected.__args__
-                #
-                # else:
-                #     type_correct = type_got is type_expected
-
-                type_correct = check_recursive_typings(type_expected=type_expected)
+                type_correct = check_recursive_typings(obj=value, type_expected=type_expected)
 
                 if type_correct:
                     self.__dict__[key] = value
                 else:
                     raise TypeError(
-                        f'Expect type for parameter {key} is {type_expected}, but got \'{value}\' which has type {type_got} ')
+                        f'Expect type for parameter {key} is {type_expected}, but got \'{value}\' which has type {type(value)} ')
 
 
 @dataclass
@@ -153,9 +155,9 @@ class RequiredParameters(Parameters):
         return command_target_viewpoints
 
     def source_viewpoints_to_command(self):
-        if type(self.source_viewpoints) is Literal[':select']:
+        if self.source_viewpoints == ':select':
             command_source_viewpoints = self.source_viewpoints
-            raise NotImplementedError
+            # raise NotImplementedError
         elif type(self.source_viewpoints) is list:
             command_source_viewpoints = self.list_to_command(self.source_viewpoints)
         else:

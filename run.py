@@ -92,14 +92,15 @@ def new_test():
     test_dataset_path = 'dataset/shanx_dataset/'
     train_dataset_path = 'dataset/bach_dataset/'
 
-    target_viewpoints = ['cpitch', 'onset']
-    source_viewpoints = ['cpitch', 'onset']
+    target_viewpoints = ['dur', 'phrase']
+    source_viewpoints = [':select', ('cpitch', 'onset'), 'dur']
+    source_viewpoints = ':select'
 
     my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path, pretrain_dataset_path=train_dataset_path)
 
-    my_exp.set_parameters(target_viewpoints=['cpitch', 'onset'],
-                          source_viewpoints=['cpitch', 'onset'],
-                          model=':both',
+    my_exp.set_parameters(target_viewpoints=target_viewpoints,
+                          source_viewpoints=source_viewpoints,
+                          models=':both',
                           k=1)
 
     # my_exp.set_parameters(models=':both',
@@ -109,4 +110,4 @@ def new_test():
 
 
 if __name__ == '__main__':
-    test()
+    new_test()
