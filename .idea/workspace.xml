@@ -25,25 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_along_cpitch/shanx003.eps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_along_cpitch/shanx008.eps" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="recursive type check final FINISHED">
+      <change afterPath="$PROJECT_DIR$/notebooks/runIDyOM.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_entropy/shanx002.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_entropy/shanx003.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_entropy/shanx004.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/overall_surprisal_entropy/shanx006.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx002.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx003.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx004.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_pitch_distribution_groundtruth/shanx006.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx002.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx003.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx004.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/pianoroll_surprisal/shanx006.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/plots/simple_plot_information.content/shanx002.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/viz.py" afterDir="false" />
     </list>
@@ -127,7 +113,7 @@
       <recent name="$PROJECT_DIR$/helper_scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.viz">
+  <component name="RunManager" selected="Python.run">
     <configuration name="configuration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,8 +226,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.viz" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.viz" />
         <item itemvalue="Python.extraction" />
         <item itemvalue="Python.configuration" />
       </list>
@@ -279,7 +265,7 @@
       <workItem from="1652010494053" duration="1014000" />
       <workItem from="1652011511686" duration="12364000" />
       <workItem from="1652101096727" duration="5691000" />
-      <workItem from="1652355556361" duration="12307000" />
+      <workItem from="1652355556361" duration="15843000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -540,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652189521899</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="recursive type check final FINISHED">
+      <created>1652389271379</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1652389271379</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +565,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="temporary save - run idyom module call" />
     <MESSAGE value="refactored IDyOM runner module. To check total_command error." />
     <MESSAGE value="refactored init exp history folder func" />
     <MESSAGE value="DatabaseConfiguration input path type error" />
@@ -597,7 +589,8 @@
     <MESSAGE value="set_parameters working -v1" />
     <MESSAGE value="enforce typing check: composite typings not implemented" />
     <MESSAGE value="viz: simple_plot refactored (2 aux added to simplify save figs codes)" />
-    <option name="LAST_COMMIT_MESSAGE" value="viz: simple_plot refactored (2 aux added to simplify save figs codes)" />
+    <MESSAGE value="recursive type check final FINISHED" />
+    <option name="LAST_COMMIT_MESSAGE" value="recursive type check final FINISHED" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -611,7 +604,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1652389131039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652388536141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652432138409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1652184526635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

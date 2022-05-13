@@ -14,23 +14,35 @@ appropriately install IDyOM on your local machine.
 
 ## Functionality and Usage
 
-
 In summary, py2lispIDyOM currently has three main functionalities:
 
 ### 1. Run IDyOM
 
-The first step is to define all necessary parameters for the IDyOM model.
+#### 1.1 Initialize experiment
+
+First, we initialize the IDyOM Experiment by providing the relevant paths. For example,
 
 ```
-some sample codes here...
+my_experiment = IDyOMExperiment(test_dataset_path = 'dataset/shanx_dataset/',
+                                pretrain_dataset_path = 'dataset/bach_dataset/')
 ```
 
+#### 1.2 Set model parameters
+
+Now, we need to set all the model parameters by using `set_parameters` method.
+
+```
+my_exp.set_parameters(target_viewpoints=['cpitch', 'onset'],
+                      source_viewpoints=['cpitch', 'onset'],
+                      models=':both',
+                      k=1)
+```
 
 #### _Notes:_
 
 When you run the IDyOM experiment, py2lispIDyOM will automatically create a folder
-(with the timestamp of experiment time as the folder name) logging all data of the
-current experiment. For details of the experiment log folder, see the 
+(with the timestamp of experiment time as the folder name) logging all data of the current experiment. For details of
+the experiment log folder, see the
 **_Experiment Logger_** section.
 
 ### 2. Export the IDyOM outputs in `.mat` or `.csv` format
@@ -63,7 +75,7 @@ methods available:
 
 See the following files for more detailed information about the three main functionalities:
 
-- [Run IDyOM documentation](notebooks/runIDyOM_docs.ipynb)
+- [Run IDyOM documentation](notebooks/runIDyOM.md)
 - [Export documentation](notebooks/export_docs.ipynb)
 - [Visualization documentation](notebooks/visualization_docs.ipynb)
 

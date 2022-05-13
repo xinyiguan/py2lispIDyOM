@@ -165,8 +165,6 @@ class BasicAxsGeneration:
         # Access x-axis ---> property shown in time(corresponding onset spot)
         onset_values = np.int_(melody_info.access_properties(['onset']))
         flatten_onset_values = [item for sublist in list(onset_values) for item in sublist]
-        print('flatten_onset_values type: ', type(flatten_onset_values))
-        print(flatten_onset_values)
 
         if selected_property in valid_property_list:
             selected_property_values = np.int_(melody_info.access_properties([selected_property]))
@@ -185,7 +183,6 @@ class BasicAxsGeneration:
         # adjust order of x-axis:
         flatten_selected_property_values = np.array(
             [item for sublist in list(selected_property_values) for item in sublist])
-        print('flatten_selected_property_values: ', flatten_selected_property_values)
         # print('flatten_selected_property_values', type(flatten_selected_property_values))
         # print(flatten_selected_property_values)
 
@@ -458,18 +455,7 @@ class BasicPlot:
 def func():
     experiment_folder_path = 'experiment_history/04-05-22_14.35.26/'
 
-    # BasicPlot.pianoroll_groundtruth_overall_surprisal(
-    #     experiment_folder_path=experiment_folder_path,
-    #     melody_names=['"shanx002"', '"shanx008"'],
-    #     savefig=True,
-    #     showfig=False)
 
-    BasicPlot.surprisal_along_property_in_time(selected_property='cpitch',
-                                               surprisal_source='overall',
-                                               experiment_folder_path=experiment_folder_path,
-                                               melody_names=['"shanx003"'],
-                                               showfig=False,
-                                               savefig=True)
 
     BasicPlot.surprisal_along_property_in_time(selected_property='cpitch',
                                                surprisal_source='overall',

@@ -45,9 +45,12 @@ class IDyOMExperiment:
     def set_parameters(self, **kwargs):
         configuration = self.idyom_config.run_model_configuration
         surface_dict: dict = configuration.get_surface_dict()
+        kw2hide_in_errormsg = ['output_path', 'dataset_id', 'pretraining_id']
+        kw2show = list(surface_dict.keys())
+        kw2show = [ele for ele in kw2show if ele not in kw2hide_in_errormsg]
         for key, value in kwargs.items():
             if key not in surface_dict:
-                raise ValueError(f'parameter \'{key}\' is invalid. Valid parameters are: {list(surface_dict.keys())}')
+                raise ValueError(f'parameter \'{key}\' is invalid. Valid parameters are: {kw2show}')
             configuration.recursive_set_attr(key=key, value=value)
 
     def generate_lisp_script(self, write=True):
@@ -93,7 +96,6 @@ def new_test():
     train_dataset_path = 'dataset/bach_dataset/'
 
     target_viewpoints = ['dur', 'phrase']
-    source_viewpoints = [':select', ('cpitch', 'onset'), 'dur']
     source_viewpoints = ':select'
 
     my_exp = IDyOMExperiment(test_dataset_path=test_dataset_path, pretrain_dataset_path=train_dataset_path)
