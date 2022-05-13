@@ -25,13 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="recursive type check final FINISHED">
-      <change afterPath="$PROJECT_DIR$/notebooks/runIDyOM.md" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="fixed keywords to show in error msg">
+      <change afterPath="$PROJECT_DIR$/notebooks/export_docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/extract_docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/runIDyOM_docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/visualization_docs.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/viz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/export_docs.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM_docs.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/visualization_docs.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +269,7 @@
       <workItem from="1652010494053" duration="1014000" />
       <workItem from="1652011511686" duration="12364000" />
       <workItem from="1652101096727" duration="5691000" />
-      <workItem from="1652355556361" duration="15843000" />
+      <workItem from="1652355556361" duration="21629000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -533,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652389271379</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fixed keywords to show in error msg">
+      <created>1652432191332</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1652432191332</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,7 +576,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactored IDyOM runner module. To check total_command error." />
     <MESSAGE value="refactored init exp history folder func" />
     <MESSAGE value="DatabaseConfiguration input path type error" />
     <MESSAGE value="DatabaseConfiguration input path type error FIXED" />
@@ -590,7 +600,8 @@
     <MESSAGE value="enforce typing check: composite typings not implemented" />
     <MESSAGE value="viz: simple_plot refactored (2 aux added to simplify save figs codes)" />
     <MESSAGE value="recursive type check final FINISHED" />
-    <option name="LAST_COMMIT_MESSAGE" value="recursive type check final FINISHED" />
+    <MESSAGE value="fixed keywords to show in error msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed keywords to show in error msg" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

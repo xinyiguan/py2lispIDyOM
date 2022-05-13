@@ -12,72 +12,49 @@ appropriately install IDyOM on your local machine.
 
 ### Installation
 
+Note you can also download this repo as an alternative to git clone.
+
 ## Functionality and Usage
 
-In summary, py2lispIDyOM currently has three main functionalities:
+In summary, py2lispIDyOM currently has four main functionalities:
 
 ### 1. Run IDyOM
 
-#### 1.1 Initialize experiment
+To start with, you need to 1) initialize the experiment, 2) set model parameters, and 3) run the model.
 
-First, we initialize the IDyOM Experiment by providing the relevant paths. For example,
-
-```
-my_experiment = IDyOMExperiment(test_dataset_path = 'dataset/shanx_dataset/',
-                                pretrain_dataset_path = 'dataset/bach_dataset/')
-```
-
-#### 1.2 Set model parameters
-
-Now, we need to set all the model parameters by using `set_parameters` method.
-
-```
-my_exp.set_parameters(target_viewpoints=['cpitch', 'onset'],
-                      source_viewpoints=['cpitch', 'onset'],
-                      models=':both',
-                      k=1)
-```
-
-#### _Notes:_
+**_Notes:_**
 
 When you run the IDyOM experiment, py2lispIDyOM will automatically create a folder
 (with the timestamp of experiment time as the folder name) logging all data of the current experiment. For details of
 the experiment log folder, see the
 **_Experiment Logger_** section.
 
-### 2. Export the IDyOM outputs in `.mat` or `.csv` format
+After finish running the model, the model output (a `.dat` file will be saved in the current experiment log folder under
+'experiment_output_data_folder/').
 
-Given that IDyOM outputs are available (check if `.dat` file exists under the path `experiment_output_data_folder/`
-in the current experiment log folder), users can extract and export certain properties in
-`.mat` and/or `.csv` formats with the methods `export2mat()` and `export2csv()` respectively.
+From here, you can extract the relevant IDyOM outputs or export them in other formats for further analysis.
 
-A quick example of export the "melody_name", "onset" and "cpitch" data of the two melodies
-'"shanx002"', '"shanx008"' in the experiment `04-05-22_14.35.26` in `.mat` format will look like:
-```
-from export import Export
+### 2. Extract/Access to output data
 
-# define the parameters for the export
-export_mat = Export(experiment_folder_path='experiment_history/04-05-22_14.35.26/',
-                   properties_to_export=['onset', 'cpitch', 'melody_name'],
-                   melody_names=['"shanx002"', '"shanx008"'])
-                   
-export_mat.export2mat()
-```
+### 3. Export Data in other formats
 
-### 3. Plotting for IDyOM data.
+IDyOM outputs can be extracted and exported in `.mat` or `.csv` format.
+
+### 4. Plotting for IDyOM data.
 
 methods available:
 
 - `plot_pianoroll_pitch_distribution_groundtruth`
 - `plot_pianoroll_surprisal`
 
-### Detailed Functionality
+#### Detailed Functionality
 
 See the following files for more detailed information about the three main functionalities:
 
-- [Run IDyOM documentation](notebooks/runIDyOM.md)
-- [Export documentation](notebooks/export_docs.ipynb)
-- [Visualization documentation](notebooks/visualization_docs.ipynb)
+- [Run IDyOM documentation](notebooks/runIDyOM_docs.md)
+- [Extract documentation](notebooks/extract_docs.md)
+- [Export documentation](notebooks/export_docs.md)
+- [Visualization documentation](notebooks/visualization_docs.md)
 
 Examples and tutorial files can be found in the [example](examples) directory.
 
