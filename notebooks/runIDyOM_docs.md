@@ -26,6 +26,8 @@ _Example_:
 my_experiment = IDyOMExperiment(test_dataset_path = 'dataset/shanx_dataset/',
                                 pretrain_dataset_path = 'dataset/bach_dataset/')
 ```
+Note that the `experiment_history_folder_path` is not specified here above. So by default, a folder called '
+experiment_history' will be created to host experiment log folders for each experiment.
 
 ### 2. Set model parameters:
 
@@ -38,7 +40,7 @@ allowed to provide `dataset_id`, `pretraining_ids` and `output_path`.
 The `dataset_id` and `pretraining_ids` are automatically generated and assigned when the user specify
 the `test_dataset_path` and `pretrain_dataset_path` in step 1 initialization.
 
-The `output_path` by default is the 'experiment_output_data_folder/' within your current experiment log folder.
+- The `output_path` by default is the 'experiment_output_data_folder/' within your current experiment log folder.
 
 Valid keyword parameters are:
 
@@ -50,6 +52,7 @@ Valid keyword parameters are:
 `use_resampling_set_cache`, `use_ltms_cache`
 
 _Example_:
+
 Now, we need to set all the model parameters by using `set_parameters` method.
 
 ```
@@ -61,7 +64,7 @@ my_experiment.set_parameters(target_viewpoints=['cpitch', 'onset'],
 
 ### 3 Run IDyOM:
 
-To run the IDyOM model,
+To run the IDyOM model, simply do the following:
 
 ```
 my_experiment.run()
