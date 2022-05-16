@@ -23,7 +23,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from extraction import MelodyInfo, ExperimentInfo
+from modules.extract import MelodyInfo, ExperimentInfo
 
 
 class BasicAxsGeneration:
@@ -453,7 +453,7 @@ class BasicPlot:
 
 
 def func():
-    experiment_folder_path = 'experiment_history/04-05-22_14.35.26/'
+    experiment_folder_path = '../experiment_history/04-05-22_14.35.26/'
 
 
 

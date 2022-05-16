@@ -12,7 +12,12 @@ functionality, see the [README](README.md).
 
 ### 1. Experiment Info
 
+To start, users need to indicate the experiment log folder that you want to work with by providing the log
+path `experiment_folder_path`.
+
 ```python3
+from modules.extract import ExperimentInfo
+
 ExperimentInfo(experiment_folder_path)
 ```
 

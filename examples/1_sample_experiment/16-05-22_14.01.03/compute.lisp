@@ -1,0 +1,5 @@
+(start-idyom)
+(idyom-db:import-data :mid "16-05-22_14.01.03/experiment_input_data_folder/test_dataset/" "TEST_DATASET" 66051622140103)
+(idyom-db:import-data :mid "16-05-22_14.01.03/experiment_input_data_folder/pretrain_dataset/" "PRETRAIN_DATASET" 99051622140103)
+(idyom:idyom 66051622140103 '(cpitch onset) '(cpitch onset) :models :both :pretraining-ids '(99051622140103) :k 1 :detail 3 :output-path "16-05-22_14.01.03/experiment_output_data_folder/" :overwrite nil)
+(quit)

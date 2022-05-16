@@ -7,8 +7,7 @@ import numpy as np
 import pandas as pd
 import scipy.io
 
-import extraction
-from extraction import ExperimentInfo
+from modules.extract import ExperimentInfo, get_all_song_dict
 
 
 @dataclass
@@ -21,7 +20,7 @@ class Export:
         self.dat_file_path = glob(self.experiment_folder_path + 'experiment_output_data_folder/*.dat')[0]
         self.experiment_info = ExperimentInfo(experiment_folder_path=self.experiment_folder_path)
         self.melodies_info_dict = self.experiment_info.melodies_dict
-        self.all_song_dict = extraction.get_all_song_dict(dat_file_path=self.dat_file_path)
+        self.all_song_dict = get_all_song_dict(dat_file_path=self.dat_file_path)
 
     def song_wise_extraction(self, song_dict, extraction_methods):
         single_song_data = []
@@ -119,6 +118,6 @@ class Export:
 
 
 if __name__ == '__main__':
-    Export(experiment_folder_path='experiment_history/04-05-22_14.35.26/',
+    Export(experiment_folder_path='../experiment_history/04-05-22_14.35.26/',
            properties_to_export=['onset', 'cpitch', 'melody_name'],
            melody_names=['"shanx002"', '"shanx008"']).export2csv()
