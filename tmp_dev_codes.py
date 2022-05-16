@@ -5,8 +5,8 @@ Created by xinyiguan on 09.05.22.
 # To plot the folder tree structure:
 
 
-from pathlib import Path
 from itertools import islice
+from pathlib import Path
 
 space = '    '
 branch = '│   '
@@ -50,4 +50,4 @@ def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
 
 
 if __name__ == '__main__':
-    tree(Path.home() / 'pyscratch')
+    tree('experiment_history', level=3)
