@@ -25,16 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/extract_tutorial.md" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="runIDyOM tutorial and readme updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/export_docs.md" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/export_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/extract_docs.md" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/visualization_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM_docs.md" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/runIDyOM_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/visualization_docs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp_dev_codes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tmp_dev_codes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/export_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/export_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/extract_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/visualization_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,7 @@
       <recent name="$PROJECT_DIR$/helper_scripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.tmp_dev_codes">
+  <component name="RunManager" selected="Python.extraction">
     <configuration name="configuration" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,10 +227,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.extraction" />
         <item itemvalue="Python.tmp_dev_codes" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python.viz" />
-        <item itemvalue="Python.extraction" />
         <item itemvalue="Python.configuration" />
       </list>
     </recent_temporary>
@@ -271,7 +269,7 @@
       <workItem from="1652101096727" duration="5691000" />
       <workItem from="1652355556361" duration="24103000" />
       <workItem from="1652644944751" duration="29000" />
-      <workItem from="1652645883163" duration="5770000" />
+      <workItem from="1652645883163" duration="12271000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -560,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652439637408</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="runIDyOM tutorial and readme updated">
+      <created>1652689931683</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1652689931683</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +597,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="DatabaseConfiguration input path type error FIXED" />
     <MESSAGE value="DatabaseConfiguration lisp commands all prepared. Next: generate lisp file" />
     <MESSAGE value="lisp script generation completed" />
     <MESSAGE value="quit command added" />
@@ -617,7 +621,8 @@
     <MESSAGE value="fixed keywords to show in error msg" />
     <MESSAGE value="run idyom docs updated" />
     <MESSAGE value="typo fixed in run idyom docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="typo fixed in run idyom docs" />
+    <MESSAGE value="runIDyOM tutorial and readme updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="runIDyOM tutorial and readme updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -633,7 +638,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652432138409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1652184526635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1652695217957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

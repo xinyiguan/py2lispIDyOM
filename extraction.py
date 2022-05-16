@@ -72,7 +72,7 @@ class MelodyInfo(pd.DataFrame):
         return melody_name_pprint
 
     def get_property_list(self) -> list:
-        property_list = list(self.keys())
+        property_list = self.keys().to_list()
         return property_list
 
     def get_pitch_range(self, padding: typing.Optional[int] = 0):
@@ -130,11 +130,13 @@ class ExperimentInfo:
     def __post_init__(self):
         self.dat_file_path = sorted(glob(self.experiment_folder_path + 'experiment_output_data_folder/*'))[0]
         self.df = pd.read_table(self.dat_file_path, delim_whitespace=True)
-        self.melodies_dict = self.initialize_melody_dict()
+        self.melodies_dict = self.melody_dictionary()
         self.pitch_range = self.get_datasetwise_pitch_range()
 
-    def initialize_melody_dict(self) -> typing.Dict[str, MelodyInfo]:
+    def melody_dictionary(self) -> typing.Dict[str, MelodyInfo]:
         """
+        Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.
+
         :return: a typed dictionary (melody_name, MelodyInfo)
         """
         return_dict = {}
@@ -148,10 +150,12 @@ class ExperimentInfo:
     def access_melodies(self, starting_index=None, ending_index=None,
                         melody_names=None):
         """
-        if all arguments are None => default is to access all melodies in the Experiment class
-        :param starting_index:
-        :param ending_index:
-        :param melody_names:
+        Access specific melodies by index or melody names.
+        If all arguments are None, then the default is to access all melodies in the Experiment class
+
+        :param starting_index: int
+        :param ending_index: int
+        :param melody_names: list of str
         :return: a list of MelodyInfo class objects (selected melodies)
         """
         if melody_names is not None:
@@ -162,16 +166,17 @@ class ExperimentInfo:
         return selected_melodies
 
     def get_datasetwise_pitch_range(self):
+        """
+        Get the pitch range of the entire dataset.
+        :return:  a tuple of int
+        """
         pitches = self.df['cpitch']
         pitch_range = (int(pitches.min()), int(pitches.max()))
         return pitch_range
 
 
-def func():
-    melInfo = ExperimentInfo(
-        experiment_folder_path='experiment_history/04-05-22_14.35.26/').melodies_dict['"shanx040"'].get_property_list()
-
-    print(melInfo)
-
 if __name__ == '__main__':
-    func()
+    experiment_history_folder = 'experiment_history/04-05-22_14.35.26/'
+    my_exp = ExperimentInfo(experiment_history_folder)
+    song = my_exp.access_melodies(starting_index=3, ending_index=6)[0]
+    print(song)

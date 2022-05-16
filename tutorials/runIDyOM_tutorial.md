@@ -6,6 +6,10 @@ functionality, see the [README](README.md).
 ---
 To run the IDyOM model with py2lispIDyOM takes three steps:
 
+- [1. Set experiment configuration](#1-set-experiment-configuration)
+- [2. Set model parameters](#2-set-model-parameters)
+- [3. Run IDyOM](#3-run-idyom)
+
 ### 1. Set experiment configuration:
 
 First, we set the IDyOM experiment configurations by providing the relevant paths.
@@ -79,7 +83,7 @@ my_experiment.set_parameters(target_viewpoints=['cpitch', 'onset'],
                              k=10)
 ```
 
-### 3 Run IDyOM:
+### 3. Run IDyOM:
 
 To run the IDyOM model, simply invoke the following method:
 

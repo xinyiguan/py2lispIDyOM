@@ -20,10 +20,10 @@ In summary, py2lispIDyOM has four main functionalities for research workflow.
 
 See the following files for more detailed information about the three main functionalities:
 
-- [Run IDyOM tutorial](notebooks/runIDyOM_tutorial.md)
-- [Extract tutorial](notebooks/extract_tutorial.md)
-- [Export tutorial](notebooks/export_tutorial.md)
-- [Visualization tutorial](notebooks/visualization_tutorial.md)
+- [Run IDyOM tutorial](tutorials/runIDyOM_tutorial.md)
+- [Extract tutorial](tutorials/extract_tutorial.md)
+- [Export tutorial](tutorials/export_tutorial.md)
+- [Visualization tutorial](tutorials/visualization_tutorial.md)
 
 Examples and tutorial files can be found in the [example](examples) directory.
 
