@@ -25,16 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="runIDyOM tutorial and readme updated">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/2_extract_data-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="extract tutorial and readme updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/.ipynb_checkpoints/2_extract_data-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/extract_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,15 +106,15 @@
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples" />
       <recent name="$PROJECT_DIR$/examples/1_sample_experiment" />
       <recent name="$PROJECT_DIR$/modules" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/examples/sample_experiment" />
-      <recent name="$PROJECT_DIR$/helper_scripts" />
     </key>
   </component>
   <component name="RunManager" selected="Python.2_extract_data">
-    <configuration name="1_run_idyom (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1_run_idyom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,12 +122,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/1_sample_experiment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/sample_experiment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/sample_experiment/1_run_idyom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,12 +144,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/sample_experiment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples/1_sample_experiment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/sample_experiment/1_run_idyom.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/1_run_idyom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,7 +270,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="5010000" />
+      <workItem from="1652710702845" duration="5412000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -573,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652689931683</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="extract tutorial and readme updated">
+      <created>1652715919695</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1652715919695</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +605,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="DatabaseConfiguration lisp commands all prepared. Next: generate lisp file" />
     <MESSAGE value="lisp script generation completed" />
     <MESSAGE value="quit command added" />
     <MESSAGE value="fixed pretraining id in lisp script" />
@@ -630,7 +629,8 @@
     <MESSAGE value="run idyom docs updated" />
     <MESSAGE value="typo fixed in run idyom docs" />
     <MESSAGE value="runIDyOM tutorial and readme updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="runIDyOM tutorial and readme updated" />
+    <MESSAGE value="extract tutorial and readme updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract tutorial and readme updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -39,7 +39,7 @@ To run the IDyOM model with py2lispIDyOM takes three steps:
 
 ### 3. Export Data in other formats
 
-IDyOM outputs can be extracted and exported in `.mat` or `.csv` format.
+Selected IDyOM outputs/properties can be extracted and exported in `.mat` or `.csv` formats.
 
 ### 4. Visualizing IDyOM data.
 
