@@ -3,7 +3,7 @@
 py2lispIDyOM is a Python package for the information dynamics of music ([IDyOM](https://github.com/mtpearce/idyom/))
 model.
 
-## Getting Started
+## Get Started
 
 ### Prerequisites
 
@@ -14,18 +14,17 @@ appropriately install IDyOM on your local machine.
 
 Note you can also download this repo as an alternative to git clone.
 
-## Functionality and Usage
+## Functionality and Usage Overivew
 
 In summary, py2lispIDyOM has four main functionalities for research workflow.
 
-See the following files for more detailed information about the three main functionalities:
+See the following tutorials for more detailed information about the three main functionalities:
 
 - [Run IDyOM tutorial](tutorials/runIDyOM_tutorial.md)
-- [Extract tutorial](tutorials/extract_tutorial.md)
-- [Export tutorial](tutorials/export_tutorial.md)
+- [Extract and export tutorial](tutorials/extract_export_tutorial.md)
 - [Visualization tutorial](tutorials/visualization_tutorial.md)
 
-Examples and tutorial files can be found in the [example](examples) directory.
+See also the [examples](examples/) for more info.
 
 ### 1. Run IDyOM
 
@@ -35,27 +34,27 @@ To run the IDyOM model with py2lispIDyOM takes three steps:
 2) Set model configuration (model parameters, see ... for more detail)
 3) run the experiment.
 
-### 2. Extract/Access to output data
+### 2. Extract and export the data
 
-### 3. Export Data in other formats
+IDyOM writes the outputs of the modelling to a `.dat` file (with space-separated values). This file can be read in
+MATLAB, R and other software for further analysis.
 
-Selected IDyOM outputs/properties can be extracted and exported in `.mat` or `.csv` formats.
+py2lispIDyOM also provides methods to extract certain (single or multiple) IDyOM outputs (for analysis in python)
+and export them in different formats.
 
-### 4. Visualizing IDyOM data.
+For more information about the IDyOM outputs, see [IDyOM Output](https://github.com/mtpearce/idyom/wiki/IDyOM-Output).
 
-methods available:
+### 3. Visualizing IDyOM data.
 
-- `plot_pianoroll_pitch_distribution_groundtruth`
-- `plot_pianoroll_surprisal`
+## About the Experiment Logger:
 
+An experiment log folder (with the timestamp as the folder name) will be automatically created the record all data in
+the current experiment in the `experiment_history/` folder
+(by default, unless the users specify another path in the `experiment_history_folder_path` argument when initializing
+the `IDyOMExperiment`).
 
-
-## Experiment Logger:
-
-An experiment log folder (with the timestamp as the folder name) will be automatically 
-created the record all data in the current experiment in the `experiment_history/` folder 
-(by default, unless the users specify another path in the `experiment_history_folder_path` argument 
-when initializing the `IDyOMExperiment`). 
+This experiment log folder is intended to record all experiment data and contains all necessary data and scripts of the
+experiment that can be shared to reproduce/replicate the experiment results.
 
 The structure of the experiment log folder follows the example below:
 

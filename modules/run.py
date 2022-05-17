@@ -50,7 +50,7 @@ class IDyOMExperiment:
         kw2show = [ele for ele in kw2show if ele not in kw2hide_in_errormsg]
         for key, value in kwargs.items():
             if key not in surface_dict:
-                raise ValueError(f'parameter \'{key}\' is invalid. Valid parameters are: {kw2show}')
+                raise KeyError(f'parameter \'{key}\' is invalid. Valid parameters are: {kw2show}')
             configuration.recursive_set_attr(key=key, value=value)
 
     def generate_lisp_script(self, write=True):

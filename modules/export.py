@@ -43,6 +43,10 @@ class Export:
             os.makedirs(idyom_output_export_folder_path)
         return idyom_output_export_folder_path
 
+    def _get_valid_property_keys(self, melody):
+        valid_property_keys = self.melodies_info_dict[melody].get_property_list()
+        return valid_property_keys
+
     def _get_single_song_property(self, melody, property_name):
         property_array = self.melodies_info_dict[melody].access_properties(property_name).values  # this is np.array
         return property_array
@@ -56,8 +60,12 @@ class Export:
         """This function returns a np.array of properties values for each selected songs."""
         property_data_in_songs = []
         for index, melody in enumerate(selected_songs):
-            property_data = self._get_single_song_property(melody=melody, property_name=property_name)
-            property_data_in_songs.append(property_data)
+            valid_properties = self._get_valid_property_keys(melody=melody)
+            if property_name in valid_properties:
+                property_data = self._get_single_song_property(melody=melody, property_name=property_name)
+                property_data_in_songs.append(property_data)
+            else:
+                raise KeyError(f'property \'{property_name}\' is invalid. Valid properties are: {valid_properties}')
         property_data_in_songs = np.array(property_data_in_songs, dtype=object)
         return property_data_in_songs
 
@@ -73,11 +81,23 @@ class Export:
                              mdict={property_name: np.array(property_data_in_songs)})
         print('Exported data to ' + output_path)
 
+    def export_properties_by_song_2mat(self, property_names_list, melody, output_path):
+        """This func exports properties of one song."""
+        melody_name_pp = melody.replace('"', '')
+        for i, property_name in enumerate(property_names_list):
+            property_data_in_songs = self._get_single_song_property(melody=melody, property_name=property_name)
+            property_name_pp = property_name.replace('.', '_')
+            full_outfile_name = melody_name_pp + '_' + property_name_pp
+            full_outfile_name = full_outfile_name.replace('-', '')
+            scipy.io.savemat(output_path + full_outfile_name + '.mat',
+                             mdict={property_name_pp: np.array(property_data_in_songs)})
+        print('Exported data to ' + output_path)
+
     def export_by_song_2csv(self, melody_name, single_song_df_data: pd.DataFrame, output_path):
         melody_name = melody_name.replace('"', '')
         csv_file_path = output_path + melody_name + '.csv'
         single_song_df_data.to_csv(path_or_buf=csv_file_path, index=False, header=True)
-        print('Data saved in ' + csv_file_path)
+        # print('Data saved in ' + csv_file_path)
 
     def export2mat(self):
         """
@@ -89,8 +109,10 @@ class Export:
 
         if property_names:
             if self.melody_names:
-                self.export_by_property_2mat(property_names_list=property_names, selected_songs=self.melody_names,
-                                             output_path=export_folder_path)
+                for index, melody in enumerate(self.melody_names):
+                    self.export_properties_by_song_2mat(property_names_list=property_names,
+                                                        melody=melody,
+                                                        output_path=export_folder_path)
 
             else:
                 melody_names = list(self.melodies_info_dict.keys())
@@ -116,8 +138,4 @@ class Export:
                 self.export_by_song_2csv(melody_name=melody, single_song_df_data=single_song_df_data,
                                          output_path=export_folder_path)
 
-
-if __name__ == '__main__':
-    Export(experiment_folder_path='../experiment_history/04-05-22_14.35.26/',
-           properties_to_export=['onset', 'cpitch', 'melody_name'],
-           melody_names=['"shanx002"', '"shanx008"']).export2csv()
+        print('Exported data to ' + export_folder_path)

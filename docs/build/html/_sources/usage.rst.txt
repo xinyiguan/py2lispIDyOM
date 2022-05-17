@@ -1,8 +1,0 @@
-Usage
-=====
-
-Installation
-------------
-To use py2lispIDyOM, first properly install the IDyOM model on your local machine.
-
-
