@@ -67,6 +67,14 @@ class MelodyInfo(pd.DataFrame):
         cropped_df = self[properties]
         return cropped_df.mean(axis=0)
 
+    def get_onset_time_in_seconds(self):
+        onset_values = np.int_(self.access_properties(['onset']))
+        base_onset_values = onset_values / 24  # idyom uses basic time units, quarter note =24
+        tempo = np.int_(self.access_properties(['tempo']))
+        bpm = (60 * 1000000) / tempo
+        onset_time_in_sec = (bpm / 60) * base_onset_values
+        return onset_time_in_sec
+
     def get_melody_name_pprint(self) -> str:
         melody_name_pprint = str(self.access_properties(['melody.name']).to_numpy()[0][0]).replace('"', '')
         return melody_name_pprint

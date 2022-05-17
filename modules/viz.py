@@ -41,12 +41,13 @@ class BasicAxsGeneration:
                              f'Valid properties are: {valid_property_list}')
 
         onset_values = np.int_(melody_info.access_properties(['onset']))
+        # onset_in_seconds = melody_info.get_onset_time_in_seconds()
         ax.plot(onset_values, selected_property_values, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Time')
+        ax.set_xlabel('Onsets')
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel(f'{selected_property}')
         return ax
@@ -216,7 +217,10 @@ class Auxiliary:
                              melody_names: List[str] = None,
                              starting_index: int = None,
                              ending_index: int = None,
-                             savefig: bool = True):
+                             savefig: bool = True,
+                             fig_format: str = 'eps',
+                             dpi: int = '400'
+                             ):
 
         experiment_info = ExperimentInfo(experiment_folder_path=experiment_folder_path)
         all_melody_names = list(experiment_info.melodies_dict.keys())
@@ -231,7 +235,9 @@ class Auxiliary:
                 Auxiliary.save_one_fig(plot_type_folder_name=plot_type_folder_name,
                                        experiment_folder_path=experiment_folder_path,
                                        melody_name_pprint=melody_name_pprint,
-                                       fig=fig)
+                                       fig=fig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
                 print(saved_msg)
 
         if melody_names:
@@ -250,11 +256,13 @@ class Auxiliary:
     def save_one_fig(plot_type_folder_name: str,
                      experiment_folder_path: str,
                      melody_name_pprint: str,
-                     fig):
+                     fig,
+                     fig_format: str = 'eps',
+                     dpi: int = 400):
         output_path = experiment_folder_path + 'plots/' + plot_type_folder_name + '/'
         if not os.path.exists(output_path):
             os.makedirs(output_path)
-        fig.savefig(fname=output_path + str(melody_name_pprint) + '.eps', format='eps', dpi=400)
+        fig.savefig(fname=output_path + str(melody_name_pprint) + '.eps', format=fig_format, dpi=dpi)
 
 
 class BasicPlot:
@@ -294,15 +302,19 @@ class BasicPlot:
                                        melody_names=melody_names,
                                        starting_index=starting_index,
                                        ending_index=ending_index,
-                                       savefig=savefig)
+                                       savefig=savefig,
+                                       fig_format='eps',
+                                       dpi=600)
 
     @staticmethod
     def pianoroll_pitch_prediction_groundtruth(experiment_folder_path: str,
                                                melody_names: List[str] = None,
                                                starting_index: int = None,
                                                ending_index: int = None,
-                                               savefig: bool = False,
-                                               showfig: bool = False):
+                                               savefig: bool = True,
+                                               showfig: bool = False,
+                                               fig_format: str = 'eps',
+                                               dpi: int = 400):
         """
         This function returns and saves a pair of figures (the predicted pitch distribution and the ground truth) side by side.
         If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
@@ -345,7 +357,10 @@ class BasicPlot:
                                        melody_names=melody_names,
                                        starting_index=starting_index,
                                        ending_index=ending_index,
-                                       savefig=savefig)
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi
+                                       )
 
     @staticmethod
     def pianoroll_groundtruth_overall_surprisal(experiment_folder_path: str,
@@ -353,10 +368,14 @@ class BasicPlot:
                                                 starting_index: int = None,
                                                 ending_index: int = None,
                                                 savefig: bool = True,
-                                                showfig: bool = False):
+                                                showfig: bool = False,
+                                                fig_format: str = 'eps',
+                                                dpi: int = 400):
         """
         This function plots two axs: ground truth pianoroll on the top and the surprisal
         line plot on the bottom.
+        :param fig_format:
+        :param dpi:
         :param showfig:
         :param savefig:
         :param experiment_folder_path:
@@ -392,7 +411,9 @@ class BasicPlot:
                                        melody_names=melody_names,
                                        starting_index=starting_index,
                                        ending_index=ending_index,
-                                       savefig=savefig)
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
 
     @staticmethod
     def surprisal_along_property_in_time(selected_property: str,
@@ -402,13 +423,16 @@ class BasicPlot:
                                          starting_index: int = None,
                                          ending_index: int = None,
                                          savefig: bool = True,
-                                         showfig: bool = False):
+                                         showfig: bool = False,
+                                         fig_format: str = 'eps',
+                                         dpi: int = 400):
 
         """
         This function plots ...
         y-axis is the surprisal value (this can be either the 'overall' surprisal or the 'property' surprisal)
         x-axis is the property value
 
+        :param fig_format:
         :param surprisal_source:
         :param selected_property:
         :param experiment_folder_path:
@@ -449,20 +473,22 @@ class BasicPlot:
                                        melody_names=melody_names,
                                        starting_index=starting_index,
                                        ending_index=ending_index,
-                                       savefig=savefig)
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
 
 
 def func():
     experiment_folder_path = '../experiment_history/04-05-22_14.35.26/'
 
+    BasicPlot.pianoroll_pitch_prediction_groundtruth(
+        experiment_folder_path=experiment_folder_path,
+        melody_names=['"shanx002"'],
+        savefig=True,
+        showfig=False,
+        dpi=200
+    )
 
-
-    BasicPlot.surprisal_along_property_in_time(selected_property='cpitch',
-                                               surprisal_source='overall',
-                                               experiment_folder_path=experiment_folder_path,
-                                               melody_names=['"shanx008"'],
-                                               showfig=False,
-                                               savefig=True)
 
 if __name__ == '__main__':
     func()
