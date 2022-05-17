@@ -25,82 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme update">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/3_export_data-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_export_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/.ipynb_checkpoints/2_extract_data-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/.ipynb_checkpoints/3_export_data-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-001.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-002.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-003.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-004.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-005.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-006.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-007.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-008.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-009.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-010.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-011.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-012.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-013.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-014.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_csv/chor-015.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor001_entropy.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor001_information_content.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor001_melody_name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor003_entropy.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor003_information_content.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/chor003_melody_name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/entropy.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/information.content.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/16-05-22_14.01.03/outputs_in_mat/melody.name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/shanx002_cpitch.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/shanx002_melody.name.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/shanx002_onset.mat" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="extract_export tutorial updated, export module added error msg">
       <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/environment.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/index.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/modules.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/doctrees/usage.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/.buildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_sources/index.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_sources/modules.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_sources/usage.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/alabaster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/basic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/doctools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/documentation_options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/jquery-3.5.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/language_data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/pygments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/searchtools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/underscore-1.13.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/_static/underscore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/genindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/objects.inv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/searchindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/html/usage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/make.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/conf.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/source/modules.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/cpitch.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment_history/04-05-22_14.35.26/outputs_in_mat/onset.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/export_tutorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/extract_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_export_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/3_export_data.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +270,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="20566000" />
+      <workItem from="1652710702845" duration="20786000" />
     </task>
     <task id="LOCAL-00001" summary="tested">
       <created>1624974449749</created>
@@ -653,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652716333648</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="extract_export tutorial updated, export module added error msg">
+      <created>1652793183378</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1652793183378</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +619,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="quit command added" />
     <MESSAGE value="fixed pretraining id in lisp script" />
     <MESSAGE value="checked:DatabaseConfiguration hidden from user input (auto extracted from RunModelConfiguration)" />
     <MESSAGE value="interative mode: run_start_idyom_command fini" />
@@ -710,7 +643,8 @@
     <MESSAGE value="runIDyOM tutorial and readme updated" />
     <MESSAGE value="extract tutorial and readme updated" />
     <MESSAGE value="readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
+    <MESSAGE value="extract_export tutorial updated, export module added error msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract_export tutorial updated, export module added error msg" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
