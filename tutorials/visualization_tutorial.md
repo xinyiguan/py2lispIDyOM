@@ -79,7 +79,7 @@ BasicPlot.simple_plot(selected_idyom_output='information.content',
                       showfig=True)
 ```
 
-![simple_plot_chor_003](tutorials/tutorial_plots_demo/chor-003.png)
+![simple_plot_chor_003](tutorial_plots_demo/chor-003.png)
 
 ### 2. pianoroll_pitch_prediction_groundtruth
 
@@ -133,7 +133,7 @@ BasicPlot.pianoroll_pitch_prediction_groundtruth(
 
 ```
 
-![pitch_pre_groundtruth_chor_008](tutorials/tutorial_plots_demo/chor-008.png)
+![pitch_pre_groundtruth_chor_008](tutorial_plots_demo/chor-008.png)
 
 ### 3. pianoroll_groundtruth_overall_surprisal
 
@@ -169,7 +169,7 @@ BasicPlot.pianoroll_groundtruth_overall_surprisal(
 
 ```
 
-![pianoroll_surprisal_chor_010](tutorials/tutorial_plots_demo/chor-010.png)
+![pianoroll_surprisal_chor_010](tutorial_plots_demo/chor-010.png)
 
 
 
