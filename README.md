@@ -1,4 +1,4 @@
-# py2lispIDyOM: A Python interface for IDyOM
+# py2lispIDyOM: A Python package for IDyOM
 
 py2lispIDyOM is a Python package for the information dynamics of music ([IDyOM](https://github.com/mtpearce/idyom/))
 model.
@@ -59,11 +59,13 @@ IDyOM writes the outputs of the modelling to a `.dat` file (with space-separated
 MATLAB, R and other software for further analysis.
 
 py2lispIDyOM also provides methods to extract certain (single or multiple) IDyOM outputs (for analysis in python)
-and export them in different formats.
+and/or export them in different formats.
 
 For more information about the IDyOM outputs, see [IDyOM Output](https://github.com/mtpearce/idyom/wiki/IDyOM-Output).
 
 ### 3. Visualizing IDyOM data
+
+py2lispIDyOM provides some useful plotting tools to help visualize the IDyOM output data.
 
 ## About the Experiment Logger:
 
