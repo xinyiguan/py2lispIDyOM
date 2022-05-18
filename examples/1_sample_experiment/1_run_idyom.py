@@ -1,6 +1,14 @@
 """
 This is a sample script to show how to configure and run the IDyOM model.
 
+In this example,
+
+- We will have the model pretrain on a chinese corpus ('shanx_dataset/') and test the model on the european corpus ('bach_dataset/').
+
+- The viewpoints to predict (target viewpoint) and the viewpoints to use in prediction (source viewpoint) are both cpitch and onset.
+
+- We will use the ':both' model, and we don't want resampling (i.e., k=1).
+
 For more detailed descriptions of the "run IDyOM" functionality, see the 'tutorials/runIDyOM_tutorial.md'
 """
 

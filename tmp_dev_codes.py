@@ -50,4 +50,4 @@ def tree(dir_path: Path, level: int = -1, limit_to_directories: bool = False,
 
 
 if __name__ == '__main__':
-    tree('experiment_history', level=3)
+    tree('examples/1_sample_experiment/16-05-22_14.01.03', level=4)
