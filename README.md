@@ -8,10 +8,14 @@ model.
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+
+
 - [Functionality and Usage](#functionality-and-usage)
   - [1. Run IDyOM](#1-run-idyom)
   - [2. Extract and export the data](#2-extract-and-export-the-data)
   - [3. Visualizing IDyOM data](#3-visualizing-idyom-data)
+
+
 - [About the Experiment Logger](#about-the-experiment-logger)
 
 ---

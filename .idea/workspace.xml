@@ -25,26 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme typo">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/4_viz-checkpoint.ipynb" beforeDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated naming and reformating">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2a_extract_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/3_export_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2b_export_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/4_viz.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/4_viz.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/sample_exp_README.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/sample_exp_README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +269,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="53324000" />
-    </task>
-    <task id="LOCAL-00006" summary="refactored the viz module -v2, initial commit">
-      <created>1651142970699</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1651142970699</updated>
+      <workItem from="1652710702845" duration="53467000" />
     </task>
     <task id="LOCAL-00007" summary="refactored the extraction module, initial commit">
       <created>1651143106794</created>
@@ -632,7 +607,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652888178575</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="updated naming and reformating">
+      <created>1652890016195</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1652890016195</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +646,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="export modules completed: 2csv, 2mat" />
     <MESSAGE value="two types of figs completed" />
     <MESSAGE value="refactored parameters.py" />
     <MESSAGE value="refactor: user interface not implemented" />
@@ -689,7 +670,8 @@
     <MESSAGE value="readme update" />
     <MESSAGE value="delete redundant files" />
     <MESSAGE value="readme typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme typo" />
+    <MESSAGE value="updated naming and reformating" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated naming and reformating" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
