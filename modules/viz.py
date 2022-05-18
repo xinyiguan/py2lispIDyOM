@@ -1,18 +1,9 @@
 """
-Viz arch:
----------
-
-BasicPlot.simple_plot(experiment_folder_path: str,
-                      melody_names: List[str] = None,
-                      starting_index: int = None,
-                      ending_index: int = None
-                      property_to_plot: Literal[str],)
-
 TODO:
-* ax_surprisal_along_property bug:
+1. ax_surprisal_along_property bug:
         secondary axis
-1. plot_overall_surprisal_entropy
-
+2. surprisal_along_property_in_time
+    currently not available
 
 """
 
@@ -29,27 +20,30 @@ from modules.extract import MelodyInfo, ExperimentInfo
 class BasicAxsGeneration:
 
     @staticmethod
-    def generic_property_along_time(ax: matplotlib.axes.Axes,
-                                    melody_info: MelodyInfo,
-                                    selected_property: str,
-                                    color=None):
+    def generic_idyom_output_along_time(ax: matplotlib.axes.Axes,
+                                        melody_info: MelodyInfo,
+                                        selected_idyom_output: str,
+                                        color=None):
         valid_property_list = melody_info.get_property_list()
-        if selected_property in valid_property_list:
-            selected_property_values = np.int_(melody_info.access_properties([selected_property]))
+        if selected_idyom_output in valid_property_list:
+            selected_property_values = melody_info.access_properties([selected_idyom_output]).values.tolist()
+            flatten_selected_property_values = [item for sublist in selected_property_values for item in sublist]
         else:
-            raise ValueError(f'selected_property \'{selected_property}\' is invalid. '
-                             f'Valid properties are: {valid_property_list}')
+            raise ValueError(f'selected_idyom_output \'{selected_idyom_output}\' is invalid. '
+                             f'Valid outputs are: {valid_property_list}')
 
-        onset_values = np.int_(melody_info.access_properties(['onset']))
-        # onset_in_seconds = melody_info.get_onset_time_in_seconds()
-        ax.plot(onset_values, selected_property_values, color=color)
+        onset_values = np.int_(melody_info.access_properties(['onset']).values.tolist())
+        onset_in_beat = onset_values / 24
+        flatten_onset_in_beat = [item for sublist in onset_in_beat for item in sublist]
+        ax.plot(flatten_onset_in_beat, flatten_selected_property_values, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Onsets')
+        ax.set_xlabel('Time in beat')
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel(f'{selected_property}')
+        ax.set_ylabel(f'{selected_idyom_output}')
+        ax.set_yscale('linear')
         return ax
 
     @staticmethod
@@ -74,6 +68,7 @@ class BasicAxsGeneration:
 
         ax.imshow(colored_image, origin='lower', aspect='auto',
                   extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
+        # ax.axis('image')
         ax.set_xlabel('Time (beat)')
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel('Pitch (MIDI number)')
@@ -87,6 +82,7 @@ class BasicAxsGeneration:
         pianoroll_distribution_array = melody_info.get_pianoroll_pitch_distribution()
         ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
                   extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
+        # ax.axis('image')
         ax.title.set_text('Pitch Prediction')
         ax.set_xlabel('Time (beat)')
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
@@ -160,18 +156,12 @@ class BasicAxsGeneration:
             formatted_surprisal_source = surprisal_source + '.information.content'
 
         valid_surprisal_source = list(melody_info.keys()) + ['overall']
-        # print('valid_surprisal_source: ', valid_surprisal_source)
         valid_property_list = melody_info.get_property_list()
 
-        # Access x-axis ---> property shown in time(corresponding onset spot)
+        # Access bottom x-axis ---> onset shown in beat
         onset_values = np.int_(melody_info.access_properties(['onset']))
-        flatten_onset_values = [item for sublist in list(onset_values) for item in sublist]
-
-        if selected_property in valid_property_list:
-            selected_property_values = np.int_(melody_info.access_properties([selected_property]))
-        else:
-            raise ValueError(f'selected_property \'{selected_property}\' is invalid. '
-                             f'Valid properties are: {valid_property_list}')
+        onset_in_beat = onset_values / 24
+        flatten_onset_in_beat = [item for sublist in list(onset_in_beat) for item in sublist]
 
         # Access y-axis ---> surprisal_source
         if formatted_surprisal_source in melody_info.keys():
@@ -179,31 +169,34 @@ class BasicAxsGeneration:
             flatten_surprisal_source_values = [item for sublist in list(surprisal_source_values) for item in sublist]
         else:
             raise ValueError(f'surprisal_source \'{surprisal_source}\' is invalid. '
-                             'Refer to your target viewpoint setting for valid surprisal source.')
+                             f'Valid surprisal_source are \'{valid_surprisal_source}\'. ')
 
-        # adjust order of x-axis:
-        flatten_selected_property_values = np.array(
-            [item for sublist in list(selected_property_values) for item in sublist])
-        # print('flatten_selected_property_values', type(flatten_selected_property_values))
-        # print(flatten_selected_property_values)
+        # Access top x-axis ---> property values:
+        if selected_property in valid_property_list:
+            selected_property_values = np.int_(melody_info.access_properties([selected_property]))
+            flatten_selected_property_values = np.array(
+                [item for sublist in list(selected_property_values) for item in sublist])
+        else:
+            raise ValueError(f'selected_property \'{selected_property}\' is invalid. '
+                             f'Valid properties are: {valid_property_list}')
 
-        ax.scatter(flatten_onset_values, flatten_surprisal_source_values, color=color)
-        ax_twin = ax.twiny()
-        ax_twin.scatter(flatten_selected_property_values, flatten_surprisal_source_values, color='green')
-
-        ax.margins(x=0.03)
-        ax.margins(y=0.03)
-        # ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-
-        ax.set_xticks(ticks=flatten_onset_values)
-        ax.set_xticklabels(labels=flatten_onset_values)
-        ax_twin.set_xticks(ticks=flatten_selected_property_values)
-        ax_twin.set_xticklabels(labels=flatten_selected_property_values)
-
-        ax_twin.set_xlabel(f'{selected_property}')
-        ax.set_xlabel('onset')
-        ax.set_ylabel(f'{formatted_surprisal_source}')
+        # ax.scatter(onset_in_beat, flatten_surprisal_source_values, color=color)
+        # ax2 = ax.twiny()
+        # ax2.scatter(flatten_selected_property_values, flatten_surprisal_source_values, color='green')
+        #
+        # ax.margins(x=0.03)
+        # ax.margins(y=0.03)
+        # # ax.spines['top'].set_visible(False)
+        # ax.spines['right'].set_visible(False)
+        #
+        # ax.set_xticks(ticks=flatten_onset_in_beat)
+        # ax.set_xticklabels(labels=flatten_onset_in_beat)
+        # ax2.set_xticks(ticks=flatten_selected_property_values)
+        # ax2.set_xticklabels(labels=flatten_selected_property_values)
+        #
+        # ax2.set_xlabel(f'{selected_property}')
+        # ax.set_xlabel('onset')
+        # ax.set_ylabel(f'{formatted_surprisal_source}')
 
         return ax
 
@@ -212,14 +205,14 @@ class Auxiliary:
 
     @staticmethod
     def batch_melodies_plots(plot_method_func,
+                             fig_format: str,
+                             dpi: float,
                              plot_type_folder_name: str,
                              experiment_folder_path: str,
                              melody_names: List[str] = None,
                              starting_index: int = None,
                              ending_index: int = None,
                              savefig: bool = True,
-                             fig_format: str = 'eps',
-                             dpi: int = '400'
                              ):
 
         experiment_info = ExperimentInfo(experiment_folder_path=experiment_folder_path)
@@ -257,37 +250,41 @@ class Auxiliary:
                      experiment_folder_path: str,
                      melody_name_pprint: str,
                      fig,
-                     fig_format: str = 'eps',
-                     dpi: int = 400):
+                     fig_format: str,
+                     dpi: float):
         output_path = experiment_folder_path + 'plots/' + plot_type_folder_name + '/'
         if not os.path.exists(output_path):
             os.makedirs(output_path)
-        fig.savefig(fname=output_path + str(melody_name_pprint) + '.eps', format=fig_format, dpi=dpi)
+        fig.savefig(fname=output_path + str(melody_name_pprint) + '.' + fig_format, format=fig_format, dpi=dpi)
 
 
 class BasicPlot:
 
     @staticmethod
-    def simple_plot(selected_property: str,
+    def simple_plot(selected_idyom_output: str,
                     experiment_folder_path: str,
                     melody_names: List[str] = None,
                     starting_index: int = None,
                     ending_index: int = None,
                     savefig: bool = True,
-                    showfig: bool = False):
+                    showfig: bool = False,
+                    fig_format: str = 'png',
+                    dpi: float = 400,
+                    figsize: tuple = (10, 5)):
 
-        plot_type_folder_name = 'simple_plot_' + selected_property
+        plot_type_folder_name = 'simple_plot_' + selected_idyom_output
 
         def _generic_property_along_time(melody_info: MelodyInfo,
                                          show_single_fig: bool = showfig) -> plt.Figure:
 
             melody_name_pprint = melody_info.get_melody_name_pprint()
-            fig, (ax_generic_property) = plt.subplots(1, 1, figsize=(8, 5), dpi=400, sharex='col')
+            fig, (ax_generic_property) = plt.subplots(nrows=1, ncols=1, figsize=figsize, dpi=dpi, sharex='col')
 
-            fig.suptitle(selected_property + '\n\n Melody: ' + melody_name_pprint, fontsize=15)
-            BasicAxsGeneration.generic_property_along_time(ax_generic_property,
-                                                           melody_info=melody_info,
-                                                           selected_property=selected_property)
+            fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint,
+                         fontsize=15)
+            BasicAxsGeneration.generic_idyom_output_along_time(ax_generic_property,
+                                                               melody_info=melody_info,
+                                                               selected_idyom_output=selected_idyom_output)
             plt.tight_layout()
             if show_single_fig is True:
                 plt.show()
@@ -303,8 +300,8 @@ class BasicPlot:
                                        starting_index=starting_index,
                                        ending_index=ending_index,
                                        savefig=savefig,
-                                       fig_format='eps',
-                                       dpi=600)
+                                       fig_format=fig_format,
+                                       dpi=dpi)
 
     @staticmethod
     def pianoroll_pitch_prediction_groundtruth(experiment_folder_path: str,
@@ -313,13 +310,21 @@ class BasicPlot:
                                                ending_index: int = None,
                                                savefig: bool = True,
                                                showfig: bool = False,
-                                               fig_format: str = 'eps',
-                                               dpi: int = 400):
+                                               fig_format: str = 'png',
+                                               dpi: float = 400,
+                                               nrows: int = 2,
+                                               ncols: int = 1,
+                                               figsize: tuple = (10, 10)):
         """
         This function returns and saves a pair of figures (the predicted pitch distribution and the ground truth) side by side.
         If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
         or the starting/ending index in the melody list.
 
+        :param nrows:
+        :param ncols:
+        :param figsize:
+        :param dpi:
+        :param fig_format:
         :param showfig:
         :param savefig:
         :param experiment_folder_path: the path to your experiment folder
@@ -335,7 +340,7 @@ class BasicPlot:
 
             melody_name_pprint = melody_info.get_melody_name_pprint()
 
-            fig, (ax_distribution, ax_groundtruth) = plt.subplots(1, 2, figsize=(10, 5), dpi=400)
+            fig, (ax_distribution, ax_groundtruth) = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize, dpi=dpi)
             fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name_pprint)
 
             BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
@@ -369,11 +374,13 @@ class BasicPlot:
                                                 ending_index: int = None,
                                                 savefig: bool = True,
                                                 showfig: bool = False,
-                                                fig_format: str = 'eps',
-                                                dpi: int = 400):
+                                                fig_format: str = 'png',
+                                                dpi: float = 400,
+                                                figsize: tuple = (10, 5)):
         """
         This function plots two axs: ground truth pianoroll on the top and the surprisal
         line plot on the bottom.
+        :param figsize:
         :param fig_format:
         :param dpi:
         :param showfig:
@@ -391,8 +398,8 @@ class BasicPlot:
 
             melody_name_pprint = melody_info.get_melody_name_pprint()
 
-            fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=(8, 5), dpi=400, sharex='col')
-            fig.suptitle('IDyOM surprisal \n\n Melody: ' + melody_name_pprint)
+            fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=figsize, dpi=dpi, sharex='col')
+            fig.suptitle('IDyOM Information Content (Surprisal) \n\n Melody: ' + melody_name_pprint)
 
             BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
             BasicAxsGeneration.surprisal_continuous(ax_surprisal, melody_info=melody_info)
@@ -424,14 +431,15 @@ class BasicPlot:
                                          ending_index: int = None,
                                          savefig: bool = True,
                                          showfig: bool = False,
-                                         fig_format: str = 'eps',
-                                         dpi: int = 400):
+                                         fig_format: str = 'png',
+                                         dpi: float = 400):
 
         """
         This function plots ...
         y-axis is the surprisal value (this can be either the 'overall' surprisal or the 'property' surprisal)
         x-axis is the property value
 
+        :param dpi:
         :param fig_format:
         :param surprisal_source:
         :param selected_property:
@@ -448,7 +456,7 @@ class BasicPlot:
         def _surprisal_along_property(melody_info: MelodyInfo,
                                       show_single_fig: bool = showfig) -> plt.Figure:
             melody_name_pprint = melody_info.get_melody_name_pprint()
-            fig, (ax_surprisal_along_property) = plt.subplots(1, 1, figsize=(8, 5), dpi=400, sharex='col')
+            fig, (ax_surprisal_along_property) = plt.subplots(1, 1, figsize=(8, 5), dpi=dpi, sharex='col')
 
             fig.suptitle(
                 surprisal_source + ' surprisal for ' + selected_property + '\n\n Melody: ' + melody_name_pprint,
@@ -476,19 +484,3 @@ class BasicPlot:
                                        savefig=savefig,
                                        fig_format=fig_format,
                                        dpi=dpi)
-
-
-def func():
-    experiment_folder_path = '../experiment_history/04-05-22_14.35.26/'
-
-    BasicPlot.pianoroll_pitch_prediction_groundtruth(
-        experiment_folder_path=experiment_folder_path,
-        melody_names=['"shanx002"'],
-        savefig=True,
-        showfig=False,
-        dpi=200
-    )
-
-
-if __name__ == '__main__':
-    func()

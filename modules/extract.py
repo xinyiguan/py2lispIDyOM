@@ -83,7 +83,7 @@ class MelodyInfo(pd.DataFrame):
         property_list = self.keys().to_list()
         return property_list
 
-    def get_pitch_range(self, padding: typing.Optional[int] = 0):
+    def get_pitch_range(self, padding: typing.Optional[int] = 5):
         pitches = self.access_properties(['cpitch'])
         max_pitch = int(pitches.max())
         min_pitch = int(pitches.min())
