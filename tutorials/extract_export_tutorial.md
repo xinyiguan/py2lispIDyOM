@@ -32,7 +32,7 @@ analysis in python.
 To start, users need to indicate the experiment log folder that you want to work with by providing the log
 path `experiment_folder_path`.
 
-```python3
+``` python3
 ExperimentInfo(experiment_folder_path)
 ```
 
@@ -56,7 +56,7 @@ ExperimentInfo(experiment_folder_path)
 Example:
 
 ```python3
-from modules.extract import ExperimentInfo
+from py2lispIDyOM.extract import ExperimentInfo
 
 my_experiment = ExperimentInfo(experiment_folder_path='examples/1_sample_experiment/16-05-22_14.01.03/')
 
@@ -77,10 +77,6 @@ selected_melody_2 = my_experiment.access_melodies(starting_index=0,
 For each melody in the experiment, all data are stored in the `MelodyInfo` class which is essentially a panda.DataFrame.
 To create an instance of `MelodyInfo`, we can use `ExperimentInfo.melodies_dict`, or `ExperimentInfo.access_melodies` as
 showed above.
-
-```python3
-MelodyInfo()
-```
 
 **Methods:**
 
@@ -117,7 +113,7 @@ For more examples, see also the [Jupyter Notebook examples](examples/1_sample_ex
 py2lispIDyOM also provides methods to **export** certain properties of the IDyOM outputs in different formats (`.mat`
 and `.csv`).
 
-```python3
+``` python3
 Export(experiment_folder_path,
        properties_to_export,
        melody_names=None)
@@ -144,7 +140,7 @@ A quick example of export the "melody_name", "onset" and "cpitch" data of the tw
 '"chor-001"', '"chor-002"' in the experiment `16-05-22_14.01.03' `to `.mat` format will look like:
 
 ```python3
-from modules.export import Export
+from py2lispIDyOM.export import Export
 
 # define the parameters for the export
 export_mat = Export(experiment_folder_path='examples/1_sample_experiment/16-05-22_14.01.03/',

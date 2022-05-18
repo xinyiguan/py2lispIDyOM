@@ -3,7 +3,20 @@
 py2lispIDyOM is a Python package for the information dynamics of music ([IDyOM](https://github.com/mtpearce/idyom/))
 model.
 
-## Get Started
+## Table of Content
+
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Functionality and Usage](#functionality-and-usage)
+  - [1. Run IDyOM](#1-run-idyom)
+  - [2. Extract and export the data](#2-extract-and-export-the-data)
+  - [3. Visualizing IDyOM data](#3-visualizing-idyom-data)
+- [About the Experiment Logger](#about-the-experiment-logger)
+
+---
+
+## Getting Started
 
 ### Prerequisites
 
@@ -12,9 +25,11 @@ appropriately install IDyOM on your local machine.
 
 ### Installation
 
-Note you can also download this repo as an alternative to git clone.
+The code is compatible with >=Python 3.8.
 
-## Functionality and Usage Overivew
+To use py2lispIDyOM, you can download this repo or use git clone.
+
+## Functionality and Usage
 
 In summary, py2lispIDyOM has four main functionalities for research workflow.
 
@@ -44,7 +59,7 @@ and export them in different formats.
 
 For more information about the IDyOM outputs, see [IDyOM Output](https://github.com/mtpearce/idyom/wiki/IDyOM-Output).
 
-### 3. Visualizing IDyOM data.
+### 3. Visualizing IDyOM data
 
 ## About the Experiment Logger:
 

@@ -69,8 +69,8 @@ Let's plot information content (surprisal) values of the melody named '"chor-003
 experiment `16-05-22_14.01.03/` .
 
 ```python3
-# Import relevant modules
-from modules.viz import BasicPlot
+# Import relevant py2lispIDyOM
+from py2lispIDyOM.viz import BasicPlot
 
 # Set parameters
 BasicPlot.simple_plot(selected_idyom_output='information.content',
@@ -117,8 +117,8 @@ Let's plot the 8th melody in the experiment logger `16-05-22_14.01.03/`.
 In this example, we want to show the subplots side-by-side, and will need to ajust the figure size accordingly.
 
 ```python3
-# Import relevant modules
-from modules.viz import BasicPlot
+# Import relevant py2lispIDyOM
+from py2lispIDyOM.viz import BasicPlot
 
 # Set parameters
 BasicPlot.pianoroll_pitch_prediction_groundtruth(
@@ -130,7 +130,7 @@ BasicPlot.pianoroll_pitch_prediction_groundtruth(
   nrows=1,  # -> the figure will have one row of subplots
   ncols=2,  # -> the figure will have two column of subplots
   figsize=(20, 5)  # each subplot is a bit flat, so we adjust the figsize to get better fig quality
-  )
+)
 
 ```
 
@@ -158,8 +158,8 @@ _Example:_
 Let's plot the melody named '"chor-010"' in the experiment logger `16-05-22_14.01.03/`.
 
 ```python3
-# Import relevant modules
-from modules.viz import BasicPlot
+# Import relevant py2lispIDyOM
+from py2lispIDyOM.viz import BasicPlot
 
 # Set parameters
 BasicPlot.pianoroll_groundtruth_overall_surprisal(

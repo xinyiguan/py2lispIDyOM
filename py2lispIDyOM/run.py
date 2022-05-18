@@ -1,7 +1,7 @@
 import os
 from dataclasses import field, dataclass
 
-from modules.configuration import get_timestamp, IDyOMConfiguration, ExperimentLogger
+from py2lispIDyOM.configuration import get_timestamp, IDyOMConfiguration, ExperimentLogger
 
 
 @dataclass

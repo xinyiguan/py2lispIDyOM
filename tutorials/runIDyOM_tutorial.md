@@ -38,7 +38,7 @@ IDyOMExperiment(test_dataset_path,
 _Example:_
 
 ```python
-from modules.run import IDyOMExperiment
+from py2lispIDyOM.run import IDyOMExperiment
 
 my_experiment = IDyOMExperiment(test_dataset_path='dataset/shanx_dataset/',
                                 pretrain_dataset_path='dataset/bach_dataset/')

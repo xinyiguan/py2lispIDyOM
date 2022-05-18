@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import scipy.io
 
-from modules.extract import ExperimentInfo, get_all_song_dict
+from py2lispIDyOM.extract import ExperimentInfo, get_all_song_dict
 
 
 @dataclass

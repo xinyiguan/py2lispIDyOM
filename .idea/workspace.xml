@@ -25,15 +25,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/examples/1_sample_experiment/sample_exp_README.md" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme typo">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_viz.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/4_viz.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/4_viz-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/.ipynb_checkpoints/2_extract_data-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/.ipynb_checkpoints/3_export_data-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp_dev_codes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tmp_dev_codes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/2_extract_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2a_extract_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/3_export_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2b_export_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/4_viz.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/4_viz.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/sample_exp_README.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/sample_exp_README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +114,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -276,28 +287,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="51497000" />
-    </task>
-    <task id="LOCAL-00003" summary="added duration viewpoint">
-      <created>1627316517411</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1627316517411</updated>
-    </task>
-    <task id="LOCAL-00004" summary="added and tested reconstruct midi script">
-      <created>1628594718703</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1628594718703</updated>
-    </task>
-    <task id="LOCAL-00005" summary="refactored the configuration module">
-      <created>1651090682926</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1651090682926</updated>
+      <workItem from="1652710702845" duration="53324000" />
     </task>
     <task id="LOCAL-00006" summary="refactored the viz module -v2, initial commit">
       <created>1651142970699</created>
@@ -621,7 +611,28 @@
       <option name="project" value="LOCAL" />
       <updated>1652885222961</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="readme update">
+      <created>1652888104029</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1652888104029</updated>
+    </task>
+    <task id="LOCAL-00053" summary="delete redundant files">
+      <created>1652888153192</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1652888153192</updated>
+    </task>
+    <task id="LOCAL-00054" summary="readme typo">
+      <created>1652888178575</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1652888178575</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,8 +664,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactored file names" />
-    <MESSAGE value="export mat module: specific features for specific songs" />
     <MESSAGE value="export modules completed: 2csv, 2mat" />
     <MESSAGE value="two types of figs completed" />
     <MESSAGE value="refactored parameters.py" />
@@ -670,7 +679,6 @@
     <MESSAGE value="typo fixed in run idyom docs" />
     <MESSAGE value="runIDyOM tutorial and readme updated" />
     <MESSAGE value="extract tutorial and readme updated" />
-    <MESSAGE value="readme update" />
     <MESSAGE value="extract_export tutorial updated, export module added error msg" />
     <MESSAGE value="export data example jupyter notebook" />
     <MESSAGE value="export example jupyter notebook" />
@@ -678,7 +686,10 @@
     <MESSAGE value="viz examples tutorials added" />
     <MESSAGE value="fixing paths to plots in viz tutorial" />
     <MESSAGE value="tutorial content" />
-    <option name="LAST_COMMIT_MESSAGE" value="tutorial content" />
+    <MESSAGE value="readme update" />
+    <MESSAGE value="delete redundant files" />
+    <MESSAGE value="readme typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme typo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

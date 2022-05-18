@@ -14,7 +14,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-from modules.extract import MelodyInfo, ExperimentInfo
+from py2lispIDyOM.extract import MelodyInfo, ExperimentInfo
 
 
 class BasicAxsGeneration:

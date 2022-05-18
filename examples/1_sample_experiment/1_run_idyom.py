@@ -12,7 +12,7 @@ In this example,
 For more detailed descriptions of the "run IDyOM" functionality, see the 'tutorials/runIDyOM_tutorial.md'
 """
 
-from modules.run import IDyOMExperiment
+from py2lispIDyOM.run import IDyOMExperiment
 
 
 def my_idyom_experiment():

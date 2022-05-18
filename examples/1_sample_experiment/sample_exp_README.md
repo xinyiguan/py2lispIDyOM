@@ -7,8 +7,8 @@ the [tutorials](tutorials/) for more details on each functionality.
 There are 4 sample script/jupyter notebooks that provides examples for how you can use the py2lispIDyOM:
 
 - [1_run_idyom.py](1_run_idyom.py)
-- [2_extract_data.ipynb](2_extract_data.ipynb)
-- [3_export_data.ipynb](3_export_data.ipynb)
+- [2a_extract_data.ipynb](2a_extract_data.ipynb)
+- [2b_export_data.ipynb](2b_export_data.ipynb)
 - [4_viz.ipynb](4_viz.ipynb)
 
 The `1_sample_experiment/` folder resembles a typical folder for IDyOM experiment using py2lispIDyOM.
