@@ -8,6 +8,7 @@ the [README](README.md). In the current version, only limited basic plots are av
 - [BasicPlot](#basicplot)
   1. [simple_plot](#1-simple_plot)
   2. [pianoroll_pitch_prediction_groundtruth](#2-pianoroll_pitch_prediction_groundtruth)
+  3. [pianoroll_groundtruth_overall_surprisal](#3-pianoroll_groundtruth_overall_surprisal)
 
 ---
 
