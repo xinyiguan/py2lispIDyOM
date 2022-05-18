@@ -59,8 +59,6 @@ reproduce/replicate the experiment results.
 
 The structure of the experiment log folder follows the example below:
 
-**_(insert folder tree here)_**
-
 ```
 experiment_history
 └── 16-05-22_14.01.03
