@@ -1,7 +1,7 @@
 # Visualization Tutorial
 
 This tutorial will cover some useful plotting in py2lispIDyOM. For an overview of the py2lispIDyOM functionality, see
-the [README](README.md). In the current version, only limited basic plots are available.
+the [README](../README.md). In the current version, only limited basic plots are available.
 
 ### Content <br>
 

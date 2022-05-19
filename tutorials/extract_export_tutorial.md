@@ -7,7 +7,7 @@ software.
 For more information about the IDyOM outputs, see [IDyOM Output](https://github.com/mtpearce/idyom/wiki/IDyOM-Output).
 
 This tutorial will cover how to extract certain IDyOM outputs (for analysis in python) and export them in different
-formats in py2lispIDyOM. For an overview of the py2lispIDyOM functionality, see the [README](README.md).
+formats in py2lispIDyOM. For an overview of the py2lispIDyOM functionality, see the [README](../README.md).
 
 ### Content
 

@@ -1,7 +1,7 @@
 # Run IDyOM Tutorial
 
 This tutorial will walk you through how to run the IDyOM model in py2lispIDyOM. For an overview of the py2lispIDyOM
-functionality, see the [README](README.md).
+functionality, see the [README](../README.md).
 
 ---
 To run the IDyOM model with py2lispIDyOM takes three steps:
@@ -15,9 +15,9 @@ To run the IDyOM model with py2lispIDyOM takes three steps:
 First, we set the IDyOM experiment configurations by providing the relevant paths.
 
 ```python3
-IDyOMExperiment(test_dataset_path,
-                pretrain_dataset_path=None,
-                experiment_history_folder_path=None)
+class IDyOMExperiment(test_dataset_path,
+                      pretrain_dataset_path=None,
+                      experiment_history_folder_path=None)
 ```
 
 **Parameters**:
@@ -51,13 +51,15 @@ is specified, the experiment log folders will be saved under this path.
 
 ### 2. Set model parameters:
 
+Next, we set the model parameters using the `set_parameters` methods.
+
 ```python3
-IDyOMExperiment.set_parameters(target_viewpoints, source_viewpoints,
-                               models, ltmo, stmo,
-                               k=10, resampling_indices,
-                               basis, dp, max_links, min_links, viewpoint_selection_output,
-                               detail, overwrite, separator,
-                               use_resampling_set_cache, use_ltms_cache)
+class IDyOMExperiment.set_parameters(target_viewpoints, source_viewpoints,
+models, ltmo, stmo,
+k=10, resampling_indices,
+basis, dp, max_links, min_links, viewpoint_selection_output,
+detail, overwrite, separator,
+use_resampling_set_cache, use_ltms_cache)
 
 ```
 
@@ -85,11 +87,7 @@ my_experiment.set_parameters(target_viewpoints=['cpitch', 'onset'],
 
 ### 3. Run IDyOM:
 
-To run the IDyOM model, simply invoke the following method:
-
-```python3
-IDyOMExperiment.run()
-```
+To run the IDyOM model, simply call the `IDyOMExperiment.run()` method.
 
 _Example Continued:_
 
@@ -110,4 +108,4 @@ From here on, you can extract the relevant IDyOM outputs or export them in other
 
 #### NOTE:
 
-See example folder for more complete examples.
+See [examples](examples/) folder for more complete examples.

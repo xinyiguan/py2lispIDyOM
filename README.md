@@ -7,7 +7,7 @@ model.
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Installing](#installing)
 
 
 - [Functionality and Usage](#functionality-and-usage)
@@ -16,8 +16,8 @@ model.
   - [3. Visualizing IDyOM data](#3-visualizing-idyom-data)
 
 
-- [About the Experiment Logger](#about-the-experiment-logger)
-
+- [About the Experiment Logger](#experiment-logger)
+  - [Structure](#structure)
 ---
 
 ## Getting Started
@@ -27,7 +27,7 @@ model.
 To start with, please read the [IDyOM installation page](https://github.com/mtpearce/idyom/wiki/Installation) to
 appropriately install IDyOM on your local machine.
 
-### Installation
+### Installing
 
 The code is compatible with >=Python 3.8.
 
@@ -50,7 +50,8 @@ See also the [examples](examples/) for more info.
 To run the IDyOM model with py2lispIDyOM takes three steps:
 
 1) Set experiment configuration (paths to input music files and to output experiment log)
-2) Set model configuration (model parameters, see ... for more detail)
+2) Set model configuration (model parameters,
+   see  [IDyOM parameters documentation](https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters) for more detail)
 3) run the experiment.
 
 ### 2. Extract and export the data
@@ -67,7 +68,7 @@ For more information about the IDyOM outputs, see [IDyOM Output](https://github.
 
 py2lispIDyOM provides some useful plotting tools to help visualize the IDyOM output data.
 
-## About the Experiment Logger:
+## Experiment Logger:
 
 An experiment log folder (with the timestamp as the folder name) will be automatically created the record all data in
 the current experiment in the `experiment_history/` folder
@@ -78,7 +79,12 @@ This experiment log folder is structured in a way that can help researchers stay
 all experiment data and contains all necessary data and scripts of the experiment that can be shared to
 reproduce/replicate the experiment results.
 
-The structure of the experiment log folder follows the example below:
+In particular, the logger contains a LISP script (`compute.lisp`) which is the actual lisp script that runs the IDyOM
+model.
+
+### Structure
+
+The structure of a typical experiment log folder follows the example below:
 
 ```
 experiment_history
