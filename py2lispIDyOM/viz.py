@@ -1,12 +1,3 @@
-"""
-TODO:
-1. ax_surprisal_along_property bug:
-        secondary axis
-2. surprisal_along_property_in_time
-    currently not available
-
-"""
-
 import os
 from typing import List
 
@@ -142,63 +133,6 @@ class BasicAxsGeneration:
         ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
         return ax
 
-    @staticmethod
-    def ax_surprisal_along_property(ax: matplotlib.axes.Axes,
-                                    melody_info: MelodyInfo,
-                                    selected_property: str,
-                                    surprisal_source: str,
-                                    # e.g., surprisal_source = 'cpitch' (meaning, get the cpitch.information.content)
-                                    color=None):
-
-        if surprisal_source == 'overall':
-            formatted_surprisal_source = 'information.content'
-        else:
-            formatted_surprisal_source = surprisal_source + '.information.content'
-
-        valid_surprisal_source = list(melody_info.keys()) + ['overall']
-        valid_property_list = melody_info.get_property_list()
-
-        # Access bottom x-axis ---> onset shown in beat
-        onset_values = np.int_(melody_info.access_properties(['onset']))
-        onset_in_beat = onset_values / 24
-        flatten_onset_in_beat = [item for sublist in list(onset_in_beat) for item in sublist]
-
-        # Access y-axis ---> surprisal_source
-        if formatted_surprisal_source in melody_info.keys():
-            surprisal_source_values = np.int_(melody_info.access_properties([formatted_surprisal_source]))
-            flatten_surprisal_source_values = [item for sublist in list(surprisal_source_values) for item in sublist]
-        else:
-            raise ValueError(f'surprisal_source \'{surprisal_source}\' is invalid. '
-                             f'Valid surprisal_source are \'{valid_surprisal_source}\'. ')
-
-        # Access top x-axis ---> property values:
-        if selected_property in valid_property_list:
-            selected_property_values = np.int_(melody_info.access_properties([selected_property]))
-            flatten_selected_property_values = np.array(
-                [item for sublist in list(selected_property_values) for item in sublist])
-        else:
-            raise ValueError(f'selected_property \'{selected_property}\' is invalid. '
-                             f'Valid properties are: {valid_property_list}')
-
-        # ax.scatter(onset_in_beat, flatten_surprisal_source_values, color=color)
-        # ax2 = ax.twiny()
-        # ax2.scatter(flatten_selected_property_values, flatten_surprisal_source_values, color='green')
-        #
-        # ax.margins(x=0.03)
-        # ax.margins(y=0.03)
-        # # ax.spines['top'].set_visible(False)
-        # ax.spines['right'].set_visible(False)
-        #
-        # ax.set_xticks(ticks=flatten_onset_in_beat)
-        # ax.set_xticklabels(labels=flatten_onset_in_beat)
-        # ax2.set_xticks(ticks=flatten_selected_property_values)
-        # ax2.set_xticklabels(labels=flatten_selected_property_values)
-        #
-        # ax2.set_xlabel(f'{selected_property}')
-        # ax.set_xlabel('onset')
-        # ax.set_ylabel(f'{formatted_surprisal_source}')
-
-        return ax
 
 
 class Auxiliary:
@@ -422,65 +356,3 @@ class BasicPlot:
                                        fig_format=fig_format,
                                        dpi=dpi)
 
-    @staticmethod
-    def surprisal_along_property_in_time(selected_property: str,
-                                         surprisal_source: str,
-                                         experiment_folder_path: str,
-                                         melody_names: List[str] = None,
-                                         starting_index: int = None,
-                                         ending_index: int = None,
-                                         savefig: bool = True,
-                                         showfig: bool = False,
-                                         fig_format: str = 'png',
-                                         dpi: float = 400):
-
-        """
-        This function plots ...
-        y-axis is the surprisal value (this can be either the 'overall' surprisal or the 'property' surprisal)
-        x-axis is the property value
-
-        :param dpi:
-        :param fig_format:
-        :param surprisal_source:
-        :param selected_property:
-        :param experiment_folder_path:
-        :param melody_names:
-        :param starting_index:
-        :param ending_index:
-        :param savefig:
-        :param showfig:
-        :return:
-        """
-        plot_type_folder_name = surprisal_source + '_surprisal_along_' + selected_property
-
-        def _surprisal_along_property(melody_info: MelodyInfo,
-                                      show_single_fig: bool = showfig) -> plt.Figure:
-            melody_name_pprint = melody_info.get_melody_name_pprint()
-            fig, (ax_surprisal_along_property) = plt.subplots(1, 1, figsize=(8, 5), dpi=dpi, sharex='col')
-
-            fig.suptitle(
-                surprisal_source + ' surprisal for ' + selected_property + '\n\n Melody: ' + melody_name_pprint,
-                fontsize=15)
-            BasicAxsGeneration.ax_surprisal_along_property(ax_surprisal_along_property,
-                                                           melody_info=melody_info,
-                                                           selected_property=selected_property,
-                                                           surprisal_source=surprisal_source)
-
-            plt.tight_layout()
-            if show_single_fig is True:
-                plt.show()
-            else:
-                pass
-            return fig
-
-        # Plot batch according to user inputs:
-
-        Auxiliary.batch_melodies_plots(plot_method_func=_surprisal_along_property,
-                                       plot_type_folder_name=plot_type_folder_name,
-                                       experiment_folder_path=experiment_folder_path,
-                                       melody_names=melody_names,
-                                       starting_index=starting_index,
-                                       ending_index=ending_index,
-                                       savefig=savefig,
-                                       fig_format=fig_format,
-                                       dpi=dpi)

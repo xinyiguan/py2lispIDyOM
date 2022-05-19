@@ -38,7 +38,7 @@ To use py2lispIDyOM, you can download this repo or use git clone.
 
 ## Functionality and Usage
 
-In summary, py2lispIDyOM has four main functionalities for research workflow.
+In summary, py2lispIDyOM has three main functionalities for research workflow.
 
 See the following tutorials for more detailed information about the three main functionalities:
 

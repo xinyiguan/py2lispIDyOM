@@ -25,9 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated links in docs">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme dependencies update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,14 +272,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="56020000" />
-    </task>
-    <task id="LOCAL-00010" summary="temporary save - run idyom module call">
-      <created>1651159905689</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1651159905689</updated>
+      <workItem from="1652710702845" duration="60012000" />
     </task>
     <task id="LOCAL-00011" summary="refactored IDyOM runner module. To check total_command error.">
       <created>1651180584690</created>
@@ -615,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652947997191</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="readme dependencies update">
+      <created>1652948706058</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1652948706059</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,7 +649,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactor: user interface not implemented" />
     <MESSAGE value="rebase" />
     <MESSAGE value="viz: plot_overall_surprisal_entropy unfinish" />
     <MESSAGE value="set_parameters working -v1" />
@@ -672,7 +673,8 @@
     <MESSAGE value="readme table of content" />
     <MESSAGE value="readme update" />
     <MESSAGE value="updated links in docs" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated links in docs" />
+    <MESSAGE value="readme dependencies update" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme dependencies update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
