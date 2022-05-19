@@ -25,13 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme update">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated links in docs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/2a_extract_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/2a_extract_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,14 +270,7 @@
       <workItem from="1652644944751" duration="29000" />
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
-      <workItem from="1652710702845" duration="55322000" />
-    </task>
-    <task id="LOCAL-00009" summary="configuration module added to_lisp commands">
-      <created>1651146352876</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1651146352876</updated>
+      <workItem from="1652710702845" duration="56020000" />
     </task>
     <task id="LOCAL-00010" summary="temporary save - run idyom module call">
       <created>1651159905689</created>
@@ -619,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652890269596</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="updated links in docs">
+      <created>1652947997191</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1652947997191</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +647,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="refactored parameters.py" />
     <MESSAGE value="refactor: user interface not implemented" />
     <MESSAGE value="rebase" />
     <MESSAGE value="viz: plot_overall_surprisal_entropy unfinish" />
@@ -676,7 +671,8 @@
     <MESSAGE value="updated naming and reformating" />
     <MESSAGE value="readme table of content" />
     <MESSAGE value="readme update" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme update" />
+    <MESSAGE value="updated links in docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated links in docs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

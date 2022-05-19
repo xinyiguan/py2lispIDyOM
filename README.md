@@ -18,14 +18,17 @@ model.
 
 - [About the Experiment Logger](#experiment-logger)
   - [Structure](#structure)
+
 ---
 
 ## Getting Started
 
 ### Prerequisites
 
-To start with, please read the [IDyOM installation page](https://github.com/mtpearce/idyom/wiki/Installation) to
-appropriately install IDyOM on your local machine.
+py2lispIDyOM requires IDyOM to be installed on the local machine. To start with, please read
+the [IDyOM installation page](https://github.com/mtpearce/idyom/wiki/Installation) to appropriately install IDyOM.
+
+In addition, py2lispIDyOM also requires common packages such as `numpy`, `matplotlib`, `pandas`, `scipy`, etc.
 
 ### Installing
 
