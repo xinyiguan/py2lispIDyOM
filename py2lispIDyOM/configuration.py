@@ -54,13 +54,13 @@ class LispConvertable(ABC):
         return json.dumps(self, default=lambda x: x.__dict__, indent=2)
 
     def recursive_set_attr(self, key, value):
-        print(f'set {key=} {value=}')
+        # print(f'set {key=} {value=}')
         children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
         children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
         children = list(children_configuration) + list(children_parameter)
 
         if hasattr(self, key):
-            print(f'{self} has {key=}')
+            # print(f'{self} has {key=}')
             type_hint_dict = get_type_hints(self, globalns=globals())
             if key not in type_hint_dict:
                 print(f'type hint for {key} not defined')
@@ -71,7 +71,7 @@ class LispConvertable(ABC):
                 if type_correct:
 
                     self.__dict__[key] = value
-                    print('after set', self.__dict__)
+                    # print('after set', self.__dict__)
                 else:
                     raise TypeError(
                         f'Expect type for parameter {key} is {type_expected}, but got \'{value}\' which has type {type(value)} ')
@@ -206,48 +206,86 @@ class RequiredParameters(Parameters):
 
 
 @dataclass
-class ModelOptions(Parameters):
-    order_bound: int = None
-    mixtures: bool = None
-    update_exclusion: str = None
-    escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
+class LTMOModelOptions(Parameters):
+    ltmo_order_bound: int = None
+    ltmo_mixtures: bool = None
+    ltmo_update_exclusion: str = None
+    ltmo_escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
 
     def to_lisp_command(self) -> str:
         generic_command = super().to_lisp_command()
         command = f'\'({generic_command})'
+        command = command.replace('ltmo_', '')
         command = command.replace('_', '-')
         return command
 
 
 @dataclass
-class StatisticalModellingParameters(Parameters):
-    models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
-    model_to_configure: Literal[':ltmo', ':stmo'] = None
-    futher_options: ModelOptions = field(default_factory=ModelOptions)
+class STMOModelOptions(Parameters):
+    stmo_order_bound: int = None
+    stmo_mixtures: bool = None
+    stmo_update_exclusion: str = None
+    stmo_escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
 
     def to_lisp_command(self) -> str:
-        if self.model_to_configure is not None:
-            command = f'{self.models_to_lisp_command()} {self.model_to_configure_to_lisp_command()} {self.further_options_to_lisp_command()}'
-
-        elif self.models and self.model_to_configure is None:
-            command = f'{self.models_to_lisp_command()}'
-
-        else:
-            raise ValueError(
-                f'please also specify model_to_configure=\':stmo\' or \':ltmo\' if you want the optional command {self.further_options_to_lisp_command()}')
+        generic_command = super().to_lisp_command()
+        command = f'\'({generic_command})'
+        command = command.replace('stmo_', '')
+        command = command.replace('_', '-')
         return command
+
+@dataclass
+class StatisticalModellingParameters(Parameters):
+    models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
+    ltmo: Literal[':ltmo'] = None
+    ltmo_options: LTMOModelOptions = field(default_factory=LTMOModelOptions)
+    stmo: Literal[':stmo'] = None
+    stmo_options: STMOModelOptions = field(default_factory=STMOModelOptions)
 
     def models_to_lisp_command(self) -> str:
         command = f':models {self.models}'
         return command
 
-    def model_to_configure_to_lisp_command(self) -> str:
-        command = self.model_to_configure
+    def ltmo_to_lisp_command(self) -> str:
+        command = self.ltmo
         return command
 
-    def further_options_to_lisp_command(self) -> str:
-        command = self.futher_options.to_lisp_command()
+    def stmo_to_lisp_command(self) -> str:
+        command = self.stmo
         return command
+
+    def ltmo_options_to_lisp_command(self) -> str:
+        command = self.ltmo_options.to_lisp_command()
+        return command
+
+    def stmo_options_to_lisp_command(self) -> str:
+        command = self.stmo_options.to_lisp_command()
+        return command
+
+    def to_lisp_command(self) -> str:
+        if self.models is not None and self.ltmo is None and self.stmo is None:
+            command = f'{self.models_to_lisp_command()}'
+            return command
+
+        elif self.ltmo is not None and self.stmo is None:
+            command = f'{self.models_to_lisp_command()} {self.ltmo_to_lisp_command()} {self.ltmo_options_to_lisp_command()}'
+            return command
+
+        elif self.stmo is not None and self.ltmo is None:
+            command = f'{self.models_to_lisp_command()} {self.stmo_to_lisp_command()} {self.stmo_options_to_lisp_command()}'
+            return command
+
+        elif self.stmo is not None and self.ltmo is not None:
+            command = f'{self.models_to_lisp_command()} {self.stmo_to_lisp_command()} {self.stmo_options_to_lisp_command()} {self.ltmo_to_lisp_command()} {self.ltmo_options_to_lisp_command()}'
+            return command
+
+        elif self.stmo is None and self.stmo_options is not None:
+            raise ValueError(
+                f'Please specify \':stmo\' if you want to further specify the STM optional properties {self.stmo_options_to_lisp_command()}')
+
+        elif self.ltmo is None and self.ltmo_options is not None:
+            raise ValueError(
+                f'Please specify \':ltmo\' if you want to further specify the LTM optional properties {self.ltmo_options_to_lisp_command()}')
 
 
 @dataclass
@@ -271,6 +309,7 @@ class TrainingParameters(Parameters):
         if self.pretraining_id:
             command = f':pretraining-ids \'({self.pretraining_id_to_command()}) {self.k_to_command()}'
             return command
+
         else:
             command = f'{self.k_to_command()}'
             return command
