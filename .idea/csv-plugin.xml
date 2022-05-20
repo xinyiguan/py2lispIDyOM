@@ -108,20 +108,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/experiment_history/04-05-22_14.35.26/outputs_in_csv/shanx002.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/experiment_history/04-05-22_14.35.26/outputs_in_csv/shanx008.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
       </map>
     </option>
   </component>

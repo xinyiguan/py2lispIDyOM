@@ -54,14 +54,13 @@ class LispConvertable(ABC):
         return json.dumps(self, default=lambda x: x.__dict__, indent=2)
 
     def recursive_set_attr(self, key, value):
-
+        print(f'set {key=} {value=}')
         children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
         children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
         children = list(children_configuration) + list(children_parameter)
-        if children:
-            for child in children:
-                child.recursive_set_attr(key, value)
-        elif hasattr(self, key):
+
+        if hasattr(self, key):
+            print(f'{self} has {key=}')
             type_hint_dict = get_type_hints(self, globalns=globals())
             if key not in type_hint_dict:
                 print(f'type hint for {key} not defined')
@@ -70,10 +69,46 @@ class LispConvertable(ABC):
                 type_correct = check_recursive_typings(obj=value, type_expected=type_expected)
 
                 if type_correct:
+
                     self.__dict__[key] = value
+                    print('after set', self.__dict__)
                 else:
                     raise TypeError(
                         f'Expect type for parameter {key} is {type_expected}, but got \'{value}\' which has type {type(value)} ')
+
+        elif children:
+            for child in children:
+                child.recursive_set_attr(key, value)
+
+    def get_surface_dict(self) -> dict:
+
+        def expandable_component(_obj):
+            expandable = [_ for _ in _obj.__dict__.values() if
+                          isinstance(_, Parameters) or isinstance(_, Configuration)]
+
+            return expandable
+
+        def terminal_check(obj: object) -> bool:
+            is_terminal = isinstance(obj, Parameters) and all((
+                len(expandable_component(component)) == 0 for component in expandable_component(obj)
+            ))
+            return is_terminal
+
+        def non_terminal_check(obj: object) -> bool:
+            is_non_terminal = isinstance(obj, Parameters) or isinstance(obj, Configuration) and any((
+                len(expandable_component(component)) != 0 for component in expandable_component(obj)
+            ))
+            return is_non_terminal
+
+        children_nonterminal = filter(non_terminal_check, self.__dict__.values())
+        children_terminal = filter(terminal_check, self.__dict__.values())
+
+        children_nonterminal_dicts = [child.get_surface_dict() for child in children_nonterminal]
+        children_terminal_dicts = [child.__dict__ for child in children_terminal]
+        surface_dict = {}
+        for d in children_nonterminal_dicts + children_terminal_dicts:
+            surface_dict.update(d)
+        return surface_dict
 
 
 @dataclass
@@ -83,7 +118,7 @@ class Parameters(LispConvertable):
         convert_dict = {True: 't', False: 'nil'}
         commands = []
         for key, value in self.__dict__.items():
-            if value:
+            if value is not None:
                 if isinstance(value, Parameters):
                     value = value.to_lisp_command()
                 print_value = value
@@ -130,7 +165,6 @@ class RequiredParameters(Parameters):
         elif type(viewpoint) is tuple:
             string = self.tuple_to_command(viewpoint)
         else:
-            print(type(viewpoint))
             raise TypeError(viewpoint)
         return string
 
@@ -181,17 +215,38 @@ class ModelOptions(Parameters):
     def to_lisp_command(self) -> str:
         generic_command = super().to_lisp_command()
         command = f'\'({generic_command})'
+        command = command.replace('_', '-')
         return command
 
 
 @dataclass
 class StatisticalModellingParameters(Parameters):
     models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
-    ltmo: ModelOptions = None
-    stmo: ModelOptions = None
+    model_to_configure: Literal[':ltmo', ':stmo'] = None
+    futher_options: ModelOptions = field(default_factory=ModelOptions)
 
     def to_lisp_command(self) -> str:
-        command = super().to_lisp_command()
+        if self.model_to_configure is not None:
+            command = f'{self.models_to_lisp_command()} {self.model_to_configure_to_lisp_command()} {self.further_options_to_lisp_command()}'
+
+        elif self.models and self.model_to_configure is None:
+            command = f'{self.models_to_lisp_command()}'
+
+        else:
+            raise ValueError(
+                f'please also specify model_to_configure=\':stmo\' or \':ltmo\' if you want the optional command {self.further_options_to_lisp_command()}')
+        return command
+
+    def models_to_lisp_command(self) -> str:
+        command = f':models {self.models}'
+        return command
+
+    def model_to_configure_to_lisp_command(self) -> str:
+        command = self.model_to_configure
+        return command
+
+    def further_options_to_lisp_command(self) -> str:
+        command = self.futher_options.to_lisp_command()
         return command
 
 
@@ -380,15 +435,7 @@ class ExperimentLogger:
 
 @dataclass
 class Configuration(LispConvertable, ABC):
-    def get_surface_dict(self) -> dict:
-        children_configuration = filter(lambda x: isinstance(x, Configuration), self.__dict__.values())
-        children_parameter = filter(lambda x: isinstance(x, Parameters), self.__dict__.values())
-        children_configuration_dicts = [child.get_surface_dict() for child in children_configuration]
-        children_parameter_dicts = [child.__dict__ for child in children_parameter]
-        surface_dict = {}
-        for d in children_configuration_dicts + children_parameter_dicts:
-            surface_dict.update(d)
-        return surface_dict
+    pass
 
 
 @dataclass(repr=False)
