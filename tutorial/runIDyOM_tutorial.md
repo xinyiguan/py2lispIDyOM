@@ -54,12 +54,7 @@ is specified, the experiment log folders will be saved under this path.
 Next, we set the model parameters using the `set_parameters` methods.
 
 ```python3
-class IDyOMExperiment.set_parameters(target_viewpoints, source_viewpoints,
-models, ltmo, stmo,
-k=10, resampling_indices,
-basis, dp, max_links, min_links, viewpoint_selection_output,
-detail, overwrite, separator,
-use_resampling_set_cache, use_ltms_cache)
+class IDyOMExperiment.set_parameters()
 
 ```
 

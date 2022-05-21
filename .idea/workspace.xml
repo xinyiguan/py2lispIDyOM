@@ -25,17 +25,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="module code minor refactor, added comments">
-      <change afterPath="$PROJECT_DIR$/tutorial/tutorial_intro.md" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated README, re-organizing tutorials">
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/1_running_IDyOM_tutorial-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/2a_data_preprocessing_extracting_data-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/1_running_IDyOM_tutorial.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/2a_data_preprocessing_extracting_data.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/1_sample_experiment/1_run_idyom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/extract_export_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/extract_export_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/runIDyOM_tutorial.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_plots_demo/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_plots_demo/chor-008.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/tutorial_plots_demo/chor-010.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-010.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/visualization_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/visualization_tutorial.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/runIDyOM_tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/runIDyOM_tutorial.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,14 +275,7 @@
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
       <workItem from="1652710702845" duration="61697000" />
-      <workItem from="1652988369893" duration="37416000" />
-    </task>
-    <task id="LOCAL-00016" summary="lisp script generation completed">
-      <created>1651402399066</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1651402399066</updated>
+      <workItem from="1652988369893" duration="39330000" />
     </task>
     <task id="LOCAL-00017" summary="quit command added">
       <created>1651488012781</created>
@@ -624,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653129529101</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="updated README, re-organizing tutorials">
+      <created>1653130680532</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1653130680532</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +652,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="recursive type check final FINISHED" />
     <MESSAGE value="fixed keywords to show in error msg" />
     <MESSAGE value="run idyom docs updated" />
     <MESSAGE value="typo fixed in run idyom docs" />
@@ -681,7 +676,8 @@
     <MESSAGE value="ltmo stmo working -V2" />
     <MESSAGE value="mat export naming fixed" />
     <MESSAGE value="module code minor refactor, added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="module code minor refactor, added comments" />
+    <MESSAGE value="updated README, re-organizing tutorials" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README, re-organizing tutorials" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
