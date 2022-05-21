@@ -9,7 +9,7 @@ In this example,
 
 - We will use the ':both' model, and we don't want resampling (i.e., k=1).
 
-For more detailed descriptions of the "run IDyOM" functionality, see the 'tutorials/runIDyOM_tutorial.md'
+For more detailed descriptions of the "run IDyOM" functionality, see the 'tutorial/runIDyOM_tutorial.md'
 """
 
 from py2lispIDyOM.run import IDyOMExperiment
