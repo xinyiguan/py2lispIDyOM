@@ -6,6 +6,21 @@ from py2lispIDyOM.configuration import get_timestamp, IDyOMConfiguration, Experi
 
 @dataclass
 class IDyOMExperiment:
+    """
+    Configure the IDyOM experiment.
+
+    Parameters
+    ----------
+    test_dataset_path : str
+        The path to your test dataset (required)
+    pretrain_dataset_path : str
+        The path to your pretrain dataset
+    experiment_history_folder_path : str
+        The path to which you want to save all the result data/plots (if leave blank,
+        by default, a folder called experiment_history that hosts all data for the current experiment will be created
+        when you run the IDyOM model).
+
+    """
     test_dataset_path: str
     pretrain_dataset_path: str = None
     experiment_history_folder_path: str = None
@@ -43,6 +58,11 @@ class IDyOMExperiment:
             pass
 
     def set_parameters(self, **kwargs):
+        """
+        Set the IDyOM model parameters.
+        :param kwargs: see the README or run_idyom_tutorial for a complete list of parameters (keyword arguments).
+
+        """
         configuration = self.idyom_config.run_model_configuration
         surface_dict: dict = configuration.get_surface_dict()
         # print(f'{surface_dict=}')
@@ -55,6 +75,11 @@ class IDyOMExperiment:
             configuration.recursive_set_attr(key=key, value=value)
 
     def generate_lisp_script(self, write=True):
+        """
+        Generate the LISP script for the IDyOM model configurations.
+        :param write: whether to write the file or not.
+        :return: the path to the lisp script file.
+        """
         self._update_idyom_config()
         path_to_file = self.logger.this_exp_folder
         lisp_file_path = path_to_file + 'compute.lisp'
@@ -66,7 +91,7 @@ class IDyOMExperiment:
 
     def run(self):
         """
-        This function runs the Lisp command to generate a Lisp script and run it.
+        Run the IDyOM model.
         """
 
         run_condition = all([

@@ -144,7 +144,6 @@ SingleViewpoint = Literal[
 
 @dataclass
 class RequiredParameters(Parameters):
-    """ user-level interaction class """
     dataset_id: str = None
     target_viewpoints: List[SingleViewpoint] = None
     source_viewpoints: Union[Literal[':select'],

@@ -25,9 +25,203 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="mat export naming fixed">
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/compute.lisp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-001.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-002.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-003.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-004.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-005.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-006.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-007.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-008.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-009.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-010.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-011.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-012.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-013.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-014.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-015.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-016.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-017.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-018.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-019.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-020.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-021.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-022.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-023.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-024.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-025.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-026.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-027.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-028.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-029.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-030.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-031.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-032.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-033.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-034.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-035.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-036.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-037.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-038.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-039.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-040.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-041.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-042.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-043.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-044.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-045.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-046.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-047.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-048.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-049.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-050.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-051.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-052.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-053.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-054.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-055.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-056.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-057.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-058.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-059.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-060.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-061.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-062.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-063.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-064.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-065.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-066.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-067.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-068.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-069.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-070.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-071.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-072.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-073.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-074.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-075.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-076.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-077.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-078.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-079.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-080.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-081.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-082.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-083.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-084.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-085.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-086.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-087.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-088.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-089.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-090.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-091.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-092.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-093.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-094.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-095.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-096.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-097.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-098.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-099.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-100.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-101.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-102.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-103.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-104.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-105.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-106.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-107.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-108.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-109.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-110.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-111.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-112.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-113.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-114.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-115.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-116.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-117.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-118.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-119.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-120.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-121.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-122.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-123.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-124.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-125.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-126.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-127.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-128.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-129.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-130.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-131.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-132.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-133.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-134.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-135.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-136.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-137.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-138.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-139.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-140.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-141.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-142.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-143.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-144.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-145.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-146.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-147.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-148.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-149.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-150.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-151.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-152.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-153.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-154.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-155.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-156.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-157.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-158.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-159.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-160.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-161.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-162.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-163.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-164.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-165.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-166.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-167.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-168.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-169.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-170.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-171.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-172.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-173.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-174.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-175.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-176.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-177.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-178.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-179.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-180.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-181.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-182.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-183.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-184.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_input_data_folder/test_dataset/chor-185.mid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/experiment_output_data_folder/66052022133052-cpitch_onset-cpitch_onset-nil-nil-melody-nil-full-ltm-1-t-nil-c-nil-t-t-x-3.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/outputs_in_mat/cpitch.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/order_1_20-05-22_13.30.51/outputs_in_mat/information_content.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/configuration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,14 +465,7 @@
       <workItem from="1652645883163" duration="12271000" />
       <workItem from="1652701014804" duration="8454000" />
       <workItem from="1652710702845" duration="61697000" />
-      <workItem from="1652988369893" duration="20146000" />
-    </task>
-    <task id="LOCAL-00014" summary="DatabaseConfiguration input path type error FIXED">
-      <created>1651258495361</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1651258495361</updated>
+      <workItem from="1652988369893" duration="36015000" />
     </task>
     <task id="LOCAL-00015" summary="DatabaseConfiguration lisp commands all prepared. Next: generate lisp file">
       <created>1651260203746</created>
@@ -616,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653039018534</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="mat export naming fixed">
+      <created>1653055210435</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1653055210435</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +842,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="enforce typing check: composite typings not implemented" />
     <MESSAGE value="viz: simple_plot refactored (2 aux added to simplify save figs codes)" />
     <MESSAGE value="recursive type check final FINISHED" />
     <MESSAGE value="fixed keywords to show in error msg" />
@@ -673,7 +866,8 @@
     <MESSAGE value="version saved before packaging" />
     <MESSAGE value="stmo ltmo working -V1" />
     <MESSAGE value="ltmo stmo working -V2" />
-    <option name="LAST_COMMIT_MESSAGE" value="ltmo stmo working -V2" />
+    <MESSAGE value="mat export naming fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="mat export naming fixed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -685,7 +879,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1652389131039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$testing.coverage" NAME="testing Coverage Results" MODIFIED="1652881435857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py2lispIDyOM$test.coverage" NAME="test Coverage Results" MODIFIED="1653038944955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py2lispIDyOM$test.coverage" NAME="test Coverage Results" MODIFIED="1653127957055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

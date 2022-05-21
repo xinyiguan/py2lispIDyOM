@@ -40,7 +40,7 @@ class BasicAxsGeneration:
     @staticmethod
     def pianoroll(ax: matplotlib.axes.Axes,
                   melody_info: MelodyInfo):
-        sustain_mask = melody_info.get_pianoroll_original()
+        sustain_mask = melody_info._get_pianoroll_original()
         pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
         duration_in_ticks = sustain_mask.shape[1]
         onsets = melody_info.access_properties(['onset']).to_numpy(dtype=int).reshape(-1)
@@ -69,8 +69,8 @@ class BasicAxsGeneration:
     def pianoroll_pitch_distribution(ax: matplotlib.axes.Axes,
                                      melody_info: MelodyInfo):
         pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
-        duration_in_ticks = melody_info.get_pianoroll_original().shape[1]
-        pianoroll_distribution_array = melody_info.get_pianoroll_pitch_distribution()
+        duration_in_ticks = melody_info._get_pianoroll_original().shape[1]
+        pianoroll_distribution_array = melody_info._get_pianoroll_pitch_distribution()
         ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
                   extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         # ax.axis('image')
@@ -121,8 +121,8 @@ class BasicAxsGeneration:
                              color=None):
 
         # spike at onset
-        surprisal_array = melody_info.get_surprisal_array()
-        onset_time_vector = melody_info.get_onset_time_vector() / 24
+        surprisal_array = melody_info._get_surprisal_array()
+        onset_time_vector = melody_info._get_onset_time_vector() / 24
         ax.plot(onset_time_vector, surprisal_array, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
@@ -132,7 +132,6 @@ class BasicAxsGeneration:
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
         return ax
-
 
 
 class Auxiliary:
@@ -205,7 +204,26 @@ class BasicPlot:
                     fig_format: str = 'png',
                     dpi: float = 400,
                     figsize: tuple = (10, 5)):
+        """
+        Generate a simple line plot with onset (in beat) on the x-axis, and selected IDyOM output on the y-axis.
 
+        :param selected_idyom_output: str
+            The keyword of the IDyOM output you want to plot.
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+
+        """
         plot_type_folder_name = 'simple_plot_' + selected_idyom_output
 
         def _generic_property_along_time(melody_info: MelodyInfo,
@@ -246,26 +264,33 @@ class BasicPlot:
                                                showfig: bool = False,
                                                fig_format: str = 'png',
                                                dpi: float = 400,
+                                               figsize: tuple = (10, 10),
                                                nrows: int = 2,
-                                               ncols: int = 1,
-                                               figsize: tuple = (10, 10)):
+                                               ncols: int = 1, ):
+
         """
-        This function returns and saves a pair of figures (the predicted pitch distribution and the ground truth) side by side.
+        Generate a pair of figures (the predicted pitch distribution and the ground truth) side by side.
         If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
         or the starting/ending index in the melody list.
 
-        :param nrows:
-        :param ncols:
-        :param figsize:
-        :param dpi:
-        :param fig_format:
-        :param showfig:
-        :param savefig:
-        :param experiment_folder_path: the path to your experiment folder
-        :param melody_names: if not supplied by the users,
-        :param starting_index: the index of the melody in the melody list that you want to start plotting
-        :param ending_index: the index of the melody in the melody list that you want to stop plotting
-        :return:
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+        :param ncols: int, optional
+            The number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
+        :param nrows: int, optional
+            The number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
+
         """
         plot_type_folder_name = 'pianoroll_pitch_prediction_groundtruth'
 
@@ -312,18 +337,20 @@ class BasicPlot:
                                                 dpi: float = 400,
                                                 figsize: tuple = (10, 5)):
         """
-        This function plots two axs: ground truth pianoroll on the top and the surprisal
-        line plot on the bottom.
-        :param figsize:
-        :param fig_format:
-        :param dpi:
-        :param showfig:
-        :param savefig:
-        :param experiment_folder_path:
-        :param melody_names:
-        :param starting_index:
-        :param ending_index:
-        :return:
+        Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
         """
         plot_type_folder_name = 'pianoroll_groundtruth_surprisal'
 
@@ -355,4 +382,3 @@ class BasicPlot:
                                        savefig=savefig,
                                        fig_format=fig_format,
                                        dpi=dpi)
-
