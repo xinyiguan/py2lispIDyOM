@@ -140,6 +140,14 @@ class Export:
         This function exports the IDyOM output data to a csv files.
         By default, this will export all properties of the chosen melodies, where each melody is in one csv file.
         """
+        # Check idyom_output_keyword is None:
+        if self.idyom_output_keywords is not None:
+            raise ValueError(f'The argument \'idyom_output_keywords\' should be empty. '
+                             f'The current version of py2lispIDyoM only supports exporting all IDyoM outputs of selected or all melodies.')
+
+        else:
+            pass
+
         export_folder_path = self._generate_export_folder(export_folder_name='outputs_in_csv')
 
         if self.melody_names:

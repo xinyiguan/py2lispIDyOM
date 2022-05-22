@@ -25,13 +25,24 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated README, re-organizing tutorials">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/2_data_preprocessing-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="data preprocessing - extracting tutorial updated">
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/2b_data_preprocessing_exporting-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2b_data_preprocessing_exporting.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-005.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-006.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_cpitch.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_melody_name.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_onset.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_cpitch.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_melody_name.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_onset.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/entropy.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/information_content.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/outputs_in_mat/melody_name.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_running_IDyOM_tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/1_running_IDyOM_tutorial.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/2_data_preprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/2_data_preprocessing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_data_preprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/2a_data_preprocessing_extracting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,13 +288,6 @@
       <workItem from="1652710702845" duration="61697000" />
       <workItem from="1652988369893" duration="39330000" />
       <workItem from="1653143649023" duration="469000" />
-    </task>
-    <task id="LOCAL-00017" summary="quit command added">
-      <created>1651488012781</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1651488012781</updated>
     </task>
     <task id="LOCAL-00018" summary="fixed pretraining id in lisp script">
       <created>1651495464878</created>
@@ -621,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653130680532</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="data preprocessing - extracting tutorial updated">
+      <created>1653153121376</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1653153121376</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +664,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fixed keywords to show in error msg" />
     <MESSAGE value="run idyom docs updated" />
     <MESSAGE value="typo fixed in run idyom docs" />
     <MESSAGE value="runIDyOM tutorial and readme updated" />
@@ -678,7 +688,8 @@
     <MESSAGE value="mat export naming fixed" />
     <MESSAGE value="module code minor refactor, added comments" />
     <MESSAGE value="updated README, re-organizing tutorials" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated README, re-organizing tutorials" />
+    <MESSAGE value="data preprocessing - extracting tutorial updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="data preprocessing - extracting tutorial updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
