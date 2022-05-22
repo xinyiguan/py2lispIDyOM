@@ -14,27 +14,144 @@ class BasicAxsGeneration:
     def generic_idyom_output_along_time(ax: matplotlib.axes.Axes,
                                         melody_info: MelodyInfo,
                                         selected_idyom_output: str,
+                                        grid: bool,
                                         color=None):
-        valid_property_list = melody_info.get_property_list()
-        if selected_idyom_output in valid_property_list:
-            selected_property_values = melody_info.access_properties([selected_idyom_output]).values.tolist()
+        valid_idyom_output_keyword_list = melody_info.get_idyom_output_keyword_list()
+        if selected_idyom_output in valid_idyom_output_keyword_list:
+            selected_property_values = melody_info.access_idyom_output_keywords([selected_idyom_output]).values.tolist()
             flatten_selected_property_values = [item for sublist in selected_property_values for item in sublist]
         else:
             raise ValueError(f'selected_idyom_output \'{selected_idyom_output}\' is invalid. '
-                             f'Valid outputs are: {valid_property_list}')
+                             f'Valid outputs are: {valid_idyom_output_keyword_list}')
 
-        onset_values = np.int_(melody_info.access_properties(['onset']).values.tolist())
+        onset_values = np.int_(melody_info.access_idyom_output_keywords(['onset']).values.tolist())
         onset_in_beat = onset_values / 24
         flatten_onset_in_beat = [item for sublist in onset_in_beat for item in sublist]
+
         ax.plot(flatten_onset_in_beat, flatten_selected_property_values, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Time in beat')
+        ax.set_xlabel('Time in quarter note')
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel(f'{selected_idyom_output}')
         ax.set_yscale('linear')
+
+        if grid is True:
+            ax.grid(True)
+        else:
+            ax.grid(False)
+        return ax
+
+    @staticmethod
+    def one_ic_along_onsets(ax: matplotlib.axes.Axes,
+                            melody_info: MelodyInfo,
+                            chosen_ic: str,  # type (e.g., 'cpitch.information.content')
+                            grid: bool,
+                            color: str,
+                            yticks):
+
+        onset_in_beat = melody_info._get_onset_beat_nparray()
+        chosen_ic_values = melody_info.get_idyom_output_nparray(idyom_output_key=chosen_ic)
+
+        ax.plot(onset_in_beat, chosen_ic_values, label=chosen_ic, color=color)
+
+        xticks = np.arange(0, np.amax(onset_in_beat))
+        yticks = yticks
+
+        ax.set_xticks(ticks=xticks, minor=True)
+        ax.set_xlabel('Time in quarter note')
+        ax.set_yticks(ticks=yticks, minor=True)
+        # ax.set_ylabel(chosen_ic)
+        ax.legend()
+
+        if grid is True:
+            ax.grid(True)
+        else:
+            ax.grid(False)
+        return ax
+
+    @staticmethod
+    def one_entropy_along_onsets(ax: matplotlib.axes.Axes,
+                                 melody_info: MelodyInfo,
+                                 chosen_entropy: str,  # type (e.g., 'cpitch.information.content')
+                                 grid: bool,
+                                 color: str,
+                                 yticks):
+
+        onset_in_beat = melody_info._get_onset_beat_nparray()
+        chosen_entropy_values = melody_info.get_idyom_output_nparray(idyom_output_key=chosen_entropy)
+
+        ax.plot(onset_in_beat, chosen_entropy_values, label=chosen_entropy, color=color)
+
+        xticks = np.arange(0, np.amax(onset_in_beat))
+        yticks = yticks
+
+        ax.set_xticks(ticks=xticks, minor=True)
+        ax.set_xlabel('Time in quarter note')
+        ax.set_yticks(ticks=yticks, minor=True)
+        ax.legend()
+
+        if grid is True:
+            ax.grid(True)
+        else:
+            ax.grid(False)
+        return ax
+
+    @staticmethod
+    def selected_ic_entropy_along_onsets(ax: matplotlib.axes.Axes,
+                                         melody_info: MelodyInfo,
+                                         ic_source: str,
+                                         entropy_source: str,
+                                         grid: bool,
+                                         ic_color=None,
+                                         entropy_color=None,
+                                         ):
+
+        valid_keywords_list = melody_info.get_idyom_output_keyword_list()
+        valid_surprisal_source = [keyword for keyword in valid_keywords_list if 'information.content' in keyword]
+        valid_entropy_source = [keyword for keyword in valid_keywords_list if 'entropy' in keyword]
+
+        # check usr inputs:
+        if ic_source in valid_surprisal_source:
+            ic_source_values = melody_info.access_idyom_output_keywords([ic_source]).values.tolist()
+            flatten_ic_values = [item for sublist in ic_source_values for item in sublist]
+        else:
+            raise ValueError(f'ic_source \'{ic_source}\' is invalid. '
+                             f'Valid information content source are: {valid_surprisal_source}')
+
+        if entropy_source in valid_entropy_source:
+            entropy_source_values = melody_info.access_idyom_output_keywords([entropy_source]).values.tolist()
+            flatten_entropy_values = [item for sublist in entropy_source_values for item in sublist]
+        else:
+            raise ValueError(f'entropy_source \'{entropy_source}\' is invalid. '
+                             f'Valid entropy source are: {valid_entropy_source}')
+
+        onset_values = np.int_(melody_info.access_idyom_output_keywords(['onset']).values.tolist())
+        onset_in_beat = onset_values / 24
+        flatten_onset_in_beat = [item for sublist in onset_in_beat for item in sublist]
+
+        ax.plot(flatten_onset_in_beat, flatten_ic_values, "-o", label=ic_source, color=ic_color)
+        ax.plot(flatten_onset_in_beat, flatten_entropy_values, "-o", label=entropy_source, color=entropy_color)
+
+        max_ic = np.amax(flatten_ic_values)
+        max_entropy = np.amax(flatten_entropy_values)
+
+        xticks = np.arange(0, np.amax(flatten_onset_in_beat))
+        yticks = np.arange(0, max(max_ic, max_entropy))
+
+        ax.set_xticks(ticks=xticks, minor=True)
+        ax.set_xlabel('Time in quarter note')
+        ax.set_yticks(ticks=yticks, minor=True)
+        ax.legend()
+        if grid is True:
+            ax.grid(True)
+        else:
+            ax.grid(False)
+        #    ax.xaxis.set_ticklabels([])  # hide xtick labels
+        # ax.set_ylabel(f'{ic_source}')
+
         return ax
 
     @staticmethod
@@ -43,7 +160,7 @@ class BasicAxsGeneration:
         sustain_mask = melody_info._get_pianoroll_original()
         pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
         duration_in_ticks = sustain_mask.shape[1]
-        onsets = melody_info.access_properties(['onset']).to_numpy(dtype=int).reshape(-1)
+        onsets = melody_info.access_idyom_output_keywords(['onset']).to_numpy(dtype=int).reshape(-1)
         onsets_binary = np.zeros(duration_in_ticks)
         np.put(a=onsets_binary, ind=onsets, v=1)
         onsets_binary = onsets_binary.astype(bool)
@@ -155,7 +272,7 @@ class Auxiliary:
 
         def _common_batch_actions():
             melody_info = experiment_info.melodies_dict[melody]
-            melody_name_pprint = melody_info.get_melody_name_pprint()
+            melody_name_pprint = melody_info._get_melody_name_pprint()
             fig = plot_method_func(melody_info)
             if savefig is True:
                 Auxiliary.save_one_fig(plot_type_folder_name=plot_type_folder_name,
@@ -229,7 +346,7 @@ class BasicPlot:
         def _generic_property_along_time(melody_info: MelodyInfo,
                                          show_single_fig: bool = showfig) -> plt.Figure:
 
-            melody_name_pprint = melody_info.get_melody_name_pprint()
+            melody_name_pprint = melody_info._get_melody_name_pprint()
             fig, (ax_generic_property) = plt.subplots(nrows=1, ncols=1, figsize=figsize, dpi=dpi, sharex='col')
 
             fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint,
@@ -238,6 +355,7 @@ class BasicPlot:
                                                                melody_info=melody_info,
                                                                selected_idyom_output=selected_idyom_output)
             plt.tight_layout()
+            plt.style.use('ggplot')
             if show_single_fig is True:
                 plt.show()
             else:
@@ -297,7 +415,7 @@ class BasicPlot:
         def _pianoroll_pitch_prediction_groundtruth(melody_info: MelodyInfo,
                                                     show_single_fig: bool = showfig) -> plt.Figure:
 
-            melody_name_pprint = melody_info.get_melody_name_pprint()
+            melody_name_pprint = melody_info._get_melody_name_pprint()
 
             fig, (ax_distribution, ax_groundtruth) = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize, dpi=dpi)
             fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name_pprint)
@@ -374,6 +492,248 @@ class BasicPlot:
             return fig
 
         Auxiliary.batch_melodies_plots(plot_method_func=_pianoroll_groundtruth_surprisal,
+                                       plot_type_folder_name=plot_type_folder_name,
+                                       experiment_folder_path=experiment_folder_path,
+                                       melody_names=melody_names,
+                                       starting_index=starting_index,
+                                       ending_index=ending_index,
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
+
+    @staticmethod
+    def selected_surprisal_entropy(experiment_folder_path: str,
+                                   ic_source: str,
+                                   entropy_source: str,
+                                   melody_names: List[str] = None,
+                                   starting_index: int = None,
+                                   ending_index: int = None,
+                                   savefig: bool = True,
+                                   showfig: bool = False,
+                                   fig_format: str = 'png',
+                                   dpi: float = 400,
+                                   figsize: tuple = (10, 6),
+                                   grid: bool = True):
+        """
+        Generate a figure that shows the selected entropy and information content.
+
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param entropy_source: str
+            The source of entropy.
+        :param ic_source: str
+            The source of information content (surprisal)
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+        :param grid: bool
+            Whether to show grid or not.
+        """
+        plot_type_folder_name = 'selected_surprisal_entropy'
+
+        def _selected_surprisal_entropy(melody_info: MelodyInfo,
+                                        ic_source: str = ic_source,
+                                        entropy_source: str = entropy_source,
+                                        grid: bool = grid,
+                                        show_single_fig: bool = showfig) -> plt.Figure:
+
+            melody_name_pprint = melody_info._get_melody_name_pprint()
+
+            fig, ax = plt.subplots(figsize=figsize)
+            fig.suptitle('IDyOM Information Content (Surprisal) and Entropy \n\n Melody: ' + melody_name_pprint)
+
+            BasicAxsGeneration.selected_ic_entropy_along_onsets(ax=ax,
+                                                                melody_info=melody_info,
+                                                                ic_source=ic_source,
+                                                                entropy_source=entropy_source,
+                                                                ic_color='C0',
+                                                                entropy_color='C1',
+                                                                grid=grid)
+
+            plt.tight_layout()
+            plt.style.use('ggplot')
+
+            if show_single_fig is True:
+                plt.show()
+            else:
+                pass
+            return fig
+
+        Auxiliary.batch_melodies_plots(plot_method_func=_selected_surprisal_entropy,
+                                       plot_type_folder_name=plot_type_folder_name,
+                                       experiment_folder_path=experiment_folder_path,
+                                       melody_names=melody_names,
+                                       starting_index=starting_index,
+                                       ending_index=ending_index,
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
+
+    @staticmethod
+    def all_surprisal_plots(experiment_folder_path: str,
+                            melody_names: List[str] = None,
+                            starting_index: int = None,
+                            ending_index: int = None,
+                            savefig: bool = True,
+                            showfig: bool = False,
+                            fig_format: str = 'png',
+                            dpi: float = 400,
+                            figsize: tuple = (10, 8),
+                            grid: bool = True):
+        """
+        Generate subplots that show all available surprisal outputs.
+
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+        :param grid: bool
+            Whether to show grid or not.
+        """
+        plot_type_folder_name = 'surprisals_plots'
+
+        def _all_surprisal_plots(melody_info: MelodyInfo,
+                                 grid: bool = grid,
+                                 show_single_fig: bool = showfig,
+                                 figsize: tuple = figsize,
+                                 dpi: float = dpi) -> plt.Figure:
+
+            melody_name_pprint = melody_info._get_melody_name_pprint()
+
+            valid_keywords_list = melody_info.get_idyom_output_keyword_list()
+            all_surprisal_sources = [keyword for keyword in valid_keywords_list if 'information.content' in keyword]
+
+            num_of_surprisal_subplots = len(all_surprisal_sources)
+            # to get the same y-range for all plots (0, max_surprisal across all surprisals)
+            max_surprisals = []
+            for idx, surprisal_source in enumerate(all_surprisal_sources):
+                surprisals = np.amax(melody_info.get_idyom_output_nparray(surprisal_source))
+                max_surprisals.append(surprisals)
+            yticks = np.arange(0, max(max_surprisals))
+
+            # plot a number of surprisal plots stacked one on top of each other, shared x, y
+            # add every single subplot to the figure with a for loop
+            fig, axs = plt.subplots(num_of_surprisal_subplots, figsize=figsize, dpi=dpi, sharex='col', sharey='row')
+            fig.suptitle('IDyOM Information Content (Surprisal) \n\n Melody: ' + melody_name_pprint)
+
+            for idx, surprisal_type in enumerate(all_surprisal_sources):
+                BasicAxsGeneration.one_ic_along_onsets(ax=axs[idx],
+                                                       melody_info=melody_info,
+                                                       chosen_ic=surprisal_type,
+                                                       grid=grid,
+                                                       color=str('C' + str(idx)),
+                                                       yticks=yticks)
+
+            plt.tight_layout()
+            plt.style.use('ggplot')
+
+            if show_single_fig is True:
+                plt.show()
+            else:
+                pass
+            return fig
+
+        Auxiliary.batch_melodies_plots(plot_method_func=_all_surprisal_plots,
+                                       plot_type_folder_name=plot_type_folder_name,
+                                       experiment_folder_path=experiment_folder_path,
+                                       melody_names=melody_names,
+                                       starting_index=starting_index,
+                                       ending_index=ending_index,
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
+
+    @staticmethod
+    def all_entropy_plots(experiment_folder_path: str,
+                          melody_names: List[str] = None,
+                          starting_index: int = None,
+                          ending_index: int = None,
+                          savefig: bool = True,
+                          showfig: bool = False,
+                          fig_format: str = 'png',
+                          dpi: float = 400,
+                          figsize: tuple = (10, 8),
+                          grid: bool = True):
+        """
+        Generate subplots that show all available entropy outputs.
+
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+        :param grid: bool
+            Whether to show grid or not.
+        """
+        plot_type_folder_name = 'entropy_plots'
+
+        def _all_entropy_plots(melody_info: MelodyInfo,
+                               grid: bool = grid,
+                               show_single_fig: bool = showfig,
+                               figsize: tuple = figsize,
+                               dpi: float = dpi) -> plt.Figure:
+
+            melody_name_pprint = melody_info._get_melody_name_pprint()
+
+            valid_keywords_list = melody_info.get_idyom_output_keyword_list()
+            all_entropy_sources = [keyword for keyword in valid_keywords_list if 'entropy' in keyword]
+
+            num_of_surprisal_subplots = len(all_entropy_sources)
+            # to get the same y-range for all plots (0, max_surprisal across all surprisals)
+            max_entropys = []
+            for idx, entropy_source in enumerate(all_entropy_sources):
+                entropys = np.amax(melody_info.get_idyom_output_nparray(entropy_source))
+                max_entropys.append(entropys)
+            yticks = np.arange(0, max(max_entropys))
+
+            # plot a number of entropy plots stacked one on top of each other, shared x, y
+            # add every single subplot to the figure with a for loop
+            fig, axs = plt.subplots(num_of_surprisal_subplots, figsize=figsize, dpi=dpi, sharex='col', sharey='row')
+            fig.suptitle('IDyOM Entropy \n\n Melody: ' + melody_name_pprint)
+
+            for idx, entropy_type in enumerate(all_entropy_sources):
+                BasicAxsGeneration.one_entropy_along_onsets(ax=axs[idx],
+                                                            melody_info=melody_info,
+                                                            chosen_entropy=entropy_type,
+                                                            grid=grid,
+                                                            color=str('C' + str(idx)),
+                                                            yticks=yticks)
+
+            plt.tight_layout()
+            plt.style.use('ggplot')
+
+            if show_single_fig is True:
+                plt.show()
+            else:
+                pass
+            return fig
+
+        Auxiliary.batch_melodies_plots(plot_method_func=_all_entropy_plots,
                                        plot_type_folder_name=plot_type_folder_name,
                                        experiment_folder_path=experiment_folder_path,
                                        melody_names=melody_names,

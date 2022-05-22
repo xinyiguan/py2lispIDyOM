@@ -100,6 +100,16 @@ class MelodyInfo(pd.DataFrame):
             if check_condition(keyword):
                 return self[output_keywords]
 
+    def get_idyom_output_nparray(self, idyom_output_key):
+        """
+        Get the IDyOM output via its key as a np.array
+        :param idyom_output_key: list of str
+        :return: np.array of output values
+        """
+        output_values = (self.access_idyom_output_keywords([idyom_output_key]).values.tolist())
+        output_values_array = [item for sublist in output_values for item in sublist]
+        return output_values_array
+
     def get_idyom_output_keyword_list(self) -> list:
         """
         Get a list of available IDyOM output keyword for this melody.
@@ -125,6 +135,12 @@ class MelodyInfo(pd.DataFrame):
         bpm = (60 * 1000000) / tempo
         onset_time_in_sec = (bpm / 60) * base_onset_values
         return onset_time_in_sec
+
+    def _get_onset_beat_nparray(self):
+        onset_values = np.int_(self.access_idyom_output_keywords(['onset']).values.tolist())
+        onset_in_beat = onset_values / 24
+        onset_in_beat_array = [item for sublist in onset_in_beat for item in sublist]
+        return onset_in_beat_array
 
     def _get_melody_name_pprint(self) -> str:
         melody_name_pprint = str(self.access_idyom_output_keywords(['melody.name']).to_numpy()[0][0]).replace('"', '')
