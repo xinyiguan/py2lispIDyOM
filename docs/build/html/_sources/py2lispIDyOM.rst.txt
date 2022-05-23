@@ -1,0 +1,50 @@
+py2lispIDyOM package
+====================
+
+py2lispIDyOM.configuration module
+---------------------------------
+
+.. automodule:: py2lispIDyOM.configuration
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+py2lispIDyOM.export module
+--------------------------
+
+.. automodule:: py2lispIDyOM.export
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+py2lispIDyOM.extract module
+---------------------------
+
+.. automodule:: py2lispIDyOM.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+py2lispIDyOM.run module
+-----------------------
+
+.. automodule:: py2lispIDyOM.run
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+py2lispIDyOM.viz module
+-----------------------
+
+.. automodule:: py2lispIDyOM.viz
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: py2lispIDyOM
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -6,8 +6,8 @@ Welcome to py2lispIDyOM's documentation!
 ========================================
 
 .. toctree::
-    :maxdepth: 4
-    :caption: Contents:
+:maxdepth: 4
+:caption: Contents:
 
 
 

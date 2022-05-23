@@ -241,10 +241,3 @@ class ExperimentInfo:
         pitch_element_list = np.int_(pitch_element_list)
 
         return pitch_element_list
-
-
-if __name__ == '__main__':
-    experiment_history_folder = 'experiment_history/04-05-22_14.35.26/'
-    my_exp = ExperimentInfo(experiment_history_folder)
-    song = my_exp.access_melodies(starting_index=3, ending_index=6)[0]
-    print(song)

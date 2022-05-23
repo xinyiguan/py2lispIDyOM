@@ -25,12 +25,62 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs set up">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated docstring comments">
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/environment.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/index.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/modules.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/doctrees/py2lispIDyOM.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/.buildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/index.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/modules.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_sources/py2lispIDyOM.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/autoclasstoc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/badge_only.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/Roboto-Slab-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold-italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold-italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal-italic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal-italic.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/fonts/lato-normal.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/css/theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/documentation_options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/js/badge_only.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/js/html5shiv-printshiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/js/html5shiv.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/js/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/language_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore-1.13.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/modules.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/py2lispIDyOM.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/build/html/searchindex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/index.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,14 +329,7 @@
       <workItem from="1653143649023" duration="469000" />
       <workItem from="1653218729981" duration="29542000" />
       <workItem from="1653302029423" duration="9826000" />
-      <workItem from="1653313572617" duration="7288000" />
-    </task>
-    <task id="LOCAL-00029" summary="refactor: user interface not implemented">
-      <created>1652021888419</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1652021888419</updated>
+      <workItem from="1653313572617" duration="10023000" />
     </task>
     <task id="LOCAL-00030" summary="refactor: user interface not implemented">
       <created>1652085573283</created>
@@ -624,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653335015771</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="updated docstring comments">
+      <created>1653336475644</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1653336475644</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,7 +706,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="viz examples tutorials added" />
     <MESSAGE value="fixing paths to plots in viz tutorial" />
     <MESSAGE value="tutorial content" />
     <MESSAGE value="delete redundant files" />
@@ -681,7 +730,8 @@
     <MESSAGE value="packaging setup" />
     <MESSAGE value="documentation init" />
     <MESSAGE value="docs set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs set up" />
+    <MESSAGE value="updated docstring comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated docstring comments" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
