@@ -40,7 +40,6 @@ In summary, py2lispIDyOM has three main functionalities for research workflow:
 Please have a look at the [tutorial](tutorial/), which guides you through all three basic functionalities of through an
 example.
 
-More examples are also available in the [examples](examples/) folder.
 
 Note: I tried to make the code accessible and provide some convenience functions for getting started smoothly. B ut
 there is still lots of room for better documentation and testing. Please contact me if you have any questions, are
