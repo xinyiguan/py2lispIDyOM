@@ -122,6 +122,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-005.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-006.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

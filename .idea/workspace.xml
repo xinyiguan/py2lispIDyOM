@@ -25,49 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="viz tutorial updated">
-      <change beforePath="$PROJECT_DIR$/1_running_IDyOM_tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/1_running_IDyOM_tutorial.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2a_data_preprocessing_extracting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/2a_data_preprocessing_extracting.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2b_data_preprocessing_exporting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/2b_data_preprocessing_exporting.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3_visualizing_outputs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/3_visualizing_outputs.ipynb" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="files re-organized">
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/1_running_IDyOM_tutorial-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/2b_data_preprocessing_exporting-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-001.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-002.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-003.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-004.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-005.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-006.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-007.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-008.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-009.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-010.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-011.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-012.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-013.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-014.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/bach_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-015.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx001.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx002.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx003.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx004.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx005.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx006.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx007.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx008.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx009.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx010.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx011.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx012.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx013.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx014.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataset/shanx_dataset/shanx015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx015.mid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/extract_export_tutorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/runIDyOM_tutorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial_intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/tutorial_plots_demo/chor-010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/visualization_tutorial.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,14 +280,7 @@
       <workItem from="1652988369893" duration="39330000" />
       <workItem from="1653143649023" duration="469000" />
       <workItem from="1653218729981" duration="29542000" />
-      <workItem from="1653302029423" duration="3365000" />
-    </task>
-    <task id="LOCAL-00022" summary="interactive mode: database related">
-      <created>1651592548120</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1651592548120</updated>
+      <workItem from="1653302029423" duration="4891000" />
     </task>
     <task id="LOCAL-00023" summary="lisp script run checked">
       <created>1651651185787</created>
@@ -660,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653305794633</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="files re-organized">
+      <created>1653306045247</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1653306045247</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +657,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="extract tutorial and readme updated" />
     <MESSAGE value="extract_export tutorial updated, export module added error msg" />
     <MESSAGE value="export data example jupyter notebook" />
     <MESSAGE value="export example jupyter notebook" />
@@ -717,7 +681,8 @@
     <MESSAGE value="3 more types of plots added" />
     <MESSAGE value="plot alignment and label bug fixed" />
     <MESSAGE value="viz tutorial updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="viz tutorial updated" />
+    <MESSAGE value="files re-organized" />
+    <option name="LAST_COMMIT_MESSAGE" value="files re-organized" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
