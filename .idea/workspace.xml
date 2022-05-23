@@ -25,14 +25,25 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="files re-organized">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="files reorganized">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/test_dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_templates/custom-class-template.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_templates/custom-module-template.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/api_summary.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_template.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/1_running_IDyOM_tutorial-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/2b_data_preprocessing_exporting-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,14 +291,7 @@
       <workItem from="1652988369893" duration="39330000" />
       <workItem from="1653143649023" duration="469000" />
       <workItem from="1653218729981" duration="29542000" />
-      <workItem from="1653302029423" duration="4891000" />
-    </task>
-    <task id="LOCAL-00023" summary="lisp script run checked">
-      <created>1651651185787</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1651651185788</updated>
+      <workItem from="1653302029423" duration="6918000" />
     </task>
     <task id="LOCAL-00024" summary="refactored file names">
       <created>1651666934388</created>
@@ -625,7 +629,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653306045247</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="files reorganized">
+      <created>1653308459866</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1653308459866</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +668,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="extract_export tutorial updated, export module added error msg" />
     <MESSAGE value="export data example jupyter notebook" />
     <MESSAGE value="export example jupyter notebook" />
     <MESSAGE value="viz examples (1/3) need to fix fig resolution, onset time in sec." />
@@ -682,7 +692,8 @@
     <MESSAGE value="plot alignment and label bug fixed" />
     <MESSAGE value="viz tutorial updated" />
     <MESSAGE value="files re-organized" />
-    <option name="LAST_COMMIT_MESSAGE" value="files re-organized" />
+    <MESSAGE value="files reorganized" />
+    <option name="LAST_COMMIT_MESSAGE" value="files reorganized" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
