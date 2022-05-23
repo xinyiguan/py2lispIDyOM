@@ -25,21 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2a_data_preprocessing_extracting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/2a_data_preprocessing_extracting.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3_visualizing_outputs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/3_visualizing_outputs.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="viz tutorial updated">
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-003.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,14 +277,7 @@
       <workItem from="1652988369893" duration="39330000" />
       <workItem from="1653143649023" duration="469000" />
       <workItem from="1653218729981" duration="29542000" />
-      <workItem from="1653302029423" duration="2824000" />
-    </task>
-    <task id="LOCAL-00020" summary="interative mode: run_start_idyom_command fini">
-      <created>1651506975496</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1651506975496</updated>
+      <workItem from="1653302029423" duration="3194000" />
     </task>
     <task id="LOCAL-00021" summary="pretrain_id fixed">
       <created>1651590530782</created>
@@ -632,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653301166482</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="viz tutorial updated">
+      <created>1653305097476</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1653305097477</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +654,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="runIDyOM tutorial and readme updated" />
     <MESSAGE value="extract tutorial and readme updated" />
     <MESSAGE value="extract_export tutorial updated, export module added error msg" />
     <MESSAGE value="export data example jupyter notebook" />
@@ -689,7 +678,8 @@
     <MESSAGE value="data preprocessing - extracting tutorial updated" />
     <MESSAGE value="3 more types of plots added" />
     <MESSAGE value="plot alignment and label bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="plot alignment and label bug fixed" />
+    <MESSAGE value="viz tutorial updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="viz tutorial updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
