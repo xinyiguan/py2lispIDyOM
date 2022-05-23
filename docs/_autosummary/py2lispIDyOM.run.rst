@@ -1,0 +1,31 @@
+py2lispIDyOM.run
+================
+
+.. automodule:: py2lispIDyOM.run
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+   
+      IDyOMExperiment
+   
+   
+
+   
+   
+   
+
+
+

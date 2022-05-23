@@ -9,17 +9,22 @@ Welcome to py2lispIDyOM's documentation!
 
    api_summary
 
+
 .. ...add more elements to table of contents
 
-Code examples are automatically tested
-
-   >>> print("Hello World")
-   Hello World
 
 
-.. autoclass:: py2lispIDyOM.myclass.MyClass
+
+.. autoclass:: py2lispIDyOM.run.IDyOMExperiment
    :members:
-
+.. autoclass:: py2lispIDyOM.extract.ExperimentInfo
+   :members:
+.. autoclass:: py2lispIDyOM.extract.MelodyInfo
+   :members:
+.. autoclass:: py2lispIDyOM.export.Export
+   :members:
+.. autoclass:: py2lispIDyOM.viz.BasicPlot
+   :members:
 
 .. Indices and tables
 .. ==================
