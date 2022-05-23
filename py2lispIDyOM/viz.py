@@ -310,6 +310,7 @@ class Auxiliary:
 
 
 class BasicPlot:
+    """ BasicPlot for selected IDyOM outputs in an experiment. """
 
     @staticmethod
     def pianoroll_pitch_prediction_groundtruth(experiment_folder_path: str,

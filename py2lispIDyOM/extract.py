@@ -56,20 +56,6 @@ class MelodyInfo(pd.DataFrame):
     """
     A melody object (pd.DataFrame) that contains all data in a single melody inherit from the parent Experiment.
 
-    Attributes
-    ----------
-    melody_name_pp: str
-        The name of the melody.
-
-    Methods
-    -------
-    get_idyom_output_keyword_list
-        Return a list valid IDyOM output keys
-    access_idyom_output_keywords(properties: typing.List[str])
-        Access certain properties/idyom outputs via its keyword.
-    get_idyom_output_nparray(idyom_output_key)
-        Get the values of IDyOM output as a numpy array according to the provided keyword.
-
     """
 
     _metadata = ['exp_pitch_element_list', 'parent_experiment']
@@ -196,23 +182,8 @@ class ExperimentInfo:
     """
     An experiment object that contains all data in a single experiment.
 
-    Parameters
-    ----------
-    experiment_folder_path: str
-        The path to experiment log folder which you want to access.
-
-    Attributes
-    ----------
-    melodies_dict: dict
-        A typed dictionary (melody_name, MelodyInfo).
-    exp_pitch_element_list: list of int
-        The list of all pitches used for prediction of the entire dataset.
-
-    Methods
-    -------
-    access_melodies(starting_index=None, ending_index=None,melody_names=None)
-        Access specific melodies by index or melody names. If all arguments are None, then the default is to access
-        all melodies in the Experiment class.
+    :param experiment_folder_path: The path to experiment log folder which you want to access.
+    :type str
 
     """
     experiment_folder_path: str

@@ -12,6 +12,15 @@ from py2lispIDyOM.extract import ExperimentInfo
 
 @dataclass
 class Export:
+    """Export selected IDyOM model outputs to other formats.
+
+    :param experiment_folder_path: The path to which you saved all the result data/plots
+    :type experiment_folder_path: str
+    :param idyom_output_keywords: A list of IDyOM output keywords you want to export, defaults to None
+    :type list of string, optional
+    :param melody_names: A list of melodies of which IDyOM outputs that you want to export
+    :type melody_names: list of string, optional
+    """
     experiment_folder_path: str
     idyom_output_keywords: List = None
     melody_names: List = None

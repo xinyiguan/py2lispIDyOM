@@ -7,18 +7,14 @@ from py2lispIDyOM.configuration import get_timestamp, IDyOMConfiguration, Experi
 @dataclass
 class IDyOMExperiment:
     """
-    Configure the IDyOM experiment.
+    A class to configure the IDyOM experiment.
 
-    Parameters
-    ----------
-    test_dataset_path : str
-        The path to your test dataset (required)
-    pretrain_dataset_path : str
-        The path to your pretrain dataset
-    experiment_history_folder_path : str
-        The path to which you want to save all the result data/plots (if leave blank,
-        by default, a folder called experiment_history that hosts all data for the current experiment will be created
-        when you run the IDyOM model).
+    :param test_dataset_path: The path to your test dataset (required)
+    :type test_dataset_path: str
+    :param pretrain_dataset_path: The path to your pretrain dataset
+    :type str
+    :param experiment_history_folder_path: The path to which you want to save all the result data/plots, defaults to None.
+    :type str, optional
 
     """
     test_dataset_path: str
@@ -77,7 +73,8 @@ class IDyOMExperiment:
     def generate_lisp_script(self, write=True):
         """
         Generate the LISP script for the IDyOM model configurations.
-        :param write: whether to write the file or not.
+        :param write: whether to write the file or not, defaults to True.
+        :type write: bool
         :return: the path to the lisp script file.
         """
         self._update_idyom_config()
