@@ -63,8 +63,12 @@ class MelodyInfo(pd.DataFrame):
 
     Methods
     -------
-    access_idyom_output_keywords()(properties: typing.List[str])
+    get_idyom_output_keyword_list
+        Return a list valid IDyOM output keys
+    access_idyom_output_keywords(properties: typing.List[str])
         Access certain properties/idyom outputs via its keyword.
+    get_idyom_output_nparray(idyom_output_key)
+        Get the values of IDyOM output as a numpy array according to the provided keyword.
 
     """
 
@@ -100,7 +104,7 @@ class MelodyInfo(pd.DataFrame):
             if check_condition(keyword):
                 return self[output_keywords]
 
-    def get_idyom_output_nparray(self, idyom_output_key):
+    def get_idyom_output_nparray(self, idyom_output_key: str):
         """
         Get the IDyOM output via its key as a np.array
         :param idyom_output_key: list of str

@@ -356,11 +356,11 @@ class BasicPlot:
             melody_name_pprint = melody_info._get_melody_name_pprint()
 
             fig, (ax_distribution, ax_groundtruth) = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize, dpi=dpi)
-            fig.suptitle('IDyOM Pitch prediction vs ground truth \n\n Melody name: ' + melody_name_pprint)
+            fig.suptitle('IDyOM Pitch prediction vs Ground truth \n\n Melody name: ' + melody_name_pprint)
 
             BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
             BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
-            ax_groundtruth.title.set_text('Ground Truth')
+            # ax_groundtruth.title.set_text('Ground Truth')
 
             plt.xlabel("Time in quarter note")
             plt.tight_layout()
@@ -455,7 +455,7 @@ class BasicPlot:
                     grid: bool = True,
                     ggplot: bool = True):
         """
-        Generate a simple line plot with onset (in beat) on the x-axis, and selected IDyOM output on the y-axis.
+        Generate a simple line plot with time (in quarter note) on the x-axis, and selected IDyOM output on the y-axis.
 
         :param selected_idyom_output: str
             The keyword of the IDyOM output you want to plot.
@@ -600,19 +600,19 @@ class BasicPlot:
                                        dpi=dpi)
 
     @staticmethod
-    def all_surprisal_plots(experiment_folder_path: str,
-                            melody_names: List[str] = None,
-                            starting_index: int = None,
-                            ending_index: int = None,
-                            savefig: bool = True,
-                            showfig: bool = False,
-                            fig_format: str = 'png',
-                            dpi: float = 400,
-                            figsize: tuple = (10, 8),
-                            grid: bool = True,
-                            ggplot: bool = True):
+    def all_surprisal(experiment_folder_path: str,
+                      melody_names: List[str] = None,
+                      starting_index: int = None,
+                      ending_index: int = None,
+                      savefig: bool = True,
+                      showfig: bool = False,
+                      fig_format: str = 'png',
+                      dpi: float = 400,
+                      figsize: tuple = (10, 8),
+                      grid: bool = True,
+                      ggplot: bool = True):
         """
-        Generate subplots that show all available surprisal outputs.
+        Generate subplots of all available surprisal outputs.
 
         :param experiment_folder_path: str
             The path to your experiment folder.
@@ -693,17 +693,17 @@ class BasicPlot:
                                        dpi=dpi)
 
     @staticmethod
-    def all_entropy_plots(experiment_folder_path: str,
-                          melody_names: List[str] = None,
-                          starting_index: int = None,
-                          ending_index: int = None,
-                          savefig: bool = True,
-                          showfig: bool = False,
-                          fig_format: str = 'png',
-                          dpi: float = 400,
-                          figsize: tuple = (10, 8),
-                          grid: bool = True,
-                          ggplot: bool = True):
+    def all_entropy(experiment_folder_path: str,
+                    melody_names: List[str] = None,
+                    starting_index: int = None,
+                    ending_index: int = None,
+                    savefig: bool = True,
+                    showfig: bool = False,
+                    fig_format: str = 'png',
+                    dpi: float = 400,
+                    figsize: tuple = (10, 8),
+                    grid: bool = True,
+                    ggplot: bool = True):
         """
         Generate subplots that show all available entropy outputs.
 
