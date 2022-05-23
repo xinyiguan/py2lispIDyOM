@@ -14,7 +14,7 @@ setuptools.setup(
     description="A Python package for IDyOM model",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/xinyiguan/py2lispIDyOM",
+    url="https://xinyiguan.github.io/py2lispIDyOM/",
     packages=setuptools.find_packages(exclude=['tests']),
     install_requires=install_requires,
     include_package_data=True,
@@ -25,4 +25,3 @@ setuptools.setup(
     ],
     python_requires=">=3.9",
 )
-
