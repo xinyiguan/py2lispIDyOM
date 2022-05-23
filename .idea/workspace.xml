@@ -25,15 +25,27 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="data preprocessing - extracting tutorial updated">
-      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3_visualizing_outputs.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="3 more types of plots added">
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_entropy/chor-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_entropy/chor-004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_entropy/chor-005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/simple_plot_entropy/chor-006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-006.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/1_running_IDyOM_tutorial-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/2_data_preprocessing-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,14 +292,7 @@
       <workItem from="1652710702845" duration="61697000" />
       <workItem from="1652988369893" duration="39330000" />
       <workItem from="1653143649023" duration="469000" />
-      <workItem from="1653218729981" duration="18259000" />
-    </task>
-    <task id="LOCAL-00018" summary="fixed pretraining id in lisp script">
-      <created>1651495464878</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1651495464878</updated>
+      <workItem from="1653218729981" duration="29299000" />
     </task>
     <task id="LOCAL-00019" summary="checked:DatabaseConfiguration hidden from user input (auto extracted from RunModelConfiguration)">
       <created>1651502619290</created>
@@ -625,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653153121376</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="3 more types of plots added">
+      <created>1653252714515</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1653252714515</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +669,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="run idyom docs updated" />
     <MESSAGE value="typo fixed in run idyom docs" />
     <MESSAGE value="runIDyOM tutorial and readme updated" />
     <MESSAGE value="extract tutorial and readme updated" />
@@ -682,7 +693,8 @@
     <MESSAGE value="module code minor refactor, added comments" />
     <MESSAGE value="updated README, re-organizing tutorials" />
     <MESSAGE value="data preprocessing - extracting tutorial updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="data preprocessing - extracting tutorial updated" />
+    <MESSAGE value="3 more types of plots added" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 more types of plots added" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -694,7 +706,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1631006183201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$viz.coverage" NAME="viz Coverage Results" MODIFIED="1652389131039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$testing.coverage" NAME="testing Coverage Results" MODIFIED="1652881435857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py2lispIDyOM$test.coverage" NAME="test Coverage Results" MODIFIED="1653252529350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py2lispIDyOM$test.coverage" NAME="test Coverage Results" MODIFIED="1653300964311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$configuration.coverage" NAME="configuration Coverage Results" MODIFIED="1651494459412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$outputs_in_mat_format.coverage" NAME="outputs_in_mat_format Coverage Results" MODIFIED="1627312177241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1625469627561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -18,23 +18,25 @@ class BasicAxsGeneration:
                                         color=None):
         valid_idyom_output_keyword_list = melody_info.get_idyom_output_keyword_list()
         if selected_idyom_output in valid_idyom_output_keyword_list:
-            selected_property_values = melody_info.access_idyom_output_keywords([selected_idyom_output]).values.tolist()
-            flatten_selected_property_values = [item for sublist in selected_property_values for item in sublist]
+            selected_output_values = melody_info.get_idyom_output_nparray(selected_idyom_output)
         else:
             raise ValueError(f'selected_idyom_output \'{selected_idyom_output}\' is invalid. '
                              f'Valid outputs are: {valid_idyom_output_keyword_list}')
 
-        onset_values = np.int_(melody_info.access_idyom_output_keywords(['onset']).values.tolist())
-        onset_in_beat = onset_values / 24
-        flatten_onset_in_beat = [item for sublist in onset_in_beat for item in sublist]
+        onset_in_beat = melody_info._get_onset_beat_nparray()
 
-        ax.plot(flatten_onset_in_beat, flatten_selected_property_values, color=color)
+        ax.plot(onset_in_beat, selected_output_values, "-o", color=color)
+
         ax.margins(x=0.01)
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
+
+        xticks = np.arange(0, np.amax(onset_in_beat))
+        ax.set_xticks(ticks=xticks, minor=True)
         ax.set_xlabel('Time in quarter note')
-        #    ax.xaxis.set_ticklabels([])  # hide xtick labels
+        yticks = np.arange(0, np.amax(selected_output_values) + 1)
+        ax.set_yticks(ticks=yticks, minor=True)
         ax.set_ylabel(f'{selected_idyom_output}')
         ax.set_yscale('linear')
 
@@ -55,15 +57,14 @@ class BasicAxsGeneration:
         onset_in_beat = melody_info._get_onset_beat_nparray()
         chosen_ic_values = melody_info.get_idyom_output_nparray(idyom_output_key=chosen_ic)
 
-        ax.plot(onset_in_beat, chosen_ic_values, label=chosen_ic, color=color)
+        ax.plot(onset_in_beat, chosen_ic_values, marker='o', label=chosen_ic, color=color, markersize=5)
 
         xticks = np.arange(0, np.amax(onset_in_beat))
-        yticks = yticks
+        yticks = yticks + 1
 
         ax.set_xticks(ticks=xticks, minor=True)
-        ax.set_xlabel('Time in quarter note')
+        # ax.set_xlabel('Time in quarter note')
         ax.set_yticks(ticks=yticks, minor=True)
-        # ax.set_ylabel(chosen_ic)
         ax.legend()
 
         if grid is True:
@@ -83,13 +84,13 @@ class BasicAxsGeneration:
         onset_in_beat = melody_info._get_onset_beat_nparray()
         chosen_entropy_values = melody_info.get_idyom_output_nparray(idyom_output_key=chosen_entropy)
 
-        ax.plot(onset_in_beat, chosen_entropy_values, label=chosen_entropy, color=color)
+        ax.plot(onset_in_beat, chosen_entropy_values, marker='o', label=chosen_entropy, color=color, markersize=5)
 
         xticks = np.arange(0, np.amax(onset_in_beat))
-        yticks = yticks
+        yticks = yticks + 1
 
         ax.set_xticks(ticks=xticks, minor=True)
-        ax.set_xlabel('Time in quarter note')
+        # ax.set_xlabel('Time in quarter note')
         ax.set_yticks(ticks=yticks, minor=True)
         ax.legend()
 
@@ -128,18 +129,16 @@ class BasicAxsGeneration:
             raise ValueError(f'entropy_source \'{entropy_source}\' is invalid. '
                              f'Valid entropy source are: {valid_entropy_source}')
 
-        onset_values = np.int_(melody_info.access_idyom_output_keywords(['onset']).values.tolist())
-        onset_in_beat = onset_values / 24
-        flatten_onset_in_beat = [item for sublist in onset_in_beat for item in sublist]
+        onset_in_beat = melody_info._get_onset_beat_nparray()
 
-        ax.plot(flatten_onset_in_beat, flatten_ic_values, "-o", label=ic_source, color=ic_color)
-        ax.plot(flatten_onset_in_beat, flatten_entropy_values, "-o", label=entropy_source, color=entropy_color)
+        ax.plot(onset_in_beat, flatten_ic_values, "-o", label=ic_source, color=ic_color)
+        ax.plot(onset_in_beat, flatten_entropy_values, "-o", label=entropy_source, color=entropy_color)
 
         max_ic = np.amax(flatten_ic_values)
         max_entropy = np.amax(flatten_entropy_values)
 
-        xticks = np.arange(0, np.amax(flatten_onset_in_beat))
-        yticks = np.arange(0, max(max_ic, max_entropy))
+        xticks = np.arange(0, np.amax(onset_in_beat))
+        yticks = np.arange(0, max(max_ic, max_entropy) + 1)
 
         ax.set_xticks(ticks=xticks, minor=True)
         ax.set_xlabel('Time in quarter note')
@@ -158,7 +157,10 @@ class BasicAxsGeneration:
     def pianoroll(ax: matplotlib.axes.Axes,
                   melody_info: MelodyInfo):
         sustain_mask = melody_info._get_pianoroll_original()
-        pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
+
+        pitch_min = np.amin(melody_info.exp_pitch_element_list)
+        pitch_max = np.amax(melody_info.exp_pitch_element_list)
+
         duration_in_ticks = sustain_mask.shape[1]
         onsets = melody_info.access_idyom_output_keywords(['onset']).to_numpy(dtype=int).reshape(-1)
         onsets_binary = np.zeros(duration_in_ticks)
@@ -177,24 +179,25 @@ class BasicAxsGeneration:
         ax.imshow(colored_image, origin='lower', aspect='auto',
                   extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         # ax.axis('image')
-        ax.set_xlabel('Time (beat)')
+        # ax.set_xlabel("Time in quarter note")
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Pitch (MIDI number)')
+        ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
         return ax
 
     @staticmethod
     def pianoroll_pitch_distribution(ax: matplotlib.axes.Axes,
                                      melody_info: MelodyInfo):
-        pitch_min, pitch_max = melody_info.parent_experiment.pitch_range
+        pitch_min = np.amin(melody_info.exp_pitch_element_list)
+        pitch_max = np.amax(melody_info.exp_pitch_element_list)
+
         duration_in_ticks = melody_info._get_pianoroll_original().shape[1]
         pianoroll_distribution_array = melody_info._get_pianoroll_pitch_distribution()
         ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
                   extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
-        # ax.axis('image')
-        ax.title.set_text('Pitch Prediction')
-        ax.set_xlabel('Time (beat)')
-        # ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Pitch (MIDI number)')
+
+        # ax.title.set_text('Pitch Prediction')
+        # ax.set_xlabel("Time in quarter note")
+        ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
         return ax
 
     @staticmethod
@@ -209,9 +212,9 @@ class BasicAxsGeneration:
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Time')
+        ax.set_xlabel("Time in quarter note")
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Entropy')
+        ax.set_ylabel('Entropy', fontsize=10)
 
         return ax
 
@@ -227,9 +230,7 @@ class BasicAxsGeneration:
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Time')
-        #   ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
+        ax.set_ylabel('Information Content (Surprisal) \n -log(P)', fontsize=10)
         return ax
 
     @staticmethod
@@ -245,9 +246,9 @@ class BasicAxsGeneration:
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_xlabel('Time (beat)')
+        # ax.set_xlabel('Time in quarter note')
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
+        ax.set_ylabel('Information Content (Surprisal) \n -log(P)', fontsize=10)
         return ax
 
 
@@ -311,69 +312,6 @@ class Auxiliary:
 class BasicPlot:
 
     @staticmethod
-    def simple_plot(selected_idyom_output: str,
-                    experiment_folder_path: str,
-                    melody_names: List[str] = None,
-                    starting_index: int = None,
-                    ending_index: int = None,
-                    savefig: bool = True,
-                    showfig: bool = False,
-                    fig_format: str = 'png',
-                    dpi: float = 400,
-                    figsize: tuple = (10, 5)):
-        """
-        Generate a simple line plot with onset (in beat) on the x-axis, and selected IDyOM output on the y-axis.
-
-        :param selected_idyom_output: str
-            The keyword of the IDyOM output you want to plot.
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-
-        """
-        plot_type_folder_name = 'simple_plot_' + selected_idyom_output
-
-        def _generic_property_along_time(melody_info: MelodyInfo,
-                                         show_single_fig: bool = showfig) -> plt.Figure:
-
-            melody_name_pprint = melody_info._get_melody_name_pprint()
-            fig, (ax_generic_property) = plt.subplots(nrows=1, ncols=1, figsize=figsize, dpi=dpi, sharex='col')
-
-            fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint,
-                         fontsize=15)
-            BasicAxsGeneration.generic_idyom_output_along_time(ax_generic_property,
-                                                               melody_info=melody_info,
-                                                               selected_idyom_output=selected_idyom_output)
-            plt.tight_layout()
-            plt.style.use('ggplot')
-            if show_single_fig is True:
-                plt.show()
-            else:
-                pass
-            return fig
-
-        # Plot batch according to user inputs:
-        Auxiliary.batch_melodies_plots(plot_method_func=_generic_property_along_time,
-                                       plot_type_folder_name=plot_type_folder_name,
-                                       experiment_folder_path=experiment_folder_path,
-                                       melody_names=melody_names,
-                                       starting_index=starting_index,
-                                       ending_index=ending_index,
-                                       savefig=savefig,
-                                       fig_format=fig_format,
-                                       dpi=dpi)
-
-    @staticmethod
     def pianoroll_pitch_prediction_groundtruth(experiment_folder_path: str,
                                                melody_names: List[str] = None,
                                                starting_index: int = None,
@@ -424,6 +362,7 @@ class BasicPlot:
             BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
             ax_groundtruth.title.set_text('Ground Truth')
 
+            plt.xlabel("Time in quarter note")
             plt.tight_layout()
 
             if show_single_fig is True:
@@ -453,7 +392,7 @@ class BasicPlot:
                                                 showfig: bool = False,
                                                 fig_format: str = 'png',
                                                 dpi: float = 400,
-                                                figsize: tuple = (10, 5)):
+                                                figsize: tuple = (10, 6)):
         """
         Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.
         :param experiment_folder_path: str
@@ -475,7 +414,7 @@ class BasicPlot:
         def _pianoroll_groundtruth_surprisal(melody_info: MelodyInfo,
                                              show_single_fig: bool = showfig) -> plt.Figure:
 
-            melody_name_pprint = melody_info.get_melody_name_pprint()
+            melody_name_pprint = melody_info._get_melody_name_pprint()
 
             fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=figsize, dpi=dpi, sharex='col')
             fig.suptitle('IDyOM Information Content (Surprisal) \n\n Melody: ' + melody_name_pprint)
@@ -483,6 +422,7 @@ class BasicPlot:
             BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
             BasicAxsGeneration.surprisal_continuous(ax_surprisal, melody_info=melody_info)
 
+            plt.xlabel("Time in quarter note")
             plt.tight_layout()
 
             if show_single_fig is True:
@@ -492,6 +432,82 @@ class BasicPlot:
             return fig
 
         Auxiliary.batch_melodies_plots(plot_method_func=_pianoroll_groundtruth_surprisal,
+                                       plot_type_folder_name=plot_type_folder_name,
+                                       experiment_folder_path=experiment_folder_path,
+                                       melody_names=melody_names,
+                                       starting_index=starting_index,
+                                       ending_index=ending_index,
+                                       savefig=savefig,
+                                       fig_format=fig_format,
+                                       dpi=dpi)
+
+    @staticmethod
+    def simple_plot(selected_idyom_output: str,
+                    experiment_folder_path: str,
+                    melody_names: List[str] = None,
+                    starting_index: int = None,
+                    ending_index: int = None,
+                    savefig: bool = True,
+                    showfig: bool = False,
+                    fig_format: str = 'png',
+                    dpi: float = 400,
+                    figsize: tuple = (10, 5),
+                    grid: bool = True,
+                    ggplot: bool = True):
+        """
+        Generate a simple line plot with onset (in beat) on the x-axis, and selected IDyOM output on the y-axis.
+
+        :param selected_idyom_output: str
+            The keyword of the IDyOM output you want to plot.
+        :param experiment_folder_path: str
+            The path to your experiment folder.
+        :param melody_names: List[str], optional,
+            If not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: int, optional
+            The index of the melody in the melody list that you want to start plotting.
+        :param ending_index: int, optional
+            The index of the melody in the melody list that you want to stop plotting.
+        :param savefig: bool, optional
+        :param showfig: bool, optional
+        :param fig_format: str, optional, default = 'png
+        :param dpi: float, optional, default = 400
+        :param figsize: tuple, optional, default is (10,5)
+        :param grid: bool
+            Whether to show grid or not.
+        :param ggplot: bool
+            Whether to use ggplot or not.
+
+        """
+        plot_type_folder_name = 'simple_plot_' + selected_idyom_output
+
+        def _generic_property_along_time(melody_info: MelodyInfo,
+                                         show_single_fig: bool = showfig,
+                                         grid: bool = grid,
+                                         ggplot: bool = ggplot) -> plt.Figure:
+
+            if ggplot is True:
+                plt.style.use('ggplot')
+            else:
+                pass
+
+            melody_name_pprint = melody_info._get_melody_name_pprint()
+            fig, (ax_generic_property) = plt.subplots(nrows=1, ncols=1, figsize=figsize, dpi=dpi, sharex='col')
+
+            fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint,
+                         fontsize=15)
+            BasicAxsGeneration.generic_idyom_output_along_time(ax_generic_property,
+                                                               melody_info=melody_info,
+                                                               selected_idyom_output=selected_idyom_output,
+                                                               grid=grid)
+            plt.tight_layout()
+            if show_single_fig is True:
+                plt.show()
+            else:
+                pass
+            return fig
+
+        # Plot batch according to user inputs:
+        Auxiliary.batch_melodies_plots(plot_method_func=_generic_property_along_time,
                                        plot_type_folder_name=plot_type_folder_name,
                                        experiment_folder_path=experiment_folder_path,
                                        melody_names=melody_names,
@@ -513,7 +529,8 @@ class BasicPlot:
                                    fig_format: str = 'png',
                                    dpi: float = 400,
                                    figsize: tuple = (10, 6),
-                                   grid: bool = True):
+                                   grid: bool = True,
+                                   ggplot: bool = True):
         """
         Generate a figure that shows the selected entropy and information content.
 
@@ -536,17 +553,23 @@ class BasicPlot:
         :param figsize: tuple, optional, default is (10,5)
         :param grid: bool
             Whether to show grid or not.
+        :param ggplot: bool
+            Whether to use ggplot or not.
         """
         plot_type_folder_name = 'selected_surprisal_entropy'
 
         def _selected_surprisal_entropy(melody_info: MelodyInfo,
                                         ic_source: str = ic_source,
                                         entropy_source: str = entropy_source,
+                                        show_single_fig: bool = showfig,
                                         grid: bool = grid,
-                                        show_single_fig: bool = showfig) -> plt.Figure:
+                                        ggplot: bool = ggplot) -> plt.Figure:
 
+            if ggplot is True:
+                plt.style.use('ggplot')
+            else:
+                pass
             melody_name_pprint = melody_info._get_melody_name_pprint()
-
             fig, ax = plt.subplots(figsize=figsize)
             fig.suptitle('IDyOM Information Content (Surprisal) and Entropy \n\n Melody: ' + melody_name_pprint)
 
@@ -559,7 +582,6 @@ class BasicPlot:
                                                                 grid=grid)
 
             plt.tight_layout()
-            plt.style.use('ggplot')
 
             if show_single_fig is True:
                 plt.show()
@@ -587,7 +609,8 @@ class BasicPlot:
                             fig_format: str = 'png',
                             dpi: float = 400,
                             figsize: tuple = (10, 8),
-                            grid: bool = True):
+                            grid: bool = True,
+                            ggplot: bool = True):
         """
         Generate subplots that show all available surprisal outputs.
 
@@ -606,6 +629,8 @@ class BasicPlot:
         :param figsize: tuple, optional, default is (10,5)
         :param grid: bool
             Whether to show grid or not.
+        :param ggplot: bool
+            Whether to use ggplot or not.
         """
         plot_type_folder_name = 'surprisals_plots'
 
@@ -613,7 +638,13 @@ class BasicPlot:
                                  grid: bool = grid,
                                  show_single_fig: bool = showfig,
                                  figsize: tuple = figsize,
-                                 dpi: float = dpi) -> plt.Figure:
+                                 dpi: float = dpi,
+                                 ggplot: bool = ggplot) -> plt.Figure:
+
+            if ggplot is True:
+                plt.style.use('ggplot')
+            else:
+                pass
 
             melody_name_pprint = melody_info._get_melody_name_pprint()
 
@@ -641,6 +672,7 @@ class BasicPlot:
                                                        color=str('C' + str(idx)),
                                                        yticks=yticks)
 
+            plt.xlabel("Time in quarter note")
             plt.tight_layout()
             plt.style.use('ggplot')
 
@@ -670,7 +702,8 @@ class BasicPlot:
                           fig_format: str = 'png',
                           dpi: float = 400,
                           figsize: tuple = (10, 8),
-                          grid: bool = True):
+                          grid: bool = True,
+                          ggplot: bool = True):
         """
         Generate subplots that show all available entropy outputs.
 
@@ -689,6 +722,8 @@ class BasicPlot:
         :param figsize: tuple, optional, default is (10,5)
         :param grid: bool
             Whether to show grid or not.
+        :param ggplot: bool
+            Whether to use ggplot or not.
         """
         plot_type_folder_name = 'entropy_plots'
 
@@ -696,7 +731,13 @@ class BasicPlot:
                                grid: bool = grid,
                                show_single_fig: bool = showfig,
                                figsize: tuple = figsize,
-                               dpi: float = dpi) -> plt.Figure:
+                               dpi: float = dpi,
+                               ggplot: bool = ggplot) -> plt.Figure:
+
+            if ggplot is True:
+                plt.style.use('ggplot')
+            else:
+                pass
 
             melody_name_pprint = melody_info._get_melody_name_pprint()
 
@@ -724,6 +765,7 @@ class BasicPlot:
                                                             color=str('C' + str(idx)),
                                                             yticks=yticks)
 
+            plt.xlabel("Time in quarter note")
             plt.tight_layout()
             plt.style.use('ggplot')
 

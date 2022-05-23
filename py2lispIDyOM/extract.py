@@ -68,11 +68,11 @@ class MelodyInfo(pd.DataFrame):
 
     """
 
-    _metadata = ['pitch_range', 'parent_experiment']
+    _metadata = ['exp_pitch_element_list', 'parent_experiment']
 
-    def __init__(self, parent_experiment, *args, **kw):
+    def __init__(self, exp_pitch_element_list, parent_experiment, *args, **kw):
         super().__init__(*args, **kw)
-        self.pitch_range = self.get_pitch_range()
+        self.exp_pitch_element_list = exp_pitch_element_list
         self.parent_experiment = parent_experiment
         self.melody_name_pp = self._get_melody_name_pprint()
 
@@ -146,15 +146,8 @@ class MelodyInfo(pd.DataFrame):
         melody_name_pprint = str(self.access_idyom_output_keywords(['melody.name']).to_numpy()[0][0]).replace('"', '')
         return melody_name_pprint
 
-    def get_pitch_range(self, padding: typing.Optional[int] = 5):
-        pitches = self.access_idyom_output_keywords(['cpitch'])
-        max_pitch = int(pitches.max())
-        min_pitch = int(pitches.min())
-        pitch_range = (min_pitch - padding, max_pitch + padding)
-        return pitch_range
-
     def _get_pianoroll_pitch_distribution(self):
-        pitch_range = self.parent_experiment.pitch_range
+        pitch_range = (np.amin(self.exp_pitch_element_list), np.amax(self.exp_pitch_element_list))
         pitch_distribution = []
         melody_length = len(self.access_idyom_output_keywords(['cpitch.probability']))
         for i in range(*pitch_range):
@@ -170,7 +163,7 @@ class MelodyInfo(pd.DataFrame):
         return pitch_distribution
 
     def _get_pianoroll_original(self):
-        pitch_range = self.parent_experiment.pitch_range
+        pitch_range = (np.amin(self.exp_pitch_element_list), np.amax(self.exp_pitch_element_list))
         piano_roll = np.arange(*pitch_range)
         piano_roll = (piano_roll == self.access_idyom_output_keywords(['cpitch']).to_numpy()).T
         durations = self.access_idyom_output_keywords((['dur'])).to_numpy(dtype=int).reshape(-1)
@@ -208,8 +201,8 @@ class ExperimentInfo:
     ----------
     melodies_dict: dict
         A typed dictionary (melody_name, MelodyInfo).
-    pitch_range: tuple of int
-        The pitch range of the entire dataset.
+    exp_pitch_element_list: list of int
+        The list of all pitches used for prediction of the entire dataset.
 
     Methods
     -------
@@ -223,8 +216,8 @@ class ExperimentInfo:
     def __post_init__(self):
         self.dat_file_path = sorted(glob(self.experiment_folder_path + 'experiment_output_data_folder/*'))[0]
         self.df = pd.read_table(self.dat_file_path, delim_whitespace=True)
+        self.exp_pitch_element_list = self._get_datasetwise_cpitch_elements()
         self.melodies_dict = self.melody_dictionary()
-        self.pitch_range = self._get_datasetwise_pitch_range()
 
     def melody_dictionary(self) -> typing.Dict[str, MelodyInfo]:
         """
@@ -235,7 +228,8 @@ class ExperimentInfo:
         return_dict = {}
         my_dict = getDictionary(self.dat_file_path)
         for key, value in my_dict.items():
-            melody_info = MelodyInfo(data=value, parent_experiment=self)
+            melody_info = MelodyInfo(data=value, parent_experiment=self,
+                                     exp_pitch_element_list=self._get_datasetwise_cpitch_elements())
             melody_name = melody_info['melody.name'][0]
             return_dict[melody_name] = melody_info
         return return_dict
@@ -258,14 +252,20 @@ class ExperimentInfo:
 
         return selected_melodies
 
-    def _get_datasetwise_pitch_range(self):
+    def _get_datasetwise_cpitch_elements(self):
         """
-        Get the pitch range of the entire dataset.
-        :return:  a tuple of int
+        Get the list of cpitch (full cpitch distribution elements used in IDyOM)
+        :return:  a list of int
         """
-        pitches = self.df['cpitch']
-        pitch_range = (int(pitches.min()), int(pitches.max()))
-        return pitch_range
+        # find the cpitches in idyom output keys such as 'cpitch.
+
+        df_all_keys = self.df.keys().to_list()
+        cpitch_keys = [keyword for keyword in df_all_keys if 'cpitch' in keyword]
+        cpitch_num_keys = [item for item in cpitch_keys if any([char.isdigit() for char in item])]
+        pitch_element_list = [item.replace('cpitch.', '') for item in cpitch_num_keys]
+        pitch_element_list = np.int_(pitch_element_list)
+
+        return pitch_element_list
 
 
 if __name__ == '__main__':
