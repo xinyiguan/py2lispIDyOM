@@ -25,8 +25,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="link updated">
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/1_running_IDyOM_tutorial-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/2a_data_preprocessing_extracting-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/2b_data_preprocessing_exporting-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tutorial/.ipynb_checkpoints/3_visualizing_outputs-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/1_running_IDyOM_tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/1_running_IDyOM_tutorial.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/2a_data_preprocessing_extracting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/2a_data_preprocessing_extracting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/2b_data_preprocessing_exporting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/2b_data_preprocessing_exporting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/3_visualizing_outputs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/3_visualizing_outputs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-001.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-002.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-010.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-001.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-002.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,14 +297,7 @@
       <workItem from="1653313572617" duration="20332000" />
       <workItem from="1653389237210" duration="923000" />
       <workItem from="1653390346223" duration="288000" />
-      <workItem from="1653390943644" duration="8802000" />
-    </task>
-    <task id="LOCAL-00047" summary="export example jupyter notebook">
-      <created>1652793727628</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1652793727628</updated>
+      <workItem from="1653390943644" duration="9654000" />
     </task>
     <task id="LOCAL-00048" summary="viz examples (1/3) need to fix fig resolution, onset time in sec.">
       <created>1652803612100</created>
@@ -624,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653401955188</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="docs updated">
+      <created>1653402039665</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1653402039665</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,12 +694,12 @@
     <MESSAGE value="README updated" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="docs upated" />
-    <MESSAGE value="docs updated" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="pypi readme updated" />
     <MESSAGE value="docs push" />
     <MESSAGE value="link updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="link updated" />
+    <MESSAGE value="docs updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
