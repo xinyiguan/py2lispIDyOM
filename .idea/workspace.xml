@@ -26,7 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs push">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,14 +280,7 @@
       <workItem from="1653313572617" duration="20332000" />
       <workItem from="1653389237210" duration="923000" />
       <workItem from="1653390346223" duration="288000" />
-      <workItem from="1653390943644" duration="6979000" />
-    </task>
-    <task id="LOCAL-00043" summary="extract tutorial and readme updated">
-      <created>1652715919695</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1652715919695</updated>
+      <workItem from="1653390943644" duration="7252000" />
     </task>
     <task id="LOCAL-00044" summary="readme update">
       <created>1652716333648</created>
@@ -625,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653398955868</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="docs push">
+      <created>1653399916593</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1653399916593</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
