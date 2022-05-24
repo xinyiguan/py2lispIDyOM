@@ -1,5 +1,3 @@
-.. documentation master file; adapt to your liking (but should at least contain the root `toctree` directive).
-
 py2lispIDyOM: A Python package for IDyOM
 ========================================
 

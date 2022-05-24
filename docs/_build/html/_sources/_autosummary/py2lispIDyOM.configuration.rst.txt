@@ -1,4 +1,4 @@
-py2lispIDyOM.configuration
+﻿py2lispIDyOM.configuration
 ==========================
 
 .. automodule:: py2lispIDyOM.configuration
