@@ -25,9 +25,95 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="tutorial updated">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="update index.rst">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/1_running_IDyOM_tutorial.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/1_running_IDyOM_tutorial.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/2a_data_preprocessing_extracting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/2a_data_preprocessing_extracting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/2b_data_preprocessing_exporting.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/2b_data_preprocessing_exporting.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/3_visualizing_outputs.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/3_visualizing_outputs.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/bach_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/bach_dataset/chor-015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/dataset/shanx_dataset/shanx015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/dataset/shanx_dataset/shanx015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/compute.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/compute.lisp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/pretrain_dataset/shanx015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_input_data_folder/test_dataset/chor-015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/experiment_output_data_folder/66052122170523-cpitch_onset-cpitch_onset-99052122170523-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/experiment_output_data_folder/66052122170523-cpitch_onset-cpitch_onset-99052122170523-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-005.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-005.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-006.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_csv/chor-006.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_cpitch.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_melody_name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_melody_name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor001_onset.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_cpitch.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_melody_name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_melody_name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/chor002_onset.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/entropy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/entropy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/information_content.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/information_content.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/outputs_in_mat/melody_name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/outputs_in_mat/melody_name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/entropy_plots/chor-006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-001.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-002.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/pianoroll_groundtruth_surprisal/chor-002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-010.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_prediction_groundtruth/chor-010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-003.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/selected_surprisal_entropy/chor-003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-001.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-002.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/simple_plot_information.content/chor-002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorial/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/experiment_history/21-05-22_17.05.05/plots/surprisals_plots/chor-005.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,14 +366,7 @@
       <workItem from="1653313572617" duration="20332000" />
       <workItem from="1653389237210" duration="923000" />
       <workItem from="1653390346223" duration="288000" />
-      <workItem from="1653390943644" duration="10150000" />
-    </task>
-    <task id="LOCAL-00050" summary="fixing paths to plots in viz tutorial">
-      <created>1652885159682</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1652885159683</updated>
+      <workItem from="1653390943644" duration="10801000" />
     </task>
     <task id="LOCAL-00051" summary="tutorial content">
       <created>1652885222960</created>
@@ -625,7 +704,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653403228818</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="update index.rst">
+      <created>1653403388180</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1653403388180</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +743,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="stmo ltmo working -V1" />
     <MESSAGE value="ltmo stmo working -V2" />
     <MESSAGE value="mat export naming fixed" />
     <MESSAGE value="module code minor refactor, added comments" />
@@ -682,7 +767,8 @@
     <MESSAGE value="link updated" />
     <MESSAGE value="docs updated" />
     <MESSAGE value="tutorial updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="tutorial updated" />
+    <MESSAGE value="update index.rst" />
+    <option name="LAST_COMMIT_MESSAGE" value="update index.rst" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

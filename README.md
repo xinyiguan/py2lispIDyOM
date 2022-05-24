@@ -47,7 +47,7 @@ In summary, py2lispIDyOM has three main functionalities for research workflow:
 - Data preprocessing
 - Visualizing IDyOM outputs
 
-Please have a look at the [tutorial](tutorial/), which guides you through all three basic functionalities of through an
+Please have a look at the [tutorial](tutorials/), which guides you through all three basic functionalities of through an
 example.
 
 Note: I tried to make the code accessible and provide some examples in the tutorials for getting started smoothly. But
