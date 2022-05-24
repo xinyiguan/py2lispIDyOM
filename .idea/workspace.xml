@@ -25,8 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs upated">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
       <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,14 +280,7 @@
       <workItem from="1653313572617" duration="20332000" />
       <workItem from="1653389237210" duration="923000" />
       <workItem from="1653390346223" duration="288000" />
-      <workItem from="1653390943644" duration="755000" />
-    </task>
-    <task id="LOCAL-00039" summary="fixed keywords to show in error msg">
-      <created>1652432191332</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1652432191332</updated>
+      <workItem from="1653390943644" duration="2510000" />
     </task>
     <task id="LOCAL-00040" summary="run idyom docs updated">
       <created>1652439321216</created>
@@ -624,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653391687012</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="docs updated">
+      <created>1653391710648</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1653391710648</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,10 +679,10 @@
     <MESSAGE value="generate documentation from docstrings" />
     <MESSAGE value="README updated" />
     <MESSAGE value="updated docs" />
-    <MESSAGE value="docs updated" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="docs upated" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs upated" />
+    <MESSAGE value="docs updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
