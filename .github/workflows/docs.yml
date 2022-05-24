@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-    tags:
-      - '*'
+    tags: '*'
   pull_request:
   workflow_dispatch:
 
@@ -14,18 +13,18 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-12
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: generate docs
         run: |
-          python3 pip install -r requirements.txt
-          python3 pip install -r docs/requirements.txt
+          pip install -r requirements.txt
+          pip install -r docs/requirements.txt
           cd docs/
           make html
-      - name: deploy docs
+      - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_build/html
+          publish_dir: ./docs/_build/html
