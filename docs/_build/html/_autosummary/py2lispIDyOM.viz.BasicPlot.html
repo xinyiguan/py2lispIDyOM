@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>py2lispIDyOM.viz.BasicPlot &mdash; py2lispIDyOM documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html"/>
+    <link rel="search" title="Search" href="../search.html"/>
+    <link rel="prev" title="py2lispIDyOM.viz.BasicAxsGeneration" href="py2lispIDyOM.viz.BasicAxsGeneration.html"/>
+</head>
+
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+                <a href="../index.html" class="icon icon-home"> py2lispIDyOM
+                </a>
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a>
+                        <ul class="current">
+                            <li class="toctree-l2 current"><a class="reference internal" href="py2lispIDyOM.viz.html">py2lispIDyOM.viz</a>
+                                <ul class="current">
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="py2lispIDyOM.viz.Auxiliary.html">py2lispIDyOM.viz.Auxiliary</a>
+                                    </li>
+                                    <li class="toctree-l3"><a class="reference internal"
+                                                              href="py2lispIDyOM.viz.BasicAxsGeneration.html">py2lispIDyOM.viz.BasicAxsGeneration</a>
+                                    </li>
+                                    <li class="toctree-l3 current"><a class="current reference internal" href="#">py2lispIDyOM.viz.BasicPlot</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">py2lispIDyOM</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="Page navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+                        <li><a href="../viz.html">py2lispIDyOM.viz</a> &raquo;</li>
+                        <li><a href="py2lispIDyOM.viz.html">py2lispIDyOM.viz</a> &raquo;</li>
+                        <li>py2lispIDyOM.viz.BasicPlot</li>
+                        <li class="wy-breadcrumbs-aside">
+                            <a href="../_sources/_autosummary/py2lispIDyOM.viz.BasicPlot.rst.txt" rel="nofollow"> View
+                                page source</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <section id="py2lispidyom-viz-basicplot">
+                            <h1>py2lispIDyOM.viz.BasicPlot<a class="headerlink" href="#py2lispidyom-viz-basicplot"
+                                                             title="Permalink to this headline"></a></h1>
+                            <dl class="py class">
+                                <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot">
+                                    <em class="property"><span class="pre">class</span><span
+                                            class="w"> </span></em><span class="sig-prename descclassname"><span
+                                        class="pre">py2lispIDyOM.viz.</span></span><span class="sig-name descname"><span
+                                        class="pre">BasicPlot</span></span><a class="reference internal"
+                                                                              href="../_modules/py2lispIDyOM/viz.html#BasicPlot"><span
+                                        class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                        class="headerlink" href="#py2lispIDyOM.viz.BasicPlot"
+                                        title="Permalink to this definition"></a></dt>
+                                <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span
+                                        class="pre">object</span></code></p>
+                                    <p>BasicPlot for selected IDyOM outputs in an experiment.</p>
+                                    <div class="autoclasstoc docutils container">
+                                        <p class="rubric">Public Methods:</p>
+                                        <table class="autosummary longtable docutils align-default">
+                                            <colgroup>
+                                                <col style="width: 10%"/>
+                                                <col style="width: 90%"/>
+                                            </colgroup>
+                                            <tbody>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth"
+                                                          title="py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">pianoroll_pitch_prediction_groundtruth</span></code></a>(...)
+                                                </p></td>
+                                                <td><p>Generate a pair of figures (the predicted pitch distribution and
+                                                    the ground truth) side by side.</p></td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal"
+                                                          title="py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">pianoroll_groundtruth_overall_surprisal</span></code></a>(...)
+                                                </p></td>
+                                                <td><p>Generate a pair of figures: ground truth piano roll on the top
+                                                    and the surprisal line plot on the bottom. :type
+                                                    experiment_folder_path: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">str</span></code> :param experiment_folder_path:
+                                                    str The path to your experiment folder. :type melody_names: <code
+                                                            class="xref py py-data docutils literal notranslate"><span
+                                                            class="pre">Optional</span></code>[<code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">List</span></code>[<code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">str</span></code>]] :param melody_names:
+                                                    List[str], optional, If not supplied by the users, default is all
+                                                    test melodies in the experiment. :type starting_index: <code
+                                                            class="xref py py-data docutils literal notranslate"><span
+                                                            class="pre">Optional</span></code>[<code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">int</span></code>] :param starting_index: int,
+                                                    optional The index of the melody in the melody list that you want to
+                                                    start plotting. :type ending_index: <code
+                                                            class="xref py py-data docutils literal notranslate"><span
+                                                            class="pre">Optional</span></code>[<code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">int</span></code>] :param ending_index: int,
+                                                    optional The index of the melody in the melody list that you want to
+                                                    stop plotting. :type savefig: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">bool</span></code> :param savefig: bool,
+                                                    optional :type showfig: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">bool</span></code> :param showfig: bool,
+                                                    optional :type fig_format: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">str</span></code> :param fig_format: str,
+                                                    optional, default = 'png :type dpi: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">float</span></code> :param dpi: float, optional,
+                                                    default = 400 :type figsize: <code
+                                                            class="xref py py-class docutils literal notranslate"><span
+                                                            class="pre">tuple</span></code> :param figsize: tuple,
+                                                    optional, default is (10,5).</p></td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.simple_plot"
+                                                          title="py2lispIDyOM.viz.BasicPlot.simple_plot"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">simple_plot</span></code></a>(selected_idyom_output, ...[, ...])
+                                                </p></td>
+                                                <td><p>Generate a simple line plot with time (in quarter note) on the
+                                                    x-axis, and selected IDyOM output on the y-axis.</p></td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy"
+                                                          title="py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">selected_surprisal_entropy</span></code></a>(...[, ...])
+                                                </p></td>
+                                                <td><p>Generate a figure that shows the selected entropy and information
+                                                    content.</p></td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.all_surprisal"
+                                                          title="py2lispIDyOM.viz.BasicPlot.all_surprisal"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">all_surprisal</span></code></a>(experiment_folder_path[, ...])
+                                                </p></td>
+                                                <td><p>Generate subplots of all available surprisal outputs.</p></td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.viz.BasicPlot.all_entropy"
+                                                          title="py2lispIDyOM.viz.BasicPlot.all_entropy"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">all_entropy</span></code></a>(experiment_folder_path[, ...])
+                                                </p></td>
+                                                <td><p>Generate subplots that show all available entropy outputs.</p>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <hr class="docutils"/>
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.__annotations__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__annotations__</span></span><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">{}</span></em><a class="headerlink"
+                                                                                                     href="#py2lispIDyOM.viz.BasicPlot.__annotations__"
+                                                                                                     title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.__dict__">
+                                            <span class="sig-name descname"><span class="pre">__dict__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span>
+                                            <span class="pre">'py2lispIDyOM.viz',</span> <span
+                                                    class="pre">'__doc__':</span> <span class="pre">'</span> <span
+                                                    class="pre">BasicPlot</span> <span class="pre">for</span> <span
+                                                    class="pre">selected</span> <span class="pre">IDyOM</span> <span
+                                                    class="pre">outputs</span> <span class="pre">in</span> <span
+                                                    class="pre">an</span> <span class="pre">experiment.</span> <span
+                                                    class="pre">',</span> <span class="pre">'pianoroll_pitch_prediction_groundtruth':</span>
+                                            <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicPlot.pianoroll_pitch_prediction_groundtruth&gt;)&gt;,</span>
+                                            <span class="pre">'pianoroll_groundtruth_overall_surprisal':</span> <span
+                                                    class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicPlot.pianoroll_groundtruth_overall_surprisal&gt;)&gt;,</span>
+                                            <span class="pre">'simple_plot':</span> <span class="pre">&lt;staticmethod(&lt;function</span>
+                                            <span class="pre">BasicPlot.simple_plot&gt;)&gt;,</span> <span class="pre">'selected_surprisal_entropy':</span>
+                                            <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicPlot.selected_surprisal_entropy&gt;)&gt;,</span>
+                                            <span class="pre">'all_surprisal':</span> <span class="pre">&lt;staticmethod(&lt;function</span>
+                                            <span class="pre">BasicPlot.all_surprisal&gt;)&gt;,</span> <span
+                                                    class="pre">'all_entropy':</span> <span class="pre">&lt;staticmethod(&lt;function</span>
+                                            <span class="pre">BasicPlot.all_entropy&gt;)&gt;,</span> <span class="pre">'__dict__':</span>
+                                            <span class="pre">&lt;attribute</span> <span class="pre">'__dict__'</span>
+                                            <span class="pre">of</span> <span class="pre">'BasicPlot'</span> <span
+                                                    class="pre">objects&gt;,</span> <span
+                                                    class="pre">'__weakref__':</span> <span
+                                                    class="pre">&lt;attribute</span> <span
+                                                    class="pre">'__weakref__'</span> <span class="pre">of</span> <span
+                                                    class="pre">'BasicPlot'</span> <span class="pre">objects&gt;,</span>
+                                            <span class="pre">'__annotations__':</span> <span
+                                                    class="pre">{}})</span></em><a class="headerlink"
+                                                                                   href="#py2lispIDyOM.viz.BasicPlot.__dict__"
+                                                                                   title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.__module__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__module__</span></span><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">'py2lispIDyOM.viz'</span></em><a
+                                                class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.__module__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.__weakref__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__weakref__</span></span><a class="headerlink"
+                                                                                            href="#py2lispIDyOM.viz.BasicPlot.__weakref__"
+                                                                                            title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd><p>list of weak references to the object (if defined)</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.all_entropy">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span
+                                                class="pre">all_entropy</span></span><span class="sig-paren">(</span><em
+                                                class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                    class="o"><span class="pre">=</span></span><span
+                                                    class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                                             href="../_modules/py2lispIDyOM/viz.html#BasicPlot.all_entropy"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_entropy"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate subplots that show all available entropy outputs.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>experiment_folder_path</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The path to your experiment folder.</p></li>
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                        <li><p><strong>grid</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to show grid or not.</p></li>
+                                                        <li><p><strong>ggplot</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to use ggplot or not.</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.all_surprisal">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span
+                                                class="pre">all_surprisal</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">experiment_folder_path</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                                             href="../_modules/py2lispIDyOM/viz.html#BasicPlot.all_surprisal"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_surprisal"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate subplots of all available surprisal outputs.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>experiment_folder_path</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The path to your experiment folder.</p></li>
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                        <li><p><strong>grid</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to show grid or not.</p></li>
+                                                        <li><p><strong>ggplot</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to use ggplot or not.</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span class="pre">pianoroll_groundtruth_overall_surprisal</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">experiment_folder_path</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">6)</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                                             href="../_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_groundtruth_overall_surprisal"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate a pair of figures: ground truth piano roll on the top and the
+                                            surprisal line plot on the bottom.
+                                            :type experiment_folder_path: <code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">str</span></code>
+                                            :param experiment_folder_path: str</p>
+                                            <blockquote>
+                                                <div><p>The path to your experiment folder.</p>
+                                                </div>
+                                            </blockquote>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span class="pre">pianoroll_pitch_prediction_groundtruth</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">experiment_folder_path</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">nrows</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span
+                                                class="pre">ncols</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">1</span></span></em><span class="sig-paren">)</span><a
+                                                class="reference internal"
+                                                href="../_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_pitch_prediction_groundtruth"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate a pair of figures (the predicted pitch distribution and the
+                                            ground truth) side by side.
+                                            If users intend to plot figures for specific songs, they can do so by
+                                            specifying either the melody names,
+                                            or the starting/ending index in the melody list.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>experiment_folder_path</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The path to your experiment folder.</p></li>
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                        <li><p><strong>ncols</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>) – int, optional
+                                                            The number of columns of the figure. By default, ncols = 2,
+                                                            nrows = 1, figures are shown side-by-side.</p></li>
+                                                        <li><p><strong>nrows</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>) – int, optional
+                                                            The number of columns of the figure. By default, ncols = 2,
+                                                            nrows = 1, figures are shown side-by-side.</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span
+                                                class="pre">selected_surprisal_entropy</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">experiment_folder_path</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">ic_source</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">entropy_source</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">6)</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                                             href="../_modules/py2lispIDyOM/viz.html#BasicPlot.selected_surprisal_entropy"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate a figure that shows the selected entropy and information
+                                            content.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>experiment_folder_path</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The path to your experiment folder.</p></li>
+                                                        <li><p><strong>entropy_source</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The source of entropy.</p></li>
+                                                        <li><p><strong>ic_source</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The source of information content (surprisal)</p></li>
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                        <li><p><strong>grid</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to show grid or not.</p></li>
+                                                        <li><p><strong>ggplot</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to use ggplot or not.</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.simple_plot">
+                                            <em class="property"><span class="pre">static</span><span class="w"> </span></em><span
+                                                class="sig-name descname"><span
+                                                class="pre">simple_plot</span></span><span class="sig-paren">(</span><em
+                                                class="sig-param"><span class="n"><span class="pre">selected_idyom_output</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span
+                                                    class="o"><span class="pre">=</span></span><span
+                                                    class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">starting_index</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">None</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">ending_index</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">savefig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">True</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">showfig</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">False</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">fig_format</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">'png'</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">400</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">figsize</span></span><span class="o"><span
+                                                class="pre">=</span></span><span class="default_value"><span
+                                                class="pre">(10,</span> <span class="pre">5)</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span
+                                                class="o"><span class="pre">=</span></span><span
+                                                class="default_value"><span class="pre">True</span></span></em><span
+                                                class="sig-paren">)</span><a class="reference internal"
+                                                                             href="../_modules/py2lispIDyOM/viz.html#BasicPlot.simple_plot"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.simple_plot"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Generate a simple line plot with time (in quarter note) on the x-axis,
+                                            and selected IDyOM output on the y-axis.</p>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Parameters</dt>
+                                                <dd class="field-odd">
+                                                    <ul class="simple">
+                                                        <li><p><strong>selected_idyom_output</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The keyword of the IDyOM output you want to plot.</p></li>
+                                                        <li><p><strong>experiment_folder_path</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str
+                                                            The path to your experiment folder.</p></li>
+                                                        <li><p><strong>melody_names</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">List</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>]]) – List[str], optional,
+                                                            If not supplied by the users, default is all test melodies
+                                                            in the experiment.</p></li>
+                                                        <li><p><strong>starting_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            start plotting.</p></li>
+                                                        <li><p><strong>ending_index</strong> (<code
+                                                                class="xref py py-data docutils literal notranslate"><span
+                                                                class="pre">Optional</span></code>[<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">int</span></code>]) – int, optional
+                                                            The index of the melody in the melody list that you want to
+                                                            stop plotting.</p></li>
+                                                        <li><p><strong>savefig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>showfig</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool, optional</p>
+                                                        </li>
+                                                        <li><p><strong>fig_format</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code>) – str, optional, default
+                                                            = ‘png</p></li>
+                                                        <li><p><strong>dpi</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">float</span></code>) – float, optional,
+                                                            default = 400</p></li>
+                                                        <li><p><strong>figsize</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">tuple</span></code>) – tuple, optional,
+                                                            default is (10,5)</p></li>
+                                                        <li><p><strong>grid</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to show grid or not.</p></li>
+                                                        <li><p><strong>ggplot</strong> (<code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">bool</span></code>) – bool
+                                                            Whether to use ggplot or not.</p></li>
+                                                    </ul>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                        </section>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+                        <a href="py2lispIDyOM.viz.BasicAxsGeneration.html" class="btn btn-neutral float-left"
+                           title="py2lispIDyOM.viz.BasicAxsGeneration" accesskey="p" rel="prev"><span
+                                class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+                    </div>
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>&#169; Copyright 2022, Xinyi Guan.</p>
+                    </div>
+
+                    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+                    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+                    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

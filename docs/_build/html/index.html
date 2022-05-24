@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>py2lispIDyOM: A Python package for IDyOM &mdash; py2lispIDyOM documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/autoclasstoc.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html"/>
+    <link rel="search" title="Search" href="search.html"/>
+    <link rel="next" title="py2lispIDyOM.run" href="run.html"/>
+</head>
+
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+                <a href="#" class="icon icon-home"> py2lispIDyOM
+                </a>
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="run.html">py2lispIDyOM.run</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="extract.html">py2lispIDyOM.extract</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="export.html">py2lispIDyOM.export</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="viz.html">py2lispIDyOM.viz</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="#">py2lispIDyOM</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="Page navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+                        <li>py2lispIDyOM: A Python package for IDyOM</li>
+                        <li class="wy-breadcrumbs-aside">
+                            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <section id="py2lispidyom-a-python-package-for-idyom">
+                            <h1>py2lispIDyOM: A Python package for IDyOM<a class="headerlink"
+                                                                           href="#py2lispidyom-a-python-package-for-idyom"
+                                                                           title="Permalink to this headline"></a></h1>
+                            <p>py2lispIDyOM is a Python package for the information dynamics of music (<a
+                                    class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM model</a>).
+                            </p>
+                            <section id="table-of-contents">
+                                <h2>Table of contents<a class="headerlink" href="#table-of-contents"
+                                                        title="Permalink to this headline"></a></h2>
+                                <ul class="simple">
+                                    <li><p><a class="reference external" href="#getting-started">Getting Started</a></p>
+                                        <ul>
+                                            <li><p><a class="reference external" href="#prerequisite">Prerequisite</a>
+                                            </p></li>
+                                            <li><p><a class="reference external" href="#installing">Installing</a></p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><p><a class="reference external" href="#functionality-and-usage">Functionality
+                                        and Usage</a></p></li>
+                                </ul>
+                            </section>
+                            <section id="getting-started">
+                                <h2>Getting Started<a class="headerlink" href="#getting-started"
+                                                      title="Permalink to this headline"></a></h2>
+                                <section id="prerequisite">
+                                    <h3>Prerequisite<a class="headerlink" href="#prerequisite"
+                                                       title="Permalink to this headline"></a></h3>
+                                    <p>py2lispIDyOM requires IDyOM to be installed on the local machine. To start with,
+                                        please read
+                                        the <a class="reference external"
+                                               href="https://github.com/mtpearce/idyom/wiki/Installation/">IDyOM
+                                            installation page</a> to appropriately install IDyOM.</p>
+                                    <p>In addition, py2lispIDyOM also requires common packages such as
+                                        <cite>numpy</cite>, <cite>matplotlib</cite>, <cite>pandas</cite>,
+                                        <cite>scipy</cite>, etc.</p>
+                                </section>
+                                <section id="installing">
+                                    <h3>Installing<a class="headerlink" href="#installing"
+                                                     title="Permalink to this headline"></a></h3>
+                                    <p>The code is compatible with &gt;=Python 3.8.</p>
+                                    <p>To use py2lispIDyOM, you can download this repo or use git clone.</p>
+                                </section>
+                            </section>
+                            <section id="functionality-and-usage">
+                                <h2>Functionality and Usage<a class="headerlink" href="#functionality-and-usage"
+                                                              title="Permalink to this headline"></a></h2>
+                                <p>In summary, py2lispIDyOM has three main functionalities for research workflow:</p>
+                                <ul class="simple">
+                                    <li><p>Running the IDyOM</p></li>
+                                    <li><p>Data preprocessing (extracting and exporting data)</p></li>
+                                    <li><p>Visualizing IDyOM outputs</p></li>
+                                </ul>
+                                <p>Please have a look at the <a class="reference external" href="tutorial/">tutorial
+                                    folder</a>, which guides you through all three basic functionalities of through an
+                                    example.</p>
+                                <p>Note: I tried to make the code accessible and provide some examples in the tutorials
+                                    for getting started smoothly. But
+                                    there is still lots of room for better documentation and testing. Please contact me
+                                    if you have any questions or
+                                    encounter bugs!</p>
+                                <div class="toctree-wrapper compound">
+                                    <p class="caption" role="heading"><span class="caption-text">Package modules:</span>
+                                    </p>
+                                    <ul>
+                                        <li class="toctree-l1"><a class="reference internal" href="run.html">py2lispIDyOM.run</a>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="extract.html">py2lispIDyOM.extract</a>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="export.html">py2lispIDyOM.export</a>
+                                        </li>
+                                        <li class="toctree-l1"><a class="reference internal" href="viz.html">py2lispIDyOM.viz</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </section>
+
+
+                    </div>
+                </div>
+                <footer>
+                    <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+                        <a href="run.html" class="btn btn-neutral float-right" title="py2lispIDyOM.run" accesskey="n"
+                           rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+                    </div>
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>&#169; Copyright 2022, Xinyi Guan.</p>
+                    </div>
+
+                    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+                    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+                    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

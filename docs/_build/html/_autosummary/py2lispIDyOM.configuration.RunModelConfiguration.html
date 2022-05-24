@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>py2lispIDyOM.configuration.RunModelConfiguration &mdash; py2lispIDyOM documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html"/>
+    <link rel="search" title="Search" href="../search.html"/>
+</head>
+
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+                <a href="../index.html" class="icon icon-home"> py2lispIDyOM
+                </a>
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../index.html">py2lispIDyOM</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="Page navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+                        <li>py2lispIDyOM.configuration.RunModelConfiguration</li>
+                        <li class="wy-breadcrumbs-aside">
+                            <a href="../_sources/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.rst.txt"
+                               rel="nofollow"> View page source</a>
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <section id="py2lispidyom-configuration-runmodelconfiguration">
+                            <h1>py2lispIDyOM.configuration.RunModelConfiguration<a class="headerlink"
+                                                                                   href="#py2lispidyom-configuration-runmodelconfiguration"
+                                                                                   title="Permalink to this headline"></a>
+                            </h1>
+                            <dl class="py class">
+                                <dt class="sig sig-object py" id="py2lispIDyOM.configuration.RunModelConfiguration">
+                                    <em class="property"><span class="pre">class</span><span
+                                            class="w"> </span></em><span class="sig-prename descclassname"><span
+                                        class="pre">py2lispIDyOM.configuration.</span></span><span
+                                        class="sig-name descname"><span
+                                        class="pre">RunModelConfiguration</span></span><span
+                                        class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                        class="pre">this_exp_log_path=None</span></span></em>, <em
+                                        class="sig-param"><span class="n"><span class="pre">test_dataset_id=None</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span
+                                            class="pre">pretrain_dataset_id=None</span></span></em>, <em
+                                        class="sig-param"><span class="n"><span class="pre">output_parameters=&lt;factory&gt;</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span class="pre">required_parameters=&lt;factory&gt;</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span class="pre">statistical_modelling_parameters=&lt;factory&gt;</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span class="pre">training_parameters=&lt;factory&gt;</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span class="pre">viewpoint_selection_parameters=&lt;factory&gt;</span></span></em>,
+                                    <em class="sig-param"><span class="n"><span class="pre">caching_parameters=&lt;factory&gt;</span></span></em><span
+                                        class="sig-paren">)</span><a class="reference internal"
+                                                                     href="../_modules/py2lispIDyOM/configuration.html#RunModelConfiguration"><span
+                                        class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                        class="headerlink" href="#py2lispIDyOM.configuration.RunModelConfiguration"
+                                        title="Permalink to this definition"></a></dt>
+                                <dd><p>Bases: <a class="reference internal"
+                                                 href="py2lispIDyOM.configuration.Configuration.html#py2lispIDyOM.configuration.Configuration"
+                                                 title="py2lispIDyOM.configuration.Configuration"><code
+                                        class="xref py py-class docutils literal notranslate"><span class="pre">py2lispIDyOM.configuration.Configuration</span></code></a>
+                                </p>
+                                    <div class="autoclasstoc docutils container">
+                                        <p class="rubric">Public Data Attributes:</p>
+                                        <table class="autosummary longtable docutils align-default">
+                                            <colgroup>
+                                                <col style="width: 10%"/>
+                                                <col style="width: 90%"/>
+                                            </colgroup>
+                                            <tbody>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.this_exp_log_path"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.this_exp_log_path"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">this_exp_log_path</span></code></a></p></td>
+                                                <td><p></p></td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.test_dataset_id"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.test_dataset_id"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">test_dataset_id</span></code></a></p></td>
+                                                <td><p></p></td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.pretrain_dataset_id"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.pretrain_dataset_id"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">pretrain_dataset_id</span></code></a></p></td>
+                                                <td><p></p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="autoclasstoc docutils container">
+                                        <p class="rubric">Public Methods:</p>
+                                        <table class="autosummary longtable docutils align-default">
+                                            <colgroup>
+                                                <col style="width: 10%"/>
+                                                <col style="width: 90%"/>
+                                            </colgroup>
+                                            <tbody>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">to_lisp_command</span></code></a>()</p></td>
+                                                <td><p>
+                                                    <dl class="field-list simple">
+                                                        <dt class="field-odd">rtype</dt>
+                                                        <dd class="field-odd"><p><code
+                                                                class="xref py py-class docutils literal notranslate"><span
+                                                                class="pre">str</span></code></p>
+                                                        </dd>
+                                                    </dl>
+                                                    </p></td>
+                                            </tr>
+                                            <tr class="row-even">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.__init__"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.__init__"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">__init__</span></code></a>([this_exp_log_path, ...])
+                                                </p></td>
+                                                <td><p></p></td>
+                                            </tr>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration.__eq__"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration.__eq__"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">__eq__</span></code></a>(other)</p></td>
+                                                <td><p>Return self==value.</p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <details>
+                                            <summary>Inherited from <a class="reference internal"
+                                                                       href="py2lispIDyOM.configuration.Configuration.html#py2lispIDyOM.configuration.Configuration"
+                                                                       title="py2lispIDyOM.configuration.Configuration"><code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">Configuration</span></code></a></summary>
+                                            <table class="autosummary longtable docutils align-default">
+                                                <colgroup>
+                                                    <col style="width: 10%"/>
+                                                    <col style="width: 90%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__init__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__init__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__init__</span></code></a>([this_exp_log_path, ...])
+                                                    </p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                <tr class="row-even">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__repr__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__repr__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__repr__</span></code></a>()</p></td>
+                                                    <td><p>Return repr(self).</p></td>
+                                                </tr>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__eq__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__eq__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__eq__</span></code></a>(other)</p></td>
+                                                    <td><p>Return self==value.</p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </details>
+                                        <details>
+                                            <summary>Inherited from <a class="reference internal"
+                                                                       href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable"
+                                                                       title="py2lispIDyOM.configuration.LispConvertable"><code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">LispConvertable</span></code></a></summary>
+                                            <table class="autosummary longtable docutils align-default">
+                                                <colgroup>
+                                                    <col style="width: 10%"/>
+                                                    <col style="width: 90%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">to_lisp_command</span></code></a>()</p></td>
+                                                    <td><p>
+                                                        <dl class="field-list simple">
+                                                            <dt class="field-odd">rtype</dt>
+                                                            <dd class="field-odd"><p><code
+                                                                    class="xref py py-class docutils literal notranslate"><span
+                                                                    class="pre">str</span></code></p>
+                                                            </dd>
+                                                        </dl>
+                                                        </p></td>
+                                                </tr>
+                                                <tr class="row-even">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__repr__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__repr__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__repr__</span></code></a>()</p></td>
+                                                    <td><p>Return repr(self).</p></td>
+                                                </tr>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.recursive_set_attr"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.recursive_set_attr"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">recursive_set_attr</span></code></a>(key, value)
+                                                    </p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                <tr class="row-even">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.get_surface_dict"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.get_surface_dict"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">get_surface_dict</span></code></a>()</p></td>
+                                                    <td><p>
+                                                        <dl class="field-list simple">
+                                                            <dt class="field-odd">rtype</dt>
+                                                            <dd class="field-odd"><p><code
+                                                                    class="xref py py-class docutils literal notranslate"><span
+                                                                    class="pre">dict</span></code></p>
+                                                            </dd>
+                                                        </dl>
+                                                        </p></td>
+                                                </tr>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__init__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__init__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__init__</span></code></a>([this_exp_log_path, ...])
+                                                    </p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                <tr class="row-even">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration.__eq__"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration.__eq__"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">__eq__</span></code></a>(other)</p></td>
+                                                    <td><p>Return self==value.</p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </details>
+                                    </div>
+                                    <div class="autoclasstoc docutils container">
+                                        <p class="rubric">Private Data Attributes:</p>
+                                        <table class="autosummary longtable docutils align-default">
+                                            <colgroup>
+                                                <col style="width: 10%"/>
+                                                <col style="width: 90%"/>
+                                            </colgroup>
+                                            <tbody>
+                                            <tr class="row-odd">
+                                                <td><p><a class="reference internal"
+                                                          href="#py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"
+                                                          title="py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"><code
+                                                        class="xref py py-obj docutils literal notranslate"><span
+                                                        class="pre">_abc_impl</span></code></a></p></td>
+                                                <td><p></p></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <details>
+                                            <summary>Inherited from <a class="reference internal"
+                                                                       href="py2lispIDyOM.configuration.Configuration.html#py2lispIDyOM.configuration.Configuration"
+                                                                       title="py2lispIDyOM.configuration.Configuration"><code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">Configuration</span></code></a></summary>
+                                            <table class="autosummary longtable docutils align-default">
+                                                <colgroup>
+                                                    <col style="width: 10%"/>
+                                                    <col style="width: 90%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">_abc_impl</span></code></a></p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </details>
+                                        <details>
+                                            <summary>Inherited from <a class="reference internal"
+                                                                       href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable"
+                                                                       title="py2lispIDyOM.configuration.LispConvertable"><code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">LispConvertable</span></code></a></summary>
+                                            <table class="autosummary longtable docutils align-default">
+                                                <colgroup>
+                                                    <col style="width: 10%"/>
+                                                    <col style="width: 90%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">_abc_impl</span></code></a></p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </details>
+                                        <details>
+                                            <summary>Inherited from <code
+                                                    class="xref py py-class docutils literal notranslate"><span
+                                                    class="pre">ABC</span></code></summary>
+                                            <table class="autosummary longtable docutils align-default">
+                                                <colgroup>
+                                                    <col style="width: 10%"/>
+                                                    <col style="width: 90%"/>
+                                                </colgroup>
+                                                <tbody>
+                                                <tr class="row-odd">
+                                                    <td><p><a class="reference internal"
+                                                              href="#py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"
+                                                              title="py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"><code
+                                                            class="xref py py-obj docutils literal notranslate"><span
+                                                            class="pre">_abc_impl</span></code></a></p></td>
+                                                    <td><p></p></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </details>
+                                    </div>
+                                    <hr class="docutils"/>
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__abstractmethods__">
+                                            <span class="sig-name descname"><span class="pre">__abstractmethods__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({})</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__abstractmethods__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__annotations__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__annotations__</span></span><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">{'caching_parameters':</span> <span
+                                                class="pre">'CachingParameters',</span> <span class="pre">'output_parameters':</span>
+                                            <span class="pre">'OutputParameters',</span> <span class="pre">'pretrain_dataset_id':</span>
+                                            <span class="pre">'str',</span> <span
+                                                    class="pre">'required_parameters':</span> <span class="pre">'RequiredParameters',</span>
+                                            <span class="pre">'statistical_modelling_parameters':</span> <span
+                                                    class="pre">'StatisticalModellingParameters',</span> <span
+                                                    class="pre">'test_dataset_id':</span> <span
+                                                    class="pre">'str',</span> <span
+                                                    class="pre">'this_exp_log_path':</span> <span
+                                                    class="pre">'str',</span> <span
+                                                    class="pre">'training_parameters':</span> <span class="pre">'TrainingParameters',</span>
+                                            <span class="pre">'viewpoint_selection_parameters':</span> <span
+                                                    class="pre">'ViewpointSelectionParameters'}</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__annotations__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__dataclass_fields__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__dataclass_fields__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">{'caching_parameters':</span>
+                                            <span class="pre">Field(name='caching_parameters',type='CachingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.CachingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'output_parameters':</span> <span class="pre">Field(name='output_parameters',type='OutputParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.OutputParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'pretrain_dataset_id':</span> <span class="pre">Field(name='pretrain_dataset_id',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'required_parameters':</span> <span class="pre">Field(name='required_parameters',type='RequiredParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.RequiredParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'statistical_modelling_parameters':</span> <span
+                                                    class="pre">Field(name='statistical_modelling_parameters',type='StatisticalModellingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.StatisticalModellingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'test_dataset_id':</span> <span class="pre">Field(name='test_dataset_id',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'this_exp_log_path':</span> <span class="pre">Field(name='this_exp_log_path',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'training_parameters':</span> <span class="pre">Field(name='training_parameters',type='TrainingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.TrainingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'viewpoint_selection_parameters':</span> <span
+                                                    class="pre">Field(name='viewpoint_selection_parameters',type='ViewpointSelectionParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.ViewpointSelectionParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)}</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__dataclass_fields__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__dataclass_params__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__dataclass_params__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">_DataclassParams(init=True,repr=False,eq=True,order=False,unsafe_hash=False,frozen=False)</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__dataclass_params__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__dict__">
+                                            <span class="sig-name descname"><span class="pre">__dict__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span>
+                                            <span class="pre">'py2lispIDyOM.configuration',</span> <span class="pre">'__annotations__':</span>
+                                            <span class="pre">{'this_exp_log_path':</span> <span
+                                                    class="pre">'str',</span> <span
+                                                    class="pre">'test_dataset_id':</span> <span
+                                                    class="pre">'str',</span> <span
+                                                    class="pre">'pretrain_dataset_id':</span> <span
+                                                    class="pre">'str',</span> <span
+                                                    class="pre">'output_parameters':</span> <span class="pre">'OutputParameters',</span>
+                                            <span class="pre">'required_parameters':</span> <span class="pre">'RequiredParameters',</span>
+                                            <span class="pre">'statistical_modelling_parameters':</span> <span
+                                                    class="pre">'StatisticalModellingParameters',</span> <span
+                                                    class="pre">'training_parameters':</span> <span class="pre">'TrainingParameters',</span>
+                                            <span class="pre">'viewpoint_selection_parameters':</span> <span
+                                                    class="pre">'ViewpointSelectionParameters',</span> <span
+                                                    class="pre">'caching_parameters':</span> <span class="pre">'CachingParameters'},</span>
+                                            <span class="pre">'this_exp_log_path':</span> <span class="pre">None,</span>
+                                            <span class="pre">'test_dataset_id':</span> <span class="pre">None,</span>
+                                            <span class="pre">'pretrain_dataset_id':</span> <span
+                                                    class="pre">None,</span> <span class="pre">'to_lisp_command':</span>
+                                            <span class="pre">&lt;function</span> <span class="pre">RunModelConfiguration.to_lisp_command&gt;,</span>
+                                            <span class="pre">'__doc__':</span> <span class="pre">&quot;RunModelConfiguration(this_exp_log_path:</span>
+                                            <span class="pre">'str'</span> <span class="pre">=</span> <span class="pre">None,</span>
+                                            <span class="pre">test_dataset_id:</span> <span class="pre">'str'</span>
+                                            <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">pretrain_dataset_id:</span>
+                                            <span class="pre">'str'</span> <span class="pre">=</span> <span class="pre">None,</span>
+                                            <span class="pre">output_parameters:</span> <span class="pre">'OutputParameters'</span>
+                                            <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span
+                                                    class="pre">required_parameters:</span> <span class="pre">'RequiredParameters'</span>
+                                            <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span
+                                                    class="pre">statistical_modelling_parameters:</span> <span
+                                                    class="pre">'StatisticalModellingParameters'</span> <span
+                                                    class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span
+                                                    class="pre">training_parameters:</span> <span class="pre">'TrainingParameters'</span>
+                                            <span class="pre">=</span> <span class="pre">&lt;factory&gt;,</span> <span
+                                                    class="pre">viewpoint_selection_parameters:</span> <span
+                                                    class="pre">'ViewpointSelectionParameters'</span> <span class="pre">=</span>
+                                            <span class="pre">&lt;factory&gt;,</span> <span class="pre">caching_parameters:</span>
+                                            <span class="pre">'CachingParameters'</span> <span class="pre">=</span>
+                                            <span class="pre">&lt;factory&gt;)&quot;,</span> <span class="pre">'__abstractmethods__':</span>
+                                            <span class="pre">frozenset(),</span> <span class="pre">'_abc_impl':</span>
+                                            <span class="pre">&lt;_abc._abc_data</span> <span
+                                                    class="pre">object&gt;,</span> <span class="pre">'__dataclass_params__':</span>
+                                            <span class="pre">_DataclassParams(init=True,repr=False,eq=True,order=False,unsafe_hash=False,frozen=False),</span>
+                                            <span class="pre">'__dataclass_fields__':</span> <span class="pre">{'this_exp_log_path':</span>
+                                            <span class="pre">Field(name='this_exp_log_path',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'test_dataset_id':</span> <span class="pre">Field(name='test_dataset_id',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'pretrain_dataset_id':</span> <span class="pre">Field(name='pretrain_dataset_id',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'output_parameters':</span> <span class="pre">Field(name='output_parameters',type='OutputParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.OutputParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'required_parameters':</span> <span class="pre">Field(name='required_parameters',type='RequiredParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.RequiredParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'statistical_modelling_parameters':</span> <span
+                                                    class="pre">Field(name='statistical_modelling_parameters',type='StatisticalModellingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.StatisticalModellingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'training_parameters':</span> <span class="pre">Field(name='training_parameters',type='TrainingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.TrainingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'viewpoint_selection_parameters':</span> <span
+                                                    class="pre">Field(name='viewpoint_selection_parameters',type='ViewpointSelectionParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.ViewpointSelectionParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span>
+                                            <span class="pre">'caching_parameters':</span> <span class="pre">Field(name='caching_parameters',type='CachingParameters',default=&lt;dataclasses._MISSING_TYPE</span>
+                                            <span class="pre">object&gt;,default_factory=&lt;class</span> <span
+                                                    class="pre">'py2lispIDyOM.configuration.CachingParameters'&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)},</span>
+                                            <span class="pre">'__init__':</span> <span class="pre">&lt;function</span>
+                                            <span class="pre">RunModelConfiguration.__init__&gt;,</span> <span
+                                                    class="pre">'__eq__':</span> <span class="pre">&lt;function</span>
+                                            <span class="pre">RunModelConfiguration.__eq__&gt;,</span> <span
+                                                    class="pre">'__hash__':</span> <span class="pre">None,</span> <span
+                                                    class="pre">'__match_args__':</span> <span class="pre">('this_exp_log_path',</span>
+                                            <span class="pre">'test_dataset_id',</span> <span class="pre">'pretrain_dataset_id',</span>
+                                            <span class="pre">'output_parameters',</span> <span class="pre">'required_parameters',</span>
+                                            <span class="pre">'statistical_modelling_parameters',</span> <span
+                                                    class="pre">'training_parameters',</span> <span class="pre">'viewpoint_selection_parameters',</span>
+                                            <span class="pre">'caching_parameters')})</span></em><a class="headerlink"
+                                                                                                    href="#py2lispIDyOM.configuration.RunModelConfiguration.__dict__"
+                                                                                                    title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__eq__">
+                                            <span class="sig-name descname"><span class="pre">__eq__</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">other</span></span></em><span class="sig-paren">)</span><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__eq__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Return self==value.</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__hash__">
+                                            <span class="sig-name descname"><span class="pre">__hash__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__hash__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__init__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__init__</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">this_exp_log_path=None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span
+                                                class="pre">test_dataset_id=None</span></span></em>, <em
+                                                class="sig-param"><span class="n"><span class="pre">pretrain_dataset_id=None</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">output_parameters=&lt;factory&gt;</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">required_parameters=&lt;factory&gt;</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">statistical_modelling_parameters=&lt;factory&gt;</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">training_parameters=&lt;factory&gt;</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">viewpoint_selection_parameters=&lt;factory&gt;</span></span></em>,
+                                            <em class="sig-param"><span class="n"><span class="pre">caching_parameters=&lt;factory&gt;</span></span></em><span
+                                                class="sig-paren">)</span><a class="headerlink"
+                                                                             href="#py2lispIDyOM.configuration.RunModelConfiguration.__init__"
+                                                                             title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__match_args__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__match_args__</span></span><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">('this_exp_log_path',</span> <span
+                                                class="pre">'test_dataset_id',</span> <span class="pre">'pretrain_dataset_id',</span>
+                                            <span class="pre">'output_parameters',</span> <span class="pre">'required_parameters',</span>
+                                            <span class="pre">'statistical_modelling_parameters',</span> <span
+                                                    class="pre">'training_parameters',</span> <span class="pre">'viewpoint_selection_parameters',</span>
+                                            <span class="pre">'caching_parameters')</span></em><a class="headerlink"
+                                                                                                  href="#py2lispIDyOM.configuration.RunModelConfiguration.__match_args__"
+                                                                                                  title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__module__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__module__</span></span><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">'py2lispIDyOM.configuration'</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__module__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__repr__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__repr__</span></span><span
+                                                class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.__repr__"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd><p>Return repr(self).</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__slots__">
+                                            <span class="sig-name descname"><span class="pre">__slots__</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span
+                                                class="pre">()</span></em><a class="headerlink"
+                                                                             href="#py2lispIDyOM.configuration.RunModelConfiguration.__slots__"
+                                                                             title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.__weakref__">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">__weakref__</span></span><a class="headerlink"
+                                                                                            href="#py2lispIDyOM.configuration.RunModelConfiguration.__weakref__"
+                                                                                            title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd><p>list of weak references to the object (if defined)</p>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration._abc_impl">
+                                            <span class="sig-name descname"><span class="pre">_abc_impl</span></span><em
+                                                class="property"><span class="w"> </span><span class="p"><span
+                                                class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_abc._abc_data</span>
+                                            <span class="pre">object&gt;</span></em><a class="headerlink"
+                                                                                       href="#py2lispIDyOM.configuration.RunModelConfiguration._abc_impl"
+                                                                                       title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.caching_parameters">
+                                            <span class="sig-name descname"><span class="pre">caching_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.CachingParameters.html#py2lispIDyOM.configuration.CachingParameters"
+                                                                     title="py2lispIDyOM.configuration.CachingParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.CachingParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.caching_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.get_surface_dict">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">get_surface_dict</span></span><span
+                                                class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.get_surface_dict"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Return type</dt>
+                                                <dd class="field-odd"><p><code
+                                                        class="xref py py-class docutils literal notranslate"><span
+                                                        class="pre">dict</span></code></p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.output_parameters">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">output_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.OutputParameters.html#py2lispIDyOM.configuration.OutputParameters"
+                                                                     title="py2lispIDyOM.configuration.OutputParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.OutputParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.output_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.pretrain_dataset_id">
+                                            <span class="sig-name descname"><span class="pre">pretrain_dataset_id</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><span class="pre">str</span></em><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">None</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.pretrain_dataset_id"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.recursive_set_attr">
+                                            <span class="sig-name descname"><span class="pre">recursive_set_attr</span></span><span
+                                                class="sig-paren">(</span><em class="sig-param"><span class="n"><span
+                                                class="pre">key</span></span></em>, <em class="sig-param"><span
+                                                class="n"><span class="pre">value</span></span></em><span
+                                                class="sig-paren">)</span><a class="headerlink"
+                                                                             href="#py2lispIDyOM.configuration.RunModelConfiguration.recursive_set_attr"
+                                                                             title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.required_parameters">
+                                            <span class="sig-name descname"><span class="pre">required_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters"
+                                                                     title="py2lispIDyOM.configuration.RequiredParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.RequiredParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.required_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.statistical_modelling_parameters">
+                                            <span class="sig-name descname"><span class="pre">statistical_modelling_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters"
+                                                                     title="py2lispIDyOM.configuration.StatisticalModellingParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.StatisticalModellingParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.statistical_modelling_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.test_dataset_id">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">test_dataset_id</span></span><em class="property"><span
+                                                class="p"><span class="pre">:</span></span><span class="w"> </span><span
+                                                class="pre">str</span></em><em class="property"><span class="w"> </span><span
+                                                class="p"><span class="pre">=</span></span><span class="w"> </span><span
+                                                class="pre">None</span></em><a class="headerlink"
+                                                                               href="#py2lispIDyOM.configuration.RunModelConfiguration.test_dataset_id"
+                                                                               title="Permalink to this definition"></a>
+                                        </dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.this_exp_log_path">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">this_exp_log_path</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><span class="pre">str</span></em><em class="property"><span
+                                                class="w"> </span><span class="p"><span class="pre">=</span></span><span
+                                                class="w"> </span><span class="pre">None</span></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.this_exp_log_path"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py method">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command">
+                                            <span class="sig-name descname"><span
+                                                    class="pre">to_lisp_command</span></span><span
+                                                class="sig-paren">(</span><span class="sig-paren">)</span><a
+                                                class="reference internal"
+                                                href="../_modules/py2lispIDyOM/configuration.html#RunModelConfiguration.to_lisp_command"><span
+                                                class="viewcode-link"><span class="pre">[source]</span></span></a><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd>
+                                            <dl class="field-list simple">
+                                                <dt class="field-odd">Return type</dt>
+                                                <dd class="field-odd"><p><code
+                                                        class="xref py py-class docutils literal notranslate"><span
+                                                        class="pre">str</span></code></p>
+                                                </dd>
+                                            </dl>
+                                        </dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.training_parameters">
+                                            <span class="sig-name descname"><span class="pre">training_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters"
+                                                                     title="py2lispIDyOM.configuration.TrainingParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.TrainingParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.training_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                    <dl class="py attribute">
+                                        <dt class="sig sig-object py"
+                                            id="py2lispIDyOM.configuration.RunModelConfiguration.viewpoint_selection_parameters">
+                                            <span class="sig-name descname"><span class="pre">viewpoint_selection_parameters</span></span><em
+                                                class="property"><span class="p"><span class="pre">:</span></span><span
+                                                class="w"> </span><a class="reference internal"
+                                                                     href="py2lispIDyOM.configuration.ViewpointSelectionParameters.html#py2lispIDyOM.configuration.ViewpointSelectionParameters"
+                                                                     title="py2lispIDyOM.configuration.ViewpointSelectionParameters"><span
+                                                class="pre">py2lispIDyOM.configuration.ViewpointSelectionParameters</span></a></em><a
+                                                class="headerlink"
+                                                href="#py2lispIDyOM.configuration.RunModelConfiguration.viewpoint_selection_parameters"
+                                                title="Permalink to this definition"></a></dt>
+                                        <dd></dd>
+                                    </dl>
+
+                                </dd>
+                            </dl>
+
+                        </section>
+
+
+                    </div>
+                </div>
+                <footer>
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>&#169; Copyright 2022, Xinyi Guan.</p>
+                    </div>
+
+                    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+                    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+                    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>

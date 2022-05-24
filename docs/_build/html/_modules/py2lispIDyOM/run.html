@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>py2lispIDyOM.run &mdash; py2lispIDyOM documentation</title>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css"/>
+    <link rel="stylesheet" href="../../_static/autoclasstoc.css" type="text/css"/>
+    <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html"/>
+    <link rel="search" title="Search" href="../../search.html"/>
+</head>
+
+<body class="wy-body-for-nav">
+<div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+        <div class="wy-side-scroll">
+            <div class="wy-side-nav-search">
+                <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
+                </a>
+                <div role="search">
+                    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+                        <input type="text" name="q" placeholder="Search docs"/>
+                        <input type="hidden" name="check_keywords" value="yes"/>
+                        <input type="hidden" name="area" value="default"/>
+                    </form>
+                </div>
+            </div>
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+                <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../run.html">py2lispIDyOM.run</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../extract.html">py2lispIDyOM.extract</a></li>
+                    <li class="toctree-l1"><a class="reference internal"
+                                              href="../../export.html">py2lispIDyOM.export</a></li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../viz.html">py2lispIDyOM.viz</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+        <nav class="wy-nav-top" aria-label="Mobile navigation menu">
+            <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+            <a href="../../index.html">py2lispIDyOM</a>
+        </nav>
+
+        <div class="wy-nav-content">
+            <div class="rst-content">
+                <div role="navigation" aria-label="Page navigation">
+                    <ul class="wy-breadcrumbs">
+                        <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+                        <li><a href="../index.html">Module code</a> &raquo;</li>
+                        <li>py2lispIDyOM.run</li>
+                        <li class="wy-breadcrumbs-aside">
+                        </li>
+                    </ul>
+                    <hr/>
+                </div>
+                <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                    <div itemprop="articleBody">
+
+                        <h1>Source code for py2lispIDyOM.run</h1>
+                        <div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span
+                                class="n">field</span><span class="p">,</span> <span class="n">dataclass</span>
+
+<span class="kn">from</span> <span class="nn">py2lispIDyOM.configuration</span> <span class="kn">import</span> <span
+                                class="n">get_timestamp</span><span class="p">,</span> <span class="n">IDyOMConfiguration</span><span
+                                class="p">,</span> <span class="n">ExperimentLogger</span>
+
+
+<div class="viewcode-block" id="IDyOMExperiment"><a class="viewcode-back"
+                                                    href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment">[docs]</a><span
+        class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">IDyOMExperiment</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class to configure the IDyOM experiment.</span>
+
+<span class="sd">    :param test_dataset_path: The path to your test dataset (required)</span>
+<span class="sd">    :type test_dataset_path: str</span>
+<span class="sd">    :param pretrain_dataset_path: The path to your pretrain dataset</span>
+<span class="sd">    :type str</span>
+<span class="sd">    :param experiment_history_folder_path: The path to which you want to save all the result data/plots, defaults to None.</span>
+<span class="sd">    :type str, optional</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">test_dataset_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">pretrain_dataset_path</span><span class="p">:</span> <span class="nb">str</span> <span
+            class="o">=</span> <span class="kc">None</span>
+    <span class="n">experiment_history_folder_path</span><span class="p">:</span> <span class="nb">str</span> <span
+            class="o">=</span> <span class="kc">None</span>
+    <span class="n">idyom_config</span><span class="p">:</span> <span class="n">IDyOMConfiguration</span> <span
+            class="o">=</span> <span class="n">field</span><span class="p">(</span><span
+            class="n">default_factory</span><span class="o">=</span><span class="n">IDyOMConfiguration</span><span
+            class="p">)</span>
+
+<div class="viewcode-block" id="IDyOMExperiment.__post_init__"><a class="viewcode-back"
+                                                                  href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.__post_init__">[docs]</a>    <span
+        class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span
+        class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span
+            class="n">ExperimentLogger</span><span class="p">(</span><span class="n">pretrain_dataset_path</span><span
+            class="o">=</span><span class="bp">self</span><span class="o">.</span><span
+            class="n">pretrain_dataset_path</span><span class="p">,</span>
+                                       <span class="n">test_dataset_path</span><span class="o">=</span><span class="bp">self</span><span
+            class="o">.</span><span class="n">test_dataset_path</span><span class="p">,</span>
+                                       <span class="n">experiment_history_folder_path</span><span
+            class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder_path</span><span
+            class="p">)</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment._update_idyom_config"><a class="viewcode-back"
+                                                                         href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._update_idyom_config">[docs]</a>    <span
+        class="k">def</span> <span class="nf">_update_idyom_config</span><span class="p">(</span><span
+        class="bp">self</span><span class="p">):</span>
+        <span class="n">test_dataset_id</span> <span class="o">=</span> <span class="bp">self</span><span
+            class="o">.</span><span class="n">_generate_test_dataset_id</span><span class="p">()</span>
+        <span class="n">train_dataset_id</span> <span class="o">=</span> <span class="bp">self</span><span
+            class="o">.</span><span class="n">_generate_train_dataset_id</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">required_parameters</span><span
+            class="o">.</span><span class="n">dataset_id</span> <span class="o">=</span> <span
+            class="n">test_dataset_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">training_parameters</span><span
+            class="o">.</span><span class="n">pretraining_id</span> <span class="o">=</span> <span class="n">train_dataset_id</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">this_exp_log_path</span> <span
+            class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span
+            class="o">.</span><span class="n">this_exp_folder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">test_dataset_id</span> <span
+            class="o">=</span> <span class="n">test_dataset_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">pretrain_dataset_id</span> <span
+            class="o">=</span> <span class="n">train_dataset_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">output_parameters</span><span
+            class="o">.</span><span class="n">output_path</span> <span class="o">=</span> <span
+            class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span
+            class="n">output_data_exp_folder</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment._generate_test_dataset_id"><a class="viewcode-back"
+                                                                              href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_test_dataset_id">[docs]</a>    <span
+        class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_generate_test_dataset_id</span><span class="p">()</span> <span
+            class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">moment</span> <span class="o">=</span> <span class="n">get_timestamp</span><span
+            class="p">()</span>
+        <span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;66&#39;</span> <span class="o">+</span> <span
+            class="n">moment</span>
+        <span class="k">return</span> <span class="n">dataset_id</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment._generate_train_dataset_id"><a class="viewcode-back"
+                                                                               href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_train_dataset_id">[docs]</a>    <span
+        class="k">def</span> <span class="nf">_generate_train_dataset_id</span><span class="p">(</span><span class="bp">self</span><span
+        class="p">):</span>
+        <span class="c1"># only generate an ID if pretrain_dataset_path is not None</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span><span
+            class="p">:</span>
+            <span class="n">moment</span> <span class="o">=</span> <span class="n">get_timestamp</span><span class="p">()</span>
+            <span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;99&#39;</span> <span
+            class="o">+</span> <span class="n">moment</span>
+            <span class="k">return</span> <span class="n">dataset_id</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment.set_parameters"><a class="viewcode-back"
+                                                                   href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.set_parameters">[docs]</a>    <span
+        class="k">def</span> <span class="nf">set_parameters</span><span class="p">(</span><span
+        class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span
+        class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the IDyOM model parameters.</span>
+<span class="sd">        :param kwargs: see the README or run_idyom_tutorial for a complete list of parameters (keyword arguments).</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">configuration</span> <span class="o">=</span> <span class="bp">self</span><span
+            class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span>
+        <span class="n">surface_dict</span><span class="p">:</span> <span class="nb">dict</span> <span
+            class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get_surface_dict</span><span
+            class="p">()</span>
+        <span class="c1"># print(f&#39;{surface_dict=}&#39;)</span>
+        <span class="n">kw2hide_in_errormsg</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;output_path&#39;</span><span
+            class="p">,</span> <span class="s1">&#39;dataset_id&#39;</span><span class="p">,</span> <span class="s1">&#39;pretraining_id&#39;</span><span
+            class="p">]</span>
+        <span class="n">kw2show</span> <span class="o">=</span> <span class="nb">list</span><span
+            class="p">(</span><span class="n">surface_dict</span><span class="o">.</span><span
+            class="n">keys</span><span class="p">())</span>
+        <span class="n">kw2show</span> <span class="o">=</span> <span class="p">[</span><span class="n">ele</span> <span
+            class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span
+            class="n">kw2show</span> <span class="k">if</span> <span class="n">ele</span> <span
+            class="ow">not</span> <span class="ow">in</span> <span class="n">kw2hide_in_errormsg</span><span
+            class="p">]</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span
+            class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span
+            class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span
+            class="n">surface_dict</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span
+            class="sa">f</span><span class="s1">&#39;parameter </span><span class="se">\&#39;</span><span
+            class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">\&#39;</span><span
+            class="s1"> is invalid. Valid parameters are: </span><span class="si">{</span><span class="n">kw2show</span><span
+            class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">configuration</span><span class="o">.</span><span class="n">recursive_set_attr</span><span
+            class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span
+            class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span
+            class="p">)</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back"
+                                                                         href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span
+        class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span
+        class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span
+        class="kc">True</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate the LISP script for the IDyOM model configurations.</span>
+<span class="sd">        :param write: whether to write the file or not, defaults to True.</span>
+<span class="sd">        :type write: bool</span>
+<span class="sd">        :return: the path to the lisp script file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_idyom_config</span><span class="p">()</span>
+        <span class="n">path_to_file</span> <span class="o">=</span> <span class="bp">self</span><span
+            class="o">.</span><span class="n">logger</span><span class="o">.</span><span
+            class="n">this_exp_folder</span>
+        <span class="n">lisp_file_path</span> <span class="o">=</span> <span class="n">path_to_file</span> <span
+            class="o">+</span> <span class="s1">&#39;compute.lisp&#39;</span>
+        <span class="n">lisp_command</span> <span class="o">=</span> <span class="bp">self</span><span
+            class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span
+            class="n">to_lisp_command</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">write</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">lisp_file_path</span><span
+            class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span
+            class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span
+            class="p">(</span><span class="n">lisp_command</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span
+            class="n">lisp_file_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="IDyOMExperiment.run"><a class="viewcode-back"
+                                                        href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.run">[docs]</a>    <span
+        class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span
+        class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Run the IDyOM model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">run_condition</span> <span class="o">=</span> <span class="nb">all</span><span
+            class="p">([</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span
+            class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">required_parameters</span><span
+            class="o">.</span><span class="n">is_complete</span><span class="p">(),</span>
+        <span class="p">])</span>
+        <span class="k">assert</span> <span class="n">run_condition</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** running lisp script **&#39;</span><span
+            class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span
+            class="s2">&quot;sbcl --noinform --load &quot;</span> <span class="o">+</span> <span
+            class="bp">self</span><span class="o">.</span><span class="n">generate_lisp_script</span><span
+            class="p">())</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** Finished! **&#39;</span><span
+            class="p">)</span></div></div>
+</pre>
+                        </div>
+
+                    </div>
+                </div>
+                <footer>
+
+                    <hr/>
+
+                    <div role="contentinfo">
+                        <p>&#169; Copyright 2022, Xinyi Guan.</p>
+                    </div>
+
+                    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+                    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+                    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+                </footer>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    jQuery(function () {
+        SphinxRtdTheme.Navigation.enable(true);
+    });
+</script>
+
+</body>
+</html>
