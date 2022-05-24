@@ -1,6 +1,6 @@
 # py2lispIDyOM: A Python package for IDyOM
 
-[![docs](https://github.com/xinyiguan/py2lispIDyOM/actions/workflows/docs.yml/badge.svg)](https://xinyiguan.github.io/py2lispIDyOM)
+[![docs](https://github.com/xinyiguan/py2lispIDyOM/actions/workflows/docs.yml/badge.svg)](https://xinyiguan.github.io/py2lispIDyOM/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
