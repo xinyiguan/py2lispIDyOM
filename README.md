@@ -1,5 +1,7 @@
 # py2lispIDyOM: A Python package for IDyOM
 
+[![docs](https://github.com/xinyiguan/py2lispIDyOM/actions/workflows/docs.yml/badge.svg)](https://xinyiguan.github.io/py2lispidyom//)
+
 py2lispIDyOM is a Python package for the information dynamics of music ([IDyOM](https://github.com/mtpearce/idyom/))
 model.
 

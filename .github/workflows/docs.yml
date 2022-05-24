@@ -23,10 +23,8 @@ jobs:
           pip install -r docs/requirements.txt
           cd docs/
           make html
-
       - name: Deploy docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/_build/html
-
