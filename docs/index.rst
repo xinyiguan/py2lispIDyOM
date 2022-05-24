@@ -29,7 +29,10 @@ Installing
 ~~~~~~~~~~
 The code is compatible with >=Python 3.9.
 
-To use py2lispIDyOM, you can download this repo or use git clone.
+It can be installed using pip or directly from the source code. Basic installation options include:
+
+- From PyPI using pip: pip install py2lispIDyOM
+- Download or gitclone this repository
 
 Functionality and Usage
 -----------------------
