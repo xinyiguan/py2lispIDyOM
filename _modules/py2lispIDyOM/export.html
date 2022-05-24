@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>py2lispIDyOM.export &mdash; py2lispIDyOM  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/autoclasstoc.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../run.html">py2lispIDyOM.run</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../extract.html">py2lispIDyOM.extract</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../export.html">py2lispIDyOM.export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../viz.html">py2lispIDyOM.viz</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">py2lispIDyOM</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>py2lispIDyOM.export</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for py2lispIDyOM.export</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.io</span>
+
+<span class="kn">from</span> <span class="nn">py2lispIDyOM.extract</span> <span class="kn">import</span> <span class="n">ExperimentInfo</span>
+
+
+<div class="viewcode-block" id="Export"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Export</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Export selected IDyOM model outputs to other formats.</span>
+
+<span class="sd">    :param experiment_folder_path: The path to which you saved all the result data/plots</span>
+<span class="sd">    :type experiment_folder_path: str</span>
+<span class="sd">    :param idyom_output_keywords: A list of IDyOM output keywords you want to export, defaults to None</span>
+<span class="sd">    :type list of string, optional</span>
+<span class="sd">    :param melody_names: A list of melodies of which IDyOM outputs that you want to export</span>
+<span class="sd">    :type melody_names: list of string, optional</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">idyom_output_keywords</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Export.__post_init__"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.__post_init__">[docs]</a>    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dat_file_path</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_folder_path</span> <span class="o">+</span> <span class="s1">&#39;experiment_output_data_folder/*.dat&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">experiment_info</span> <span class="o">=</span> <span class="n">ExperimentInfo</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_folder_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_info</span><span class="o">.</span><span class="n">melodies_dict</span></div>
+
+<div class="viewcode-block" id="Export._generate_export_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._generate_export_folder">[docs]</a>    <span class="k">def</span> <span class="nf">_generate_export_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">export_folder_name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To generate a folder to store the idyom outputs in other formats (e.g., .mat, .csv)&quot;&quot;&quot;</span>
+        <span class="n">idyom_output_export_folder_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_folder_path</span> <span class="o">+</span> <span class="n">export_folder_name</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">idyom_output_export_folder_path</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">idyom_output_export_folder_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">idyom_output_export_folder_path</span></div>
+
+<div class="viewcode-block" id="Export._get_valid_idyom_output_keys"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._get_valid_idyom_output_keys">[docs]</a>    <span class="k">def</span> <span class="nf">_get_valid_idyom_output_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To get a list of valid idyom output keys for a melody.&quot;&quot;&quot;</span>
+        <span class="n">valid_idyom_output_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span><span class="o">.</span><span class="n">get_idyom_output_keyword_list</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">valid_idyom_output_keys</span></div>
+
+<div class="viewcode-block" id="Export._get_idyom_output_for_single_melody"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._get_idyom_output_for_single_melody">[docs]</a>    <span class="k">def</span> <span class="nf">_get_idyom_output_for_single_melody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">,</span> <span class="n">idyom_key</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;To get the IDyOM output value array for a single melody, according to the IDyOM output keys.&quot;&quot;&quot;</span>
+        <span class="n">output_value_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span><span class="o">.</span><span class="n">access_idyom_output_keywords</span><span class="p">(</span>
+            <span class="p">[</span><span class="n">idyom_key</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># this is np.array</span>
+        <span class="n">output_value_array</span> <span class="o">=</span> <span class="n">output_value_array</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">output_value_array</span></div>
+
+<div class="viewcode-block" id="Export._get_single_melody_output_values_df"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._get_single_melody_output_values_df">[docs]</a>    <span class="k">def</span> <span class="nf">_get_single_melody_output_values_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This function returns a DataFrame of all IDyOM output values of one melody.&quot;&quot;&quot;</span>
+        <span class="n">idyom_output_values_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">idyom_output_values_df</span></div>
+
+<div class="viewcode-block" id="Export._get_output_values_in_selected_melodies"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._get_output_values_in_selected_melodies">[docs]</a>    <span class="k">def</span> <span class="nf">_get_output_values_in_selected_melodies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idyom_key</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This function returns a np.array of idyom output values for selected an idyom key for each selected songs.&quot;&quot;&quot;</span>
+        <span class="n">output_values_data_in_songs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected_songs</span><span class="p">):</span>
+            <span class="n">valid_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_valid_idyom_output_keys</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">idyom_key</span> <span class="ow">in</span> <span class="n">valid_keys</span><span class="p">:</span>
+                <span class="n">idyom_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_idyom_output_for_single_melody</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">,</span> <span class="n">idyom_key</span><span class="o">=</span><span class="n">idyom_key</span><span class="p">)</span>
+                <span class="n">output_values_data_in_songs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idyom_data</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;IDyOM output keyword </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">idyom_key</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> is invalid. Valid IDyOM output keys are: </span><span class="si">{</span><span class="n">valid_keys</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">output_values_data_in_songs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">output_values_data_in_songs</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output_values_data_in_songs</span></div>
+
+<div class="viewcode-block" id="Export._get_output_values_df_in_selected_melodies"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._get_output_values_df_in_selected_melodies">[docs]</a>    <span class="k">def</span> <span class="nf">_get_output_values_df_in_selected_melodies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function iterate through the func &#39;_get_single_melody_output_values_df&#39; to get</span>
+<span class="sd">        a DataFrame of idyom output values for all idyom keys for each selected songs.</span>
+<span class="sd">         &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="n">selected_songs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_get_single_melody_output_values_df</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Export._export_by_keyword_2mat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._export_by_keyword_2mat">[docs]</a>    <span class="k">def</span> <span class="nf">_export_by_keyword_2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords_list</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Export the idyom output data to .mat files according to the keyword list.&quot;&quot;&quot;</span>
+
+        <span class="c1"># Type check =====================:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argument </span><span class="se">\&#39;</span><span class="s1">keywords_list</span><span class="se">\&#39;</span><span class="s1"> should be a list of strings, not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">):</span>  <span class="c1"># data_to_export is a list of list</span>
+            <span class="n">keyword_output_data_in_songs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_output_values_in_selected_melodies</span><span class="p">(</span><span class="n">idyom_key</span><span class="o">=</span><span class="n">keyword</span><span class="p">,</span>
+                                                                                        <span class="n">selected_songs</span><span class="o">=</span><span class="n">selected_songs</span><span class="p">)</span>
+            <span class="n">keyword_name_pp</span> <span class="o">=</span> <span class="n">keyword</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>  <span class="c1"># account for names like &quot;information.content&quot;</span>
+            <span class="n">keyword_name_pp</span> <span class="o">=</span> <span class="n">keyword_name_pp</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">savemat</span><span class="p">(</span><span class="n">output_path</span> <span class="o">+</span> <span class="n">keyword_name_pp</span> <span class="o">+</span> <span class="s1">&#39;.mat&#39;</span><span class="p">,</span>
+                             <span class="n">mdict</span><span class="o">=</span><span class="p">{</span><span class="n">keyword_name_pp</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">keyword_output_data_in_songs</span><span class="p">)})</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exported data to &#39;</span> <span class="o">+</span> <span class="n">output_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Export._export_values_of_keywords_by_melody_2mat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._export_values_of_keywords_by_melody_2mat">[docs]</a>    <span class="k">def</span> <span class="nf">_export_values_of_keywords_by_melody_2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords_list</span><span class="p">,</span> <span class="n">melody</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Exports the IDyOM output values according to the keywords_list of one song to a mat file.&quot;&quot;&quot;</span>
+        <span class="c1"># Type check =====================:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argument </span><span class="se">\&#39;</span><span class="s1">keywords_list</span><span class="se">\&#39;</span><span class="s1"> should be a list of strings, not </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">melody_name_pp</span> <span class="o">=</span> <span class="n">melody</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">):</span>
+            <span class="n">idyom_output_data_in_song</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_idyom_output_for_single_melody</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">,</span> <span class="n">idyom_key</span><span class="o">=</span><span class="n">keyword</span><span class="p">)</span>
+            <span class="n">idyom_keyword_pp</span> <span class="o">=</span> <span class="n">keyword</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">)</span>  <span class="c1"># account for names like &quot;information.content&quot;</span>
+            <span class="n">full_outfile_name</span> <span class="o">=</span> <span class="n">melody_name_pp</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">idyom_keyword_pp</span>
+            <span class="n">full_outfile_name</span> <span class="o">=</span> <span class="n">full_outfile_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">savemat</span><span class="p">(</span><span class="n">output_path</span> <span class="o">+</span> <span class="n">full_outfile_name</span> <span class="o">+</span> <span class="s1">&#39;.mat&#39;</span><span class="p">,</span>
+                             <span class="n">mdict</span><span class="o">=</span><span class="p">{</span><span class="n">idyom_keyword_pp</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">idyom_output_data_in_song</span><span class="p">)})</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exported data to &#39;</span> <span class="o">+</span> <span class="n">output_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Export._export_by_song_2csv"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export._export_by_song_2csv">[docs]</a>    <span class="k">def</span> <span class="nf">_export_by_song_2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody_name</span><span class="p">,</span> <span class="n">single_song_df_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Exports the all the IDyOM output data (df) for a single melody to csv&quot;&quot;&quot;</span>
+        <span class="n">melody_name</span> <span class="o">=</span> <span class="n">melody_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="n">csv_file_path</span> <span class="o">=</span> <span class="n">output_path</span> <span class="o">+</span> <span class="n">melody_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
+        <span class="n">single_song_df_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">csv_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Export.export2mat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.export2mat">[docs]</a>    <span class="k">def</span> <span class="nf">export2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function exports the IDyOM output data to mat files.</span>
+<span class="sd">        By default, it will export the outputs according to the preset keywords</span>
+<span class="sd">        specified in the idyom_output_keywords for all melodies.</span>
+<span class="sd">        Users can also specify specific melody by passing the melody names to the melody_name param.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check idyom_output_keyword is not None:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_output_keywords</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument </span><span class="se">\&#39;</span><span class="s1">idyom_output_keywords</span><span class="se">\&#39;</span><span class="s1"> is empty. &#39;</span>
+                             <span class="sa">f</span><span class="s1">&#39;Please provide a list of IDyOM output keywords of which you want to export to mat files.&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="n">export_folder_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_export_folder</span><span class="p">(</span><span class="n">export_folder_name</span><span class="o">=</span><span class="s1">&#39;outputs_in_mat&#39;</span><span class="p">)</span>
+        <span class="n">keywords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_output_keywords</span>
+
+        <span class="k">if</span> <span class="n">keywords</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">melody_names</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">melody_names</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_export_values_of_keywords_by_melody_2mat</span><span class="p">(</span><span class="n">keywords_list</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span> <span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">,</span>
+                                                                   <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">melody_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_export_by_keyword_2mat</span><span class="p">(</span><span class="n">keywords_list</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span> <span class="n">selected_songs</span><span class="o">=</span><span class="n">melody_names</span><span class="p">,</span>
+                                             <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Export.export2csv"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.export2csv">[docs]</a>    <span class="k">def</span> <span class="nf">export2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This function exports the IDyOM output data to a csv files.</span>
+<span class="sd">        By default, this will export all properties of the chosen melodies, where each melody is in one csv file.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Check idyom_output_keyword is None:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_output_keywords</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The argument </span><span class="se">\&#39;</span><span class="s1">idyom_output_keywords</span><span class="se">\&#39;</span><span class="s1"> should be empty. &#39;</span>
+                             <span class="sa">f</span><span class="s1">&#39;The current version of py2lispIDyoM only supports exporting all IDyoM outputs of selected or all melodies.&#39;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+        <span class="n">export_folder_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_export_folder</span><span class="p">(</span><span class="n">export_folder_name</span><span class="o">=</span><span class="s1">&#39;outputs_in_csv&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">melody_names</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">melody_names</span><span class="p">):</span>
+                <span class="n">single_song_df_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_single_melody_output_values_df</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_export_by_song_2csv</span><span class="p">(</span><span class="n">melody_name</span><span class="o">=</span><span class="n">melody</span><span class="p">,</span> <span class="n">single_song_df_data</span><span class="o">=</span><span class="n">single_song_df_data</span><span class="p">,</span>
+                                          <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">melody_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">melody_names</span><span class="p">):</span>
+                <span class="n">single_song_df_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_single_melody_output_values_df</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_export_by_song_2csv</span><span class="p">(</span><span class="n">melody_name</span><span class="o">=</span><span class="n">melody</span><span class="p">,</span> <span class="n">single_song_df_data</span><span class="o">=</span><span class="n">single_song_df_data</span><span class="p">,</span>
+                                          <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exported data to &#39;</span> <span class="o">+</span> <span class="n">export_folder_path</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Xinyi Guan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
