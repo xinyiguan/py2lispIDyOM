@@ -25,8 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme updated">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="README updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,14 +277,7 @@
       <workItem from="1653143649023" duration="469000" />
       <workItem from="1653218729981" duration="29542000" />
       <workItem from="1653302029423" duration="9826000" />
-      <workItem from="1653313572617" duration="19247000" />
-    </task>
-    <task id="LOCAL-00034" summary="viz: plot_overall_surprisal_entropy unfinish">
-      <created>1652108700489</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1652108700489</updated>
+      <workItem from="1653313572617" duration="19893000" />
     </task>
     <task id="LOCAL-00035" summary="set_parameters working -v1">
       <created>1652169675099</created>
@@ -621,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653387914986</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="README updated">
+      <created>1653387950458</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1653387950458</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -653,7 +654,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="readme typo" />
     <MESSAGE value="updated naming and reformating" />
     <MESSAGE value="readme table of content" />
     <MESSAGE value="readme update" />
@@ -678,7 +678,8 @@
     <MESSAGE value="generate documentation from docstrings" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="readme updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme updated" />
+    <MESSAGE value="README updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="README updated" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
