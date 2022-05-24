@@ -27,7 +27,7 @@ In addition, py2lispIDyOM also requires common packages such as `numpy`, `matplo
 
 Installing
 ~~~~~~~~~~
-The code is compatible with >=Python 3.8.
+The code is compatible with >=Python 3.9.
 
 To use py2lispIDyOM, you can download this repo or use git clone.
 
