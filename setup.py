@@ -1,7 +1,6 @@
 import setuptools
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+long_description = 'py2lispIDyOM is a Python package for the information dynamics of music (IDyOM) model.'
 
 with open("requirements.txt", "r") as fh:
     install_requires = fh.read().splitlines()
