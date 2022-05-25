@@ -26,8 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="build.yml">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +273,7 @@
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
       <workItem from="1653478163717" duration="2149000" />
-      <workItem from="1653481002563" duration="5133000" />
-    </task>
-    <task id="LOCAL-00058" summary="updated links in docs">
-      <created>1652947997191</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1652947997191</updated>
+      <workItem from="1653481002563" duration="5794000" />
     </task>
     <task id="LOCAL-00059" summary="readme dependencies update">
       <created>1652948706058</created>
@@ -618,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653484831579</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="build.yml">
+      <created>1653486161228</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1653486161228</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
