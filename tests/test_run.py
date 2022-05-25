@@ -41,7 +41,6 @@ class TestIDyOMExperiment(TestCase):
         self.assertEqual(generated_commands, expected_commands)
         # idyom_experiment.run()
 
-
     def test_case_2(self):
         """Test case 1:
         target_viewpoints='(cpitch onset), source_viewpoints='(cpitch onset)
@@ -50,7 +49,6 @@ class TestIDyOMExperiment(TestCase):
 
         test_dataset_path = '/Users/guan/Desktop/Codes/py2lispIDyOM/tests/dataset/bach_dataset/'
         pretrain_dataset_path = '/Users/guan/Desktop/Codes/py2lispIDyOM/tests/dataset/shanx_dataset/'
-
 
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)
