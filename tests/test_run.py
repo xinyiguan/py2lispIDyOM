@@ -7,39 +7,39 @@ from py2lispIDyOM.run import IDyOMExperiment
 
 class TestIDyOMExperiment(TestCase):
 
-    def test_case_1(self):
-        """Test case 1:
-        target_viewpoints='(cpitch), source_viewpoints='((cpintfref cpint) cpitch)
-        model=stm, stmo=stmo, order_bound=5, k = 2, detail=3
-        """
-
-        test_dataset_path = 'dataset/bach_dataset/'
-        idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path)
-        idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
-                                        source_viewpoints=[('cpintfref', 'cpint'), 'cpitch'],
-                                        models=':stm',
-                                        stmo=':stmo',
-                                        stmo_order_bound=5,
-                                        k=2,
-                                        detail=3)
-
-        today_date = datetime.date.today()
-        now_time = datetime.datetime.now()
-        exp_folder_name = today_date.strftime(
-            '%d-%m-%y') + '_' + now_time.strftime(
-            '%H.%M.%S')
-
-        test_dataset_id = idyom_experiment._generate_test_dataset_id()
-        generated_commands = idyom_experiment._generate_lisp_commands()
-        expected_commands = f'(start-idyom)\n' \
-                            f'(idyom-db:import-data :mid "experiment_history/{exp_folder_name}/experiment_input_data_folder/test_dataset/" ' \
-                            f'"TEST_DATASET" {test_dataset_id})\n' \
-                            f'(idyom:idyom {test_dataset_id} \'(cpitch) \'((cpintfref cpint) cpitch) :models :stm :stmo ' \
-                            f'\'(:order-bound 5) :k 2 :detail 3 :output-path "experiment_history/{exp_folder_name}/experiment_output_data_folder/" :overwrite nil)\n' \
-                            f'(quit)'
-
-        self.assertEqual(generated_commands, expected_commands)
-        # idyom_experiment.run()
+    # def test_case_1(self):
+    #     """Test case 1:
+    #     target_viewpoints='(cpitch), source_viewpoints='((cpintfref cpint) cpitch)
+    #     model=stm, stmo=stmo, order_bound=5, k = 2, detail=3
+    #     """
+    #
+    #     test_dataset_path = 'dataset/bach_dataset/'
+    #     idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path)
+    #     idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
+    #                                     source_viewpoints=[('cpintfref', 'cpint'), 'cpitch'],
+    #                                     models=':stm',
+    #                                     stmo=':stmo',
+    #                                     stmo_order_bound=5,
+    #                                     k=2,
+    #                                     detail=3)
+    #
+    #     today_date = datetime.date.today()
+    #     now_time = datetime.datetime.now()
+    #     exp_folder_name = today_date.strftime(
+    #         '%d-%m-%y') + '_' + now_time.strftime(
+    #         '%H.%M.%S')
+    #
+    #     test_dataset_id = idyom_experiment._generate_test_dataset_id()
+    #     generated_commands = idyom_experiment._generate_lisp_commands()
+    #     expected_commands = f'(start-idyom)\n' \
+    #                         f'(idyom-db:import-data :mid "experiment_history/{exp_folder_name}/experiment_input_data_folder/test_dataset/" ' \
+    #                         f'"TEST_DATASET" {test_dataset_id})\n' \
+    #                         f'(idyom:idyom {test_dataset_id} \'(cpitch) \'((cpintfref cpint) cpitch) :models :stm :stmo ' \
+    #                         f'\'(:order-bound 5) :k 2 :detail 3 :output-path "experiment_history/{exp_folder_name}/experiment_output_data_folder/" :overwrite nil)\n' \
+    #                         f'(quit)'
+    #
+    #     self.assertEqual(generated_commands, expected_commands)
+    #     # idyom_experiment.run()
 
     def test_case_2(self):
         """Test case 1:
