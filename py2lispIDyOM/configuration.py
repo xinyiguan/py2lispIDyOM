@@ -416,30 +416,6 @@ class ExperimentLogger:
         os.makedirs(input_data_folder)
         return input_data_folder
 
-    def generate_test_dataset_exp_folder(self):
-        input_data_folder = self.input_data_exp_folder
-        test_folder = input_data_folder + 'test_dataset/'
-        os.makedirs(test_folder)
-        print("** Putting Test dataset files in experiment history folder. **")
-        test_dataset_path = self.test_dataset_path
-        test = self._get_files_from_paths(test_dataset_path)
-        self._put_midis_in_folder(test, test_folder)
-        return test_folder
-
-    def generate_pretrain_dataset_exp_folder(self):
-        pretrain_dataset_path = self.pretrain_dataset_path
-        if pretrain_dataset_path is None:
-            pass
-            print('** No pretraining dataset detected. **')
-        else:
-            input_data_folder = self.input_data_exp_folder
-            pretrain_folder = input_data_folder + 'pretrain_dataset/'
-            os.makedirs(pretrain_folder)
-            print("** Putting Pretraining dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(pretrain_dataset_path)
-            self._put_midis_in_folder(train, pretrain_folder)
-            return pretrain_folder
-
     def _get_files_from_paths(self, path):  # only two types files allowed: midi and kern
         files = []
         for file in glob(path + '*'):
@@ -451,19 +427,51 @@ class ExperimentLogger:
         for file in files:
             shutil.copyfile(file, folder_path + file[file.rfind("/"):])
 
-    def put_test_midi_in_exp_folder(self):
-        print("** Putting Test dataset files in experiment history folder. **")
-        test_files = self._get_files_from_paths(self.test_dataset_path)
-        self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)
+    def generate_test_dataset_exp_folder(self):
+        input_data_folder = self.input_data_exp_folder
+        test_folder = input_data_folder + 'test_dataset/'
+        os.makedirs(test_folder)
+        test_dataset_path = self.test_dataset_path
+        test = self._get_files_from_paths(test_dataset_path)
+        self._put_midis_in_folder(test, test_folder)
+        if not os.listdir(test_folder):
+            raise AssertionError(f'test_dataset folder is empty!')
+        else:
+            print("** Putting Test dataset files in experiment history folder. **")
 
-    def put_train_midi_in_exp_folder(self):
-        if self.pretrain_dataset_path is None:
+        return test_folder
+
+    def generate_pretrain_dataset_exp_folder(self):
+        pretrain_dataset_path = self.pretrain_dataset_path
+        if pretrain_dataset_path is None:
             pass
             print('** No pretraining dataset detected. **')
         else:
-            print("** Putting pretrain dataset files in experiment history folder. **")
-            train = self._get_files_from_paths(self.pretrain_dataset_path)
-            self._put_midis_in_folder(train, self.train_dataset_exp_folder)
+            input_data_folder = self.input_data_exp_folder
+            pretrain_folder = input_data_folder + 'pretrain_dataset/'
+            os.makedirs(pretrain_folder)
+            train = self._get_files_from_paths(pretrain_dataset_path)
+            self._put_midis_in_folder(train, pretrain_folder)
+            if not os.listdir(pretrain_folder):
+                raise AssertionError(f'pretrain_dataset folder is empty!')
+            else:
+                print("** Putting Pretraining dataset files in experiment history folder. **")
+            return pretrain_folder
+
+
+    # def put_test_midi_in_exp_folder(self):
+    #     print("** Putting Test dataset files in experiment history folder. **")
+    #     test_files = self._get_files_from_paths(self.test_dataset_path)
+    #     self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)
+
+    # def put_train_midi_in_exp_folder(self):
+    #     if self.pretrain_dataset_path is None:
+    #         pass
+    #         print('** No pretraining dataset detected. **')
+    #     else:
+    #         print("** Putting pretrain dataset files in experiment history folder. **")
+    #         train = self._get_files_from_paths(self.pretrain_dataset_path)
+    #         self._put_midis_in_folder(train, self.train_dataset_exp_folder)
 
     def generate_output_data_exp_folder(self):
         output_data_folder = self.this_exp_folder + 'experiment_output_data_folder/'

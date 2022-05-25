@@ -70,6 +70,37 @@ class IDyOMExperiment:
                 raise KeyError(f'parameter \'{key}\' is invalid. Valid parameters are: {kw2show}')
             configuration.recursive_set_attr(key=key, value=value)
 
+    def _generate_lisp_commands(self):
+        """
+        Generate the LISP commands for the IDyOM model configurations.
+        :return: the total lisp commands for the idyom experiment
+        """
+        self._update_idyom_config()
+        lisp_command = self.idyom_config.to_lisp_command()
+        return lisp_command
+
+    def _assert_experiment_logger_init(self) -> bool:
+        """assert test/pretrain dataset folder in exp log not empty"""
+        test_data_log_path = self.logger.this_exp_folder + 'experiment_input_data_folder/test_dataset/'
+        pretrain_data_log_path = self.logger.this_exp_folder + 'experiment_input_data_folder/pretrain_dataset/'
+
+        if not os.listdir(test_data_log_path):  # if test folder empty
+            return False
+        elif os.listdir(test_data_log_path):  # if test folder NOT empty
+            if self.pretrain_dataset_path:
+                if not os.listdir(pretrain_data_log_path) or not os.listdir(test_data_log_path):
+                    return False
+                else:
+                    return True
+        else:
+            return True
+
+    def _assert_lisp_syntax(self) -> bool:
+        """assert correct idyom lisp syntax"""
+        lisp_command = self._generate_lisp_commands()
+        if lisp_command:
+            return True
+
     def generate_lisp_script(self, write=True):
         """
         Generate the LISP script for the IDyOM model configurations.
@@ -93,6 +124,8 @@ class IDyOMExperiment:
 
         run_condition = all([
             self.idyom_config.run_model_configuration.required_parameters.is_complete(),
+            self._assert_experiment_logger_init(),
+            self._assert_lisp_syntax
         ])
         assert run_condition
         print('** running lisp script **')
