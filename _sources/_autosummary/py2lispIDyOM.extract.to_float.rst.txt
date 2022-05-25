@@ -1,5 +1,5 @@
-py2lispIDyOM.extract.toFloat
-============================
+py2lispIDyOM.extract.to\_float
+==============================
 
 .. currentmodule:: py2lispIDyOM.extract
 

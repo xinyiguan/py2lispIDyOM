@@ -1,5 +1,5 @@
-py2lispIDyOM.extract.getDictionary
-==================================
+py2lispIDyOM.extract.get\_dictionary
+====================================
 
 .. currentmodule:: py2lispIDyOM.extract
 

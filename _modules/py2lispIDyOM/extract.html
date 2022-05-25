@@ -76,16 +76,16 @@
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 
-<div class="viewcode-block" id="toFloat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.toFloat.html#py2lispIDyOM.extract.toFloat">[docs]</a><span class="k">def</span> <span class="nf">toFloat</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<div class="viewcode-block" id="to_float"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.to_float.html#py2lispIDyOM.extract.to_float">[docs]</a><span class="k">def</span> <span class="nf">to_float</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">f</span></div>
 
 
-<div class="viewcode-block" id="getDictionary"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.getDictionary.html#py2lispIDyOM.extract.getDictionary">[docs]</a><span class="k">def</span> <span class="nf">getDictionary</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<div class="viewcode-block" id="get_dictionary"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.get_dictionary.html#py2lispIDyOM.extract.get_dictionary">[docs]</a><span class="k">def</span> <span class="nf">get_dictionary</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    read the file line by line, split each line into n fields, then create the dictionary:</span>
+<span class="sd">    Read the file line by line, split each line into n fields, then create the dictionary:</span>
 <span class="sd">    :param: file</span>
 <span class="sd">    :return: dict</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -103,13 +103,13 @@
         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">dict</span><span class="p">[</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]]:</span>
                 <span class="nb">dict</span><span class="p">[</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="nb">dict</span><span class="p">[</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">toFloat</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+            <span class="nb">dict</span><span class="p">[</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">to_float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
             <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="nb">dict</span></div>
 
 
 <div class="viewcode-block" id="get_all_song_dict"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.get_all_song_dict.html#py2lispIDyOM.extract.get_all_song_dict">[docs]</a><span class="k">def</span> <span class="nf">get_all_song_dict</span><span class="p">(</span><span class="n">dat_file_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-    <span class="n">all_song_dict</span> <span class="o">=</span> <span class="n">getDictionary</span><span class="p">(</span><span class="n">dat_file_path</span><span class="p">)</span>
+    <span class="n">all_song_dict</span> <span class="o">=</span> <span class="n">get_dictionary</span><span class="p">(</span><span class="n">dat_file_path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">all_song_dict</span></div>
 
 
@@ -271,7 +271,7 @@
 <span class="sd">        :return: a typed dictionary (melody_name, MelodyInfo)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">return_dict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">my_dict</span> <span class="o">=</span> <span class="n">getDictionary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dat_file_path</span><span class="p">)</span>
+        <span class="n">my_dict</span> <span class="o">=</span> <span class="n">get_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dat_file_path</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">melody_info</span> <span class="o">=</span> <span class="n">MelodyInfo</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">parent_experiment</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
                                      <span class="n">exp_pitch_element_list</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_datasetwise_cpitch_elements</span><span class="p">())</span>

@@ -140,6 +140,15 @@
                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;parameter </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> is invalid. Valid parameters are: </span><span class="si">{</span><span class="n">kw2show</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
             <span class="n">configuration</span><span class="o">.</span><span class="n">recursive_set_attr</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">)</span></div>
 
+<div class="viewcode-block" id="IDyOMExperiment._generate_lisp_commands"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_lisp_commands">[docs]</a>    <span class="k">def</span> <span class="nf">_generate_lisp_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generate the LISP commands for the IDyOM model configurations.</span>
+<span class="sd">        :return: the total lisp commands for the idyom experiment</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_idyom_config</span><span class="p">()</span>
+        <span class="n">lisp_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">lisp_command</span></div>
+
 <div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the LISP script for the IDyOM model configurations.</span>
@@ -162,7 +171,7 @@
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">run_condition</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">required_parameters</span><span class="o">.</span><span class="n">is_complete</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">required_parameters</span><span class="o">.</span><span class="n">is_complete</span><span class="p">()</span>
         <span class="p">])</span>
         <span class="k">assert</span> <span class="n">run_condition</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** running lisp script **&#39;</span><span class="p">)</span>

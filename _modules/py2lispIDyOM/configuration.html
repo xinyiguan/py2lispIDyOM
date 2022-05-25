@@ -486,30 +486,6 @@
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">input_data_folder</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">input_data_folder</span></div>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_test_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_test_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_test_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span>
-        <span class="n">test_folder</span> <span class="o">=</span> <span class="n">input_data_folder</span> <span class="o">+</span> <span class="s1">&#39;test_dataset/&#39;</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">test_folder</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Test dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
-        <span class="n">test_dataset_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_path</span>
-        <span class="n">test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="n">test_dataset_path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test_folder</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">test_folder</span></div>
-
-<div class="viewcode-block" id="ExperimentLogger.generate_pretrain_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_pretrain_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_pretrain_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">pretrain_dataset_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span>
-        <span class="k">if</span> <span class="n">pretrain_dataset_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">pass</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** No pretraining dataset detected. **&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span>
-            <span class="n">pretrain_folder</span> <span class="o">=</span> <span class="n">input_data_folder</span> <span class="o">+</span> <span class="s1">&#39;pretrain_dataset/&#39;</span>
-            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pretrain_folder</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Pretraining dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
-            <span class="n">train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="n">pretrain_dataset_path</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">pretrain_folder</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">pretrain_folder</span></div>
-
 <div class="viewcode-block" id="ExperimentLogger._get_files_from_paths"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger._get_files_from_paths">[docs]</a>    <span class="k">def</span> <span class="nf">_get_files_from_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>  <span class="c1"># only two types files allowed: midi and kern</span>
         <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">glob</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span><span class="p">):</span>
@@ -521,19 +497,51 @@
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
             <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">folder_path</span> <span class="o">+</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):])</span></div>
 
-<div class="viewcode-block" id="ExperimentLogger.put_test_midi_in_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.put_test_midi_in_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">put_test_midi_in_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Test dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
-        <span class="n">test_files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_path</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">test_files</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_exp_folder</span><span class="p">)</span></div>
+<div class="viewcode-block" id="ExperimentLogger.generate_test_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_test_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_test_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span>
+        <span class="n">test_folder</span> <span class="o">=</span> <span class="n">input_data_folder</span> <span class="o">+</span> <span class="s1">&#39;test_dataset/&#39;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">test_folder</span><span class="p">)</span>
+        <span class="n">test_dataset_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_path</span>
+        <span class="n">test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="n">test_dataset_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test_folder</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">test_folder</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;test_dataset folder is empty!&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Test dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ExperimentLogger.put_train_midi_in_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.put_train_midi_in_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">put_train_midi_in_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">test_folder</span></div>
+
+<div class="viewcode-block" id="ExperimentLogger.generate_pretrain_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_pretrain_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_pretrain_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">pretrain_dataset_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span>
+        <span class="k">if</span> <span class="n">pretrain_dataset_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">pass</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** No pretraining dataset detected. **&#39;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting pretrain dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
-            <span class="n">train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_dataset_exp_folder</span><span class="p">)</span></div>
+            <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span>
+            <span class="n">pretrain_folder</span> <span class="o">=</span> <span class="n">input_data_folder</span> <span class="o">+</span> <span class="s1">&#39;pretrain_dataset/&#39;</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pretrain_folder</span><span class="p">)</span>
+            <span class="n">train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_files_from_paths</span><span class="p">(</span><span class="n">pretrain_dataset_path</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_put_midis_in_folder</span><span class="p">(</span><span class="n">train</span><span class="p">,</span> <span class="n">pretrain_folder</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">pretrain_folder</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;pretrain_dataset folder is empty!&#39;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Pretraining dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pretrain_folder</span></div>
+
+
+    <span class="c1"># def put_test_midi_in_exp_folder(self):</span>
+    <span class="c1">#     print(&quot;** Putting Test dataset files in experiment history folder. **&quot;)</span>
+    <span class="c1">#     test_files = self._get_files_from_paths(self.test_dataset_path)</span>
+    <span class="c1">#     self._put_midis_in_folder(test_files, self.test_dataset_exp_folder)</span>
+
+    <span class="c1"># def put_train_midi_in_exp_folder(self):</span>
+    <span class="c1">#     if self.pretrain_dataset_path is None:</span>
+    <span class="c1">#         pass</span>
+    <span class="c1">#         print(&#39;** No pretraining dataset detected. **&#39;)</span>
+    <span class="c1">#     else:</span>
+    <span class="c1">#         print(&quot;** Putting pretrain dataset files in experiment history folder. **&quot;)</span>
+    <span class="c1">#         train = self._get_files_from_paths(self.pretrain_dataset_path)</span>
+    <span class="c1">#         self._put_midis_in_folder(train, self.train_dataset_exp_folder)</span>
 
 <div class="viewcode-block" id="ExperimentLogger.generate_output_data_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_output_data_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_output_data_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">output_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">this_exp_folder</span> <span class="o">+</span> <span class="s1">&#39;experiment_output_data_folder/&#39;</span>
