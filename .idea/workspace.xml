@@ -25,31 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="tutorials updated">
-      <change afterPath="$PROJECT_DIR$/tests/test_extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="test run module">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.getDictionary.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.getDictionary.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.toFloat.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.toFloat.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.ExperimentInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.ExperimentInfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDataFrame.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDataFrame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDictionary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDictionary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_all_song_dict.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_all_song_dict.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.toFloat.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.toFloat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/extract.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/extract.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.getDictionary.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.getDictionary.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.toFloat.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.toFloat.rst.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,14 +273,7 @@
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
       <workItem from="1653478163717" duration="2149000" />
-      <workItem from="1653481002563" duration="1072000" />
-    </task>
-    <task id="LOCAL-00054" summary="readme typo">
-      <created>1652888178575</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1652888178575</updated>
+      <workItem from="1653481002563" duration="1551000" />
     </task>
     <task id="LOCAL-00055" summary="updated naming and reformating">
       <created>1652890016195</created>
@@ -640,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653480686162</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="test run module">
+      <created>1653482459450</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1653482459450</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

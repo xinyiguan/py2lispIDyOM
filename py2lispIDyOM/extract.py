@@ -15,7 +15,7 @@ def to_float(f):
 
 def get_dictionary(file: str) -> dict:
     """
-    read the file line by line, split each line into n fields, then create the dictionary:
+    Read the file line by line, split each line into n fields, then create the dictionary:
     :param: file
     :return: dict
     """
