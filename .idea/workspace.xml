@@ -25,10 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="test_run.py">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,14 +273,7 @@
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
       <workItem from="1653478163717" duration="2149000" />
-      <workItem from="1653481002563" duration="7591000" />
-    </task>
-    <task id="LOCAL-00062" summary="ltmo stmo working -V2">
-      <created>1653039018534</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1653039018534</updated>
+      <workItem from="1653481002563" duration="8016000" />
     </task>
     <task id="LOCAL-00063" summary="mat export naming fixed">
       <created>1653055210435</created>
@@ -619,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653488035187</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="updated README">
+      <created>1653488631355</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1653488631355</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +650,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="files re-organized" />
     <MESSAGE value="files reorganized" />
     <MESSAGE value="packaging setup" />
     <MESSAGE value="documentation init" />
@@ -676,7 +674,8 @@
     <MESSAGE value="setup version changed" />
     <MESSAGE value="updated setup.py" />
     <MESSAGE value="test_run.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_run.py" />
+    <MESSAGE value="updated README" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

@@ -47,8 +47,8 @@ class TestIDyOMExperiment(TestCase):
         model=both, ltmo=ltmo, order_bound=8, k = full, detail=3
         """
 
-        test_dataset_path = 'dataset/bach_dataset/'
-        pretrain_dataset_path = 'dataset/shanx_dataset/'
+        test_dataset_path = './dataset/bach_dataset/'
+        pretrain_dataset_path = './dataset/shanx_dataset/'
 
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)
