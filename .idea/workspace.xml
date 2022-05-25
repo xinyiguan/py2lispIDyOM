@@ -25,9 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="test run module">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="code reformatted">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +273,7 @@
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
       <workItem from="1653478163717" duration="2149000" />
-      <workItem from="1653481002563" duration="1551000" />
-    </task>
-    <task id="LOCAL-00055" summary="updated naming and reformating">
-      <created>1652890016195</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1652890016195</updated>
+      <workItem from="1653481002563" duration="1955000" />
     </task>
     <task id="LOCAL-00056" summary="readme table of content">
       <created>1652890086203</created>
@@ -618,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653482459450</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="code reformatted">
+      <created>1653482603365</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1653482603365</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +650,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="updated README, re-organizing tutorials" />
     <MESSAGE value="data preprocessing - extracting tutorial updated" />
     <MESSAGE value="3 more types of plots added" />
     <MESSAGE value="plot alignment and label bug fixed" />
@@ -675,7 +674,8 @@
     <MESSAGE value="tutorials updated" />
     <MESSAGE value="test_run" />
     <MESSAGE value="test run module" />
-    <option name="LAST_COMMIT_MESSAGE" value="test run module" />
+    <MESSAGE value="code reformatted" />
+    <option name="LAST_COMMIT_MESSAGE" value="code reformatted" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
