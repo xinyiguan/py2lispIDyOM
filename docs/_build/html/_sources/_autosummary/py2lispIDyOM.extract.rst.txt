@@ -15,10 +15,10 @@
       :toctree:
    
       getDataFrame
-      getDictionary
+      get_dictionary
       get_all_song_dict
       get_song_dict_of_interest
-      toFloat
+      to_float
    
    
 

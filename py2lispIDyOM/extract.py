@@ -6,14 +6,14 @@ import numpy as np
 import pandas as pd
 
 
-def toFloat(f):
+def to_float(f):
     try:
         return float(f)
     except ValueError:
         return f
 
 
-def getDictionary(file: str) -> dict:
+def get_dictionary(file: str) -> dict:
     """
     read the file line by line, split each line into n fields, then create the dictionary:
     :param: file
@@ -33,13 +33,13 @@ def getDictionary(file: str) -> dict:
         for key in keys:
             if key not in dict[fields[1]]:
                 dict[fields[1]][key] = []
-            dict[fields[1]][key].append(toFloat(fields[k]))
+            dict[fields[1]][key].append(to_float(fields[k]))
             k += 1
     return dict
 
 
 def get_all_song_dict(dat_file_path: str) -> dict:
-    all_song_dict = getDictionary(dat_file_path)
+    all_song_dict = get_dictionary(dat_file_path)
     return all_song_dict
 
 
@@ -201,7 +201,7 @@ class ExperimentInfo:
         :return: a typed dictionary (melody_name, MelodyInfo)
         """
         return_dict = {}
-        my_dict = getDictionary(self.dat_file_path)
+        my_dict = get_dictionary(self.dat_file_path)
         for key, value in my_dict.items():
             melody_info = MelodyInfo(data=value, parent_experiment=self,
                                      exp_pitch_element_list=self._get_datasetwise_cpitch_elements())

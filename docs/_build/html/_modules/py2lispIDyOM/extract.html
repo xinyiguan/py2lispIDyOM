@@ -83,7 +83,7 @@
 
 <div class="viewcode-block" id="toFloat"><a class="viewcode-back"
                                             href="../../_autosummary/py2lispIDyOM.extract.toFloat.html#py2lispIDyOM.extract.toFloat">[docs]</a><span
-        class="k">def</span> <span class="nf">toFloat</span><span class="p">(</span><span class="n">f</span><span
+        class="k">def</span> <span class="nf">to_float</span><span class="p">(</span><span class="n">f</span><span
         class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">f</span><span
@@ -94,7 +94,7 @@
 
 <div class="viewcode-block" id="getDictionary"><a class="viewcode-back"
                                                   href="../../_autosummary/py2lispIDyOM.extract.getDictionary.html#py2lispIDyOM.extract.getDictionary">[docs]</a><span
-        class="k">def</span> <span class="nf">getDictionary</span><span class="p">(</span><span
+        class="k">def</span> <span class="nf">get_dictionary</span><span class="p">(</span><span
         class="n">file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span
         class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -136,7 +136,7 @@
             <span class="nb">dict</span><span class="p">[</span><span class="n">fields</span><span
             class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="n">key</span><span
             class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span
-            class="n">toFloat</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span
+            class="n">to_float</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span
             class="n">k</span><span class="p">]))</span>
             <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="nb">dict</span></div>
@@ -147,7 +147,7 @@
         class="k">def</span> <span class="nf">get_all_song_dict</span><span class="p">(</span><span class="n">dat_file_path</span><span
         class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span
         class="nb">dict</span><span class="p">:</span>
-    <span class="n">all_song_dict</span> <span class="o">=</span> <span class="n">getDictionary</span><span
+    <span class="n">all_song_dict</span> <span class="o">=</span> <span class="n">get_dictionary</span><span
             class="p">(</span><span class="n">dat_file_path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">all_song_dict</span></div>
 
@@ -516,7 +516,7 @@
 <span class="sd">        :return: a typed dictionary (melody_name, MelodyInfo)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">return_dict</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">my_dict</span> <span class="o">=</span> <span class="n">getDictionary</span><span
+        <span class="n">my_dict</span> <span class="o">=</span> <span class="n">get_dictionary</span><span
             class="p">(</span><span class="bp">self</span><span class="o">.</span><span
             class="n">dat_file_path</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span

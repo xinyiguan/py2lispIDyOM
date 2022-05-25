@@ -13,7 +13,7 @@ class TestIDyOMExperiment(TestCase):
         model=stm, stmo=stmo, order_bound=5, k = 2, detail=3
         """
 
-        test_dataset_path = '/Users/guan/Desktop/Codes/py2lispIDyOM/tests/dataset/bach_dataset/'
+        test_dataset_path = 'dataset/bach_dataset/'
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path)
         idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
                                         source_viewpoints=[('cpintfref', 'cpint'), 'cpitch'],
@@ -47,8 +47,8 @@ class TestIDyOMExperiment(TestCase):
         model=both, ltmo=ltmo, order_bound=8, k = full, detail=3
         """
 
-        test_dataset_path = '/Users/guan/Desktop/Codes/py2lispIDyOM/tests/dataset/bach_dataset/'
-        pretrain_dataset_path = '/Users/guan/Desktop/Codes/py2lispIDyOM/tests/dataset/shanx_dataset/'
+        test_dataset_path = 'dataset/bach_dataset/'
+        pretrain_dataset_path = 'dataset/shanx_dataset/'
 
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)
@@ -81,6 +81,6 @@ class TestIDyOMExperiment(TestCase):
         self.assertEqual(generated_commands, expected_commands)
         # idyom_experiment.run()
 
-
-if __name__ == '__main__':
-    unittest.main()
+#
+# if __name__ == '__main__':
+#     unittest.main()
