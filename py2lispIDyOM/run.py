@@ -79,7 +79,6 @@ class IDyOMExperiment:
         lisp_command = self.idyom_config.to_lisp_command()
         return lisp_command
 
-
     def generate_lisp_script(self, write=True):
         """
         Generate the LISP script for the IDyOM model configurations.

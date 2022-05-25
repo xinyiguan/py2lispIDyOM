@@ -268,14 +268,7 @@
       <workItem from="1653389237210" duration="923000" />
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
-      <workItem from="1653478163717" duration="2043000" />
-    </task>
-    <task id="LOCAL-00053" summary="delete redundant files">
-      <created>1652888153192</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1652888153192</updated>
+      <workItem from="1653478163717" duration="2149000" />
     </task>
     <task id="LOCAL-00054" summary="readme typo">
       <created>1652888178575</created>
@@ -613,7 +606,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653480083123</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="test run module">
+      <created>1653480686162</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1653480686162</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +645,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="module code minor refactor, added comments" />
     <MESSAGE value="updated README, re-organizing tutorials" />
     <MESSAGE value="data preprocessing - extracting tutorial updated" />
     <MESSAGE value="3 more types of plots added" />
@@ -670,7 +669,8 @@
     <MESSAGE value="update index.rst" />
     <MESSAGE value="tutorials updated" />
     <MESSAGE value="test_run" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_run" />
+    <MESSAGE value="test run module" />
+    <option name="LAST_COMMIT_MESSAGE" value="test run module" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
