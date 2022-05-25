@@ -4,6 +4,7 @@
 ![tests](https://github.com/xinyiguan/py2lispIDyOM/workflows/tests/badge.svg)
 [![docs](https://github.com/xinyiguan/py2lispIDyOM/actions/workflows/docs.yml/badge.svg)](https://xinyiguan.github.io/py2lispIDyOM/)
 
+[![DOI](https://zenodo.org/badge/313182306.svg)](https://zenodo.org/badge/latestdoi/313182306)
 [![PyPI version](https://badge.fury.io/py/py2lispIDyOM.svg)](https://badge.fury.io/py/py2lispIDyOM)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
