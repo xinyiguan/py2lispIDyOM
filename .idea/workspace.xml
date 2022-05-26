@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="test_run.py">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,14 +272,7 @@
       <workItem from="1653390346223" duration="288000" />
       <workItem from="1653390943644" duration="21986000" />
       <workItem from="1653478163717" duration="2149000" />
-      <workItem from="1653481002563" duration="9197000" />
-    </task>
-    <task id="LOCAL-00065" summary="updated README, re-organizing tutorials">
-      <created>1653130680532</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1653130680532</updated>
+      <workItem from="1653481002563" duration="9810000" />
     </task>
     <task id="LOCAL-00066" summary="data preprocessing - extracting tutorial updated">
       <created>1653153121376</created>
@@ -618,7 +610,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653489270469</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="updated README">
+      <created>1653490239823</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1653490239823</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,9 +672,9 @@
     <MESSAGE value="build.yml" />
     <MESSAGE value="setup version changed" />
     <MESSAGE value="updated setup.py" />
-    <MESSAGE value="updated README" />
     <MESSAGE value="test_run.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_run.py" />
+    <MESSAGE value="updated README" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
