@@ -21,6 +21,7 @@ class Export:
     :param melody_names: A list of melodies of which IDyOM outputs that you want to export
     :type melody_names: list of string, optional
     """
+
     experiment_folder_path: str
     idyom_output_keywords: List = None
     melody_names: List = None

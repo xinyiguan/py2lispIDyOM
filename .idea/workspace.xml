@@ -25,9 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,13 @@
     <favorite-branches>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
@@ -294,20 +301,6 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-    </task>
-    <task id="LOCAL-00067" summary="3 more types of plots added">
-      <created>1653252714515</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1653252714515</updated>
-    </task>
-    <task id="LOCAL-00068" summary="plot alignment and label bug fixed">
-      <created>1653301166482</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1653301166482</updated>
     </task>
     <task id="LOCAL-00069" summary="viz tutorial updated">
       <created>1653305097476</created>
@@ -638,7 +631,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653566479352</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="docs updated">
+      <created>1653749450532</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1653749450532</updated>
+    </task>
+    <task id="LOCAL-00117" summary="docs updated">
+      <created>1653749635525</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1653749635525</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,13 +683,11 @@
     <MESSAGE value="updated docstring comments" />
     <MESSAGE value="generate documentation from docstrings" />
     <MESSAGE value="README updated" />
-    <MESSAGE value="readme updated" />
     <MESSAGE value="docs upated" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="pypi readme updated" />
     <MESSAGE value="docs push" />
     <MESSAGE value="link updated" />
-    <MESSAGE value="docs updated" />
     <MESSAGE value="tutorial updated" />
     <MESSAGE value="update index.rst" />
     <MESSAGE value="tutorials updated" />
@@ -695,7 +700,9 @@
     <MESSAGE value="test_run.py" />
     <MESSAGE value="updated README" />
     <MESSAGE value="figs in paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="figs in paper" />
+    <MESSAGE value="readme updated" />
+    <MESSAGE value="docs updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

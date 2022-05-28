@@ -12,7 +12,14 @@
 #
 import os
 import sys
+from pathlib import Path
+from shutil import copy
+
 sys.path.insert(0, os.path.abspath('../'))
+
+URL = "https://github.com/xinyiguan/py2lispIDyOM"
+# -- Copy README file --------------------------------------------------------
+copy(Path("../README.md"), Path("./README.md"))
 
 # -- Project information -----------------------------------------------------
 
@@ -48,10 +55,11 @@ exclude_patterns = ['_build']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
-html_show_sourcelink = True  # don't show the "View page source" link in the RTD theme
+html_theme = "pydata_sphinx_theme"
+html_theme_options = {"show_prev_next": True, "github_url": URL}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+
+# html_static_path = ['_static']
