@@ -26,7 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,13 +301,6 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-    </task>
-    <task id="LOCAL-00068" summary="plot alignment and label bug fixed">
-      <created>1653301166482</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1653301166482</updated>
     </task>
     <task id="LOCAL-00069" summary="viz tutorial updated">
       <created>1653305097476</created>
@@ -644,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653749450532</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="docs updated">
+      <created>1653749635525</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1653749635525</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
