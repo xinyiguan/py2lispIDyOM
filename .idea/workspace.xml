@@ -26,8 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/paper/paper.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,10 +238,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests in test_run.py" />
-        <item itemvalue="Python.test" />
+        <item itemvalue="Python.viz" />
         <item itemvalue="Python.tmp_dev_codes" />
         <item itemvalue="Python.testing" />
-        <item itemvalue="Python.viz" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
