@@ -15,11 +15,8 @@ class Export:
     """Export selected IDyOM model outputs to other formats.
 
     :param experiment_folder_path: The path to which you saved all the result data/plots
-    :type experiment_folder_path: str
     :param idyom_output_keywords: A list of IDyOM output keywords you want to export, defaults to None
-    :type list of string, optional
     :param melody_names: A list of melodies of which IDyOM outputs that you want to export
-    :type melody_names: list of string, optional
     """
 
     experiment_folder_path: str
@@ -121,8 +118,7 @@ class Export:
     def export2mat(self):
         """
         This function exports the IDyOM output data to mat files.
-        By default, it will export the outputs according to the preset keywords
-        specified in the idyom_output_keywords for all melodies.
+        By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.
         Users can also specify specific melody by passing the melody names to the melody_name param.
         """
         # Check idyom_output_keyword is not None:

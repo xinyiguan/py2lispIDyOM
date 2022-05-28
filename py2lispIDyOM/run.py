@@ -10,11 +10,8 @@ class IDyOMExperiment:
     A class to configure the IDyOM experiment.
 
     :param test_dataset_path: The path to your test dataset (required)
-    :type test_dataset_path: str
     :param pretrain_dataset_path: The path to your pretrain dataset
-    :type str
     :param experiment_history_folder_path: The path to which you want to save all the result data/plots, defaults to None.
-    :type str, optional
 
     """
 

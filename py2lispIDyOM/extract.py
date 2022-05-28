@@ -71,8 +71,7 @@ class MelodyInfo(pd.DataFrame):
         """
         Access certain idyom output(s) via its (their) keyword(s).
 
-        :param output_keywords: list of str
-            A list of IDyOM output keywords (e.g., ['cpitch.information.content', 'onset', 'entropy'])
+        :param output_keywords: A list of IDyOM output keywords (e.g., ['cpitch.information.content', 'onset', 'entropy'])
         :return: pd.DataFrame
         """
 
@@ -95,6 +94,7 @@ class MelodyInfo(pd.DataFrame):
     def get_idyom_output_nparray(self, idyom_output_key: str):
         """
         Get the IDyOM output via its key as a np.array
+
         :param idyom_output_key: list of str
         :return: np.array of output values
         """
@@ -106,6 +106,7 @@ class MelodyInfo(pd.DataFrame):
     def get_idyom_output_keyword_list(self) -> list:
         """
         Get a list of available IDyOM output keyword for this melody.
+
         :return: list
         """
 
@@ -188,7 +189,6 @@ class ExperimentInfo:
     An experiment object that contains all data in a single experiment.
 
     :param experiment_folder_path: The path to experiment log folder which you want to access.
-    :type str
     """
 
     experiment_folder_path: str
@@ -237,6 +237,7 @@ class ExperimentInfo:
     def _get_datasetwise_cpitch_elements(self):
         """
         Get the list of cpitch (full cpitch distribution elements used in IDyOM)
+
         :return:  a list of int
         """
         # find the cpitches in idyom output keys such as 'cpitch.
