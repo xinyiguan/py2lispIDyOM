@@ -298,7 +298,7 @@
 <td><p>Access certain idyom output(s) via its (their) keyword(s).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_nparray</span></code></a>(idyom_output_key)</p></td>
-<td><p>Get the IDyOM output via its key as a np.array :type idyom_output_key: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code> :param idyom_output_key: list of str :return: np.array of output values</p></td>
+<td><p>Get the IDyOM output via its key as a np.array</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_keyword_list</span></code></a>()</p></td>
 <td><p>Get a list of available IDyOM output keyword for this melody.</p></td>
@@ -2055,8 +2055,7 @@ If True, then force showing an error.</p></td>
 <dd><p>Access certain idyom output(s) via its (their) keyword(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>output_keywords</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – list of str
-A list of IDyOM output keywords (e.g., [‘cpitch.information.content’, ‘onset’, ‘entropy’])</p>
+<dd class="field-odd"><p><strong>output_keywords</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – A list of IDyOM output keywords (e.g., [‘cpitch.information.content’, ‘onset’, ‘entropy’])</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>pd.DataFrame</p>
@@ -2081,18 +2080,29 @@ A list of IDyOM output keywords (e.g., [‘cpitch.information.content’, ‘ons
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list">
 <span class="sig-name descname"><span class="pre">get_idyom_output_keyword_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#MelodyInfo.get_idyom_output_keyword_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list" title="Permalink to this definition">#</a></dt>
-<dd><p>Get a list of available IDyOM output keyword for this melody.
-:rtype: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>
-:return: list</p>
+<dd><p>Get a list of available IDyOM output keyword for this melody.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray">
 <span class="sig-name descname"><span class="pre">get_idyom_output_nparray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idyom_output_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#MelodyInfo.get_idyom_output_nparray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray" title="Permalink to this definition">#</a></dt>
-<dd><p>Get the IDyOM output via its key as a np.array
-:type idyom_output_key: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>
-:param idyom_output_key: list of str
-:return: np.array of output values</p>
+<dd><p>Get the IDyOM output via its key as a np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idyom_output_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – list of str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>np.array of output values</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

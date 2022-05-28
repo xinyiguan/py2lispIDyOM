@@ -194,15 +194,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>experiment_folder_path</strong> (<em>str</em>) – The path to which you saved all the result data/plots</p></li>
+<li><p><strong>experiment_folder_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The path to which you saved all the result data/plots</p></li>
 <li><p><strong>idyom_output_keywords</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – A list of IDyOM output keywords you want to export, defaults to None</p></li>
+<li><p><strong>melody_names</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]) – A list of melodies of which IDyOM outputs that you want to export</p></li>
 </ul>
 </dd>
 </dl>
-<p>:type list of string, optional
-:type melody_names: <code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>]
-:param melody_names: A list of melodies of which IDyOM outputs that you want to export
-:type melody_names: list of string, optional</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable table autosummary">
@@ -299,8 +296,7 @@ By default, this will export all properties of the chosen melodies, where each m
 <dt class="sig sig-object py" id="py2lispIDyOM.export.Export.export2mat">
 <span class="sig-name descname"><span class="pre">export2mat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.export2mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.export2mat" title="Permalink to this definition">#</a></dt>
 <dd><p>This function exports the IDyOM output data to mat files.
-By default, it will export the outputs according to the preset keywords
-specified in the idyom_output_keywords for all melodies.
+By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.
 Users can also specify specific melody by passing the melody names to the melody_name param.</p>
 </dd></dl>
 

@@ -153,11 +153,8 @@
     <span class="sd">&quot;&quot;&quot;Export selected IDyOM model outputs to other formats.</span>
 
 <span class="sd">    :param experiment_folder_path: The path to which you saved all the result data/plots</span>
-<span class="sd">    :type experiment_folder_path: str</span>
 <span class="sd">    :param idyom_output_keywords: A list of IDyOM output keywords you want to export, defaults to None</span>
-<span class="sd">    :type list of string, optional</span>
 <span class="sd">    :param melody_names: A list of melodies of which IDyOM outputs that you want to export</span>
-<span class="sd">    :type melody_names: list of string, optional</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span>
@@ -259,8 +256,7 @@
 <div class="viewcode-block" id="Export.export2mat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.export2mat">[docs]</a>    <span class="k">def</span> <span class="nf">export2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function exports the IDyOM output data to mat files.</span>
-<span class="sd">        By default, it will export the outputs according to the preset keywords</span>
-<span class="sd">        specified in the idyom_output_keywords for all melodies.</span>
+<span class="sd">        By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.</span>
 <span class="sd">        Users can also specify specific melody by passing the melody names to the melody_name param.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Check idyom_output_keyword is not None:</span>
