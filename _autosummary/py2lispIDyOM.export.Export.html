@@ -1,90 +1,196 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.export.Export &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>py2lispIDyOM.export.Export &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="py2lispIDyOM.viz" href="../viz.html" />
-    <link rel="prev" title="py2lispIDyOM.export" href="py2lispIDyOM.export.html" /> 
-</head>
+    <link rel="next" title="py2lispIDyOM.viz.BasicPlot" href="py2lispIDyOM.viz.BasicPlot.html" />
+    <link rel="prev" title="py2lispIDyOM.extract.MelodyInfo" href="py2lispIDyOM.extract.MelodyInfo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="py2lispIDyOM.export.html">py2lispIDyOM.export</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">py2lispIDyOM.export.Export</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a></li>
-</ul>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
-        </div>
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
+</ul>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../export.html">py2lispIDyOM.export</a> &raquo;</li>
-          <li><a href="py2lispIDyOM.export.html">py2lispIDyOM.export</a> &raquo;</li>
-      <li>py2lispIDyOM.export.Export</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/py2lispIDyOM.export.Export.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.run.IDyOMExperiment.html">
+   py2lispIDyOM.run.IDyOMExperiment
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.extract.ExperimentInfo.html">
+   py2lispIDyOM.extract.ExperimentInfo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.extract.MelodyInfo.html">
+   py2lispIDyOM.extract.MelodyInfo
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   py2lispIDyOM.export.Export
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.viz.BasicPlot.html">
+   py2lispIDyOM.viz.BasicPlot
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <section id="py2lispidyom-export-export">
-<h1>py2lispIDyOM.export.Export<a class="headerlink" href="#py2lispidyom-export-export" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM.export.Export<a class="headerlink" href="#py2lispidyom-export-export" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.export.Export">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.export.</span></span><span class="sig-name descname"><span class="pre">Export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idyom_output_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Export selected IDyOM model outputs to other formats.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.export.</span></span><span class="sig-name descname"><span class="pre">Export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idyom_output_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export" title="Permalink to this definition">#</a></dt>
+<dd><p>Export selected IDyOM model outputs to other formats.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -99,16 +205,16 @@
 :type melody_names: list of string, optional</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.idyom_output_keywords" title="py2lispIDyOM.export.Export.idyom_output_keywords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">idyom_output_keywords</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">idyom_output_keywords</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.melody_names" title="py2lispIDyOM.export.Export.melody_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">melody_names</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">melody_names</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -116,13 +222,13 @@
 </div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.__post_init__" title="py2lispIDyOM.export.Export.__post_init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__post_init__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__post_init__</span></code>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.export2mat" title="py2lispIDyOM.export.Export.export2mat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export2mat</span></code></a>()</p></td>
@@ -131,13 +237,13 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.export2csv" title="py2lispIDyOM.export.Export.export2csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export2csv</span></code></a>()</p></td>
 <td><p>This function exports the IDyOM output data to a csv files.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.__init__" title="py2lispIDyOM.export.Export.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(experiment_folder_path[, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(experiment_folder_path[, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.__repr__" title="py2lispIDyOM.export.Export.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export.__eq__" title="py2lispIDyOM.export.Export.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a>(other)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
 </tbody>
@@ -145,225 +251,109 @@
 </div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._generate_export_folder" title="py2lispIDyOM.export.Export._generate_export_folder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_generate_export_folder</span></code></a>(export_folder_name)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_generate_export_folder</span></code>(export_folder_name)</p></td>
 <td><p>To generate a folder to store the idyom outputs in other formats (e.g., .mat, .csv)</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._get_valid_idyom_output_keys" title="py2lispIDyOM.export.Export._get_valid_idyom_output_keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_valid_idyom_output_keys</span></code></a>(melody)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_valid_idyom_output_keys</span></code>(melody)</p></td>
 <td><p>To get a list of valid idyom output keys for a melody.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._get_idyom_output_for_single_melody" title="py2lispIDyOM.export.Export._get_idyom_output_for_single_melody"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_idyom_output_for_single_melody</span></code></a>(melody, ...)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_idyom_output_for_single_melody</span></code>(melody, ...)</p></td>
 <td><p>To get the IDyOM output value array for a single melody, according to the IDyOM output keys.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._get_single_melody_output_values_df" title="py2lispIDyOM.export.Export._get_single_melody_output_values_df"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_single_melody_output_values_df</span></code></a>(melody)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_single_melody_output_values_df</span></code>(melody)</p></td>
 <td><p>This function returns a DataFrame of all IDyOM output values of one melody.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._get_output_values_in_selected_melodies" title="py2lispIDyOM.export.Export._get_output_values_in_selected_melodies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_output_values_in_selected_melodies</span></code></a>(...)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_output_values_in_selected_melodies</span></code>(...)</p></td>
 <td><p>This function returns a np.array of idyom output values for selected an idyom key for each selected songs.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._get_output_values_df_in_selected_melodies" title="py2lispIDyOM.export.Export._get_output_values_df_in_selected_melodies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_output_values_df_in_selected_melodies</span></code></a>(...)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_output_values_df_in_selected_melodies</span></code>(...)</p></td>
 <td><p>This function iterate through the func '_get_single_melody_output_values_df' to get a DataFrame of idyom output values for all idyom keys for each selected songs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._export_by_keyword_2mat" title="py2lispIDyOM.export.Export._export_by_keyword_2mat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_by_keyword_2mat</span></code></a>(keywords_list, ...)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_by_keyword_2mat</span></code>(keywords_list, ...)</p></td>
 <td><p>Export the idyom output data to .mat files according to the keyword list.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._export_values_of_keywords_by_melody_2mat" title="py2lispIDyOM.export.Export._export_values_of_keywords_by_melody_2mat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_values_of_keywords_by_melody_2mat</span></code></a>(...)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_values_of_keywords_by_melody_2mat</span></code>(...)</p></td>
 <td><p>Exports the IDyOM output values according to the keywords_list of one song to a mat file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.export.Export._export_by_song_2csv" title="py2lispIDyOM.export.Export._export_by_song_2csv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_by_song_2csv</span></code></a>(melody_name, ...)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export_by_song_2csv</span></code>(melody_name, ...)</p></td>
 <td><p>Exports the all the IDyOM output data (df) for a single melody to csv</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr class="docutils" />
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__annotations__">
-<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'experiment_folder_path':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">'idyom_output_keywords':</span> <span class="pre">typing.List,</span> <span class="pre">'melody_names':</span> <span class="pre">typing.List}</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__annotations__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__dataclass_fields__">
-<span class="sig-name descname"><span class="pre">__dataclass_fields__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'experiment_folder_path':</span> <span class="pre">Field(name='experiment_folder_path',type=&lt;class</span> <span class="pre">'str'&gt;,default=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'idyom_output_keywords':</span> <span class="pre">Field(name='idyom_output_keywords',type=typing.List,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'melody_names':</span> <span class="pre">Field(name='melody_names',type=typing.List,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)}</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__dataclass_fields__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__dataclass_params__">
-<span class="sig-name descname"><span class="pre">__dataclass_params__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__dataclass_params__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__dict__">
-<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'py2lispIDyOM.export',</span> <span class="pre">'__annotations__':</span> <span class="pre">{'experiment_folder_path':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;,</span> <span class="pre">'idyom_output_keywords':</span> <span class="pre">typing.List,</span> <span class="pre">'melody_names':</span> <span class="pre">typing.List},</span> <span class="pre">'__doc__':</span> <span class="pre">'Export</span> <span class="pre">selected</span> <span class="pre">IDyOM</span> <span class="pre">model</span> <span class="pre">outputs</span> <span class="pre">to</span> <span class="pre">other</span> <span class="pre">formats.\n\n</span>&#160;&#160;&#160; <span class="pre">:param</span> <span class="pre">experiment_folder_path:</span> <span class="pre">The</span> <span class="pre">path</span> <span class="pre">to</span> <span class="pre">which</span> <span class="pre">you</span> <span class="pre">saved</span> <span class="pre">all</span> <span class="pre">the</span> <span class="pre">result</span> <span class="pre">data/plots\n</span>&#160;&#160;&#160; <span class="pre">:type</span> <span class="pre">experiment_folder_path:</span> <span class="pre">str\n</span>&#160;&#160;&#160; <span class="pre">:param</span> <span class="pre">idyom_output_keywords:</span> <span class="pre">A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">IDyOM</span> <span class="pre">output</span> <span class="pre">keywords</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">export,</span> <span class="pre">defaults</span> <span class="pre">to</span> <span class="pre">None\n</span>&#160;&#160;&#160; <span class="pre">:type</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">string,</span> <span class="pre">optional\n</span>&#160;&#160;&#160; <span class="pre">:param</span> <span class="pre">melody_names:</span> <span class="pre">A</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">melodies</span> <span class="pre">of</span> <span class="pre">which</span> <span class="pre">IDyOM</span> <span class="pre">outputs</span> <span class="pre">that</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">export\n</span>&#160;&#160;&#160; <span class="pre">:type</span> <span class="pre">melody_names:</span> <span class="pre">list</span> <span class="pre">of</span> <span class="pre">string,</span> <span class="pre">optional\n</span>&#160;&#160;&#160; <span class="pre">',</span> <span class="pre">'idyom_output_keywords':</span> <span class="pre">None,</span> <span class="pre">'melody_names':</span> <span class="pre">None,</span> <span class="pre">'__post_init__':</span> <span class="pre">&lt;function</span> <span class="pre">Export.__post_init__&gt;,</span> <span class="pre">'_generate_export_folder':</span> <span class="pre">&lt;function</span> <span class="pre">Export._generate_export_folder&gt;,</span> <span class="pre">'_get_valid_idyom_output_keys':</span> <span class="pre">&lt;function</span> <span class="pre">Export._get_valid_idyom_output_keys&gt;,</span> <span class="pre">'_get_idyom_output_for_single_melody':</span> <span class="pre">&lt;function</span> <span class="pre">Export._get_idyom_output_for_single_melody&gt;,</span> <span class="pre">'_get_single_melody_output_values_df':</span> <span class="pre">&lt;function</span> <span class="pre">Export._get_single_melody_output_values_df&gt;,</span> <span class="pre">'_get_output_values_in_selected_melodies':</span> <span class="pre">&lt;function</span> <span class="pre">Export._get_output_values_in_selected_melodies&gt;,</span> <span class="pre">'_get_output_values_df_in_selected_melodies':</span> <span class="pre">&lt;function</span> <span class="pre">Export._get_output_values_df_in_selected_melodies&gt;,</span> <span class="pre">'_export_by_keyword_2mat':</span> <span class="pre">&lt;function</span> <span class="pre">Export._export_by_keyword_2mat&gt;,</span> <span class="pre">'_export_values_of_keywords_by_melody_2mat':</span> <span class="pre">&lt;function</span> <span class="pre">Export._export_values_of_keywords_by_melody_2mat&gt;,</span> <span class="pre">'_export_by_song_2csv':</span> <span class="pre">&lt;function</span> <span class="pre">Export._export_by_song_2csv&gt;,</span> <span class="pre">'export2mat':</span> <span class="pre">&lt;function</span> <span class="pre">Export.export2mat&gt;,</span> <span class="pre">'export2csv':</span> <span class="pre">&lt;function</span> <span class="pre">Export.export2csv&gt;,</span> <span class="pre">'__dict__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__dict__'</span> <span class="pre">of</span> <span class="pre">'Export'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__weakref__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__weakref__'</span> <span class="pre">of</span> <span class="pre">'Export'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__dataclass_params__':</span> <span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False),</span> <span class="pre">'__dataclass_fields__':</span> <span class="pre">{'experiment_folder_path':</span> <span class="pre">Field(name='experiment_folder_path',type=&lt;class</span> <span class="pre">'str'&gt;,default=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'idyom_output_keywords':</span> <span class="pre">Field(name='idyom_output_keywords',type=typing.List,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'melody_names':</span> <span class="pre">Field(name='melody_names',type=typing.List,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)},</span> <span class="pre">'__init__':</span> <span class="pre">&lt;function</span> <span class="pre">Export.__init__&gt;,</span> <span class="pre">'__repr__':</span> <span class="pre">&lt;function</span> <span class="pre">Export.__repr__&gt;,</span> <span class="pre">'__eq__':</span> <span class="pre">&lt;function</span> <span class="pre">Export.__eq__&gt;,</span> <span class="pre">'__hash__':</span> <span class="pre">None,</span> <span class="pre">'__match_args__':</span> <span class="pre">('experiment_folder_path',</span> <span class="pre">'idyom_output_keywords',</span> <span class="pre">'melody_names')})</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__dict__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.export.Export.__eq__" title="Permalink to this definition"></a></dt>
-<dd><p>Return self==value.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__hash__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idyom_output_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.export.Export.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__match_args__">
-<span class="sig-name descname"><span class="pre">__match_args__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('experiment_folder_path',</span> <span class="pre">'idyom_output_keywords',</span> <span class="pre">'melody_names')</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__match_args__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__module__">
-<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'py2lispIDyOM.export'</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.__module__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__post_init__">
-<span class="sig-name descname"><span class="pre">__post_init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.__post_init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.__post_init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.export.Export.__repr__" title="Permalink to this definition"></a></dt>
-<dd><p>Return repr(self).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#py2lispIDyOM.export.Export.__weakref__" title="Permalink to this definition"></a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._export_by_keyword_2mat">
-<span class="sig-name descname"><span class="pre">_export_by_keyword_2mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keywords_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_songs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._export_by_keyword_2mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._export_by_keyword_2mat" title="Permalink to this definition"></a></dt>
-<dd><p>Export the idyom output data to .mat files according to the keyword list.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._export_by_song_2csv">
-<span class="sig-name descname"><span class="pre">_export_by_song_2csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">melody_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_song_df_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._export_by_song_2csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._export_by_song_2csv" title="Permalink to this definition"></a></dt>
-<dd><p>Exports the all the IDyOM output data (df) for a single melody to csv</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._export_values_of_keywords_by_melody_2mat">
-<span class="sig-name descname"><span class="pre">_export_values_of_keywords_by_melody_2mat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">keywords_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._export_values_of_keywords_by_melody_2mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._export_values_of_keywords_by_melody_2mat" title="Permalink to this definition"></a></dt>
-<dd><p>Exports the IDyOM output values according to the keywords_list of one song to a mat file.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._generate_export_folder">
-<span class="sig-name descname"><span class="pre">_generate_export_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">export_folder_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._generate_export_folder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._generate_export_folder" title="Permalink to this definition"></a></dt>
-<dd><p>To generate a folder to store the idyom outputs in other formats (e.g., .mat, .csv)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._get_idyom_output_for_single_melody">
-<span class="sig-name descname"><span class="pre">_get_idyom_output_for_single_melody</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">melody</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idyom_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._get_idyom_output_for_single_melody"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._get_idyom_output_for_single_melody" title="Permalink to this definition"></a></dt>
-<dd><p>To get the IDyOM output value array for a single melody, according to the IDyOM output keys.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._get_output_values_df_in_selected_melodies">
-<span class="sig-name descname"><span class="pre">_get_output_values_df_in_selected_melodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected_songs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._get_output_values_df_in_selected_melodies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._get_output_values_df_in_selected_melodies" title="Permalink to this definition"></a></dt>
-<dd><p>This function iterate through the func ‘_get_single_melody_output_values_df’ to get
-a DataFrame of idyom output values for all idyom keys for each selected songs.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._get_output_values_in_selected_melodies">
-<span class="sig-name descname"><span class="pre">_get_output_values_in_selected_melodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idyom_key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_songs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._get_output_values_in_selected_melodies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._get_output_values_in_selected_melodies" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a np.array of idyom output values for selected an idyom key for each selected songs.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._get_single_melody_output_values_df">
-<span class="sig-name descname"><span class="pre">_get_single_melody_output_values_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">melody</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._get_single_melody_output_values_df"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._get_single_melody_output_values_df" title="Permalink to this definition"></a></dt>
-<dd><p>This function returns a DataFrame of all IDyOM output values of one melody.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export._get_valid_idyom_output_keys">
-<span class="sig-name descname"><span class="pre">_get_valid_idyom_output_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">melody</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export._get_valid_idyom_output_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export._get_valid_idyom_output_keys" title="Permalink to this definition"></a></dt>
-<dd><p>To get a list of valid idyom output keys for a melody.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.experiment_folder_path">
-<span class="sig-name descname"><span class="pre">experiment_folder_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.experiment_folder_path" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.export.Export.export2csv">
-<span class="sig-name descname"><span class="pre">export2csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.export2csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.export2csv" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">export2csv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.export2csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.export2csv" title="Permalink to this definition">#</a></dt>
 <dd><p>This function exports the IDyOM output data to a csv files.
 By default, this will export all properties of the chosen melodies, where each melody is in one csv file.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.export.Export.export2mat">
-<span class="sig-name descname"><span class="pre">export2mat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.export2mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.export2mat" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">export2mat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/export.html#Export.export2mat"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.export.Export.export2mat" title="Permalink to this definition">#</a></dt>
 <dd><p>This function exports the IDyOM output data to mat files.
 By default, it will export the outputs according to the preset keywords
 specified in the idyom_output_keywords for all melodies.
 Users can also specify specific melody by passing the melody names to the melody_name param.</p>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.idyom_output_keywords">
-<span class="sig-name descname"><span class="pre">idyom_output_keywords</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.idyom_output_keywords" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.export.Export.melody_names">
-<span class="sig-name descname"><span class="pre">melody_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.export.Export.melody_names" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="py2lispIDyOM.export.html" class="btn btn-neutral float-left" title="py2lispIDyOM.export" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../viz.html" class="btn btn-neutral float-right" title="py2lispIDyOM.viz" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="py2lispIDyOM.extract.MelodyInfo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">py2lispIDyOM.extract.MelodyInfo</p>
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class='right-next' id="next-link" href="py2lispIDyOM.viz.BasicPlot.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">py2lispIDyOM.viz.BasicPlot</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
 
-</body>
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

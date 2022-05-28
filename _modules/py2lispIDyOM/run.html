@@ -1,72 +1,140 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.run &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>py2lispIDyOM.run &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../extract.html">py2lispIDyOM.extract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../export.html">py2lispIDyOM.export</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../viz.html">py2lispIDyOM.viz</a></li>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
 </ul>
-
-        </div>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      <li>py2lispIDyOM.run</li>
-      <li class="wy-breadcrumbs-aside">
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <h1>Source code for py2lispIDyOM.run</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">field</span><span class="p">,</span> <span class="n">dataclass</span>
@@ -87,17 +155,18 @@
 <span class="sd">    :type str, optional</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">test_dataset_path</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">pretrain_dataset_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">experiment_history_folder_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">idyom_config</span><span class="p">:</span> <span class="n">IDyOMConfiguration</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">IDyOMConfiguration</span><span class="p">)</span>
 
-<div class="viewcode-block" id="IDyOMExperiment.__post_init__"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.__post_init__">[docs]</a>    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span> <span class="o">=</span> <span class="n">ExperimentLogger</span><span class="p">(</span><span class="n">pretrain_dataset_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span><span class="p">,</span>
                                        <span class="n">test_dataset_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_path</span><span class="p">,</span>
-                                       <span class="n">experiment_history_folder_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder_path</span><span class="p">)</span></div>
+                                       <span class="n">experiment_history_folder_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder_path</span><span class="p">)</span>
 
-<div class="viewcode-block" id="IDyOMExperiment._update_idyom_config"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._update_idyom_config">[docs]</a>    <span class="k">def</span> <span class="nf">_update_idyom_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_update_idyom_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">test_dataset_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_test_dataset_id</span><span class="p">()</span>
         <span class="n">train_dataset_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_train_dataset_id</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">required_parameters</span><span class="o">.</span><span class="n">dataset_id</span> <span class="o">=</span> <span class="n">test_dataset_id</span>
@@ -106,22 +175,22 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">this_exp_log_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">this_exp_folder</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">test_dataset_id</span> <span class="o">=</span> <span class="n">test_dataset_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">pretrain_dataset_id</span> <span class="o">=</span> <span class="n">train_dataset_id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">output_parameters</span><span class="o">.</span><span class="n">output_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">output_data_exp_folder</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">output_parameters</span><span class="o">.</span><span class="n">output_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">output_data_exp_folder</span>
 
-<div class="viewcode-block" id="IDyOMExperiment._generate_test_dataset_id"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_test_dataset_id">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_generate_test_dataset_id</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">moment</span> <span class="o">=</span> <span class="n">get_timestamp</span><span class="p">()</span>
         <span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;66&#39;</span> <span class="o">+</span> <span class="n">moment</span>
-        <span class="k">return</span> <span class="n">dataset_id</span></div>
+        <span class="k">return</span> <span class="n">dataset_id</span>
 
-<div class="viewcode-block" id="IDyOMExperiment._generate_train_dataset_id"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_train_dataset_id">[docs]</a>    <span class="k">def</span> <span class="nf">_generate_train_dataset_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_generate_train_dataset_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># only generate an ID if pretrain_dataset_path is not None</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span><span class="p">:</span>
             <span class="n">moment</span> <span class="o">=</span> <span class="n">get_timestamp</span><span class="p">()</span>
             <span class="n">dataset_id</span> <span class="o">=</span> <span class="s1">&#39;99&#39;</span> <span class="o">+</span> <span class="n">moment</span>
             <span class="k">return</span> <span class="n">dataset_id</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">pass</span></div>
+            <span class="k">pass</span>
 
 <div class="viewcode-block" id="IDyOMExperiment.set_parameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.set_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">set_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -140,14 +209,14 @@
                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;parameter </span><span class="se">\&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="se">\&#39;</span><span class="s1"> is invalid. Valid parameters are: </span><span class="si">{</span><span class="n">kw2show</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
             <span class="n">configuration</span><span class="o">.</span><span class="n">recursive_set_attr</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="IDyOMExperiment._generate_lisp_commands"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment._generate_lisp_commands">[docs]</a>    <span class="k">def</span> <span class="nf">_generate_lisp_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_generate_lisp_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the LISP commands for the IDyOM model configurations.</span>
 <span class="sd">        :return: the total lisp commands for the idyom experiment</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_update_idyom_config</span><span class="p">()</span>
         <span class="n">lisp_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">lisp_command</span></div>
+        <span class="k">return</span> <span class="n">lisp_command</span>
 
 <div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -180,31 +249,37 @@
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;** Finished! **&#39;</span><span class="p">)</span></div></div>
 </pre></div>
 
-           </div>
-          </div>
-          <footer>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
       </div>
-    </section>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</footer>
+  </body>
 </html>

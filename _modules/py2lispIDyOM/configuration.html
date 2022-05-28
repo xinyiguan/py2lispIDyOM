@@ -1,72 +1,140 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.configuration &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/js/theme.js"></script>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>py2lispIDyOM.configuration &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../extract.html">py2lispIDyOM.extract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../export.html">py2lispIDyOM.export</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../viz.html">py2lispIDyOM.viz</a></li>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
 </ul>
-
-        </div>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../index.html">Module code</a> &raquo;</li>
-      <li>py2lispIDyOM.configuration</li>
-      <li class="wy-breadcrumbs-aside">
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <h1>Source code for py2lispIDyOM.configuration</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
 
@@ -116,14 +184,14 @@
 
 <div class="viewcode-block" id="LispConvertable"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">LispConvertable</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
-<div class="viewcode-block" id="LispConvertable.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable.to_lisp_command">[docs]</a>    <span class="nd">@abstractmethod</span>
+    <span class="nd">@abstractmethod</span>
     <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">pass</span></div>
+        <span class="k">pass</span>
 
-<div class="viewcode-block" id="LispConvertable.__repr__"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable.__repr__">[docs]</a>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span></div>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
-<div class="viewcode-block" id="LispConvertable.recursive_set_attr"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable.recursive_set_attr">[docs]</a>    <span class="k">def</span> <span class="nf">recursive_set_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">recursive_set_attr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="c1"># print(f&#39;set {key=} {value=}&#39;)</span>
         <span class="n">children_configuration</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Configuration</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
         <span class="n">children_parameter</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Parameters</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
@@ -148,9 +216,9 @@
 
         <span class="k">elif</span> <span class="n">children</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
-                <span class="n">child</span><span class="o">.</span><span class="n">recursive_set_attr</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span></div>
+                <span class="n">child</span><span class="o">.</span><span class="n">recursive_set_attr</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 
-<div class="viewcode-block" id="LispConvertable.get_surface_dict"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable.get_surface_dict">[docs]</a>    <span class="k">def</span> <span class="nf">get_surface_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_surface_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 
         <span class="k">def</span> <span class="nf">expandable_component</span><span class="p">(</span><span class="n">_obj</span><span class="p">):</span>
             <span class="n">expandable</span> <span class="o">=</span> <span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">_obj</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span>
@@ -178,13 +246,13 @@
         <span class="n">surface_dict</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">children_nonterminal_dicts</span> <span class="o">+</span> <span class="n">children_terminal_dicts</span><span class="p">:</span>
             <span class="n">surface_dict</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">surface_dict</span></div></div>
+        <span class="k">return</span> <span class="n">surface_dict</span></div>
 
 
 <div class="viewcode-block" id="Parameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">Parameters</span><span class="p">(</span><span class="n">LispConvertable</span><span class="p">):</span>
 
-<div class="viewcode-block" id="Parameters.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">convert_dict</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;nil&#39;</span><span class="p">}</span>
         <span class="n">commands</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -197,10 +265,10 @@
                 <span class="n">sub_command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">print_value</span><span class="si">}</span><span class="s1">&#39;</span>
                 <span class="n">commands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_command</span><span class="p">)</span>
         <span class="n">lisp_command</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">commands</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">lisp_command</span></div>
+        <span class="k">return</span> <span class="n">lisp_command</span>
 
-<div class="viewcode-block" id="Parameters.show"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters.show">[docs]</a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">())</span>  <span class="c1"># formatting</span></div></div>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">())</span>  <span class="c1"># formatting</span></div>
 
 
 <span class="n">SingleViewpoint</span> <span class="o">=</span> <span class="n">Literal</span><span class="p">[</span>
@@ -220,44 +288,44 @@
                              <span class="n">List</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">,</span>
                                         <span class="n">Tuple</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="RequiredParameters.is_complete"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.is_complete">[docs]</a>    <span class="k">def</span> <span class="nf">is_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">is_complete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="n">condition</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span>
             <span class="c1"># type(self.dataset_path) is str,</span>
             <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_viewpoints</span><span class="p">),</span>
             <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints</span><span class="p">)</span>
         <span class="p">])</span>
-        <span class="k">return</span> <span class="n">condition</span></div>
+        <span class="k">return</span> <span class="n">condition</span>
 
-<div class="viewcode-block" id="RequiredParameters.viewpoint_to_string"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.viewpoint_to_string">[docs]</a>    <span class="k">def</span> <span class="nf">viewpoint_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">viewpoint</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">viewpoint_to_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">viewpoint</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">viewpoint</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">str</span><span class="p">:</span>
             <span class="n">string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">viewpoint</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">viewpoint</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">tuple</span><span class="p">:</span>
             <span class="n">string</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tuple_to_command</span><span class="p">(</span><span class="n">viewpoint</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">viewpoint</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">string</span></div>
+        <span class="k">return</span> <span class="n">string</span>
 
-<div class="viewcode-block" id="RequiredParameters.list_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.list_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">list_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">list_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">list_of_string</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">viewpoint_to_string</span><span class="p">(</span><span class="n">viewpoint</span><span class="o">=</span><span class="n">viewpoint</span><span class="p">)</span> <span class="k">for</span> <span class="n">viewpoint</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
         <span class="n">long_string</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list_of_string</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">(</span><span class="si">{</span><span class="n">long_string</span><span class="si">}</span><span class="s1">)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="RequiredParameters.tuple_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.tuple_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">tuple_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">tuple_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">list_of_string</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">viewpoint_to_string</span><span class="p">(</span><span class="n">viewpoint</span><span class="o">=</span><span class="n">viewpoint</span><span class="p">)</span> <span class="k">for</span> <span class="n">viewpoint</span> <span class="ow">in</span> <span class="n">t</span><span class="p">]</span>
         <span class="n">long_string</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">list_of_string</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;(</span><span class="si">{</span><span class="n">long_string</span><span class="si">}</span><span class="s1">)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="RequiredParameters.dataset_id_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.dataset_id_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">dataset_id_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">dataset_id_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">command_dataset_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataset_id</span>
-        <span class="k">return</span> <span class="n">command_dataset_id</span></div>
+        <span class="k">return</span> <span class="n">command_dataset_id</span>
 
-<div class="viewcode-block" id="RequiredParameters.target_viewpoints_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.target_viewpoints_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">target_viewpoints_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">target_viewpoints_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">command_target_viewpoints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_to_command</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_viewpoints</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command_target_viewpoints</span></div>
+        <span class="k">return</span> <span class="n">command_target_viewpoints</span>
 
-<div class="viewcode-block" id="RequiredParameters.source_viewpoints_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.source_viewpoints_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">source_viewpoints_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">source_viewpoints_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints</span> <span class="o">==</span> <span class="s1">&#39;:select&#39;</span><span class="p">:</span>
             <span class="n">command_source_viewpoints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints</span>
             <span class="c1"># raise NotImplementedError</span>
@@ -265,13 +333,13 @@
             <span class="n">command_source_viewpoints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_to_command</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command_source_viewpoints</span></div>
+        <span class="k">return</span> <span class="n">command_source_viewpoints</span>
 
-<div class="viewcode-block" id="RequiredParameters.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RequiredParameters.html#py2lispIDyOM.configuration.RequiredParameters.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_complete</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s1"> Missing required argument&#39;</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">dataset_id_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">target_viewpoints_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source_viewpoints_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="LTMOModelOptions"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.html#py2lispIDyOM.configuration.LTMOModelOptions">[docs]</a><span class="nd">@dataclass</span>
@@ -281,12 +349,12 @@
     <span class="n">ltmo_update_exclusion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">ltmo_escape</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:a&#39;</span><span class="p">,</span> <span class="s1">&#39;:b&#39;</span><span class="p">,</span> <span class="s1">&#39;:c&#39;</span><span class="p">,</span> <span class="s1">&#39;:d&#39;</span><span class="p">,</span> <span class="s1">&#39;:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="LTMOModelOptions.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.html#py2lispIDyOM.configuration.LTMOModelOptions.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">generic_command</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">(</span><span class="si">{</span><span class="n">generic_command</span><span class="si">}</span><span class="s1">)&#39;</span>
         <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ltmo_&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="STMOModelOptions"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.STMOModelOptions.html#py2lispIDyOM.configuration.STMOModelOptions">[docs]</a><span class="nd">@dataclass</span>
@@ -296,12 +364,12 @@
     <span class="n">stmo_update_exclusion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">stmo_escape</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:a&#39;</span><span class="p">,</span> <span class="s1">&#39;:b&#39;</span><span class="p">,</span> <span class="s1">&#39;:c&#39;</span><span class="p">,</span> <span class="s1">&#39;:d&#39;</span><span class="p">,</span> <span class="s1">&#39;:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="STMOModelOptions.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.STMOModelOptions.html#py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">generic_command</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">(</span><span class="si">{</span><span class="n">generic_command</span><span class="si">}</span><span class="s1">)&#39;</span>
         <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;stmo_&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="n">command</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 <div class="viewcode-block" id="StatisticalModellingParameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">StatisticalModellingParameters</span><span class="p">(</span><span class="n">Parameters</span><span class="p">):</span>
@@ -311,27 +379,27 @@
     <span class="n">stmo</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:stmo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">stmo_options</span><span class="p">:</span> <span class="n">STMOModelOptions</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">STMOModelOptions</span><span class="p">)</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.models_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.models_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">models_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">models_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:models </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.ltmo_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.ltmo_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">ltmo_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">ltmo_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ltmo</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.stmo_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.stmo_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">stmo_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">stmo_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stmo</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.ltmo_options_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.ltmo_options_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">ltmo_options_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">ltmo_options_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ltmo_options</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.stmo_options_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.stmo_options_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">stmo_options_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">stmo_options_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stmo_options</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="StatisticalModellingParameters.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html#py2lispIDyOM.configuration.StatisticalModellingParameters.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ltmo</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">stmo</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">models_to_lisp_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="k">return</span> <span class="n">command</span>
@@ -354,7 +422,7 @@
 
         <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">ltmo</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">ltmo_options</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s1">&#39;Please specify </span><span class="se">\&#39;</span><span class="s1">:ltmo</span><span class="se">\&#39;</span><span class="s1"> if you want to further specify the LTM optional properties </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ltmo_options_to_lisp_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div></div>
+                <span class="sa">f</span><span class="s1">&#39;Please specify </span><span class="se">\&#39;</span><span class="s1">:ltmo</span><span class="se">\&#39;</span><span class="s1"> if you want to further specify the LTM optional properties </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">ltmo_options_to_lisp_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TrainingParameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters">[docs]</a><span class="nd">@dataclass</span>
@@ -363,25 +431,25 @@
     <span class="n">k</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;:full&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="mi">10</span>
     <span class="n">resampling_indices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="TrainingParameters.pretraining_id_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters.pretraining_id_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">pretraining_id_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">pretraining_id_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretraining_id</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="TrainingParameters.k_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters.k_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">k_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">k_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">command_k</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:k </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command_k</span></div>
+        <span class="k">return</span> <span class="n">command_k</span>
 
-<div class="viewcode-block" id="TrainingParameters.resampling_indices_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters.resampling_indices_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">resampling_indices_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+    <span class="k">def</span> <span class="nf">resampling_indices_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
 
-<div class="viewcode-block" id="TrainingParameters.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.TrainingParameters.html#py2lispIDyOM.configuration.TrainingParameters.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretraining_id</span><span class="p">:</span>
             <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:pretraining-ids </span><span class="se">\&#39;</span><span class="s1">(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">pretraining_id_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1">) </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">k_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="k">return</span> <span class="n">command</span>
 
         <span class="k">else</span><span class="p">:</span>
             <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">k_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
-            <span class="k">return</span> <span class="n">command</span></div></div>
+            <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="BasisOption"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.BasisOption.html#py2lispIDyOM.configuration.BasisOption">[docs]</a><span class="nd">@dataclass</span>
@@ -389,13 +457,13 @@
     <span class="n">basis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">SingleViewpoint</span><span class="p">],</span>
                  <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:pitch-full&#39;</span><span class="p">,</span> <span class="s1">&#39;:pitch-short&#39;</span><span class="p">,</span> <span class="s1">&#39;:bioi&#39;</span><span class="p">,</span> <span class="s1">&#39;:onset&#39;</span><span class="p">,</span> <span class="s1">&#39;:auto&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="BasisOption.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.BasisOption.html#py2lispIDyOM.configuration.BasisOption.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">generic_command</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
         <span class="k">if</span> <span class="n">generic_command</span><span class="p">:</span>
             <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">(</span><span class="si">{</span><span class="n">generic_command</span><span class="si">}</span><span class="s1">)&#39;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="ViewpointSelectionParameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.html#py2lispIDyOM.configuration.ViewpointSelectionParameters">[docs]</a><span class="nd">@dataclass</span>
@@ -419,27 +487,27 @@
     <span class="n">overwrite</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># whether to overwrite an existing output file if it exists</span>
     <span class="n">separator</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># a string defining the character to use for delimiting columns in the output file</span>
 
-<div class="viewcode-block" id="OutputParameters.detail_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.OutputParameters.html#py2lispIDyOM.configuration.OutputParameters.detail_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">detail_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">detail_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command_detail</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:detail </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">detail</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command_detail</span></div>
+        <span class="k">return</span> <span class="n">command_detail</span>
 
     <span class="c1"># the default output path in py2lispIDyOM is experiment_history/THIS_EXP/experiment_output_data_folder/</span>
-<div class="viewcode-block" id="OutputParameters.output_path_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.OutputParameters.html#py2lispIDyOM.configuration.OutputParameters.output_path_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">output_path_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">output_path_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command_outpath</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:output-path </span><span class="se">\&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_path</span><span class="si">}</span><span class="se">\&quot;</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command_outpath</span></div>
+        <span class="k">return</span> <span class="n">command_outpath</span>
 
-<div class="viewcode-block" id="OutputParameters.overwrite_to_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.OutputParameters.html#py2lispIDyOM.configuration.OutputParameters.overwrite_to_command">[docs]</a>    <span class="k">def</span> <span class="nf">overwrite_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">overwrite_to_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">convert_dict</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s1">&#39;nil&#39;</span><span class="p">}</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">overwrite</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">command_overwrite</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:overwrite </span><span class="si">{</span><span class="n">convert_dict</span><span class="p">[</span><span class="kc">True</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="k">return</span> <span class="n">command_overwrite</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">overwrite</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
             <span class="n">command_overwrite</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;:overwrite </span><span class="si">{</span><span class="n">convert_dict</span><span class="p">[</span><span class="kc">False</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span>
-            <span class="k">return</span> <span class="n">command_overwrite</span></div>
+            <span class="k">return</span> <span class="n">command_overwrite</span>
 
-<div class="viewcode-block" id="OutputParameters.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.OutputParameters.html#py2lispIDyOM.configuration.OutputParameters.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">detail_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">output_path_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">overwrite_to_command</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="CachingParameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.CachingParameters.html#py2lispIDyOM.configuration.CachingParameters">[docs]</a><span class="nd">@dataclass</span>
@@ -454,50 +522,50 @@
     <span class="n">pretrain_dataset_path</span><span class="p">:</span> <span class="nb">str</span>
     <span class="n">experiment_history_folder_path</span><span class="p">:</span> <span class="nb">str</span>
 
-<div class="viewcode-block" id="ExperimentLogger.__post_init__"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.__post_init__">[docs]</a>    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_experiment_history_folder</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">this_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_this_exp_folder</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_input_data_exp_folder</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_test_dataset_exp_folder</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">train_dataset_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_pretrain_dataset_exp_folder</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">output_data_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_output_data_exp_folder</span><span class="p">()</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_data_exp_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_output_data_exp_folder</span><span class="p">()</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_experiment_history_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_experiment_history_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_experiment_history_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_experiment_history_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">experiment_history_folder</span> <span class="o">=</span> <span class="s1">&#39;experiment_history/&#39;</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">experiment_history_folder</span><span class="p">):</span>
                 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">experiment_history_folder</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">experiment_history_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder_path</span>
-        <span class="k">return</span> <span class="n">experiment_history_folder</span></div>
+        <span class="k">return</span> <span class="n">experiment_history_folder</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_this_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_this_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_this_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_this_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">today_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
         <span class="n">now_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
         <span class="n">this_experiment_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_history_folder</span> <span class="o">+</span> <span class="n">today_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
             <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%y&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">now_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span>
             <span class="s1">&#39;%H.%M.%S&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">this_experiment_folder</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">this_experiment_folder</span></div>
+        <span class="k">return</span> <span class="n">this_experiment_folder</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_input_data_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_input_data_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_input_data_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_input_data_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">this_exp_folder</span> <span class="o">+</span> <span class="s1">&#39;experiment_input_data_folder/&#39;</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">input_data_folder</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">input_data_folder</span></div>
+        <span class="k">return</span> <span class="n">input_data_folder</span>
 
-<div class="viewcode-block" id="ExperimentLogger._get_files_from_paths"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger._get_files_from_paths">[docs]</a>    <span class="k">def</span> <span class="nf">_get_files_from_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>  <span class="c1"># only two types files allowed: midi and kern</span>
+    <span class="k">def</span> <span class="nf">_get_files_from_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>  <span class="c1"># only two types files allowed: midi and kern</span>
         <span class="n">files</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">glob</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):]</span> <span class="o">==</span> <span class="s2">&quot;.mid&quot;</span> <span class="ow">or</span> <span class="s2">&quot;.krn&quot;</span><span class="p">:</span>
                 <span class="n">files</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">natsorted</span><span class="p">(</span><span class="n">files</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="n">natsorted</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ExperimentLogger._put_midis_in_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger._put_midis_in_folder">[docs]</a>    <span class="k">def</span> <span class="nf">_put_midis_in_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">folder_path</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_put_midis_in_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">files</span><span class="p">,</span> <span class="n">folder_path</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-            <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">folder_path</span> <span class="o">+</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):])</span></div>
+            <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">folder_path</span> <span class="o">+</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):])</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_test_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_test_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_test_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_test_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">input_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_data_exp_folder</span>
         <span class="n">test_folder</span> <span class="o">=</span> <span class="n">input_data_folder</span> <span class="o">+</span> <span class="s1">&#39;test_dataset/&#39;</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">test_folder</span><span class="p">)</span>
@@ -509,9 +577,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Test dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">test_folder</span></div>
+        <span class="k">return</span> <span class="n">test_folder</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_pretrain_dataset_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_pretrain_dataset_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_pretrain_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_pretrain_dataset_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">pretrain_dataset_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_path</span>
         <span class="k">if</span> <span class="n">pretrain_dataset_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">pass</span>
@@ -526,7 +594,7 @@
                 <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;pretrain_dataset folder is empty!&#39;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;** Putting Pretraining dataset files in experiment history folder. **&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">pretrain_folder</span></div>
+            <span class="k">return</span> <span class="n">pretrain_folder</span>
 
 
     <span class="c1"># def put_test_midi_in_exp_folder(self):</span>
@@ -543,10 +611,10 @@
     <span class="c1">#         train = self._get_files_from_paths(self.pretrain_dataset_path)</span>
     <span class="c1">#         self._put_midis_in_folder(train, self.train_dataset_exp_folder)</span>
 
-<div class="viewcode-block" id="ExperimentLogger.generate_output_data_exp_folder"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html#py2lispIDyOM.configuration.ExperimentLogger.generate_output_data_exp_folder">[docs]</a>    <span class="k">def</span> <span class="nf">generate_output_data_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">generate_output_data_exp_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">output_data_folder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">this_exp_folder</span> <span class="o">+</span> <span class="s1">&#39;experiment_output_data_folder/&#39;</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_data_folder</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">output_data_folder</span></div></div>
+        <span class="k">return</span> <span class="n">output_data_folder</span></div>
 
 
 <div class="viewcode-block" id="Configuration"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.Configuration.html#py2lispIDyOM.configuration.Configuration">[docs]</a><span class="nd">@dataclass</span>
@@ -568,7 +636,7 @@
     <span class="n">viewpoint_selection_parameters</span><span class="p">:</span> <span class="n">ViewpointSelectionParameters</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">ViewpointSelectionParameters</span><span class="p">)</span>
     <span class="n">caching_parameters</span><span class="p">:</span> <span class="n">CachingParameters</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">CachingParameters</span><span class="p">)</span>
 
-<div class="viewcode-block" id="RunModelConfiguration.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.html#py2lispIDyOM.configuration.RunModelConfiguration.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="c1"># assert self.required_parameters._is_available(), self.required_parameters</span>
         <span class="n">all_parameters</span> <span class="o">=</span> <span class="p">[</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">required_parameters</span><span class="p">,</span>
@@ -582,7 +650,7 @@
         <span class="n">non_empty_subcommands</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">subcommands</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
         <span class="n">joined_commands</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">non_empty_subcommands</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;(idyom:idyom </span><span class="si">{</span><span class="n">joined_commands</span><span class="si">}</span><span class="s1">)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 
 
 <div class="viewcode-block" id="DatabaseConfiguration"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration">[docs]</a><span class="nd">@dataclass</span>
@@ -593,7 +661,7 @@
     <span class="n">test_dataset_Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;TEST_DATASET&#39;</span>
     <span class="n">pretrain_dataset_Name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;PRETRAIN_DATASET&#39;</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_id</span><span class="p">:</span>
             <span class="n">commands</span> <span class="o">=</span> <span class="p">[</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_testdb</span><span class="p">(),</span>
@@ -604,7 +672,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_testdb</span><span class="p">(),</span>
             <span class="p">]</span>
         <span class="n">total_command</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">commands</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">total_command</span></div>
+        <span class="k">return</span> <span class="n">total_command</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">test_dataset_log_path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -616,45 +684,45 @@
         <span class="n">train_dataset_log_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">this_exp_log_path</span> <span class="o">+</span> <span class="s1">&#39;experiment_input_data_folder/pretrain_dataset/&#39;</span>
         <span class="k">return</span> <span class="n">train_dataset_log_path</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.get_music_files_type"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.get_music_files_type">[docs]</a>    <span class="k">def</span> <span class="nf">get_music_files_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_music_files_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">glob</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s1">&#39;*&#39;</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):]</span> <span class="o">==</span> <span class="s2">&quot;.mid&quot;</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">file</span><span class="p">[</span><span class="n">file</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):]</span> <span class="o">==</span> <span class="s2">&quot;.krn&quot;</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="s1">&#39;krn&#39;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Music file type unsupported. Please use either midi files or kern files.&#39;</span><span class="p">)</span></div>
+                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Music file type unsupported. Please use either midi files or kern files.&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration._oneline_import_db_to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration._oneline_import_db_to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">_oneline_import_db_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_oneline_import_db_to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_type</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">ID</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">subcommands</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;:</span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&quot;</span><span class="si">{</span><span class="n">Path</span><span class="si">}</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\&quot;</span><span class="si">{</span><span class="n">Name</span><span class="si">}</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">ID</span><span class="p">]</span>
         <span class="n">non_empty_subcommands</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">subcommands</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
         <span class="n">joined_commands</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">non_empty_subcommands</span><span class="p">)</span>
         <span class="n">command</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;(idyom-db:import-data </span><span class="si">{</span><span class="n">joined_commands</span><span class="si">}</span><span class="s1">)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration._get_command_import_db"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration._get_command_import_db">[docs]</a>    <span class="k">def</span> <span class="nf">_get_command_import_db</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_get_command_import_db</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">dataset_name</span><span class="p">,</span> <span class="n">dataset_id</span><span class="p">):</span>
         <span class="n">file_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_music_files_type</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
         <span class="n">command_import_testdb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_oneline_import_db_to_lisp_command</span><span class="p">(</span><span class="n">file_type</span><span class="o">=</span><span class="n">file_type</span><span class="p">,</span>
                                                                         <span class="n">Path</span><span class="o">=</span><span class="n">path</span><span class="p">,</span>
                                                                         <span class="n">Name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">,</span>
                                                                         <span class="n">ID</span><span class="o">=</span><span class="n">dataset_id</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command_import_testdb</span></div>
+        <span class="k">return</span> <span class="n">command_import_testdb</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.get_command_import_testdb"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.get_command_import_testdb">[docs]</a>    <span class="k">def</span> <span class="nf">get_command_import_testdb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_command_import_testdb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_command_import_db</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_log_path</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_Name</span><span class="p">,</span>
                                               <span class="n">dataset_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">test_dataset_id</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.get_command_import_traindb"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.get_command_import_traindb">[docs]</a>    <span class="k">def</span> <span class="nf">get_command_import_traindb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_command_import_traindb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_command_import_db</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">train_dataset_log_path</span><span class="p">,</span> <span class="n">dataset_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_Name</span><span class="p">,</span>
                                               <span class="n">dataset_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pretrain_dataset_id</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.to_lisp_command_import_testdb"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.to_lisp_command_import_testdb">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command_import_testdb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_testdb</span><span class="p">()</span></div>
+    <span class="k">def</span> <span class="nf">to_lisp_command_import_testdb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_testdb</span><span class="p">()</span>
 
-<div class="viewcode-block" id="DatabaseConfiguration.to_lisp_command_import_traindb"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html#py2lispIDyOM.configuration.DatabaseConfiguration.to_lisp_command_import_traindb">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command_import_traindb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_traindb</span><span class="p">()</span></div></div>
+    <span class="k">def</span> <span class="nf">to_lisp_command_import_traindb</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_command_import_traindb</span><span class="p">()</span></div>
 
     <span class="c1"># def to_lisp_command(self) -&gt; str:</span>
     <span class="c1">#     commands = [</span>
@@ -670,7 +738,7 @@
     <span class="n">database_configuration</span><span class="p">:</span> <span class="n">DatabaseConfiguration</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">DatabaseConfiguration</span><span class="p">)</span>
     <span class="n">run_model_configuration</span><span class="p">:</span> <span class="n">RunModelConfiguration</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">RunModelConfiguration</span><span class="p">)</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.to_lisp_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.to_lisp_command">[docs]</a>    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">training_parameters</span><span class="o">.</span><span class="n">pretraining_id</span><span class="p">:</span>
             <span class="n">commands</span> <span class="o">=</span> <span class="p">[</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">start_idyom_command</span><span class="p">(),</span>
@@ -689,66 +757,72 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">quit_command</span><span class="p">()</span>
             <span class="p">]</span>
             <span class="n">total_command</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">commands</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">total_command</span></div>
+            <span class="k">return</span> <span class="n">total_command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.start_idyom_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.start_idyom_command">[docs]</a>    <span class="k">def</span> <span class="nf">start_idyom_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">start_idyom_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;(start-idyom)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.import_test_dataset_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.import_test_dataset_command">[docs]</a>    <span class="k">def</span> <span class="nf">import_test_dataset_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">import_test_dataset_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">to_lisp_command_import_testdb</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.import_train_dataset_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.import_train_dataset_command">[docs]</a>    <span class="k">def</span> <span class="nf">import_train_dataset_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">import_train_dataset_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">to_lisp_command_import_traindb</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.import_datasets_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.import_datasets_command">[docs]</a>    <span class="k">def</span> <span class="nf">import_datasets_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">import_datasets_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_configuration</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.describe_database_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.describe_database_command">[docs]</a>    <span class="k">def</span> <span class="nf">describe_database_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">describe_database_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;(idyom-db:describe-database)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.describe_detailed_database_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.describe_detailed_database_command">[docs]</a>    <span class="k">def</span> <span class="nf">describe_detailed_database_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">describe_detailed_database_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;(idyom-db:describe-database :verbose t)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.run_model_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.run_model_command">[docs]</a>    <span class="k">def</span> <span class="nf">run_model_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">run_model_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_model_configuration</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">command</span></div>
+        <span class="k">return</span> <span class="n">command</span>
 
-<div class="viewcode-block" id="IDyOMConfiguration.quit_command"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html#py2lispIDyOM.configuration.IDyOMConfiguration.quit_command">[docs]</a>    <span class="k">def</span> <span class="nf">quit_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">quit_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">command</span> <span class="o">=</span> <span class="s1">&#39;(quit)&#39;</span>
-        <span class="k">return</span> <span class="n">command</span></div></div>
+        <span class="k">return</span> <span class="n">command</span></div>
 </pre></div>
 
-           </div>
-          </div>
-          <footer>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
       </div>
-    </section>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</footer>
+  </body>
 </html>

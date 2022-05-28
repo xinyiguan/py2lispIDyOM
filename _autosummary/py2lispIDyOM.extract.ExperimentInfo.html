@@ -1,96 +1,196 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.extract.ExperimentInfo &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>py2lispIDyOM.extract.ExperimentInfo &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="py2lispIDyOM.extract.MelodyInfo" href="py2lispIDyOM.extract.MelodyInfo.html" />
-    <link rel="prev" title="py2lispIDyOM.extract.to_float" href="py2lispIDyOM.extract.to_float.html" /> 
-</head>
+    <link rel="prev" title="py2lispIDyOM.run.IDyOMExperiment" href="py2lispIDyOM.run.IDyOMExperiment.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="py2lispIDyOM.extract.html">py2lispIDyOM.extract</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.getDataFrame.html">py2lispIDyOM.extract.getDataFrame</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.get_all_song_dict.html">py2lispIDyOM.extract.get_all_song_dict</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.get_dictionary.html">py2lispIDyOM.extract.get_dictionary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.get_song_dict_of_interest.html">py2lispIDyOM.extract.get_song_dict_of_interest</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.to_float.html">py2lispIDyOM.extract.to_float</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">py2lispIDyOM.extract.ExperimentInfo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.extract.MelodyInfo.html">py2lispIDyOM.extract.MelodyInfo</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a></li>
-</ul>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
-        </div>
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
+</ul>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../extract.html">py2lispIDyOM.extract</a> &raquo;</li>
-          <li><a href="py2lispIDyOM.extract.html">py2lispIDyOM.extract</a> &raquo;</li>
-      <li>py2lispIDyOM.extract.ExperimentInfo</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/py2lispIDyOM.extract.ExperimentInfo.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.run.IDyOMExperiment.html">
+   py2lispIDyOM.run.IDyOMExperiment
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   py2lispIDyOM.extract.ExperimentInfo
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.extract.MelodyInfo.html">
+   py2lispIDyOM.extract.MelodyInfo
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.export.Export.html">
+   py2lispIDyOM.export.Export
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2lispIDyOM.viz.BasicPlot.html">
+   py2lispIDyOM.viz.BasicPlot
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <section id="py2lispidyom-extract-experimentinfo">
-<h1>py2lispIDyOM.extract.ExperimentInfo<a class="headerlink" href="#py2lispidyom-extract-experimentinfo" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM.extract.ExperimentInfo<a class="headerlink" href="#py2lispidyom-extract-experimentinfo" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">ExperimentInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>An experiment object that contains all data in a single experiment.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">ExperimentInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo" title="Permalink to this definition">#</a></dt>
+<dd><p>An experiment object that contains all data in a single experiment.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>experiment_folder_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The path to experiment log folder which you want to access.</p>
@@ -99,13 +199,13 @@
 <p>:type str</p>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.__post_init__" title="py2lispIDyOM.extract.ExperimentInfo.__post_init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__post_init__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__post_init__</span></code>()</p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary" title="py2lispIDyOM.extract.ExperimentInfo.melody_dictionary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">melody_dictionary</span></code></a>()</p></td>
@@ -114,13 +214,13 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.access_melodies" title="py2lispIDyOM.extract.ExperimentInfo.access_melodies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">access_melodies</span></code></a>([starting_index, ...])</p></td>
 <td><p>Access specific melodies by index or melody names.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.__init__" title="py2lispIDyOM.extract.ExperimentInfo.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(experiment_folder_path)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(experiment_folder_path)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.__repr__" title="py2lispIDyOM.extract.ExperimentInfo.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo.__eq__" title="py2lispIDyOM.extract.ExperimentInfo.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a>(other)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
 </tbody>
@@ -128,92 +228,22 @@
 </div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.ExperimentInfo._get_datasetwise_cpitch_elements" title="py2lispIDyOM.extract.ExperimentInfo._get_datasetwise_cpitch_elements"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_datasetwise_cpitch_elements</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_datasetwise_cpitch_elements</span></code>()</p></td>
 <td><p>Get the list of cpitch (full cpitch distribution elements used in IDyOM) :return:  a list of int</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr class="docutils" />
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__annotations__">
-<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'experiment_folder_path':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;}</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__annotations__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__dataclass_fields__">
-<span class="sig-name descname"><span class="pre">__dataclass_fields__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'experiment_folder_path':</span> <span class="pre">Field(name='experiment_folder_path',type=&lt;class</span> <span class="pre">'str'&gt;,default=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)}</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__dataclass_fields__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__dataclass_params__">
-<span class="sig-name descname"><span class="pre">__dataclass_params__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__dataclass_params__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__dict__">
-<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'py2lispIDyOM.extract',</span> <span class="pre">'__annotations__':</span> <span class="pre">{'experiment_folder_path':</span> <span class="pre">&lt;class</span> <span class="pre">'str'&gt;},</span> <span class="pre">'__doc__':</span> <span class="pre">'\n</span>&#160;&#160;&#160; <span class="pre">An</span> <span class="pre">experiment</span> <span class="pre">object</span> <span class="pre">that</span> <span class="pre">contains</span> <span class="pre">all</span> <span class="pre">data</span> <span class="pre">in</span> <span class="pre">a</span> <span class="pre">single</span> <span class="pre">experiment.\n\n</span>&#160;&#160;&#160; <span class="pre">:param</span> <span class="pre">experiment_folder_path:</span> <span class="pre">The</span> <span class="pre">path</span> <span class="pre">to</span> <span class="pre">experiment</span> <span class="pre">log</span> <span class="pre">folder</span> <span class="pre">which</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">access.\n</span>&#160;&#160;&#160; <span class="pre">:type</span> <span class="pre">str\n\n</span>&#160;&#160;&#160; <span class="pre">',</span> <span class="pre">'__post_init__':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.__post_init__&gt;,</span> <span class="pre">'melody_dictionary':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.melody_dictionary&gt;,</span> <span class="pre">'access_melodies':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.access_melodies&gt;,</span> <span class="pre">'_get_datasetwise_cpitch_elements':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo._get_datasetwise_cpitch_elements&gt;,</span> <span class="pre">'__dict__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__dict__'</span> <span class="pre">of</span> <span class="pre">'ExperimentInfo'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__weakref__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__weakref__'</span> <span class="pre">of</span> <span class="pre">'ExperimentInfo'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__dataclass_params__':</span> <span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False),</span> <span class="pre">'__dataclass_fields__':</span> <span class="pre">{'experiment_folder_path':</span> <span class="pre">Field(name='experiment_folder_path',type=&lt;class</span> <span class="pre">'str'&gt;,default=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)},</span> <span class="pre">'__init__':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.__init__&gt;,</span> <span class="pre">'__repr__':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.__repr__&gt;,</span> <span class="pre">'__eq__':</span> <span class="pre">&lt;function</span> <span class="pre">ExperimentInfo.__eq__&gt;,</span> <span class="pre">'__hash__':</span> <span class="pre">None,</span> <span class="pre">'__match_args__':</span> <span class="pre">('experiment_folder_path',)})</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__dict__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__eq__" title="Permalink to this definition"></a></dt>
-<dd><p>Return self==value.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__hash__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__match_args__">
-<span class="sig-name descname"><span class="pre">__match_args__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('experiment_folder_path',)</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__match_args__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__module__">
-<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'py2lispIDyOM.extract'</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__module__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__post_init__">
-<span class="sig-name descname"><span class="pre">__post_init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.__post_init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__post_init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__repr__" title="Permalink to this definition"></a></dt>
-<dd><p>Return repr(self).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.__weakref__" title="Permalink to this definition"></a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo._get_datasetwise_cpitch_elements">
-<span class="sig-name descname"><span class="pre">_get_datasetwise_cpitch_elements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo._get_datasetwise_cpitch_elements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo._get_datasetwise_cpitch_elements" title="Permalink to this definition"></a></dt>
-<dd><p>Get the list of cpitch (full cpitch distribution elements used in IDyOM)
-:return:  a list of int</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.access_melodies">
-<span class="sig-name descname"><span class="pre">access_melodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.access_melodies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.access_melodies" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">access_melodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.access_melodies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.access_melodies" title="Permalink to this definition">#</a></dt>
 <dd><p>Access specific melodies by index or melody names.
 If all arguments are None, then the default is to access all melodies in the Experiment class</p>
 <dl class="field-list simple">
@@ -230,14 +260,9 @@ If all arguments are None, then the default is to access all melodies in the Exp
 </dl>
 </dd></dl>
 
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.experiment_folder_path">
-<span class="sig-name descname"><span class="pre">experiment_folder_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.experiment_folder_path" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.melody_dictionary">
-<span class="sig-name descname"><span class="pre">melody_dictionary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.melody_dictionary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">melody_dictionary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.melody_dictionary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary" title="Permalink to this definition">#</a></dt>
 <dd><p>Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
@@ -254,34 +279,51 @@ If all arguments are None, then the default is to access all melodies in the Exp
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="py2lispIDyOM.extract.to_float.html" class="btn btn-neutral float-left" title="py2lispIDyOM.extract.to_float" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="py2lispIDyOM.extract.MelodyInfo.html" class="btn btn-neutral float-right" title="py2lispIDyOM.extract.MelodyInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="py2lispIDyOM.run.IDyOMExperiment.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">py2lispIDyOM.run.IDyOMExperiment</p>
         </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class='right-next' id="next-link" href="py2lispIDyOM.extract.MelodyInfo.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">py2lispIDyOM.extract.MelodyInfo</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
 
-</body>
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
 </html>

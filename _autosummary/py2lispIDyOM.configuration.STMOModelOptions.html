@@ -1,97 +1,178 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.configuration.STMOModelOptions &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>py2lispIDyOM.configuration.STMOModelOptions &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a></li>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
 </ul>
-
-        </div>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>py2lispIDyOM.configuration.STMOModelOptions</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <section id="py2lispidyom-configuration-stmomodeloptions">
-<h1>py2lispIDyOM.configuration.STMOModelOptions<a class="headerlink" href="#py2lispidyom-configuration-stmomodeloptions" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM.configuration.STMOModelOptions<a class="headerlink" href="#py2lispidyom-configuration-stmomodeloptions" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.configuration.</span></span><span class="sig-name descname"><span class="pre">STMOModelOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stmo_order_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_mixtures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_update_exclusion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_escape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/configuration.html#STMOModelOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters" title="py2lispIDyOM.configuration.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">py2lispIDyOM.configuration.Parameters</span></code></a></p>
-<div class="autoclasstoc docutils container">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.configuration.</span></span><span class="sig-name descname"><span class="pre">STMOModelOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stmo_order_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_mixtures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_update_exclusion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_escape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/configuration.html#STMOModelOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions" title="Permalink to this definition">#</a></dt>
+<dd><div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_order_bound" title="py2lispIDyOM.configuration.STMOModelOptions.stmo_order_bound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_order_bound</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_order_bound</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_mixtures" title="py2lispIDyOM.configuration.STMOModelOptions.stmo_mixtures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_mixtures</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_mixtures</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_update_exclusion" title="py2lispIDyOM.configuration.STMOModelOptions.stmo_update_exclusion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_update_exclusion</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_update_exclusion</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_escape" title="py2lispIDyOM.configuration.STMOModelOptions.stmo_escape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_escape</span></code></a></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stmo_escape</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -99,13 +180,13 @@
 </div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command" title="py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code>()</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -113,24 +194,24 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__init__" title="py2lispIDyOM.configuration.STMOModelOptions.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([stmo_order_bound, stmo_mixtures, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([stmo_order_bound, stmo_mixtures, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__repr__" title="py2lispIDyOM.configuration.STMOModelOptions.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__eq__" title="py2lispIDyOM.configuration.STMOModelOptions.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a>(other)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters" title="py2lispIDyOM.configuration.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameters</span></code></a></summary><table class="autosummary longtable docutils align-default">
+<details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters" title="py2lispIDyOM.configuration.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameters</span></code></a></summary><table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command" title="py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code>()</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -138,27 +219,27 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.show" title="py2lispIDyOM.configuration.STMOModelOptions.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__init__" title="py2lispIDyOM.configuration.STMOModelOptions.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([stmo_order_bound, stmo_mixtures, ...])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([stmo_order_bound, stmo_mixtures, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__repr__" title="py2lispIDyOM.configuration.STMOModelOptions.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__eq__" title="py2lispIDyOM.configuration.STMOModelOptions.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a>(other)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable" title="py2lispIDyOM.configuration.LispConvertable"><code class="xref py py-class docutils literal notranslate"><span class="pre">LispConvertable</span></code></a></summary><table class="autosummary longtable docutils align-default">
+</details><details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable" title="py2lispIDyOM.configuration.LispConvertable"><code class="xref py py-class docutils literal notranslate"><span class="pre">LispConvertable</span></code></a></summary><table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command" title="py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_lisp_command</span></code>()</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
@@ -166,13 +247,13 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__repr__" title="py2lispIDyOM.configuration.STMOModelOptions.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.recursive_set_attr" title="py2lispIDyOM.configuration.STMOModelOptions.recursive_set_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recursive_set_attr</span></code></a>(key, value)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">recursive_set_attr</span></code>(key, value)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.get_surface_dict" title="py2lispIDyOM.configuration.STMOModelOptions.get_surface_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_surface_dict</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_surface_dict</span></code>()</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
 <dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
@@ -180,10 +261,10 @@
 </dl>
 </p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__init__" title="py2lispIDyOM.configuration.STMOModelOptions.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([stmo_order_bound, stmo_mixtures, ...])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>([stmo_order_bound, stmo_mixtures, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions.__eq__" title="py2lispIDyOM.configuration.STMOModelOptions.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a>(other)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
 </tbody>
@@ -191,205 +272,88 @@
 </details></div>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Data Attributes:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions._abc_impl" title="py2lispIDyOM.configuration.STMOModelOptions._abc_impl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-<details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters" title="py2lispIDyOM.configuration.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameters</span></code></a></summary><table class="autosummary longtable docutils align-default">
+<details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.Parameters.html#py2lispIDyOM.configuration.Parameters" title="py2lispIDyOM.configuration.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">Parameters</span></code></a></summary><table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions._abc_impl" title="py2lispIDyOM.configuration.STMOModelOptions._abc_impl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable" title="py2lispIDyOM.configuration.LispConvertable"><code class="xref py py-class docutils literal notranslate"><span class="pre">LispConvertable</span></code></a></summary><table class="autosummary longtable docutils align-default">
+</details><details><summary>Inherited from <a class="reference internal" href="py2lispIDyOM.configuration.LispConvertable.html#py2lispIDyOM.configuration.LispConvertable" title="py2lispIDyOM.configuration.LispConvertable"><code class="xref py py-class docutils literal notranslate"><span class="pre">LispConvertable</span></code></a></summary><table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions._abc_impl" title="py2lispIDyOM.configuration.STMOModelOptions._abc_impl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
-</details><details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></summary><table class="autosummary longtable docutils align-default">
+</details><details><summary>Inherited from <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></summary><table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.configuration.STMOModelOptions._abc_impl" title="py2lispIDyOM.configuration.STMOModelOptions._abc_impl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></a></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_abc_impl</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </details></div>
 <hr class="docutils" />
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__abstractmethods__">
-<span class="sig-name descname"><span class="pre">__abstractmethods__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({})</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__abstractmethods__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__annotations__">
-<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'stmo_escape':</span> <span class="pre">&quot;Literal[':a',</span> <span class="pre">':b',</span> <span class="pre">':c',</span> <span class="pre">':d',</span> <span class="pre">':x']&quot;,</span> <span class="pre">'stmo_mixtures':</span> <span class="pre">'bool',</span> <span class="pre">'stmo_order_bound':</span> <span class="pre">'int',</span> <span class="pre">'stmo_update_exclusion':</span> <span class="pre">'str'}</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__annotations__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__dataclass_fields__">
-<span class="sig-name descname"><span class="pre">__dataclass_fields__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'stmo_escape':</span> <span class="pre">Field(name='stmo_escape',type=&quot;Literal[':a',</span> <span class="pre">':b',</span> <span class="pre">':c',</span> <span class="pre">':d',</span> <span class="pre">':x']&quot;,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_mixtures':</span> <span class="pre">Field(name='stmo_mixtures',type='bool',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_order_bound':</span> <span class="pre">Field(name='stmo_order_bound',type='int',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_update_exclusion':</span> <span class="pre">Field(name='stmo_update_exclusion',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)}</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__dataclass_fields__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__dataclass_params__">
-<span class="sig-name descname"><span class="pre">__dataclass_params__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__dataclass_params__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__dict__">
-<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'py2lispIDyOM.configuration',</span> <span class="pre">'__annotations__':</span> <span class="pre">{'stmo_order_bound':</span> <span class="pre">'int',</span> <span class="pre">'stmo_mixtures':</span> <span class="pre">'bool',</span> <span class="pre">'stmo_update_exclusion':</span> <span class="pre">'str',</span> <span class="pre">'stmo_escape':</span> <span class="pre">&quot;Literal[':a',</span> <span class="pre">':b',</span> <span class="pre">':c',</span> <span class="pre">':d',</span> <span class="pre">':x']&quot;},</span> <span class="pre">'stmo_order_bound':</span> <span class="pre">None,</span> <span class="pre">'stmo_mixtures':</span> <span class="pre">None,</span> <span class="pre">'stmo_update_exclusion':</span> <span class="pre">None,</span> <span class="pre">'stmo_escape':</span> <span class="pre">None,</span> <span class="pre">'to_lisp_command':</span> <span class="pre">&lt;function</span> <span class="pre">STMOModelOptions.to_lisp_command&gt;,</span> <span class="pre">'__doc__':</span> <span class="pre">'STMOModelOptions(stmo_order_bound:</span> <span class="pre">\'int\'</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stmo_mixtures:</span> <span class="pre">\'bool\'</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stmo_update_exclusion:</span> <span class="pre">\'str\'</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">stmo_escape:</span> <span class="pre">&quot;Literal[\':a\',</span> <span class="pre">\':b\',</span> <span class="pre">\':c\',</span> <span class="pre">\':d\',</span> <span class="pre">\':x\']&quot;</span> <span class="pre">=</span> <span class="pre">None)',</span> <span class="pre">'__abstractmethods__':</span> <span class="pre">frozenset(),</span> <span class="pre">'_abc_impl':</span> <span class="pre">&lt;_abc._abc_data</span> <span class="pre">object&gt;,</span> <span class="pre">'__dataclass_params__':</span> <span class="pre">_DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False),</span> <span class="pre">'__dataclass_fields__':</span> <span class="pre">{'stmo_order_bound':</span> <span class="pre">Field(name='stmo_order_bound',type='int',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_mixtures':</span> <span class="pre">Field(name='stmo_mixtures',type='bool',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_update_exclusion':</span> <span class="pre">Field(name='stmo_update_exclusion',type='str',default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD),</span> <span class="pre">'stmo_escape':</span> <span class="pre">Field(name='stmo_escape',type=&quot;Literal[':a',</span> <span class="pre">':b',</span> <span class="pre">':c',</span> <span class="pre">':d',</span> <span class="pre">':x']&quot;,default=None,default_factory=&lt;dataclasses._MISSING_TYPE</span> <span class="pre">object&gt;,init=True,repr=True,hash=None,compare=True,metadata=mappingproxy({}),kw_only=False,_field_type=_FIELD)},</span> <span class="pre">'__init__':</span> <span class="pre">&lt;function</span> <span class="pre">STMOModelOptions.__init__&gt;,</span> <span class="pre">'__repr__':</span> <span class="pre">&lt;function</span> <span class="pre">STMOModelOptions.__repr__&gt;,</span> <span class="pre">'__eq__':</span> <span class="pre">&lt;function</span> <span class="pre">STMOModelOptions.__eq__&gt;,</span> <span class="pre">'__hash__':</span> <span class="pre">None,</span> <span class="pre">'__match_args__':</span> <span class="pre">('stmo_order_bound',</span> <span class="pre">'stmo_mixtures',</span> <span class="pre">'stmo_update_exclusion',</span> <span class="pre">'stmo_escape')})</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__dict__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__eq__">
-<span class="sig-name descname"><span class="pre">__eq__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__eq__" title="Permalink to this definition"></a></dt>
-<dd><p>Return self==value.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__hash__">
-<span class="sig-name descname"><span class="pre">__hash__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__hash__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stmo_order_bound</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_mixtures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_update_exclusion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stmo_escape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__init__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__match_args__">
-<span class="sig-name descname"><span class="pre">__match_args__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('stmo_order_bound',</span> <span class="pre">'stmo_mixtures',</span> <span class="pre">'stmo_update_exclusion',</span> <span class="pre">'stmo_escape')</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__match_args__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__module__">
-<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'py2lispIDyOM.configuration'</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__module__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__repr__">
-<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__repr__" title="Permalink to this definition"></a></dt>
-<dd><p>Return repr(self).</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__slots__">
-<span class="sig-name descname"><span class="pre">__slots__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__slots__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.__weakref__" title="Permalink to this definition"></a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions._abc_impl">
-<span class="sig-name descname"><span class="pre">_abc_impl</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;_abc._abc_data</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions._abc_impl" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.get_surface_dict">
-<span class="sig-name descname"><span class="pre">get_surface_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.get_surface_dict" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.recursive_set_attr">
-<span class="sig-name descname"><span class="pre">recursive_set_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.recursive_set_attr" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.show">
-<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.show" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.stmo_escape">
-<span class="sig-name descname"><span class="pre">stmo_escape</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="s"><span class="pre">':a'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">':b'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">':c'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">':d'</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">':x'</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_escape" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.stmo_mixtures">
-<span class="sig-name descname"><span class="pre">stmo_mixtures</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_mixtures" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.stmo_order_bound">
-<span class="sig-name descname"><span class="pre">stmo_order_bound</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_order_bound" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.stmo_update_exclusion">
-<span class="sig-name descname"><span class="pre">stmo_update_exclusion</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.stmo_update_exclusion" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command">
-<span class="sig-name descname"><span class="pre">to_lisp_command</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/configuration.html#STMOModelOptions.to_lisp_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.configuration.STMOModelOptions.to_lisp_command" title="Permalink to this definition"></a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </section>
 
 
-           </div>
-          </div>
-          <footer>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
       </div>
-    </section>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</footer>
+  </body>
 </html>

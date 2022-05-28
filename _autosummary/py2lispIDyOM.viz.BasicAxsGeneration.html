@@ -1,229 +1,235 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>py2lispIDyOM.viz.BasicAxsGeneration &mdash; py2lispIDyOM  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-    <script src="../_static/js/theme.js"></script>
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>py2lispIDyOM.viz.BasicAxsGeneration &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="py2lispIDyOM.viz.BasicPlot" href="py2lispIDyOM.viz.BasicPlot.html" />
-    <link rel="prev" title="py2lispIDyOM.viz.Auxiliary" href="py2lispIDyOM.viz.Auxiliary.html" /> 
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Package modules:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../run.html">py2lispIDyOM.run</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extract.html">py2lispIDyOM.extract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../export.html">py2lispIDyOM.export</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../viz.html">py2lispIDyOM.viz</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="py2lispIDyOM.viz.html">py2lispIDyOM.viz</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.viz.Auxiliary.html">py2lispIDyOM.viz.Auxiliary</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">py2lispIDyOM.viz.BasicAxsGeneration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="py2lispIDyOM.viz.BasicPlot.html">py2lispIDyOM.viz.BasicPlot</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
-        </div>
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../README.html">
+  Readme
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../api_reference.html">
+  API Reference
+ </a>
+</li>
+
+    
+</ul>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">py2lispIDyOM</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../viz.html">py2lispIDyOM.viz</a> &raquo;</li>
-          <li><a href="py2lispIDyOM.viz.html">py2lispIDyOM.viz</a> &raquo;</li>
-      <li>py2lispIDyOM.viz.BasicAxsGeneration</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <section id="py2lispidyom-viz-basicaxsgeneration">
-<h1>py2lispIDyOM.viz.BasicAxsGeneration<a class="headerlink" href="#py2lispidyom-viz-basicaxsgeneration" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM.viz.BasicAxsGeneration<a class="headerlink" href="#py2lispidyom-viz-basicaxsgeneration" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.viz.</span></span><span class="sig-name descname"><span class="pre">BasicAxsGeneration</span></span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<div class="autoclasstoc docutils container">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.viz.</span></span><span class="sig-name descname"><span class="pre">BasicAxsGeneration</span></span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration" title="Permalink to this definition">#</a></dt>
+<dd><div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
-<table class="autosummary longtable docutils align-default">
+<table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.generic_idyom_output_along_time" title="py2lispIDyOM.viz.BasicAxsGeneration.generic_idyom_output_along_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic_idyom_output_along_time</span></code></a>(ax, ...[, color])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">generic_idyom_output_along_time</span></code>(ax, ...[, color])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.one_ic_along_onsets" title="py2lispIDyOM.viz.BasicAxsGeneration.one_ic_along_onsets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">one_ic_along_onsets</span></code></a>(ax, melody_info, ...)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">one_ic_along_onsets</span></code>(ax, melody_info, ...)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.one_entropy_along_onsets" title="py2lispIDyOM.viz.BasicAxsGeneration.one_entropy_along_onsets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">one_entropy_along_onsets</span></code></a>(ax, melody_info, ...)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">one_entropy_along_onsets</span></code>(ax, melody_info, ...)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.selected_ic_entropy_along_onsets" title="py2lispIDyOM.viz.BasicAxsGeneration.selected_ic_entropy_along_onsets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected_ic_entropy_along_onsets</span></code></a>(ax, ...[, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected_ic_entropy_along_onsets</span></code>(ax, ...[, ...])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.pianoroll" title="py2lispIDyOM.viz.BasicAxsGeneration.pianoroll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll</span></code></a>(ax, melody_info)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll</span></code>(ax, melody_info)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.pianoroll_pitch_distribution" title="py2lispIDyOM.viz.BasicAxsGeneration.pianoroll_pitch_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll_pitch_distribution</span></code></a>(ax, melody_info)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll_pitch_distribution</span></code>(ax, melody_info)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.entropy" title="py2lispIDyOM.viz.BasicAxsGeneration.entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropy</span></code></a>(ax, melody_info[, color])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropy</span></code>(ax, melody_info[, color])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.surprisal" title="py2lispIDyOM.viz.BasicAxsGeneration.surprisal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surprisal</span></code></a>(ax, melody_info[, color])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">surprisal</span></code>(ax, melody_info[, color])</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.viz.BasicAxsGeneration.surprisal_continuous" title="py2lispIDyOM.viz.BasicAxsGeneration.surprisal_continuous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">surprisal_continuous</span></code></a>(ax, melody_info[, color])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">surprisal_continuous</span></code>(ax, melody_info[, color])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr class="docutils" />
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.__annotations__">
-<span class="sig-name descname"><span class="pre">__annotations__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.__annotations__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.__dict__">
-<span class="sig-name descname"><span class="pre">__dict__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">mappingproxy({'__module__':</span> <span class="pre">'py2lispIDyOM.viz',</span> <span class="pre">'generic_idyom_output_along_time':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.generic_idyom_output_along_time&gt;)&gt;,</span> <span class="pre">'one_ic_along_onsets':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.one_ic_along_onsets&gt;)&gt;,</span> <span class="pre">'one_entropy_along_onsets':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.one_entropy_along_onsets&gt;)&gt;,</span> <span class="pre">'selected_ic_entropy_along_onsets':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.selected_ic_entropy_along_onsets&gt;)&gt;,</span> <span class="pre">'pianoroll':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.pianoroll&gt;)&gt;,</span> <span class="pre">'pianoroll_pitch_distribution':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.pianoroll_pitch_distribution&gt;)&gt;,</span> <span class="pre">'entropy':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.entropy&gt;)&gt;,</span> <span class="pre">'surprisal':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.surprisal&gt;)&gt;,</span> <span class="pre">'surprisal_continuous':</span> <span class="pre">&lt;staticmethod(&lt;function</span> <span class="pre">BasicAxsGeneration.surprisal_continuous&gt;)&gt;,</span> <span class="pre">'__dict__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__dict__'</span> <span class="pre">of</span> <span class="pre">'BasicAxsGeneration'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__weakref__':</span> <span class="pre">&lt;attribute</span> <span class="pre">'__weakref__'</span> <span class="pre">of</span> <span class="pre">'BasicAxsGeneration'</span> <span class="pre">objects&gt;,</span> <span class="pre">'__doc__':</span> <span class="pre">None,</span> <span class="pre">'__annotations__':</span> <span class="pre">{}})</span></em><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.__dict__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.__module__">
-<span class="sig-name descname"><span class="pre">__module__</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'py2lispIDyOM.viz'</span></em><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.__module__" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.__weakref__">
-<span class="sig-name descname"><span class="pre">__weakref__</span></span><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.__weakref__" title="Permalink to this definition"></a></dt>
-<dd><p>list of weak references to the object (if defined)</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.entropy">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.entropy" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.generic_idyom_output_along_time">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">generic_idyom_output_along_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_idyom_output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.generic_idyom_output_along_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.generic_idyom_output_along_time" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.one_entropy_along_onsets">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">one_entropy_along_onsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chosen_entropy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.one_entropy_along_onsets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.one_entropy_along_onsets" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.one_ic_along_onsets">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">one_ic_along_onsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chosen_ic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.one_ic_along_onsets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.one_ic_along_onsets" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.pianoroll">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.pianoroll"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.pianoroll" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.pianoroll_pitch_distribution">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll_pitch_distribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.pianoroll_pitch_distribution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.pianoroll_pitch_distribution" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.selected_ic_entropy_along_onsets">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_ic_entropy_along_onsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ic_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.selected_ic_entropy_along_onsets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.selected_ic_entropy_along_onsets" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.surprisal">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surprisal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.surprisal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.surprisal" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicAxsGeneration.surprisal_continuous">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">surprisal_continuous</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicAxsGeneration.surprisal_continuous"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicAxsGeneration.surprisal_continuous" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="py2lispIDyOM.viz.Auxiliary.html" class="btn btn-neutral float-left" title="py2lispIDyOM.viz.Auxiliary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="py2lispIDyOM.viz.BasicPlot.html" class="btn btn-neutral float-right" title="py2lispIDyOM.viz.BasicPlot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2022, Xinyi Guan.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
       </div>
-    </section>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+</footer>
+  </body>
 </html>
