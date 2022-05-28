@@ -330,25 +330,20 @@ class BasicPlot:
         If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
         or the starting/ending index in the melody list.
 
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-        :param ncols: int, optional
-            The number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
-        :param nrows: int, optional
-            The number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
+        :param experiment_folder_path: The path to your experiment folder.
+        :param melody_names: (optional), if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: (optional), the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: (optional), the index of the melody in the melody list that you want to stop plotting.
+        :param savefig: (optional)
+        :param showfig: (optional)
+        :param fig_format: (optional), default = 'png
+        :param dpi: (optional), default = 400
+        :param figsize: (optional), default is (10,5)
+        :param ncols: (optional), the number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
+        :param nrows: (optional), the number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
 
         """
+
         plot_type_folder_name = 'pianoroll_pitch_prediction_groundtruth'
 
         def _pianoroll_pitch_prediction_groundtruth(melody_info: MelodyInfo,
@@ -396,20 +391,19 @@ class BasicPlot:
                                                 figsize: tuple = (10, 6)):
         """
         Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
+
+        :param experiment_folder_path: the path to your experiment folder.
+        :param melody_names: (optional), if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: (optional),the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: (optional), the index of the melody in the melody list that you want to stop plotting.
+        :param savefig: (optional)
+        :param showfig: (optional)
+        :param fig_format: (optional), default = 'png'
+        :param dpi: (optional), default = 400
+        :param figsize: (optional), default is (10,5)
+
         """
+
         plot_type_folder_name = 'pianoroll_groundtruth_surprisal'
 
         def _pianoroll_groundtruth_surprisal(melody_info: MelodyInfo,
@@ -458,25 +452,18 @@ class BasicPlot:
         """
         Generate a simple line plot with time (in quarter note) on the x-axis, and selected IDyOM output on the y-axis.
 
-        :param selected_idyom_output: str
-            The keyword of the IDyOM output you want to plot.
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-        :param grid: bool
-            Whether to show grid or not.
-        :param ggplot: bool
-            Whether to use ggplot or not.
+        :param selected_idyom_output: the keyword of the IDyOM output you want to plot.
+        :param experiment_folder_path: the path to your experiment folder.
+        :param melody_names: if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: the index of the melody in the melody list that you want to stop plotting.
+        :param savefig:
+        :param showfig:
+        :param fig_format: default = 'png
+        :param dpi: optional, default = 400
+        :param figsize: optional, default is (10,5)
+        :param grid: whether to show grid or not.
+        :param ggplot: whether to use ggplot or not.
 
         """
         plot_type_folder_name = 'simple_plot_' + selected_idyom_output
@@ -535,28 +522,22 @@ class BasicPlot:
         """
         Generate a figure that shows the selected entropy and information content.
 
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param entropy_source: str
-            The source of entropy.
-        :param ic_source: str
-            The source of information content (surprisal)
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-        :param grid: bool
-            Whether to show grid or not.
-        :param ggplot: bool
-            Whether to use ggplot or not.
+        :param experiment_folder_path: the path to your experiment folder.
+        :param entropy_source: the source of entropy.
+        :param ic_source: the source of information content (surprisal)
+        :param melody_names: if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: the index of the melody in the melody list that you want to stop plotting.
+        :param savefig:
+        :param showfig:
+        :param fig_format: default = 'png
+        :param dpi: default = 400
+        :param figsize: default is (10,5)
+        :param grid: whether to show grid or not.
+        :param ggplot: whether to use ggplot or not.
+
         """
+
         plot_type_folder_name = 'selected_surprisal_entropy'
 
         def _selected_surprisal_entropy(melody_info: MelodyInfo,
@@ -615,24 +596,20 @@ class BasicPlot:
         """
         Generate subplots of all available surprisal outputs.
 
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-        :param grid: bool
-            Whether to show grid or not.
-        :param ggplot: bool
-            Whether to use ggplot or not.
+        :param experiment_folder_path: the path to your experiment folder.
+        :param melody_names: if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: the index of the melody in the melody list that you want to stop plotting.
+        :param savefig:
+        :param showfig:
+        :param fig_format: default = 'png
+        :param dpi: default = 400
+        :param figsize: default is (10,5)
+        :param grid: whether to show grid or not.
+        :param ggplot: whether to use ggplot or not.
+
         """
+
         plot_type_folder_name = 'surprisals_plots'
 
         def _all_surprisal_plots(melody_info: MelodyInfo,
@@ -708,24 +685,20 @@ class BasicPlot:
         """
         Generate subplots that show all available entropy outputs.
 
-        :param experiment_folder_path: str
-            The path to your experiment folder.
-        :param melody_names: List[str], optional,
-            If not supplied by the users, default is all test melodies in the experiment.
-        :param starting_index: int, optional
-            The index of the melody in the melody list that you want to start plotting.
-        :param ending_index: int, optional
-            The index of the melody in the melody list that you want to stop plotting.
-        :param savefig: bool, optional
-        :param showfig: bool, optional
-        :param fig_format: str, optional, default = 'png
-        :param dpi: float, optional, default = 400
-        :param figsize: tuple, optional, default is (10,5)
-        :param grid: bool
-            Whether to show grid or not.
-        :param ggplot: bool
-            Whether to use ggplot or not.
+        :param experiment_folder_path: the path to your experiment folder.
+        :param melody_names: if not supplied by the users, default is all test melodies in the experiment.
+        :param starting_index: the index of the melody in the melody list that you want to start plotting.
+        :param ending_index: the index of the melody in the melody list that you want to stop plotting.
+        :param savefig:
+        :param showfig:
+        :param fig_format: default = 'png
+        :param dpi: default = 400
+        :param figsize: default is (10,5)
+        :param grid: whether to show grid or not.
+        :param ggplot: whether to use ggplot or not.
+
         """
+
         plot_type_folder_name = 'entropy_plots'
 
         def _all_entropy_plots(melody_info: MelodyInfo,

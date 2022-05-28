@@ -25,9 +25,231 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="readme updated">
+      <change afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.BasisOption.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.CachingParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.Configuration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.LispConvertable.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.OutputParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.Parameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.RequiredParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.TrainingParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.get_timestamp.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.export.Export.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.export.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.ExperimentInfo.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.MelodyInfo.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.getDataFrame.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.get_all_song_dict.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.get_dictionary.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.to_float.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.run.IDyOMExperiment.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.run.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.viz.Auxiliary.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.viz.BasicPlot.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.viz.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/api_reference.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.BasisOption.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.CachingParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.Configuration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.LispConvertable.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.OutputParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.Parameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.RequiredParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.TrainingParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.get_timestamp.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.Export.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.ExperimentInfo.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.MelodyInfo.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.getDataFrame.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.getDictionary.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.get_all_song_dict.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.toFloat.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.run.IDyOMExperiment.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.run.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.Auxiliary.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.BasicPlot.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/configuration.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/export.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/extract.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/run.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/viz.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.BasisOption.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.CachingParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.Configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.LispConvertable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.OutputParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.Parameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.RequiredParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.TrainingParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.get_timestamp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.export.Export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.ExperimentInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.MelodyInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDataFrame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDictionary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_all_song_dict.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.toFloat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.run.IDyOMExperiment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.Auxiliary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.BasicPlot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/extract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/viz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.BasisOption.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.CachingParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.Configuration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.LispConvertable.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.OutputParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.Parameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.RequiredParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.TrainingParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.get_timestamp.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.export.Export.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.export.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.ExperimentInfo.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.MelodyInfo.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.getDataFrame.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.getDictionary.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.get_all_song_dict.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.toFloat.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.run.IDyOMExperiment.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.run.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.Auxiliary.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.BasicPlot.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/configuration.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/export.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/extract.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/run.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/viz.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/autoclasstoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/badge_only.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/documentation_options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery-3.5.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/badge_only.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/html5shiv-printshiv.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/html5shiv.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/language_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/pygments.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore-1.13.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/configuration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/extract.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/py-modindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_build/html/viz.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_templates/custom-class-template.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_templates/custom-class-template.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/configuration.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/export.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/extract.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/run.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/viz.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/viz.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +269,13 @@
     <favorite-branches>
       <branch-storage>
         <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev" />
+              </list>
+            </value>
+          </entry>
           <entry type="REMOTE">
             <value>
               <list>
@@ -676,7 +905,6 @@
     <MESSAGE value="updated docstring comments" />
     <MESSAGE value="generate documentation from docstrings" />
     <MESSAGE value="README updated" />
-    <MESSAGE value="readme updated" />
     <MESSAGE value="docs upated" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="pypi readme updated" />
@@ -695,7 +923,8 @@
     <MESSAGE value="test_run.py" />
     <MESSAGE value="updated README" />
     <MESSAGE value="figs in paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="figs in paper" />
+    <MESSAGE value="readme updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme updated" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

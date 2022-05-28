@@ -19,6 +19,7 @@ def get_dictionary(file: str) -> dict:
     :param: file
     :return: dict
     """
+
     dict = {}
     f = open(file, "r")
     lines = f.readlines()
@@ -74,6 +75,7 @@ class MelodyInfo(pd.DataFrame):
             A list of IDyOM output keywords (e.g., ['cpitch.information.content', 'onset', 'entropy'])
         :return: pd.DataFrame
         """
+
         if isinstance(output_keywords, list):
             pass
         else:
@@ -96,6 +98,7 @@ class MelodyInfo(pd.DataFrame):
         :param idyom_output_key: list of str
         :return: np.array of output values
         """
+
         output_values = (self.access_idyom_output_keywords([idyom_output_key]).values.tolist())
         output_values_array = [item for sublist in output_values for item in sublist]
         return output_values_array
@@ -105,6 +108,7 @@ class MelodyInfo(pd.DataFrame):
         Get a list of available IDyOM output keyword for this melody.
         :return: list
         """
+
         idyom_output_keyword_list = self.keys().to_list()
         return idyom_output_keyword_list
 
@@ -115,6 +119,7 @@ class MelodyInfo(pd.DataFrame):
         :param idyom_outputs: list of strings
         :return: DataFrame
         """
+
         cropped_df = self[idyom_outputs]
         return cropped_df.mean(axis=0)
 
@@ -184,8 +189,8 @@ class ExperimentInfo:
 
     :param experiment_folder_path: The path to experiment log folder which you want to access.
     :type str
-
     """
+
     experiment_folder_path: str
 
     def __post_init__(self):
@@ -200,6 +205,7 @@ class ExperimentInfo:
 
         :return: a typed dictionary (melody_name, MelodyInfo)
         """
+
         return_dict = {}
         my_dict = get_dictionary(self.dat_file_path)
         for key, value in my_dict.items():
@@ -220,6 +226,7 @@ class ExperimentInfo:
         :param melody_names: list of str
         :return: a list of MelodyInfo class objects (selected melodies)
         """
+
         if melody_names is not None:
             selected_melodies = list(map(self.melodies_dict.get, melody_names))
         else:
