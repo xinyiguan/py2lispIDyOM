@@ -1,17 +1,28 @@
 ---
-title: 'py2lispIDyOM: A Python package for IDyOM' tags:
-
-- Python - IDyOM - music cognition authors:
-- name: Xinyi Guan orcid: 0000-0002-4570-906X affiliation: 1 - name: Zeng Ren orcid: 0000-0002-9097-2633 affiliation: 2
-- name: Claire Pelofi orcid: 0000-0001-5960-8174 affiliation: 1
-
+title: 'py2lispIDyOM: A Python package for IDyOM'
+tags:
+    - Python
+    - IDyOM
+    - music cognition
+authors:
+    - name: Xinyi Guan
+      orcid: 0000-0002-4570-906X
+      affiliation: 1
+    - name: Zeng Ren
+      orcid: 0000-0002-9097-2633
+      affiliation: 2
+    - name: Claire Pelofi
+      orcid: 0000-0001-5960-8174
+      affiliation: 1
+    
 affiliations:
-
-- name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA index: 1
-- name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
-  index: 2
-
-date: 20 May 2022 bibliography: paper.bib
+ - name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA
+   index: 1
+ - name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
+   index: 2
+   
+date: 20 May 2022
+bibliography: paper.bib
 ---
 
 # Statement of need
