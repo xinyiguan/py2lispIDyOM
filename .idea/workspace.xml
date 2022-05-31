@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="build paper pdf">
       <change beforePath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +301,7 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-      <workItem from="1654004833119" duration="5478000" />
-    </task>
-    <task id="LOCAL-00077" summary="docs set up">
-      <created>1653335015771</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1653335015771</updated>
+      <workItem from="1654004833119" duration="5699000" />
     </task>
     <task id="LOCAL-00078" summary="updated docstring comments">
       <created>1653336475644</created>
@@ -645,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654010180090</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="build paper pdf">
+      <created>1654010335539</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1654010335539</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
