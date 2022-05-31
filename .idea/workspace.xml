@@ -25,11 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,13 +303,7 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-    </task>
-    <task id="LOCAL-00069" summary="viz tutorial updated">
-      <created>1653305097476</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1653305097477</updated>
+      <workItem from="1654004833119" duration="4234000" />
     </task>
     <task id="LOCAL-00070" summary="viz tutorial updated">
       <created>1653305794633</created>
@@ -647,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653749635525</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="updated docstring formats">
+      <created>1653750577591</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1653750577591</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +680,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="packaging setup" />
     <MESSAGE value="documentation init" />
     <MESSAGE value="docs set up" />
     <MESSAGE value="updated docstring comments" />
@@ -704,7 +704,8 @@
     <MESSAGE value="figs in paper" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="docs updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs updated" />
+    <MESSAGE value="updated docstring formats" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated docstring formats" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
