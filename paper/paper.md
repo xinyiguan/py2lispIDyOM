@@ -28,7 +28,7 @@ bibliography: paper.bib
 # Statement of need
 
 Music is a complex, multi-layered signal that displays structures along a variety of dimensions - among which melodic
-and rhythmic sequences play a crucial role across styles and cultures `[@PearceWiggins2006]. Empirical studies have
+and rhythmic sequences play a crucial role across styles and cultures [@PearceWiggins2006]. Empirical studies have
 consistently demonstrated that listeners have strong and well-defined musical predictions that reflect the long-range
 statistical regularities present in the music they have heard across their lifespan [@Margulis2005; @Morgan2019]. These
 statistics are learned through passive exposure to the music in everyday life [@Bigand2006; @Eerola2009; @Rohrmeier2011].

@@ -25,9 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="paper revision and build JOSS paper pdf">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.bib" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="paper citation revision, build JOSS paper pdf">
       <change beforePath="$PROJECT_DIR$/paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -302,14 +300,7 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-      <workItem from="1654004833119" duration="8122000" />
-    </task>
-    <task id="LOCAL-00083" summary="README updated">
-      <created>1653387950458</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1653387950458</updated>
+      <workItem from="1654004833119" duration="8301000" />
     </task>
     <task id="LOCAL-00084" summary="updated docs">
       <created>1653388601599</created>
@@ -647,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654012198180</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="paper citation revision, build JOSS paper pdf">
+      <created>1654012997491</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1654012997491</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +677,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="README updated" />
     <MESSAGE value="docs upated" />
     <MESSAGE value="updated docs" />
     <MESSAGE value="pypi readme updated" />
@@ -704,7 +701,8 @@
     <MESSAGE value="build paper pdf" />
     <MESSAGE value="build JOSS paper pdf" />
     <MESSAGE value="paper revision and build JOSS paper pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="paper revision and build JOSS paper pdf" />
+    <MESSAGE value="paper citation revision, build JOSS paper pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="paper citation revision, build JOSS paper pdf" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
