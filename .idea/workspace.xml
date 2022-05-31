@@ -26,8 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="build JOSS paper pdf">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,11 +133,11 @@
       <recent name="$PROJECT_DIR$/experiment_history/03-05-22_17.17.53/experiment_output_data_folder" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/paper" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/tutorial" />
       <recent name="$PROJECT_DIR$/examples/1_sample_experiment" />
-      <recent name="$PROJECT_DIR$/examples" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Python tests in test_run.py">
@@ -301,14 +303,7 @@
       <workItem from="1653481002563" duration="9810000" />
       <workItem from="1653566449157" duration="140000" />
       <workItem from="1653736984376" duration="321000" />
-      <workItem from="1654004833119" duration="6495000" />
-    </task>
-    <task id="LOCAL-00081" summary="updated docs">
-      <created>1653387754909</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1653387754909</updated>
+      <workItem from="1654004833119" duration="7323000" />
     </task>
     <task id="LOCAL-00082" summary="readme updated">
       <created>1653387914986</created>
@@ -646,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654011220020</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="build JOSS paper pdf">
+      <created>1654011362049</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1654011362049</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
