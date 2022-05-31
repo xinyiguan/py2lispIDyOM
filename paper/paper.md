@@ -28,16 +28,14 @@ bibliography: paper.bib
 # Statement of need
 
 Music is a complex, multi-layered signal that displays structures along a variety of dimensions - among which melodic
-and rhythmic sequences play a crucial role across styles and cultures [@PearceWiggins2006]. Empirical studies have
+and rhythmic sequences play a crucial role across styles and cultures `[@PearceWiggins2006]. Empirical studies have
 consistently demonstrated that listeners have strong and well-defined musical predictions that reflect the long-range
-statistical regularities present in the music they have heard across their lifespan [@Margulis2005, @Morgan2019]. These
-statistics are learned through passive exposure to the music in everyday life [@Bigand2006, @Eerola2009, @Rohrmeier2011]
-.
+statistical regularities present in the music they have heard across their lifespan [@Margulis2005; @Morgan2019]. These
+statistics are learned through passive exposure to the music in everyday life [@Bigand2006; @Eerola2009; @Rohrmeier2011].
 
 The Information Dynamics of Music (IDyOM) has been a well-established computational model for melodic expectation in the
-music cognition community and has been empirically tested in various studies[@PearceWiggins2012]. IDyOM models
-listeners’ online expectations of musical events using predictions from variable-order Markov
-chains [@Pearce2005, @Pearce2018]. Its long-term component is trained on a large musical corpus and its short-term
+music cognition community and has been empirically tested in various studies [@PearceWiggins2012]. IDyOM models
+listeners’ online expectations of musical events using predictions from variable-order Markov chains [@Pearce2005; @Pearce2018]. Its long-term component is trained on a large musical corpus and its short-term
 component dynamically learns the local statistics of a melody, simulating long-term learning of musical statistics and
 short-term learning of musical patterns respectively.
 
@@ -83,12 +81,9 @@ The package has been used in several ongoing research projects at the Max Planck
 Emotion. Therefore, we hope this package can bring similar values to other research groups working on IDyOM-based
 analysis.
 
-![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003"](pitch-pred-chor-003.png){width=80%}
-
-![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003"](groundtruth-surprisal-chor-003.png){width=80%}
-
-![IDyOM surprisal outputs of each target viewpoints and overall surprisal outputs for melody "chor-003"](all-surprisals-chor-003.png){width=80%}
-
-![IDyOM surprisal and entropy outputs for melody "chor-003"](surprisal-entropy-chor-003.png){width=80%}
+![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003"](pitch-pred-chor-003.png)
+![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003"](groundtruth-surprisal-chor-003.png)
+![IDyOM surprisal outputs of each target viewpoints and overall surprisal outputs for melody "chor-003"](all-surprisals-chor-003.png)
+![IDyOM surprisal and entropy outputs for melody "chor-003"](surprisal-entropy-chor-003.png)
 
 # References
