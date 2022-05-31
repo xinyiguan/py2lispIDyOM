@@ -68,13 +68,13 @@ For example, in the `visualization` module, we included several types of figures
 tutorials in the form of Jupyter notebooks on the github repository. These tutorials demonstrate the usage of the
 aforementioned functionalities.
 
-![pitch-pred-chor-003{fig:pitch-pred-chor-003}](pitch-pred-chor-003.png){width=50%}
+![pitch-pred-chor-003{fig:pitch-pred-chor-003}](paper/pitch-pred-chor-003.png){width=50%}
 
-![groundtruth-surprisal-chor-003{fig:groundtruth-surprisal-chor-003}](groundtruth-surprisal-chor-003.png){width=50%}
+![groundtruth-surprisal-chor-003{fig:groundtruth-surprisal-chor-003}](paper/groundtruth-surprisal-chor-003.png){width=50%}
 
-![all-surprisals-chor-003.png{fig:all-surprisals-chor-003.png}](all-surprisals-chor-003.png){width=50%}
+![all-surprisals-chor-003.png{fig:all-surprisals-chor-003.png}](paper/all-surprisals-chor-003.png){width=50%}
 
-![surprisal-entropy-chor-003{fig:surprisal-entropy-chor-003}](surprisal-entropy-chor-003.png){width=50%}
+![surprisal-entropy-chor-003{fig:surprisal-entropy-chor-003}](paper/surprisal-entropy-chor-003.png){width=50%}
 
 `py2lispIDyOM` has been used in several ongoing research projects at the Max Planck - NYU Center for Language, Music and
 Emotion. Therefore, we hope this package can bring similar values to other research groups working on IDyOM-based
