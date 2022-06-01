@@ -32,8 +32,6 @@
     <script src="../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="py2lispIDyOM.export.Export" href="py2lispIDyOM.export.Export.html" />
-    <link rel="prev" title="py2lispIDyOM.extract.ExperimentInfo" href="py2lispIDyOM.extract.ExperimentInfo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -70,13 +68,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../api_reference.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -114,40 +118,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="py2lispIDyOM.run.IDyOMExperiment.html">
-   py2lispIDyOM.run.IDyOMExperiment
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="py2lispIDyOM.extract.ExperimentInfo.html">
-   py2lispIDyOM.extract.ExperimentInfo
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   py2lispIDyOM.extract.MelodyInfo
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="py2lispIDyOM.export.Export.html">
-   py2lispIDyOM.export.Export
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="py2lispIDyOM.viz.BasicPlot.html">
-   py2lispIDyOM.viz.BasicPlot
-  </a>
- </li>
-</ul>
-
+    
   </div>
 </nav>
               </div>
@@ -294,16 +265,16 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code>(exp_pitch_element_list, ...)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords" title="py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">access_idyom_output_keywords</span></code></a>(output_keywords)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../data_processing.html#py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords" title="py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">access_idyom_output_keywords</span></code></a>(output_keywords)</p></td>
 <td><p>Access certain idyom output(s) via its (their) keyword(s).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_nparray</span></code></a>(idyom_output_key)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../data_processing.html#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_nparray</span></code></a>(idyom_output_key)</p></td>
 <td><p>Get the IDyOM output via its key as a np.array</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_keyword_list</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../data_processing.html#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list" title="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_idyom_output_keyword_list</span></code></a>()</p></td>
 <td><p>Get a list of available IDyOM output keyword for this melody.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo.compute_properties_means" title="py2lispIDyOM.extract.MelodyInfo.compute_properties_means"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_properties_means</span></code></a>(idyom_outputs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../data_processing.html#py2lispIDyOM.extract.MelodyInfo.compute_properties_means" title="py2lispIDyOM.extract.MelodyInfo.compute_properties_means"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_properties_means</span></code></a>(idyom_outputs)</p></td>
 <td><p>Compute the mean values of the idyom outputs.</p></td>
 </tr>
 </tbody>
@@ -2115,20 +2086,6 @@ If True, then force showing an error.</p></td>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="py2lispIDyOM.extract.ExperimentInfo.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">py2lispIDyOM.extract.ExperimentInfo</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="py2lispIDyOM.export.Export.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">py2lispIDyOM.export.Export</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
               
           </main>

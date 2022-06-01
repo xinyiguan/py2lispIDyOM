@@ -67,13 +67,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api_reference.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -148,7 +154,7 @@
 <span class="kn">from</span> <span class="nn">py2lispIDyOM.extract</span> <span class="kn">import</span> <span class="n">ExperimentInfo</span>
 
 
-<div class="viewcode-block" id="Export"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export">[docs]</a><span class="nd">@dataclass</span>
+<div class="viewcode-block" id="Export"><a class="viewcode-back" href="../../data_processing.html#py2lispIDyOM.export.Export">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">Export</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Export selected IDyOM model outputs to other formats.</span>
 
@@ -253,7 +259,7 @@
         <span class="n">csv_file_path</span> <span class="o">=</span> <span class="n">output_path</span> <span class="o">+</span> <span class="n">melody_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
         <span class="n">single_song_df_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">csv_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<div class="viewcode-block" id="Export.export2mat"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.export2mat">[docs]</a>    <span class="k">def</span> <span class="nf">export2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Export.export2mat"><a class="viewcode-back" href="../../data_processing.html#py2lispIDyOM.export.Export.export2mat">[docs]</a>    <span class="k">def</span> <span class="nf">export2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function exports the IDyOM output data to mat files.</span>
 <span class="sd">        By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.</span>
@@ -279,7 +285,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">_export_by_keyword_2mat</span><span class="p">(</span><span class="n">keywords_list</span><span class="o">=</span><span class="n">keywords</span><span class="p">,</span> <span class="n">selected_songs</span><span class="o">=</span><span class="n">melody_names</span><span class="p">,</span>
                                              <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Export.export2csv"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export.export2csv">[docs]</a>    <span class="k">def</span> <span class="nf">export2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Export.export2csv"><a class="viewcode-back" href="../../data_processing.html#py2lispIDyOM.export.Export.export2csv">[docs]</a>    <span class="k">def</span> <span class="nf">export2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function exports the IDyOM output data to a csv files.</span>
 <span class="sd">        By default, this will export all properties of the chosen melodies, where each melody is in one csv file.</span>

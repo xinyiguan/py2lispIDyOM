@@ -67,13 +67,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api_reference.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -346,7 +352,7 @@
 <span class="k">class</span> <span class="nc">LTMOModelOptions</span><span class="p">(</span><span class="n">Parameters</span><span class="p">):</span>
     <span class="n">ltmo_order_bound</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">ltmo_mixtures</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">ltmo_update_exclusion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">ltmo_update_exclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">ltmo_escape</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:a&#39;</span><span class="p">,</span> <span class="s1">&#39;:b&#39;</span><span class="p">,</span> <span class="s1">&#39;:c&#39;</span><span class="p">,</span> <span class="s1">&#39;:d&#39;</span><span class="p">,</span> <span class="s1">&#39;:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -361,7 +367,7 @@
 <span class="k">class</span> <span class="nc">STMOModelOptions</span><span class="p">(</span><span class="n">Parameters</span><span class="p">):</span>
     <span class="n">stmo_order_bound</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">stmo_mixtures</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">stmo_update_exclusion</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">stmo_update_exclusion</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">stmo_escape</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;:a&#39;</span><span class="p">,</span> <span class="s1">&#39;:b&#39;</span><span class="p">,</span> <span class="s1">&#39;:c&#39;</span><span class="p">,</span> <span class="s1">&#39;:d&#39;</span><span class="p">,</span> <span class="s1">&#39;:x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">to_lisp_command</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>

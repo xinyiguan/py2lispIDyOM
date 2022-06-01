@@ -32,7 +32,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="py2lispIDyOM.run.IDyOMExperiment" href="_autosummary/py2lispIDyOM.run.IDyOMExperiment.html" />
+    <link rel="next" title="Run IDyOM model" href="run_idyom.html" />
     <link rel="prev" title="py2lispIDyOM: A Python package for IDyOM" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -70,13 +70,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
  <a class="current reference internal nav-link" href="#">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -115,35 +121,26 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="run_idyom.html">
+   Run IDyOM model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/py2lispIDyOM.run.IDyOMExperiment.html">
-   py2lispIDyOM.run.IDyOMExperiment
+  <a class="reference internal" href="data_processing.html">
+   IDyOM output data processing
   </a>
  </li>
-</ul>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/py2lispIDyOM.extract.ExperimentInfo.html">
-   py2lispIDyOM.extract.ExperimentInfo
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/py2lispIDyOM.extract.MelodyInfo.html">
-   py2lispIDyOM.extract.MelodyInfo
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/py2lispIDyOM.export.Export.html">
-   py2lispIDyOM.export.Export
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="_autosummary/py2lispIDyOM.viz.BasicPlot.html">
-   py2lispIDyOM.viz.BasicPlot
+  <a class="reference internal" href="visualization.html">
+   Visualizing IDyOM outputs
   </a>
  </li>
 </ul>
@@ -163,34 +160,9 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#run-idyom">
-   Run IDyOM
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#extract-data">
-   Extract Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#export-data">
-   Export Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualization">
-   Visualization
-  </a>
- </li>
-</ul>
-
+    
 </nav>
               </div>
               
@@ -212,65 +184,20 @@
                 
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">#</a></h1>
-<section id="run-idyom">
-<h2>Run IDyOM<a class="headerlink" href="#run-idyom" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment" title="py2lispIDyOM.run.IDyOMExperiment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IDyOMExperiment</span></code></a>(test_dataset_path[, ...])</p></td>
-<td><p>A class to configure the IDyOM experiment.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="extract-data">
-<h2>Extract Data<a class="headerlink" href="#extract-data" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/py2lispIDyOM.extract.ExperimentInfo.html#py2lispIDyOM.extract.ExperimentInfo" title="py2lispIDyOM.extract.ExperimentInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentInfo</span></code></a>(experiment_folder_path)</p></td>
-<td><p>An experiment object that contains all data in a single experiment.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/py2lispIDyOM.extract.MelodyInfo.html#py2lispIDyOM.extract.MelodyInfo" title="py2lispIDyOM.extract.MelodyInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MelodyInfo</span></code></a>(exp_pitch_element_list, ...)</p></td>
-<td><p>A melody object (pd.DataFrame) that contains all data in a single melody inherit from the parent Experiment.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="export-data">
-<h2>Export Data<a class="headerlink" href="#export-data" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/py2lispIDyOM.export.Export.html#py2lispIDyOM.export.Export" title="py2lispIDyOM.export.Export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Export</span></code></a>(experiment_folder_path[, ...])</p></td>
-<td><p>Export selected IDyOM model outputs to other formats.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="visualization">
-<h2>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot" title="py2lispIDyOM.viz.BasicPlot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BasicPlot</span></code></a>()</p></td>
-<td><p>BasicPlot for selected IDyOM outputs in an experiment.</p></td>
-</tr>
-</tbody>
-</table>
-</section>
+<p>This reference manual details the main functions, modules, and objects included in Py2LsipIDyOM.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="run_idyom.html">Run IDyOM model</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_processing.html">IDyOM output data processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data_processing.html#extracting-idyom-output-data">Extracting IDyOM output data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_processing.html#exporting-idyom-data">Exporting IDyOM data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualizing IDyOM outputs</a></li>
+</ul>
+</div>
 </section>
 
 
@@ -286,10 +213,10 @@
             <p class="prev-next-title">py2lispIDyOM: A Python package for IDyOM</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="_autosummary/py2lispIDyOM.run.IDyOMExperiment.html" title="next page">
+    <a class='right-next' id="next-link" href="run_idyom.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">py2lispIDyOM.run.IDyOMExperiment</p>
+        <p class="prev-next-title">Run IDyOM model</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

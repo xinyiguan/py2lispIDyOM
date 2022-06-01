@@ -1,47 +1,15 @@
 API Reference
 =============
 
-Run IDyOM
--------------------
+This reference manual details the main functions, modules, and objects included in Py2LsipIDyOM.
 
-.. currentmodule:: py2lispIDyOM.run
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-class-template.rst
+.. toctree::
+   :maxdepth: 2
 
-    IDyOMExperiment
+   run_idyom
+   data_processing
+   visualization
 
-Extract Data
-------------------------
-
-.. currentmodule:: py2lispIDyOM.extract
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-class-template.rst
-
-    ExperimentInfo
-    MelodyInfo
-
-Export Data
------------------------
-
-.. currentmodule:: py2lispIDyOM.export
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-class-template.rst
-
-    Export
-
-
-Visualization
------------------------
-
-.. currentmodule:: py2lispIDyOM.viz
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-class-template.rst
-
-    BasicPlot
 
 
 

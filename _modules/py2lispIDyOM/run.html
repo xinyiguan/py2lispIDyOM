@@ -67,13 +67,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api_reference.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -142,7 +148,7 @@
 <span class="kn">from</span> <span class="nn">py2lispIDyOM.configuration</span> <span class="kn">import</span> <span class="n">get_timestamp</span><span class="p">,</span> <span class="n">IDyOMConfiguration</span><span class="p">,</span> <span class="n">ExperimentLogger</span>
 
 
-<div class="viewcode-block" id="IDyOMExperiment"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment">[docs]</a><span class="nd">@dataclass</span>
+<div class="viewcode-block" id="IDyOMExperiment"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">IDyOMExperiment</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to configure the IDyOM experiment.</span>
@@ -189,7 +195,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">pass</span>
 
-<div class="viewcode-block" id="IDyOMExperiment.set_parameters"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.set_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">set_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="IDyOMExperiment.set_parameters"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.set_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">set_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the IDyOM model parameters.</span>
 <span class="sd">        :param kwargs: see the README or run_idyom_tutorial for a complete list of parameters (keyword arguments).</span>
@@ -198,7 +204,7 @@
         <span class="n">configuration</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">run_model_configuration</span>
         <span class="n">surface_dict</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">configuration</span><span class="o">.</span><span class="n">get_surface_dict</span><span class="p">()</span>
         <span class="c1"># print(f&#39;{surface_dict=}&#39;)</span>
-        <span class="n">kw2hide_in_errormsg</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;output_path&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset_id&#39;</span><span class="p">,</span> <span class="s1">&#39;pretraining_id&#39;</span><span class="p">]</span>
+        <span class="n">kw2hide_in_errormsg</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;output_path&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset_id&#39;</span><span class="p">,</span> <span class="s1">&#39;pretraining_id&#39;</span><span class="p">,</span> <span class="s1">&#39;stmo_options&#39;</span><span class="p">,</span> <span class="s1">&#39;ltmo_options&#39;</span><span class="p">]</span>
         <span class="n">kw2show</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">surface_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
         <span class="n">kw2show</span> <span class="o">=</span> <span class="p">[</span><span class="n">ele</span> <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">kw2show</span> <span class="k">if</span> <span class="n">ele</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">kw2hide_in_errormsg</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -215,7 +221,7 @@
         <span class="n">lisp_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">idyom_config</span><span class="o">.</span><span class="n">to_lisp_command</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">lisp_command</span>
 
-<div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the LISP script for the IDyOM model configurations.</span>
 <span class="sd">        :param write: whether to write the file or not, defaults to True.</span>
@@ -231,7 +237,7 @@
                 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">lisp_command</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">lisp_file_path</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="IDyOMExperiment.run"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.run.IDyOMExperiment.html#py2lispIDyOM.run.IDyOMExperiment.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="IDyOMExperiment.run"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Run the IDyOM model.</span>
 <span class="sd">        &quot;&quot;&quot;</span>

@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Run IDyOM model &#8212; py2lispIDyOM  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/autoclasstoc.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="IDyOM output data processing" href="data_processing.html" />
+    <link rel="prev" title="API Reference" href="api_reference.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="index.html">
+<p class="title">py2lispIDyOM</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="README.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="api_reference.html">
+  API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="how_to_contribute.html">
+  How to contribute
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Run IDyOM model
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_processing.html">
+   IDyOM output data processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualization.html">
+   Visualizing IDyOM outputs
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="run-idyom-model">
+<h1>Run IDyOM model<a class="headerlink" href="#run-idyom-model" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>To run the IDyOM model with <cite>py2lispIDyOM</cite>, the <cite>IDyOMExperiment</cite> object is
+provided to configure the model. You will set all the dataset paths, model parameters here.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="py2lispIDyOM.run.IDyOMExperiment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.run.</span></span><span class="sig-name descname"><span class="pre">IDyOMExperiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">test_dataset_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pretrain_dataset_path=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_history_folder_path=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idyom_config=&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/run.html#IDyOMExperiment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.run.IDyOMExperiment" title="Permalink to this definition">#</a></dt>
+<dd><p>A class to configure the IDyOM experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>test_dataset_path</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – The path to your test dataset (required)</p></li>
+<li><p><strong>pretrain_dataset_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – The path to your pretrain dataset</p></li>
+<li><p><strong>experiment_history_folder_path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – The path to which you want to save all the result data/plots, defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">
+<span class="sig-name descname"><span class="pre">generate_lisp_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">write</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/run.html#IDyOMExperiment.generate_lisp_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script" title="Permalink to this definition">#</a></dt>
+<dd><p>Generate the LISP script for the IDyOM model configurations.
+:param write: whether to write the file or not, defaults to True.
+:type write: bool
+:return: the path to the lisp script file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.run.IDyOMExperiment.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/run.html#IDyOMExperiment.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.run.IDyOMExperiment.run" title="Permalink to this definition">#</a></dt>
+<dd><p>Run the IDyOM model.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.run.IDyOMExperiment.set_parameters">
+<span class="sig-name descname"><span class="pre">set_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/run.html#IDyOMExperiment.set_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.run.IDyOMExperiment.set_parameters" title="Permalink to this definition">#</a></dt>
+<dd><p>Set the IDyOM model parameters.
+:param kwargs: see the README or run_idyom_tutorial for a complete list of parameters (keyword arguments).</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Parameters to configure the IDyOM model are almost the same as the those listed and described in the
+<a class="reference external" href="https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters">IDyOM parameters documentation,</a>
+EXCEPT that users are not allowed to assign <cite>dataset-id</cite> and <cite>pretraining-ids</cite>, and <cite>output-path</cite> in <cite>py2lispIDyOM</cite>.</p>
+<p>Instead, users need to supply the relevant dataset paths for the test dataset and pretrain dataset,
+and unique dataset ID will automatically then be assigned to those user-specified dataset respectively.
+The output file of the IDyOM model are saved to the corresponding experiment logger.</p>
+<p>Valid parameters to configure the IDyOM model are:</p>
+<dl class="simple">
+<dt><strong>Required parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>target_viewpoints</cite>: List[SingleViewpoint]</p></li>
+<li><p><cite>source_viewpoints</cite>: Union[Literal[‘:select’], List[Union[SingleViewpoint, Tuple[SingleViewpoint]]]]</p></li>
+</ul>
+</dd>
+<dt><strong>Statistical modelling parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>models</cite>: Literal[‘:stm’, ‘:ltm’, ‘:ltm+’, ‘:both’, ‘:both+’]</p></li>
+<li><p><cite>ltmo</cite>: Literal[‘:ltmo’]</p></li>
+<li><p><cite>stmo</cite>: Literal[‘:stmo’]</p></li>
+<li><p><cite>ltmo_order_bound``stmo_order_bound</cite>: int</p></li>
+<li><p><cite>ltmo_mixtures</cite>, <cite>stmo_mixtures</cite>: bool</p></li>
+<li><p><cite>ltmo_update_exclusion</cite>, <cite>stmo_update_exclusion</cite>: bool</p></li>
+<li><p><cite>ltmo_escape</cite>, <cite>stmo_escape</cite>: Literal[‘:a’, ‘:b’, ‘:c’, ‘:d’, ‘:x’]</p></li>
+</ul>
+</dd>
+<dt><strong>Training parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>k</cite>: Union[int, Literal[“:full”]], default is 10</p></li>
+<li><p><cite>resampling_indices</cite>: List[int]</p></li>
+</ul>
+</dd>
+<dt><strong>Viewpoint selection parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>basis</cite>:  Union[List[SingleViewpoint], Literal[‘:pitch-full’, ‘:pitch-short’, ‘:bioi’, ‘:onset’, ‘:auto’]]</p></li>
+<li><p><cite>dp</cite>: int</p></li>
+<li><p><cite>max_links</cite>: int</p></li>
+<li><p><cite>min_links</cite>: int</p></li>
+<li><p><cite>viewpoint_selection_output</cite>: str</p></li>
+</ul>
+</dd>
+<dt><strong>Output parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>detail</cite>: Literal[1, 2, 3]</p></li>
+<li><p><cite>overwrite</cite>: bool</p></li>
+<li><p><cite>separator</cite>: str</p></li>
+</ul>
+</dd>
+<dt><strong>Caching parameters</strong>:</dt><dd><ul class="simple">
+<li><p><cite>use_resampling_set_cache</cite>: bool</p></li>
+<li><p><cite>use_ltms_cache</cite>: bool</p></li>
+</ul>
+</dd>
+</dl>
+<p>For more examples on how to configure and run the IDyOM model,
+please see the <a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/1_running_IDyOM_tutorial.ipynb">tutorial</a>.</p>
+</section>
+
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="api_reference.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">API Reference</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data_processing.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">IDyOM output data processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, Xinyi Guan.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

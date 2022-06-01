@@ -6,32 +6,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>py2lispIDyOM.viz.BasicPlot &#8212; py2lispIDyOM  documentation</title>
+    <title>Visualizing IDyOM outputs &#8212; py2lispIDyOM  documentation</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/autoclasstoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/autoclasstoc.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to contribute" href="how_to_contribute.html" />
+    <link rel="prev" title="IDyOM output data processing" href="data_processing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -49,7 +51,7 @@
   <div id="navbar-start">
     
     
-<a class="navbar-brand" href="../index.html">
+<a class="navbar-brand" href="index.html">
 <p class="title">py2lispIDyOM</p>
 </a>
 
@@ -67,19 +69,19 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../README.html">
+ <a class="reference internal nav-link" href="README.html">
   User Guide
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../api_reference.html">
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="api_reference.html">
   API Reference
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../how_to_contribute.html">
+ <a class="reference internal nav-link" href="how_to_contribute.html">
   How to contribute
  </a>
 </li>
@@ -113,12 +115,36 @@
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
             <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="run_idyom.html">
+   Run IDyOM model
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_processing.html">
+   IDyOM output data processing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Visualizing IDyOM outputs
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -156,45 +182,28 @@
               
               <div>
                 
-  <section id="py2lispidyom-viz-basicplot">
-<h1>py2lispIDyOM.viz.BasicPlot<a class="headerlink" href="#py2lispidyom-viz-basicplot" title="Permalink to this headline">#</a></h1>
+  <section id="visualizing-idyom-outputs">
+<h1>Visualizing IDyOM outputs<a class="headerlink" href="#visualizing-idyom-outputs" title="Permalink to this headline">#</a></h1>
+<p>In the current version, only limited basic plots are available.
+The following types of basic plots are the ones we find helpful for analysis:</p>
+<ul class="simple">
+<li><p><cite>simple_plot</cite></p></li>
+<li><p><cite>selected_surprisal_entropy</cite></p></li>
+<li><p><cite>all_surprisal</cite></p></li>
+<li><p><cite>all_entropy</cite></p></li>
+<li><p><cite>pianoroll_pitch_prediction_groundtruth</cite></p></li>
+<li><p><cite>pianoroll_groundtruth_overall_surprisal</cite></p></li>
+</ul>
+<p>You are welcome to contribute or make your own figs.</p>
+<p>For more examples on visualizing the outputs,
+please see the <a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb">tutorial</a>.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.viz.</span></span><span class="sig-name descname"><span class="pre">BasicPlot</span></span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.viz.</span></span><span class="sig-name descname"><span class="pre">BasicPlot</span></span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot" title="Permalink to this definition">#</a></dt>
 <dd><p>BasicPlot for selected IDyOM outputs in an experiment.</p>
-<div class="autoclasstoc docutils container">
-<p class="rubric">Public Methods:</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth" title="py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll_pitch_prediction_groundtruth</span></code></a>(...)</p></td>
-<td><p>Generate a pair of figures (the predicted pitch distribution and the ground truth) side by side.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal" title="py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pianoroll_groundtruth_overall_surprisal</span></code></a>(...)</p></td>
-<td><p>Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.simple_plot" title="py2lispIDyOM.viz.BasicPlot.simple_plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simple_plot</span></code></a>(selected_idyom_output, ...[, ...])</p></td>
-<td><p>Generate a simple line plot with time (in quarter note) on the x-axis, and selected IDyOM output on the y-axis.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy" title="py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selected_surprisal_entropy</span></code></a>(...[, ...])</p></td>
-<td><p>Generate a figure that shows the selected entropy and information content.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.all_surprisal" title="py2lispIDyOM.viz.BasicPlot.all_surprisal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_surprisal</span></code></a>(experiment_folder_path[, ...])</p></td>
-<td><p>Generate subplots of all available surprisal outputs.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../visualization.html#py2lispIDyOM.viz.BasicPlot.all_entropy" title="py2lispIDyOM.viz.BasicPlot.all_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_entropy</span></code></a>(experiment_folder_path[, ...])</p></td>
-<td><p>Generate subplots that show all available entropy outputs.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr class="docutils" />
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.all_entropy">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.all_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_entropy" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.all_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_entropy" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate subplots that show all available entropy outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -217,7 +226,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.all_surprisal">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_surprisal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.all_surprisal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_surprisal" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_surprisal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">8)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.all_surprisal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.all_surprisal" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate subplots of all available surprisal outputs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -240,7 +249,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll_groundtruth_overall_surprisal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">6)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_groundtruth_overall_surprisal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll_groundtruth_overall_surprisal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">6)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_groundtruth_overall_surprisal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,7 +270,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll_pitch_prediction_groundtruth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_pitch_prediction_groundtruth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pianoroll_pitch_prediction_groundtruth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">10)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nrows</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ncols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.pianoroll_pitch_prediction_groundtruth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate a pair of figures (the predicted pitch distribution and the ground truth) side by side.
 If users intend to plot figures for specific songs, they can do so by specifying either the melody names,
 or the starting/ending index in the melody list.</p>
@@ -286,7 +295,7 @@ or the starting/ending index in the melody list.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_surprisal_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.selected_surprisal_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_surprisal_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ic_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">6)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.selected_surprisal_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate a figure that shows the selected entropy and information content.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -311,7 +320,7 @@ or the starting/ending index in the melody list.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="py2lispIDyOM.viz.BasicPlot.simple_plot">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simple_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected_idyom_output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/viz.html#BasicPlot.simple_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.simple_plot" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">simple_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected_idyom_output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">savefig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showfig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fig_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'png'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">5)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ggplot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/viz.html#BasicPlot.simple_plot"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.viz.BasicPlot.simple_plot" title="Permalink to this definition">#</a></dt>
 <dd><p>Generate a simple line plot with time (in quarter note) on the x-axis, and selected IDyOM output on the y-axis.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -343,6 +352,20 @@ or the starting/ending index in the melody list.</p>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="data_processing.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">IDyOM output data processing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="how_to_contribute.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How to contribute</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>
@@ -352,7 +375,7 @@ or the starting/ending index in the melody list.</p>
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 <footer class="footer mt-5 mt-md-0">
   <div class="container">
     

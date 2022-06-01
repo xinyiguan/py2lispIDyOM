@@ -67,13 +67,19 @@
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../README.html">
-  Readme
+  User Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../api_reference.html">
   API Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../how_to_contribute.html">
+  How to contribute
  </a>
 </li>
 
@@ -447,10 +453,10 @@
         <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">fname</span><span class="o">=</span><span class="n">output_path</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">melody_name_pprint</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">fig_format</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">fig_format</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="BasicPlot"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot">[docs]</a><span class="k">class</span> <span class="nc">BasicPlot</span><span class="p">:</span>
+<div class="viewcode-block" id="BasicPlot"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot">[docs]</a><span class="k">class</span> <span class="nc">BasicPlot</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; BasicPlot for selected IDyOM outputs in an experiment. &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="BasicPlot.pianoroll_pitch_prediction_groundtruth"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.pianoroll_pitch_prediction_groundtruth"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">pianoroll_pitch_prediction_groundtruth</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                                <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                                <span class="n">starting_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -517,7 +523,7 @@
                                        <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span>
                                        <span class="p">)</span></div>
 
-<div class="viewcode-block" id="BasicPlot.pianoroll_groundtruth_overall_surprisal"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.pianoroll_groundtruth_overall_surprisal"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">pianoroll_groundtruth_overall_surprisal</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                                 <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                                                 <span class="n">starting_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -574,7 +580,7 @@
                                        <span class="n">fig_format</span><span class="o">=</span><span class="n">fig_format</span><span class="p">,</span>
                                        <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BasicPlot.simple_plot"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.simple_plot">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.simple_plot"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.simple_plot">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">simple_plot</span><span class="p">(</span><span class="n">selected_idyom_output</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                     <span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                     <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -643,7 +649,7 @@
                                        <span class="n">fig_format</span><span class="o">=</span><span class="n">fig_format</span><span class="p">,</span>
                                        <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BasicPlot.selected_surprisal_entropy"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.selected_surprisal_entropy"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">selected_surprisal_entropy</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                    <span class="n">ic_source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                                    <span class="n">entropy_source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -719,7 +725,7 @@
                                        <span class="n">fig_format</span><span class="o">=</span><span class="n">fig_format</span><span class="p">,</span>
                                        <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BasicPlot.all_surprisal"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.all_surprisal">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.all_surprisal"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.all_surprisal">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">all_surprisal</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                       <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                       <span class="n">starting_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -808,7 +814,7 @@
                                        <span class="n">fig_format</span><span class="o">=</span><span class="n">fig_format</span><span class="p">,</span>
                                        <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BasicPlot.all_entropy"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.viz.BasicPlot.html#py2lispIDyOM.viz.BasicPlot.all_entropy">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BasicPlot.all_entropy"><a class="viewcode-back" href="../../visualization.html#py2lispIDyOM.viz.BasicPlot.all_entropy">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">all_entropy</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                     <span class="n">melody_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                     <span class="n">starting_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
