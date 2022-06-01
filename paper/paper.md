@@ -11,7 +11,8 @@ affiliations:
 - name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
   index: 2
 
-date: 20 May 2022 bibliography: paper.bib
+date: 1 June 2022 bibliography: paper.bib
+
 ---
 
 # Statement of need

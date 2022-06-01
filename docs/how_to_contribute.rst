@@ -1,5 +1,6 @@
-How to contribute to Py2LispIDyOM
+How to contribute
 =================================
+.. toctree::
 
 Py2LispIDyOM is an ongoing project. We’d love to accept your contributions to this project.
 There are two options:

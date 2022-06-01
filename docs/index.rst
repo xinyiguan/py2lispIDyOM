@@ -9,21 +9,8 @@ Content
 -------
 
 .. toctree::
-   :maxdepth: 3
-   :caption: User Guide
-
-   <README.md>
-
-
-.. toctree::
    :maxdepth: 2
-   :caption: API Reference
 
+   User Guide <README.md>
    api_reference.rst
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: How to Contribute
-
-    how_to_contribute.rst
+   how_to_contribute.rst

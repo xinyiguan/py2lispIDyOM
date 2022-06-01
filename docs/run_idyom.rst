@@ -3,7 +3,7 @@ Run IDyOM model
 *************
 
 .. currentmodule:: py2lispIDyOM.run
-
+.. toctree::
 
 To run the IDyOM model with `py2lispIDyOM`, the `IDyOMExperiment` object is
 provided to configure the model. You will set all the dataset paths, model parameters here.
@@ -16,12 +16,9 @@ Parameters to configure the IDyOM model are almost the same as the those listed 
 `IDyOM parameters documentation, <https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters>`__
 EXCEPT that users are not allowed to assign `dataset-id` and `pretraining-ids`, and `output-path` in `py2lispIDyOM`.
 
-Instead,
-
-- users need to supply the relevant dataset paths for the test dataset and pretrain dataset,
+Instead, users need to supply the relevant dataset paths for the test dataset and pretrain dataset,
 and unique dataset ID will automatically then be assigned to those user-specified dataset respectively.
-
-- the output file of the IDyOM model are saved to the corresponding experiment logger.
+The output file of the IDyOM model are saved to the corresponding experiment logger.
 
 Valid parameters to configure the IDyOM model are:
 
