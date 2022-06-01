@@ -1,28 +1,17 @@
 ---
-title: 'py2lispIDyOM: A Python package for IDyOM'
-tags:
-    - Python
-    - IDyOM
-    - music cognition
-authors:
-    - name: Xinyi Guan
-      orcid: 0000-0002-4570-906X
-      affiliation: 1
-    - name: Zeng Ren
-      orcid: 0000-0002-9097-2633
-      affiliation: 2
-    - name: Claire Pelofi
-      orcid: 0000-0001-5960-8174
-      affiliation: 1
-    
+title: 'py2lispIDyOM: A Python package for IDyOM' tags:
+
+- Python - IDyOM - music cognition authors:
+- name: Xinyi Guan orcid: 0000-0002-4570-906X affiliation: 1 - name: Zeng Ren orcid: 0000-0002-9097-2633 affiliation: 2
+- name: Claire Pelofi orcid: 0000-0001-5960-8174 affiliation: 1
+
 affiliations:
- - name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA
-   index: 1
- - name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
-   index: 2
-   
-date: 20 May 2022
-bibliography: paper.bib
+
+- name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA index: 1
+- name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
+  index: 2
+
+date: 20 May 2022 bibliography: paper.bib
 ---
 
 # Statement of need
@@ -31,11 +20,13 @@ Music is a complex, multi-layered signal that displays structures along a variet
 and rhythmic sequences play a crucial role across styles and cultures [@PearceWiggins2006]. Empirical studies have
 consistently demonstrated that listeners have strong and well-defined musical predictions that reflect the long-range
 statistical regularities present in the music they have heard across their lifespan [@Margulis2005; @Morgan2019]. These
-statistics are learned through passive exposure to the music in everyday life [@Bigand2006; @Eerola2009; @Rohrmeier2011].
+statistics are learned through passive exposure to the music in everyday life [@Bigand2006; @Eerola2009; @Rohrmeier2011]
+.
 
 The Information Dynamics of Music (IDyOM) has been a well-established computational model for melodic expectation in the
 music cognition community and has been empirically tested in various studies [@PearceWiggins2012]. IDyOM models
-listeners’ online expectations of musical events using predictions from variable-order Markov chains [@Pearce2005; @Pearce2018]. Its long-term component is trained on a large musical corpus and its short-term
+listeners’ online expectations of musical events using predictions from variable-order Markov
+chains [@Pearce2005; @Pearce2018]. Its long-term component is trained on a large musical corpus and its short-term
 component dynamically learns the local statistics of a melody, simulating long-term learning of musical statistics and
 short-term learning of musical patterns respectively.
 
@@ -60,10 +51,10 @@ of writing Lisp codes and hide the complexities of the necessary interactions wi
 
 # Summary
 
-`py2lispIDyOM` serves as a unifying Python interface that simplifies and streamlines the research workflow for running
-the IDyOM model and analyzing output data. It is broadly aimed at researchers conducting IDyOM-based analysis. This
-package makes it easier to do the following two tasks: (i) configuring and running the IDyOM model, and (ii)
-processing and analyzing the IDyOM output data.
+`py2lispIDyOM` is an open-source Python package that serves as a unifying Python interface that simplifies and
+streamlines the research workflow for running the IDyOM model and analyzing output data. It is broadly aimed at
+researchers conducting IDyOM-based analysis in Python. This package makes it easier to do the following two tasks: (i) configuring
+and running the IDyOM model, and (ii) processing and analyzing the IDyOM output data.
 
 Users can now configure the IDyOM experiments in Python using the `IDyOMExperiment` object and, based on
 it, `py2lispIDyOM` will generate a Lisp script to run the IDyOM. To encourage an organized workflow and to improve the

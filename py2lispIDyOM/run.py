@@ -60,7 +60,7 @@ class IDyOMExperiment:
         configuration = self.idyom_config.run_model_configuration
         surface_dict: dict = configuration.get_surface_dict()
         # print(f'{surface_dict=}')
-        kw2hide_in_errormsg = ['output_path', 'dataset_id', 'pretraining_id']
+        kw2hide_in_errormsg = ['output_path', 'dataset_id', 'pretraining_id', 'stmo_options', 'ltmo_options']
         kw2show = list(surface_dict.keys())
         kw2show = [ele for ele in kw2show if ele not in kw2hide_in_errormsg]
         for key, value in kwargs.items():

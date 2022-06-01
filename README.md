@@ -9,8 +9,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-py2lispIDyOM is a Python package for the information dynamics of music ([IDyOM](https://github.com/mtpearce/idyom/))
-model.
+`py2lispIDyOM` is an open-source Python package that serves as a unifying Python interface that simplifies and
+streamlines the research workflow for running the information dynamics of music (`IDyOM <https://github.com/mtpearce/idyom/>`__) model and analyzing output data.
+It is broadly aimed at researchers conducting IDyOM-based analysis in Python.
 
 ## Table of Content
 
@@ -30,11 +31,10 @@ model.
 py2lispIDyOM requires IDyOM to be installed on the local machine. To start with, please read
 the [IDyOM installation page](https://github.com/mtpearce/idyom/wiki/Installation) to appropriately install IDyOM.
 
-In addition, py2lispIDyOM also requires common packages such as `numpy`, `matplotlib`, `pandas`, `scipy`, etc.
 
 ### Installing
 
-The code is compatible with >=Python 3.9.
+The code is compatible with >= Python 3.9.
 
 It can be installed using pip or directly from the source code. 
 Basic installation options include:
@@ -50,8 +50,8 @@ In summary, py2lispIDyOM has three main functionalities for research workflow:
 - Data preprocessing
 - Visualizing IDyOM outputs
 
-Please have a look at the [tutorial](tutorials/), which guides you through all three basic functionalities of through an
-example.
+Please have a look at the [tutorials](https://github.com/xinyiguan/py2lispIDyOM/tree/master/tutorials/), which guides you through all three basic functionalities of through
+examples.
 
 ### Notebook examples
 
@@ -60,6 +60,7 @@ example.
   - Extracting data: [2a_data_preprocessing_extracting.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2a_data_preprocessing_extracting.ipynb)
   - Exporting data: [2b_data_preprocessing_exporting.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2b_data_preprocessing_exporting.ipynb)
 - Visualization: [3_visualizing_outputs.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb)
+
 
 Note: I tried to make the code accessible and provide some examples in the tutorials for getting started smoothly. But
 there is still lots of room for better documentation, tutorials and testing. Please contact me if you have any questions or

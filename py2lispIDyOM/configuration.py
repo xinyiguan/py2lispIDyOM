@@ -208,7 +208,7 @@ class RequiredParameters(Parameters):
 class LTMOModelOptions(Parameters):
     ltmo_order_bound: int = None
     ltmo_mixtures: bool = None
-    ltmo_update_exclusion: str = None
+    ltmo_update_exclusion: bool = None
     ltmo_escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
 
     def to_lisp_command(self) -> str:
@@ -223,7 +223,7 @@ class LTMOModelOptions(Parameters):
 class STMOModelOptions(Parameters):
     stmo_order_bound: int = None
     stmo_mixtures: bool = None
-    stmo_update_exclusion: str = None
+    stmo_update_exclusion: bool = None
     stmo_escape: Literal[':a', ':b', ':c', ':d', ':x'] = None
 
     def to_lisp_command(self) -> str:
