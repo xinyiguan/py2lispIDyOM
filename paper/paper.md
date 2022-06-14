@@ -50,7 +50,7 @@ expectations–their predictions–when listening to music.
 Although the model has been firmly established as a powerful tool to model listener’s experience, the Common Lisp
 ecosystem, in which the IDyOM model is built in, entails a significant entry barrier for researchers who intend to use
 the model. On the one hand, Common Lisp is a fairly niche programming language for data analysis and gathers a rather
-small community of users in the music psychology and music cognition. On the other hand, to use the IDyOM model, it is
+small community of users in music psychology and music cognition in this day and age. On the other hand, to use the IDyOM model, it is
 assumed that users, who are often new to the Lisp language, are familiar with Emacs and SLIME, which themselves can take
 up a lot of time and energy to learn. Therefore, obtaining the IDyOM outputs can be discouraging and time-consuming.
 
@@ -74,14 +74,14 @@ to, the datasets used for the experiment, the generated Lisp script, and the IDy
 
 For the processing and analysis of the IDyOM outputs, we implemented three functionalities as modules: `extract`
 , `export`, and `visualization`. Each module contains methods that we frequently used in our previous research projects.
-For the current version, we provided several common types of figures as shown below in the `visualization` module. 
-For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth (Figure 1). 
+In the current version, we provided several common types of figures as shown below in the `visualization` module.
+For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth (Figure 1).
 Figure 2 shows the piano roll plot with each note aligned with the corresponding surprisal value.
 Figure 3 is an instance of plotting the surprisal values for each target viewpoint and the overall surprisal value.
 Figure 4 is an example of plotting the chosen surprisal and entropy values (here is the overall surprisal and entropy).
-As all plotting functions follows the same construction logic, users can easily customize their own figures by following
+As all plotting functions follow the same construction logic, users can easily customize their own figures by following
 the same fashion.
-The package includes tutorials in the form of Jupyter notebooks on the GitHub repository. 
+The package includes tutorials in the form of Jupyter notebooks on the GitHub repository.
 These tutorials demonstrate the usage of the aforementioned functionalities.
 
 The package has been used in several ongoing research projects at the Max Planck - NYU Center for Language, Music and
@@ -90,16 +90,20 @@ analysis.
 
 # Figures
  
-|![Image](figures/pitch-pred-chor-003.png){ width=85% }
+|![Image](figures/pitch-pred-chor-003.png){ width=90% }
+|:--:|
 Figure 1. Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003".
 
 |![Image](figures/groundtruth-surprisal-chor-003.png) 
+|:--:| 
 Figure 2. Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".
 
 |![Image](figures/all-surprisals-chor-003.png)
+|:--:| 
 Figure 3. IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".
 
 |![Image](figures/surprisal-entropy-chor-003.png)
+|:--:| 
 Figure 4. IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".
 
 
