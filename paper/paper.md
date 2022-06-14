@@ -75,7 +75,7 @@ to, the datasets used for the experiment, the generated Lisp script, and the IDy
 For the processing and analysis of the IDyOM outputs, we implemented three functionalities as modules: `extract`
 , `export`, and `visualization`. Each module contains methods that we frequently used in our previous research projects.
 In the current version, we provided several common types of figures as shown below in the `visualization` module.
-For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth \autoref{fig:Fig1}.
+For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth (\autoref{fig:Fig1}).
 \autoref{fig:Fig2} shows the piano roll plot with each note aligned with the corresponding surprisal value.
 \autoref{fig:Fig3} is an instance of plotting the surprisal values for each target viewpoint and the overall surprisal value.
 \autoref{fig:Fig4} is an example of plotting the chosen surprisal and entropy values (here is the overall surprisal and entropy).
@@ -90,12 +90,12 @@ analysis.
 
 # Figures
  
-![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003". \label{fig:Fig1}](figures/pitch-pred-chor-003.png){ width=90% }
+![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003". \label{fig:Fig1}](figures/pitch-pred-chor-003.png){ width=85% }
 
-![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".\label{fig:Fig2}](figures/groundtruth-surprisal-chor-003.png)
+![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".\label{fig:Fig2}](figures/groundtruth-surprisal-chor-003.png){ width=85% }
 
-![IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".\label{fig:Fig3}](figures/all-surprisals-chor-003.png)
+![IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".\label{fig:Fig3}](figures/all-surprisals-chor-003.png){ width=85% }
 
-![IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".\label{fig:Fig4}](figures/surprisal-entropy-chor-003.png)
+![IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".\label{fig:Fig4}](figures/surprisal-entropy-chor-003.png){ width=85% }
 
 # References
