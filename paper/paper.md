@@ -1,29 +1,27 @@
 ---
-title: 'py2lispIDyOM: A Python package for IDyOM'
+title: 'py2lispIDyOM: A Python package for IDyOM' 
 tags:
-    - Python
-    - IDyOM
-    - music cognition
+  - Python 
+  - IDyOM 
+  - music cognition 
 authors:
-    - name: Xinyi Guan
-      orcid: 0000-0002-4570-906X
-      affiliation: 1
-    - name: Zeng Ren
-      orcid: 0000-0002-9097-2633
-      affiliation: 2
-    - name: Claire Pelofi
-      orcid: 0000-0001-5960-8174
-      affiliation: 1
-    
-affiliations:
- - name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA
-   index: 1
- - name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
-   index: 2
-   
-date: 20 May 2022
-bibliography: paper.bib
+  - name: Xinyi Guan 
+    orcid: 0000-0002-4570-906X
+    affiliation: 1 
+  - name: Zeng Ren 
+    orcid: 0000-0002-9097-2633 
+    affiliation: 2
+  - name: Claire Pelofi 
+    orcid: 0000-0001-5960-8174 
+    affiliation: 1
 
+affiliations:
+  - name: Max Planck NYU Center for Language, Music and Emotion, New York, NY 10003 USA 
+    index: 1
+  - name: Digital and Cognitive Musicology Lab, École Polytechnique Fédérale de Lausanne, Lausanne, VD 1015 Switzerland
+    index: 2
+date: 15 June 2022 
+bibliography: paper.bib
 ---
 
 # Statement of need
@@ -36,11 +34,11 @@ statistics are learned through passive exposure to the music in everyday life [@
 .
 
 The Information Dynamics of Music (IDyOM) has been a well-established computational model for melodic expectation in the
-music cognition community and has been empirically tested in various studies [@PearceWiggins2012]. IDyOM models
-listeners’ online expectations of musical events using predictions from variable-order Markov
-chains [@Pearce2005; @Pearce2018]. Its long-term component is trained on a large musical corpus and its short-term
-component dynamically learns the local statistics of a melody, simulating long-term learning of musical statistics and
-short-term learning of musical patterns respectively.
+music cognition community and has been empirically tested in various behavioral and neural 
+studies [@PearceWiggins2012; @Di2020; @Politimou2021]. IDyOM models listeners’ online expectations of musical events
+using predictions from variable-order Markov chains [@Pearce2005; @Pearce2018]. Its long-term component is pre-trained on a
+large musical corpus and its short-term component dynamically learns the local statistics of a melody, simulating
+long-term learning of musical statistics and short-term learning of musical patterns respectively.
 
 For each note in a melody, IDyOM outputs a probability derived by merging the long-term and short-term distributions.
 From this distribution, two information-theoretic measures characterize the predictions of the model. Surprisal (or
@@ -65,28 +63,48 @@ of writing Lisp codes and hide the complexities of the necessary interactions wi
 
 `py2lispIDyOM` is an open-source Python package that serves as a unifying Python interface that simplifies and
 streamlines the research workflow for running the IDyOM model and analyzing output data. It is broadly aimed at
-researchers conducting IDyOM-based analysis in Python. This package makes it easier to do the following two tasks: (i) configuring
-and running the IDyOM model, and (ii) processing and analyzing the IDyOM output data.
+researchers conducting IDyOM-based analysis in Python. This package makes it easier to do the following two tasks: (i)
+configuring and running the IDyOM model, and (ii) processing and analyzing the IDyOM output data.
 
 Users can now configure the IDyOM experiments in Python using the `IDyOMExperiment` object and, based on
 it, `py2lispIDyOM` will generate a Lisp script to run the IDyOM. To encourage an organized workflow and to improve the
-reproducibility of data, `py2lispIDyOM` will log all data related to an experiment in a structured folder, which can be
+reproducibility of data, all data related to an experiment will be logged in a structured folder, which can be
 shared with other researchers to verify and replicate the experiment results. The logged data includes, but not limited
 to, the datasets used for the experiment, the generated Lisp script, and the IDyOM output file (in `.dat` format).
 
 For the processing and analysis of the IDyOM outputs, we implemented three functionalities as modules: `extract`
 , `export`, and `visualization`. Each module contains methods that we frequently used in our previous research projects.
-For example, in the `visualization` module, we included several types of figures as shown below. The package includes
-tutorials in the form of Jupyter notebooks on the github repository. These tutorials demonstrate the usage of the
-aforementioned functionalities.
+For the current version, we provided several common types of figures as shown below in the `visualization` module. 
+For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth (Figure 1). 
+Figure 2 shows the piano roll plot with each note aligned with the corresponding surprisal value.
+Figure 3 is an instance of plotting the surprisal values for each target viewpoint and the overall surprisal value.
+Figure 4 is an example of plotting the chosen surprisal and entropy values (here is the overall surprisal and entropy).
+As all plotting functions follows the same construction logic, users can easily customize their own figures by following
+the same fashion.
+The package includes tutorials in the form of Jupyter notebooks on the GitHub repository. 
+These tutorials demonstrate the usage of the aforementioned functionalities.
 
 The package has been used in several ongoing research projects at the Max Planck - NYU Center for Language, Music and
 Emotion. Therefore, we hope this package can bring similar values to other research groups working on IDyOM-based
 analysis.
 
-![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003"](pitch-pred-chor-003.png)
-![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003"](groundtruth-surprisal-chor-003.png)
-![IDyOM surprisal outputs of each target viewpoints and overall surprisal outputs for melody "chor-003"](all-surprisals-chor-003.png)
-![IDyOM surprisal and entropy outputs for melody "chor-003"](surprisal-entropy-chor-003.png)
+# Figures
+
+|![Image](figures/pitch-pred-chor-003.png)
+|:--:| 
+| *Figure 1. Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003".* |
+
+|![Image](figures/groundtruth-surprisal-chor-003.png)
+|:--:| 
+| *Figure 2. Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".* |
+
+|![Image](figures/all-surprisals-chor-003.png)
+|:--:| 
+| *Figure 3. IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".* |
+
+|![Image](figures/surprisal-entropy-chor-003.png)
+|:--:| 
+| *Figure 4. IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".* |
+
 
 # References
