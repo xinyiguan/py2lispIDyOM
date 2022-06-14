@@ -7,7 +7,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="py2lispIDyOM",
-    version="0.0.0",
+    version="1.0.0",
     author="Xinyi Guan",
     author_email="xinyi.guan@nyu.edu",
     description="A Python package for IDyOM model",
