@@ -89,22 +89,18 @@ Emotion. Therefore, we hope this package can bring similar values to other resea
 analysis.
 
 # Figures
+ 
+|![Image](figures/pitch-pred-chor-003.png){ width=85% }
+Figure 1. Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003".
 
-|![Image](figures/pitch-pred-chor-003.png)
-|:--:| 
-| *Figure 1. Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003".* |
-
-|![Image](figures/groundtruth-surprisal-chor-003.png)
-|:--:| 
-| *Figure 2. Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".* |
+|![Image](figures/groundtruth-surprisal-chor-003.png) 
+Figure 2. Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".
 
 |![Image](figures/all-surprisals-chor-003.png)
-|:--:| 
-| *Figure 3. IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".* |
+Figure 3. IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".
 
 |![Image](figures/surprisal-entropy-chor-003.png)
-|:--:| 
-| *Figure 4. IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".* |
+Figure 4. IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".
 
 
 # References
