@@ -20,7 +20,9 @@ Instead, users need to supply the relevant dataset paths for the test dataset an
 and unique dataset ID will automatically then be assigned to those user-specified dataset respectively.
 The output file of the IDyOM model are saved to the corresponding experiment logger.
 
-Valid parameters to configure the IDyOM model are:
+--------------------
+Valid parameters to configure the IDyOM model:
+--------------------
 
 **Required parameters**:
     - `target_viewpoints`: List[SingleViewpoint]
