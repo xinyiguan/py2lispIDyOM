@@ -15,7 +15,7 @@ class Export:
     """Export selected IDyOM model outputs to other formats.
 
     :param experiment_folder_path: The path to which you saved all the result data/plots
-    :param idyom_output_keywords: A list of IDyOM output keywords you want to export, defaults to None
+    :param idyom_output_keywords: A list of IDyOM output keywords you want to export. To see a full list of valid idyom_output_keywords, check the method: extract.get_idyom_output_keyword_list()
     :param melody_names: A list of melodies of which IDyOM outputs that you want to export
     """
 

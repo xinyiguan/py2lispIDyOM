@@ -21,7 +21,7 @@ and unique dataset ID will automatically then be assigned to those user-specifie
 The output file of the IDyOM model are saved to the corresponding experiment logger.
 
 --------------------
-Valid parameters to configure the IDyOM model:
+Valid parameters to configure the IDyOM model
 --------------------
 
 **Required parameters**:
