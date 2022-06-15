@@ -383,6 +383,7 @@ class ExperimentLogger:
     test_dataset_path: str
     pretrain_dataset_path: str
     experiment_history_folder_path: str
+    experiment_logger_name: str
 
     def __post_init__(self):
 
@@ -403,11 +404,13 @@ class ExperimentLogger:
         return experiment_history_folder
 
     def generate_this_exp_folder(self):
-        today_date = datetime.date.today()
-        now_time = datetime.datetime.now()
-        this_experiment_folder = self.experiment_history_folder + today_date.strftime(
-            '%d-%m-%y') + '_' + now_time.strftime(
-            '%H.%M.%S') + '/'
+        if self.experiment_logger_name is None:
+            today_date = datetime.date.today()
+            now_time = datetime.datetime.now()
+            timestamp_str = today_date.strftime('%d-%m-%y') + '_' + now_time.strftime('%H.%M.%S')
+            this_experiment_folder = self.experiment_history_folder + timestamp_str + '/'
+        else:
+            this_experiment_folder = self.experiment_history_folder + self.experiment_logger_name + '/'
         os.makedirs(this_experiment_folder)
         return this_experiment_folder
 
@@ -432,8 +435,8 @@ class ExperimentLogger:
         test_folder = input_data_folder + 'test_dataset/'
         os.makedirs(test_folder)
         test_dataset_path = self.test_dataset_path
-        test = self._get_files_from_paths(test_dataset_path)
-        self._put_midis_in_folder(test, test_folder)
+        test_files = self._get_files_from_paths(test_dataset_path)
+        self._put_midis_in_folder(test_files, test_folder)
         if not os.listdir(test_folder):
             raise AssertionError(f'test_dataset folder is empty!')
         else:
@@ -450,8 +453,8 @@ class ExperimentLogger:
             input_data_folder = self.input_data_exp_folder
             pretrain_folder = input_data_folder + 'pretrain_dataset/'
             os.makedirs(pretrain_folder)
-            train = self._get_files_from_paths(pretrain_dataset_path)
-            self._put_midis_in_folder(train, pretrain_folder)
+            train_files = self._get_files_from_paths(pretrain_dataset_path)
+            self._put_midis_in_folder(train_files, pretrain_folder)
             if not os.listdir(pretrain_folder):
                 raise AssertionError(f'pretrain_dataset folder is empty!')
             else:

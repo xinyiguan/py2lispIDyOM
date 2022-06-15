@@ -12,18 +12,21 @@ class IDyOMExperiment:
     :param test_dataset_path: The path to your test dataset (required)
     :param pretrain_dataset_path: The path to your pretrain dataset
     :param experiment_history_folder_path: The path to which you want to save all the result data/plots, defaults to None.
+    :param experiment_logger_name: The name of the experiment logger for the current experiment, defaults to the current timestamp.
 
     """
 
     test_dataset_path: str
     pretrain_dataset_path: str = None
     experiment_history_folder_path: str = None
+    experiment_logger_name: str = None
     idyom_config: IDyOMConfiguration = field(default_factory=IDyOMConfiguration)
 
     def __post_init__(self):
         self.logger = ExperimentLogger(pretrain_dataset_path=self.pretrain_dataset_path,
                                        test_dataset_path=self.test_dataset_path,
-                                       experiment_history_folder_path=self.experiment_history_folder_path)
+                                       experiment_history_folder_path=self.experiment_history_folder_path,
+                                       experiment_logger_name=self.experiment_logger_name)
 
     def _update_idyom_config(self):
         test_dataset_id = self._generate_test_dataset_id()
