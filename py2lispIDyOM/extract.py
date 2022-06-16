@@ -21,8 +21,9 @@ def get_dictionary(file: str) -> dict:
     """
 
     dict = {}
-    f = open(file, "r")
-    lines = f.readlines()
+    # f = open(file, "r")
+    with open(file, 'r') as f:
+        lines = f.readlines()
     keys = lines[0].split()
     for i in range(1, len(lines)):
         fields = lines[i].split()
