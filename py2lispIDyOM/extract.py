@@ -100,7 +100,7 @@ class MelodyInfo(pd.DataFrame):
         """
 
         output_values = (self.access_idyom_output_keywords([idyom_output_key]).values.tolist())
-        output_values_array = [item for sublist in output_values for item in sublist]
+        output_values_array = np.array([item for sublist in output_values for item in sublist])
         return output_values_array
 
     def get_idyom_output_keyword_list(self) -> list:

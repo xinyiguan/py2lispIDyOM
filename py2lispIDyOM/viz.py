@@ -1,8 +1,8 @@
 import os
 from typing import List
-
 import matplotlib
 import matplotlib.pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 import numpy as np
 
 from py2lispIDyOM.extract import MelodyInfo, ExperimentInfo
@@ -176,12 +176,12 @@ class BasicAxsGeneration:
         colored_image[background_mask] = np.array([68, 1, 84])
         colored_image = colored_image.astype(int)
 
-        ax.imshow(colored_image, origin='lower', aspect='auto',
-                  extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         # ax.axis('image')
-        # ax.set_xlabel("Time in quarter note")
+        ax.set_xlabel("Time in quarter note")
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
         ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
+        ax = ax.imshow(colored_image, origin='lower', aspect='auto',
+                       extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         return ax
 
     @staticmethod
@@ -192,12 +192,33 @@ class BasicAxsGeneration:
 
         duration_in_ticks = melody_info._get_pianoroll_original().shape[1]
         pianoroll_distribution_array = melody_info._get_pianoroll_pitch_distribution()
-        ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
-                  extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
-
-        # ax.title.set_text('Pitch Prediction')
-        # ax.set_xlabel("Time in quarter note")
         ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
+        ax.set_xlabel("Time in quarter note")
+        ax = ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
+                       extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
+
+        return ax
+
+    @staticmethod
+    def ax_suprisal_colorbar(ax: matplotlib.axes.Axes,
+                             melody_info: MelodyInfo,
+                             color='viridis'):
+        surprisal_values = melody_info.get_idyom_output_nparray('information.content')
+        # print(surprisal_values)
+        # extent = [min(surprisal_values), max(surprisal_values)]
+        # ax.set_xticks(np.arange(*(extent + [1])), minor=True)
+        ax.set_xlabel('Information content (surprisal) values')
+        ax = ax.imshow(X=surprisal_values.reshape(1, -1), cmap=color, origin='lower')
+        return ax
+
+    @staticmethod
+    def ax_blank_colorbar(ax: matplotlib.axes.Axes,
+                          melody_info: MelodyInfo,
+                          color='gray'):
+        surprisal_values = melody_info.get_idyom_output_nparray('information.content')
+        seq_len = len(surprisal_values)
+        blank_seq = np.zeros(seq_len)
+        ax = ax.imshow(X=blank_seq.reshape(1, -1), cmap=color, origin='lower')
         return ax
 
     @staticmethod
@@ -205,8 +226,8 @@ class BasicAxsGeneration:
                 melody_info: MelodyInfo,
                 color=None):
 
-        entropy_values = np.int_(melody_info.access_properties(['entropy']))
-        onset_values = np.int_(melody_info.access_properties(['onset']))
+        entropy_values = melody_info.get_idyom_output_nparray('entropy')
+        onset_values = melody_info.get_idyom_output_nparray('onset')
         ax.plot(onset_values, entropy_values, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
@@ -223,8 +244,8 @@ class BasicAxsGeneration:
                   melody_info: MelodyInfo,
                   color=None):
 
-        surprisal_values = np.int_(melody_info.access_properties(['information.content']))
-        onset_values = np.int_(melody_info.access_properties(['onset']))
+        surprisal_values = melody_info.get_idyom_output_nparray('information.content')
+        onset_values = melody_info.get_idyom_output_nparray('onset')
         ax.plot(onset_values, surprisal_values, color=color)
         ax.margins(x=0.01)
         ax.margins(y=0)
@@ -323,7 +344,8 @@ class BasicPlot:
                                                dpi: float = 400,
                                                figsize: tuple = (10, 10),
                                                nrows: int = 2,
-                                               ncols: int = 1, ):
+                                               ncols: int = 1,
+                                               probability_colorbar: bool = False):
 
         """
         Generate a pair of figures (the predicted pitch distribution and the ground truth) side by side.
@@ -341,22 +363,36 @@ class BasicPlot:
         :param figsize: (optional), default is (10,5)
         :param ncols: (optional), the number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
         :param nrows: (optional), the number of columns of the figure. By default, ncols = 2, nrows = 1, figures are shown side-by-side.
-
+        :param probability_colorbar: (optional) whether to show the color bar for the probabilities of the predict pitch or not.
         """
 
         plot_type_folder_name = 'pianoroll_pitch_prediction_groundtruth'
 
         def _pianoroll_pitch_prediction_groundtruth(melody_info: MelodyInfo,
-                                                    show_single_fig: bool = showfig) -> plt.Figure:
+                                                    show_single_fig: bool = showfig,
+                                                    probability_colorbar: bool = probability_colorbar) -> plt.Figure:
 
             melody_name_pprint = melody_info._get_melody_name_pprint()
 
             fig, (ax_distribution, ax_groundtruth) = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize, dpi=dpi)
+            fig.subplots_adjust(wspace=0.03)
             fig.suptitle('IDyOM Pitch prediction vs Ground truth \n\n Melody name: ' + melody_name_pprint)
 
-            BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
-            BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
-            # ax_groundtruth.title.set_text('Ground Truth')
+            distribution = BasicAxsGeneration.pianoroll_pitch_distribution(ax_distribution, melody_info=melody_info)
+            groundtruth = BasicAxsGeneration.pianoroll(ax_groundtruth, melody_info=melody_info)
+
+            if probability_colorbar is True:
+                distribution_divider = make_axes_locatable(ax_distribution)
+                ax_surprise = distribution_divider.append_axes("right", size="3%", pad=0.05)
+                cb_surprisal = fig.colorbar(distribution, cax=ax_surprise)
+                cb_surprisal.set_label('Probabilities of predicted pitches')
+
+                truth_divider = make_axes_locatable(ax_groundtruth)
+                ax_blank = truth_divider.append_axes("right", size="3%", pad=0.05)
+                # cb_blank = fig.colorbar(groundtruth, cax=ax_blank)
+                ax_blank.axis('off')
+            else:
+                pass
 
             plt.xlabel("Time in quarter note")
             plt.tight_layout()
@@ -365,7 +401,6 @@ class BasicPlot:
                 plt.show()
             else:
                 pass
-
             return fig
 
         Auxiliary.batch_melodies_plots(plot_method_func=_pianoroll_pitch_prediction_groundtruth,

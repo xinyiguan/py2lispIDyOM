@@ -7,8 +7,9 @@ def plots():
     pitch_pred_plot = BasicPlot.pianoroll_pitch_prediction_groundtruth(experiment_folder_path=experiment_folder_path,
                                                                        melody_names=['"chor-003"'],
                                                                        savefig=True,
-                                                                       fig_format='png',
-                                                                       dpi=400
+                                                                       fig_format='svg',
+                                                                       dpi=400,
+                                                                       probability_colorbar=True
                                                                        )
 
 
