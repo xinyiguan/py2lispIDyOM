@@ -6,7 +6,7 @@ We will use the IDyOM outputs from the experiment "25-05-22_14.10.29"
 import unittest
 from unittest import TestCase
 from py2lispIDyOM.export import Export
-from py2lispIDyOM.extract import ExperimentInfo, MelodyInfo
+from py2lispIDyOM.extract import ExperimentInfo
 import numpy as np
 import scipy.io
 import pandas as pd
@@ -96,7 +96,11 @@ class TestExport(TestCase):
         for idx, val in idyom_keywords_checklist:
             self.assertEqual(chor003.get_idyom_output_nparray(val), chor003_df.keys(val))
 
+        chor004 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-004"']
+        chor004_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-004.csv')
 
+        for idx, val in idyom_keywords_checklist:
+            self.assertEqual(chor004.get_idyom_output_nparray(val), chor004_df.keys(val))
 
 
 
