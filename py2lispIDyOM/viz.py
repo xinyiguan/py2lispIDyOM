@@ -7,6 +7,13 @@ import numpy as np
 
 from py2lispIDyOM.extract import MelodyInfo, ExperimentInfo
 
+# style customization:
+
+matplotlib.rcParams['xtick.labelsize'] = 16
+matplotlib.rcParams['ytick.labelsize'] = 16
+matplotlib.rcParams['axes.labelsize'] = 16
+matplotlib.rcParams['figure.titlesize'] = 20
+
 
 class BasicAxsGeneration:
 
@@ -141,7 +148,6 @@ class BasicAxsGeneration:
         yticks = np.arange(0, max(max_ic, max_entropy) + 1)
 
         ax.set_xticks(ticks=xticks, minor=True)
-        ax.set_xlabel('Time in quarter note')
         ax.set_yticks(ticks=yticks, minor=True)
         ax.legend()
         if grid is True:
@@ -177,9 +183,8 @@ class BasicAxsGeneration:
         colored_image = colored_image.astype(int)
 
         # ax.axis('image')
-        ax.set_xlabel("Time in quarter note")
         # ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
+        ax.set_ylabel('Pitch (MIDI number)')
         ax = ax.imshow(colored_image, origin='lower', aspect='auto',
                        extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
         return ax
@@ -192,8 +197,7 @@ class BasicAxsGeneration:
 
         duration_in_ticks = melody_info._get_pianoroll_original().shape[1]
         pianoroll_distribution_array = melody_info._get_pianoroll_pitch_distribution()
-        ax.set_ylabel('Pitch (MIDI number)', fontsize=10)
-        ax.set_xlabel("Time in quarter note")
+        ax.set_ylabel('Pitch (MIDI number)')
         ax = ax.imshow(pianoroll_distribution_array, origin='lower', aspect='auto',
                        extent=[0, duration_in_ticks / 24, pitch_min, pitch_max])
 
@@ -235,7 +239,7 @@ class BasicAxsGeneration:
         ax.spines['right'].set_visible(False)
         ax.set_xlabel("Time in quarter note")
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Entropy', fontsize=10)
+        ax.set_ylabel('Entropy')
 
         return ax
 
@@ -251,7 +255,7 @@ class BasicAxsGeneration:
         ax.margins(y=0)
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
-        ax.set_ylabel('Information Content (Surprisal) \n -log(P)', fontsize=10)
+        ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
         return ax
 
     @staticmethod
@@ -269,7 +273,7 @@ class BasicAxsGeneration:
         ax.spines['right'].set_visible(False)
         # ax.set_xlabel('Time in quarter note')
         #    ax.xaxis.set_ticklabels([])  # hide xtick labels
-        ax.set_ylabel('Information Content (Surprisal) \n -log(P)', fontsize=10)
+        ax.set_ylabel('Information Content (Surprisal) \n -log(P)')
         return ax
 
 
@@ -383,18 +387,18 @@ class BasicPlot:
 
             if probability_colorbar is True:
                 distribution_divider = make_axes_locatable(ax_distribution)
-                ax_surprise = distribution_divider.append_axes("right", size="3%", pad=0.05)
+                ax_surprise = distribution_divider.append_axes("right", size="3%", pad=0.1)
                 cb_surprisal = fig.colorbar(distribution, cax=ax_surprise)
                 cb_surprisal.set_label('Probabilities of predicted pitches')
 
                 truth_divider = make_axes_locatable(ax_groundtruth)
-                ax_blank = truth_divider.append_axes("right", size="3%", pad=0.05)
+                ax_blank = truth_divider.append_axes("right", size="3%", pad=0.1)
                 # cb_blank = fig.colorbar(groundtruth, cax=ax_blank)
                 ax_blank.axis('off')
             else:
                 pass
 
-            plt.xlabel("Time in quarter note")
+            fig.supxlabel("Time in quarter note")
             plt.tight_layout()
 
             if show_single_fig is True:
@@ -447,12 +451,13 @@ class BasicPlot:
             melody_name_pprint = melody_info._get_melody_name_pprint()
 
             fig, (ax_pianoroll, ax_surprisal) = plt.subplots(2, 1, figsize=figsize, dpi=dpi, sharex='col')
+            fig.subplots_adjust(wspace=0.03)
             fig.suptitle('IDyOM Information Content (Surprisal) \n\n Melody: ' + melody_name_pprint)
 
             BasicAxsGeneration.pianoroll(ax_pianoroll, melody_info=melody_info)
             BasicAxsGeneration.surprisal_continuous(ax_surprisal, melody_info=melody_info)
 
-            plt.xlabel("Time in quarter note")
+            fig.supxlabel("Time in quarter note")
             plt.tight_layout()
 
             if show_single_fig is True:
@@ -516,8 +521,7 @@ class BasicPlot:
             melody_name_pprint = melody_info._get_melody_name_pprint()
             fig, (ax_generic_property) = plt.subplots(nrows=1, ncols=1, figsize=figsize, dpi=dpi, sharex='col')
 
-            fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint,
-                         fontsize=15)
+            fig.suptitle('Selected IDyOM outputs: ' + selected_idyom_output + '\n\n Melody: ' + melody_name_pprint)
             BasicAxsGeneration.generic_idyom_output_along_time(ax_generic_property,
                                                                melody_info=melody_info,
                                                                selected_idyom_output=selected_idyom_output,
@@ -597,7 +601,8 @@ class BasicPlot:
                                                                 ic_color='C0',
                                                                 entropy_color='C1',
                                                                 grid=grid)
-
+            fig.supxlabel('Time in quarter note')
+            fig.supylabel('Surprisal or entropy values')
             plt.tight_layout()
 
             if show_single_fig is True:
@@ -675,6 +680,7 @@ class BasicPlot:
             # plot a number of surprisal plots stacked one on top of each other, shared x, y
             # add every single subplot to the figure with a for loop
             fig, axs = plt.subplots(num_of_surprisal_subplots, figsize=figsize, dpi=dpi, sharex='col', sharey='row')
+            fig.subplots_adjust(wspace=0.03)
             fig.suptitle('IDyOM Information Content (Surprisal) \n\n Melody: ' + melody_name_pprint)
 
             for idx, surprisal_type in enumerate(all_surprisal_sources):
@@ -685,7 +691,9 @@ class BasicPlot:
                                                        color=str('C' + str(idx)),
                                                        yticks=yticks)
 
-            plt.xlabel("Time in quarter note")
+            fig.supxlabel("Time in quarter note")
+            fig.supylabel(t='Information Content (Surprisal)\n-log(P)', x=0.04, ha='center')
+
             plt.tight_layout()
             plt.style.use('ggplot')
 
