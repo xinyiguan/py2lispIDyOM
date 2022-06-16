@@ -77,8 +77,7 @@ For the processing and analysis of the IDyOM outputs, we implemented three funct
 In the current version, we provided several common types of figures as shown below in the `visualization` module.
 For example, for each test melody, we can show the piano roll plots for pitch prediction distribution (\autoref{fig:Fig1}, upper panel) and visually compare it to the ground truth (\autoref{fig:Fig1}, lower panel) for this particular melody.
 The surprisal values can be visualized along with the corresponding piano roll, as illustrated in \autoref{fig:Fig2}.
-The model's output for distinct viewpoints can be visualized in \autoref{fig:Fig3, upper panel: pitch only, middle panel: onset only, lower panel: pitch and onset combined}. 
-
+The model's output for distinct viewpoints can be visualized in \autoref{fig:Fig3} (upper panel: pitch only, middle panel: onset only, lower panel: pitch and onset combined). 
 \autoref{fig:Fig4} displays the predicted surprisal and entropy values (based on the pitch and onset combined model).
 All plotting functions in this package follow the same syntax, and therefore users can easily customize their own figures by using the provided examples. 
 The package includes tutorials in the form of Jupyter notebooks on the GitHub repository.
