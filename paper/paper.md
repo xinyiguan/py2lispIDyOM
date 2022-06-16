@@ -54,9 +54,9 @@ small community of users in music psychology and music cognition in this day and
 assumed that users, who are often new to the Lisp language, are familiar with Emacs and SLIME, which themselves can take
 up a lot of time and energy to learn. Therefore, obtaining the IDyOM outputs can be discouraging and time-consuming.
 
-As a result, to help researchers further bring insights in the music cognition domain, we introduce the `py2lispIDyOM`
+To help researchers further bring insights in the music cognition domain, we introduce the `py2lispIDyOM`
 package which aims to fill this gap by providing an easy-to-use Python-based interface to run IDyOM model and harness
-the extensive support libraries in Python to conduct IDyOM-based analysis. With `py2lispIDyOM`, we reduce the challenge
+the extensive support libraries in Python to conduct IDyOM-based analysis. With `py2lispIDyOM`, we circumvent the challenge
 of writing Lisp codes and hide the complexities of the necessary interactions with Lisp in Emacs from the users.
 
 # Summary
