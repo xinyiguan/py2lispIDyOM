@@ -37,24 +37,27 @@ class TestExport(TestCase):
 
         self.assertEqual(chor001.get_idyom_output_nparray('cpitch').all(), chor001_cpitch_mat_data.all())
 
-        chor001_cpitch_entropy_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor001_cpitch_entropy.mat')
+        chor001_cpitch_entropy_mat = scipy.io.loadmat(
+            experiment_folder_path + 'outputs_in_mat/chor001_cpitch_entropy.mat')
         chor001_cpitch_entropy_mat_data = chor001_cpitch_entropy_mat['cpitch_entropy']
         chor001_cpitch_entropy_mat_data = np.array([x for xs in chor001_cpitch_entropy_mat_data for x in xs])
 
-        self.assertEqual(chor001.get_idyom_output_nparray('cpitch.entropy').all(), chor001_cpitch_entropy_mat_data.all())
+        self.assertEqual(chor001.get_idyom_output_nparray('cpitch.entropy').all(),
+                         chor001_cpitch_entropy_mat_data.all())
 
-        chor001_information_content_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor001_information_content.mat')
+        chor001_information_content_mat = scipy.io.loadmat(
+            experiment_folder_path + 'outputs_in_mat/chor001_information_content.mat')
         chor001_information_content_mat_data = chor001_information_content_mat['information_content']
         chor001_information_content_mat_data = np.array([x for xs in chor001_information_content_mat_data for x in xs])
 
-        self.assertEqual(chor001.get_idyom_output_nparray('information.content').all(), chor001_information_content_mat_data.all())
+        self.assertEqual(chor001.get_idyom_output_nparray('information.content').all(),
+                         chor001_information_content_mat_data.all())
 
         chor001_onset_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor001_onset.mat')
         chor001_onset_mat_data = chor001_onset_mat['onset']
         chor001_onset_mat_data = np.array([x for xs in chor001_onset_mat_data for x in xs])
 
         self.assertEqual(chor001.get_idyom_output_nparray('onset').all(), chor001_onset_mat_data.all())
-
 
         chor002 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-002"']
 
@@ -64,24 +67,27 @@ class TestExport(TestCase):
 
         self.assertEqual(chor002.get_idyom_output_nparray('cpitch').all(), chor002_cpitch_mat_data.all())
 
-        chor002_cpitch_entropy_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor002_cpitch_entropy.mat')
+        chor002_cpitch_entropy_mat = scipy.io.loadmat(
+            experiment_folder_path + 'outputs_in_mat/chor002_cpitch_entropy.mat')
         chor002_cpitch_entropy_mat_data = chor002_cpitch_entropy_mat['cpitch_entropy']
         chor002_cpitch_entropy_mat_data = np.array([x for xs in chor002_cpitch_entropy_mat_data for x in xs])
 
-        self.assertEqual(chor002.get_idyom_output_nparray('cpitch.entropy').all(), chor002_cpitch_entropy_mat_data.all())
+        self.assertEqual(chor002.get_idyom_output_nparray('cpitch.entropy').all(),
+                         chor002_cpitch_entropy_mat_data.all())
 
-        chor002_information_content_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor002_information_content.mat')
+        chor002_information_content_mat = scipy.io.loadmat(
+            experiment_folder_path + 'outputs_in_mat/chor002_information_content.mat')
         chor002_information_content_mat_data = chor002_information_content_mat['information_content']
         chor002_information_content_mat_data = np.array([x for xs in chor002_information_content_mat_data for x in xs])
 
-        self.assertEqual(chor002.get_idyom_output_nparray('information.content').all(), chor002_information_content_mat_data.all())
+        self.assertEqual(chor002.get_idyom_output_nparray('information.content').all(),
+                         chor002_information_content_mat_data.all())
 
         chor002_onset_mat = scipy.io.loadmat(experiment_folder_path + 'outputs_in_mat/chor002_onset.mat')
         chor002_onset_mat_data = chor002_onset_mat['onset']
         chor002_onset_mat_data = np.array([x for xs in chor002_onset_mat_data for x in xs])
 
         self.assertEqual(chor002.get_idyom_output_nparray('onset').all(), chor002_onset_mat_data.all())
-
 
     def test_csv_file_check(self):
         experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
@@ -102,7 +108,5 @@ class TestExport(TestCase):
             self.assertEqual(chor004.get_idyom_output_nparray(val).all(), np.array(chor004_df[val]).all())
 
 
-
 if __name__ == '__main__':
     unittest.main()
-

@@ -30,5 +30,6 @@ class TestExtract(TestCase):
         for idx, val in enumerate(keywords_to_match):
             self.assertIn(val, test_melody.get_idyom_output_keyword_list())
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     unittest.main()
