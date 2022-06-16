@@ -9,6 +9,7 @@ from py2lispIDyOM.export import Export
 from py2lispIDyOM.extract import ExperimentInfo, MelodyInfo
 import numpy as np
 import scipy.io
+import pandas as pd
 
 
 def generate_mat_files():
@@ -18,6 +19,10 @@ def generate_mat_files():
            idyom_output_keywords=idyom_output_keywords,
            melody_names=['"chor-001"', '"chor-002"']).export2mat()
 
+def generate_csv_files():
+    experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
+    Export(experiment_folder_path=experiment_folder_path,
+           melody_names=['"chor-003"', '"chor-004"']).export2csv()
 
 class TestExport(TestCase):
 
@@ -81,8 +86,23 @@ class TestExport(TestCase):
     def export_csv_file_check(self):
         experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
 
+        idyom_keywords_checklist = ['cpitch', 'onset', 'cpitch.information.content', 'onset.information.content',
+                                    'information.content', 'entropy', 'probability',
+                                    'cpitch.probability', 'onset.probability', 'onset.entropy', 'cpitch.entropy']
+
+        chor003 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-003"']
+        chor003_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-003.csv')
+
+        for idx, val in idyom_keywords_checklist:
+            self.assertEqual(chor003.get_idyom_output_nparray(val), chor003_df.keys(val))
+
+
+
+
 
 if __name__ == '__main__':
     # generate_mat_files()
+    # generate_csv_files()
     unittest.main()
+
 
