@@ -75,27 +75,25 @@ to, the datasets used for the experiment, the generated Lisp script, and the IDy
 For the processing and analysis of the IDyOM outputs, we implemented three functionalities as modules: `extract`
 , `export`, and `visualization`. Each module contains methods that we frequently used in our previous research projects.
 In the current version, we provided several common types of figures as shown below in the `visualization` module.
-For example, for each test melody, we can show the piano roll plots for pitch prediction distribution and the ground truth (\autoref{fig:Fig1}).
-\autoref{fig:Fig2} shows the piano roll plot with each note aligned with the corresponding surprisal value.
-\autoref{fig:Fig3} is an instance of plotting the surprisal values for each target viewpoint and the overall surprisal value.
-\autoref{fig:Fig4} is an example of plotting the chosen surprisal and entropy values (here is the overall surprisal and entropy).
-As all plotting functions follow the same construction logic, users can easily customize their own figures by following
-the same fashion.
-The package includes tutorials in the form of Jupyter notebooks on the GitHub repository.
-These tutorials demonstrate the usage of the aforementioned functionalities.
+For example, for each test melody, we can show the piano roll plots for pitch prediction distribution (\autoref{fig:Fig1}, upper panel) and visually compare it to the ground truth (\autoref{fig:Fig1}, lower panel) for this particular melody.
+The surprisal values can be visualized along with the corresponding piano roll, as illustrated in \autoref{fig:Fig2}.
+The model's output for distinct viewpoints can be visualized in \autoref{fig:Fig3, upper panel: pitch only, middle panel: onset only, lower panel: pitch and onset combined}. 
 
-The package has been used in several ongoing research projects at the Max Planck - NYU Center for Language, Music and
-Emotion. Therefore, we hope this package can bring similar values to other research groups working on IDyOM-based
-analysis.
+\autoref{fig:Fig4} displays the predicted surprisal and entropy values (based on the pitch and onset combined model).
+All plotting functions in this package follow the same syntax, and therefore users can easily customize their own figures by using the provided examples. 
+The package includes tutorials in the form of Jupyter notebooks on the GitHub repository.
+These tutorials present examples using the aforementioned functionalities.
+
+The package has been used in several ongoing research projects at the Max Planck - NYU Center for Language, Music and Emotion. Therefore, we hope this package can bring similar values to other research groups working on IDyOM-based analysis.
 
 # Figures
  
-![Pitch prediction distribution compared with the ground truth piano roll plots for melody "chor-003". \label{fig:Fig1}](figures/pitch-pred-chor-003.png){ width=85% }
+![Upper panel: Model's prediction of pitch distribution for melody "chor-003". Lower panel: display of the ground truth piano roll for melody "chor-003". \label{fig:Fig1}](figures/pitch-pred-chor-003.png){ width=85% }
 
-![Ground truth piano roll plot aligned with IDyOM surprisal output plot for melody "chor-003".\label{fig:Fig2}](figures/groundtruth-surprisal-chor-003.png){ width=85% }
+![Upper panel: Display of ground truth piano roll plot of for melody "chor-003". Lower panel: model's surprisal output plot for melody "chor-003" is aligned.\label{fig:Fig2}](figures/groundtruth-surprisal-chor-003.png){ width=85% }
 
-![IDyOM surprisal outputs of each target viewpoints (pitch and onset) and overall/combined surprisal outputs for melody "chor-003".\label{fig:Fig3}](figures/all-surprisals-chor-003.png){ width=85% }
+![Model's surprisal outputs of each target viewpoints for melody "chor-003" is displayed: picth (upper panel), onset (middle panel) and overall/combined (lower panel).\label{fig:Fig3}](figures/all-surprisals-chor-003.png){ width=85% }
 
-![IDyOM overall/combined surprisal and entropy outputs for melody "chor-003".\label{fig:Fig4}](figures/surprisal-entropy-chor-003.png){ width=85% }
+![Model's overall/combined surprisal and entropy outputs for melody "chor-003" is displayed.\label{fig:Fig4}](figures/surprisal-entropy-chor-003.png){ width=85% }
 
 # References
