@@ -219,7 +219,7 @@ class ExperimentInfo:
                  - MelodyInfo: a MelodyInfo class containing all IDyOM output data of the melody
 
 
-        :rtype: typed dict -> {melody_name, MelodyInfo}
+        :rtype: typed dict -> {melody_name: MelodyInfo}
         """
 
         return_dict = {}
