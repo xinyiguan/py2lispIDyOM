@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>extract &mdash; py2lispIDyOM  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/autoclasstoc.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="export" href="export.html" />
+    <link rel="prev" title="run" href="run_idyom.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> py2lispIDyOM
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api_reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="run_idyom.html">run</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">extract</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">py2lispIDyOM</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="api_reference.html">API Reference</a> &raquo;</li>
+      <li>extract</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/extract.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="extract">
+<h1>extract<a class="headerlink" href="#extract" title="Permalink to this heading"></a></h1>
+<p>This module implements some common functions to extract the outputs of the IDyOM model.</p>
+<p>For more concrete examples on extracting data,
+please see the <a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2a_data_preprocessing_extracting.ipynb">tutorial</a>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">ExperimentInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#ExperimentInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo" title="Permalink to this definition"></a></dt>
+<dd><p>An experiment object that contains all data in a single experiment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>experiment_folder_path</strong> (<em>str</em>) – the path to experiment log folder which you want to access.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.access_melodies">
+<span class="sig-name descname"><span class="pre">access_melodies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">starting_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ending_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">melody_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#ExperimentInfo.access_melodies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.access_melodies" title="Permalink to this definition"></a></dt>
+<dd><p>Access specific melodies by index or melody names.
+If all arguments are None, then the default is to access all melodies in the Experiment class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>starting_index</strong> (<em>int</em>) – the index of the melody you want to start accessing</p></li>
+<li><p><strong>ending_index</strong> (<em>int</em>) – the index of the melody you want to end accessing</p></li>
+<li><p><strong>melody_names</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of meldoy names you want to access</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of MelodyInfo class objects (selected melodies)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="#py2lispIDyOM.extract.MelodyInfo" title="py2lispIDyOM.extract.MelodyInfo">MelodyInfo</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo.melody_dictionary">
+<span class="sig-name descname"><span class="pre">melody_dictionary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#ExperimentInfo.melody_dictionary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary" title="Permalink to this definition"></a></dt>
+<dd><p>Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><p>a dictionary consisting of:</p>
+<ul class="simple">
+<li><p>melody_name: the name of the melody</p></li>
+<li><p>MelodyInfo: a MelodyInfo class containing all IDyOM output data of the melody</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typed dict -&gt; {melody_name, MelodyInfo}</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">MelodyInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_pitch_element_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_experiment</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#MelodyInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo" title="Permalink to this definition"></a></dt>
+<dd><p>A melody object (pd.DataFrame) that contains all data in a single melody inherit from the parent Experiment.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords">
+<span class="sig-name descname"><span class="pre">access_idyom_output_keywords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_keywords</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#MelodyInfo.access_idyom_output_keywords"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords" title="Permalink to this definition"></a></dt>
+<dd><p>Access certain idyom output(s) via its (their) keyword(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_keywords</strong> (<em>List</em><em>[</em><em>str</em><em>]</em>) – A list of IDyOM output keywords (e.g., [‘cpitch.information.content’, ‘onset’, ‘entropy’])</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dataframe containing all data of the selected IDyOM outputs according to the specified keywords.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.compute_properties_means">
+<span class="sig-name descname"><span class="pre">compute_properties_means</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idyom_outputs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#MelodyInfo.compute_properties_means"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.compute_properties_means" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the mean values of the idyom outputs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idyom_outputs</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – list of idyom output keyword to compute the means</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p><em>List</em>[str]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the mean values of selected idyom outputs</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list">
+<span class="sig-name descname"><span class="pre">get_idyom_output_keyword_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#MelodyInfo.get_idyom_output_keyword_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list" title="Permalink to this definition"></a></dt>
+<dd><p>Get a list of available IDyOM output keyword for this melody.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of available IDyOM output keyword</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list(str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray">
+<span class="sig-name descname"><span class="pre">get_idyom_output_nparray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idyom_output_key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/py2lispIDyOM/extract.html#MelodyInfo.get_idyom_output_nparray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray" title="Permalink to this definition"></a></dt>
+<dd><p>Get the IDyOM output via its key as a np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>idyom_output_key</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – list of str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an array of the specified output values</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>np.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="run_idyom.html" class="btn btn-neutral float-left" title="run" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="export.html" class="btn btn-neutral float-right" title="export" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Xinyi Guan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

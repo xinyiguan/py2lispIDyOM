@@ -40,7 +40,7 @@ It can be installed using pip or directly from the source code.
 Basic installation options include:
 
 - From PyPI using pip: `pip install py2lispIDyOM`
-- Download or gitclone this repository
+- Download or gitclone this repository.
 
 ## Functionality and Usage
 

@@ -1,264 +1,213 @@
-
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-    <title>py2lispIDyOM: A Python package for IDyOM &#8212; py2lispIDyOM  documentation</title>
-<script>
-  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
-</script>
-
-  <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
-
-
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/autoclasstoc.css" />
-
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
-
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>py2lispIDyOM: A Python package for IDyOM &mdash; py2lispIDyOM  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/autoclasstoc.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="py2lispIDyOM: A Python package for IDyOM" href="README.html" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="docsearch:language" content="en">
-  </head>
-  
-  
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
-    <div class="bd-header-announcement container-fluid" id="banner">
-      
+    <link rel="next" title="API Reference" href="api_reference.html" /> 
+</head>
 
-    </div>
-
-    
-    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
-
-  <div id="navbar-start">
-    
-    
-  
-
-
-<a class="navbar-brand logo" href="#">
-  
-  
-  
-  
-  
-    <p class="title logo__title">py2lispIDyOM  documentation</p>
-  
-</a>
-    
-  </div>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="fas fa-bars"></span>
-  </button>
-
-  
-  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <ul id="navbar-main-elements" class="navbar-nav">
-    <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="README.html">
-  User Guide
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="api_reference.html">
-  API Reference
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="how_to_contribute.html">
-  How to contribute
- </a>
-</li>
-
-    
-</ul>
-      </div>
-      
-    </div>
-
-    <div id="navbar-end">
-      
-      <div class="navbar-end-item">
-        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
-    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
-    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
-    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
-</span>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/xinyiguan/py2lispIDyOM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-      </ul>
-      </div>
-      
-    </div>
-  </div>
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> py2lispIDyOM
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
 </div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
     </nav>
-    
 
-    <div class="bd-container container-xl">
-      <div class="bd-container__inner row">
-          
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">py2lispIDyOM</a>
+      </nav>
 
-<!-- Only show if we have sidebars configured, else just a small margin  -->
-<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
-  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
-    
-  </div>
-</nav>
-  </div>
-  <div class="sidebar-end-items">
-  </div>
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>py2lispIDyOM: A Python package for IDyOM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
 </div>
-
-
-          
-
-
-<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
-  
-    
-    <div class="toc-item">
-      
-<div class="tocsection onthispage mt-5 pt-1 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
-
-<nav id="bd-toc-nav">
-    <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#content">
-   Content
-  </a>
- </li>
-</ul>
-
-</nav>
-    </div>
-    
-    <div class="toc-item">
-      
-    </div>
-    
-  
-</div>
-
-
-          
-          
-          <div class="bd-content col-12 col-md-9 col-xl-7">
-              
-              <article class="bd-article" role="main">
-                
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <section id="py2lispidyom-a-python-package-for-idyom">
-<h1>py2lispIDyOM: A Python package for IDyOM<a class="headerlink" href="#py2lispidyom-a-python-package-for-idyom" title="Permalink to this heading">#</a></h1>
-<p><cite>py2lispIDyOM</cite> is an open-source Python package that serves as a unifying Python interface that simplifies and
-streamlines the research workflow for running the information dynamics of music (<a class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM</a>) model and analyzing output data.
-It is broadly aimed at researchers conducting IDyOM-based analysis in Python.</p>
-<section id="content">
-<h2>Content<a class="headerlink" href="#content" title="Permalink to this heading">#</a></h2>
+<h1>py2lispIDyOM: A Python package for IDyOM<a class="headerlink" href="#py2lispidyom-a-python-package-for-idyom" title="Permalink to this heading"></a></h1>
+<p>A Python package for the information dynamics of music (<a class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM</a>) model.</p>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#introduction">Introduction</a></p></li>
+<li><p><a class="reference external" href="#getting-started">Getting Started</a></p>
+<ul>
+<li><p><a class="reference external" href="#prerequisite">Prerequisite</a></p></li>
+<li><p><a class="reference external" href="#installing">Installing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#functionality-and-usage">Functionality and Usage</a></p>
+<ul>
+<li><p><a class="reference external" href="#basic-functionalities">Basic functionalities</a></p></li>
+<li><p><a class="reference external" href="#notebook-examples">Notebook examples</a></p></li>
+<li><p><a class="reference external" href="#important-notes">Important notes</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
+<p><cite>py2lispIDyOM</cite> is an open-source Python package broadly aimed at researchers conducting IDyOM-based analysis in Python.
+It serves as a unifying Python interface that simplifies and streamlines the research workflow for running the
+information dynamics of music (<a class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM</a>) model and analyzing output data.
+This package makes it easier to do the following two tasks: (i) configuring and running the IDyOM model,
+and (ii) processing and analyzing the IDyOM output data.</p>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<section id="prerequisite">
+<h3>Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink to this heading"></a></h3>
+<p>py2lispIDyOM requires IDyOM to be installed on the local machine. To start with, please read
+the (<a class="reference external" href="https://github.com/mtpearce/idyom/wiki/Installation">IDyOM installation page</a>) to appropriately install IDyOM.</p>
+</section>
+<section id="installing">
+<h3>Installing<a class="headerlink" href="#installing" title="Permalink to this heading"></a></h3>
+<p>The code is compatible with &gt;= Python 3.9.</p>
+<p>It can be installed using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">py2lispIDyOM</span></code></p>
+</section>
+</section>
+<section id="functionality-and-usage">
+<h2>Functionality and Usage<a class="headerlink" href="#functionality-and-usage" title="Permalink to this heading"></a></h2>
+<section id="basic-functionalities">
+<h3>Basic functionalities<a class="headerlink" href="#basic-functionalities" title="Permalink to this heading"></a></h3>
+<p>In summary, py2lispIDyOM has three main functionalities for research workflow:</p>
+<ul class="simple">
+<li><p>Running the IDyOM</p></li>
+<li><p>Data preprocessing (extract and export)</p></li>
+<li><p>Visualizing IDyOM outputs</p></li>
+</ul>
+<p>Please have a look at the (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/tree/master/tutorials/">tutorials</a>),
+which guides you through all three basic functionalities of through examples.</p>
+</section>
+<section id="notebook-examples">
+<h3>Notebook examples<a class="headerlink" href="#notebook-examples" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Running the IDyOM model: (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/1_running_IDyOM_tutorial.ipynb">1_running_IDyOM_tutorial.ipynb</a>)</p></li>
+<li><p>Data preprocessing:</p>
+<ul>
+<li><p>Extracting data: (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2a_data_preprocessing_extracting.ipynb">2a_data_preprocessing_extracting.ipynb</a>)</p></li>
+<li><p>Exporting data: (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2b_data_preprocessing_exporting.ipynb">2b_data_preprocessing_exporting.ipynb</a>)</p></li>
+</ul>
+</li>
+<li><p>Visualization: (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb">3_visualizing_outputs.ipynb</a>)</p></li>
+</ul>
+</section>
+<section id="important-notes">
+<h3>Important notes<a class="headerlink" href="#important-notes" title="Permalink to this heading"></a></h3>
+<p>To encourage an organized workflow and to improve the reproducibility of data, all data related to an experiment (used and produced)
+will be logged in a structured folder, which can be shared with other researchers. A sample of the structured
+experiment logger will look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>experiment_history
+└── 21-05-22_17.05.05
+    ├── experiment_input_data_folder
+    │   ├── pretrain_dataset
+    │   └── test_dataset
+    ├── experiment_output_data_folder
+    │   └── 66052122170523-cpitch_onset-cpitch_onset-99052122170523-nil-melody-nil-1-both-nil-t-nil-c-nil-t-t-x-3.dat
+    ├── outputs_in_csv
+    │   └── chor-005.csv
+    ├── compute.lisp
+    ├── outputs_in_mat
+    │   ├── information_content.mat
+    │   └── chor001_onset.mat
+    └── plots
+        ├── surprisals_plots
+        ├── entropy_plots
+        └── pianoroll_pitch_prediction_groundtruth
+</pre></div>
+</div>
+<p>I tried to make the code accessible and provide some examples in the tutorials for getting started smoothly.
+But there is still lots of room for better documentation, tutorials and testing.
+Please contact me if you have any questions or encounter bugs!</p>
+</section>
+</section>
+<section id="developer-s-guide">
+<h2>Developer’s Guide<a class="headerlink" href="#developer-s-guide" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="README.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="README.html#table-of-content">Table of Content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="README.html#getting-started">Getting Started</a></li>
-<li class="toctree-l2"><a class="reference internal" href="README.html#functionality-and-usage">Functionality and Usage</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="run_idyom.html">Run IDyOM model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="data_processing.html">IDyOM output data processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="visualization.html">Visualizing IDyOM outputs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="how_to_contribute.html">How to contribute</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">License</a></li>
 </ul>
 </div>
 </section>
 </section>
 
 
-              </article>
-              
-
-              
-              <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='right-next' id="next-link" href="README.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">py2lispIDyOM: A Python package for IDyOM</p>
-  </div>
-  <i class="fas fa-angle-right"></i>
-  </a>
-</div>
-              </footer>
-              
+           </div>
           </div>
-          
-      </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api_reference.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
-  
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
+  <hr/>
 
-<footer class="bd-footer"><div class="bd-footer__inner container">
-  
-  <div class="footer-item">
-    <p class="copyright">
-    &copy; Copyright 2022, Xinyi Guan.<br>
-</p>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Xinyi Guan.</p>
   </div>
-  
-  <div class="footer-item">
-    <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.1.<br>
-</p>
-  </div>
-  
-</div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
 </footer>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
