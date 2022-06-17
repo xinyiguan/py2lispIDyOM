@@ -5,5 +5,5 @@ autoclasstoc
 sphinx-autodoc-typehints
 pydata_sphinx_theme
 nbsphinx
-pandoc
 sphinx_gallery
+pypandoc
