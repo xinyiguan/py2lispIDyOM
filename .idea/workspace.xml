@@ -25,10 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="build.yml">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="doc revision and update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tutorials.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,14 +298,7 @@
       <workItem from="1655194811399" duration="10495000" />
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
-      <workItem from="1655452984356" duration="9365000" />
-    </task>
-    <task id="LOCAL-00110" summary="test_run.py">
-      <created>1653488035187</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1653488035187</updated>
+      <workItem from="1655452984356" duration="9546000" />
     </task>
     <task id="LOCAL-00111" summary="updated README">
       <created>1653488631355</created>
@@ -644,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655461759649</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="doc revision and update">
+      <created>1655462406375</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1655462406375</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +675,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="docs updated" />
     <MESSAGE value="updated docstring formats" />
     <MESSAGE value="paper revision and build pdf" />
     <MESSAGE value="build paper pdf" />
@@ -701,7 +699,8 @@
     <MESSAGE value="documentation updated" />
     <MESSAGE value="doc updated" />
     <MESSAGE value="build.yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="build.yml" />
+    <MESSAGE value="doc revision and update" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc revision and update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
