@@ -25,9 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs revision and update">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="update doc requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/run_idyom.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/run_idyom.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,21 +300,7 @@
       <workItem from="1655194811399" duration="10495000" />
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
-      <workItem from="1655452984356" duration="9928000" />
-    </task>
-    <task id="LOCAL-00113" summary="test_run.py">
-      <created>1653489270469</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1653489270469</updated>
-    </task>
-    <task id="LOCAL-00114" summary="updated README">
-      <created>1653490239823</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1653490239823</updated>
+      <workItem from="1655452984356" duration="10537000" />
     </task>
     <task id="LOCAL-00115" summary="figs in paper">
       <created>1653566479352</created>
@@ -643,7 +631,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655462709336</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="docs">
+      <created>1655462985366</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1655462985366</updated>
+    </task>
+    <task id="LOCAL-00163" summary="update doc requirements.txt">
+      <created>1655463172215</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1655463172215</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,8 +677,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="paper revision and build pdf" />
-    <MESSAGE value="build paper pdf" />
     <MESSAGE value="build JOSS paper pdf" />
     <MESSAGE value="paper revision and build JOSS paper pdf" />
     <MESSAGE value="paper citation revision, build JOSS paper pdf" />
@@ -700,7 +700,9 @@
     <MESSAGE value="build.yml" />
     <MESSAGE value="doc revision and update" />
     <MESSAGE value="docs revision and update" />
-    <option name="LAST_COMMIT_MESSAGE" value="docs revision and update" />
+    <MESSAGE value="docs" />
+    <MESSAGE value="update doc requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update doc requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

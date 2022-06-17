@@ -30,7 +30,7 @@ The output file of the IDyOM model are saved to the corresponding experiment log
 
 
 Valid parameters to configure the IDyOM model:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Required parameters**:
     - `target_viewpoints`: List[SingleViewpoint]
