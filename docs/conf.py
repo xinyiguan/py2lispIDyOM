@@ -16,19 +16,28 @@ from pathlib import Path
 from shutil import copy
 
 sys.path.insert(0, os.path.abspath('../'))
+sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 URL = "https://github.com/xinyiguan/py2lispIDyOM"
+
 # -- Copy README file --------------------------------------------------------
-copy(Path("../README.md"), Path("./README.md"))
+# copy(Path("../README.md"), Path("./README.md"))
+
+# -- Copy tutorial files --------------------------------------------------------
+copy(Path("../tutorials/1_running_IDyOM_tutorial.ipynb"), Path("./tutorials/1_running_IDyOM_tutorial.ipynb"))
+copy(Path("../tutorials/2a_data_preprocessing_extracting.ipynb"), Path("./tutorials/2a_data_preprocessing_extracting.ipynb"))
+copy(Path("../tutorials/2b_data_preprocessing_exporting.ipynb"), Path("./tutorials/2b_data_preprocessing_exporting.ipynb"))
+copy(Path("../tutorials/3_visualizing_outputs.ipynb"), Path("./tutorials/3_visualizing_outputs.ipynb"))
+
 
 # -- Project information -----------------------------------------------------
-
 project = 'py2lispIDyOM'
 copyright = '2022, Xinyi Guan'
 author = 'Xinyi Guan'
 
 # -- General configuration ---------------------------------------------------
-
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
@@ -55,11 +64,13 @@ exclude_patterns = ['_build']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "pydata_sphinx_theme"
-html_theme_options = {"show_prev_next": True, "github_url": URL}
+# html_theme = "pydata_sphinx_theme"
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {"show_prev_next": False, "github_url": URL}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 
 # html_static_path = ['_static']
+root_doc = 'index'

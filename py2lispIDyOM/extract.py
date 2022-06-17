@@ -73,7 +73,10 @@ class MelodyInfo(pd.DataFrame):
         Access certain idyom output(s) via its (their) keyword(s).
 
         :param output_keywords: A list of IDyOM output keywords (e.g., ['cpitch.information.content', 'onset', 'entropy'])
-        :return: pd.DataFrame
+        :type output_keywords: typing.List[str]
+
+        :return: a dataframe containing all data of the selected IDyOM outputs according to the specified keywords.
+        :rtype: pd.DataFrame
         """
 
         if isinstance(output_keywords, list):
@@ -97,10 +100,11 @@ class MelodyInfo(pd.DataFrame):
         Get the IDyOM output via its key as a np.array
 
         :param idyom_output_key: list of str
-        :return: np.array of output values
+        :return: an array of the specified output values
+        :rtype: np.array
         """
 
-        output_values = (self.access_idyom_output_keywords([idyom_output_key]).values.tolist())
+        output_values = self.access_idyom_output_keywords([idyom_output_key]).values.tolist()
         output_values_array = np.array([item for sublist in output_values for item in sublist])
         return output_values_array
 
@@ -108,7 +112,8 @@ class MelodyInfo(pd.DataFrame):
         """
         Get a list of available IDyOM output keyword for this melody.
 
-        :return: list
+        :return: a list of available IDyOM output keyword
+        :rtype: list(str)
         """
 
         idyom_output_keyword_list = self.keys().to_list()
@@ -118,8 +123,11 @@ class MelodyInfo(pd.DataFrame):
         """
         Compute the mean values of the idyom outputs.
 
-        :param idyom_outputs: list of strings
-        :return: DataFrame
+        :param idyom_outputs: list of idyom output keyword to compute the means
+        :type: typing.List[str]
+
+        :return: the mean values of selected idyom outputs
+        :rtype: DataFrame
         """
 
         cropped_df = self[idyom_outputs]
@@ -189,7 +197,8 @@ class ExperimentInfo:
     """
     An experiment object that contains all data in a single experiment.
 
-    :param experiment_folder_path: The path to experiment log folder which you want to access.
+    :param experiment_folder_path: the path to experiment log folder which you want to access.
+    :type experiment_folder_path: str
     """
 
     experiment_folder_path: str
@@ -204,7 +213,13 @@ class ExperimentInfo:
         """
         Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.
 
-        :return: a typed dictionary (melody_name, MelodyInfo)
+        :return: a dictionary consisting of:
+
+                 - melody_name: the name of the melody
+                 - MelodyInfo: a MelodyInfo class containing all IDyOM output data of the melody
+
+
+        :rtype: typed dict -> {melody_name, MelodyInfo}
         """
 
         return_dict = {}
@@ -222,10 +237,17 @@ class ExperimentInfo:
         Access specific melodies by index or melody names.
         If all arguments are None, then the default is to access all melodies in the Experiment class
 
-        :param starting_index: int
-        :param ending_index: int
-        :param melody_names: list of str
+        :param starting_index: the index of the melody you want to start accessing
+        :type starting_index: int
+
+        :param ending_index: the index of the melody you want to end accessing
+        :type ending_index: int
+
+        :param melody_names: list of meldoy names you want to access
+        :type melody_names: list(str)
+
         :return: a list of MelodyInfo class objects (selected melodies)
+        :rtype: list(MelodyInfo)
         """
 
         if melody_names is not None:

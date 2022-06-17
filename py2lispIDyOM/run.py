@@ -1,18 +1,28 @@
+"""
+This module implements a class to configure and run the IDyOM model.
+"""
+
 import os
 from dataclasses import field, dataclass
-
 from py2lispIDyOM.configuration import get_timestamp, IDyOMConfiguration, ExperimentLogger
 
 
 @dataclass
 class IDyOMExperiment:
     """
-    A class to configure the IDyOM experiment.
+    A class to configure and run an IDyOM experiment
 
-    :param test_dataset_path: The path to your test dataset (required)
-    :param pretrain_dataset_path: The path to your pretrain dataset
-    :param experiment_history_folder_path: The path to which you want to save all the result data/plots, defaults to None.
-    :param experiment_logger_name: The name of the experiment logger for the current experiment, defaults to the current timestamp.
+    :param test_dataset_path: the path to your test dataset (required)
+    :type test_dataset_path: str
+
+    :param pretrain_dataset_path: the path to your pretrain dataset
+    :type pretrain_dataset_path: str
+
+    :param experiment_history_folder_path: the path to which you want to save all the result data/plots, defaults to None.
+    :type experiment_history_folder_path: str
+
+    :param experiment_logger_name: the name of the experiment logger for the current experiment, defaults to the current timestamp.
+    :type experiment_logger_name: str
 
     """
 
@@ -57,7 +67,8 @@ class IDyOMExperiment:
     def set_parameters(self, **kwargs):
         """
         Set the IDyOM model parameters.
-        :param kwargs: see the README or run_idyom_tutorial for a complete list of parameters (keyword arguments).
+
+        :param kwargs: see the API reference (the section below) for a complete list of valid parameters (keyword arguments).
 
         """
         configuration = self.idyom_config.run_model_configuration
@@ -83,9 +94,12 @@ class IDyOMExperiment:
     def generate_lisp_script(self, write=True):
         """
         Generate the LISP script for the IDyOM model configurations.
+
         :param write: whether to write the file or not, defaults to True.
         :type write: bool
+
         :return: the path to the lisp script file.
+        :rtype: str
         """
         self._update_idyom_config()
         path_to_file = self.logger.this_exp_folder

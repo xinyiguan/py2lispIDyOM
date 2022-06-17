@@ -1,16 +1,24 @@
-*************
-Run IDyOM model
-*************
+*****
+run
+*****
+
+This module implements a class to configure and run the IDyOM model.
+
+For more concrete examples on how to configure and run the IDyOM model,
+please see the `tutorial <https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/1_running_IDyOM_tutorial.ipynb>`__.
+
+To run the IDyOM model with ``py2lispIDyOM``, the ``IDyOMExperiment`` object is
+provided to configure the model. You will set all the dataset paths, model parameters here.
 
 .. currentmodule:: py2lispIDyOM.run
 .. toctree::
 
-To run the IDyOM model with `py2lispIDyOM`, the `IDyOMExperiment` object is
-provided to configure the model. You will set all the dataset paths, model parameters here.
-
 .. autoclass:: IDyOMExperiment
    :members:
 
+
+Important notes:
+~~~~~~~~~~~~~~~~~
 
 Parameters to configure the IDyOM model are almost the same as the those listed and described in the
 `IDyOM parameters documentation, <https://github.com/mtpearce/idyom/wiki/IDyOM-Parameters>`__
@@ -20,9 +28,9 @@ Instead, users need to supply the relevant dataset paths for the test dataset an
 and unique dataset ID will automatically then be assigned to those user-specified dataset respectively.
 The output file of the IDyOM model are saved to the corresponding experiment logger.
 
---------------------
-Valid parameters to configure the IDyOM model
---------------------
+
+Valid parameters to configure the IDyOM model:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Required parameters**:
     - `target_viewpoints`: List[SingleViewpoint]
@@ -56,8 +64,3 @@ Valid parameters to configure the IDyOM model
 **Caching parameters**:
     - `use_resampling_set_cache`: bool
     - `use_ltms_cache`: bool
-
-
-For more examples on how to configure and run the IDyOM model,
-please see the `tutorial <https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/1_running_IDyOM_tutorial.ipynb>`__.
-

@@ -14,9 +14,14 @@ from py2lispIDyOM.extract import ExperimentInfo
 class Export:
     """Export selected IDyOM model outputs to other formats.
 
-    :param experiment_folder_path: The path to which you saved all the result data/plots
-    :param idyom_output_keywords: A list of IDyOM output keywords you want to export. To see a full list of valid idyom_output_keywords, check the method: extract.get_idyom_output_keyword_list()
-    :param melody_names: A list of melodies of which IDyOM outputs that you want to export
+    :param experiment_folder_path: the path to which you saved all the result data/plots
+    :type experiment_folder_path: str
+
+    :param idyom_output_keywords: a list of IDyOM output keywords you want to export. To see a full list of valid idyom_output_keywords, use the method: extract.get_idyom_output_keyword_list()
+    :type idyom_output_keywords: typing.List[str]
+
+    :param melody_names: a list of melodies of which IDyOM outputs that you want to export
+    :type melody_names: list(str)
     """
 
     experiment_folder_path: str
@@ -120,6 +125,9 @@ class Export:
         This function exports the IDyOM output data to mat files.
         By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.
         Users can also specify specific melody by passing the melody names to the melody_name param.
+
+        :return (a) mat file(s) containing the selected IDyOM output data
+
         """
         # Check idyom_output_keyword is not None:
         if self.idyom_output_keywords is None:
@@ -145,6 +153,9 @@ class Export:
         """
         This function exports the IDyOM output data to a csv files.
         By default, this will export all properties of the chosen melodies, where each melody is in one csv file.
+
+        :return a csv file containing all IDyOM output data for each selected melody.
+
         """
         # Check idyom_output_keyword is None:
         if self.idyom_output_keywords is not None:
