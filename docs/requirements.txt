@@ -4,3 +4,4 @@ myst-parser
 sphinx-autodoc-typehints
 autoclasstoc
 pydata_sphinx_theme
+nbsphinx
