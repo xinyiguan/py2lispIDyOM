@@ -25,11 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="doc">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs: ensure pandoc installed">
       <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +299,7 @@
       <workItem from="1655194811399" duration="10495000" />
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
-      <workItem from="1655452984356" duration="13112000" />
-    </task>
-    <task id="LOCAL-00120" summary="build paper pdf">
-      <created>1654009229167</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1654009229167</updated>
+      <workItem from="1655452984356" duration="13541000" />
     </task>
     <task id="LOCAL-00121" summary="build paper pdf">
       <created>1654009659026</created>
@@ -645,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655465749124</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="docs: ensure pandoc installed">
+      <created>1655466187465</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1655466187465</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +676,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="paper revision and build JOSS paper pdf" />
     <MESSAGE value="paper citation revision, build JOSS paper pdf" />
     <MESSAGE value="minor revision, build JOSS paper pdf" />
     <MESSAGE value="updated docs" />
@@ -702,7 +700,8 @@
     <MESSAGE value="update doc requirements.txt" />
     <MESSAGE value="docs" />
     <MESSAGE value="doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc" />
+    <MESSAGE value="docs: ensure pandoc installed" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: ensure pandoc installed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
