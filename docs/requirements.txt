@@ -2,7 +2,6 @@ sphinx
 sphinx-rtd-theme
 myst-parser
 sphinx-autodoc-typehints
-autoclasst
 pydata_sphinx_theme
 nbsphinx
 pandoc
