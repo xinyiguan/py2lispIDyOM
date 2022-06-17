@@ -25,23 +25,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/LICENSE.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/export.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/extract.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorials.rst" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="documentation updated">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/api_reference.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/api_reference.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/data_processing.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/run_idyom.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/run_idyom.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/visualization.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/visualization.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/extract.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py2lispIDyOM/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/py2lispIDyOM/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_extract.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,14 +298,7 @@
       <workItem from="1655194811399" duration="10495000" />
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
-      <workItem from="1655452984356" duration="8272000" />
-    </task>
-    <task id="LOCAL-00106" summary="build.yml">
-      <created>1653484831579</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1653484831579</updated>
+      <workItem from="1655452984356" duration="8434000" />
     </task>
     <task id="LOCAL-00107" summary="build.yml">
       <created>1653486161228</created>
@@ -657,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655395527075</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="documentation updated">
+      <created>1655461321370</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1655461321371</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -689,7 +675,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="updated README" />
     <MESSAGE value="figs in paper" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="docs updated" />
@@ -714,7 +699,8 @@
     <MESSAGE value="test_export csv" />
     <MESSAGE value="test_extract" />
     <MESSAGE value="code cleaning" />
-    <option name="LAST_COMMIT_MESSAGE" value="code cleaning" />
+    <MESSAGE value="documentation updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="documentation updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
