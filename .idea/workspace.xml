@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="documentation updated">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="doc updated">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,21 +297,7 @@
       <workItem from="1655194811399" duration="10495000" />
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
-      <workItem from="1655452984356" duration="8434000" />
-    </task>
-    <task id="LOCAL-00107" summary="build.yml">
-      <created>1653486161228</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1653486161228</updated>
-    </task>
-    <task id="LOCAL-00108" summary="setup version changed">
-      <created>1653486865069</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1653486865069</updated>
+      <workItem from="1655452984356" duration="8698000" />
     </task>
     <task id="LOCAL-00109" summary="updated setup.py">
       <created>1653487832562</created>
@@ -643,7 +628,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655461321371</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="documentation updated">
+      <created>1655461470253</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1655461470253</updated>
+    </task>
+    <task id="LOCAL-00157" summary="doc updated">
+      <created>1655461713949</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1655461713949</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +674,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="figs in paper" />
     <MESSAGE value="readme updated" />
     <MESSAGE value="docs updated" />
     <MESSAGE value="updated docstring formats" />
@@ -700,7 +698,8 @@
     <MESSAGE value="test_extract" />
     <MESSAGE value="code cleaning" />
     <MESSAGE value="documentation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="documentation updated" />
+    <MESSAGE value="doc updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="doc updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
