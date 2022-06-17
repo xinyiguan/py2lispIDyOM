@@ -233,6 +233,7 @@ class STMOModelOptions(Parameters):
         command = command.replace('_', '-')
         return command
 
+
 @dataclass
 class StatisticalModellingParameters(Parameters):
     models: Literal[':stm', ':ltm', ':ltm+', ':both', ':both+'] = None
@@ -460,7 +461,6 @@ class ExperimentLogger:
             else:
                 print("** Putting Pretraining dataset files in experiment history folder. **")
             return pretrain_folder
-
 
     # def put_test_midi_in_exp_folder(self):
     #     print("** Putting Test dataset files in experiment history folder. **")

@@ -47,6 +47,7 @@ def ensure_pandoc_installed(_):
         delete_installer=True,
     )
 
+
 def setup(app):
     app.connect("builder-inited", ensure_pandoc_installed)
 
