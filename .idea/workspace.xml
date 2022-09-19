@@ -25,9 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="reformat codes">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,13 +298,8 @@
       <workItem from="1655301981142" duration="12564000" />
       <workItem from="1655368071341" duration="27974000" />
       <workItem from="1655452984356" duration="15126000" />
-    </task>
-    <task id="LOCAL-00124" summary="build paper pdf">
-      <created>1654010109175</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1654010109175</updated>
+      <workItem from="1662804444905" duration="675000" />
+      <workItem from="1663584647665" duration="468000" />
     </task>
     <task id="LOCAL-00125" summary="build paper pdf">
       <created>1654010180090</created>
@@ -643,7 +637,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655468242786</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="updated DOIs">
+      <created>1662804524698</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1662804524698</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +676,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="figs adjust" />
     <MESSAGE value="figs adjusted" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="push to release" />
@@ -700,7 +700,8 @@
     <MESSAGE value="docs pandoc issue" />
     <MESSAGE value="doc pandoc issue" />
     <MESSAGE value="reformat codes" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformat codes" />
+    <MESSAGE value="updated DOIs" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated DOIs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

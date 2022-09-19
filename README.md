@@ -66,3 +66,8 @@ Note: I tried to make the code accessible and provide some examples in the tutor
 there is still lots of room for better documentation, tutorials and testing. Please contact me if you have any questions or
 encounter bugs!
 
+---
+#### Author contributions
+All authors provided critical feedback on the design of this project, and participated in the writing and editing of the manuscript. 
+X.G. and C.P. conceptualized the project. X.G. and Z.R. planned the code architecture. 
+X.G. carried out the overall computational implementation. C.P. supervised the overall project.
