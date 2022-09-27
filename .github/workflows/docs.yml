@@ -2,8 +2,7 @@ name: docs
 
 on:
   push:
-    branches:
-      - main
+    branches: [ master ]
     tags: '*'
   pull_request:
   workflow_dispatch:
