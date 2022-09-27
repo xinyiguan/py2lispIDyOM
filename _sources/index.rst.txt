@@ -1,11 +1,11 @@
 py2lispIDyOM: A Python package for IDyOM
-========================================
+==========================================
 
 A Python package for the information dynamics of music (`IDyOM <https://github.com/mtpearce/idyom/>`__) model.
 
 
 Table of contents
------------------
+-------------------
 -  `Introduction <#introduction>`__
 -  `Getting Started <#getting-started>`__
 
@@ -21,7 +21,7 @@ Table of contents
 
 
 Introduction
-------------
+--------------
 `py2lispIDyOM` is an open-source Python package broadly aimed at researchers conducting IDyOM-based analysis in Python.
 It serves as a unifying Python interface that simplifies and streamlines the research workflow for running the
 information dynamics of music (`IDyOM <https://github.com/mtpearce/idyom/>`__) model and analyzing output data.

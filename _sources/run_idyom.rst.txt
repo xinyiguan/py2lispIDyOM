@@ -10,6 +10,8 @@ please see the `tutorial <https://github.com/xinyiguan/py2lispIDyOM/blob/master/
 To run the IDyOM model with ``py2lispIDyOM``, the ``IDyOMExperiment`` object is
 provided to configure the model. You will set all the dataset paths, model parameters here.
 
+
+
 .. currentmodule:: py2lispIDyOM.run
 .. toctree::
 
@@ -17,7 +19,7 @@ provided to configure the model. You will set all the dataset paths, model param
    :members:
 
 
-Important notes:
+Important notes
 ~~~~~~~~~~~~~~~~~
 
 Parameters to configure the IDyOM model are almost the same as the those listed and described in the
@@ -29,7 +31,7 @@ and unique dataset ID will automatically then be assigned to those user-specifie
 The output file of the IDyOM model are saved to the corresponding experiment logger.
 
 
-Valid parameters to configure the IDyOM model:
+Valid parameters to configure the IDyOM model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Required parameters**:
