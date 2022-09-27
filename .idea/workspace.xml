@@ -27,6 +27,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/how_to_contribute.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/how_to_contribute.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,14 +301,8 @@
       <workItem from="1655368071341" duration="27974000" />
       <workItem from="1655452984356" duration="15126000" />
       <workItem from="1662804444905" duration="675000" />
-      <workItem from="1663584647665" duration="468000" />
-    </task>
-    <task id="LOCAL-00125" summary="build paper pdf">
-      <created>1654010180090</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1654010180090</updated>
+      <workItem from="1663584647665" duration="1055000" />
+      <workItem from="1664275404486" duration="2409000" />
     </task>
     <task id="LOCAL-00126" summary="build paper pdf">
       <created>1654010335539</created>
@@ -644,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662804524698</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="updated author contributions">
+      <created>1663585696328</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1663585696329</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +679,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="figs adjusted" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="push to release" />
     <MESSAGE value="minor update: added exp logger name option, tested" />
@@ -701,7 +703,8 @@
     <MESSAGE value="doc pandoc issue" />
     <MESSAGE value="reformat codes" />
     <MESSAGE value="updated DOIs" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated DOIs" />
+    <MESSAGE value="updated author contributions" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated author contributions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -62,9 +62,17 @@ examples.
 - Visualization: [3_visualizing_outputs.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb)
 
 
-Note: I tried to make the code accessible and provide some examples in the tutorials for getting started smoothly. But
-there is still lots of room for better documentation, tutorials and testing. Please contact me if you have any questions or
-encounter bugs!
+---
+#### Contribution guidelines
+
+We tried to make the code accessible and provide some examples in the tutorials for getting started smoothly. 
+But there is still lots of room for better documentation, tutorials and testing. 
+Please contact us if you have any questions or encounter bugs. 
+
+You are also welcome to contribute to this project. 
+There are just a few [small guidelines](https://xinyiguan.github.io/py2lispIDyOM/how_to_contribute.html#) you need to follow.
+
+
 
 ---
 #### Author contributions
