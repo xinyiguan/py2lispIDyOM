@@ -16,7 +16,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -45,7 +47,18 @@
 <li class="toctree-l2"><a class="reference internal" href="run_idyom.html">run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="extract.html">extract</a></li>
 <li class="toctree-l2"><a class="reference internal" href="export.html">export</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">visualization</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">visualization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot"><code class="docutils literal notranslate"><span class="pre">BasicPlot</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.all_entropy"><code class="docutils literal notranslate"><span class="pre">BasicPlot.all_entropy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.all_surprisal"><code class="docutils literal notranslate"><span class="pre">BasicPlot.all_surprisal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_groundtruth_overall_surprisal"><code class="docutils literal notranslate"><span class="pre">BasicPlot.pianoroll_groundtruth_overall_surprisal()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.pianoroll_pitch_prediction_groundtruth"><code class="docutils literal notranslate"><span class="pre">BasicPlot.pianoroll_pitch_prediction_groundtruth()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.selected_surprisal_entropy"><code class="docutils literal notranslate"><span class="pre">BasicPlot.selected_surprisal_entropy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#py2lispIDyOM.viz.BasicPlot.simple_plot"><code class="docutils literal notranslate"><span class="pre">BasicPlot.simple_plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
@@ -103,7 +116,7 @@
 }
 </style>
 <section id="visualization">
-<h1>visualization<a class="headerlink" href="#visualization" title="Permalink to this headline"></a></h1>
+<h1>visualization<a class="headerlink" href="#visualization" title="Permalink to this heading"></a></h1>
 <p>This module implements some common plotting functions to visualize the output data.
 For more examples on visualizing the outputs,
 please see the <a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb">tutorial</a>.</p>

@@ -1,6 +1,6 @@
-*****
+*********
 extract
-*****
+*********
 
 This module implements some common functions to extract the outputs of the IDyOM model.
 

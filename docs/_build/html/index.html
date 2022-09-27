@@ -16,7 +16,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -95,10 +97,10 @@
 }
 </style>
 <section id="py2lispidyom-a-python-package-for-idyom">
-<h1>py2lispIDyOM: A Python package for IDyOM<a class="headerlink" href="#py2lispidyom-a-python-package-for-idyom" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM: A Python package for IDyOM<a class="headerlink" href="#py2lispidyom-a-python-package-for-idyom" title="Permalink to this heading"></a></h1>
 <p>A Python package for the information dynamics of music (<a class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM</a>) model.</p>
 <section id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline"></a></h2>
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#introduction">Introduction</a></p></li>
 <li><p><a class="reference external" href="#getting-started">Getting Started</a></p>
@@ -117,7 +119,7 @@
 </ul>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h2>
 <p><cite>py2lispIDyOM</cite> is an open-source Python package broadly aimed at researchers conducting IDyOM-based analysis in Python.
 It serves as a unifying Python interface that simplifies and streamlines the research workflow for running the
 information dynamics of music (<a class="reference external" href="https://github.com/mtpearce/idyom/">IDyOM</a>) model and analyzing output data.
@@ -125,22 +127,22 @@ This package makes it easier to do the following two tasks: (i) configuring and 
 and (ii) processing and analyzing the IDyOM output data.</p>
 </section>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
 <section id="prerequisite">
-<h3>Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink to this headline"></a></h3>
+<h3>Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink to this heading"></a></h3>
 <p>py2lispIDyOM requires IDyOM to be installed on the local machine. To start with, please read
 the (<a class="reference external" href="https://github.com/mtpearce/idyom/wiki/Installation">IDyOM installation page</a>) to appropriately install IDyOM.</p>
 </section>
 <section id="installing">
-<h3>Installing<a class="headerlink" href="#installing" title="Permalink to this headline"></a></h3>
+<h3>Installing<a class="headerlink" href="#installing" title="Permalink to this heading"></a></h3>
 <p>The code is compatible with &gt;= Python 3.9.</p>
 <p>It can be installed using pip: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">py2lispIDyOM</span></code></p>
 </section>
 </section>
 <section id="functionality-and-usage">
-<h2>Functionality and Usage<a class="headerlink" href="#functionality-and-usage" title="Permalink to this headline"></a></h2>
+<h2>Functionality and Usage<a class="headerlink" href="#functionality-and-usage" title="Permalink to this heading"></a></h2>
 <section id="basic-functionalities">
-<h3>Basic functionalities<a class="headerlink" href="#basic-functionalities" title="Permalink to this headline"></a></h3>
+<h3>Basic functionalities<a class="headerlink" href="#basic-functionalities" title="Permalink to this heading"></a></h3>
 <p>In summary, py2lispIDyOM has three main functionalities for research workflow:</p>
 <ul class="simple">
 <li><p>Running the IDyOM</p></li>
@@ -151,7 +153,7 @@ the (<a class="reference external" href="https://github.com/mtpearce/idyom/wiki/
 which guides you through all three basic functionalities of through examples.</p>
 </section>
 <section id="notebook-examples">
-<h3>Notebook examples<a class="headerlink" href="#notebook-examples" title="Permalink to this headline"></a></h3>
+<h3>Notebook examples<a class="headerlink" href="#notebook-examples" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Running the IDyOM model: (<a class="reference external" href="https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/1_running_IDyOM_tutorial.ipynb">1_running_IDyOM_tutorial.ipynb</a>)</p></li>
 <li><p>Data preprocessing:</p>
@@ -164,7 +166,7 @@ which guides you through all three basic functionalities of through examples.</p
 </ul>
 </section>
 <section id="important-notes">
-<h3>Important notes<a class="headerlink" href="#important-notes" title="Permalink to this headline"></a></h3>
+<h3>Important notes<a class="headerlink" href="#important-notes" title="Permalink to this heading"></a></h3>
 <p>To encourage an organized workflow and to improve the reproducibility of data, all data related to an experiment (used and produced)
 will be logged in a structured folder, which can be shared with other researchers. A sample of the structured
 experiment logger will look like:</p>
@@ -193,7 +195,7 @@ Please contact me if you have any questions or encounter bugs!</p>
 </section>
 </section>
 <section id="developer-s-guide">
-<h2>Developer’s Guide<a class="headerlink" href="#developer-s-guide" title="Permalink to this headline"></a></h2>
+<h2>Developer’s Guide<a class="headerlink" href="#developer-s-guide" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api_reference.html">API Reference</a></li>

@@ -16,7 +16,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -368,7 +370,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Running-IDyOM-Tutorial">
-<h1>Running IDyOM Tutorial<a class="headerlink" href="#Running-IDyOM-Tutorial" title="Permalink to this headline"></a></h1>
+<h1>Running IDyOM Tutorial<a class="headerlink" href="#Running-IDyOM-Tutorial" title="Permalink to this heading"></a></h1>
 <p>This tutorial will walk you through how to run the IDyOM model in py2lispIDyOM. For an overview of the py2lispIDyOM functionality, see the <a class="reference internal" href="../README.html"><span class="doc">README</span></a>.</p>
 <p>Generally speaking, to run the IDyOM model with py2lispIDyOM usually takes three steps:</p>
 <ol class="arabic simple">
@@ -382,7 +384,7 @@ div.rendered_html tbody tr:hover {
 <li><p>we will use the ‘:both’ model, and we don’t want resampling (i.e., k=1).</p></li>
 </ul>
 <section id="Step-by-Step">
-<h2>Step-by-Step<a class="headerlink" href="#Step-by-Step" title="Permalink to this headline"></a></h2>
+<h2>Step-by-Step<a class="headerlink" href="#Step-by-Step" title="Permalink to this heading"></a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -394,7 +396,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="1.-Set-experiment-configuration:">
-<h3>1. Set experiment configuration:<a class="headerlink" href="#1.-Set-experiment-configuration:" title="Permalink to this headline"></a></h3>
+<h3>1. Set experiment configuration:<a class="headerlink" href="#1.-Set-experiment-configuration:" title="Permalink to this heading"></a></h3>
 <p>First, we set the IDyOM experiment configurations by providing the relevant paths to the <code class="docutils literal notranslate"><span class="pre">IDyOMExperiment</span></code>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IDyOMExperiment</span><span class="p">(</span><span class="n">test_dataset_path</span><span class="p">,</span>
                       <span class="n">pretrain_dataset_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -421,7 +423,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.-Set-model-parameters:">
-<h3>2. Set model parameters:<a class="headerlink" href="#2.-Set-model-parameters:" title="Permalink to this headline"></a></h3>
+<h3>2. Set model parameters:<a class="headerlink" href="#2.-Set-model-parameters:" title="Permalink to this heading"></a></h3>
 <p>Next, we set the model parameters using the <code class="docutils literal notranslate"><span class="pre">set_parameters</span></code> methods.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">IDyOMExperiment</span><span class="o">.</span><span class="n">set_parameters</span><span class="p">(</span><span class="n">target_viewpoints</span><span class="p">,</span> <span class="n">source_viewpoints</span><span class="p">,</span>
                                      <span class="o">...</span><span class="p">)</span>
@@ -444,7 +446,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="3.-Run-IDyOM-model:">
-<h3>3. Run IDyOM model:<a class="headerlink" href="#3.-Run-IDyOM-model:" title="Permalink to this headline"></a></h3>
+<h3>3. Run IDyOM model:<a class="headerlink" href="#3.-Run-IDyOM-model:" title="Permalink to this heading"></a></h3>
 <p>To run the IDyOM model, simply call the <code class="docutils literal notranslate"><span class="pre">IDyOMExperiment.run()</span></code> method.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -491,7 +493,7 @@ Written PPM* model to /Users/guan/idyom/data/models/onset_99052122170523_6605212
 </section>
 </section>
 <section id="What-happens-then?">
-<h2>What happens then?<a class="headerlink" href="#What-happens-then?" title="Permalink to this headline"></a></h2>
+<h2>What happens then?<a class="headerlink" href="#What-happens-then?" title="Permalink to this heading"></a></h2>
 <p>py2lispIDyOM will automatically create a folder (with the timestamp of experiment time as the folder name) logging all data of the current experiment. For details of the experiment log folder, see the Experiment Logger section in <a class="reference external" href="README.md">README</a>.</p>
 <p>After finish running the model, the model output (a <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file will be saved in the current experiment log folder under ‘experiment_output_data_folder/’).</p>
 <p>From here on, you can extract the relevant IDyOM outputs or export them in other formats for further analysis.</p>

@@ -16,7 +16,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -94,7 +96,7 @@
 }
 </style>
 <section id="py2lispidyom-extract-melodyinfo">
-<h1>py2lispIDyOM.extract.MelodyInfo<a class="headerlink" href="#py2lispidyom-extract-melodyinfo" title="Permalink to this headline"></a></h1>
+<h1>py2lispIDyOM.extract.MelodyInfo<a class="headerlink" href="#py2lispidyom-extract-melodyinfo" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.MelodyInfo">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">MelodyInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_pitch_element_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_experiment</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#MelodyInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.MelodyInfo" title="Permalink to this definition"></a></dt>
@@ -521,7 +523,7 @@
 <td><p>Whether each element in the DataFrame is contained in values.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></p></td>
-<td><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.plotting._core.PlotAccessor</span></code></p></td>
+<td><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">PlotAccessor</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code>([column, by, grid, xlabelsize, xrot, ...])</p></td>
 <td><p>Make a histogram of the DataFrame's columns.</p></td>
@@ -530,7 +532,7 @@
 <td><p>Make a box plot from DataFrame columns.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse</span></code></p></td>
-<td><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pandas.core.arrays.sparse.accessor.SparseFrameAccessor</span></code></p></td>
+<td><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">SparseFrameAccessor</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ffill</span></code>([axis, inplace, limit, downcast])</p></td>
 <td><p>Synonym for <code class="xref py py-meth docutils literal notranslate"><span class="pre">DataFrame.fillna()</span></code> with <code class="docutils literal notranslate"><span class="pre">method='ffill'</span></code>.</p></td>
@@ -744,7 +746,7 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__abs__</span></code>()</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= <code class="xref py py-class docutils literal notranslate"><span class="pre">NDFrame</span></code>)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= NDFrame)</p>
 </dd>
 </dl>
 </p></td>
@@ -752,7 +754,7 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__round__</span></code>([decimals])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= <code class="xref py py-class docutils literal notranslate"><span class="pre">NDFrame</span></code>)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= NDFrame)</p>
 </dd>
 </dl>
 </p></td>
@@ -894,7 +896,7 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__copy__</span></code>([deep])</p></td>
 <td><p><dl class="field-list simple">
 <dt class="field-odd">rtype</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= <code class="xref py py-class docutils literal notranslate"><span class="pre">NDFrame</span></code>)</p>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">NDFrameT</span></code>, bound= NDFrame)</p>
 </dd>
 </dl>
 </p></td>

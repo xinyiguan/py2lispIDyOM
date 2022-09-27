@@ -1,6 +1,6 @@
-*****
+*******
 export
-*****
+*******
 
 This module implements some common functions that allow users to export certain (or all) IDyOM outputs to
 ``.mat`` or ``.csv`` format.

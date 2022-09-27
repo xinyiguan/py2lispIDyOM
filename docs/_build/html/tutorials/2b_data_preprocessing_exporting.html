@@ -16,7 +16,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -371,7 +373,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Data-preprocessing---Exporting-IDyOM-output-data-to-other-formats">
-<h1>Data preprocessing - Exporting IDyOM output data to other formats<a class="headerlink" href="#Data-preprocessing---Exporting-IDyOM-output-data-to-other-formats" title="Permalink to this headline"></a></h1>
+<h1>Data preprocessing - Exporting IDyOM output data to other formats<a class="headerlink" href="#Data-preprocessing---Exporting-IDyOM-output-data-to-other-formats" title="Permalink to this heading"></a></h1>
 <p>py2lispIDyOM provides methods to export certain (or all) properties of the IDyOM outputs of selected (or all) melodies in different formats (<code class="docutils literal notranslate"><span class="pre">.mat</span></code> and <code class="docutils literal notranslate"><span class="pre">.csv</span></code>).</p>
 <p>This tutorial will cover how to export outputs using py2lispIDyOM, given that you already have the <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file output. For an overview of the py2lispIDyOM functionality, see the <a class="reference internal" href="../README.html"><span class="doc">README</span></a>.</p>
 <p>We will continue the sample example as in the <a class="reference internal" href="1_running_IDyOM_tutorial.html"><span class="doc">1_running_IDyOM_tutorial.ipynb</span></a>, and extract some IDyOM outputs from that experiment, where the log folder is <code class="docutils literal notranslate"><span class="pre">experiment_history/21-05-22_17.05.05/</span></code></p>
@@ -386,10 +388,10 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="1.-Export-outputs-to-.mat-formats">
-<h2>1. Export outputs to <code class="docutils literal notranslate"><span class="pre">.mat</span></code> formats<a class="headerlink" href="#1.-Export-outputs-to-.mat-formats" title="Permalink to this headline"></a></h2>
+<h2>1. Export outputs to <code class="docutils literal notranslate"><span class="pre">.mat</span></code> formats<a class="headerlink" href="#1.-Export-outputs-to-.mat-formats" title="Permalink to this heading"></a></h2>
 <p>In this section, we will go over how to export the IDyOM outputs of melodies to <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files using the <code class="docutils literal notranslate"><span class="pre">export2mat()</span></code> method.</p>
 <section id="1.1-Export-selected-outputs-of-selected-melodies-to-.mat">
-<h3>1.1 Export selected outputs of selected melodies to <code class="docutils literal notranslate"><span class="pre">.mat</span></code><a class="headerlink" href="#1.1-Export-selected-outputs-of-selected-melodies-to-.mat" title="Permalink to this headline"></a></h3>
+<h3>1.1 Export selected outputs of selected melodies to <code class="docutils literal notranslate"><span class="pre">.mat</span></code><a class="headerlink" href="#1.1-Export-selected-outputs-of-selected-melodies-to-.mat" title="Permalink to this heading"></a></h3>
 <p>In this example, we will export the <code class="docutils literal notranslate"><span class="pre">melody_name</span></code>, <code class="docutils literal notranslate"><span class="pre">cpitch</span></code>, and <code class="docutils literal notranslate"><span class="pre">information.content</span></code> of the two melodies named ‘“chord-001”’ and ‘“chor-002”’ in the experiment <code class="docutils literal notranslate"><span class="pre">21-05-22_17.05.05</span></code>.</p>
 <p>To check the available <code class="docutils literal notranslate"><span class="pre">idyom_output_keywords</span></code>, please see the <a class="reference internal" href="2a_data_preprocessing_extracting.html"><span class="doc">2a_data_preprocessing_extracting tutorial</span></a>.</p>
 <div class="nbinput docutils container">
@@ -426,7 +428,7 @@ Exported data to experiment_history/21-05-22_17.05.05/outputs_in_mat/
 </ul>
 </section>
 <section id="1.2-Export-selected-outputs-of-all-melodies-to-.mat">
-<h3>1.2 Export selected outputs of all melodies to <code class="docutils literal notranslate"><span class="pre">.mat</span></code><a class="headerlink" href="#1.2-Export-selected-outputs-of-all-melodies-to-.mat" title="Permalink to this headline"></a></h3>
+<h3>1.2 Export selected outputs of all melodies to <code class="docutils literal notranslate"><span class="pre">.mat</span></code><a class="headerlink" href="#1.2-Export-selected-outputs-of-all-melodies-to-.mat" title="Permalink to this heading"></a></h3>
 <p>To export selected outputs of all melodies, you don’t need to specify the <code class="docutils literal notranslate"><span class="pre">melody_names</span></code>. If not specified, the selected properties of all melodies data will be exported, by default.</p>
 <p>Here, we will export <code class="docutils literal notranslate"><span class="pre">information.content</span></code> and <code class="docutils literal notranslate"><span class="pre">entropy</span></code> of all the melodies in the experiment <code class="docutils literal notranslate"><span class="pre">21-05-22_17.05.05</span></code>.</p>
 <div class="nbinput docutils container">
@@ -459,12 +461,12 @@ Exported data to experiment_history/21-05-22_17.05.05/outputs_in_mat/
 </section>
 </section>
 <section id="2.-Export-outputs-to-.csv-formats">
-<h2>2. Export outputs to <code class="docutils literal notranslate"><span class="pre">.csv</span></code> formats<a class="headerlink" href="#2.-Export-outputs-to-.csv-formats" title="Permalink to this headline"></a></h2>
+<h2>2. Export outputs to <code class="docutils literal notranslate"><span class="pre">.csv</span></code> formats<a class="headerlink" href="#2.-Export-outputs-to-.csv-formats" title="Permalink to this heading"></a></h2>
 <p>In this section, we will go over how to export IDyOM outputs of melodies to <code class="docutils literal notranslate"><span class="pre">.csv</span></code> files using the <code class="docutils literal notranslate"><span class="pre">export2csv()</span></code> method.</p>
 <p>In the current py2lispIDyOM version, <code class="docutils literal notranslate"><span class="pre">export2csv()</span></code> only supports exporting <strong>all</strong> IDyoM outputs of selected or all melodies in the experiment.</p>
 <p>The output will be a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file containing all IDyOM outputs for each melody.</p>
 <section id="2.1-Export-outputs-of-selected-melodies-to-.csv">
-<h3>2.1 Export outputs of selected melodies to <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#2.1-Export-outputs-of-selected-melodies-to-.csv" title="Permalink to this headline"></a></h3>
+<h3>2.1 Export outputs of selected melodies to <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#2.1-Export-outputs-of-selected-melodies-to-.csv" title="Permalink to this heading"></a></h3>
 <p>In this example, we will export the IDyOM outputs of the two melodies named ‘“chord-005”’ and ‘“chor-006”’ in the experiment <code class="docutils literal notranslate"><span class="pre">21-05-22_17.05.05</span></code>.</p>
 <p>To check the available <code class="docutils literal notranslate"><span class="pre">idyom_output_keywords</span></code>, please see the <a class="reference internal" href="2a_data_preprocessing_extracting.html"><span class="doc">2a_data_preprocessing_extracting tutorial</span></a>.</p>
 <div class="nbinput docutils container">
@@ -495,7 +497,7 @@ Exported data to experiment_history/21-05-22_17.05.05/outputs_in_csv/
 </ul>
 </section>
 <section id="2.2-Export-outputs-of-all-melodies-to-.csv">
-<h3>2.2 Export outputs of all melodies to <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#2.2-Export-outputs-of-all-melodies-to-.csv" title="Permalink to this headline"></a></h3>
+<h3>2.2 Export outputs of all melodies to <code class="docutils literal notranslate"><span class="pre">.csv</span></code><a class="headerlink" href="#2.2-Export-outputs-of-all-melodies-to-.csv" title="Permalink to this heading"></a></h3>
 <p>To export outputs of all melodies, simply leave the <code class="docutils literal notranslate"><span class="pre">melody_names</span></code> argument as empty.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:

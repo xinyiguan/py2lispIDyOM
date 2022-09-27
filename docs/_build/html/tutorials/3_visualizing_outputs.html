@@ -16,7 +16,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -367,7 +369,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Visualizing-IDyOM-outputs">
-<h1>Visualizing IDyOM outputs<a class="headerlink" href="#Visualizing-IDyOM-outputs" title="Permalink to this headline"></a></h1>
+<h1>Visualizing IDyOM outputs<a class="headerlink" href="#Visualizing-IDyOM-outputs" title="Permalink to this heading"></a></h1>
 <p>This tutorial will cover some useful plotting in py2lispIDyOM. For an overview of the py2lispIDyOM functionality, see the <a class="reference internal" href="../README.html"><span class="doc">README</span></a>. In the current version, only limited basic plots are available.</p>
 <p>In this tutorial, We will continue the sample example as in the <a class="reference internal" href="1_running_IDyOM_tutorial.html"><span class="doc">1_running_IDyOM_tutorial.ipynb</span></a>, and plot some IDyOM outputs from that experiment, where the log folder is <code class="docutils literal notranslate"><span class="pre">experiment_history/21-05-22_17.05.05/</span></code></p>
 <p>Current version of py2lispIDyOM has the following types of basic plots:</p>
@@ -391,7 +393,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Simple-Plot">
-<h2>Simple Plot<a class="headerlink" href="#Simple-Plot" title="Permalink to this headline"></a></h2>
+<h2>Simple Plot<a class="headerlink" href="#Simple-Plot" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.simple_plot</span></code></p>
 <p>Generate a simple line plot with time (in quarter note) on the x-axis, and selected IDyOM output on the y-axis.</p>
 <p>In the following example, we will:</p>
@@ -470,7 +472,7 @@ Plots saved in experiment_history/21-05-22_17.05.05/plots/simple_plot_informatio
 </div>
 </section>
 <section id="Selected-surprisal-and-entropy">
-<h2>Selected surprisal and entropy<a class="headerlink" href="#Selected-surprisal-and-entropy" title="Permalink to this headline"></a></h2>
+<h2>Selected surprisal and entropy<a class="headerlink" href="#Selected-surprisal-and-entropy" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.selected_surprisal_entropy</span></code></p>
 <p>Generate a figure that shows the selected entropy and information content.</p>
 <p>In the following example, we will:</p>
@@ -534,7 +536,7 @@ Plots saved in experiment_history/21-05-22_17.05.05/plots/selected_surprisal_ent
 </div>
 </section>
 <section id="Plot-all-available-surprisal-outputs">
-<h2>Plot all available surprisal outputs<a class="headerlink" href="#Plot-all-available-surprisal-outputs" title="Permalink to this headline"></a></h2>
+<h2>Plot all available surprisal outputs<a class="headerlink" href="#Plot-all-available-surprisal-outputs" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.all_surprisal</span></code></p>
 <p>Generate subplots of all available surprisal outputs.</p>
 <p>In the following example, we will:</p>
@@ -588,7 +590,7 @@ Plots saved in experiment_history/21-05-22_17.05.05/plots/surprisals_plots/
 </div>
 </section>
 <section id="Plot-all-available-entropy-outputs">
-<h2>Plot all available entropy outputs<a class="headerlink" href="#Plot-all-available-entropy-outputs" title="Permalink to this headline"></a></h2>
+<h2>Plot all available entropy outputs<a class="headerlink" href="#Plot-all-available-entropy-outputs" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.all_entropy</span></code></p>
 <p>Generate subplots of all available entropy outputs.</p>
 <p>In the following example, we will:</p>
@@ -642,7 +644,7 @@ Plots saved in experiment_history/21-05-22_17.05.05/plots/entropy_plots/
 </div>
 </section>
 <section id="Plot-piano-roll-of-pitch-prediction-and-ground-truth">
-<h2>Plot piano roll of pitch prediction and ground truth<a class="headerlink" href="#Plot-piano-roll-of-pitch-prediction-and-ground-truth" title="Permalink to this headline"></a></h2>
+<h2>Plot piano roll of pitch prediction and ground truth<a class="headerlink" href="#Plot-piano-roll-of-pitch-prediction-and-ground-truth" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.pianoroll_pitch_prediction_groundtruth</span></code></p>
 <p>Generate a pair of figures (the predicted pitch distribution and the ground truth) side by side. If users intend to plot figures for specific songs, they can do so by specifying either the melody names, or the starting/ending index in the melody list.</p>
 <p>In the following example, we will:</p>
@@ -734,7 +736,7 @@ Plots saved in experiment_history/21-05-22_17.05.05/plots/pianoroll_pitch_predic
 </div>
 </section>
 <section id="Plot-piano-roll-of-ground-truth-and-overall-surprisal-(information-content)">
-<h2>Plot piano roll of ground truth and overall surprisal (information content)<a class="headerlink" href="#Plot-piano-roll-of-ground-truth-and-overall-surprisal-(information-content)" title="Permalink to this headline"></a></h2>
+<h2>Plot piano roll of ground truth and overall surprisal (information content)<a class="headerlink" href="#Plot-piano-roll-of-ground-truth-and-overall-surprisal-(information-content)" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">BasicPlot.pianoroll_groundtruth_overall_surprisal</span></code></p>
 <p>Generate a pair of figures: ground truth piano roll on the top and the surprisal line plot on the bottom.</p>
 <p>In the following example, we will:</p>

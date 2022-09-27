@@ -16,7 +16,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -374,7 +376,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Data-preprocessing---Extracting-IDyOM-output-data">
-<h1>Data preprocessing - Extracting IDyOM output data<a class="headerlink" href="#Data-preprocessing---Extracting-IDyOM-output-data" title="Permalink to this headline"></a></h1>
+<h1>Data preprocessing - Extracting IDyOM output data<a class="headerlink" href="#Data-preprocessing---Extracting-IDyOM-output-data" title="Permalink to this heading"></a></h1>
 <p>This tutorial will cover how to extract certain IDyOM outputs (for analysis in python) and export them in different formats using py2lispIDyOM, given that you already have the <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file output. For an overview of the py2lispIDyOM functionality, see the <a class="reference internal" href="../README.html"><span class="doc">README</span></a>.</p>
 <p>Given that you already have the <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file output, you can extract certain properties of certain melodies from that file.</p>
 <p>We will continue the sample example as in the <a class="reference internal" href="1_running_IDyOM_tutorial.html"><span class="doc">1_running_IDyOM_tutorial.ipynb</span></a>, and extract some IDyOM outputs from that experiment, where the log folder is <code class="docutils literal notranslate"><span class="pre">experiment_history/21-05-22_17.05.05/</span></code></p>
@@ -389,7 +391,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:">
-<h2>1. Indicate the experiment log folder that you want to work with:<a class="headerlink" href="#1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:" title="Permalink to this headline"></a></h2>
+<h2>1. Indicate the experiment log folder that you want to work with:<a class="headerlink" href="#1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:" title="Permalink to this heading"></a></h2>
 <p>To start, users need to indicate the experiment log folder that you want to work with by providing the log path <code class="docutils literal notranslate"><span class="pre">experiment_folder_path</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -402,7 +404,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:">
-<h2>2. Experiment Info: to access some melodies in that experiment:<a class="headerlink" href="#2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:" title="Permalink to this headline"></a></h2>
+<h2>2. Experiment Info: to access some melodies in that experiment:<a class="headerlink" href="#2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:" title="Permalink to this heading"></a></h2>
 <p>There are two ways to access melodies in the experiment: 1. Access a specific melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code> by passing the melody name. - This returns a DataFrame of all IDyOM outputs for this melody.</p>
 <ol class="arabic simple" start="2">
 <li><p>Access specific melodies using the method <code class="docutils literal notranslate"><span class="pre">access_melodies(starting_index=None,</span> <span class="pre">ending_index=None,</span> <span class="pre">melody_names=None)</span></code></p></li>
@@ -411,7 +413,7 @@ div.rendered_html tbody tr:hover {
 <li><p>This returns a list of DataFrame of all IDyOM outputs for selected melodies.</p></li>
 </ul>
 <section id="2.1-Access-a-melody-using-melodies_dict:">
-<h3>2.1 Access a melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code>:<a class="headerlink" href="#2.1-Access-a-melody-using-melodies_dict:" title="Permalink to this headline"></a></h3>
+<h3>2.1 Access a melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code>:<a class="headerlink" href="#2.1-Access-a-melody-using-melodies_dict:" title="Permalink to this heading"></a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -566,7 +568,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names">
-<h3>2.2 Access a list of melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing their names<a class="headerlink" href="#2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names" title="Permalink to this headline"></a></h3>
+<h3>2.2 Access a list of melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing their names<a class="headerlink" href="#2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names" title="Permalink to this heading"></a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -781,7 +783,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices.">
-<h3>2.3 Access consecutive melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing the indices.<a class="headerlink" href="#2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices." title="Permalink to this headline"></a></h3>
+<h3>2.3 Access consecutive melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing the indices.<a class="headerlink" href="#2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices." title="Permalink to this heading"></a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -1141,10 +1143,10 @@ div.rendered_html tbody tr:hover {
 </section>
 </section>
 <section id="3.-Melody-Info:-to-further-access-melody-specific-information">
-<h2>3. Melody Info: to further access melody-specific information<a class="headerlink" href="#3.-Melody-Info:-to-further-access-melody-specific-information" title="Permalink to this headline"></a></h2>
+<h2>3. Melody Info: to further access melody-specific information<a class="headerlink" href="#3.-Melody-Info:-to-further-access-melody-specific-information" title="Permalink to this heading"></a></h2>
 <p>To get the IDyOM model outputs for each melodies, you will need to use the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> class.</p>
 <section id="3.1-Access-the-melody">
-<h3>3.1 Access the melody<a class="headerlink" href="#3.1-Access-the-melody" title="Permalink to this headline"></a></h3>
+<h3>3.1 Access the melody<a class="headerlink" href="#3.1-Access-the-melody" title="Permalink to this heading"></a></h3>
 <p>For each melody in the experiment, all data are stored in the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> class which is essentially a panda.DataFrame. To create an instance of <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code>, we can use <code class="docutils literal notranslate"><span class="pre">ExperimentInfo.melodies_dict</span></code>, or <code class="docutils literal notranslate"><span class="pre">ExperimentInfo.access_melodies</span></code> as showed in part 2.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -1159,7 +1161,7 @@ div.rendered_html tbody tr:hover {
 <p>Note that here, <code class="docutils literal notranslate"><span class="pre">selected_melody</span></code> is an instance of <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code>.</p>
 </section>
 <section id="3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody">
-<h3>3.2 Check the valid IDyOM output keywords for the selected melody<a class="headerlink" href="#3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody" title="Permalink to this headline"></a></h3>
+<h3>3.2 Check the valid IDyOM output keywords for the selected melody<a class="headerlink" href="#3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody" title="Permalink to this heading"></a></h3>
 <p>For each melody, you can check the valid IDyOM output keywords with the <code class="docutils literal notranslate"><span class="pre">get_idyom_output_keyword_list()</span></code> method.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1184,7 +1186,7 @@ div.rendered_html tbody tr:hover {
 <p>The list above shows all the valid IDyOM output keys available for the melody ‘“chor-002”’. Now, we want to access the following data: <code class="docutils literal notranslate"><span class="pre">cpitch.information.content</span></code>, <code class="docutils literal notranslate"><span class="pre">onset.information.content</span></code>, <code class="docutils literal notranslate"><span class="pre">entropy</span></code></p>
 </section>
 <section id="3.3-Access-IDyOM-output-data-via-keywords">
-<h3>3.3 Access IDyOM output data via keywords<a class="headerlink" href="#3.3-Access-IDyOM-output-data-via-keywords" title="Permalink to this headline"></a></h3>
+<h3>3.3 Access IDyOM output data via keywords<a class="headerlink" href="#3.3-Access-IDyOM-output-data-via-keywords" title="Permalink to this heading"></a></h3>
 <p>To extract the output values, we will use the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> method called <code class="docutils literal notranslate"><span class="pre">access_idyom_output_keywords</span></code>.</p>
 <p>You need to pass a list of keywords to the method, and it will return a dataframe.</p>
 <div class="nbinput docutils container">
