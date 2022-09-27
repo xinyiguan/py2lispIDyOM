@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data preprocessing - Extracting IDyOM output data &mdash; py2lispIDyOM  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/autoclasstoc.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/sg_gallery.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data preprocessing - Exporting IDyOM output data to other formats" href="2b_data_preprocessing_exporting.html" />
+    <link rel="prev" title="Running IDyOM Tutorial" href="1_running_IDyOM_tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../api_reference.html">API Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="1_running_IDyOM_tutorial.html">Running IDyOM Tutorial</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data preprocessing - Extracting IDyOM output data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:">1. Indicate the experiment log folder that you want to work with:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:">2. Experiment Info: to access some melodies in that experiment:</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#2.1-Access-a-melody-using-melodies_dict:">2.1 Access a melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code>:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names">2.2 Access a list of melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing their names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices.">2.3 Access consecutive melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing the indices.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3.-Melody-Info:-to-further-access-melody-specific-information">3. Melody Info: to further access melody-specific information</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#3.1-Access-the-melody">3.1 Access the melody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody">3.2 Check the valid IDyOM output keywords for the selected melody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#3.3-Access-IDyOM-output-data-via-keywords">3.3 Access IDyOM output data via keywords</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2b_data_preprocessing_exporting.html">Data preprocessing - Exporting IDyOM output data to other formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_visualizing_outputs.html">Visualizing IDyOM outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../how_to_contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LICENSE.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">py2lispIDyOM</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+      <li>Data preprocessing - Extracting IDyOM output data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials/2a_data_preprocessing_extracting.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt .copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+.jp-RenderedHTMLCommon table,
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.jp-RenderedHTMLCommon thead,
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+.jp-RenderedHTMLCommon tr,
+.jp-RenderedHTMLCommon th,
+.jp-RenderedHTMLCommon td,
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+.jp-RenderedHTMLCommon th,
+div.rendered_html th {
+  font-weight: bold;
+}
+.jp-RenderedHTMLCommon tbody tr:nth-child(odd),
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.jp-RenderedHTMLCommon tbody tr:hover,
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="Data-preprocessing---Extracting-IDyOM-output-data">
+<h1>Data preprocessing - Extracting IDyOM output data<a class="headerlink" href="#Data-preprocessing---Extracting-IDyOM-output-data" title="Permalink to this headline"></a></h1>
+<p>This tutorial will cover how to extract certain IDyOM outputs (for analysis in python) and export them in different formats using py2lispIDyOM, given that you already have the <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file output. For an overview of the py2lispIDyOM functionality, see the <a class="reference internal" href="../README.html"><span class="doc">README</span></a>.</p>
+<p>Given that you already have the <code class="docutils literal notranslate"><span class="pre">.dat</span></code> file output, you can extract certain properties of certain melodies from that file.</p>
+<p>We will continue the sample example as in the <a class="reference internal" href="1_running_IDyOM_tutorial.html"><span class="doc">1_running_IDyOM_tutorial.ipynb</span></a>, and extract some IDyOM outputs from that experiment, where the log folder is <code class="docutils literal notranslate"><span class="pre">experiment_history/21-05-22_17.05.05/</span></code></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import ExperimentInfo from extract module</span>
+<span class="kn">import</span> <span class="nn">py2lispIDyOM</span> <span class="k">as</span> <span class="nn">py2lispIDyOM</span>
+<span class="kn">from</span> <span class="nn">py2lispIDyOM.extract</span> <span class="kn">import</span> <span class="n">ExperimentInfo</span>
+</pre></div>
+</div>
+</div>
+<section id="1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:">
+<h2>1. Indicate the experiment log folder that you want to work with:<a class="headerlink" href="#1.-Indicate-the-experiment-log-folder-that-you-want-to-work-with:" title="Permalink to this headline"></a></h2>
+<p>To start, users need to indicate the experiment log folder that you want to work with by providing the log path <code class="docutils literal notranslate"><span class="pre">experiment_folder_path</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set experiment_folder_path:</span>
+<span class="n">my_experiment</span> <span class="o">=</span> <span class="n">ExperimentInfo</span><span class="p">(</span><span class="n">experiment_folder_path</span><span class="o">=</span><span class="s1">&#39;experiment_history/21-05-22_17.05.05/&#39;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+</section>
+<section id="2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:">
+<h2>2. Experiment Info: to access some melodies in that experiment:<a class="headerlink" href="#2.-Experiment-Info:-to-access-some-melodies-in-that-experiment:" title="Permalink to this headline"></a></h2>
+<p>There are two ways to access melodies in the experiment: 1. Access a specific melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code> by passing the melody name. - This returns a DataFrame of all IDyOM outputs for this melody.</p>
+<ol class="arabic simple" start="2">
+<li><p>Access specific melodies using the method <code class="docutils literal notranslate"><span class="pre">access_melodies(starting_index=None,</span> <span class="pre">ending_index=None,</span> <span class="pre">melody_names=None)</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p>This returns a list of DataFrame of all IDyOM outputs for selected melodies.</p></li>
+</ul>
+<section id="2.1-Access-a-melody-using-melodies_dict:">
+<h3>2.1 Access a melody using <code class="docutils literal notranslate"><span class="pre">melodies_dict</span></code>:<a class="headerlink" href="#2.1-Access-a-melody-using-melodies_dict:" title="Permalink to this headline"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the melody named &#39;&quot;chor-012&quot;&#39; using `melodies_dict` by providing it melody name as the key</span>
+
+<span class="n">selected_melody</span> <span class="o">=</span> <span class="n">my_experiment</span><span class="o">.</span><span class="n">melodies_dict</span><span class="p">[</span><span class="s1">&#39;&quot;chor-012&quot;&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_melody</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+      dataset.id  melody.id  note.id melody.name vertint12  articulation  \
+0   6.605212e+13       12.0      1.0  &#34;chor-012&#34;        NA           0.0
+1   6.605212e+13       12.0      2.0  &#34;chor-012&#34;        NA           0.0
+2   6.605212e+13       12.0      3.0  &#34;chor-012&#34;        NA           0.0
+3   6.605212e+13       12.0      4.0  &#34;chor-012&#34;        NA           0.0
+4   6.605212e+13       12.0      5.0  &#34;chor-012&#34;        NA           0.0
+5   6.605212e+13       12.0      6.0  &#34;chor-012&#34;        NA           0.0
+6   6.605212e+13       12.0      7.0  &#34;chor-012&#34;        NA           0.0
+7   6.605212e+13       12.0      8.0  &#34;chor-012&#34;        NA           0.0
+8   6.605212e+13       12.0      9.0  &#34;chor-012&#34;        NA           0.0
+9   6.605212e+13       12.0     10.0  &#34;chor-012&#34;        NA           0.0
+10  6.605212e+13       12.0     11.0  &#34;chor-012&#34;        NA           0.0
+11  6.605212e+13       12.0     12.0  &#34;chor-012&#34;        NA           0.0
+12  6.605212e+13       12.0     13.0  &#34;chor-012&#34;        NA           0.0
+13  6.605212e+13       12.0     14.0  &#34;chor-012&#34;        NA           0.0
+14  6.605212e+13       12.0     15.0  &#34;chor-012&#34;        NA           0.0
+15  6.605212e+13       12.0     16.0  &#34;chor-012&#34;        NA           0.0
+16  6.605212e+13       12.0     17.0  &#34;chor-012&#34;        NA           0.0
+17  6.605212e+13       12.0     18.0  &#34;chor-012&#34;        NA           0.0
+18  6.605212e+13       12.0     19.0  &#34;chor-012&#34;        NA           0.0
+19  6.605212e+13       12.0     20.0  &#34;chor-012&#34;        NA           0.0
+20  6.605212e+13       12.0     21.0  &#34;chor-012&#34;        NA           0.0
+21  6.605212e+13       12.0     22.0  &#34;chor-012&#34;        NA           0.0
+22  6.605212e+13       12.0     23.0  &#34;chor-012&#34;        NA           0.0
+23  6.605212e+13       12.0     24.0  &#34;chor-012&#34;        NA           0.0
+24  6.605212e+13       12.0     25.0  &#34;chor-012&#34;        NA           0.0
+25  6.605212e+13       12.0     26.0  &#34;chor-012&#34;        NA           0.0
+26  6.605212e+13       12.0     27.0  &#34;chor-012&#34;        NA           0.0
+27  6.605212e+13       12.0     28.0  &#34;chor-012&#34;        NA           0.0
+28  6.605212e+13       12.0     29.0  &#34;chor-012&#34;        NA           0.0
+29  6.605212e+13       12.0     30.0  &#34;chor-012&#34;        NA           0.0
+30  6.605212e+13       12.0     31.0  &#34;chor-012&#34;        NA           0.0
+
+    comma  voice  ornament dyn  ...  onset.18  onset.24  onset.36  onset.48  \
+0     0.0    1.0       0.0  NA  ...  0.069163  0.108389  0.089951  0.130606
+1     0.0    1.0       0.0  NA  ...  0.215268  0.083398  0.023693  0.040086
+2     0.0    1.0       0.0  NA  ...  0.064587  0.535028  0.080391  0.048375
+3     0.0    1.0       0.0  NA  ...  0.121740  0.356607  0.024939  0.029701
+4     0.0    1.0       0.0  NA  ...  0.005699  0.192398  0.015870  0.016998
+5     0.0    1.0       0.0  NA  ...  0.113231  0.077657  0.077657  0.080017
+6     0.0    1.0       0.0  NA  ...  0.028371  0.105038  0.013260  0.016347
+7     0.0    1.0       0.0  NA  ...  0.267783  0.091818  0.032460  0.042607
+8     0.0    1.0       0.0  NA  ...  0.011060  0.196659  0.024893  0.028715
+9     0.0    1.0       0.0  NA  ...  0.193435  0.023433  0.023433  0.026460
+10    0.0    1.0       0.0  NA  ...  0.011080  0.166016  0.028406  0.032707
+11    0.0    1.0       0.0  NA  ...  0.066150  0.117944  0.045238  0.056585
+12    0.0    1.0       0.0  NA  ...  0.014655  0.648461  0.010516  0.010516
+13    0.0    1.0       0.0  NA  ...  0.046266  0.315797  0.046266  0.086085
+14    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+15    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+16    0.0    1.0       0.0  NA  ...  0.036796  0.429145  0.036796  0.116969
+17    0.0    1.0       0.0  NA  ...  0.032738  0.507358  0.032738  0.032738
+18    0.0    1.0       0.0  NA  ...  0.048937  0.048937  0.048937  0.048937
+19    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+20    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+21    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+22    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+23    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+24    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+25    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+26    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+27    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+28    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+29    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+30    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+
+    onset.72  onset.120  probability  information.content   entropy  \
+0   0.130606   0.125256     0.004055             7.945978  8.166577
+1   0.040086   0.037790     0.005786             7.433325  7.022451
+2   0.048375   0.048375     0.031582             4.984756  4.881182
+3   0.028123   0.009872     0.011077             6.496335  5.746488
+4   0.018125   0.018125     0.048472             4.366702  5.291978
+5   0.043719   0.072700     0.007871             6.989316  7.123601
+6   0.051517   0.048669     0.019845             5.655067  5.447203
+7   0.040106   0.042607     0.002457             8.669009  5.044505
+8   0.471100   0.032497     0.002324             8.748941  5.526692
+9   0.024948   0.008068     0.001581             9.304609  6.056644
+10  0.034855   0.006698     0.047587             4.393278  5.147671
+11  0.020384   0.016922     0.047720             4.389259  5.703556
+12  0.008438   0.008438     0.000582            10.747887  3.765447
+13  0.086085   0.086085     0.001754             9.154955  5.892540
+14  0.096666   0.041449     0.034336             4.864124  7.016802
+15  0.096666   0.041449     0.032692             4.934914  6.382860
+16  0.036796   0.036796     0.004449             7.812364  4.985937
+17  0.032738   0.032738     0.221689             2.173392  5.078086
+18  0.048937   0.048937     0.006712             7.219008  4.581941
+19  0.071475   0.071475     0.004367             7.839179  6.053847
+20  0.071475   0.071475     0.005319             7.554738  5.934624
+21  0.071475   0.071475     0.048676             4.360633  5.152714
+22  0.071475   0.071475     0.041270             4.598770  5.460558
+23  0.071475   0.071475     0.019223             5.701044  6.356779
+24  0.071475   0.071475     0.021635             5.530499  5.941483
+25  0.071475   0.071475     0.003628             8.106473  5.508440
+26  0.071475   0.071475     0.018458             5.759634  6.264733
+27  0.071475   0.071475     0.011388             6.456328  6.271060
+28  0.071475   0.071475     0.054201             4.205528  4.788754
+29  0.071475   0.071475     0.047520             4.395319  5.136540
+30  0.071475   0.071475     0.031558             4.985858  5.510000
+
+   information.gain
+0                NA
+1          1.122545
+2          2.702558
+3          0.942574
+4          1.959542
+5          1.994862
+6          1.374084
+7          2.161627
+8          3.825893
+9           2.76596
+10          0.99575
+11         0.902952
+12         2.129932
+13          1.16337
+14          0.58589
+15         0.271728
+16         1.935903
+17         0.683338
+18         2.941365
+19         2.065624
+20         0.252211
+21         0.972446
+22         1.956564
+23         0.937542
+24         0.297714
+25          0.63992
+26         0.351777
+27         0.143677
+28         1.379553
+29         2.574325
+30         1.474449
+
+[31 rows x 86 columns]
+</pre></div></div>
+</div>
+</section>
+<section id="2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names">
+<h3>2.2 Access a list of melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing their names<a class="headerlink" href="#2.2-Access-a-list-of-melodies-using-the-access_melodies-method-by-providing-their-names" title="Permalink to this headline"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the melody named &#39;&quot;chor-010&quot;&#39; using the `access_melodies` method.</span>
+
+<span class="n">selected_melodies</span> <span class="o">=</span> <span class="n">my_experiment</span><span class="o">.</span><span class="n">access_melodies</span><span class="p">(</span><span class="n">melody_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&quot;chor-010&quot;&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_melodies</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[      dataset.id  melody.id  note.id melody.name vertint12  articulation  \
+0   6.605212e+13       10.0      1.0  &#34;chor-010&#34;        NA           0.0
+1   6.605212e+13       10.0      2.0  &#34;chor-010&#34;        NA           0.0
+2   6.605212e+13       10.0      3.0  &#34;chor-010&#34;        NA           0.0
+3   6.605212e+13       10.0      4.0  &#34;chor-010&#34;        NA           0.0
+4   6.605212e+13       10.0      5.0  &#34;chor-010&#34;        NA           0.0
+5   6.605212e+13       10.0      6.0  &#34;chor-010&#34;        NA           0.0
+6   6.605212e+13       10.0      7.0  &#34;chor-010&#34;        NA           0.0
+7   6.605212e+13       10.0      8.0  &#34;chor-010&#34;        NA           0.0
+8   6.605212e+13       10.0      9.0  &#34;chor-010&#34;        NA           0.0
+9   6.605212e+13       10.0     10.0  &#34;chor-010&#34;        NA           0.0
+10  6.605212e+13       10.0     11.0  &#34;chor-010&#34;        NA           0.0
+11  6.605212e+13       10.0     12.0  &#34;chor-010&#34;        NA           0.0
+12  6.605212e+13       10.0     13.0  &#34;chor-010&#34;        NA           0.0
+13  6.605212e+13       10.0     14.0  &#34;chor-010&#34;        NA           0.0
+14  6.605212e+13       10.0     15.0  &#34;chor-010&#34;        NA           0.0
+15  6.605212e+13       10.0     16.0  &#34;chor-010&#34;        NA           0.0
+16  6.605212e+13       10.0     17.0  &#34;chor-010&#34;        NA           0.0
+17  6.605212e+13       10.0     18.0  &#34;chor-010&#34;        NA           0.0
+18  6.605212e+13       10.0     19.0  &#34;chor-010&#34;        NA           0.0
+19  6.605212e+13       10.0     20.0  &#34;chor-010&#34;        NA           0.0
+20  6.605212e+13       10.0     21.0  &#34;chor-010&#34;        NA           0.0
+21  6.605212e+13       10.0     22.0  &#34;chor-010&#34;        NA           0.0
+22  6.605212e+13       10.0     23.0  &#34;chor-010&#34;        NA           0.0
+23  6.605212e+13       10.0     24.0  &#34;chor-010&#34;        NA           0.0
+24  6.605212e+13       10.0     25.0  &#34;chor-010&#34;        NA           0.0
+25  6.605212e+13       10.0     26.0  &#34;chor-010&#34;        NA           0.0
+26  6.605212e+13       10.0     27.0  &#34;chor-010&#34;        NA           0.0
+27  6.605212e+13       10.0     28.0  &#34;chor-010&#34;        NA           0.0
+28  6.605212e+13       10.0     29.0  &#34;chor-010&#34;        NA           0.0
+29  6.605212e+13       10.0     30.0  &#34;chor-010&#34;        NA           0.0
+30  6.605212e+13       10.0     31.0  &#34;chor-010&#34;        NA           0.0
+31  6.605212e+13       10.0     32.0  &#34;chor-010&#34;        NA           0.0
+32  6.605212e+13       10.0     33.0  &#34;chor-010&#34;        NA           0.0
+33  6.605212e+13       10.0     34.0  &#34;chor-010&#34;        NA           0.0
+34  6.605212e+13       10.0     35.0  &#34;chor-010&#34;        NA           0.0
+35  6.605212e+13       10.0     36.0  &#34;chor-010&#34;        NA           0.0
+36  6.605212e+13       10.0     37.0  &#34;chor-010&#34;        NA           0.0
+37  6.605212e+13       10.0     38.0  &#34;chor-010&#34;        NA           0.0
+38  6.605212e+13       10.0     39.0  &#34;chor-010&#34;        NA           0.0
+39  6.605212e+13       10.0     40.0  &#34;chor-010&#34;        NA           0.0
+40  6.605212e+13       10.0     41.0  &#34;chor-010&#34;        NA           0.0
+41  6.605212e+13       10.0     42.0  &#34;chor-010&#34;        NA           0.0
+42  6.605212e+13       10.0     43.0  &#34;chor-010&#34;        NA           0.0
+43  6.605212e+13       10.0     44.0  &#34;chor-010&#34;        NA           0.0
+44  6.605212e+13       10.0     45.0  &#34;chor-010&#34;        NA           0.0
+45  6.605212e+13       10.0     46.0  &#34;chor-010&#34;        NA           0.0
+
+    comma  voice  ornament dyn  ...  onset.18  onset.24  onset.36  onset.48  \
+0     0.0    1.0       0.0  NA  ...  0.069163  0.108389  0.089951  0.130606
+1     0.0    1.0       0.0  NA  ...  0.215268  0.083398  0.023693  0.040086
+2     0.0    1.0       0.0  NA  ...  0.064587  0.535028  0.080391  0.048375
+3     0.0    1.0       0.0  NA  ...  0.121740  0.356607  0.024939  0.029701
+4     0.0    1.0       0.0  NA  ...  0.005699  0.192398  0.015870  0.016998
+5     0.0    1.0       0.0  NA  ...  0.113231  0.077657  0.077657  0.080017
+6     0.0    1.0       0.0  NA  ...  0.025687  0.029588  0.081991  0.029588
+7     0.0    1.0       0.0  NA  ...  0.002914  0.037882  0.004984  0.763103
+8     0.0    1.0       0.0  NA  ...  0.008422  0.536129  0.053373  0.062757
+9     0.0    1.0       0.0  NA  ...  0.156526  0.484888  0.016137  0.021628
+10    0.0    1.0       0.0  NA  ...  0.011060  0.196659  0.024893  0.028715
+11    0.0    1.0       0.0  NA  ...  0.193435  0.023433  0.023433  0.026460
+12    0.0    1.0       0.0  NA  ...  0.011080  0.166016  0.028406  0.032707
+13    0.0    1.0       0.0  NA  ...  0.066150  0.117944  0.045238  0.056585
+14    0.0    1.0       0.0  NA  ...  0.009579  0.022542  0.022542  0.009579
+15    0.0    1.0       0.0  NA  ...  0.007703  0.108186  0.007703  0.015280
+16    0.0    1.0       0.0  NA  ...  0.046266  0.315797  0.046266  0.086085
+17    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+18    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+19    0.0    1.0       0.0  NA  ...  0.064011  0.064011  0.168065  0.064011
+20    0.0    1.0       0.0  NA  ...  0.036796  0.429145  0.036796  0.116969
+21    0.0    1.0       0.0  NA  ...  0.032738  0.507358  0.032738  0.032738
+22    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+23    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+24    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+25    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+26    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+27    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+28    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+29    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+30    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+31    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+32    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+33    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+34    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+35    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+36    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+37    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+38    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+39    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+40    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+41    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+42    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+43    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+44    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+45    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+
+    onset.72  onset.120  probability  information.content   entropy  \
+0   0.130606   0.125256     0.006068             7.364515  8.166577
+1   0.040086   0.037790     0.002263             8.787534  6.692070
+2   0.048375   0.048375     0.083642             3.579631  6.746566
+3   0.028123   0.009872     0.005905             7.403954  5.811079
+4   0.018125   0.018125     0.057928             4.109587  5.192007
+5   0.043719   0.072700     0.001214             9.685899  6.688033
+6   0.057079   0.060216     0.002273             8.781099  6.412182
+7   0.025572   0.027625     0.004173             7.904568  5.691120
+8   0.072021   0.076614     0.095043             3.395275  6.195409
+9   0.020264   0.021628     0.084953             3.557193  6.054130
+10  0.471100   0.032497     0.025328             5.303103  6.025271
+11  0.024948   0.008068     0.002700             8.532955  5.496740
+12  0.034855   0.006698     0.001368             9.514020  4.634595
+13  0.020384   0.016922     0.000516            10.919970  6.279158
+14  0.009579   0.009579     0.023234             5.427610  6.365307
+15  0.015280   0.015280     0.001073             9.863976  5.434465
+16  0.086085   0.086085     0.032688             4.935083  6.820054
+17  0.096666   0.041449     0.016310             5.938136  6.445262
+18  0.096666   0.041449     0.000285            11.777886  6.376330
+19  0.064011   0.064011     0.032013             4.965190  7.453425
+20  0.036796   0.036796     0.094515             3.403313  6.325965
+21  0.032738   0.032738     0.000560            10.801688  5.515079
+22  0.071475   0.071475     0.030527             5.033760  6.451129
+23  0.071475   0.071475     0.030173             5.050578  6.242611
+24  0.071475   0.071475     0.004487             7.799989  6.395721
+25  0.071475   0.071475     0.000491            10.991930  6.505685
+26  0.071475   0.071475     0.003304             8.241366  7.398329
+27  0.071475   0.071475     0.005148             7.601661  6.615088
+28  0.071475   0.071475     0.001718             9.184636  6.746635
+29  0.071475   0.071475     0.003711             8.073947  6.704841
+30  0.071475   0.071475     0.003893             8.004885  6.831011
+31  0.071475   0.071475     0.009871             6.662527  6.981373
+32  0.071475   0.071475     0.004060             7.944435  6.577649
+33  0.071475   0.071475     0.012241             6.352193  6.626351
+34  0.071475   0.071475     0.003576             8.127393  6.317979
+35  0.071475   0.071475     0.016519             5.919709  6.640411
+36  0.071475   0.071475     0.014281             6.129768  6.172625
+37  0.071475   0.071475     0.000605            10.689795  6.107241
+38  0.071475   0.071475     0.049025             4.350327  5.208764
+39  0.071475   0.071475     0.006140             7.347494  5.184156
+40  0.071475   0.071475     0.026622             5.231213  6.271502
+41  0.071475   0.071475     0.025797             5.276651  5.858154
+42  0.071475   0.071475     0.046497             4.426728  5.343955
+43  0.071475   0.071475     0.012445             6.328318  6.123449
+44  0.071475   0.071475     0.009146             6.772634  7.122422
+45  0.071475   0.071475     0.027518             5.183463  6.121163
+
+   information.gain
+0                NA
+1          1.232259
+2          1.375501
+3          0.641172
+4          1.142639
+5          1.731693
+6          1.562651
+7          3.517963
+8           2.56795
+9          0.739198
+10         1.249012
+11         2.424903
+12         1.126749
+13         2.610063
+14         1.653181
+15         1.353293
+16         2.303764
+17         0.345092
+18         0.243361
+19          0.91787
+20         1.046446
+21         0.210775
+22         1.898791
+23         0.165335
+24         0.352045
+25         0.929199
+26         0.230001
+27         0.285012
+28          0.13639
+29         0.164278
+30         0.110937
+31         0.846874
+32         1.187257
+33         0.334889
+34         0.067478
+35         0.313294
+36         0.513642
+37         1.545731
+38         2.524508
+39         0.113159
+40         0.422336
+41         0.703918
+42         2.159898
+43         0.278918
+44         0.727375
+45         0.539936
+
+[46 rows x 86 columns]]
+</pre></div></div>
+</div>
+</section>
+<section id="2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices.">
+<h3>2.3 Access consecutive melodies using the <code class="docutils literal notranslate"><span class="pre">access_melodies</span></code> method by providing the indices.<a class="headerlink" href="#2.3-Access-consecutive-melodies-using-the-access_melodies-method-by-providing-the-indices." title="Permalink to this headline"></a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the first 2 melodies using the `access_melodies` method.</span>
+
+<span class="n">selected_melodies</span> <span class="o">=</span> <span class="n">my_experiment</span><span class="o">.</span><span class="n">access_melodies</span><span class="p">(</span><span class="n">ending_index</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_melodies</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[      dataset.id  melody.id  note.id melody.name vertint12  articulation  \
+0   6.605212e+13        1.0      1.0  &#34;chor-001&#34;        NA           0.0
+1   6.605212e+13        1.0      2.0  &#34;chor-001&#34;        NA           0.0
+2   6.605212e+13        1.0      3.0  &#34;chor-001&#34;        NA           0.0
+3   6.605212e+13        1.0      4.0  &#34;chor-001&#34;        NA           0.0
+4   6.605212e+13        1.0      5.0  &#34;chor-001&#34;        NA           0.0
+5   6.605212e+13        1.0      6.0  &#34;chor-001&#34;        NA           0.0
+6   6.605212e+13        1.0      7.0  &#34;chor-001&#34;        NA           0.0
+7   6.605212e+13        1.0      8.0  &#34;chor-001&#34;        NA           0.0
+8   6.605212e+13        1.0      9.0  &#34;chor-001&#34;        NA           0.0
+9   6.605212e+13        1.0     10.0  &#34;chor-001&#34;        NA           0.0
+10  6.605212e+13        1.0     11.0  &#34;chor-001&#34;        NA           0.0
+11  6.605212e+13        1.0     12.0  &#34;chor-001&#34;        NA           0.0
+12  6.605212e+13        1.0     13.0  &#34;chor-001&#34;        NA           0.0
+13  6.605212e+13        1.0     14.0  &#34;chor-001&#34;        NA           0.0
+14  6.605212e+13        1.0     15.0  &#34;chor-001&#34;        NA           0.0
+15  6.605212e+13        1.0     16.0  &#34;chor-001&#34;        NA           0.0
+16  6.605212e+13        1.0     17.0  &#34;chor-001&#34;        NA           0.0
+17  6.605212e+13        1.0     18.0  &#34;chor-001&#34;        NA           0.0
+18  6.605212e+13        1.0     19.0  &#34;chor-001&#34;        NA           0.0
+19  6.605212e+13        1.0     20.0  &#34;chor-001&#34;        NA           0.0
+20  6.605212e+13        1.0     21.0  &#34;chor-001&#34;        NA           0.0
+21  6.605212e+13        1.0     22.0  &#34;chor-001&#34;        NA           0.0
+22  6.605212e+13        1.0     23.0  &#34;chor-001&#34;        NA           0.0
+23  6.605212e+13        1.0     24.0  &#34;chor-001&#34;        NA           0.0
+24  6.605212e+13        1.0     25.0  &#34;chor-001&#34;        NA           0.0
+25  6.605212e+13        1.0     26.0  &#34;chor-001&#34;        NA           0.0
+26  6.605212e+13        1.0     27.0  &#34;chor-001&#34;        NA           0.0
+27  6.605212e+13        1.0     28.0  &#34;chor-001&#34;        NA           0.0
+28  6.605212e+13        1.0     29.0  &#34;chor-001&#34;        NA           0.0
+29  6.605212e+13        1.0     30.0  &#34;chor-001&#34;        NA           0.0
+30  6.605212e+13        1.0     31.0  &#34;chor-001&#34;        NA           0.0
+31  6.605212e+13        1.0     32.0  &#34;chor-001&#34;        NA           0.0
+32  6.605212e+13        1.0     33.0  &#34;chor-001&#34;        NA           0.0
+33  6.605212e+13        1.0     34.0  &#34;chor-001&#34;        NA           0.0
+34  6.605212e+13        1.0     35.0  &#34;chor-001&#34;        NA           0.0
+35  6.605212e+13        1.0     36.0  &#34;chor-001&#34;        NA           0.0
+36  6.605212e+13        1.0     37.0  &#34;chor-001&#34;        NA           0.0
+37  6.605212e+13        1.0     38.0  &#34;chor-001&#34;        NA           0.0
+38  6.605212e+13        1.0     39.0  &#34;chor-001&#34;        NA           0.0
+
+    comma  voice  ornament dyn  ...  onset.18  onset.24  onset.36  onset.48  \
+0     0.0    1.0       0.0  NA  ...  0.069163  0.108389  0.089951  0.130606
+1     0.0    1.0       0.0  NA  ...  0.215268  0.083398  0.023693  0.040086
+2     0.0    1.0       0.0  NA  ...  0.064587  0.535028  0.080391  0.048375
+3     0.0    1.0       0.0  NA  ...  0.005627  0.019489  0.023626  0.019489
+4     0.0    1.0       0.0  NA  ...  0.221086  0.085329  0.041988  0.049373
+5     0.0    1.0       0.0  NA  ...  0.005699  0.192398  0.015870  0.016998
+6     0.0    1.0       0.0  NA  ...  0.113231  0.077657  0.077657  0.080017
+7     0.0    1.0       0.0  NA  ...  0.028371  0.105038  0.013260  0.016347
+8     0.0    1.0       0.0  NA  ...  0.002986  0.490153  0.005057  0.372982
+9     0.0    1.0       0.0  NA  ...  0.008422  0.536129  0.053373  0.062757
+10    0.0    1.0       0.0  NA  ...  0.156526  0.484888  0.016137  0.021628
+11    0.0    1.0       0.0  NA  ...  0.011060  0.196659  0.024893  0.028715
+12    0.0    1.0       0.0  NA  ...  0.193435  0.023433  0.023433  0.026460
+13    0.0    1.0       0.0  NA  ...  0.011080  0.166016  0.028406  0.032707
+14    0.0    1.0       0.0  NA  ...  0.085692  0.057504  0.074620  0.020161
+15    0.0    1.0       0.0  NA  ...  0.021904  0.203087  0.015830  0.015830
+16    0.0    1.0       0.0  NA  ...  0.010427  0.509130  0.010427  0.020113
+17    0.0    1.0       0.0  NA  ...  0.042116  0.323085  0.042116  0.079686
+18    0.0    1.0       0.0  NA  ...  0.064011  0.064011  0.168065  0.064011
+19    0.0    1.0       0.0  NA  ...  0.046266  0.315797  0.046266  0.086085
+20    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+21    0.0    1.0       0.0  NA  ...  0.032738  0.507358  0.032738  0.032738
+22    0.0    1.0       0.0  NA  ...  0.048937  0.048937  0.048937  0.048937
+23    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+24    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+25    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+26    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+27    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+28    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+29    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+30    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+31    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+32    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+33    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+34    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+35    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+36    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+37    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+38    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+
+    onset.72  onset.120  probability  information.content   entropy  \
+0   0.130606   0.125256     0.003618             8.110521  8.166577
+1   0.040086   0.037790     0.006168             7.340967  6.978885
+2   0.048375   0.048375     0.003824             8.030865  7.040227
+3   0.020869   0.005627     0.014959             6.062825  5.377770
+4   0.046937   0.017783     0.006833             7.193185  6.516368
+5   0.018125   0.018125     0.016638             5.909347  5.315919
+6   0.043719   0.072700     0.012751             6.293203  7.594322
+7   0.051517   0.048669     0.000793            10.299686  5.291717
+8   0.025180   0.027164     0.055579             4.169328  5.839678
+9   0.072021   0.076614     0.081680             3.613867  5.946950
+10  0.020264   0.021628     0.041835             4.579153  5.821548
+11  0.471100   0.032497     0.022307             5.486332  6.091876
+12  0.024948   0.008068     0.003196             8.289616  5.076308
+13  0.034855   0.006698     0.001381             9.500299  5.044838
+14  0.009347   0.009347     0.146412             2.771899  5.432578
+15  0.012763   0.012763     0.040615             4.621834  5.149334
+16  0.020113   0.020113     0.074568             3.745300  5.098519
+17  0.079686   0.079686     0.013097             6.254603  6.631182
+18  0.064011   0.064011     0.049004             4.350946  5.644735
+19  0.086085   0.086085     0.046306             4.432662  5.074976
+20  0.096666   0.041449     0.016336             5.935765  6.052998
+21  0.032738   0.032738     0.114361             3.128328  5.368318
+22  0.048937   0.048937     0.008768             6.833459  4.613591
+23  0.071475   0.071475     0.009778             6.676212  5.950436
+24  0.071475   0.071475     0.000387            11.335936  5.986061
+25  0.071475   0.071475     0.000809            10.271771  7.372804
+26  0.071475   0.071475     0.010303             6.600861  7.279307
+27  0.071475   0.071475     0.016263             5.942232  6.772683
+28  0.071475   0.071475     0.020545             5.605064  6.487540
+29  0.071475   0.071475     0.014429             6.114886  5.707804
+30  0.071475   0.071475     0.008981             6.798859  6.379406
+31  0.071475   0.071475     0.013602             6.200000  6.282618
+32  0.071475   0.071475     0.020492             5.608791  6.283053
+33  0.071475   0.071475     0.038168             4.711486  5.770165
+34  0.071475   0.071475     0.025756             5.278932  5.667925
+35  0.071475   0.071475     0.032324             4.951241  5.522875
+36  0.071475   0.071475     0.028249             5.145631  6.720723
+37  0.071475   0.071475     0.027012             5.210249  5.878130
+38  0.071475   0.071475     0.030530             5.033616  5.738510
+
+   information.gain
+0                NA
+1          1.100655
+2          1.148572
+3          3.628526
+4          1.281571
+5          2.119374
+6          1.740519
+7          1.511522
+8          3.603183
+9          1.096036
+10         0.996691
+11         1.833349
+12         3.445602
+13         2.654872
+14         3.811815
+15         0.945636
+16         0.610506
+17         1.176221
+18         1.228733
+19         1.645714
+20         0.902723
+21         0.368654
+22         2.086663
+23         1.231321
+24         0.431252
+25         0.878882
+26         0.188189
+27          0.15374
+28         0.266466
+29         0.590087
+30          1.13126
+31         0.114677
+32         0.050878
+33         0.805284
+34         0.409764
+35         0.319236
+36         1.080196
+37         0.589475
+38         0.874517
+
+[39 rows x 86 columns],       dataset.id  melody.id  note.id melody.name vertint12  articulation  \
+0   6.605212e+13        2.0      1.0  &#34;chor-002&#34;        NA           0.0
+1   6.605212e+13        2.0      2.0  &#34;chor-002&#34;        NA           0.0
+2   6.605212e+13        2.0      3.0  &#34;chor-002&#34;        NA           0.0
+3   6.605212e+13        2.0      4.0  &#34;chor-002&#34;        NA           0.0
+4   6.605212e+13        2.0      5.0  &#34;chor-002&#34;        NA           0.0
+5   6.605212e+13        2.0      6.0  &#34;chor-002&#34;        NA           0.0
+6   6.605212e+13        2.0      7.0  &#34;chor-002&#34;        NA           0.0
+7   6.605212e+13        2.0      8.0  &#34;chor-002&#34;        NA           0.0
+8   6.605212e+13        2.0      9.0  &#34;chor-002&#34;        NA           0.0
+9   6.605212e+13        2.0     10.0  &#34;chor-002&#34;        NA           0.0
+10  6.605212e+13        2.0     11.0  &#34;chor-002&#34;        NA           0.0
+11  6.605212e+13        2.0     12.0  &#34;chor-002&#34;        NA           0.0
+12  6.605212e+13        2.0     13.0  &#34;chor-002&#34;        NA           0.0
+13  6.605212e+13        2.0     14.0  &#34;chor-002&#34;        NA           0.0
+14  6.605212e+13        2.0     15.0  &#34;chor-002&#34;        NA           0.0
+15  6.605212e+13        2.0     16.0  &#34;chor-002&#34;        NA           0.0
+16  6.605212e+13        2.0     17.0  &#34;chor-002&#34;        NA           0.0
+17  6.605212e+13        2.0     18.0  &#34;chor-002&#34;        NA           0.0
+18  6.605212e+13        2.0     19.0  &#34;chor-002&#34;        NA           0.0
+19  6.605212e+13        2.0     20.0  &#34;chor-002&#34;        NA           0.0
+20  6.605212e+13        2.0     21.0  &#34;chor-002&#34;        NA           0.0
+21  6.605212e+13        2.0     22.0  &#34;chor-002&#34;        NA           0.0
+22  6.605212e+13        2.0     23.0  &#34;chor-002&#34;        NA           0.0
+23  6.605212e+13        2.0     24.0  &#34;chor-002&#34;        NA           0.0
+24  6.605212e+13        2.0     25.0  &#34;chor-002&#34;        NA           0.0
+25  6.605212e+13        2.0     26.0  &#34;chor-002&#34;        NA           0.0
+26  6.605212e+13        2.0     27.0  &#34;chor-002&#34;        NA           0.0
+27  6.605212e+13        2.0     28.0  &#34;chor-002&#34;        NA           0.0
+28  6.605212e+13        2.0     29.0  &#34;chor-002&#34;        NA           0.0
+29  6.605212e+13        2.0     30.0  &#34;chor-002&#34;        NA           0.0
+30  6.605212e+13        2.0     31.0  &#34;chor-002&#34;        NA           0.0
+31  6.605212e+13        2.0     32.0  &#34;chor-002&#34;        NA           0.0
+32  6.605212e+13        2.0     33.0  &#34;chor-002&#34;        NA           0.0
+33  6.605212e+13        2.0     34.0  &#34;chor-002&#34;        NA           0.0
+34  6.605212e+13        2.0     35.0  &#34;chor-002&#34;        NA           0.0
+35  6.605212e+13        2.0     36.0  &#34;chor-002&#34;        NA           0.0
+36  6.605212e+13        2.0     37.0  &#34;chor-002&#34;        NA           0.0
+37  6.605212e+13        2.0     38.0  &#34;chor-002&#34;        NA           0.0
+38  6.605212e+13        2.0     39.0  &#34;chor-002&#34;        NA           0.0
+39  6.605212e+13        2.0     40.0  &#34;chor-002&#34;        NA           0.0
+40  6.605212e+13        2.0     41.0  &#34;chor-002&#34;        NA           0.0
+
+    comma  voice  ornament dyn  ...  onset.18  onset.24  onset.36  onset.48  \
+0     0.0    1.0       0.0  NA  ...  0.069163  0.108389  0.089951  0.130606
+1     0.0    1.0       0.0  NA  ...  0.215268  0.083398  0.023693  0.040086
+2     0.0    1.0       0.0  NA  ...  0.064587  0.535028  0.080391  0.048375
+3     0.0    1.0       0.0  NA  ...  0.121740  0.356607  0.024939  0.029701
+4     0.0    1.0       0.0  NA  ...  0.005699  0.192398  0.015870  0.016998
+5     0.0    1.0       0.0  NA  ...  0.113231  0.077657  0.077657  0.080017
+6     0.0    1.0       0.0  NA  ...  0.028371  0.105038  0.013260  0.016347
+7     0.0    1.0       0.0  NA  ...  0.002986  0.490153  0.005057  0.372982
+8     0.0    1.0       0.0  NA  ...  0.008422  0.536129  0.053373  0.062757
+9     0.0    1.0       0.0  NA  ...  0.156526  0.484888  0.016137  0.021628
+10    0.0    1.0       0.0  NA  ...  0.011060  0.196659  0.024893  0.028715
+11    0.0    1.0       0.0  NA  ...  0.011080  0.166016  0.028406  0.032707
+12    0.0    1.0       0.0  NA  ...  0.066150  0.117944  0.045238  0.056585
+13    0.0    1.0       0.0  NA  ...  0.014655  0.648461  0.010516  0.010516
+14    0.0    1.0       0.0  NA  ...  0.010427  0.509130  0.010427  0.020113
+15    0.0    1.0       0.0  NA  ...  0.042116  0.323085  0.042116  0.079686
+16    0.0    1.0       0.0  NA  ...  0.046266  0.315797  0.046266  0.086085
+17    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+18    0.0    1.0       0.0  NA  ...  0.041449  0.368062  0.041449  0.096666
+19    0.0    1.0       0.0  NA  ...  0.036796  0.429145  0.036796  0.116969
+20    0.0    1.0       0.0  NA  ...  0.032738  0.507358  0.032738  0.032738
+21    0.0    1.0       0.0  NA  ...  0.048937  0.048937  0.048937  0.048937
+22    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+23    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+24    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+25    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+26    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+27    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+28    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+29    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+30    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+31    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+32    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+33    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+34    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+35    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+36    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+37    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+38    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+39    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+40    0.0    1.0       0.0  NA  ...  0.071475  0.071475  0.071475  0.071475
+
+    onset.72  onset.120  probability  information.content   entropy  \
+0   0.130606   0.125256     0.004055             7.945978  8.166577
+1   0.040086   0.037790     0.001879             9.055906  7.022451
+2   0.048375   0.048375     0.031736             4.977722  6.759365
+3   0.028123   0.009872     0.005187             7.590789  5.508813
+4   0.018125   0.018125     0.032902             4.925688  5.474818
+5   0.043719   0.072700     0.001262             9.629748  6.267564
+6   0.051517   0.048669     0.008477             6.882165  5.693554
+7   0.025180   0.027164     0.003460             8.174894  4.829847
+8   0.072021   0.076614     0.053780             4.216774  6.363213
+9   0.020264   0.021628     0.063863             3.968870  5.423235
+10  0.471100   0.032497     0.002756             8.503351  5.354833
+11  0.034855   0.006698     0.001428             9.451787  5.034352
+12  0.020384   0.016922     0.001843             9.083658  5.695037
+13  0.008438   0.008438     0.115812             3.110146  5.292224
+14  0.020113   0.020113     0.203976             2.293531  4.940844
+15  0.079686   0.079686     0.104582             3.257295  6.349461
+16  0.086085   0.086085     0.068605             3.865542  6.544269
+17  0.096666   0.041449     0.099663             3.326796  6.277746
+18  0.096666   0.041449     0.073876             3.758748  6.411900
+19  0.036796   0.036796     0.100216             3.318810  6.011344
+20  0.032738   0.032738     0.004198             7.896226  5.887434
+21  0.048937   0.048937     0.002329             8.746285  6.839952
+22  0.071475   0.071475     0.008203             6.929573  6.760173
+23  0.071475   0.071475     0.007193             7.119179  6.465666
+24  0.071475   0.071475     0.014512             6.106617  6.799645
+25  0.071475   0.071475     0.001969             8.988546  6.553230
+26  0.071475   0.071475     0.010188             6.617039  6.445196
+27  0.071475   0.071475     0.010286             6.603144  6.697904
+28  0.071475   0.071475     0.029456             5.085311  5.969671
+29  0.071475   0.071475     0.013323             6.229986  6.520202
+30  0.071475   0.071475     0.003772             8.050456  5.935160
+31  0.071475   0.071475     0.006251             7.321583  6.649951
+32  0.071475   0.071475     0.017481             5.838043  6.340725
+33  0.071475   0.071475     0.045288             4.464736  5.169728
+34  0.071475   0.071475     0.037708             4.729003  5.658613
+35  0.071475   0.071475     0.034882             4.841373  5.886921
+36  0.071475   0.071475     0.043066             4.537309  5.345791
+37  0.071475   0.071475     0.020413             5.614381  6.304415
+38  0.071475   0.071475     0.036857             4.761912  5.775718
+39  0.071475   0.071475     0.023005             5.441924  6.115581
+40  0.071475   0.071475     0.017179             5.863214  6.414777
+
+   information.gain
+0                NA
+1          1.122545
+2          1.364476
+3          1.104274
+4          1.629713
+5          2.202822
+6          1.688195
+7          3.769675
+8          1.383045
+9          0.993839
+10         1.573926
+11         1.837875
+12         0.995622
+13         1.670692
+14         0.309567
+15         0.761373
+16         0.078929
+17         0.274441
+18         0.237343
+19         0.607593
+20         0.347147
+21         1.651555
+22         0.409729
+23         0.445225
+24         0.337947
+25         0.187545
+26         0.500489
+27         0.559612
+28         0.364579
+29         0.237544
+30         0.552133
+31         0.452988
+32         0.420941
+33         0.473281
+34         0.109028
+35         0.902037
+36         0.102926
+37         0.732466
+38          0.61565
+39         0.723997
+40         0.585556
+
+[41 rows x 86 columns]]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="3.-Melody-Info:-to-further-access-melody-specific-information">
+<h2>3. Melody Info: to further access melody-specific information<a class="headerlink" href="#3.-Melody-Info:-to-further-access-melody-specific-information" title="Permalink to this headline"></a></h2>
+<p>To get the IDyOM model outputs for each melodies, you will need to use the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> class.</p>
+<section id="3.1-Access-the-melody">
+<h3>3.1 Access the melody<a class="headerlink" href="#3.1-Access-the-melody" title="Permalink to this headline"></a></h3>
+<p>For each melody in the experiment, all data are stored in the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> class which is essentially a panda.DataFrame. To create an instance of <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code>, we can use <code class="docutils literal notranslate"><span class="pre">ExperimentInfo.melodies_dict</span></code>, or <code class="docutils literal notranslate"><span class="pre">ExperimentInfo.access_melodies</span></code> as showed in part 2.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first, access the melody by creating an instance of `MelodyInfo`</span>
+
+<span class="n">selected_melody</span> <span class="o">=</span> <span class="n">my_experiment</span><span class="o">.</span><span class="n">melodies_dict</span><span class="p">[</span><span class="s1">&#39;&quot;chor-002&quot;&#39;</span><span class="p">]</span>
+<br/></pre></div>
+</div>
+</div>
+<p>Note that here, <code class="docutils literal notranslate"><span class="pre">selected_melody</span></code> is an instance of <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code>.</p>
+</section>
+<section id="3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody">
+<h3>3.2 Check the valid IDyOM output keywords for the selected melody<a class="headerlink" href="#3.2-Check-the-valid-IDyOM-output-keywords-for-the-selected-melody" title="Permalink to this headline"></a></h3>
+<p>For each melody, you can check the valid IDyOM output keywords with the <code class="docutils literal notranslate"><span class="pre">get_idyom_output_keyword_list()</span></code> method.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the valid IDyOM output keywords for this selected_melody:</span>
+
+<span class="n">valid_idyom_output_key_list</span> <span class="o">=</span> <span class="n">selected_melody</span><span class="o">.</span><span class="n">get_idyom_output_keyword_list</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">valid_idyom_output_key_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[&#39;dataset.id&#39;, &#39;melody.id&#39;, &#39;note.id&#39;, &#39;melody.name&#39;, &#39;vertint12&#39;, &#39;articulation&#39;, &#39;comma&#39;, &#39;voice&#39;, &#39;ornament&#39;, &#39;dyn&#39;, &#39;phrase&#39;, &#39;bioi&#39;, &#39;deltast&#39;, &#39;accidental&#39;, &#39;mpitch&#39;, &#39;cpitch&#39;, &#39;barlength&#39;, &#39;pulses&#39;, &#39;tempo&#39;, &#39;mode&#39;, &#39;keysig&#39;, &#39;dur&#39;, &#39;onset&#39;, &#39;cpitch.order.ltm.cpitch&#39;, &#39;cpitch.order.stm.cpitch&#39;, &#39;cpitch.weight.ltm&#39;, &#39;cpitch.weight.stm&#39;, &#39;cpitch.weight.ltm.cpitch&#39;, &#39;cpitch.weight.stm.cpitch&#39;, &#39;cpitch.probability&#39;, &#39;cpitch.information.content&#39;, &#39;cpitch.entropy&#39;, &#39;cpitch.55&#39;, &#39;cpitch.57&#39;, &#39;cpitch.58&#39;, &#39;cpitch.59&#39;, &#39;cpitch.60&#39;, &#39;cpitch.62&#39;, &#39;cpitch.63&#39;, &#39;cpitch.64&#39;, &#39;cpitch.65&#39;, &#39;cpitch.66&#39;, &#39;cpitch.67&#39;, &#39;cpitch.68&#39;, &#39;cpitch.69&#39;, &#39;cpitch.70&#39;, &#39;cpitch.71&#39;, &#39;cpitch.72&#39;, &#39;cpitch.73&#39;, &#39;cpitch.74&#39;, &#39;cpitch.75&#39;, &#39;cpitch.76&#39;, &#39;cpitch.77&#39;, &#39;cpitch.78&#39;, &#39;cpitch.79&#39;, &#39;cpitch.81&#39;, &#39;cpitch.82&#39;, &#39;cpitch.83&#39;, &#39;cpitch.84&#39;, &#39;cpitch.85&#39;, &#39;cpitch.86&#39;, &#39;cpitch.88&#39;, &#39;onset.order.ltm.onset&#39;, &#39;onset.order.stm.onset&#39;, &#39;onset.weight.ltm&#39;, &#39;onset.weight.stm&#39;, &#39;onset.weight.ltm.onset&#39;, &#39;onset.weight.stm.onset&#39;, &#39;onset.probability&#39;, &#39;onset.information.content&#39;, &#39;onset.entropy&#39;, &#39;onset.0&#39;, &#39;onset.3&#39;, &#39;onset.6&#39;, &#39;onset.9&#39;, &#39;onset.12&#39;, &#39;onset.18&#39;, &#39;onset.24&#39;, &#39;onset.36&#39;, &#39;onset.48&#39;, &#39;onset.72&#39;, &#39;onset.120&#39;, &#39;probability&#39;, &#39;information.content&#39;, &#39;entropy&#39;, &#39;information.gain&#39;]
+</pre></div></div>
+</div>
+<p>The list above shows all the valid IDyOM output keys available for the melody ‘“chor-002”’. Now, we want to access the following data: <code class="docutils literal notranslate"><span class="pre">cpitch.information.content</span></code>, <code class="docutils literal notranslate"><span class="pre">onset.information.content</span></code>, <code class="docutils literal notranslate"><span class="pre">entropy</span></code></p>
+</section>
+<section id="3.3-Access-IDyOM-output-data-via-keywords">
+<h3>3.3 Access IDyOM output data via keywords<a class="headerlink" href="#3.3-Access-IDyOM-output-data-via-keywords" title="Permalink to this headline"></a></h3>
+<p>To extract the output values, we will use the <code class="docutils literal notranslate"><span class="pre">MelodyInfo</span></code> method called <code class="docutils literal notranslate"><span class="pre">access_idyom_output_keywords</span></code>.</p>
+<p>You need to pass a list of keywords to the method, and it will return a dataframe.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Accessing `onset.information.content`, `entropy` for &#39;&quot;chor-002&quot;&#39;</span>
+
+<span class="n">selected_idyom_outputs</span> <span class="o">=</span> <span class="n">selected_melody</span><span class="o">.</span><span class="n">access_idyom_output_keywords</span><span class="p">([</span><span class="s1">&#39;onset.information.content&#39;</span><span class="p">,</span>
+                                                                      <span class="s1">&#39;entropy&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_idyom_outputs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+    onset.information.content   entropy
+0                    2.880014  8.166577
+1                    3.583843  7.022451
+2                    0.902314  6.759365
+3                    1.487593  5.508813
+4                    2.377832  5.474818
+5                    3.686743  6.267564
+6                    3.251021  5.693554
+7                    1.028696  4.829847
+8                    0.899349  6.363213
+9                    1.044276  5.423235
+10                   5.122056  5.354833
+11                   2.590604  5.034352
+12                   3.083826  5.695037
+13                   0.624909  5.292224
+14                   0.973895  4.940844
+15                   1.630016  6.349461
+16                   1.662930  6.544269
+17                   1.441977  6.277746
+18                   1.441977  6.411900
+19                   1.220463  6.011344
+20                   0.978923  5.887434
+21                   4.352934  6.839952
+22                   3.806420  6.760173
+23                   3.806420  6.465666
+24                   3.806420  6.799645
+25                   3.806420  6.553230
+26                   3.806420  6.445196
+27                   3.806420  6.697904
+28                   3.806420  5.969671
+29                   3.806420  6.520202
+30                   3.806420  5.935160
+31                   3.806420  6.649951
+32                   3.806420  6.340725
+33                   3.806420  5.169728
+34                   3.806420  5.658613
+35                   3.806420  5.886921
+36                   3.806420  5.345791
+37                   3.806420  6.304415
+38                   3.806420  5.775718
+39                   3.806420  6.115581
+40                   3.806420  6.414777
+</pre></div></div>
+</div>
+<p>Get get the data as a numpy array, you can use the <code class="docutils literal notranslate"><span class="pre">get_idyom_output_nparray</span></code> method.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the values of `cpitch.entropy` as a numpy array for&#39;&quot;chor-002&quot;&#39;</span>
+
+<span class="n">selected_idyom_output_array</span> <span class="o">=</span> <span class="n">selected_melody</span><span class="o">.</span><span class="n">get_idyom_output_nparray</span><span class="p">(</span><span class="s1">&#39;cpitch.entropy&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">selected_idyom_output_array</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[4.8619256, 4.716329, 4.391901, 3.1552763, 4.0513153, 3.0147789, 3.5076356, 3.0511367, 4.0920258, 3.3372533, 3.1501474, 3.36347, 3.0170422, 3.643789, 2.8647585, 3.3451679, 3.466154, 3.354281, 3.4884357, 3.3005762, 3.4747243, 4.214637, 3.5233264, 3.2288165, 3.5627892, 3.3163767, 3.2083457, 3.4610538, 2.732824, 3.2833517, 2.698308, 3.4130876, 3.1038811, 1.9328707, 2.421765, 2.650072, 2.1089375, 3.0675576, 2.5388658, 2.878732, 3.1779296]
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1_running_IDyOM_tutorial.html" class="btn btn-neutral float-left" title="Running IDyOM Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2b_data_preprocessing_exporting.html" class="btn btn-neutral float-right" title="Data preprocessing - Exporting IDyOM output data to other formats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Xinyi Guan.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
