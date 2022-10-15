@@ -2,9 +2,9 @@ name: tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ macos-latest ]
+        os: [ ubuntu-latest, macos-latest ]
         python-version: [ "3.9", "3.10" ]
     env:
       OS: ${{ matrix.os }}
@@ -38,4 +38,3 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=py2lispIDyOM --cov-report=xml --cov-report=html --junitxml=junit/test-results.xml
-
