@@ -49,6 +49,9 @@ class TestIDyOMExperiment(TestCase):
         test_dataset_path = '../tests/dataset/bach_dataset/'
         pretrain_dataset_path = '../tests/dataset/shanx_dataset/'
 
+        print(test_dataset_path)
+        print(pretrain_dataset_path)
+
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)
         idyom_experiment.set_parameters(target_viewpoints=['cpitch', 'onset'],

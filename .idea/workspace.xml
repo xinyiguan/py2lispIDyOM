@@ -25,18 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch_entropy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch_entropy.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_information_content.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_information_content.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_onset.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch_entropy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch_entropy.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_information_content.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_information_content.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_onset.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_extract.py" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated tests">
       <change beforePath="$PROJECT_DIR$/tests/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -298,13 +287,6 @@
       <workItem from="1662804444905" duration="675000" />
       <workItem from="1663584647665" duration="1055000" />
       <workItem from="1664275404486" duration="11957000" />
-    </task>
-    <task id="LOCAL-00131" summary="paper revision and build JOSS paper pdf">
-      <created>1654012198180</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1654012198180</updated>
     </task>
     <task id="LOCAL-00132" summary="paper citation revision, build JOSS paper pdf">
       <created>1654012997491</created>
@@ -642,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665924581785</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="updated tests">
+      <created>1665926960864</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1665926960864</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +663,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="prob colorbar added" />
     <MESSAGE value="viz set global style" />
     <MESSAGE value="paper compile and review" />
     <MESSAGE value="paper revision" />
@@ -699,7 +687,8 @@
     <MESSAGE value="updated contribution guideline" />
     <MESSAGE value="test updated" />
     <MESSAGE value="updated test" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated test" />
+    <MESSAGE value="updated tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
