@@ -1,4 +1,5 @@
 import datetime
+import shutil
 import unittest
 from unittest import TestCase
 from py2lispIDyOM.run import IDyOMExperiment
@@ -14,6 +15,8 @@ class TestIDyOMExperiment(TestCase):
         """
 
         test_dataset_path = 'dataset/bach_dataset/'
+        experiment_logger_path = 'experiment_history/TestCase1/'
+        shutil.rmtree(experiment_logger_path, ignore_errors=True)
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path, experiment_logger_name='TestCase1')
         idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
                                         source_viewpoints=[('cpintfref', 'cpint'), 'cpitch'],

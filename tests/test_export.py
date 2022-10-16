@@ -1,5 +1,5 @@
 """
-This test script concerns the extract functionality.
+This test script concerns the export functionality.
 We will use the IDyOM outputs from the experiment "25-05-22_14.10.29"
 """
 
@@ -96,13 +96,13 @@ class TestExport(TestCase):
                                     'information.content', 'entropy', 'probability']
 
         chor003 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-003"']
-        chor003_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-003.csv')
+        chor003_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-003.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
             self.assertEqual(chor003.get_idyom_output_nparray(val).all(), np.array(chor003_df[val]).all())
 
         chor004 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-004"']
-        chor004_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-004.csv')
+        chor004_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-004.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
             self.assertEqual(chor004.get_idyom_output_nparray(val).all(), np.array(chor004_df[val]).all())

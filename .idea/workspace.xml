@@ -25,264 +25,98 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated contribution guideline">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docs.yml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="docs updated">
+      <change afterPath="$PROJECT_DIR$/install_idyom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/install_sbcl.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/test_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.BasisOption.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.CachingParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.Configuration.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.LispConvertable.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.OutputParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.Parameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.RequiredParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.TrainingParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.get_timestamp.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.configuration.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.to_float.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_autosummary/py2lispIDyOM.extract.to_float.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/LICENSE.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/LICENSE.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/README.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/README.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.BasisOption.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.CachingParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.Configuration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.LispConvertable.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.OutputParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.Parameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.RequiredParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.TrainingParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.configuration.get_timestamp.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.Export.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.Export.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.export.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.ExperimentInfo.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.ExperimentInfo.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.MelodyInfo.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.doctree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.getDataFrame.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.get_all_song_dict.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.get_dictionary.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.extract.to_float.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.run.IDyOMExperiment.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.run.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.Auxiliary.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.BasicPlot.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/_autosummary/py2lispIDyOM.viz.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/api_reference.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/export.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/extract.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/how_to_contribute.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials/1_running_IDyOM_tutorial.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials/2a_data_preprocessing_extracting.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials/2b_data_preprocessing_exporting.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials/3_visualizing_outputs.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_11_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_13_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_15_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_17_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_17_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_6_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/nbsphinx/tutorials_3_visualizing_outputs_9_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/run_idyom.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/tutorials.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/tutorials/1_running_IDyOM_tutorial.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/tutorials/2a_data_preprocessing_extracting.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/tutorials/2b_data_preprocessing_exporting.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/tutorials/3_visualizing_outputs.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/visualization.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/LICENSE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/README.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.BasisOption.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.CachingParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.Configuration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.LispConvertable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.OutputParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.Parameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.RequiredParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.TrainingParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.get_timestamp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.configuration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.export.Export.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.export.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.ExperimentInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.MelodyInfo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.getDataFrame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_all_song_dict.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_dictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.extract.to_float.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.run.IDyOMExperiment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.Auxiliary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.BasicPlot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_autosummary/py2lispIDyOM.viz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_11_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_13_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_15_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_17_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_17_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_3_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_3_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_6_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_images/tutorials_3_visualizing_outputs_9_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/configuration.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/export.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/extract.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_modules/py2lispIDyOM/viz.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/LICENSE.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/README.md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.BasisOption.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.CachingParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.Configuration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.DatabaseConfiguration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.ExperimentLogger.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.IDyOMConfiguration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.LTMOModelOptions.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.LispConvertable.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.OutputParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.Parameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.RequiredParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.RunModelConfiguration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.STMOModelOptions.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.StatisticalModellingParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.TrainingParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.ViewpointSelectionParameters.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.check_recursive_typings.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.get_timestamp.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.configuration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.export.Export.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.export.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.ExperimentInfo.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.MelodyInfo.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.getDataFrame.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.get_all_song_dict.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.get_dictionary.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.get_song_dict_of_interest.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.extract.to_float.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.run.IDyOMExperiment.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.run.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.Auxiliary.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.BasicAxsGeneration.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.BasicPlot.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/_autosummary/py2lispIDyOM.viz.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/api_reference.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/export.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/extract.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/how_to_contribute.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/run_idyom.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/tutorials.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/tutorials/1_running_IDyOM_tutorial.ipynb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/tutorials/2a_data_preprocessing_extracting.ipynb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/tutorials/2b_data_preprocessing_exporting.ipynb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/tutorials/3_visualizing_outputs.ipynb.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/visualization.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/autoclasstoc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/binder_badge_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/broken_example.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/badge_only.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/Roboto-Slab-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal-italic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal-italic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/fonts/lato-normal.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/css/theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/documentation_options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery-3.5.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/badge_only.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/html5shiv-printshiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/html5shiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/language_data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/no_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/pygments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/sg_gallery-binder.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/sg_gallery-dataframe.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/sg_gallery-rendered-html.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/sg_gallery.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore-1.13.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/api_reference.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/export.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/extract.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/how_to_contribute.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/py-modindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/run_idyom.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/1_running_IDyOM_tutorial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/1_running_IDyOM_tutorial.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/2a_data_preprocessing_extracting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/2a_data_preprocessing_extracting.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/2b_data_preprocessing_exporting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/2b_data_preprocessing_exporting.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/3_visualizing_outputs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/tutorials/3_visualizing_outputs.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/visualization.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/export.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/export.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/extract.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/extract.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/run_idyom.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/run_idyom.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/pretrain_dataset/shanx015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/15-06-22_16.51.02/experiment_input_data_folder/test_dataset/chor-015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/compute.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/compute.lisp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_input_data_folder/test_dataset/chor-015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_output_data_folder/66052522140921-cpitch-cpintfref%cpint_cpitch-nil-nil-melody-nil-2-stm-nil-t-nil-c-5-t-t-x-3.dat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.09.21/experiment_output_data_folder/66052522140921-cpitch-cpintfref%cpint_cpitch-nil-nil-melody-nil-2-stm-nil-t-nil-c-5-t-t-x-3.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/pretrain_dataset/shanx015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-001.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-001.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-002.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-002.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-003.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-003.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-004.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-004.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-005.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-005.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-006.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-006.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-007.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-007.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-008.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-008.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-009.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-009.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-010.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-010.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-011.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-011.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-012.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-012.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-013.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-013.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-014.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-014.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-015.mid" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/experiment_input_data_folder/test_dataset/chor-015.mid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch_entropy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_cpitch_entropy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_information_content.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_information_content.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor001_onset.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch_entropy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_cpitch_entropy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_information_content.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_information_content.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_onset.mat" beforeDir="false" afterPath="$PROJECT_DIR$/tests/experiment_history/25-05-22_14.10.29/outputs_in_mat/chor002_onset.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -393,8 +227,8 @@
       <recent name="$PROJECT_DIR$/tutorial" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_extract">
-    <configuration name="print_structure" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in test_export.py">
+    <configuration name="install_idyom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -407,29 +241,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/print_structure.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test_export" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="IDyOM_Python_Interface" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_export.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/install_idyom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -460,7 +272,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_export.TestExport.test_csv_file_check" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests in test_export.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,8 +283,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_export.TestExport.test_csv_file_check&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_export.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in test_extract.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -490,13 +302,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_run.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="IDyOM_Python_Interface" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_run.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_export.py" />
+        <item itemvalue="Python tests.Python tests in test_run.py" />
+        <item itemvalue="Python.install_idyom" />
         <item itemvalue="Python.test_extract" />
         <item itemvalue="Python tests.Python tests in test_extract.py" />
-        <item itemvalue="Python.print_structure" />
-        <item itemvalue="Python.test_export" />
-        <item itemvalue="Python tests.Python tests for test_export.TestExport.test_csv_file_check" />
       </list>
     </recent_temporary>
   </component>
@@ -989,7 +816,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$tmp_dev_codes.coverage" NAME="tmp_dev_codes Coverage Results" MODIFIED="1652647316938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOM_runner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651415543822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py2lispIDyOM$.coverage" NAME=" Coverage Results" MODIFIED="1655460053475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/py2lispIDyOM$.coverage" NAME=" Coverage Results" MODIFIED="1665924181225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$viz.coverage" NAME="viz Coverage Results" MODIFIED="1652807348007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$testing__1_.coverage" NAME="testing (1) Coverage Results" MODIFIED="1655306319676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -998,6 +825,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$main_analysis.coverage" NAME="main_analysis Coverage Results" MODIFIED="1615228864901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$post_idyom_viz.coverage" NAME="post_idyom_viz Coverage Results" MODIFIED="1631008049673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$run.coverage" NAME="run Coverage Results" MODIFIED="1652432138409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py2lispIDyOM$install_idyom.coverage" NAME="install_idyom Coverage Results" MODIFIED="1665919210067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$myIDyOMexp.coverage" NAME="myIDyOMexp Coverage Results" MODIFIED="1651258249837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$2_extract_data.coverage" NAME="2_extract_data Coverage Results" MODIFIED="1652711530244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/1_sample_experiment" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$extraction.coverage" NAME="extraction Coverage Results" MODIFIED="1652695217957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
