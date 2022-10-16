@@ -25,7 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="yml updated">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/test_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test_dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/tests.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -289,13 +289,7 @@
       <workItem from="1662804444905" duration="675000" />
       <workItem from="1663584647665" duration="1055000" />
       <workItem from="1664275404486" duration="11957000" />
-    </task>
-    <task id="LOCAL-00136" summary="updated docs">
-      <created>1654083209879</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1654083209879</updated>
+      <workItem from="1665944558346" duration="1216000" />
     </task>
     <task id="LOCAL-00137" summary="paper revision">
       <created>1655198366941</created>
@@ -633,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665943385071</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="finalize test">
+      <created>1665944266613</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1665944266613</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -665,7 +666,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="paper revision" />
     <MESSAGE value="test_export csv" />
     <MESSAGE value="test_extract" />
     <MESSAGE value="code cleaning" />
@@ -690,7 +690,8 @@
     <MESSAGE value="updated tests" />
     <MESSAGE value="test updated" />
     <MESSAGE value="yml updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="yml updated" />
+    <MESSAGE value="finalize test" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
