@@ -55,7 +55,7 @@ The package has been used in several ongoing research projects at the Max Planck
 
 ![Upper panel: Display of ground truth piano roll plot of for melody "chor-003". Lower panel: model's surprisal output plot for melody "chor-003" is aligned.\label{fig:Fig2}](figures/groundtruth-surprisal-chor-003.png){ width=85% }
 
-![Model's surprisal outputs of each target viewpoints for melody "chor-003" is displayed: picth (upper panel), onset (middle panel) and overall/combined (lower panel).\label{fig:Fig3}](figures/all-surprisals-chor-003.png){ width=85% }
+![Model's surprisal outputs of each target viewpoints for melody "chor-003" is displayed: pitch (upper panel), onset (middle panel) and overall/combined (lower panel).\label{fig:Fig3}](figures/all-surprisals-chor-003.png){ width=85% }
 
 ![Model's overall/combined surprisal and entropy outputs for melody "chor-003" is displayed.\label{fig:Fig4}](figures/surprisal-entropy-chor-003.png){ width=85% }
 
