@@ -25,7 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="updated tests">
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_extract.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_extract.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +140,7 @@
       <recent name="$PROJECT_DIR$/tutorial" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests in test_run.py">
+  <component name="RunManager" selected="Python tests.Python tests in test_extract.py">
     <configuration name="install_idyom" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IDyOM_Python_Interface" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,9 +225,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_extract.py" />
         <item itemvalue="Python tests.Python tests in test_run.py" />
         <item itemvalue="Python tests.Python tests in test_export.py" />
-        <item itemvalue="Python tests.Python tests in test_extract.py" />
         <item itemvalue="Python tests.Python tests for test_export.TestExport.test_csv_file_check" />
         <item itemvalue="Python.install_idyom" />
       </list>
@@ -287,13 +290,6 @@
       <workItem from="1662804444905" duration="675000" />
       <workItem from="1663584647665" duration="1055000" />
       <workItem from="1664275404486" duration="11957000" />
-    </task>
-    <task id="LOCAL-00132" summary="paper citation revision, build JOSS paper pdf">
-      <created>1654012997491</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1654012997491</updated>
     </task>
     <task id="LOCAL-00133" summary="minor revision, build JOSS paper pdf">
       <created>1654013218616</created>
@@ -631,7 +627,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665926960864</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="test relative path">
+      <created>1665927306677</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1665927306677</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +666,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="viz set global style" />
     <MESSAGE value="paper compile and review" />
     <MESSAGE value="paper revision" />
     <MESSAGE value="test_export csv" />
@@ -688,7 +690,8 @@
     <MESSAGE value="test updated" />
     <MESSAGE value="updated test" />
     <MESSAGE value="updated tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated tests" />
+    <MESSAGE value="test relative path" />
+    <option name="LAST_COMMIT_MESSAGE" value="test relative path" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$runIDyOM.coverage" NAME="runIDyOM Coverage Results" MODIFIED="1651653112831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -709,7 +712,7 @@
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$plot_surprise_with_pianoroll.coverage" NAME="plot_surprise_with_pianoroll Coverage Results" MODIFIED="1631006952891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/helper_scripts" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$tmp_dev_codes.coverage" NAME="tmp_dev_codes Coverage Results" MODIFIED="1652647316938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$IDyOM_runner.coverage" NAME="IDyOMRunner Coverage Results" MODIFIED="1651415543822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py2lispIDyOM$.coverage" NAME=" Coverage Results" MODIFIED="1665926935093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/py2lispIDyOM$.coverage" NAME=" Coverage Results" MODIFIED="1665941276336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$viz.coverage" NAME="viz Coverage Results" MODIFIED="1652807348007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modules" />
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$visualization_pitch_prediction_comparison.coverage" NAME="plot_pitch_prediction_comparison Coverage Results" MODIFIED="1615063230614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py2lispIDyOM$testing__1_.coverage" NAME="testing (1) Coverage Results" MODIFIED="1655306319676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />

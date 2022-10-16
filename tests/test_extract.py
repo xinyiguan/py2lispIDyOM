@@ -10,10 +10,10 @@ from py2lispIDyOM.extract import get_song_dict_of_interest, get_all_song_dict
 
 
 class TestExtract(TestCase):
-    experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
+    experiment_folder_path = './tests/experiment_history/25-05-22_14.10.29/'
 
     def test_experimentinfo_extract(self):
-        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = self.experiment_folder_path
 
         my_exp = ExperimentInfo(experiment_folder_path=experiment_folder_path)
         all_melodies = my_exp.access_melodies()
@@ -22,7 +22,7 @@ class TestExtract(TestCase):
             self.assertIsInstance(obj=all_melodies[i], cls=MelodyInfo)
 
     def test_melodyinfo_extract(self):
-        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = self.experiment_folder_path
         my_exp = ExperimentInfo(experiment_folder_path=experiment_folder_path)
         test_melody = my_exp.access_melodies(melody_names=['"chor-005"'])[0]
 
