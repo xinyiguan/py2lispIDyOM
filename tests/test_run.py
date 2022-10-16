@@ -14,8 +14,8 @@ class TestIDyOMExperiment(TestCase):
         model=stm, stmo=stmo, order_bound=5, k = 2, detail=3
         """
 
-        test_dataset_path = 'dataset/bach_dataset/'
-        experiment_logger_path = 'experiment_history/TestCase1/'
+        test_dataset_path = '../tests/dataset/bach_dataset/'
+        experiment_logger_path = '../tests/experiment_history/TestCase1/'
         shutil.rmtree(experiment_logger_path, ignore_errors=True)
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path, experiment_logger_name='TestCase1')
         idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
@@ -46,8 +46,8 @@ class TestIDyOMExperiment(TestCase):
         model=both, ltmo=ltmo, order_bound=8, k = full, detail=3
         """
 
-        test_dataset_path = 'dataset/bach_dataset/'
-        pretrain_dataset_path = 'dataset/shanx_dataset/'
+        test_dataset_path = '../tests/dataset/bach_dataset/'
+        pretrain_dataset_path = '../tests/dataset/shanx_dataset/'
 
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)

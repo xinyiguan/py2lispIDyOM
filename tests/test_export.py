@@ -15,19 +15,19 @@ import pandas as pd
 class TestExport(TestCase):
 
     def test_export_mat_files(self):
-        experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
         idyom_output_keywords = ['cpitch', 'onset', 'information.content', 'cpitch.entropy']
         Export(experiment_folder_path=experiment_folder_path,
                idyom_output_keywords=idyom_output_keywords,
                melody_names=['"chor-001"', '"chor-002"']).export2mat()
 
     def test_export_csv_files(self):
-        experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
         Export(experiment_folder_path=experiment_folder_path,
                melody_names=['"chor-003"', '"chor-004"']).export2csv()
 
     def test_mat_file_check(self):
-        experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
 
         chor001 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-001"']
 
@@ -90,22 +90,22 @@ class TestExport(TestCase):
         self.assertEqual(chor002.get_idyom_output_nparray('onset').all(), chor002_onset_mat_data.all())
 
     def test_csv_file_check(self):
-        experiment_folder_path = 'experiment_history/25-05-22_14.10.29/'
+        experiment_folder_path = '../tests/experiment_history/25-05-22_14.10.29/'
 
         idyom_keywords_checklist = ['cpitch', 'onset',
                                     'information.content', 'entropy', 'probability']
 
         chor003 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-003"']
-        chor003_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-003.csv', sep=',')
+        chor003_df = pd.read_csv(experiment_folder_path+'outputs_in_csv/chor-003.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
-            self.assertEqual(chor003.get_idyom_output_nparray(val).all(), np.array(chor003_df[val]).all())
+            self.assertEqual(chor003[val].all(), chor003_df[val].all())
 
         chor004 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-004"']
-        chor004_df = pd.read_csv('experiment_history/25-05-22_14.10.29/outputs_in_csv/chor-004.csv', sep=',')
+        chor004_df = pd.read_csv(experiment_folder_path+'outputs_in_csv/chor-004.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
-            self.assertEqual(chor004.get_idyom_output_nparray(val).all(), np.array(chor004_df[val]).all())
+            self.assertEqual(chor004[val].all(), chor004_df[val].all())
 
 
 if __name__ == '__main__':
