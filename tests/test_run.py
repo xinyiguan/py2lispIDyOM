@@ -1,5 +1,4 @@
 import datetime
-import os
 import shutil
 from unittest import TestCase
 from py2lispIDyOM.run import IDyOMExperiment
@@ -81,7 +80,3 @@ class TestIDyOMExperiment(TestCase):
                             f'(quit)'
 
         self.assertEqual(generated_commands, expected_commands)
-
-
-# if __name__ == '__main__':
-#     unittest.main()
