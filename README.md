@@ -26,13 +26,21 @@ It is broadly aimed at researchers conducting IDyOM-based analysis in Python.
 
 ## Getting Started
 
-### Prerequisites
+### 1. Prerequisites: Installing IDyOM
 
 py2lispIDyOM requires IDyOM to be installed on the local machine. To start with, please read
 the [IDyOM installation page](https://github.com/mtpearce/idyom/wiki/Installation) to appropriately install IDyOM.
 
+We also provided a script to automate the IDyOM installation process. Some steps to follow:
+  - Download this folder: [install_idyom](https://github.com/xinyiguan/py2lispIDyOM/tree/master/install_idyom).
+  - In the terminal, 
+    - `cd` to the path the folder "install_idyom/" has been downloaded. For example, `cd Downloads/install_idyom/`
+    - Type `bash install_idyom.sh`. You will be prompted to provide 
+      - your `Password`, and  
+      - to follow the subsequent request `Press Enter to continue.`
 
-### Installing
+
+### 2. Installing `py2lispIDyOM`
 
 The code is compatible with >= Python 3.9.
 

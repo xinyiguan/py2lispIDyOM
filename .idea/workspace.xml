@@ -28,15 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/install_idyom/install_idyom.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_idyom/install_pt2.lisp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_idyom/install_pt3.lisp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_idyom/install_pt4.lisp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IDyOM_Python_Interface.iml" afterDir="false" />
+    <list default="true" id="ba4eb65a-1b98-4208-9a16-c2015142364e" name="Changes" comment="automated idyom installation process">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_idyom.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/install_sbcl.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,14 +292,7 @@
       <workItem from="1663584647665" duration="1055000" />
       <workItem from="1664275404486" duration="11957000" />
       <workItem from="1665944558346" duration="1216000" />
-      <workItem from="1666017710718" duration="18900000" />
-    </task>
-    <task id="LOCAL-00137" summary="paper revision">
-      <created>1655198366941</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1655198366942</updated>
+      <workItem from="1666017710718" duration="20530000" />
     </task>
     <task id="LOCAL-00138" summary="figs adjust">
       <created>1655198840811</created>
@@ -643,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665944266613</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="automated idyom installation process">
+      <created>1666171893517</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1666171893517</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +669,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="test_export csv" />
     <MESSAGE value="test_extract" />
     <MESSAGE value="code cleaning" />
     <MESSAGE value="documentation updated" />
@@ -700,7 +693,8 @@
     <MESSAGE value="test updated" />
     <MESSAGE value="yml updated" />
     <MESSAGE value="finalize test" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalize test" />
+    <MESSAGE value="automated idyom installation process" />
+    <option name="LAST_COMMIT_MESSAGE" value="automated idyom installation process" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/IDyOM_Python_Interface$tmp_dev_codes.coverage" NAME="tmp_dev_codes Coverage Results" MODIFIED="1652647316938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
