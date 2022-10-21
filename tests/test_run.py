@@ -1,10 +1,13 @@
 import datetime
-import unittest
+import shutil
 from unittest import TestCase
 from py2lispIDyOM.run import IDyOMExperiment
 
 
+
 class TestIDyOMExperiment(TestCase):
+    bach_dataset = './tests/dataset/bach_dataset/'
+    shanx_dataset = './tests/dataset/shanx_dataset/'
 
     def test_case_1(self):
         """Test case 1:
@@ -13,7 +16,9 @@ class TestIDyOMExperiment(TestCase):
         model=stm, stmo=stmo, order_bound=5, k = 2, detail=3
         """
 
-        test_dataset_path = 'dataset/bach_dataset/'
+        test_dataset_path = self.bach_dataset
+        experiment_logger_path = '.tests/experiment_history/TestCase1/'
+        shutil.rmtree(experiment_logger_path, ignore_errors=True)
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path, experiment_logger_name='TestCase1')
         idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
                                         source_viewpoints=[('cpintfref', 'cpint'), 'cpitch'],
@@ -43,8 +48,8 @@ class TestIDyOMExperiment(TestCase):
         model=both, ltmo=ltmo, order_bound=8, k = full, detail=3
         """
 
-        test_dataset_path = 'dataset/bach_dataset/'
-        pretrain_dataset_path = 'dataset/shanx_dataset/'
+        test_dataset_path = self.bach_dataset
+        pretrain_dataset_path = self.shanx_dataset
 
         idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
                                            pretrain_dataset_path=pretrain_dataset_path)
@@ -75,7 +80,3 @@ class TestIDyOMExperiment(TestCase):
                             f'(quit)'
 
         self.assertEqual(generated_commands, expected_commands)
-
-
-if __name__ == '__main__':
-    unittest.main()
