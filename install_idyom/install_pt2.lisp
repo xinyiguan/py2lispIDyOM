@@ -1,0 +1,5 @@
+(load (merge-pathnames "quicklisp/quicklisp.lisp" (user-homedir-pathname)))
+(quicklisp-quickstart:install :path (merge-pathnames "quicklisp/" (user-homedir-pathname)))
+(ql:add-to-init-file)
+(ql:quickload "quicklisp-slime-helper")
+(SB-EXT:EXIT)
