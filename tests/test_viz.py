@@ -64,5 +64,11 @@ class Test(TestCase):
         self.assertEqual(onset_in_beat_len, onset_answer_len)
         self.assertEqual(chosen_entropy_len,entropy_answer_len)
 
-if __name__ == '__main__':
-    unittest.main()
+    # def test_pianoroll_pitch_prediction_groundtruth(self):
+    #     viz.BasicPlot.pianoroll_pitch_prediction_groundtruth(experiment_folder_path=self.experiment_folder_path,
+    #                                                          starting_index=0,
+    #                                                          ending_index=2,
+    #                                                          savefig=False,
+    #                                                          showfig=True,
+    #                                                          probability_colorbar=True)
+
