@@ -13,8 +13,7 @@ class Test(TestCase):
     Masse_krn = './tests/dataset/Masse_krn/'
     empty_dataset = './test/dataset/empty_dataset/'
 
-    # experiment_logger_path = '.tests/experiment_history/'
-    experiment_logger_path = 'experiment_history/'  # use this path if run test locally
+    experiment_logger_path = 'experiment_history/'
 
     def test_case_1(self):
         """Test case 1:
