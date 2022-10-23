@@ -2,8 +2,6 @@
 This test script concerns the export functionality.
 We will use the IDyOM outputs from the experiment "25-05-22_14.10.29"
 """
-
-import unittest
 from unittest import TestCase
 from py2lispIDyOM.export import Export
 from py2lispIDyOM.extract import ExperimentInfo
@@ -15,6 +13,7 @@ import pandas as pd
 class TestExport(TestCase):
     experiment_folder_path = './tests/experiment_history/25-05-22_14.10.29/'
 
+
     def test_export_mat_files(self):
         experiment_folder_path = self.experiment_folder_path
         idyom_output_keywords = ['cpitch', 'onset', 'information.content', 'cpitch.entropy']
@@ -22,10 +21,20 @@ class TestExport(TestCase):
                idyom_output_keywords=idyom_output_keywords,
                melody_names=['"chor-001"', '"chor-002"']).export2mat()
 
+    def test_export_mat_files_v2(self):
+        experiment_folder_path = self.experiment_folder_path
+        idyom_output_keywords = ['cpitch', 'cpitch.entropy']
+        Export(experiment_folder_path=experiment_folder_path,
+               idyom_output_keywords=idyom_output_keywords).export2mat()
+
     def test_export_csv_files(self):
         experiment_folder_path = self.experiment_folder_path
         Export(experiment_folder_path=experiment_folder_path,
                melody_names=['"chor-003"', '"chor-004"']).export2csv()
+
+    def test_export_csv_files_v2(self):
+        experiment_folder_path = self.experiment_folder_path
+        Export(experiment_folder_path=experiment_folder_path).export2csv()
 
     def test_mat_file_check(self):
         experiment_folder_path = self.experiment_folder_path
@@ -96,17 +105,26 @@ class TestExport(TestCase):
                                     'information.content', 'entropy', 'probability']
 
         chor003 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-003"']
-        chor003_df = pd.read_csv(experiment_folder_path+'outputs_in_csv/chor-003.csv', sep=',')
+        chor003_df = pd.read_csv(experiment_folder_path + 'outputs_in_csv/chor-003.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
             self.assertEqual(chor003[val].all(), chor003_df[val].all())
 
         chor004 = ExperimentInfo(experiment_folder_path=experiment_folder_path).melodies_dict['"chor-004"']
-        chor004_df = pd.read_csv(experiment_folder_path+'outputs_in_csv/chor-004.csv', sep=',')
+        chor004_df = pd.read_csv(experiment_folder_path + 'outputs_in_csv/chor-004.csv', sep=',')
 
         for idx, val in enumerate(idyom_keywords_checklist):
             self.assertEqual(chor004[val].all(), chor004_df[val].all())
 
+    def test_raised_errors(self):
+        experiment_folder_path = self.experiment_folder_path
+        with self.assertRaises(ValueError):
+            # supposed to raise ValueError (export-134)
+            Export(experiment_folder_path=experiment_folder_path).export2mat()
 
-if __name__ == '__main__':
-    unittest.main()
+        with self.assertRaises(ValueError):
+            # supposed to raise ValueError (export-152)
+            Export(experiment_folder_path=experiment_folder_path,
+                   idyom_output_keywords=['cpitch']).export2csv()
+
+
