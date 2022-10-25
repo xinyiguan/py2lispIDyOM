@@ -1,6 +1,6 @@
 # experiment history folder
 experiment_history/
-tutorials/experiment_history/
+experiment_history/
 
 # Ignore test-related files
 htmlcov/
