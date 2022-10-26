@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Run IDyOM installation shell script
-        run: ../install_idyom/install_idyom.sh
+        run: ./install_idyom/install_idyom.sh
         shell: bash
 
       - name: Install dependencies
