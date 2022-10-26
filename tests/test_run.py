@@ -261,3 +261,24 @@ class Test(TestCase):
             IDyOMExperiment(test_dataset_path=test_dataset_path,
                             pretrain_dataset_path=pretrain_dataset_path,
                             experiment_logger_name=exp_folder_name)
+
+    def test_run(self):
+        test_dataset_path = self.bach_dataset
+        pretrain_dataset_path = self.shanx_dataset
+
+        exp_folder_name = 'TestRun'
+        experiment_logger_path = self.experiment_logger_path + exp_folder_name + '/'
+
+        if os.path.exists(experiment_logger_path):
+            shutil.rmtree(experiment_logger_path, ignore_errors=True)
+
+        idyom_experiment = IDyOMExperiment(test_dataset_path=test_dataset_path,
+                                           pretrain_dataset_path=pretrain_dataset_path,
+                                           experiment_logger_name=exp_folder_name)
+
+        idyom_experiment.set_parameters(target_viewpoints=['cpitch'],
+                                        source_viewpoints=['cpitch'],
+                                        models=':both',
+                                        detail=2,
+                                        overwrite=True)
+        idyom_experiment.run()
