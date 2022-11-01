@@ -1,13 +1,14 @@
 ---
-title: 'py2lispIDyOM: A Python package for IDyOM' 
+title: 'py2lispIDyOM: A Python package for the information dynamics of music (IDyOM) model' 
 tags:
-  - Python 
-  - IDyOM 
+  - Python  
   - music cognition 
+  - IDyOM
 authors:
   - name: Xinyi Guan 
     orcid: 0000-0002-4570-906X
-    affiliation: 1 
+    affiliation: 1
+    corresponding: true
   - name: Zeng Ren 
     orcid: 0000-0002-9097-2633 
     affiliation: 2
