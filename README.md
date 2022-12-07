@@ -22,6 +22,7 @@ It is broadly aimed at researchers conducting IDyOM-based analysis in Python.
 
 
 - [Functionality and Usage](#functionality-and-usage)
+  - [Notebook examples](#Notebook-examples)
 
 ---
 
@@ -70,7 +71,13 @@ examples.
   - Exporting data: [2b_data_preprocessing_exporting.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/2b_data_preprocessing_exporting.ipynb)
 - Visualization: [3_visualizing_outputs.ipynb](https://github.com/xinyiguan/py2lispIDyOM/blob/master/tutorials/3_visualizing_outputs.ipynb)
 
+---
+### Citation
 
+Guan et al., (2022). py2lispIDyOM: A Python package for the information dynamics of music (IDyOM) model. Journal of Open Source Software, 7(79), 4738, https://doi.org/10.21105/joss.04738
+```
+@article{Guan2022, doi = {10.21105/joss.04738}, url = {https://doi.org/10.21105/joss.04738}, year = {2022}, publisher = {The Open Journal}, volume = {7}, number = {79}, pages = {4738}, author = {Xinyi Guan and Zeng Ren and Claire Pelofi}, title = {py2lispIDyOM: A Python package for the information dynamics of music (IDyOM) model}, journal = {Journal of Open Source Software} }
+```
 ---
 #### Contribution guidelines
 
