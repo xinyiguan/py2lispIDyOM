@@ -29,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            py2lispIDyOM
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -59,7 +63,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
       <li class="breadcrumb-item active">py2lispIDyOM.run</li>
       <li class="wy-breadcrumbs-aside">
@@ -82,7 +86,7 @@
 
 <div class="viewcode-block" id="IDyOMExperiment"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">IDyOMExperiment</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class to configure and run an IDyOM experiment</span>
 
 <span class="sd">    :param test_dataset_path: the path to your test dataset (required)</span>
@@ -138,7 +142,7 @@
             <span class="k">pass</span>
 
 <div class="viewcode-block" id="IDyOMExperiment.set_parameters"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.set_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">set_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set the IDyOM model parameters.</span>
 
 <span class="sd">        :param kwargs: see the API reference (the section below) for a complete list of valid parameters (keyword arguments).</span>
@@ -156,7 +160,7 @@
             <span class="n">configuration</span><span class="o">.</span><span class="n">recursive_set_attr</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_generate_lisp_commands</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the LISP commands for the IDyOM model configurations.</span>
 <span class="sd">        :return: the total lisp commands for the idyom experiment</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -165,7 +169,7 @@
         <span class="k">return</span> <span class="n">lisp_command</span>
 
 <div class="viewcode-block" id="IDyOMExperiment.generate_lisp_script"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.generate_lisp_script">[docs]</a>    <span class="k">def</span> <span class="nf">generate_lisp_script</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">write</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Generate the LISP script for the IDyOM model configurations.</span>
 
 <span class="sd">        :param write: whether to write the file or not, defaults to True.</span>
@@ -184,7 +188,7 @@
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">lisp_file_path</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="IDyOMExperiment.run"><a class="viewcode-back" href="../../run_idyom.html#py2lispIDyOM.run.IDyOMExperiment.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Run the IDyOM model.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 

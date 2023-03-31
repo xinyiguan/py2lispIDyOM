@@ -29,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            py2lispIDyOM
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -59,7 +63,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
       <li class="breadcrumb-item active">py2lispIDyOM.extract</li>
       <li class="wy-breadcrumbs-aside">
@@ -87,7 +91,7 @@
 
 
 <div class="viewcode-block" id="get_dictionary"><a class="viewcode-back" href="../../_autosummary/py2lispIDyOM.extract.get_dictionary.html#py2lispIDyOM.extract.get_dictionary">[docs]</a><span class="k">def</span> <span class="nf">get_dictionary</span><span class="p">(</span><span class="n">file</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Read the file line by line, split each line into n fields, then create the dictionary:</span>
 <span class="sd">    :param: file</span>
 <span class="sd">    :return: dict</span>
@@ -128,7 +132,7 @@
 
 
 <div class="viewcode-block" id="MelodyInfo"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.MelodyInfo">[docs]</a><span class="k">class</span> <span class="nc">MelodyInfo</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A melody object (pd.DataFrame) that contains all data in a single melody inherit from the parent Experiment.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -142,7 +146,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">melody_name_pp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_melody_name_pprint</span><span class="p">()</span>
 
 <div class="viewcode-block" id="MelodyInfo.access_idyom_output_keywords"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.MelodyInfo.access_idyom_output_keywords">[docs]</a>    <span class="k">def</span> <span class="nf">access_idyom_output_keywords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_keywords</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Access certain idyom output(s) via its (their) keyword(s).</span>
 
 <span class="sd">        :param output_keywords: A list of IDyOM output keywords (e.g., [&#39;cpitch.information.content&#39;, &#39;onset&#39;, &#39;entropy&#39;])</span>
@@ -169,7 +173,7 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="p">[</span><span class="n">output_keywords</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="MelodyInfo.get_idyom_output_nparray"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_nparray">[docs]</a>    <span class="k">def</span> <span class="nf">get_idyom_output_nparray</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idyom_output_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the IDyOM output via its key as a np.array</span>
 
 <span class="sd">        :param idyom_output_key: list of str</span>
@@ -182,7 +186,7 @@
         <span class="k">return</span> <span class="n">output_values_array</span></div>
 
 <div class="viewcode-block" id="MelodyInfo.get_idyom_output_keyword_list"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.MelodyInfo.get_idyom_output_keyword_list">[docs]</a>    <span class="k">def</span> <span class="nf">get_idyom_output_keyword_list</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get a list of available IDyOM output keyword for this melody.</span>
 
 <span class="sd">        :return: a list of available IDyOM output keyword</span>
@@ -193,7 +197,7 @@
         <span class="k">return</span> <span class="n">idyom_output_keyword_list</span></div>
 
 <div class="viewcode-block" id="MelodyInfo.compute_properties_means"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.MelodyInfo.compute_properties_means">[docs]</a>    <span class="k">def</span> <span class="nf">compute_properties_means</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idyom_outputs</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Compute the mean values of the idyom outputs.</span>
 
 <span class="sd">        :param idyom_outputs: list of idyom output keyword to compute the means</span>
@@ -267,7 +271,7 @@
 
 <div class="viewcode-block" id="ExperimentInfo"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.ExperimentInfo">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">ExperimentInfo</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    An experiment object that contains all data in a single experiment.</span>
 
 <span class="sd">    :param experiment_folder_path: the path to experiment log folder which you want to access.</span>
@@ -283,7 +287,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">melodies_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melody_dictionary</span><span class="p">()</span>
 
 <div class="viewcode-block" id="ExperimentInfo.melody_dictionary"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary">[docs]</a>    <span class="k">def</span> <span class="nf">melody_dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">MelodyInfo</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.</span>
 
 <span class="sd">        :return: a dictionary consisting of:</span>
@@ -306,7 +310,7 @@
 
 <div class="viewcode-block" id="ExperimentInfo.access_melodies"><a class="viewcode-back" href="../../extract.html#py2lispIDyOM.extract.ExperimentInfo.access_melodies">[docs]</a>    <span class="k">def</span> <span class="nf">access_melodies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">starting_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ending_index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                         <span class="n">melody_names</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Access specific melodies by index or melody names.</span>
 <span class="sd">        If all arguments are None, then the default is to access all melodies in the Experiment class</span>
 
@@ -331,7 +335,7 @@
         <span class="k">return</span> <span class="n">selected_melodies</span></div>
 
     <span class="k">def</span> <span class="nf">_get_datasetwise_cpitch_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get the list of cpitch (full cpitch distribution elements used in IDyOM)</span>
 
 <span class="sd">        :return:  a list of int</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>py2lispIDyOM.extract.ExperimentInfo &mdash; py2lispIDyOM  documentation</title>
@@ -30,11 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> py2lispIDyOM
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            py2lispIDyOM
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -60,7 +64,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">py2lispIDyOM.extract.ExperimentInfo</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/_autosummary/py2lispIDyOM.extract.ExperimentInfo.rst.txt" rel="nofollow"> View page source</a>
@@ -71,48 +75,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="py2lispidyom-extract-experimentinfo">
+  <section id="py2lispidyom-extract-experimentinfo">
 <h1>py2lispIDyOM.extract.ExperimentInfo<a class="headerlink" href="#py2lispidyom-extract-experimentinfo" title="Permalink to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="py2lispIDyOM.extract.ExperimentInfo">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">py2lispIDyOM.extract.</span></span><span class="sig-name descname"><span class="pre">ExperimentInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">experiment_folder_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo" title="Permalink to this definition"></a></dt>
 <dd><p>An experiment object that contains all data in a single experiment.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>experiment_folder_path</strong> (<em>str</em>) – the path to experiment log folder which you want to access.</p>
 </dd>
 </dl>
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Data Attributes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">experiment_folder_path</span></code></p></td>
 <td><p></p></td>
@@ -123,10 +99,6 @@
 <div class="autoclasstoc docutils container">
 <p class="rubric">Public Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__post_init__</span></code>()</p></td>
 <td><p></p></td>
@@ -152,10 +124,6 @@
 <div class="autoclasstoc docutils container">
 <p class="rubric">Private Methods:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_datasetwise_cpitch_elements</span></code>()</p></td>
 <td><p>Get the list of cpitch (full cpitch distribution elements used in IDyOM)</p></td>
@@ -170,17 +138,17 @@
 <dd><p>Access specific melodies by index or melody names.
 If all arguments are None, then the default is to access all melodies in the Experiment class</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>starting_index</strong> (<em>int</em>) – the index of the melody you want to start accessing</p></li>
 <li><p><strong>ending_index</strong> (<em>int</em>) – the index of the melody you want to end accessing</p></li>
 <li><p><strong>melody_names</strong> (<em>list</em><em>(</em><em>str</em><em>)</em>) – list of meldoy names you want to access</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a list of MelodyInfo class objects (selected melodies)</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list(<a class="reference internal" href="../extract.html#py2lispIDyOM.extract.MelodyInfo" title="py2lispIDyOM.extract.MelodyInfo">MelodyInfo</a>)</p>
 </dd>
 </dl>
@@ -191,7 +159,7 @@ If all arguments are None, then the default is to access all melodies in the Exp
 <span class="sig-name descname"><span class="pre">melody_dictionary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/py2lispIDyOM/extract.html#ExperimentInfo.melody_dictionary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#py2lispIDyOM.extract.ExperimentInfo.melody_dictionary" title="Permalink to this definition"></a></dt>
 <dd><p>Get a dictionary of all melodies in the experiment with melody name as the key and all melody info as the value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><p>a dictionary consisting of:</p>
 <ul class="simple">
 <li><p>melody_name: the name of the melody</p></li>
@@ -199,7 +167,7 @@ If all arguments are None, then the default is to access all melodies in the Exp
 </ul>
 </p>
 </dd>
-<dt class="field-even">Return type</dt>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>typed dict -&gt; {melody_name: MelodyInfo}</p>
 </dd>
 </dl>

@@ -29,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> py2lispIDyOM
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            py2lispIDyOM
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -59,7 +63,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
       <li class="breadcrumb-item active">py2lispIDyOM.export</li>
       <li class="wy-breadcrumbs-aside">
@@ -85,7 +89,7 @@
 
 <div class="viewcode-block" id="Export"><a class="viewcode-back" href="../../export.html#py2lispIDyOM.export.Export">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">Export</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Export selected IDyOM model outputs to other formats.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Export selected IDyOM model outputs to other formats.</span>
 
 <span class="sd">    :param experiment_folder_path: the path to which you saved all the result data/plots</span>
 <span class="sd">    :type experiment_folder_path: str</span>
@@ -107,31 +111,31 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_info</span><span class="o">.</span><span class="n">melodies_dict</span>
 
     <span class="k">def</span> <span class="nf">_generate_export_folder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">export_folder_name</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;To generate a folder to store the idyom outputs in other formats (e.g., .mat, .csv)&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;To generate a folder to store the idyom outputs in other formats (e.g., .mat, .csv)&quot;&quot;&quot;</span>
         <span class="n">idyom_output_export_folder_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">experiment_folder_path</span> <span class="o">+</span> <span class="n">export_folder_name</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">idyom_output_export_folder_path</span><span class="p">):</span>
             <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">idyom_output_export_folder_path</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">idyom_output_export_folder_path</span>
 
     <span class="k">def</span> <span class="nf">_get_valid_idyom_output_keys</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;To get a list of valid idyom output keys for a melody.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;To get a list of valid idyom output keys for a melody.&quot;&quot;&quot;</span>
         <span class="n">valid_idyom_output_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span><span class="o">.</span><span class="n">get_idyom_output_keyword_list</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">valid_idyom_output_keys</span>
 
     <span class="k">def</span> <span class="nf">_get_idyom_output_for_single_melody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">,</span> <span class="n">idyom_key</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;To get the IDyOM output value array for a single melody, according to the IDyOM output keys.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;To get the IDyOM output value array for a single melody, according to the IDyOM output keys.&quot;&quot;&quot;</span>
         <span class="n">output_value_array</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span><span class="o">.</span><span class="n">access_idyom_output_keywords</span><span class="p">(</span>
             <span class="p">[</span><span class="n">idyom_key</span><span class="p">])</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># this is np.array</span>
         <span class="n">output_value_array</span> <span class="o">=</span> <span class="n">output_value_array</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">output_value_array</span>
 
     <span class="k">def</span> <span class="nf">_get_single_melody_output_values_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;This function returns a DataFrame of all IDyOM output values of one melody.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This function returns a DataFrame of all IDyOM output values of one melody.&quot;&quot;&quot;</span>
         <span class="n">idyom_output_values_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">melodies_info_dict</span><span class="p">[</span><span class="n">melody</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">idyom_output_values_df</span>
 
     <span class="k">def</span> <span class="nf">_get_output_values_in_selected_melodies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idyom_key</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;This function returns a np.array of idyom output values for selected an idyom key for each selected songs.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;This function returns a np.array of idyom output values for selected an idyom key for each selected songs.&quot;&quot;&quot;</span>
         <span class="n">output_values_data_in_songs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">melody</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">selected_songs</span><span class="p">):</span>
             <span class="n">valid_keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_valid_idyom_output_keys</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span>
@@ -145,7 +149,7 @@
         <span class="k">return</span> <span class="n">output_values_data_in_songs</span>
 
     <span class="k">def</span> <span class="nf">_get_output_values_df_in_selected_melodies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function iterate through the func &#39;_get_single_melody_output_values_df&#39; to get</span>
 <span class="sd">        a DataFrame of idyom output values for all idyom keys for each selected songs.</span>
 <span class="sd">         &quot;&quot;&quot;</span>
@@ -153,7 +157,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_get_single_melody_output_values_df</span><span class="p">(</span><span class="n">melody</span><span class="o">=</span><span class="n">melody</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_export_by_keyword_2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords_list</span><span class="p">,</span> <span class="n">selected_songs</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Export the idyom output data to .mat files according to the keyword list.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Export the idyom output data to .mat files according to the keyword list.&quot;&quot;&quot;</span>
 
         <span class="c1"># Type check =====================:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
@@ -171,7 +175,7 @@
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exported data to &#39;</span> <span class="o">+</span> <span class="n">output_path</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_export_values_of_keywords_by_melody_2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">keywords_list</span><span class="p">,</span> <span class="n">melody</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Exports the IDyOM output values according to the keywords_list of one song to a mat file.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Exports the IDyOM output values according to the keywords_list of one song to a mat file.&quot;&quot;&quot;</span>
         <span class="c1"># Type check =====================:</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">keywords_list</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
             <span class="k">pass</span>
@@ -188,13 +192,13 @@
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exported data to &#39;</span> <span class="o">+</span> <span class="n">output_path</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_export_by_song_2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">melody_name</span><span class="p">,</span> <span class="n">single_song_df_data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Exports the all the IDyOM output data (df) for a single melody to csv&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Exports the all the IDyOM output data (df) for a single melody to csv&quot;&quot;&quot;</span>
         <span class="n">melody_name</span> <span class="o">=</span> <span class="n">melody_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
         <span class="n">csv_file_path</span> <span class="o">=</span> <span class="n">output_path</span> <span class="o">+</span> <span class="n">melody_name</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span>
         <span class="n">single_song_df_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_or_buf</span><span class="o">=</span><span class="n">csv_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Export.export2mat"><a class="viewcode-back" href="../../export.html#py2lispIDyOM.export.Export.export2mat">[docs]</a>    <span class="k">def</span> <span class="nf">export2mat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function exports the IDyOM output data to mat files.</span>
 <span class="sd">        By default, it will export the outputs according to the preset keywords specified in the idyom_output_keywords for all melodies.</span>
 <span class="sd">        Users can also specify specific melody by passing the melody names to the melody_name param.</span>
@@ -223,7 +227,7 @@
                                              <span class="n">output_path</span><span class="o">=</span><span class="n">export_folder_path</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="Export.export2csv"><a class="viewcode-back" href="../../export.html#py2lispIDyOM.export.Export.export2csv">[docs]</a>    <span class="k">def</span> <span class="nf">export2csv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This function exports the IDyOM output data to a csv files.</span>
 <span class="sd">        By default, this will export all properties of the chosen melodies, where each melody is in one csv file.</span>
 
