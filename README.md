@@ -89,9 +89,13 @@ You are also welcome to contribute to this project.
 There are just a few [small guidelines](https://xinyiguan.github.io/py2lispIDyOM/how_to_contribute.html#) you need to follow.
 
 
-
 ---
-#### Author contributions
+### Author contributions
 All authors provided critical feedback on the design of this project, and participated in the writing and editing of the manuscript. 
 X.G. and C.P. conceptualized the project. X.G. and Z.R. planned the code architecture. 
 X.G. carried out the overall computational implementation. C.P. supervised the overall project.
+
+---
+### Acknowledgment
+We thank Guilhem Marion for his initial contribution in the idea and code that constituted the basis for the development of this software.
+
