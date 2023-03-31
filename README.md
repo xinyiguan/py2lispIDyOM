@@ -79,7 +79,7 @@ Guan et al., (2022). py2lispIDyOM: A Python package for the information dynamics
 @article{Guan2022, doi = {10.21105/joss.04738}, url = {https://doi.org/10.21105/joss.04738}, year = {2022}, publisher = {The Open Journal}, volume = {7}, number = {79}, pages = {4738}, author = {Xinyi Guan and Zeng Ren and Claire Pelofi}, title = {py2lispIDyOM: A Python package for the information dynamics of music (IDyOM) model}, journal = {Journal of Open Source Software} }
 ```
 ---
-#### Contribution guidelines
+### Contribution guidelines
 
 We tried to make the code accessible and provide some examples in the tutorials for getting started smoothly. 
 But there is still lots of room for better documentation, tutorials and testing. 
